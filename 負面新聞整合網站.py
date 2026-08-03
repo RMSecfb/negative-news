@@ -1587,31 +1587,31 @@ if saved_crawl["event_path"] and saved_crawl["event_path"].is_file():
                 metric_cols[2].metric("涉及公司", f"{negative_df['Ticker'].replace('', pd.NA).nunique():,} 家")
                 metric_cols[3].metric("重大事件（Level≥4）", f"{int((negative_df['Level'] >= 4).sum()):,} 則")
 
-chart_left, chart_right = st.columns(2)
+                chart_left, chart_right = st.columns(2)
                 import plotly.express as px
-                
-                # 1. 左圖：事件類型分布（含「其他」以補滿 100%）
+
+                # 1. 左圖：事件類型分布（加入「其他」類別以完整呈現代碼 100% 占比）
                 chart_left.markdown("#### 事件類型總占比")
                 all_event_counts = negative_df["事件中文"].fillna("未分類").value_counts()
-                
+
                 if len(all_event_counts) > 10:
                     top_9 = all_event_counts.head(9)
                     other_count = all_event_counts.iloc[9:].sum()
                     event_counts_df = pd.concat([top_9, pd.Series({"其他": other_count})]).reset_index()
                 else:
                     event_counts_df = all_event_counts.reset_index()
-                    
+
                 event_counts_df.columns = ["事件中文", "數量"]
-                
+
                 fig_donut = px.pie(
-                    event_counts_df, 
-                    values="數量", 
-                    names="事件中文", 
+                    event_counts_df,
+                    values="數量",
+                    names="事件中文",
                     hole=0.5,
                     color_discrete_sequence=px.colors.qualitative.Pastel
                 )
                 fig_donut.update_traces(
-                    textposition='inside', 
+                    textposition='inside',
                     textinfo='percent+label',
                     hovertemplate="<b>%{label}</b><br>數量: %{value} 則 (%{percent})"
                 )
@@ -1622,7 +1622,7 @@ chart_left, chart_right = st.columns(2)
                 )
                 chart_left.plotly_chart(fig_donut, use_container_width=True)
 
-                # 2. 右圖：公司負面新聞排行（保持前 10 名直方圖）
+                # 2. 右圖：公司負面新聞排行（對齊左圖高度與邊距）
                 chart_right.markdown("#### 公司負面新聞排行（前 10）")
                 tickers = negative_df["Ticker"].fillna("").astype(str).str.strip()
                 companies = negative_df["Company"].fillna("").astype(str).str.strip()
@@ -1653,25 +1653,25 @@ chart_left, chart_right = st.columns(2)
                 st.markdown("#### 新聞明細與篩選")
                 filter_cols = st.columns([2, 1, 1])
                 search = filter_cols[0].text_input("搜尋公司、Ticker、標題或事件", key="negative_search")
-                
+
                 # 新增中文事件動態選單
                 event_options = ["全部"] + sorted([str(e) for e in negative_df["事件中文"].dropna().unique() if str(e).strip()])
                 event_filter = filter_cols[1].selectbox("中文事件", event_options, key="negative_event_filter")
-                
+
                 # 事件等級選單（支援各級選取）
                 level_options = ["全部", "Level 4 以上", "Level 3 以下", "Level 5", "Level 4", "Level 3", "Level 2", "Level 1"]
                 level_filter = filter_cols[2].selectbox("事件等級", level_options, key="negative_level_filter")
-                
+
                 filtered = negative_df.copy()
                 if search:
                     mask = filtered[["Ticker", "Company", "Title", "事件中文"]].fillna("").astype(str).apply(
                         lambda column: column.str.contains(search, case=False, regex=False)
                     ).any(axis=1)
                     filtered = filtered[mask]
-                
+
                 if event_filter != "全部":
                     filtered = filtered[filtered["事件中文"] == event_filter]
-                    
+
                 if level_filter == "Level 4 以上":
                     filtered = filtered[filtered["Level"] >= 4]
                 elif level_filter == "Level 3 以下":
@@ -1679,7 +1679,7 @@ chart_left, chart_right = st.columns(2)
                 elif level_filter.startswith("Level "):
                     target_lvl = int(level_filter.replace("Level ", ""))
                     filtered = filtered[filtered["Level"] == target_lvl]
-                    
+
                 st.caption(f"篩選結果：顯示 {len(filtered):,}／{len(negative_df):,} 則")
                 st.dataframe(
                     filtered[["Published Time", "Ticker", "Company", "事件中文", "Level", "Title_ZH", "Action", "URL"]],
