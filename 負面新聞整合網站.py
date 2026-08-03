@@ -1463,7 +1463,7 @@ if True:
                         height=82,
                     )
             else:
-                right.metric("抓新聞所用時間", elapsed_text)
+                right.metric("執行時間", elapsed_text)
 
             stage_rows = [
                 {"執行階段": item["label"], "所用時間": format_elapsed(item["seconds"]), "狀態": "已完成"}
