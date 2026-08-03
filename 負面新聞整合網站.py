@@ -1638,5 +1638,5 @@ if saved_crawl["event_path"] and saved_crawl["event_path"].is_file():
                     use_container_width=True, hide_index=True,
                     column_config={"URL": st.column_config.LinkColumn("新聞", display_text="開啟")},
                 )
-    else:
+else:
         st.info("尚無成功抓取紀錄。完成第一次抓取後，結果會保留在這裡，重新整理或重新開啟網站也能下載。")
