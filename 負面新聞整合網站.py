@@ -1657,7 +1657,7 @@ if saved_crawl["event_path"] and saved_crawl["event_path"].is_file():
 
                 # 新增中文事件動態選單
                 event_options = ["全部"] + sorted([str(e) for e in negative_df["事件中文"].dropna().unique() if str(e).strip()])
-                event_filter = filter_cols[1].selectbox("中文事件", event_options, key="negative_event_filter")
+                event_filter = filter_cols[1].selectbox("事件種類", event_options, key="negative_event_filter")
 
                 # 事件等級選單（支援各級選取）
                 level_options = ["全部", "Level 5", "Level 4", "Level 3", "Level 2", "Level 1"]
