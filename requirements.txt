@@ -1,11 +1,10 @@
-streamlit>=1.37,<2
-altair>=5,<6
+streamlit
 pandas
 openpyxl
 requests
 lxml
 beautifulsoup4
-transformers>=4.40,<5
-torch
+transformers
+torch --index-url https://download.pytorch.org/whl/cpu
 altair>=5.6.0
 typing-extensions>=4.15.0
