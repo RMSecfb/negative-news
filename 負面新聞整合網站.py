@@ -77,7 +77,7 @@ def find_external_workbook(exact_name: str, patterns: tuple[str, ...]) -> Path |
 NEWS_COLUMNS = ["Ticker", "Company", "Published Time", "Title", "Source", "URL", "FinBERT"]
 NEGATIVE_OUTPUT_COLUMNS = [
     "Published Time", "Ticker", "Company", "Title", "Title_ZH", "FinBERT",
-    "Event_type", "Event_Code", "事件種類", "Level", "Action", "Keyword", "URL", "Source",
+    "Event_type", "Event_Code", "事件中文", "Level", "Action", "Keyword", "URL", "Source",
 ]
 
 DOW_30 = [
@@ -727,7 +727,7 @@ def event_output(record: dict, rule: dict, keyword: str = "", title_zh: str = ""
         "FinBERT": record.get("FinBERT", ""),
         "Event_type": rule.get("Event_type", ""),
         "Event_Code": rule.get("Event_Code", ""),
-        "事件種類": rule.get("事件種類", ""),
+        "事件中文": rule.get("事件中文", ""),
         "Level": rule.get("Level", ""),
         "Action": rule.get("Action", ""),
         "Keyword": keyword,
@@ -819,7 +819,7 @@ def write_excel(path: Path, sheets: dict[str, pd.DataFrame]) -> None:
             negative_widths = {
                 "Published Time": 21, "Ticker": 12, "Company": 24, "Title": 60,
                 "Title_ZH": 45, "FinBERT": 12, "Event_type": 18, "Event_Code": 27,
-                "事件種類": 22, "Level": 10, "Action": 45, "Keyword": 30, "URL": 65, "Source": 18,
+                "事件中文": 22, "Level": 10, "Action": 45, "Keyword": 30, "URL": 65, "Source": 18,
             }
             for index, column in enumerate(frame.columns, 1):
                 width = negative_widths.get(column, 22) if is_negative_output else (80 if column in {"URL", "Definition"} else 60 if column == "Title" else 22)
@@ -1593,7 +1593,7 @@ if saved_crawl["event_path"] and saved_crawl["event_path"].is_file():
 
                 # 1. 左圖：事件類型分布（加入「其他」類別以完整呈現代碼 100% 占比）
                 chart_left.markdown("#### 事件類型總占比")
-                all_event_counts = negative_df["事件種類"].fillna("未分類").value_counts()
+                all_event_counts = negative_df["事件中文"].fillna("未分類").value_counts()
 
                 if len(all_event_counts) > 10:
                     top_9 = all_event_counts.head(9)
@@ -1602,12 +1602,12 @@ if saved_crawl["event_path"] and saved_crawl["event_path"].is_file():
                 else:
                     event_counts_df = all_event_counts.reset_index()
 
-                event_counts_df.columns = ["事件種類", "數量"]
+                event_counts_df.columns = ["事件中文", "數量"]
 
                 fig_donut = px.pie(
                     event_counts_df,
                     values="數量",
-                    names="事件種類",
+                    names="事件中文",
                     hole=0.5,
                     color_discrete_sequence=px.colors.qualitative.Pastel
                 )
@@ -1656,7 +1656,7 @@ if saved_crawl["event_path"] and saved_crawl["event_path"].is_file():
                 search = filter_cols[0].text_input("搜尋公司、Ticker、標題或事件", key="negative_search")
 
                 # 新增中文事件動態選單
-                event_options = ["全部"] + sorted([str(e) for e in negative_df["事件種類"].dropna().unique() if str(e).strip()])
+                event_options = ["全部"] + sorted([str(e) for e in negative_df["事件中文"].dropna().unique() if str(e).strip()])
                 event_filter = filter_cols[1].selectbox("中文事件", event_options, key="negative_event_filter")
 
                 # 事件等級選單（支援各級選取）
@@ -1665,13 +1665,13 @@ if saved_crawl["event_path"] and saved_crawl["event_path"].is_file():
 
                 filtered = negative_df.copy()
                 if search:
-                    mask = filtered[["Ticker", "Company", "Title", "事件種類"]].fillna("").astype(str).apply(
+                    mask = filtered[["Ticker", "Company", "Title", "事件中文"]].fillna("").astype(str).apply(
                         lambda column: column.str.contains(search, case=False, regex=False)
                     ).any(axis=1)
                     filtered = filtered[mask]
 
                 if event_filter != "全部":
-                    filtered = filtered[filtered["事件種類"] == event_filter]
+                    filtered = filtered[filtered["事件中文"] == event_filter]
 
                 if level_filter == "Level 4 以上":
                     filtered = filtered[filtered["Level"] >= 4]
@@ -1683,7 +1683,7 @@ if saved_crawl["event_path"] and saved_crawl["event_path"].is_file():
 
                 st.caption(f"篩選結果：顯示 {len(filtered):,}／{len(negative_df):,} 則")
                 st.dataframe(
-                    filtered[["Published Time", "Ticker", "Company", "事件種類", "Level", "Title_ZH", "Action", "URL"]],
+                    filtered[["Published Time", "Ticker", "Company", "事件中文", "Level", "Title_ZH", "Action", "URL"]],
                     use_container_width=True, hide_index=True,
                     column_config={"URL": st.column_config.LinkColumn("新聞", display_text="開啟")},
                 )
