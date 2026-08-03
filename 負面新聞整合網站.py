@@ -1607,7 +1607,7 @@ if saved_crawl["event_path"] and saved_crawl["event_path"].is_file():
                 filter_cols = st.columns([2, 1, 1])
                 search = filter_cols[0].text_input("搜尋公司、Ticker、標題或事件", key="negative_search")
                 
-                # 新增中文事件動態選單
+                # 新增事件種類動態選單
                 event_options = ["全部"] + sorted([str(e) for e in negative_df["事件中文"].dropna().unique() if str(e).strip()])
                 event_filter = filter_cols[1].selectbox("事件種類", event_options, key="negative_event_filter")
                 
