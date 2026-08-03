@@ -1570,9 +1570,9 @@ if True:
 
         # ============================================================
         # 區塊：負面新聞總覽（KPI、事件類型/公司排行圖表、可篩選明細表）
-        # 直接讀取剛才產生的「負面新聞」工作表來畫圖，不用另外開檔案。
+        # 直接讀取剛才產生的「負面新聞」工作表來畫圖。
         # ============================================================
-        if saved_crawl["event_path"] and saved_crawl["event_path"].is_file():
+       if saved_crawl["event_path"] and saved_crawl["event_path"].is_file():
             st.markdown("### 4. 負面新聞總覽")
             negative_df = pd.read_excel(saved_crawl["event_path"], sheet_name="負面新聞")
             if negative_df.empty:
@@ -1580,11 +1580,12 @@ if True:
             else:
                 negative_df["Level"] = pd.to_numeric(negative_df["Level"], errors="coerce").fillna(0).astype(int)
 
+                # Metric 第一格為總新聞數量，並移除持續追蹤
                 metric_cols = st.columns(4)
-                metric_cols[0].metric("負面新聞", f"{len(negative_df):,} 則")
-                metric_cols[1].metric("涉及公司", f"{negative_df['Ticker'].replace('', pd.NA).nunique():,} 家")
-                metric_cols[2].metric("重大事件（Level≥4）", f"{int((negative_df['Level'] >= 4).sum()):,} 則")
-                metric_cols[3].metric("持續追蹤", f"{int(negative_df['Action'].fillna('').str.contains('持續追蹤').sum()):,} 則")
+                metric_cols[0].metric("總新聞數量", f"{saved_crawl['rows']:,} 則")
+                metric_cols[1].metric("負面新聞", f"{len(negative_df):,} 則")
+                metric_cols[2].metric("涉及公司", f"{negative_df['Ticker'].replace('', pd.NA).nunique():,} 家")
+                metric_cols[3].metric("重大事件（Level≥4）", f"{int((negative_df['Level'] >= 4).sum()):,} 則")
 
                 chart_left, chart_right = st.columns(2)
                 chart_left.markdown("#### 事件類型分布（前 10）")
@@ -1602,24 +1603,32 @@ if True:
                 chart_right.bar_chart(company_counts)
 
                 st.markdown("#### 新聞明細與篩選")
-                filter_cols = st.columns([2, 1])
+                filter_cols = st.columns([2, 1, 1])
                 search = filter_cols[0].text_input("搜尋公司、Ticker、標題或事件", key="negative_search")
-                level_filter = filter_cols[1].selectbox("事件等級", ["全部", "Level 4 以上", "Level 3 以下"], key="negative_level_filter")
+                
+                # 取得動態中文事件選項
+                event_options = ["全部"] + sorted([str(e) for e in negative_df["事件中文"].dropna().unique() if str(e).strip()])
+                event_filter = filter_cols[1].selectbox("中文事件", event_options, key="negative_event_filter")
+                level_filter = filter_cols[2].selectbox("事件等級", ["全部", "Level 4 以上", "Level 3 以下"], key="negative_level_filter")
+                
                 filtered = negative_df.copy()
                 if search:
                     mask = filtered[["Ticker", "Company", "Title", "事件中文"]].fillna("").astype(str).apply(
                         lambda column: column.str.contains(search, case=False, regex=False)
                     ).any(axis=1)
                     filtered = filtered[mask]
+                
+                if event_filter != "全部":
+                    filtered = filtered[filtered["事件中文"] == event_filter]
+                    
                 if level_filter == "Level 4 以上":
                     filtered = filtered[filtered["Level"] >= 4]
                 elif level_filter == "Level 3 以下":
                     filtered = filtered[filtered["Level"] < 4]
+                    
                 st.caption(f"篩選結果：顯示 {len(filtered):,}／{len(negative_df):,} 則")
                 st.dataframe(
                     filtered[["Published Time", "Ticker", "Company", "事件中文", "Level", "Title_ZH", "Action", "URL"]],
                     use_container_width=True, hide_index=True,
                     column_config={"URL": st.column_config.LinkColumn("新聞", display_text="開啟")},
                 )
-    else:
-        st.info("尚無成功抓取紀錄。完成第一次抓取後，結果會保留在這裡，重新整理或重新開啟網站也能下載。")
