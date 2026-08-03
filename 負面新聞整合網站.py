@@ -145,28 +145,6 @@ NEGATIVE_OUTPUT_COLUMNS = [
     "Event_type", "Event_Code", "事件中文", "Level", "Action", "Keyword", "URL", "Source",
 ]
 
-# 這份資料只用來「首次建立」可編輯的 Parameter_Event.xlsx。
-# 實際分類永遠重新讀取 Excel，使用者修改 Excel 後不需改程式。
-DEFAULT_RULE_ROWS = [
-    ["E001", "Legal", "BANKRUPTCY", "破產／重整", 5, 100, "公司", "bankruptcy;chapter 11;insolvency;破產;重整", "立即檢視；持續追蹤", 30, "是", "是", "是", "", "公司進入破產、重整或無力償債程序"],
-    ["E002", "Regulatory", "FRAUD", "詐欺／財報造假", 5, 98, "公司", "fraud;accounting irregularities;misstatement;財報造假;詐欺", "立即檢視；持續追蹤", 30, "是", "是", "是", "alleged fraud prevention", "重大詐欺或會計問題"],
-    ["E003", "Regulatory", "INVESTIGATION", "監管調查", 4, 90, "公司", "investigation;probe;subpoena;監管調查;遭調查", "持續追蹤", 14, "是", "是", "是", "internal investigation", "政府或主管機關調查"],
-    ["E004", "Legal", "LAWSUIT", "重大訴訟", 4, 88, "公司", "lawsuit;sued;litigation;class action;訴訟;集體訴訟", "持續追蹤", 14, "否", "是", "否", "settles lawsuit", "可能造成重大財務或營運影響的訴訟"],
-    ["E005", "Regulatory", "ANTITRUST", "反壟斷調查", 4, 92, "公司", "antitrust;competition probe;反壟斷;反托拉斯", "持續追蹤", 21, "是", "是", "是", "", "競爭法或反壟斷事件"],
-    ["E006", "Credit", "CREDIT_DOWNGRADE", "信用降評", 4, 85, "公司", "downgrade;rating cut;rating lowered;信用調降;信評調降", "持續追蹤", 14, "是", "是", "是", "upgrade", "信用評等遭調降"],
-    ["E007", "Operations", "RECALL", "產品召回", 4, 82, "產品", "recall;product defect;產品召回;瑕疵產品", "持續追蹤", 14, "是", "是", "否", "", "產品安全或召回事件"],
-    ["E008", "Operations", "CYBER", "資安事件", 4, 90, "公司", "cyberattack;data breach;ransomware;資料外洩;資安事件", "立即檢視；持續追蹤", 21, "是", "是", "是", "", "重大資安或資料外洩"],
-    ["E009", "Operations", "SUPPLY", "供應鏈中斷", 3, 75, "營運", "supply disruption;production halt;factory shutdown;供應鏈中斷;停產", "持續追蹤", 10, "否", "是", "否", "", "生產或供應鏈受到重大影響"],
-    ["E010", "Finance", "GUIDANCE_CUT", "下修財測", 4, 86, "財務", "cuts guidance;lowers outlook;profit warning;下修財測;獲利預警", "持續追蹤", 14, "是", "是", "是", "raises guidance", "公司下修營收或獲利展望"],
-    ["E011", "Finance", "EARNINGS_MISS", "財報不如預期", 3, 70, "財務", "misses estimates;earnings miss;revenue miss;不如預期;低於預期", "檢視", 7, "否", "否", "否", "beats estimates", "財報低於市場預期"],
-    ["E012", "Management", "EXEC_EXIT", "高階主管異動", 3, 68, "管理", "ceo resigns;cfo resigns;steps down abruptly;執行長辭職;財務長辭職", "檢視", 10, "否", "否", "否", "planned succession", "關鍵主管突然離任"],
-    ["E013", "Workforce", "LAYOFF", "大規模裁員", 3, 72, "營運", "layoffs;job cuts;workforce reduction;裁員;縮減人力", "持續追蹤", 10, "否", "是", "否", "hiring", "大規模人力縮減"],
-    ["E014", "Regulatory", "FINE", "監管裁罰", 4, 88, "公司", "fine;penalty;sanction;罰款;裁罰", "持續追蹤", 14, "是", "是", "否", "", "主管機關重大裁罰"],
-    ["E015", "Market", "TARIFF", "關稅／制裁衝擊", 3, 74, "外部", "tariff;export ban;sanctions;關稅;出口禁令;制裁", "檢視；持續追蹤", 10, "否", "是", "否", "tariff exemption", "關稅、出口限制或制裁造成風險"],
-    ["SYS001", "System", "UNKNOWN", "待人工覆核", 1, 3, "系統", "", "人工覆核", 3, "否", "否", "否", "", "未命中事件規則且情緒非正面的新聞"],
-    ["SYS002", "System", "NOT_RELEVANT", "無關新聞", 0, 2, "系統", "", "不處理", 0, "否", "否", "否", "", "未命中事件規則且情緒為正面的新聞"],
-    ["SYS003", "System", "NON_CORE_SOURCE", "非主要來源", 0, 1, "系統", "", "不處理", 0, "否", "否", "否", "", "未命中事件規則且不屬於主要新聞來源"],
-]
 
 DEFAULT_CORE_SOURCES = [
     "CNBC", "MoneyDJ", "經濟日報", "鉅亨網", "TradingView", "Nasdaq",
