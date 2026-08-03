@@ -35,91 +35,6 @@ from openpyxl.styles import Alignment, Font, PatternFill
 from openpyxl.utils import get_column_letter
 
 
-def launch_streamlit_when_run_directly() -> None:
-    """直接執行本檔案時，確認網站就緒後才開啟瀏覽器。"""
-    if get_script_run_ctx(suppress_warning=True) is not None:
-        return
-    if os.environ.get("FUBON_STANDALONE_STREAMLIT_CHILD") == "1":
-        return
-    environment = os.environ.copy()
-    environment["FUBON_STANDALONE_STREAMLIT_CHILD"] = "1"
-    command = [
-        sys.executable, "-m", "streamlit", "run", str(Path(__file__).resolve()),
-        "--server.address", "127.0.0.1", "--server.port", "8504",
-        "--server.headless", "true", "--browser.gatherUsageStats", "false",
-        "--client.toolbarMode", "viewer",
-    ]
-    script_dir = Path(__file__).resolve().parent
-    log_path = script_dir / "啟動錯誤.log"
-    url = "http://127.0.0.1:8504/"
-    try:
-        with log_path.open("w", encoding="utf-8") as log_file:
-            process = subprocess.Popen(
-                command, env=environment, cwd=str(script_dir),
-                stdout=log_file, stderr=subprocess.STDOUT,
-            )
-            ready = False
-            for _ in range(120):
-                if process.poll() is not None:
-                    break
-                try:
-                    with urllib.request.urlopen(f"{url}_stcore/health", timeout=1) as response:
-                        ready = response.status == 200
-                except Exception:
-                    ready = False
-                if ready:
-                    break
-                time.sleep(0.5)
-            if not ready:
-                if process.poll() is None:
-                    process.terminate()
-                print(f"網站啟動失敗，請查看：{log_path}")
-                try:
-                    input("按 Enter 關閉視窗……")
-                except EOFError:
-                    pass
-                raise SystemExit(1)
-            print(f"網站已啟動：{url}")
-            print("請保留此視窗；關閉視窗後網站也會停止。")
-            webbrowser.open(url)
-            try:
-                exit_code = process.wait()
-            except KeyboardInterrupt:
-                process.terminate()
-                exit_code = process.wait(timeout=10)
-            if exit_code not in (0, -15):
-                print(f"網站已停止，詳細訊息請查看：{log_path}")
-                try:
-                    input("按 Enter 關閉視窗……")
-                except EOFError:
-                    pass
-            raise SystemExit(exit_code)
-    except OSError as exc:
-        print(f"無法建立網站服務：{exc}")
-        raise SystemExit(1) from exc
-
-
-launch_streamlit_when_run_directly()
-
-
-STANDALONE_DIR = Path(__file__).resolve().parent
-SIMPLE_SITE = True
-APP_TITLE = "美股負面新聞整合中心" if SIMPLE_SITE else "美股新聞風險指揮中心"
-APP_VERSION = "雙方法合併精簡版 1.0" if SIMPLE_SITE else "全新重建版 1.0"
-TAIPEI = timezone(timedelta(hours=8))
-DATA_ROOT = Path(os.environ.get(
-    "FUBON_REBUILT_DATA_DIR",
-    str(STANDALONE_DIR / "負面新聞整合資料"),
-))
-OUTPUT_DIR = DATA_ROOT / "output"
-UPLOAD_DIR = DATA_ROOT / "uploads"
-CONFIG_DIR = DATA_ROOT / "config"
-DB_PATH = DATA_ROOT / "system.db"
-RULE_PATH = CONFIG_DIR / "Parameter_Event.xlsx"
-COMPANY_PATH = CONFIG_DIR / "Company_List.xlsx"
-BACKUP_PATH = DATA_ROOT / "backups" / "美股負面新聞系統_版面流程改進前_20260728.py"
-
-
 def find_external_workbook(exact_name: str, patterns: tuple[str, ...]) -> Path | None:
     """從程式旁、既有 data/config 與常見個人資料夾尋找設定檔。"""
     search_roots = [
@@ -1467,10 +1382,10 @@ else:
 
 if page == "今日任務":
     st.markdown("### 1. 選擇公司範圍")
-    company_universe_options = ["Dow Jones 30", "S&P 500", "自行上傳最新版"]
+    company_universe_options = ["Dow Jones 30", "S&P 500", "自行上傳公司名單"]
     universe = st.radio("本次要使用的公司名單", company_universe_options, index=1, horizontal=True)
     company_upload = None
-    if universe == "自行上傳最新版":
+    if universe == "自行上傳公司名單":
         company_upload = st.file_uploader("上傳最新公司名單 Excel", type=["xlsx"], key="company_list_upload")
         if st.button("檢查並套用新版", use_container_width=True, disabled=company_upload is None):
             try:
@@ -1518,14 +1433,14 @@ if page == "今日任務":
     elif crawl_method == "方法二｜Google News＋FinBERT":
         st.markdown("<div class='method-card'><div class='method-title'>方法二｜Google News＋FinBERT</div><div class='method-desc'>分批查詢英文 Google News RSS，完成後以 ProsusAI/finbert 分析標題。</div></div>", unsafe_allow_html=True)
     else:
-        st.markdown("<div class='method-card'><div class='method-title'>方法一＋方法二｜完整整合</div><div class='method-desc'>依序完成兩種爬蟲、合併去重，再統一執行 FinBERT 評分。其中方法一不使用 Nasdaq。</div></div>", unsafe_allow_html=True)
+        st.markdown("<div class='method-card'><div class='method-title'>方法一＋方法二｜完整整合</div><div class='method-desc'>依序完成兩種爬蟲、合併去除重複，再執行 FinBERT 評分。</div></div>", unsafe_allow_html=True)
     method_name = {"方法一｜多來源快速擷取": "方法一", "方法二｜Google News＋FinBERT": "方法二", "方法一＋方法二｜完整整合": "方法一＋方法二"}[crawl_method]
     registry = crawl_job_registry()
     current_job = registry.get("current")
     is_running = bool(current_job and current_job.get("status") in ("running", "stopping"))
     if st.button(
         f"開始執行{method_name}", type="primary",
-        disabled=start_dt > end_dt or is_running or universe == "自行上傳最新版",
+        disabled=start_dt > end_dt or is_running or universe == "自行上傳公司名單",
         use_container_width=True,
     ):
         try:
@@ -2009,7 +1924,7 @@ if page == "設定與說明":
     st.info("目前版本會用於之後所有新聞分類；只有再次上傳並套用新版時才會更換。")
     rule_choice = st.radio(
         "本次要使用的關鍵字版本",
-        ["使用目前版本", "自行上傳最新版"],
+        ["使用目前版本", "自行上傳公司名單"],
         index=0,
         horizontal=True,
     )
@@ -2018,14 +1933,14 @@ if page == "設定與說明":
         "上傳最新版關鍵字 Excel",
         type=["xlsx"],
         key="rule_upload",
-        disabled=rule_choice != "自行上傳最新版",
+        disabled=rule_choice != "自行上傳公司名單",
     )
     if rule_choice == "使用目前版本":
         st.success(f"目前持續使用：{current_rule_name}")
     if st.button(
         "檢查並永久套用新版",
         type="primary",
-        disabled=rule_choice != "自行上傳最新版" or not replacement,
+        disabled=rule_choice != "自行上傳公司名單" or not replacement,
         use_container_width=True,
     ):
         try:
