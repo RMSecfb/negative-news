@@ -1587,16 +1587,24 @@ if saved_crawl["event_path"] and saved_crawl["event_path"].is_file():
                 metric_cols[2].metric("涉及公司", f"{negative_df['Ticker'].replace('', pd.NA).nunique():,} 家")
                 metric_cols[3].metric("重大事件（Level≥4）", f"{int((negative_df['Level'] >= 4).sum()):,} 則")
 
-                chart_left, chart_right = st.columns(2)
-                
-                # 左圖：事件類型分布（甜甜圈圖）
-                chart_left.markdown("#### 事件類型占比（前 10）")
-                event_counts = negative_df["事件中文"].fillna("未分類").value_counts().head(10).reset_index()
-                event_counts.columns = ["事件中文", "數量"]
-                
+chart_left, chart_right = st.columns(2)
                 import plotly.express as px
+                
+                # 1. 左圖：事件類型分布（含「其他」以補滿 100%）
+                chart_left.markdown("#### 事件類型總占比")
+                all_event_counts = negative_df["事件中文"].fillna("未分類").value_counts()
+                
+                if len(all_event_counts) > 10:
+                    top_9 = all_event_counts.head(9)
+                    other_count = all_event_counts.iloc[9:].sum()
+                    event_counts_df = pd.concat([top_9, pd.Series({"其他": other_count})]).reset_index()
+                else:
+                    event_counts_df = all_event_counts.reset_index()
+                    
+                event_counts_df.columns = ["事件中文", "數量"]
+                
                 fig_donut = px.pie(
-                    event_counts, 
+                    event_counts_df, 
                     values="數量", 
                     names="事件中文", 
                     hole=0.5,
@@ -1609,12 +1617,12 @@ if saved_crawl["event_path"] and saved_crawl["event_path"].is_file():
                 )
                 fig_donut.update_layout(
                     showlegend=False,
-                    margin=dict(t=10, b=10, l=10, r=10),
-                    height=320
+                    height=380,
+                    margin=dict(t=20, b=20, l=20, r=20)
                 )
                 chart_left.plotly_chart(fig_donut, use_container_width=True)
 
-                # 右圖：公司負面新聞排行
+                # 2. 右圖：公司負面新聞排行（保持前 10 名直方圖）
                 chart_right.markdown("#### 公司負面新聞排行（前 10）")
                 tickers = negative_df["Ticker"].fillna("").astype(str).str.strip()
                 companies = negative_df["Company"].fillna("").astype(str).str.strip()
@@ -1622,8 +1630,25 @@ if saved_crawl["event_path"] and saved_crawl["event_path"].is_file():
                     (tickers + "｜" + companies).where(tickers != "", companies).values,
                     index=negative_df.index,
                 )
-                company_counts = company_label[company_label != ""].value_counts().head(10)
-                chart_right.bar_chart(company_counts)
+                company_counts = company_label[company_label != ""].value_counts().head(10).reset_index()
+                company_counts.columns = ["公司", "數量"]
+
+                fig_bar = px.bar(
+                    company_counts,
+                    x="公司",
+                    y="數量",
+                    text="數量",
+                    color_discrete_sequence=["#1D4ED8"]
+                )
+                fig_bar.update_traces(textposition='outside')
+                fig_bar.update_layout(
+                    xaxis_title=None,
+                    yaxis_title=None,
+                    height=380,
+                    margin=dict(t=20, b=20, l=20, r=20),
+                    xaxis=dict(tickangle=-45)
+                )
+                chart_right.plotly_chart(fig_bar, use_container_width=True)
 
                 st.markdown("#### 新聞明細與篩選")
                 filter_cols = st.columns([2, 1, 1])
