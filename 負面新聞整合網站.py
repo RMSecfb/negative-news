@@ -1611,7 +1611,7 @@ if saved_crawl["event_path"] and saved_crawl["event_path"].is_file():
                 event_filter = filter_cols[1].selectbox("中文事件", event_options, key="negative_event_filter")
                 
                 # 事件等級選單（支援各級選取）
-                level_options = ["全部", "Level 4 以上", "Level 3 以下", "Level 5", "Level 4", "Level 3", "Level 2", "Level 1"]
+                level_options = ["全部", "Level 5", "Level 4", "Level 3", "Level 2", "Level 1"]
                 level_filter = filter_cols[2].selectbox("事件等級", level_options, key="negative_level_filter")
                 
                 filtered = negative_df.copy()
