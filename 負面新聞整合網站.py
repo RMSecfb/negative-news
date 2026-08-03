@@ -1572,7 +1572,7 @@ if True:
         # 區塊：負面新聞總覽（KPI、事件類型/公司排行圖表、可篩選明細表）
         # 直接讀取剛才產生的「負面新聞」工作表來畫圖。
         # ============================================================
-       if saved_crawl["event_path"] and saved_crawl["event_path"].is_file():
+      if saved_crawl["event_path"] and saved_crawl["event_path"].is_file():
             st.markdown("### 4. 負面新聞總覽")
             negative_df = pd.read_excel(saved_crawl["event_path"], sheet_name="負面新聞")
             if negative_df.empty:
@@ -1580,7 +1580,7 @@ if True:
             else:
                 negative_df["Level"] = pd.to_numeric(negative_df["Level"], errors="coerce").fillna(0).astype(int)
 
-                # Metric 第一格為總新聞數量，並移除持續追蹤
+                # 最左邊第一格加上總新聞數量，並移除持續追蹤 Metric
                 metric_cols = st.columns(4)
                 metric_cols[0].metric("總新聞數量", f"{saved_crawl['rows']:,} 則")
                 metric_cols[1].metric("負面新聞", f"{len(negative_df):,} 則")
@@ -1606,7 +1606,7 @@ if True:
                 filter_cols = st.columns([2, 1, 1])
                 search = filter_cols[0].text_input("搜尋公司、Ticker、標題或事件", key="negative_search")
                 
-                # 取得動態中文事件選項
+                # 新增中文事件篩選選單
                 event_options = ["全部"] + sorted([str(e) for e in negative_df["事件中文"].dropna().unique() if str(e).strip()])
                 event_filter = filter_cols[1].selectbox("中文事件", event_options, key="negative_event_filter")
                 level_filter = filter_cols[2].selectbox("事件等級", ["全部", "Level 4 以上", "Level 3 以下"], key="negative_level_filter")
