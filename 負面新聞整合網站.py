@@ -1568,10 +1568,10 @@ if True:
         if not saved_crawl["is_today"]:
             st.caption("今天尚未完成新的抓取；目前提供的是最近一次成功結果。")
 
-        # ============================================================
-        # 區塊：負面新聞總覽（KPI、事件類型/公司排行圖表、可篩選明細表）
-        # 直接讀取剛才產生的「負面新聞」工作表來畫圖。
-        # ============================================================
+# ============================================================
+# 區塊：負面新聞總覽（KPI、事件類型/公司排行圖表、可篩選明細表）
+# 直接讀取剛才產生的「負面新聞」工作表來畫圖。
+# ============================================================
 if saved_crawl["event_path"] and saved_crawl["event_path"].is_file():
             st.markdown("### 4. 負面新聞總覽")
             negative_df = pd.read_excel(saved_crawl["event_path"], sheet_name="負面新聞")
@@ -1582,17 +1582,39 @@ if saved_crawl["event_path"] and saved_crawl["event_path"].is_file():
 
                 # 最左邊第一格加上總新聞數量，並移除持續追蹤
                 metric_cols = st.columns(4)
-                metric_cols[0].metric("總體新聞", f"{saved_crawl['rows']:,} 則")
+                metric_cols[0].metric("總新聞數量", f"{saved_crawl['rows']:,} 則")
                 metric_cols[1].metric("負面新聞", f"{len(negative_df):,} 則")
-                metric_cols[2].metric("重大事件（Level ≥ 4）", f"{int((negative_df['Level'] >= 4).sum()):,} 則")
-                metric_cols[3].metric("涉及公司", f"{negative_df['Ticker'].replace('', pd.NA).nunique():,} 家")
-                
+                metric_cols[2].metric("涉及公司", f"{negative_df['Ticker'].replace('', pd.NA).nunique():,} 家")
+                metric_cols[3].metric("重大事件（Level≥4）", f"{int((negative_df['Level'] >= 4).sum()):,} 則")
 
                 chart_left, chart_right = st.columns(2)
-                chart_left.markdown("#### 事件類型分布（前 10）")
-                event_counts = negative_df["事件中文"].fillna("未分類").value_counts().head(10)
-                chart_left.bar_chart(event_counts)
+                
+                # 左圖：事件類型分布（甜甜圈圖）
+                chart_left.markdown("#### 事件類型占比（前 10）")
+                event_counts = negative_df["事件中文"].fillna("未分類").value_counts().head(10).reset_index()
+                event_counts.columns = ["事件中文", "數量"]
+                
+                import plotly.express as px
+                fig_donut = px.pie(
+                    event_counts, 
+                    values="數量", 
+                    names="事件中文", 
+                    hole=0.5,
+                    color_discrete_sequence=px.colors.qualitative.Pastel
+                )
+                fig_donut.update_traces(
+                    textposition='inside', 
+                    textinfo='percent+label',
+                    hovertemplate="<b>%{label}</b><br>數量: %{value} 則 (%{percent})"
+                )
+                fig_donut.update_layout(
+                    showlegend=False,
+                    margin=dict(t=10, b=10, l=10, r=10),
+                    height=320
+                )
+                chart_left.plotly_chart(fig_donut, use_container_width=True)
 
+                # 右圖：公司負面新聞排行
                 chart_right.markdown("#### 公司負面新聞排行（前 10）")
                 tickers = negative_df["Ticker"].fillna("").astype(str).str.strip()
                 companies = negative_df["Company"].fillna("").astype(str).str.strip()
@@ -1607,12 +1629,12 @@ if saved_crawl["event_path"] and saved_crawl["event_path"].is_file():
                 filter_cols = st.columns([2, 1, 1])
                 search = filter_cols[0].text_input("搜尋公司、Ticker、標題或事件", key="negative_search")
                 
-                # 新增事件種類動態選單
+                # 新增中文事件動態選單
                 event_options = ["全部"] + sorted([str(e) for e in negative_df["事件中文"].dropna().unique() if str(e).strip()])
-                event_filter = filter_cols[1].selectbox("事件種類", event_options, key="negative_event_filter")
+                event_filter = filter_cols[1].selectbox("中文事件", event_options, key="negative_event_filter")
                 
                 # 事件等級選單（支援各級選取）
-                level_options = ["全部", "Level 5", "Level 4", "Level 3", "Level 2", "Level 1"]
+                level_options = ["全部", "Level 4 以上", "Level 3 以下", "Level 5", "Level 4", "Level 3", "Level 2", "Level 1"]
                 level_filter = filter_cols[2].selectbox("事件等級", level_options, key="negative_level_filter")
                 
                 filtered = negative_df.copy()
