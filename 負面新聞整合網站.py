@@ -1444,7 +1444,7 @@ if True:
                         f"""
                         <div style="font-family:Arial,sans-serif;border:1px solid #e2e8f0;border-radius:12px;
                                     padding:10px 16px;background:white;height:78px;box-sizing:border-box;">
-                          <div style="font-size:14px;color:#334155;margin-bottom:3px;">抓新聞所用時間</div>
+                          <div style="font-size:14px;color:#334155;margin-bottom:3px;">執行時間</div>
                           <div id="crawl-elapsed" style="font-size:26px;color:#1e293b;line-height:1.08;">{elapsed_text}</div>
                         </div>
                         <script>
