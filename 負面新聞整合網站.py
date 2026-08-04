@@ -1336,7 +1336,7 @@ st.markdown("<div class='method-card'><div class='method-title'>運作流程說�
 # ============================================================
 if True:
     st.markdown("### 1. 選擇公司列表")
-    universe = st.radio("選擇欲執行的公司列表", ["Dow Jones 30", "S&P 500", "上傳公司列表"], index=1, horizontal=True)
+    universe = st.radio(["Dow Jones 30", "S&P 500", "上傳公司列表"], index=1, horizontal=True)
     st.caption("Dow Jones 30／S&P 500 讀取自 GitHub repo 內 Excel 檔。")
     if universe == "上傳公司列表":
         company_upload = st.file_uploader("上傳自訂列表 Excel 檔，需含 Ticker (Symbol) 與 Company (Name) 欄位。", type=["xlsx"], key="company_list_upload")
@@ -1368,8 +1368,8 @@ if True:
     if start_dt > end_dt:
         st.error("開始時間不可晚於結束時間")
     st.caption(f"設定時間：{start_dt:%Y-%m-%d %H:%M} ～ {end_dt:%Y-%m-%d %H:%M}（台北時間）")
-    st.markdown("### 3. 今日新聞擷取")
-    crawl_method = st.radio("選擇執行方法", ["方法一｜多網站擷取", "方法二｜Google News", "方法一＋方法二｜完整整合"], index=2, horizontal=True)
+    st.markdown("### 3. 選擇執行方法")
+    crawl_method = st.radio(["方法一｜多網站擷取", "方法二｜Google News", "方法一＋方法二｜完整整合"], index=2, horizontal=True)
     if crawl_method == "方法一｜多網站擷取":
         st.markdown("<div class='method-card'><div class='method-title'>方法一｜多網站擷取</div><div class='method-desc'>彙整 MoneyDJ、經濟日報、鉅亨網、CNBC 與 TradingView。</div></div>", unsafe_allow_html=True)
     elif crawl_method == "方法二｜Google News":
