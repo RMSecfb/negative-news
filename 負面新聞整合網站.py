@@ -210,10 +210,10 @@ def finish_run(run_id: int, status: str, rows: int = 0, output_path: str = "", m
 # ============================================================
 # 區塊：背景執行緒與進度追蹤
 # 讓抓取新聞的過程在背景執行緒跑，網頁可即時顯示進度、
-# 各階段耗時，並支援使用者中途按「停止抓取」。
+# 各階段耗時，並支援使用者中途按「停止執行」。
 # ============================================================
 class CrawlCancelled(Exception):
-    """使用者主動停止抓取。"""
+    """使用者主動停止執行。"""
 
 
 class BackgroundProgress:
@@ -222,7 +222,7 @@ class BackgroundProgress:
 
     def progress(self, value=0, text=""):
         if self.job["stop_event"].is_set():
-            raise CrawlCancelled("使用者已停止抓取")
+            raise CrawlCancelled("使用者已停止執行")
         self.job["progress"] = max(0.0, min(float(value or 0), 1.0))
         if text:
             self.job["progress_text"] = str(text)
@@ -1064,7 +1064,7 @@ def fetch_method1_news(companies: pd.DataFrame, start: datetime, end: datetime, 
     try:
         for completed, future in enumerate(as_completed(futures), 1):
             if isinstance(progress, BackgroundProgress) and progress.job["stop_event"].is_set():
-                raise CrawlCancelled("使用者已停止抓取")
+                raise CrawlCancelled("使用者已停止執行")
             company_rows, company_errors = future.result()
             rows.extend(company_rows)
             errors.extend(company_errors)
@@ -1485,7 +1485,7 @@ if True:
                     "狀態": "執行中" if status == "running" else "停止中",
                 })
             button_labels = {
-                "running": "停止抓取", "stopping": "停止中…", "success": "✅ 已完成",
+                "running": "停止執行", "stopping": "停止中…", "success": "✅ 已完成",
                 "stopped": "已停止", "failed": "執行失敗",
             }
             stop_clicked = st.button(
