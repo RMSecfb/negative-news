@@ -1342,7 +1342,7 @@ st.markdown("<div class='method-card'><div class='method-title'>運作流程說�
 # 1. 選公司範圍 → 2. 設定期間 → 3. 選執行方法並執行 → 顯示進度與下載結果
 # ============================================================
 if True:
-    st.markdown("### 1. 選擇公司列表")
+    st.markdown("### 1. 選取公司列表")
     universe = st.radio("選擇欲執行的公司列表", ["Dow Jones 30", "S&P 500", "上傳公司列表"], index=1, horizontal=True, label_visibility="collapsed")
     st.caption("Dow Jones 30／S&P 500 讀取自 GitHub repo 內 Excel 檔。")
     if universe == "上傳公司列表":
