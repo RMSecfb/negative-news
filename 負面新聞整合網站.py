@@ -1345,7 +1345,7 @@ if True:
     universe = st.radio("選擇欲執行的公司列表", company_universe_options, index=1, horizontal=True)
     company_upload = None
     if universe == "上傳公司列表":
-        company_upload = st.file_uploader("上傳最新公司名單 Excel", type=["xlsx"], key="company_list_upload")
+        company_upload = st.file_uploader("上傳自訂公司列表 Excel 檔", type=["xlsx"], key="company_list_upload")
         if st.button("檢查並套用新版", use_container_width=True, disabled=company_upload is None):
             try:
                 checked_companies = load_company_upload(company_upload)
