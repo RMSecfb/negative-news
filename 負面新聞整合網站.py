@@ -1677,7 +1677,7 @@ if saved_crawl and saved_crawl["event_path"] and saved_crawl["event_path"].is_fi
                 )
                 fig_donut.update_layout(
                     showlegend=False,
-                    height=380,
+                    height=320,
                     margin=dict(t=20, b=20, l=20, r=20)
                 )
                 chart_left.plotly_chart(fig_donut, use_container_width=True)
@@ -1704,7 +1704,7 @@ if saved_crawl and saved_crawl["event_path"] and saved_crawl["event_path"].is_fi
                 fig_bar.update_layout(
                     xaxis_title=None,
                     yaxis_title=None,
-                    height=380,
+                    height=320,
                     margin=dict(t=20, b=20, l=20, r=20),
                     xaxis=dict(tickangle=-45)
                 )
