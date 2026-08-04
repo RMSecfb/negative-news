@@ -1369,7 +1369,7 @@ if True:
         st.error("開始時間不可晚於結束時間")
     st.caption(f"設定時間：{start_dt:%Y-%m-%d %H:%M} ～ {end_dt:%Y-%m-%d %H:%M}（台北時間）")
     st.markdown("### 3. 選擇執行方法")
-    crawl_method = st.radio(["方法一｜多網站擷取", "方法二｜Google News", "方法一＋方法二｜完整整合"], index=2, horizontal=True)
+    crawl_method = st.radio("選擇擷取方法", ["方法一｜多網站擷取", "方法二｜Google News", "方法一＋方法二｜完整整合"], index=2, horizontal=True, label_visibility="collapsed")
     if crawl_method == "方法一｜多網站擷取":
         st.markdown("<div class='method-card'><div class='method-title'>方法一｜多網站擷取</div><div class='method-desc'>彙整 MoneyDJ、經濟日報、鉅亨網、CNBC 與 TradingView。</div></div>", unsafe_allow_html=True)
     elif crawl_method == "方法二｜Google News":
