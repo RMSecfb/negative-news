@@ -347,7 +347,7 @@ def run_crawl_job(job: dict, method_name: str, universe: str, companies: pd.Data
             )
             begin_job_stage(job, "產生完整整合檔案")
             progress.progress(0.94, text="正在產生完整整合檔案")
-            write_excel(path, {"完整整合新聞": frame, "重複紀錄": duplicate_log, "來源摘要": source_summary})
+            write_excel(path, {"總新聞": frame, "重複紀錄": duplicate_log, "來源摘要": source_summary})
             write_excel(finbert_path, {"FinBERT小於等於0": negative_frame})
             job["summary"] = f"排除重複後共 {len(frame)} 則；FinBERT ≤ 0  {len(negative_frame)} 則"
         begin_job_stage(job, "負面事件分類與中文翻譯")
@@ -1492,7 +1492,7 @@ if True:
                     "狀態": "執行中" if status == "running" else "停止中",
                 })
             button_labels = {
-                "running": "停止執行", "stopping": "停止中…", "success": "✅ 已完成",
+                "running": "停止執行", "stopping": "停止中…", "success": "已完成",
                 "stopped": "已停止", "failed": "執行失敗",
             }
             stop_clicked = st.button(
@@ -1505,15 +1505,15 @@ if True:
                 job["progress_text"] = "正在安全停止，請稍候…"
                 job["stop_event"].set()
             status_messages = {
-                "running": "程式執行中，可於本頁查看最新進度。",
-                "stopping": "已停止執行。",
+                "running": "⏳ 程式執行中，可於本頁查看最新進度。",
+                "stopping": "🚫 已停止執行。",
                 "success": (
                     f"{job.get('summary', '抓取完成')}；負面新聞 {job.get('event_rows', 0)} 則；"
                     f"待人工覆核 {job.get('unknown_rows', 0)} 則；無關新聞 {job.get('irrelevant_rows', 0)} 則。"
                     f"翻譯失敗 {job.get('translation_failures', 0)} 則。"
                     f"總耗時 {elapsed_text}"
                 ),
-                "stopped": f"已停止執行。總耗時 {elapsed_text}；未完成的結果不會覆蓋前次紀錄。",
+                "stopped": f"🚫 已停止執行。總耗時 {elapsed_text}；未完成的結果不會覆蓋前次紀錄。",
                 "failed": f"抓取失敗：{job.get('error', '未知錯誤')}（耗時 {elapsed_text}）",
             }
             status_message = status_messages.get(status, "正在更新執行狀態…")
@@ -1659,7 +1659,7 @@ else:
 
 
 # ============================================================
-# 區塊：最近一次執行結果（移到頁面最下方）
+# 區塊：5. 下載執行結果
 # ============================================================
 if saved_crawl:
         current_job = crawl_job_registry().get("current")
@@ -1669,7 +1669,7 @@ if saved_crawl:
             and current_job.get("path")
             and Path(current_job["path"]) == saved_crawl["path"]
         )
-        st.markdown("### 本次抓取結果" if is_current_result else "### 最近一次執行結果")
+        st.markdown("### 本次抓取結果" if is_current_result else "### 5. 下載執行結果")
         try:
             saved_start = datetime.fromisoformat(saved_crawl["start_time"]).astimezone(TAIPEI)
             saved_end = datetime.fromisoformat(saved_crawl["end_time"]).astimezone(TAIPEI)
@@ -1695,7 +1695,7 @@ if saved_crawl:
         file_prefix = "今日" if saved_crawl["is_today"] else "前次"
         download_count = 1 + int(saved_crawl["event_path"] is not None) + int(saved_crawl["finbert_path"] is not None)
         download_columns = st.columns(download_count)
-        main_label = "完整整合新聞" if saved_crawl["method"] == "方法一＋方法二" else "新聞"
+        main_label = "總新聞" if saved_crawl["method"] == "方法一＋方法二" else "新聞"
         if saved_crawl["method"] == "方法一＋方法二":
             main_download_name = saved_crawl["path"].name
         else:
