@@ -1337,7 +1337,7 @@ st.markdown("<div class='method-card'><div class='method-title'>運作流程說�
 if True:
     st.markdown("### 1. 選擇公司列表")
     universe = st.radio("選擇欲執行的公司列表", ["Dow Jones 30", "S&P 500", "上傳公司列表"], index=1, horizontal=True)
-    st.caption("Dow Jones 30／S&P 500 直接讀取 GitHub repo 內的 DowJones30.xlsx／SP500.xlsx，更新檔案內容後重新整理網站即可套用。")
+    st.caption("Dow Jones 30／S&P 500 讀取自 GitHub repo 內 Excel 檔。")
     if universe == "上傳公司列表":
         company_upload = st.file_uploader("上傳自訂公司列表 Excel 檔（需含 Ticker/Symbol 與 Company/Name 欄位）", type=["xlsx"], key="company_list_upload")
         if st.button("檢查並套用", use_container_width=True, disabled=company_upload is None):
