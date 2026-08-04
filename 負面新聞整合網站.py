@@ -1352,7 +1352,7 @@ def fetch_price_impact(ticker: str, event_date_str: str) -> dict | None:
     except ImportError:
         return {"error": "missing_dependency"}
     try:
-        event_date = pd.to_datetime(event_date_str).tz_localize(None)
+        event_date = pd.to_datetime(event_date_str)  # 字串本身就沒有時區，不能再呼叫 tz_localize(None)
         start = (event_date - pd.Timedelta(days=10)).strftime("%Y-%m-%d")
         end = (event_date + pd.Timedelta(days=10)).strftime("%Y-%m-%d")
         hist = yf.Ticker(ticker).history(start=start, end=end)
