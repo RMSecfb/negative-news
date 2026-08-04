@@ -1333,8 +1333,7 @@ hero_subtitle = f"整合多方新聞來源，自動篩選並分類負面新聞�
 st.markdown(f"<div class='app-hero'><div class='app-hero-title'>🛡️ {APP_TITLE}</div><div class='app-hero-sub'>{hero_subtitle}</div></div>", unsafe_allow_html=True)
 
 page_heading()
-st.markdown("<div class='method-card'><div class='method-title'>運作流程說明</div><div class='method-desc'>抓取多方新聞來源 → AI 情緒分析評分 → 依規則篩選出負面事件
-完成後可直接下載整理好的 Excel 報表，包含公司、事件類型與新聞連結。</div></div>", unsafe_allow_html=True)
+st.markdown("<div class='method-card'><div class='method-title'>運作流程說明</div><div class='method-desc'>系統自動抓取多個新聞來源，比對公司清單並去除重複新聞，接著以 AI (FinBERT) 模型分析新聞情緒，篩出可能影響公司之負面消息，最後彙整成圖表與Excel檔。</div></div>", unsafe_allow_html=True)
 
 # ============================================================
 # 區塊：今日任務頁面（唯一頁面）
