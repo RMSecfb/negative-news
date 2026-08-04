@@ -1369,14 +1369,14 @@ if True:
         st.error("開始時間不可晚於結束時間")
     st.caption(f"設定時間：{start_dt:%Y-%m-%d %H:%M} ～ {end_dt:%Y-%m-%d %H:%M}（台北時間）")
     st.markdown("### 3. 今日新聞擷取")
-    crawl_method = st.radio("選擇執行方法", ["方法一｜多來源擷取", "方法二｜Google News", "方法一＋方法二｜完整整合"], index=2, horizontal=True)
-    if crawl_method == "方法一｜多來源擷取":
-        st.markdown("<div class='method-card'><div class='method-title'>方法一｜多來源擷取</div><div class='method-desc'>彙整 MoneyDJ、經濟日報、鉅亨網、CNBC 與 TradingView。</div></div>", unsafe_allow_html=True)
+    crawl_method = st.radio("選擇執行方法", ["方法一｜多網站擷取", "方法二｜Google News", "方法一＋方法二｜完整整合"], index=2, horizontal=True)
+    if crawl_method == "方法一｜多網站擷取":
+        st.markdown("<div class='method-card'><div class='method-title'>方法一｜多網站擷取</div><div class='method-desc'>彙整 MoneyDJ、經濟日報、鉅亨網、CNBC 與 TradingView。</div></div>", unsafe_allow_html=True)
     elif crawl_method == "方法二｜Google News":
         st.markdown("<div class='method-card'><div class='method-title'>方法二｜Google News</div><div class='method-desc'>彙整 Google News RSS 英文新聞，並執行 FinBERT 分析。</div></div>", unsafe_allow_html=True)
     else:
         st.markdown("<div class='method-card'><div class='method-title'>方法一＋方法二｜完整整合</div><div class='method-desc'>依序完成兩種方法、合併排除重複，並執行 FinBERT 分析。</div></div>", unsafe_allow_html=True)
-    method_name = {"方法一｜多來源擷取": "方法一", "方法二｜Google News": "方法二", "方法一＋方法二｜完整整合": "方法一＋方法二"}[crawl_method]
+    method_name = {"方法一｜多網站擷取": "方法一", "方法二｜Google News": "方法二", "方法一＋方法二｜完整整合": "方法一＋方法二"}[crawl_method]
     registry = crawl_job_registry()
     current_job = registry.get("current")
     is_running = bool(current_job and current_job.get("status") in ("running", "stopping"))
