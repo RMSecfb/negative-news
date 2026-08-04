@@ -1521,7 +1521,7 @@ if True:
                     f"翻譯失敗 {job.get('translation_failures', 0)} 則。"
                     f"總耗時 {elapsed_text}"
                 ),
-                "stopped": f"已停止執行。總耗時 {elapsed_text}；未完成的結果不會覆蓋前次成功紀錄。",
+                "stopped": f"已停止執行。總耗時 {elapsed_text}；未完成的結果不會覆蓋前次紀錄。",
                 "failed": f"抓取失敗：{job.get('error', '未知錯誤')}（耗時 {elapsed_text}）",
             }
             status_message = status_messages.get(status, "正在更新執行狀態…")
