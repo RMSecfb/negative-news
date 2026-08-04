@@ -1343,7 +1343,7 @@ st.markdown("<div class='method-card'><div class='method-title'>今日任務｜�
 if True:
     st.markdown("### 1. 選擇公司列表")
     company_universe_options = ["Dow Jones 30", "S&P 500", "上傳公司列表"]
-    universe = st.radio("選擇欲執行的公司列表", company_universe_options, index=1, horizontal=True)
+    
     company_upload = None
     if universe == "自行上傳最新版":
         company_upload = st.file_uploader("上傳最新公司名單 Excel", type=["xlsx"], key="company_list_upload")
