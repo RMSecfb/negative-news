@@ -1341,9 +1341,9 @@ st.markdown("<div class='method-card'><div class='method-title'>今日任務｜�
 # 1. 選公司範圍 → 2. 設定期間 → 3. 選執行方法並執行 → 顯示進度與下載結果
 # ============================================================
 if True:
-    st.markdown("### 1. 選擇公司範圍")
-    company_universe_options = ["Dow Jones 30", "S&P 500", "自行上傳最新版"]
-    universe = st.radio("本次要使用的公司名單", company_universe_options, index=1, horizontal=True)
+    st.markdown("### 1. 選擇公司列表")
+    company_universe_options = ["Dow Jones 30", "S&P 500", "上傳公司列表"]
+    universe = st.radio("選擇欲執行的公司列表", company_universe_options, index=1, horizontal=True)
     company_upload = None
     if universe == "自行上傳最新版":
         company_upload = st.file_uploader("上傳最新公司名單 Excel", type=["xlsx"], key="company_list_upload")
@@ -1374,7 +1374,7 @@ if True:
     previous_end = last_success_end()
     default_start = (previous_end or (now - timedelta(days=3))).replace(hour=9, minute=0, second=0, microsecond=0)
     if previous_end:
-        st.caption(f"前次成功結束日期：{previous_end:%Y-%m-%d}；本次時間預設為 09:00。")
+        st.caption(f"最近執行日期：{previous_end:%Y-%m-%d}；時間預設為 09:00。")
     st.markdown("### 2. 設定新聞期間")
     start_col, end_col = st.columns(2)
     start_date = start_col.date_input("開始日期", value=default_start.date())
@@ -1675,7 +1675,7 @@ if saved_crawl and saved_crawl["event_path"] and saved_crawl["event_path"].is_fi
 
                 st.markdown("#### 新聞明細與篩選")
                 filter_cols = st.columns([2, 1, 1])
-                search = filter_cols[0].text_input("搜尋公司、Ticker、標題或事件", key="negative_search")
+                search = filter_cols[0].text_input("搜尋公司名稱、股票代號、標題", key="negative_search")
 
                 # 新增中文事件動態選單
                 event_options = ["全部"] + sorted([str(e) for e in negative_df["事件中文"].dropna().unique() if str(e).strip()])
