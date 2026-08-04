@@ -1283,7 +1283,7 @@ def load_saved_companies() -> pd.DataFrame:
 def page_heading() -> None:
     st.markdown(
         "<div class='page-kicker'>本日任務</div>"
-        "<div class='page-title'>開始本日新聞擷取</div>"
+        "<div class='page-title'>開始本日新聞擷取</div>",
         
         unsafe_allow_html=True,
     )
