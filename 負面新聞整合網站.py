@@ -1339,7 +1339,7 @@ if True:
     universe = st.radio("選擇欲執行的公司列表", ["Dow Jones 30", "S&P 500", "上傳公司列表"], index=1, horizontal=True)
     st.caption("Dow Jones 30／S&P 500 讀取自 GitHub repo 內 Excel 檔。")
     if universe == "上傳公司列表":
-        company_upload = st.file_uploader("上傳自訂列表 Excel 檔，需含 Ticker (Symbol) 與 Company (Name) 欄位", type=["xlsx"], key="company_list_upload")
+        company_upload = st.file_uploader("上傳自訂列表 Excel 檔，需含 Ticker (Symbol) 與 Company (Name) 欄位。", type=["xlsx"], key="company_list_upload")
         if st.button("檢查並套用", use_container_width=True, disabled=company_upload is None):
             try:
                 checked_companies = load_company_list_from_upload(company_upload)
@@ -1371,17 +1371,17 @@ if True:
     st.markdown("### 3. 今日新聞擷取")
     crawl_method = st.radio("選擇執行方法", ["方法一｜多來源快速擷取", "方法二｜Google News＋FinBERT", "方法一＋方法二｜完整整合"], index=2, horizontal=True)
     if crawl_method == "方法一｜多來源快速擷取":
-        st.markdown("<div class='method-card'><div class='method-title'>方法一｜多來源快速擷取</div><div class='method-desc'>彙整 MoneyDJ、經濟日報、鉅亨網與 CNBC，再由 TradingView 逐公司補抓；不使用 Nasdaq。</div></div>", unsafe_allow_html=True)
+        st.markdown("<div class='method-card'><div class='method-title'>方法一｜多來源快速擷取</div><div class='method-desc'>彙整 MoneyDJ、經濟日報、鉅亨網、CNBC 與 TradingView。</div></div>", unsafe_allow_html=True)
     elif crawl_method == "方法二｜Google News＋FinBERT":
-        st.markdown("<div class='method-card'><div class='method-title'>方法二｜Google News＋FinBERT</div><div class='method-desc'>分批查詢英文 Google News RSS，完成後以 ProsusAI/finbert 分析標題。</div></div>", unsafe_allow_html=True)
+        st.markdown("<div class='method-card'><div class='method-title'>方法二｜Google News＋FinBERT</div><div class='method-desc'>彙整 Google News RSS 英文新聞，並執行 FinBERT 分析。</div></div>", unsafe_allow_html=True)
     else:
-        st.markdown("<div class='method-card'><div class='method-title'>方法一＋方法二｜完整整合</div><div class='method-desc'>依序完成兩種爬蟲、合併去重，再統一執行 FinBERT 評分。其中方法一不使用 Nasdaq。</div></div>", unsafe_allow_html=True)
+        st.markdown("<div class='method-card'><div class='method-title'>方法一＋方法二｜完整整合</div><div class='method-desc'>依序完成兩種方法、合併排除重複，並執行 FinBERT 分析。</div></div>", unsafe_allow_html=True)
     method_name = {"方法一｜多來源快速擷取": "方法一", "方法二｜Google News＋FinBERT": "方法二", "方法一＋方法二｜完整整合": "方法一＋方法二"}[crawl_method]
     registry = crawl_job_registry()
     current_job = registry.get("current")
     is_running = bool(current_job and current_job.get("status") in ("running", "stopping"))
     if st.button(
-        f"開始執行{method_name}", type="primary",
+        f"開始執行 {method_name}", type="primary",
         disabled=start_dt > end_dt or is_running or (universe == "上傳公司列表" and not CUSTOM_COMPANY_PATH.is_file()),
         use_container_width=True,
     ):
