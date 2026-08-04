@@ -1612,7 +1612,7 @@ if saved_crawl and saved_crawl["event_path"] and saved_crawl["event_path"].is_fi
                 )
                 chart_right.plotly_chart(fig_bar, use_container_width=True)
 
-                st.markdown("#### 新聞明細與篩選")
+                st.markdown("#### 負面新聞明細")
                 filter_cols = st.columns([2, 1, 1])
                 search = filter_cols[0].text_input("搜尋公司名稱、股票代號、標題", key="negative_search")
 
