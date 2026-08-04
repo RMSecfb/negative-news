@@ -36,7 +36,6 @@ from openpyxl.utils import get_column_letter
 # ============================================================
 STANDALONE_DIR = Path(__file__).resolve().parent
 APP_TITLE = "美股負面新聞整合中心"
-APP_VERSION = "雙方法合併精簡版 1.0"
 TAIPEI = timezone(timedelta(hours=8))
 DATA_ROOT = Path(os.environ.get(
     "FUBON_REBUILT_DATA_DIR",
@@ -1330,7 +1329,7 @@ st.markdown("""
   @media (max-width:800px) { div[data-testid='stRadio'] div[role='radiogroup'] { display:block; } div[data-testid='stRadio'] label[data-baseweb='radio'] { justify-content:flex-start; } .page-title { font-size:25px; } .previous-result-grid { grid-template-columns:1fr; } }
 </style>
 """, unsafe_allow_html=True)
-hero_subtitle = f"{APP_VERSION}｜抓取兩種來源、合併去重並整理負面新聞"
+hero_subtitle = f"整合多方新聞來源，自動篩選並分類負面新聞事件"
 st.markdown(f"<div class='app-hero'><div class='app-hero-title'>🛡️ {APP_TITLE}</div><div class='app-hero-sub'>{hero_subtitle}</div></div>", unsafe_allow_html=True)
 
 page_heading()
