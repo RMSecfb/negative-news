@@ -1373,7 +1373,7 @@ if True:
     previous_end = last_success_end()
     default_start = (previous_end or (now - timedelta(days=3))).replace(hour=9, minute=0, second=0, microsecond=0)
     if previous_end:
-        st.caption(f"最近執行日期：{previous_end:%Y-%m-%d}；時間預設為 09:00。")
+        st.caption(f"最近執行日期：{previous_end:%Y-%m-%d}")
     st.markdown("### 2. 設定新聞期間")
     start_col, end_col = st.columns(2)
     start_date = start_col.date_input("開始日期", value=default_start.date())
