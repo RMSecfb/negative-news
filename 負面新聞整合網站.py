@@ -1341,38 +1341,6 @@ def load_negative_history(output_dir_str: str) -> pd.DataFrame:
 
 
 # ============================================================
-# 區塊：股價衝擊查詢（事件發生前後股價變動）
-# 需要 yfinance 套件：若尚未安裝，請在 requirements.txt 加入 "yfinance"。
-# 為避免每次整理頁面都打一堆外部 API，這裡改成手動按鈕觸發＋快取結果。
-# ============================================================
-@st.cache_data(ttl=3600, show_spinner=False)
-def fetch_price_impact(ticker: str, event_date_str: str) -> dict | None:
-    try:
-        import yfinance as yf
-    except ImportError:
-        return {"error": "missing_dependency"}
-    try:
-        event_date = pd.to_datetime(event_date_str)  # 字串本身就沒有時區，不能再呼叫 tz_localize(None)
-        start = (event_date - pd.Timedelta(days=10)).strftime("%Y-%m-%d")
-        end = (event_date + pd.Timedelta(days=10)).strftime("%Y-%m-%d")
-        hist = yf.Ticker(ticker).history(start=start, end=end)
-        if hist.empty:
-            return None
-        hist.index = hist.index.tz_localize(None)
-        before = hist[hist.index < event_date]
-        after = hist[hist.index >= event_date]
-        if before.empty or after.empty:
-            return None
-        pre_close = float(before["Close"].iloc[-1])
-        post_idx = min(1, len(after) - 1)  # 取事件後第 2 個交易日收盤（若不足則取最後一天）
-        post_close = float(after["Close"].iloc[post_idx])
-        change_pct = (post_close - pre_close) / pre_close * 100 if pre_close else None
-        return {"pre_close": pre_close, "post_close": post_close, "change_pct": change_pct}
-    except Exception:
-        return None
-
-
-# ============================================================
 # 區塊：頁面標題文字
 # 想改頁面上方的標題／說明文字，改這裡即可。
 # ============================================================
@@ -1759,11 +1727,11 @@ if saved_crawl and saved_crawl["event_path"] and saved_crawl["event_path"].is_fi
                         fig_exposure = px.bar(
                             exposure_rank, x="Company", y="曝險金額",
                             text="負面新聞則數", color="最高Level",
-                            color_continuous_scale=["#FDE68A", "#F87171", "#B91C1C"],
+                            color_continuous_scale=["#BFDBFE", "#3B82F6", "#1E3A8A"],
                         )
                         fig_exposure.update_traces(texttemplate="%{text} 則", textposition="outside")
                         fig_exposure.update_layout(
-                            xaxis_title=None, yaxis_title="曝險金額", height=380,
+                            xaxis_title=None, yaxis_title="曝險金額", height=300,
                             margin=dict(t=20, b=20, l=20, r=20), xaxis=dict(tickangle=-45),
                         )
                         st.plotly_chart(fig_exposure, use_container_width=True)
@@ -1849,44 +1817,10 @@ if saved_crawl and saved_crawl["event_path"] and saved_crawl["event_path"].is_fi
 
                 st.caption(f"篩選結果：顯示 {len(filtered):,}／{len(negative_df):,} 則")
 
-                # 7. 股價連動（事件衝擊力道）：手動觸發，避免每次整理頁面都打外部 API
-                impact_cols = st.columns([1, 3])
-                run_impact = impact_cols[0].button("📈 查詢股價衝擊（前 20 則）", use_container_width=True, key="fetch_price_impact")
-                if run_impact:
-                    impact_map = {}
-                    missing_dependency = False
-                    with st.spinner("查詢股價中，請稍候…"):
-                        for _, row in filtered.head(20).iterrows():
-                            ticker = str(row.get("Ticker", "")).strip()
-                            published = str(row.get("Published Time", "")).strip()
-                            if not ticker or not published:
-                                continue
-                            result = fetch_price_impact(ticker, published)
-                            if result and result.get("error") == "missing_dependency":
-                                missing_dependency = True
-                                break
-                            impact_map[(ticker, published)] = result
-                    if missing_dependency:
-                        st.error("尚未安裝 yfinance 套件，請在 requirements.txt 加入「yfinance」後重新部署。")
-                    else:
-                        st.session_state["price_impact_map"] = impact_map
-                        found = sum(1 for value in impact_map.values() if value)
-                        st.caption(f"已查詢 {len(impact_map)} 則新聞，成功取得 {found} 則股價資料（資料源：Yahoo Finance，僅供參考，可能有延遲）。")
-
                 display_columns = ["Published Time", "Ticker", "Company", "事件中文", "Level", "Title_ZH", "Action", "URL"]
                 display_frame = filtered.copy()
                 if exposure_map:
                     display_columns.insert(3, "曝險金額")
-                impact_map = st.session_state.get("price_impact_map", {})
-                if impact_map:
-                    def _impact_text(row):
-                        result = impact_map.get((str(row.get("Ticker", "")).strip(), str(row.get("Published Time", "")).strip()))
-                        if not result:
-                            return None
-                        change = result.get("change_pct")
-                        return f"{change:+.1f}%" if change is not None else None
-                    display_frame["價格衝擊"] = display_frame.apply(_impact_text, axis=1)
-                    display_columns.append("價格衝擊")
 
                 st.dataframe(
                     display_frame[display_columns],
