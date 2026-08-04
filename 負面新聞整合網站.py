@@ -1338,7 +1338,7 @@ st.markdown("<div class='method-card'><div class='method-title'>今日任務｜�
 
 # ============================================================
 # 區塊：今日任務頁面（唯一頁面）
-# 1. 選公司範圍 → 2. 設定期間 → 3. 選擷取方法並執行 → 顯示進度與下載結果
+# 1. 選公司範圍 → 2. 設定期間 → 3. 選執行方法並執行 → 顯示進度與下載結果
 # ============================================================
 if True:
     st.markdown("### 1. 選擇公司範圍")
@@ -1387,7 +1387,7 @@ if True:
         st.error("開始時間不可晚於結束時間")
     st.caption(f"設定時間：{start_dt:%Y-%m-%d %H:%M} ～ {end_dt:%Y-%m-%d %H:%M}（台北時間）")
     st.markdown("### 3. 今日新聞擷取")
-    crawl_method = st.radio("選擇擷取方法", ["方法一｜多來源快速擷取", "方法二｜Google News＋FinBERT", "方法一＋方法二｜完整整合"], index=2, horizontal=True)
+    crawl_method = st.radio("選擇執行方法", ["方法一｜多來源快速擷取", "方法二｜Google News＋FinBERT", "方法一＋方法二｜完整整合"], index=2, horizontal=True)
     if crawl_method == "方法一｜多來源快速擷取":
         st.markdown("<div class='method-card'><div class='method-title'>方法一｜多來源快速擷取</div><div class='method-desc'>彙整 MoneyDJ、經濟日報、鉅亨網與 CNBC，再由 TradingView 逐公司補抓；不使用 Nasdaq。</div></div>", unsafe_allow_html=True)
     elif crawl_method == "方法二｜Google News＋FinBERT":
@@ -1466,7 +1466,7 @@ if True:
                         f"""
                         <div style="font-family:Arial,sans-serif;border:1px solid #e2e8f0;border-radius:12px;
                                     padding:10px 16px;background:white;height:78px;box-sizing:border-box;">
-                          <div style="font-size:14px;color:#334155;margin-bottom:3px;">抓新聞所用時間</div>
+                          <div style="font-size:14px;color:#334155;margin-bottom:3px;">累計執行時間</div>
                           <div id="crawl-elapsed" style="font-size:26px;color:#1e293b;line-height:1.08;">{elapsed_text}</div>
                         </div>
                         <script>
@@ -1545,7 +1545,7 @@ if True:
             and current_job.get("path")
             and Path(current_job["path"]) == saved_crawl["path"]
         )
-        st.markdown("### 本次抓取結果" if is_current_result else "### 最近一次抓取結果")
+        st.markdown("### 本次抓取結果" if is_current_result else "### 最近一次執行結果")
         try:
             saved_start = datetime.fromisoformat(saved_crawl["start_time"]).astimezone(TAIPEI)
             saved_end = datetime.fromisoformat(saved_crawl["end_time"]).astimezone(TAIPEI)
@@ -1559,10 +1559,10 @@ if True:
         st.markdown(
             f"""
             <div class="previous-result-grid">
-              <div class="previous-result-card"><div class="previous-result-label">擷取方法</div><div class="previous-result-value">{saved_crawl['method']}</div></div>
+              <div class="previous-result-card"><div class="previous-result-label">執行方法</div><div class="previous-result-value">{saved_crawl['method']}</div></div>
               <div class="previous-result-card"><div class="previous-result-label">新聞筆數</div><div class="previous-result-value">{saved_crawl['rows']:,} 筆</div></div>
               <div class="previous-result-card"><div class="previous-result-label">新聞期間</div><div class="previous-result-value">{period_text}</div></div>
-              <div class="previous-result-card"><div class="previous-result-label">抓新聞所用時間</div><div class="previous-result-value">{elapsed_text}</div></div>
+              <div class="previous-result-card"><div class="previous-result-label">累計執行時間</div><div class="previous-result-value">{elapsed_text}</div></div>
               <div class="previous-result-card"><div class="previous-result-label">完成時間</div><div class="previous-result-value">{finished_text}</div></div>
             </div>
             """,
