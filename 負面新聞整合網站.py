@@ -363,7 +363,7 @@ def run_crawl_job(job: dict, method_name: str, universe: str, companies: pd.Data
             progress.progress(0.94, text="正在產生完整整合檔案")
             write_excel(path, {"完整整合新聞": frame, "重複紀錄": duplicate_log, "來源摘要": source_summary})
             write_excel(finbert_path, {"FinBERT小於等於0": negative_frame})
-            job["summary"] = f"完整整合已完成：去重後保留 {len(frame)} 則；FinBERT ≤ 0 共 {len(negative_frame)} 則"
+            job["summary"] = f"排除重複後共 {len(frame)} 則；FinBERT ≤ 0  {len(negative_frame)} 則"
         begin_job_stage(job, "負面事件分類與中文翻譯")
         progress.progress(0.97, text="正在執行負面事件分類")
         rule_modified_ns = RULE_PATH.stat().st_mtime_ns
@@ -1513,12 +1513,12 @@ if True:
                 job["progress_text"] = "正在安全停止，請稍候…"
                 job["stop_event"].set()
             status_messages = {
-                "running": "抓取正在背景執行，可繼續停留在本頁查看進度。",
-                "stopping": "已收到停止要求，正在結束目前的網路請求並清理未完成工作。",
+                "running": "程式執行中，可於本頁查看最新進度。",
+                "stopping": "已停止執行。",
                 "success": (
                     f"{job.get('summary', '抓取完成')}；負面新聞 {job.get('event_rows', 0)} 則；"
                     f"待人工覆核 {job.get('unknown_rows', 0)} 則；無關新聞 {job.get('irrelevant_rows', 0)} 則。"
-                    f"中文翻譯失敗 {job.get('translation_failures', 0)} 則。"
+                    f"翻譯失敗 {job.get('translation_failures', 0)} 則。"
                     f"總耗時 {elapsed_text}"
                 ),
                 "stopped": f"抓取已停止。總耗時 {elapsed_text}；未完成的結果不會覆蓋前次成功紀錄。",
@@ -1526,7 +1526,7 @@ if True:
             }
             status_message = status_messages.get(status, "正在更新執行狀態…")
             if status == "success":
-                st.success(f"✅ 全部完成｜{status_message}")
+                st.success(f"✅ 執行完成｜{status_message}")
             elif status == "failed":
                 st.error(status_message)
             elif status in ("stopping", "stopped"):
@@ -1712,8 +1712,8 @@ if saved_crawl and saved_crawl["event_path"] and saved_crawl["event_path"].is_fi
 else:
         current_job = crawl_job_registry().get("current")
         if current_job and current_job.get("status") in ("running", "stopping"):
-            st.info("⏳ 新聞抓取中，請稍後再查看「負面新聞總覽」圖表與明細。")
+            st.info("⏳ 執行中，請稍後再查看「新聞總覽」圖表與明細。")
         elif saved_crawl:
-            st.info("這次抓取沒有可用的負面新聞檔案，暫無法顯示圖表。")
+            st.info("本次無可用的新聞檔案，暫無法顯示圖表。")
         else:
-            st.info("尚無成功抓取紀錄，待抓取新聞請稍候。完成第一次抓取後，結果會保留在這裡，重新整理或重新開啟網站也能下載。")
+            st.info("尚無成功執行紀錄。完成第一次執行後，結果會保留於此，重新整理或重開網頁也能下載。")
