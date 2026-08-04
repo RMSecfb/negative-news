@@ -1282,9 +1282,9 @@ def load_saved_companies() -> pd.DataFrame:
 # ============================================================
 def page_heading() -> None:
     st.markdown(
-        "<div class='page-kicker'>今日任務</div>"
-        "<div class='page-title'>今日新聞擷取</div>"
-        "<div class='page-description'>選擇公司範圍與時間，一次取得可交付的新聞 Excel。</div>",
+        "<div class='page-kicker'>本日任務</div>"
+        "<div class='page-title'>開始本日新聞擷取</div>"
+        
         unsafe_allow_html=True,
     )
 
