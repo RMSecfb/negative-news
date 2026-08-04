@@ -1492,7 +1492,7 @@ if True:
                     "狀態": "執行中" if status == "running" else "停止中",
                 })
             button_labels = {
-                "running": "停止執行", "stopping": "停止中…", "success": "已完成",
+                "running": "停止執行", "stopping": "停止中…", "success": "✅ 已完成",
                 "stopped": "已停止", "failed": "執行失敗",
             }
             stop_clicked = st.button(
@@ -1505,15 +1505,15 @@ if True:
                 job["progress_text"] = "正在安全停止，請稍候…"
                 job["stop_event"].set()
             status_messages = {
-                "running": "⏳程式執行中，可於本頁查看最新進度。",
-                "stopping": "🚫已停止執行。",
+                "running": "程式執行中，可於本頁查看最新進度。",
+                "stopping": "已停止執行。",
                 "success": (
                     f"{job.get('summary', '抓取完成')}；負面新聞 {job.get('event_rows', 0)} 則；"
                     f"待人工覆核 {job.get('unknown_rows', 0)} 則；無關新聞 {job.get('irrelevant_rows', 0)} 則。"
                     f"翻譯失敗 {job.get('translation_failures', 0)} 則。"
                     f"總耗時 {elapsed_text}"
                 ),
-                "stopped": f"🚫已停止執行。總耗時 {elapsed_text}；未完成的結果不會覆蓋前次紀錄。",
+                "stopped": f"已停止執行。總耗時 {elapsed_text}；未完成的結果不會覆蓋前次紀錄。",
                 "failed": f"抓取失敗：{job.get('error', '未知錯誤')}（耗時 {elapsed_text}）",
             }
             status_message = status_messages.get(status, "正在更新執行狀態…")
@@ -1529,59 +1529,6 @@ if True:
 
     auto_refresh_running = render_crawl_status()
     saved_crawl = latest_crawl_result()
-    if saved_crawl:
-        current_job = crawl_job_registry().get("current")
-        is_current_result = bool(
-            current_job
-            and current_job.get("status") == "success"
-            and current_job.get("path")
-            and Path(current_job["path"]) == saved_crawl["path"]
-        )
-        st.markdown("### 本次抓取結果" if is_current_result else "### 最近一次執行結果")
-        try:
-            saved_start = datetime.fromisoformat(saved_crawl["start_time"]).astimezone(TAIPEI)
-            saved_end = datetime.fromisoformat(saved_crawl["end_time"]).astimezone(TAIPEI)
-            started = datetime.fromisoformat(saved_crawl["started_at"]).astimezone(TAIPEI)
-            finished = datetime.fromisoformat(saved_crawl["finished_at"]).astimezone(TAIPEI)
-            period_text = f"{saved_start:%m/%d %H:%M} ～ {saved_end:%m/%d %H:%M}"
-            finished_text = f"{finished:%Y-%m-%d %H:%M}"
-            elapsed_text = format_elapsed((finished - started).total_seconds())
-        except (TypeError, ValueError):
-            period_text, finished_text, elapsed_text = "時間紀錄無法解析", str(saved_crawl["finished_at"] or ""), "—"
-        st.markdown(
-            f"""
-            <div class="previous-result-grid">
-              <div class="previous-result-card"><div class="previous-result-label">執行方法</div><div class="previous-result-value">{saved_crawl['method']}</div></div>
-              <div class="previous-result-card"><div class="previous-result-label">新聞筆數</div><div class="previous-result-value">{saved_crawl['rows']:,} 筆</div></div>
-              <div class="previous-result-card"><div class="previous-result-label">新聞期間</div><div class="previous-result-value">{period_text}</div></div>
-              <div class="previous-result-card"><div class="previous-result-label">累計執行時間</div><div class="previous-result-value">{elapsed_text}</div></div>
-              <div class="previous-result-card"><div class="previous-result-label">完成時間</div><div class="previous-result-value">{finished_text}</div></div>
-            </div>
-            """,
-            unsafe_allow_html=True,
-        )
-        file_prefix = "今日" if saved_crawl["is_today"] else "前次"
-        download_count = 1 + int(saved_crawl["event_path"] is not None) + int(saved_crawl["finbert_path"] is not None)
-        download_columns = st.columns(download_count)
-        main_label = "完整整合新聞" if saved_crawl["method"] == "方法一＋方法二" else "新聞"
-        if saved_crawl["method"] == "方法一＋方法二":
-            main_download_name = saved_crawl["path"].name
-        else:
-            try:
-                download_stamp = datetime.fromisoformat(saved_crawl["end_time"]).astimezone(TAIPEI).strftime("%Y%m%d")
-            except (TypeError, ValueError):
-                download_stamp = datetime.now(TAIPEI).strftime("%Y%m%d")
-            main_download_name = f"新聞爬蟲_{download_stamp}.xlsx"
-        download_columns[0].download_button(f"下載{file_prefix}{main_label}", saved_crawl["path"].read_bytes(), main_download_name, use_container_width=True, key="saved_crawl_all")
-        column_index = 1
-        if saved_crawl["event_path"]:
-            download_columns[column_index].download_button(f"下載{file_prefix}負面新聞", saved_crawl["event_path"].read_bytes(), saved_crawl["event_path"].name, use_container_width=True, key="saved_crawl_event")
-            column_index += 1
-        if saved_crawl["finbert_path"]:
-            download_columns[column_index].download_button(f"下載{file_prefix} FinBERT ≤ 0", saved_crawl["finbert_path"].read_bytes(), saved_crawl["finbert_path"].name, use_container_width=True, key="saved_crawl_finbert")
-        if not saved_crawl["is_today"]:
-            st.caption("今天尚未完成新的抓取；目前提供的是最近一次成功結果。")
-
 # ============================================================
 # 區塊：負面新聞總覽（KPI、事件類型/公司排行圖表、可篩選明細表）
 # 直接讀取剛才產生的「負面新聞」工作表來畫圖。
@@ -1709,3 +1656,61 @@ else:
             st.info("本次無可用的新聞檔案，暫無法顯示圖表。")
         else:
             st.info("尚無執行紀錄。首次執行後，結果會保留於此，重新整理或重開網頁也能下載檔案。")
+
+
+# ============================================================
+# 區塊：最近一次執行結果（移到頁面最下方）
+# ============================================================
+if saved_crawl:
+        current_job = crawl_job_registry().get("current")
+        is_current_result = bool(
+            current_job
+            and current_job.get("status") == "success"
+            and current_job.get("path")
+            and Path(current_job["path"]) == saved_crawl["path"]
+        )
+        st.markdown("### 本次抓取結果" if is_current_result else "### 最近一次執行結果")
+        try:
+            saved_start = datetime.fromisoformat(saved_crawl["start_time"]).astimezone(TAIPEI)
+            saved_end = datetime.fromisoformat(saved_crawl["end_time"]).astimezone(TAIPEI)
+            started = datetime.fromisoformat(saved_crawl["started_at"]).astimezone(TAIPEI)
+            finished = datetime.fromisoformat(saved_crawl["finished_at"]).astimezone(TAIPEI)
+            period_text = f"{saved_start:%m/%d %H:%M} ～ {saved_end:%m/%d %H:%M}"
+            finished_text = f"{finished:%Y-%m-%d %H:%M}"
+            elapsed_text = format_elapsed((finished - started).total_seconds())
+        except (TypeError, ValueError):
+            period_text, finished_text, elapsed_text = "時間紀錄無法解析", str(saved_crawl["finished_at"] or ""), "—"
+        st.markdown(
+            f"""
+            <div class="previous-result-grid">
+              <div class="previous-result-card"><div class="previous-result-label">執行方法</div><div class="previous-result-value">{saved_crawl['method']}</div></div>
+              <div class="previous-result-card"><div class="previous-result-label">新聞筆數</div><div class="previous-result-value">{saved_crawl['rows']:,} 筆</div></div>
+              <div class="previous-result-card"><div class="previous-result-label">新聞期間</div><div class="previous-result-value">{period_text}</div></div>
+              <div class="previous-result-card"><div class="previous-result-label">累計執行時間</div><div class="previous-result-value">{elapsed_text}</div></div>
+              <div class="previous-result-card"><div class="previous-result-label">完成時間</div><div class="previous-result-value">{finished_text}</div></div>
+            </div>
+            """,
+            unsafe_allow_html=True,
+        )
+        file_prefix = "今日" if saved_crawl["is_today"] else "前次"
+        download_count = 1 + int(saved_crawl["event_path"] is not None) + int(saved_crawl["finbert_path"] is not None)
+        download_columns = st.columns(download_count)
+        main_label = "完整整合新聞" if saved_crawl["method"] == "方法一＋方法二" else "新聞"
+        if saved_crawl["method"] == "方法一＋方法二":
+            main_download_name = saved_crawl["path"].name
+        else:
+            try:
+                download_stamp = datetime.fromisoformat(saved_crawl["end_time"]).astimezone(TAIPEI).strftime("%Y%m%d")
+            except (TypeError, ValueError):
+                download_stamp = datetime.now(TAIPEI).strftime("%Y%m%d")
+            main_download_name = f"新聞爬蟲_{download_stamp}.xlsx"
+        download_columns[0].download_button(f"下載{file_prefix}{main_label}", saved_crawl["path"].read_bytes(), main_download_name, use_container_width=True, key="saved_crawl_all")
+        column_index = 1
+        if saved_crawl["event_path"]:
+            download_columns[column_index].download_button(f"下載{file_prefix}負面新聞", saved_crawl["event_path"].read_bytes(), saved_crawl["event_path"].name, use_container_width=True, key="saved_crawl_event")
+            column_index += 1
+        if saved_crawl["finbert_path"]:
+            download_columns[column_index].download_button(f"下載{file_prefix} FinBERT ≤ 0", saved_crawl["finbert_path"].read_bytes(), saved_crawl["finbert_path"].name, use_container_width=True, key="saved_crawl_finbert")
+        if not saved_crawl["is_today"]:
+            st.caption("今天尚未完成新的抓取；目前提供的是最近一次成功結果。")
+
