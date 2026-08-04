@@ -1329,7 +1329,7 @@ st.markdown("""
   @media (max-width:800px) { div[data-testid='stRadio'] div[role='radiogroup'] { display:block; } div[data-testid='stRadio'] label[data-baseweb='radio'] { justify-content:flex-start; } .page-title { font-size:25px; } .previous-result-grid { grid-template-columns:1fr; } }
 </style>
 """, unsafe_allow_html=True)
-hero_subtitle = f"整合多方新聞來源，自動篩選並分類負面新聞事件"
+hero_subtitle = f"US Stock Market Negative News Aggregator"
 st.markdown(f"<div class='app-hero'><div class='app-hero-title'>🛡️ {APP_TITLE}</div><div class='app-hero-sub'>{hero_subtitle}</div></div>", unsafe_allow_html=True)
 
 page_heading()
