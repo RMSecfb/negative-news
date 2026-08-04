@@ -48,6 +48,7 @@ DB_PATH = DATA_ROOT / "system.db"
 RULE_PATH = CONFIG_DIR / "Parameter_Event.xlsx"
 DOWJONES_PATH = CONFIG_DIR / "DowJones30.xlsx"
 SP500_PATH = CONFIG_DIR / "SP500.xlsx"
+CUSTOM_COMPANY_PATH = CONFIG_DIR / "Company_List_Custom.xlsx"
 
 
 # ============================================================
@@ -1241,13 +1242,11 @@ def score_method2_finbert(frame: pd.DataFrame, progress=None) -> tuple[pd.DataFr
 
 # ============================================================
 # 區塊：公司名單（Ticker/Company）管理
-# Dow Jones 30／S&P 500 都直接讀取 GitHub repo 內的 Excel 檔
+# Dow Jones 30／S&P 500 直接讀取 GitHub repo 內的 Excel 檔
 # （DowJones30.xlsx／SP500.xlsx），檔案內容更新後重新整理網站即可套用。
+# 另外保留「上傳公司列表」功能，可另外套用一份自訂 Excel 名單。
 # ============================================================
-@st.cache_data(ttl=60)
-def load_company_list(path_str: str, modified_ns: int) -> pd.DataFrame:
-    del modified_ns  # 僅用來讓檔案異動時使快取失效
-    frame = pd.read_excel(path_str, dtype=str)
+def _parse_company_frame(frame: pd.DataFrame) -> pd.DataFrame:
     columns = {str(column).strip().lower(): column for column in frame.columns}
     ticker_col = next((columns[key] for key in ("ticker", "symbol", "股票代號") if key in columns), None)
     company_col = next((columns[key] for key in ("company", "name", "股票名稱") if key in columns), None)
@@ -1257,6 +1256,19 @@ def load_company_list(path_str: str, modified_ns: int) -> pd.DataFrame:
     result["Ticker"] = result["Ticker"].astype(str).str.strip().str.upper()
     result["Company"] = result["Company"].astype(str).str.strip()
     return result[(result["Ticker"] != "") & (result["Company"] != "")].drop_duplicates("Ticker")
+
+
+@st.cache_data(ttl=60)
+def load_company_list(path_str: str, modified_ns: int) -> pd.DataFrame:
+    del modified_ns  # 僅用來讓檔案異動時使快取失效
+    frame = pd.read_excel(path_str, dtype=str)
+    return _parse_company_frame(frame)
+
+
+def load_company_list_from_upload(upload) -> pd.DataFrame:
+    """給「上傳公司列表」用：直接解析使用者上傳的 Excel，不經過快取。"""
+    frame = pd.read_excel(io.BytesIO(upload.getvalue()), dtype=str)
+    return _parse_company_frame(frame)
 
 
 # ============================================================
@@ -1324,8 +1336,22 @@ st.markdown("<div class='method-card'><div class='method-title'>運作流程說�
 # ============================================================
 if True:
     st.markdown("### 1. 選擇公司列表")
-    universe = st.radio("選擇欲執行的公司列表", ["Dow Jones 30", "S&P 500"], index=1, horizontal=True)
-    st.caption("名單直接讀取 GitHub repo 內的 DowJones30.xlsx／SP500.xlsx，更新檔案內容後重新整理網站即可套用。")
+    universe = st.radio("選擇欲執行的公司列表", ["Dow Jones 30", "S&P 500", "上傳公司列表"], index=1, horizontal=True)
+    st.caption("Dow Jones 30／S&P 500 直接讀取 GitHub repo 內的 DowJones30.xlsx／SP500.xlsx，更新檔案內容後重新整理網站即可套用。")
+    if universe == "上傳公司列表":
+        company_upload = st.file_uploader("上傳自訂公司列表 Excel 檔（需含 Ticker/Symbol 與 Company/Name 欄位）", type=["xlsx"], key="company_list_upload")
+        if st.button("檢查並套用", use_container_width=True, disabled=company_upload is None):
+            try:
+                checked_companies = load_company_list_from_upload(company_upload)
+                if checked_companies.empty:
+                    raise ValueError("公司名單沒有可用資料")
+                CUSTOM_COMPANY_PATH.write_bytes(company_upload.getvalue())
+                load_company_list.clear()
+                st.success(f"自訂公司名單已套用：{company_upload.name}，共 {len(checked_companies):,} 家。")
+            except Exception as exc:
+                st.error(f"自訂公司名單無法套用：{exc}")
+        elif CUSTOM_COMPANY_PATH.is_file():
+            st.caption("已套用過自訂公司名單，重新上傳並按「檢查並套用」可覆蓋。")
     now = datetime.now(TAIPEI).replace(hour=9, minute=0, second=0, microsecond=0)
     previous_end = last_success_end()
     default_start = (previous_end or (now - timedelta(days=3))).replace(hour=9, minute=0, second=0, microsecond=0)
@@ -1356,11 +1382,16 @@ if True:
     is_running = bool(current_job and current_job.get("status") in ("running", "stopping"))
     if st.button(
         f"開始執行{method_name}", type="primary",
-        disabled=start_dt > end_dt or is_running,
+        disabled=start_dt > end_dt or is_running or (universe == "上傳公司列表" and not CUSTOM_COMPANY_PATH.is_file()),
         use_container_width=True,
     ):
         try:
-            company_path = DOWJONES_PATH if universe.startswith("Dow") else SP500_PATH
+            if universe.startswith("Dow"):
+                company_path = DOWJONES_PATH
+            elif universe.startswith("S&P"):
+                company_path = SP500_PATH
+            else:
+                company_path = CUSTOM_COMPANY_PATH
             companies = load_company_list(str(company_path), company_path.stat().st_mtime_ns)
             if companies.empty:
                 raise ValueError(f"{company_path.name} 沒有可用的公司資料")
