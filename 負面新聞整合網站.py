@@ -1543,7 +1543,7 @@ if saved_crawl and saved_crawl["event_path"] and saved_crawl["event_path"].is_fi
 
                 # 最左邊第一格加上總新聞數量，並移除持續追蹤
                 metric_cols = st.columns(4)
-                metric_cols[0].metric("總體新聞", f"{saved_crawl['rows']:,} 則")
+                metric_cols[0].metric("總新聞", f"{saved_crawl['rows']:,} 則")
                 metric_cols[1].metric("負面新聞", f"{len(negative_df):,} 則")
                 metric_cols[2].metric("重大事件（Level ≥ 4）", f"{int((negative_df['Level'] >= 4).sum()):,} 則")
                 metric_cols[3].metric("涉及公司", f"{negative_df['Ticker'].replace('', pd.NA).nunique():,} 家")
