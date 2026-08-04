@@ -1492,7 +1492,7 @@ if True:
                     "狀態": "執行中" if status == "running" else "停止中",
                 })
             button_labels = {
-                "running": "停止執行", "stopping": "停止中…", "success": "✅ 已完成",
+                "running": "停止執行", "stopping": "停止中…", "success": "已完成",
                 "stopped": "已停止", "failed": "執行失敗",
             }
             stop_clicked = st.button(
@@ -1505,15 +1505,15 @@ if True:
                 job["progress_text"] = "正在安全停止，請稍候…"
                 job["stop_event"].set()
             status_messages = {
-                "running": "程式執行中，可於本頁查看最新進度。",
-                "stopping": "已停止執行。",
+                "running": "⏳程式執行中，可於本頁查看最新進度。",
+                "stopping": "🚫已停止執行。",
                 "success": (
                     f"{job.get('summary', '抓取完成')}；負面新聞 {job.get('event_rows', 0)} 則；"
                     f"待人工覆核 {job.get('unknown_rows', 0)} 則；無關新聞 {job.get('irrelevant_rows', 0)} 則。"
                     f"翻譯失敗 {job.get('translation_failures', 0)} 則。"
                     f"總耗時 {elapsed_text}"
                 ),
-                "stopped": f"已停止執行。總耗時 {elapsed_text}；未完成的結果不會覆蓋前次紀錄。",
+                "stopped": f"🚫已停止執行。總耗時 {elapsed_text}；未完成的結果不會覆蓋前次紀錄。",
                 "failed": f"抓取失敗：{job.get('error', '未知錯誤')}（耗時 {elapsed_text}）",
             }
             status_message = status_messages.get(status, "正在更新執行狀態…")
