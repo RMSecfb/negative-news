@@ -1647,7 +1647,7 @@ if saved_crawl and saved_crawl["event_path"] and saved_crawl["event_path"].is_fi
                     filtered[["Published Time", "Ticker", "Company", "事件中文", "Level", "Title_ZH", "Action", "URL"]],
                     use_container_width=True, hide_index=True,
                     column_config={"URL": st.column_config.LinkColumn("新聞", display_text="開啟")},
-                    height=800,
+                    height=600,
                 )
 else:
         current_job = crawl_job_registry().get("current")
