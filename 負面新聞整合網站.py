@@ -1344,7 +1344,7 @@ if True:
     company_universe_options = ["Dow Jones 30", "S&P 500", "上傳公司列表"]
     universe = st.radio("選擇欲執行的公司列表", company_universe_options, index=1, horizontal=True)
     company_upload = None
-    if universe == "自行上傳最新版":
+    if universe == "上傳公司列表":
         company_upload = st.file_uploader("上傳最新公司名單 Excel", type=["xlsx"], key="company_list_upload")
         if st.button("檢查並套用新版", use_container_width=True, disabled=company_upload is None):
             try:
@@ -1399,7 +1399,7 @@ if True:
     is_running = bool(current_job and current_job.get("status") in ("running", "stopping"))
     if st.button(
         f"開始執行{method_name}", type="primary",
-        disabled=start_dt > end_dt or is_running or universe == "自行上傳最新版",
+        disabled=start_dt > end_dt or is_running or universe == "上傳公司列表",
         use_container_width=True,
     ):
         try:
