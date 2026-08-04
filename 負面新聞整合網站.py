@@ -284,7 +284,7 @@ def run_crawl_job(job: dict, method_name: str, universe: str, companies: pd.Data
                 source_counts=dict(source_counts),
             )
             path = OUTPUT_DIR / f"RawNews_{stamp}.xlsx"
-            begin_job_stage(job, "產生本日新聞檔案")
+            begin_job_stage(job, "產生新聞檔案")
             source_summary = pd.DataFrame([{"來源": source, "新聞則數": count} for source, count in source_counts.items()])
             progress.progress(0.94, text="正在產生新聞檔案")
             write_excel(path, {"新聞": frame, "來源摘要": source_summary})
@@ -304,7 +304,7 @@ def run_crawl_job(job: dict, method_name: str, universe: str, companies: pd.Data
             )
             path = OUTPUT_DIR / f"All_News_{stamp}.xlsx"
             finbert_path = OUTPUT_DIR / f"FinBERT_News_{stamp}.xlsx"
-            begin_job_stage(job, "產生本日新聞檔案")
+            begin_job_stage(job, "產生新聞檔案")
             progress.progress(0.94, text="正在產生新聞檔案")
             write_excel(path, {"All_News": frame})
             write_excel(finbert_path, {"FinBERT_News": negative_frame})
@@ -1277,8 +1277,8 @@ def load_company_list_from_upload(upload) -> pd.DataFrame:
 # ============================================================
 def page_heading() -> None:
     st.markdown(
-        "<div class='page-kicker'>本日任務</div>"
-        "<div class='page-title'>開始本日新聞擷取</div>",
+        "<div class='page-kicker'>今日任務</div>"
+        "<div class='page-title'>開始今日新聞擷取</div>",
         
         unsafe_allow_html=True,
     )
@@ -1338,7 +1338,7 @@ page_heading()
 st.markdown("<div class='method-card'><div class='method-title'>運作流程說明</div><div class='method-desc'>系統自動抓取多個新聞來源，比對公司列表並去除重複新聞，接著以 AI (FinBERT) 模型分析新聞情緒，篩出可能影響公司之負面消息，最後彙整成圖表與 Excel 檔。</div></div>", unsafe_allow_html=True)
 
 # ============================================================
-# 區塊：本日任務頁面（唯一頁面）
+# 區塊：今日任務頁面（唯一頁面）
 # 1. 選公司範圍 → 2. 設定期間 → 3. 選執行方法並執行 → 顯示進度與下載結果
 # ============================================================
 if True:
@@ -1693,7 +1693,7 @@ if saved_crawl:
             """,
             unsafe_allow_html=True,
         )
-        file_prefix = "本日" if saved_crawl["is_today"] else "前次"
+        file_prefix = "今日" if saved_crawl["is_today"] else "前次"
         download_count = 1 + int(saved_crawl["event_path"] is not None) + int(saved_crawl["finbert_path"] is not None)
         download_columns = st.columns(download_count)
         main_label = "總新聞" if saved_crawl["method"] == "方法一＋方法二" else "新聞"
