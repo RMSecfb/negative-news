@@ -285,7 +285,7 @@ def run_crawl_job(job: dict, method_name: str, universe: str, companies: pd.Data
             )
             path = OUTPUT_DIR / f"RawNews_{stamp}.xlsx"
             begin_job_stage(job, "產生今日新聞檔案")
-            source_summary = pd.DataFrame([{"來源": source, "新聞筆數": count} for source, count in source_counts.items()])
+            source_summary = pd.DataFrame([{"來源": source, "新聞則數": count} for source, count in source_counts.items()])
             progress.progress(0.94, text="正在產生新聞檔案")
             write_excel(path, {"新聞": frame, "來源摘要": source_summary})
             job["summary"] = f"方法一已完成：取得 {len(frame)} 則新聞；來源異常 {len(all_errors)} 項"
@@ -342,8 +342,8 @@ def run_crawl_job(job: dict, method_name: str, universe: str, companies: pd.Data
             path = OUTPUT_DIR / f"MergeNews_{stamp}.xlsx"
             finbert_path = OUTPUT_DIR / f"MergeNews_FinBERT_{stamp}.xlsx"
             source_summary = pd.DataFrame(
-                [{"來源": source, "新聞筆數": count} for source, count in source_counts.items()]
-                + [{"來源": "Google News（方法二）", "新聞筆數": len(method2_frame)}]
+                [{"來源": source, "新聞則數": count} for source, count in source_counts.items()]
+                + [{"來源": "Google News（方法二）", "新聞則數": len(method2_frame)}]
             )
             begin_job_stage(job, "產生完整整合檔案")
             progress.progress(0.94, text="正在產生完整整合檔案")
@@ -1685,7 +1685,7 @@ if saved_crawl:
             f"""
             <div class="previous-result-grid">
               <div class="previous-result-card"><div class="previous-result-label">執行方法</div><div class="previous-result-value">{saved_crawl['method']}</div></div>
-              <div class="previous-result-card"><div class="previous-result-label">新聞筆數</div><div class="previous-result-value">{saved_crawl['rows']:,} 筆</div></div>
+              <div class="previous-result-card"><div class="previous-result-label">新聞則數</div><div class="previous-result-value">{saved_crawl['rows']:,} 筆</div></div>
               <div class="previous-result-card"><div class="previous-result-label">新聞期間</div><div class="previous-result-value">{period_text}</div></div>
               <div class="previous-result-card"><div class="previous-result-label">累計執行時間</div><div class="previous-result-value">{elapsed_text}</div></div>
               <div class="previous-result-card"><div class="previous-result-label">完成時間</div><div class="previous-result-value">{finished_text}</div></div>
