@@ -1296,7 +1296,7 @@ st.markdown("""
   .block-container { max-width:1500px; padding-top:1.4rem; padding-bottom:4rem; }
   .app-hero { background:linear-gradient(120deg,#102A43,#1D4ED8); color:white; border-radius:16px; padding:20px 26px; margin-bottom:14px; box-shadow:0 10px 30px rgba(15,42,67,.12); }
   .app-hero-title { font-size:25px; font-weight:750; letter-spacing:.02em; }
-  .app-hero-sub { opacity:.78; font-size:13px; margin-top:4px; }
+  .app-hero-sub { opacity:.78; font-size:15px; margin-top:4px; margin-left:34px; }
   .page-kicker { color:#2563EB; font-size:13px; font-weight:700; letter-spacing:.08em; margin-top:24px; }
   .page-title { color:#172B4D; font-size:31px; line-height:1.25; font-weight:780; margin-top:4px; }
   .page-description { color:#64748B; font-size:16px; margin:7px 0 20px; }
