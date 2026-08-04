@@ -1385,7 +1385,7 @@ if True:
     end_dt = datetime.combine(end_date, datetime.min.time(), TAIPEI) + timedelta(hours=end_hour)
     if start_dt > end_dt:
         st.error("開始時間不可晚於結束時間")
-    st.caption(f"預計擷取：{start_dt:%Y-%m-%d %H:%M} ～ {end_dt:%Y-%m-%d %H:%M}（台北時間）")
+    st.caption(f"設定時間：{start_dt:%Y-%m-%d %H:%M} ～ {end_dt:%Y-%m-%d %H:%M}（台北時間）")
     st.markdown("### 3. 今日新聞擷取")
     crawl_method = st.radio("選擇擷取方法", ["方法一｜多來源快速擷取", "方法二｜Google News＋FinBERT", "方法一＋方法二｜完整整合"], index=2, horizontal=True)
     if crawl_method == "方法一｜多來源快速擷取":
