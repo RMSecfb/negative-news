@@ -1713,9 +1713,9 @@ if True:
 # ============================================================
 if saved_crawl and saved_crawl["event_path"] and saved_crawl["event_path"].is_file():
             st.markdown("### 4. 負面新聞總覽")
-            with st.expander("📊 上傳曝險／部位清單（選填，用於加權風險排序）", expanded=False):
+            with st.expander("上傳曝險部位清單（選填）", expanded=False):
                 exposure_upload = st.file_uploader(
-                    "上傳曝險清單 Excel（需含 Ticker/Symbol 與 Exposure/Amount 曝險金額欄位）",
+                    "上傳曝險清單 Excel，需含 Ticker (Symbol) 與 Exposure (Amount) 欄位）",
                     type=["xlsx"], key="exposure_upload",
                 )
                 if st.button("套用曝險清單", use_container_width=True, disabled=exposure_upload is None, key="apply_exposure"):
@@ -1862,7 +1862,7 @@ if saved_crawl and saved_crawl["event_path"] and saved_crawl["event_path"].is_fi
                 # 沒設定時退回讀本機 output 資料夾（容器重開就會歸零）。
                 history_df = load_negative_history(str(OUTPUT_DIR))
                 available_days = sorted(history_df["日期"].dt.date.unique()) if not history_df.empty else []
-                st.markdown("#### 新聞頻率異常偵測與時間序列走勢")
+                st.markdown("#### 新聞頻率異常與走勢")
                 history_source_note = "（歷史資料來源：GitHub repo，長期保留）" if _github_config() else "（歷史資料來源：本機暫存，重開網站可能會歸零）"
                 if len(available_days) < 2:
                     st.caption(
