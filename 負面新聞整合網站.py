@@ -1649,7 +1649,7 @@ if True:
                           update(); setInterval(update, 1000);
                         </script>
                         """,
-                        height=82,
+                        height=40,
                     )
             else:
                 right.metric("累計執行時間", elapsed_text)
