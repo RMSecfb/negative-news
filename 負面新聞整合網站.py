@@ -1681,7 +1681,7 @@ if True:
                 job["stop_event"].set()
             history_note = ""
             if _github_config():
-                history_note = "；歷史統計已同步至 GitHub" if job.get("history_pushed") else "；⚠️ 歷史統計同步 GitHub 失敗（請檢查 Secrets 設定）"
+                history_note = "；歷史統計已同步至 GitHub" if job.get("history_pushed") else "；歷史統計同步 GitHub 失敗（請檢查 Secrets 設定）"
             status_messages = {
                 "running": "⏳ 程式執行中，可於本頁查看最新進度。",
                 "stopping": "🚫 已停止執行。",
@@ -1754,7 +1754,7 @@ if saved_crawl and saved_crawl["event_path"] and saved_crawl["event_path"].is_fi
                 if exposure_map:
                     exposed_companies = negative_df[negative_df["曝險金額"] > 0]["Ticker"].nunique()
                     total_exposure_hit = negative_df.drop_duplicates("Ticker")["曝險金額"].sum()
-                    st.caption(f"⚠️ 曝險加權：本次負面新聞涉及 {exposed_companies:,} 家有曝險紀錄的公司，合計曝險金額 {total_exposure_hit:,.0f}。")
+                    st.caption(f"曝險加權：本次負面新聞涉及 {exposed_companies:,} 家有曝險之公司，合計曝險金額 {total_exposure_hit:,.0f}。")
 
                 chart_left, chart_right = st.columns(2)
                 import plotly.express as px
@@ -1973,7 +1973,7 @@ if saved_crawl:
             and current_job.get("path")
             and Path(current_job["path"]) == saved_crawl["path"]
         )
-        st.markdown("### 本次抓取結果" if is_current_result else "### 5. 下載執行結果")
+        st.markdown("### 5. 下載執行結果")
         try:
             saved_start = datetime.fromisoformat(saved_crawl["start_time"]).astimezone(TAIPEI)
             saved_end = datetime.fromisoformat(saved_crawl["end_time"]).astimezone(TAIPEI)
