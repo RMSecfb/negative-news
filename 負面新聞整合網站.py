@@ -1996,7 +1996,7 @@ if saved_crawl:
             """,
             unsafe_allow_html=True,
         )
-        file_prefix = "今日" if saved_crawl["is_today"] else "前次"
+        file_prefix = "今日" if saved_crawl["is_today"] else "本次"
         download_count = 1 + int(saved_crawl["event_path"] is not None) + int(saved_crawl["finbert_path"] is not None)
         download_columns = st.columns(download_count)
         main_label = "總新聞" if saved_crawl["method"] == "方法一＋方法二" else "新聞"
