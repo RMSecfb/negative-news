@@ -66,8 +66,7 @@ negative-news/
 ├─ requirements.txt          # Python 套件需求
 ├─ runtime.txt                # Python 版本設定
 ├─ history/
-│  └─ negative_news_history.csv   # 每日負面新聞歷史統計（程式自動寫入，見下方說明）
-└─ 使用步驟.txt
+  └─ negative_news_history.csv   # 每日負面新聞歷史統計（程式自動寫入，見下方說明）
 ```
 
 `Parameter_Event.xlsx`、`DowJones30.xlsx`、`SP500.xlsx` 這三份 Excel 檔**必須放在 repo 根目錄**，程式啟動時會自動讀取；缺任何一份都會在網頁上顯示錯誤並停止執行。更新公司名單或分類規則，只要覆蓋這幾個檔案、重新整理網站即可套用，不需要改程式碼。
@@ -81,7 +80,7 @@ negative-news/
 - `requirements.txt` 需包含：`streamlit`、`pandas`、`requests`、`beautifulsoup4`、`openpyxl`、`plotly`、`torch`、`transformers`
 - `runtime.txt` 指定 Python 版本
 
-### 2. Secrets（選填，用於歷史資料持久化）
+### 2. Secrets（選填，用於歷史資料保留）
 
 Streamlit Community Cloud 的儲存空間**不是持久化的**：容器重開、休眠喚醒、或重新部署程式碼，都會清空檔案系統，讓「新聞頻率異常偵測」的歷史天數歸零重新累積。
 
