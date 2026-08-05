@@ -1820,7 +1820,7 @@ if saved_crawl and saved_crawl["event_path"] and saved_crawl["event_path"].is_fi
                 chart_right.plotly_chart(fig_bar, use_container_width=True)
 
                 # 3. 曝險風險象限圖（只有上傳過曝險清單才顯示）
-                # X 軸＝曝險金額、Y 軸＝事件嚴重度（最高Level × 負面新聞則數），
+                # X 軸＝曝險金額、Y 軸＝風險嚴重度（最高Level × 負面新聞則數），
                 # 用象限（中位數切分）取代單一合成分數，避免公式設計不夠嚴謹時誤導判斷。
                 if exposure_map:
                     st.markdown("#### 曝險風險象限氣泡圖")
@@ -1833,12 +1833,12 @@ if saved_crawl and saved_crawl["event_path"] and saved_crawl["event_path"].is_fi
                     if exposure_rank.empty:
                         st.caption("這次負面新聞沒有命中曝險清單裡的公司。")
                     else:
-                        exposure_rank["事件嚴重度"] = exposure_rank["最高Level"] * exposure_rank["負面新聞則數"]
+                        exposure_rank["風險嚴重度"] = exposure_rank["最高Level"] * exposure_rank["負面新聞則數"]
                         fig_exposure = px.scatter(
-                            exposure_rank, x="曝險金額", y="事件嚴重度",
+                            exposure_rank, x="曝險金額", y="風險嚴重度",
                             size="負面新聞則數", color="最高Level", text="Ticker",
                             hover_name="Company",
-                            hover_data={"Ticker": True, "負面新聞則數": True, "最高Level": True, "曝險金額": ":,.0f", "事件嚴重度": True},
+                            hover_data={"Ticker": True, "負面新聞則數": True, "最高Level": True, "曝險金額": ":,.0f", "風險嚴重度": True},
                             color_continuous_scale=["#BFDBFE", "#3B82F6", "#1E3A8A"],
                             size_max=36,
                         )
@@ -1848,7 +1848,7 @@ if saved_crawl and saved_crawl["event_path"] and saved_crawl["event_path"].is_fi
                         fig_exposure.add_vline(x=exposure_median, line_dash="dash", line_color="#94A3B8")
                         fig_exposure.add_hline(y=severity_median, line_dash="dash", line_color="#94A3B8")
                         fig_exposure.update_layout(
-                            xaxis_title="曝險金額", yaxis_title="事件嚴重度（Level × 則數）", height=380,
+                            xaxis_title="曝險金額", yaxis_title="風險嚴重度（Level × 則數）", height=380,
                             margin=dict(t=20, b=20, l=20, r=20),
                         )
                         st.plotly_chart(fig_exposure, use_container_width=True)
