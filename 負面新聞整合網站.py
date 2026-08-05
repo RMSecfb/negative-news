@@ -1823,7 +1823,7 @@ if saved_crawl and saved_crawl["event_path"] and saved_crawl["event_path"].is_fi
                 # X 軸＝曝險金額、Y 軸＝事件嚴重度（最高Level × 負面新聞則數），
                 # 用象限（中位數切分）取代單一合成分數，避免公式設計不夠嚴謹時誤導判斷。
                 if exposure_map:
-                    st.markdown("#### 曝險風險象限圖（曝險金額 × 事件嚴重度）")
+                    st.markdown("#### 曝險風險象限氣泡圖")
                     exposure_rank = (
                         negative_df[negative_df["曝險金額"] > 0]
                         .groupby(["Ticker", "Company"])
@@ -1844,7 +1844,7 @@ if saved_crawl and saved_crawl["event_path"] and saved_crawl["event_path"].is_fi
                         )
                         fig_exposure.update_traces(textposition="top center")
                         exposure_median = exposure_rank["曝險金額"].median()
-                        severity_median = exposure_rank["事件嚴重度"].median()
+                        severity_median = exposure_rank["風險嚴重度"].median()
                         fig_exposure.add_vline(x=exposure_median, line_dash="dash", line_color="#94A3B8")
                         fig_exposure.add_hline(y=severity_median, line_dash="dash", line_color="#94A3B8")
                         fig_exposure.update_layout(
@@ -1853,8 +1853,7 @@ if saved_crawl and saved_crawl["event_path"] and saved_crawl["event_path"].is_fi
                         )
                         st.plotly_chart(fig_exposure, use_container_width=True)
                         st.caption(
-                            "X 軸＝曝險金額，Y 軸＝事件嚴重度（最高Level × 負面新聞則數），泡泡越大＝負面新聞則數越多、顏色越深＝事件等級越高。"
-                            "虛線為中位數，右上象限（曝險高＋事件嚴重）是優先處理對象；左上象限（曝險不高但事件很嚴重）也值得留意，只是影響範圍較小。"
+                            "氣泡大小＝負面新聞則數越多寡；虛線為中位數"
                         )
 
 
@@ -1900,14 +1899,14 @@ if saved_crawl and saved_crawl["event_path"] and saved_crawl["event_path"].is_fi
                     trend_options = ["全市場"] + sorted(
                         (history_df["Ticker"] + "｜" + history_df["Company"]).unique().tolist()
                     )
-                    trend_pick = st.selectbox("查看走勢", trend_options, key="trend_company_pick")
+                    trend_pick = st.selectbox("查看頻率趨勢", trend_options, key="trend_company_pick")
                     if trend_pick == "全市場":
                         trend_data = history_df.groupby("日期", as_index=False)["則數"].sum()
                     else:
                         pick_ticker = trend_pick.split("｜", 1)[0]
                         trend_data = history_df[history_df["Ticker"] == pick_ticker].groupby("日期", as_index=False)["則數"].sum()
                     fig_trend = px.line(trend_data, x="日期", y="則數", markers=True)
-                    fig_trend.update_layout(xaxis_title=None, yaxis_title="負面新聞則數", height=300, margin=dict(t=20, b=20, l=20, r=20))
+                    fig_trend.update_layout(xaxis_title=None, yaxis_title="負面新聞則數", height=310, margin=dict(t=20, b=20, l=20, r=20))
                     st.plotly_chart(fig_trend, use_container_width=True)
 
                 st.markdown("#### 負面新聞明細")
