@@ -1853,7 +1853,7 @@ if saved_crawl and saved_crawl["event_path"] and saved_crawl["event_path"].is_fi
                         )
                         st.plotly_chart(fig_exposure, use_container_width=True)
                         st.caption(
-                            "氣泡大小＝負面新聞則數越多寡；虛線為中位數"
+                            "氣泡大小＝負面新聞則數多寡；虛線為中位數"
                         )
 
 
