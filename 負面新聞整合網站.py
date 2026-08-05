@@ -1786,7 +1786,7 @@ if saved_crawl and saved_crawl["event_path"] and saved_crawl["event_path"].is_fi
                 )
                 fig_donut.update_layout(
                     showlegend=False,
-                    height=335,
+                    height=320,
                     margin=dict(t=20, b=20, l=20, r=20)
                 )
                 chart_left.plotly_chart(fig_donut, use_container_width=True)
@@ -1813,7 +1813,7 @@ if saved_crawl and saved_crawl["event_path"] and saved_crawl["event_path"].is_fi
                 fig_bar.update_layout(
                     xaxis_title=None,
                     yaxis_title=None,
-                    height=335,
+                    height=320,
                     margin=dict(t=20, b=20, l=20, r=20),
                     xaxis=dict(tickangle=-45)
                 )
@@ -1840,7 +1840,7 @@ if saved_crawl and saved_crawl["event_path"] and saved_crawl["event_path"].is_fi
                         )
                         fig_exposure.update_traces(texttemplate="%{text} 則", textposition="outside")
                         fig_exposure.update_layout(
-                            xaxis_title=None, yaxis_title="曝險金額", height=300,
+                            xaxis_title=None, yaxis_title="曝險金額", height=320,
                             margin=dict(t=20, b=20, l=20, r=20), xaxis=dict(tickangle=-45),
                         )
                         st.plotly_chart(fig_exposure, use_container_width=True)
