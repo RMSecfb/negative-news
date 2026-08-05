@@ -1649,7 +1649,7 @@ if True:
                           update(); setInterval(update, 1000);
                         </script>
                         """,
-                        height=40,
+                        height=82,
                     )
             else:
                 right.metric("累計執行時間", elapsed_text)
@@ -1786,7 +1786,7 @@ if saved_crawl and saved_crawl["event_path"] and saved_crawl["event_path"].is_fi
                 )
                 fig_donut.update_layout(
                     showlegend=False,
-                    height=360,
+                    height=350,
                     margin=dict(t=20, b=20, l=20, r=20)
                 )
                 chart_left.plotly_chart(fig_donut, use_container_width=True)
@@ -1813,7 +1813,7 @@ if saved_crawl and saved_crawl["event_path"] and saved_crawl["event_path"].is_fi
                 fig_bar.update_layout(
                     xaxis_title=None,
                     yaxis_title=None,
-                    height=360,
+                    height=350,
                     margin=dict(t=20, b=20, l=20, r=20),
                     xaxis=dict(tickangle=-45)
                 )
