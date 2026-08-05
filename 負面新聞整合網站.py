@@ -1786,7 +1786,7 @@ if saved_crawl and saved_crawl["event_path"] and saved_crawl["event_path"].is_fi
                 )
                 fig_donut.update_layout(
                     showlegend=False,
-                    height=380,
+                    height=360,
                     margin=dict(t=20, b=20, l=20, r=20)
                 )
                 chart_left.plotly_chart(fig_donut, use_container_width=True)
@@ -1813,7 +1813,7 @@ if saved_crawl and saved_crawl["event_path"] and saved_crawl["event_path"].is_fi
                 fig_bar.update_layout(
                     xaxis_title=None,
                     yaxis_title=None,
-                    height=380,
+                    height=360,
                     margin=dict(t=20, b=20, l=20, r=20),
                     xaxis=dict(tickangle=-45)
                 )
@@ -2005,5 +2005,5 @@ if saved_crawl:
         if saved_crawl["finbert_path"]:
             download_columns[column_index].download_button(f"下載{file_prefix} FinBERT ≤ 0", saved_crawl["finbert_path"].read_bytes(), saved_crawl["finbert_path"].name, use_container_width=True, key="saved_crawl_finbert")
         if not saved_crawl["is_today"]:
-            st.caption("今天尚未完成新的抓取；目前提供的是最近一次成功結果。")
+            st.caption("今日新聞尚未完成；目前提供最近一次執行結果。")
 
