@@ -1907,7 +1907,7 @@ if saved_crawl and saved_crawl["event_path"] and saved_crawl["event_path"].is_fi
                         pick_ticker = trend_pick.split("｜", 1)[0]
                         trend_data = history_df[history_df["Ticker"] == pick_ticker].groupby("日期", as_index=False)["則數"].sum()
                     fig_trend = px.line(trend_data, x="日期", y="則數", markers=True)
-                    fig_trend.update_layout(xaxis_title=None, yaxis_title="負面新聞則數", height=320, margin=dict(t=20, b=20, l=20, r=20))
+                    fig_trend.update_layout(xaxis_title=None, yaxis_title="負面新聞則數", height=300, margin=dict(t=20, b=20, l=20, r=20))
                     st.plotly_chart(fig_trend, use_container_width=True)
 
                 st.markdown("#### 負面新聞明細")
