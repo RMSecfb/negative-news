@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import base64
 import io
 import os
 import re
@@ -368,8 +369,10 @@ def run_crawl_job(job: dict, method_name: str, universe: str, companies: pd.Data
             "待人工覆核": unknown_frame,
             "無關新聞": irrelevant_frame,
         })
+        history_pushed = append_negative_history_to_github(event_frame, end_dt)
         finish_run(run_id, "success", len(frame), str(path), "；".join(all_errors))
         job.update(status="success", progress=1.0, progress_text="抓取與分類全部完成",
+                   history_pushed=history_pushed,
                    rows=len(frame), event_rows=len(event_frame), unknown_rows=len(unknown_frame),
                    irrelevant_rows=len(irrelevant_frame), translation_failures=translation_failures,
                    negative_translation_failures=negative_translation_failures,
@@ -1306,14 +1309,109 @@ def load_exposure_list_from_upload(upload) -> pd.DataFrame:
 
 
 # ============================================================
-# 區塊：歷史負面新聞彙整（給頻率異常偵測、時間序列走勢圖用）
-# 掃描 output 資料夾內每天產生的「美股_YYYYMMDD_負面新聞爬蟲.xlsx」，
-# 整理成「日期 x 公司 x 則數」的長格式。
-# 注意：如果 App 部署在雲端且儲存空間不是持久化的（例如每天重新部署會清空檔案），
-# 歷史天數會從零開始累積，天數不足時趨勢圖/異常偵測會提示資料不足。
+# 區塊：歷史負面新聞彙整 → 寫回 GitHub repo，避免容器重開資料歸零
+# 需要在 Streamlit Secrets 設定：
+#   GITHUB_TOKEN = "ghp_xxxx"                 （需要 repo 寫入權限的 Personal Access Token）
+#   GITHUB_REPO  = "your-account/your-repo"   （例如 "chengyu1212/negative-news"）
+# 選填：GITHUB_BRANCH（預設 main）、GITHUB_HISTORY_PATH（預設 history/negative_news_history.csv）
+# 沒有設定這兩個 Secrets 時，這個功能會靜默停用，自動退回讀本機 output 資料夾
+# （效果跟原本一樣：容器重開資料就會不見，但完全不影響其他功能）。
 # ============================================================
-@st.cache_data(ttl=300)
-def load_negative_history(output_dir_str: str) -> pd.DataFrame:
+GITHUB_HISTORY_PATH_DEFAULT = "history/negative_news_history.csv"
+
+
+def _github_config() -> dict | None:
+    try:
+        token = st.secrets.get("GITHUB_TOKEN", "")
+        repo = st.secrets.get("GITHUB_REPO", "")
+    except Exception:
+        return None
+    if not token or not repo:
+        return None
+    return {
+        "token": token,
+        "repo": repo,
+        "branch": st.secrets.get("GITHUB_BRANCH", "main"),
+        "path": st.secrets.get("GITHUB_HISTORY_PATH", GITHUB_HISTORY_PATH_DEFAULT),
+    }
+
+
+def _github_headers(token: str) -> dict:
+    return {"Authorization": f"Bearer {token}", "Accept": "application/vnd.github+json"}
+
+
+def _github_fetch_history() -> tuple[pd.DataFrame, str | None]:
+    """讀回 GitHub repo 裡的歷史統計 CSV；檔案不存在時回傳空表＋sha=None（代表之後要新建檔案）。"""
+    empty = pd.DataFrame(columns=["日期", "Ticker", "Company", "則數", "最高Level"])
+    config = _github_config()
+    if not config:
+        return empty, None
+    url = f"https://api.github.com/repos/{config['repo']}/contents/{config['path']}"
+    try:
+        response = requests.get(url, headers=_github_headers(config["token"]), params={"ref": config["branch"]}, timeout=20)
+    except requests.RequestException:
+        return empty, None
+    if response.status_code != 200:
+        return empty, None
+    payload = response.json()
+    sha = payload.get("sha")
+    try:
+        content = base64.b64decode(payload["content"]).decode("utf-8-sig")
+        frame = pd.read_csv(io.StringIO(content))
+        frame["日期"] = pd.to_datetime(frame["日期"])
+        return frame, sha
+    except Exception:
+        return empty, sha
+
+
+def _github_push_history(frame: pd.DataFrame, sha: str | None) -> bool:
+    config = _github_config()
+    if not config:
+        return False
+    csv_text = frame.sort_values("日期").to_csv(index=False)
+    content_b64 = base64.b64encode(csv_text.encode("utf-8")).decode("ascii")
+    url = f"https://api.github.com/repos/{config['repo']}/contents/{config['path']}"
+    body = {
+        "message": f"更新負面新聞歷史統計（{datetime.now(TAIPEI).strftime('%Y-%m-%d %H:%M')}）",
+        "content": content_b64,
+        "branch": config["branch"],
+    }
+    if sha:
+        body["sha"] = sha
+    try:
+        response = requests.put(url, headers=_github_headers(config["token"]), json=body, timeout=20)
+    except requests.RequestException:
+        return False
+    return response.status_code in (200, 201)
+
+
+def append_negative_history_to_github(event_frame: pd.DataFrame, event_date: datetime) -> bool:
+    """把今天的負面新聞彙整成「日期 x 公司 x 則數」寫回 GitHub repo。
+    沒設定 GITHUB_TOKEN/GITHUB_REPO 就直接跳過（不影響抓取流程本身）。"""
+    if not _github_config() or event_frame is None or event_frame.empty:
+        return False
+    daily = event_frame.copy()
+    daily["Level"] = pd.to_numeric(daily.get("Level"), errors="coerce").fillna(0).astype(int)
+    daily["Ticker"] = daily.get("Ticker", "").fillna("").astype(str).str.strip()
+    daily["Company"] = daily.get("Company", "").fillna("").astype(str).str.strip()
+    daily = daily[daily["Ticker"] != ""]
+    if daily.empty:
+        return False
+    grouped = daily.groupby(["Ticker", "Company"]).agg(則數=("Ticker", "size"), 最高Level=("Level", "max")).reset_index()
+    grouped["日期"] = pd.to_datetime(event_date.date())
+
+    history, sha = _github_fetch_history()
+    if not history.empty:
+        history = history[history["日期"].dt.date != event_date.date()]  # 同一天重跑就整批覆蓋，不會重複累加
+    merged = pd.concat([history, grouped], ignore_index=True)
+    pushed = _github_push_history(merged, sha)
+    if pushed:
+        load_negative_history.clear()
+    return pushed
+
+
+def _load_negative_history_from_local(output_dir_str: str) -> pd.DataFrame:
+    """備用方案：沒設定 GitHub 時，退回掃描本機 output 資料夾（容器重開就會不見）。"""
     output_dir = Path(output_dir_str)
     records = []
     for file in sorted(output_dir.glob("美股_*_負面新聞爬蟲.xlsx")):
@@ -1338,6 +1436,14 @@ def load_negative_history(output_dir_str: str) -> pd.DataFrame:
     if not records:
         return pd.DataFrame(columns=["Ticker", "Company", "則數", "最高Level", "日期"])
     return pd.concat(records, ignore_index=True)
+
+
+@st.cache_data(ttl=120)
+def load_negative_history(output_dir_str: str) -> pd.DataFrame:
+    if _github_config():
+        history, _ = _github_fetch_history()
+        return history
+    return _load_negative_history_from_local(output_dir_str)
 
 
 # ============================================================
@@ -1573,6 +1679,9 @@ if True:
                 job["status"] = "stopping"
                 job["progress_text"] = "正在安全停止，請稍候…"
                 job["stop_event"].set()
+            history_note = ""
+            if _github_config():
+                history_note = "；歷史統計已同步至 GitHub" if job.get("history_pushed") else "；⚠️ 歷史統計同步 GitHub 失敗（請檢查 Secrets 設定）"
             status_messages = {
                 "running": "⏳ 程式執行中，可於本頁查看最新進度。",
                 "stopping": "🚫 已停止執行。",
@@ -1580,7 +1689,7 @@ if True:
                     f"{job.get('summary', '抓取完成')}；負面新聞 {job.get('event_rows', 0)} 則；"
                     f"待人工覆核 {job.get('unknown_rows', 0)} 則；無關新聞 {job.get('irrelevant_rows', 0)} 則。"
                     f"翻譯失敗 {job.get('translation_failures', 0)} 則。"
-                    f"總耗時 {elapsed_text}"
+                    f"總耗時 {elapsed_text}{history_note}"
                 ),
                 "stopped": f"🚫 已停止執行。總耗時 {elapsed_text}；未完成的結果不會覆蓋前次紀錄。",
                 "failed": f"抓取失敗：{job.get('error', '未知錯誤')}（耗時 {elapsed_text}）",
@@ -1677,7 +1786,7 @@ if saved_crawl and saved_crawl["event_path"] and saved_crawl["event_path"].is_fi
                 )
                 fig_donut.update_layout(
                     showlegend=False,
-                    height=320,
+                    height=380,
                     margin=dict(t=20, b=20, l=20, r=20)
                 )
                 chart_left.plotly_chart(fig_donut, use_container_width=True)
@@ -1704,7 +1813,7 @@ if saved_crawl and saved_crawl["event_path"] and saved_crawl["event_path"].is_fi
                 fig_bar.update_layout(
                     xaxis_title=None,
                     yaxis_title=None,
-                    height=320,
+                    height=380,
                     margin=dict(t=20, b=20, l=20, r=20),
                     xaxis=dict(tickangle=-45)
                 )
@@ -1737,16 +1846,20 @@ if saved_crawl and saved_crawl["event_path"] and saved_crawl["event_path"].is_fi
                         st.plotly_chart(fig_exposure, use_container_width=True)
                         st.caption("長條高度＝曝險金額；顏色深淺＝該公司命中的最高事件等級；長條上方數字＝負面新聞則數。優先處理右上角（曝險高＋顏色深）的公司。")
 
-                # 4. 新聞頻率異常偵測 + 5. 時間序列走勢圖（依賴歷史每日負面新聞檔案累積）
+                # 4. 新聞頻率異常偵測 + 5. 時間序列走勢圖
+                # 歷史資料來源：已設定 GitHub Secrets 時讀 GitHub repo 裡的統計檔（不會因容器重開而消失）；
+                # 沒設定時退回讀本機 output 資料夾（容器重開就會歸零）。
                 history_df = load_negative_history(str(OUTPUT_DIR))
                 available_days = sorted(history_df["日期"].dt.date.unique()) if not history_df.empty else []
                 st.markdown("#### 新聞頻率異常偵測與時間序列走勢")
+                history_source_note = "（歷史資料來源：GitHub repo，長期保留）" if _github_config() else "（歷史資料來源：本機暫存，重開網站可能會歸零）"
                 if len(available_days) < 2:
                     st.caption(
                         f"目前累積 {len(available_days)} 天歷史負面新聞資料，至少需要 2 天才能比較頻率變化。"
-                        "隨著每天執行，這裡會自動累積出趨勢圖與異常警示（若部署環境每天會清空儲存空間，天數會重新從頭累積）。"
+                        f"隨著每天執行，這裡會自動累積出趨勢圖與異常警示 {history_source_note}。"
                     )
                 else:
+                    st.caption(history_source_note)
                     latest_day = available_days[-1]
                     baseline_days = [day for day in available_days if day != latest_day]
                     latest_counts = history_df[history_df["日期"].dt.date == latest_day].groupby(["Ticker", "Company"])["則數"].sum()
