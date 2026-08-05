@@ -1,20 +1,48 @@
 日期,Ticker,Company,則數,最高Level
-2026-08-03 00:00:00,AAPL,Apple Inc.,1,1
-2026-08-03 00:00:00,TSCO,Tractor Supply,1,3
-2026-08-03 00:00:00,TRV,Travelers Companies (The),1,1
-2026-08-03 00:00:00,TGT,Target Corporation,1,1
-2026-08-03 00:00:00,REGN,Regeneron Pharmaceuticals,1,4
-2026-08-03 00:00:00,NTAP,NetApp,1,1
-2026-08-03 00:00:00,HSIC,Henry Schein,1,3
-2026-08-03 00:00:00,HBAN,Huntington Bancshares,1,2
-2026-08-03 00:00:00,V,Visa Inc.,1,3
-2026-08-03 00:00:00,HAS,Hasbro,1,2
-2026-08-03 00:00:00,FAST,Fastenal,1,1
-2026-08-03 00:00:00,ETR,Entergy,1,4
-2026-08-03 00:00:00,EIX,Edison International,3,1
-2026-08-03 00:00:00,CMG,Chipotle Mexican Grill,1,3
-2026-08-03 00:00:00,CIEN,Ciena,1,1
-2026-08-03 00:00:00,AMZN,Amazon,1,2
-2026-08-03 00:00:00,AIG,American International Group,8,3
-2026-08-03 00:00:00,FDX,FedEx,1,3
-2026-08-03 00:00:00,XOM,ExxonMobil,1,3
+2026-08-03,AAPL,Apple Inc.,1,1
+2026-08-03,XOM,ExxonMobil,1,3
+2026-08-03,FDX,FedEx,1,3
+2026-08-03,AIG,American International Group,8,3
+2026-08-03,CIEN,Ciena,1,1
+2026-08-03,CMG,Chipotle Mexican Grill,1,3
+2026-08-03,EIX,Edison International,3,1
+2026-08-03,ETR,Entergy,1,4
+2026-08-03,FAST,Fastenal,1,1
+2026-08-03,AMZN,Amazon,1,2
+2026-08-03,V,Visa Inc.,1,3
+2026-08-03,HBAN,Huntington Bancshares,1,2
+2026-08-03,HSIC,Henry Schein,1,3
+2026-08-03,NTAP,NetApp,1,1
+2026-08-03,REGN,Regeneron Pharmaceuticals,1,4
+2026-08-03,TGT,Target Corporation,1,1
+2026-08-03,TRV,Travelers Companies (The),1,1
+2026-08-03,TSCO,Tractor Supply,1,3
+2026-08-03,HAS,Hasbro,1,2
+2026-08-04,QCOM,Qualcomm,1,3
+2026-08-04,REGN,Regeneron Pharmaceuticals,2,4
+2026-08-04,TKO,TKO Group Holdings,1,3
+2026-08-04,TSLA,"Tesla, Inc.",1,2
+2026-08-04,TSN,Tyson Foods,1,3
+2026-08-04,WDC,Western Digital,1,1
+2026-08-04,UPS,United Parcel Service,1,2
+2026-08-04,V,Visa Inc.,1,3
+2026-08-04,VRSK,Verisk Analytics,1,1
+2026-08-04,WMB,Williams Companies,1,1
+2026-08-04,NXPI,NXP Semiconductors,7,2
+2026-08-04,UAL,United Airlines Holdings,1,1
+2026-08-04,MSFT,Microsoft,1,3
+2026-08-04,AVGO,Broadcom,2,4
+2026-08-04,GOOGL,Alphabet Inc. (Class A),1,4
+2026-08-04,GOOG,Alphabet Inc. (Class C),1,4
+2026-08-04,EFX,Equifax,2,4
+2026-08-04,ECHO,EchoStar,3,5
+2026-08-04,COIN,Coinbase,1,2
+2026-08-04,CF,CF Industries,1,1
+2026-08-04,BRO,Brown & Brown,2,3
+2026-08-04,WTW,Willis Towers Watson,1,2
+2026-08-04,APA,APA Corporation,1,4
+2026-08-04,AMGN,Amgen,1,3
+2026-08-04,AIG,American International Group,1,3
+2026-08-04,ABT,Abbott Laboratories,1,1
+2026-08-04,IBM,IBM,1,3
+2026-08-04,YUM,Yum! Brands,1,2
