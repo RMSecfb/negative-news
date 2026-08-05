@@ -1,9 +1,6 @@
 # 美股負面新聞整合中心
 
 自動抓取多方新聞來源、用 AI 判斷新聞情緒、依規則分類事件嚴重度，並整理成可下載的 Excel 報表與互動式圖表。
-
-線上版本：以 Streamlit Community Cloud 部署，程式進入點為 `負面新聞整合網站.py`。
-
 ---
 
 ## 功能總覽
@@ -115,7 +112,7 @@ GITHUB_REPO = "chengyu1212/negative-news"
 
 ## 限制
 
-- FinBERT 僅支援英文，原始標題含中文字元的新聞一律標記 `N/A`，不會被誤判為負面
-- 若未設定 GitHub Secrets，歷史統計資料會因 Streamlit Cloud 容器重開而不定期歸零
+- FinBERT 僅支援英文，原始標題含中文字元的新聞一律標記 `N/A`
+- 若未設定 GitHub Secrets，歷史統計資料會因 Streamlit Cloud 重開而歸零
 - 新聞頻率異常偵測至少需要 2 天歷史資料才會啟動比較邏輯
 
