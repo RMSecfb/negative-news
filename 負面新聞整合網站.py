@@ -2005,5 +2005,5 @@ if saved_crawl:
         if saved_crawl["finbert_path"]:
             download_columns[column_index].download_button(f"下載{file_prefix} FinBERT ≤ 0", saved_crawl["finbert_path"].read_bytes(), saved_crawl["finbert_path"].name, use_container_width=True, key="saved_crawl_finbert")
         if not saved_crawl["is_today"]:
-            st.caption("今日新聞尚未完成；目前提供最近一次執行結果。")
+            st.caption("今日新聞尚未完成；目前提供最近一次執行結果")
 
