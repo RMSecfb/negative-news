@@ -1840,7 +1840,7 @@ if saved_crawl and saved_crawl["event_path"] and saved_crawl["event_path"].is_fi
                         )
                         fig_exposure.update_traces(texttemplate="%{text} 則", textposition="outside")
                         fig_exposure.update_layout(
-                            xaxis_title=None, yaxis_title="曝險金額", height=320,
+                            xaxis_title=None, yaxis_title="曝險金額", height=310,
                             margin=dict(t=20, b=20, l=20, r=20), xaxis=dict(tickangle=-45),
                         )
                         st.plotly_chart(fig_exposure, use_container_width=True)
