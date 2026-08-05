@@ -65,8 +65,8 @@ negative-news/
 ├─ SP500.xlsx                # S&P 500 公司名單（必要）
 ├─ requirements.txt          # Python 套件需求
 ├─ runtime.txt                # Python 版本設定
-├─ history/
-  └─ negative_news_history.csv   # 每日負面新聞歷史統計（程式自動寫入，見下方說明）
+└─ history/
+   └─ negative_news_history.csv   # 每日負面新聞歷史統計（程式自動寫入，見下方說明）
 ```
 
 `Parameter_Event.xlsx`、`DowJones30.xlsx`、`SP500.xlsx` 這三份 Excel 檔**必須放在 repo 根目錄**，程式啟動時會自動讀取；缺任何一份都會在網頁上顯示錯誤並停止執行。更新公司名單或分類規則，只要覆蓋這幾個檔案、重新整理網站即可套用，不需要改程式碼。
