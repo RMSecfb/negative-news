@@ -1909,7 +1909,7 @@ if saved_crawl and saved_crawl["event_path"] and saved_crawl["event_path"].is_fi
                     fig_trend.update_layout(xaxis_title=None, yaxis_title="負面新聞則數", height=310, margin=dict(t=20, b=20, l=20, r=20))
                     st.plotly_chart(fig_trend, use_container_width=True)
 
-                st.markdown("#### 負面新聞明細")
+                st.markdown("#### 新聞明細")
                 filter_cols = st.columns([2, 1, 1])
                 search = filter_cols[0].text_input("搜尋公司名稱、股票代號、標題", key="negative_search")
 
