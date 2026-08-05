@@ -1510,7 +1510,7 @@ hero_subtitle = f"US Stock Market Negative News Aggregator"
 st.markdown(f"<div class='app-hero'><div class='app-hero-title'>🛡️ {APP_TITLE}</div><div class='app-hero-sub'>{hero_subtitle}</div></div>", unsafe_allow_html=True)
 
 page_heading()
-st.markdown("<div class='method-card'><div class='method-title'>運作流程說明</div><div class='method-desc'>系統自動抓取多個新聞來源，比對公司列表並去除重複新聞，接著以 AI (FinBERT) 模型分析新聞情緒，篩出可能影響公司之負面消息，最後彙整成圖表與 Excel 檔。</div></div>", unsafe_allow_html=True)
+st.markdown("<div class='method-card'><div class='method-title'>運作流程說明</div><div class='method-desc'>系統自動抓取多個新聞來源，比對公司列表並去除重複新聞，接著以 AI (FinBERT) 模型分析新聞情緒，篩出可能影響公司之負面消息，並依規則分類事件等級；若有上傳曝險部位，會進一步標出曝險高、事件嚴重的公司，同時比對歷史資料新聞頻率異常，最後彙整成圖表與 Excel 檔。</div></div>", unsafe_allow_html=True)
 
 # ============================================================
 # 區塊：今日任務頁面（唯一頁面）
