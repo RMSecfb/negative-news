@@ -1786,7 +1786,7 @@ if saved_crawl and saved_crawl["event_path"] and saved_crawl["event_path"].is_fi
                 )
                 fig_donut.update_layout(
                     showlegend=False,
-                    height=350,
+                    height=330,
                     margin=dict(t=20, b=20, l=20, r=20)
                 )
                 chart_left.plotly_chart(fig_donut, use_container_width=True)
@@ -1813,7 +1813,7 @@ if saved_crawl and saved_crawl["event_path"] and saved_crawl["event_path"].is_fi
                 fig_bar.update_layout(
                     xaxis_title=None,
                     yaxis_title=None,
-                    height=350,
+                    height=330,
                     margin=dict(t=20, b=20, l=20, r=20),
                     xaxis=dict(tickangle=-45)
                 )
@@ -1881,7 +1881,7 @@ if saved_crawl and saved_crawl["event_path"] and saved_crawl["event_path"].is_fi
                             })
                     if anomaly_rows:
                         st.warning(f"🔺 偵測到 {len(anomaly_rows)} 家公司負面新聞則數異常放量（{latest_day} vs. 過去 {len(baseline_days)} 天平均）：")
-                        st.dataframe(pd.DataFrame(anomaly_rows), use_container_width=True, hide_index=True, height=250)
+                        st.dataframe(pd.DataFrame(anomaly_rows), use_container_width=True, hide_index=True, height=280)
                     else:
                         st.caption(f"{latest_day} 沒有公司出現明顯的負面新聞異常放量（門檻：較過去平均高 2 倍以上，或平日無負面新聞卻突然出現 3 則以上）。")
 
