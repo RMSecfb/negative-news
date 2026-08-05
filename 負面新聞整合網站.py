@@ -1819,32 +1819,44 @@ if saved_crawl and saved_crawl["event_path"] and saved_crawl["event_path"].is_fi
                 )
                 chart_right.plotly_chart(fig_bar, use_container_width=True)
 
-                # 3. 曝險加權風險排行（只有上傳過曝險清單才顯示）
+                # 3. 曝險風險象限圖（只有上傳過曝險清單才顯示）
+                # X 軸＝曝險金額、Y 軸＝事件嚴重度（最高Level × 負面新聞則數），
+                # 用象限（中位數切分）取代單一合成分數，避免公式設計不夠嚴謹時誤導判斷。
                 if exposure_map:
-                    st.markdown("#### 曝險加權風險排行（曝險金額 × 負面新聞）")
+                    st.markdown("#### 曝險風險象限圖（曝險金額 × 事件嚴重度）")
                     exposure_rank = (
                         negative_df[negative_df["曝險金額"] > 0]
                         .groupby(["Ticker", "Company"])
                         .agg(曝險金額=("曝險金額", "max"), 負面新聞則數=("Ticker", "size"), 最高Level=("Level", "max"))
                         .reset_index()
-                        .sort_values("曝險金額", ascending=False)
-                        .head(10)
                     )
                     if exposure_rank.empty:
                         st.caption("這次負面新聞沒有命中曝險清單裡的公司。")
                     else:
-                        fig_exposure = px.bar(
-                            exposure_rank, x="Company", y="曝險金額",
-                            text="負面新聞則數", color="最高Level",
+                        exposure_rank["事件嚴重度"] = exposure_rank["最高Level"] * exposure_rank["負面新聞則數"]
+                        fig_exposure = px.scatter(
+                            exposure_rank, x="曝險金額", y="事件嚴重度",
+                            size="負面新聞則數", color="最高Level", text="Ticker",
+                            hover_name="Company",
+                            hover_data={"Ticker": True, "負面新聞則數": True, "最高Level": True, "曝險金額": ":,.0f", "事件嚴重度": True},
                             color_continuous_scale=["#BFDBFE", "#3B82F6", "#1E3A8A"],
+                            size_max=36,
                         )
-                        fig_exposure.update_traces(texttemplate="%{text} 則", textposition="outside")
+                        fig_exposure.update_traces(textposition="top center")
+                        exposure_median = exposure_rank["曝險金額"].median()
+                        severity_median = exposure_rank["事件嚴重度"].median()
+                        fig_exposure.add_vline(x=exposure_median, line_dash="dash", line_color="#94A3B8")
+                        fig_exposure.add_hline(y=severity_median, line_dash="dash", line_color="#94A3B8")
                         fig_exposure.update_layout(
-                            xaxis_title=None, yaxis_title="曝險金額", height=310,
-                            margin=dict(t=20, b=20, l=20, r=20), xaxis=dict(tickangle=-45),
+                            xaxis_title="曝險金額", yaxis_title="事件嚴重度（Level × 則數）", height=380,
+                            margin=dict(t=20, b=20, l=20, r=20),
                         )
                         st.plotly_chart(fig_exposure, use_container_width=True)
-                        st.caption("長條高度＝曝險金額；顏色深淺＝該公司命中的最高事件等級；長條上方數字＝負面新聞則數。優先處理右上角（曝險高＋顏色深）的公司。")
+                        st.caption(
+                            "X 軸＝曝險金額，Y 軸＝事件嚴重度（最高Level × 負面新聞則數），泡泡越大＝負面新聞則數越多、顏色越深＝事件等級越高。"
+                            "虛線為中位數，右上象限（曝險高＋事件嚴重）是優先處理對象；左上象限（曝險不高但事件很嚴重）也值得留意，只是影響範圍較小。"
+                        )
+
 
                 # 4. 新聞頻率異常偵測 + 5. 時間序列走勢圖
                 # 歷史資料來源：已設定 GitHub Secrets 時讀 GitHub repo 裡的統計檔（不會因容器重開而消失）；
