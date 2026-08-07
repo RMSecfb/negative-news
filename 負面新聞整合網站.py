@@ -1695,7 +1695,10 @@ def render_manual_review_table(
         st.dataframe(
             styled,
             use_container_width=True, hide_index=True,
-            column_config={"URL": st.column_config.LinkColumn("新聞", display_text="開啟")},
+            column_config={
+                "URL": st.column_config.LinkColumn("新聞", display_text="開啟"),
+                "曝險金額": st.column_config.NumberColumn("曝險金額", format="%.2f"),
+            },
             height=560,
         )
         return
