@@ -1593,6 +1593,104 @@ def apply_manual_overrides(negative_df: pd.DataFrame, overrides: pd.DataFrame) -
     return frame
 
 
+def _style_by_level(row: pd.Series) -> list[str]:
+    """Level 5 整列標紅、Level 4 整列標橘，其餘不上色。"""
+    level = row.get("Level")
+    if level == 5:
+        return ["background-color: #FFCDD2"] * len(row)
+    if level == 4:
+        return ["background-color: #FFE0B2"] * len(row)
+    return [""] * len(row)
+
+
+def render_manual_review_table(
+    source_df: pd.DataFrame,
+    section_key: str,
+    search_placeholder: str = "搜尋公司名稱、股票代號、標題",
+    extra_display_columns: list[str] | None = None,
+) -> None:
+    """通用的『可篩選＋人工覆核可編輯』新聞明細表，負面新聞與待人工覆核新聞共用同一套邏輯。
+    source_df 必須已經套用過 apply_manual_overrides（含「已人工覆核」欄位）。"""
+    filter_cols = st.columns([2, 1, 1])
+    search = filter_cols[0].text_input(search_placeholder, key=f"{section_key}_search")
+
+    event_options = ["全部"] + sorted([str(e) for e in source_df["事件中文"].dropna().unique() if str(e).strip()])
+    event_filter = filter_cols[1].selectbox("事件種類", event_options, key=f"{section_key}_event_filter")
+
+    level_options = ["全部", "Level 5", "Level 4", "Level 3", "Level 2", "Level 1"]
+    level_filter = filter_cols[2].selectbox("事件等級", level_options, key=f"{section_key}_level_filter")
+
+    filtered = source_df.copy()
+    if search:
+        mask = filtered[["Ticker", "Company", "Title", "事件中文"]].fillna("").astype(str).apply(
+            lambda column: column.str.contains(search, case=False, regex=False)
+        ).any(axis=1)
+        filtered = filtered[mask]
+    if event_filter != "全部":
+        filtered = filtered[filtered["事件中文"] == event_filter]
+    if level_filter.startswith("Level "):
+        filtered = filtered[filtered["Level"] == int(level_filter.replace("Level ", ""))]
+
+    st.caption(f"篩選結果：顯示 {len(filtered):,}／{len(source_df):,} 則　🔴 Level 5　🟠 Level 4")
+
+    display_columns = ["Published Time", "Ticker", "Company", "事件中文", "Level", "Title_ZH", "FinBERT", "Action", "URL"]
+    if "已人工覆核" in filtered.columns:
+        display_columns.insert(4, "已人工覆核")
+    if extra_display_columns:
+        insert_at = display_columns.index("事件中文")
+        for offset, column in enumerate(extra_display_columns):
+            if column in filtered.columns:
+                display_columns.insert(insert_at + offset, column)
+
+    review_mode = st.toggle("✏️ 人工覆核模式（可修改等級／事件中文／Action）", key=f"{section_key}_review_mode")
+
+    if not review_mode:
+        styled = filtered[display_columns].style.apply(_style_by_level, axis=1)
+        st.dataframe(
+            styled,
+            use_container_width=True, hide_index=True,
+            column_config={"URL": st.column_config.LinkColumn("新聞", display_text="開啟")},
+            height=560,
+        )
+        return
+
+    st.caption("直接在下表修改「事件中文」「Level」「Action」欄位，改完按下方「儲存人工覆核結果」即可回存；下次讀取新聞時會自動套用。")
+    reviewer_name = st.text_input("覆核人（選填，會一併記錄）", key=f"{section_key}_reviewer_name")
+    editor_columns = ["Published Time", "Ticker", "Company", "Title_ZH", "FinBERT", "事件中文", "Level", "Action", "URL"]
+    editable_frame = filtered[editor_columns].copy().reset_index(drop=True)
+    edited_frame = st.data_editor(
+        editable_frame,
+        use_container_width=True, hide_index=True, height=560,
+        key=f"{section_key}_editor",
+        disabled=["Published Time", "Ticker", "Company", "Title_ZH", "FinBERT", "URL"],
+        column_config={
+            "URL": st.column_config.LinkColumn("新聞", display_text="開啟"),
+            "事件中文": st.column_config.TextColumn("事件中文"),
+            "Level": st.column_config.SelectboxColumn("Level", options=[1, 2, 3, 4, 5]),
+            "Action": st.column_config.TextColumn("Action", width="large"),
+        },
+    )
+    if st.button("💾 儲存人工覆核結果", use_container_width=True, key=f"{section_key}_save_manual_review"):
+        comparable_cols = ["事件中文", "Level", "Action"]
+        original_indexed = editable_frame.set_index("URL")
+        edited_indexed = edited_frame.set_index("URL")
+        changed_urls = [
+            url for url in edited_indexed.index
+            if url in original_indexed.index
+            and not original_indexed.loc[url, comparable_cols].equals(edited_indexed.loc[url, comparable_cols])
+        ]
+        if not changed_urls:
+            st.info("沒有偵測到任何欄位變更。")
+        else:
+            changed_rows = edited_frame[edited_frame["URL"].isin(changed_urls)][["URL", "Ticker", "Company", "事件中文", "Level", "Action"]]
+            success, save_message = save_manual_overrides(changed_rows, reviewer=reviewer_name)
+            if success:
+                st.success(save_message)
+                st.rerun()
+            else:
+                st.error(save_message)
+
+
 # ============================================================
 # 區塊：頁面標題文字
 # 想改頁面上方的標題／說明文字，改這裡即可。
@@ -2060,89 +2158,30 @@ if saved_crawl and saved_crawl["event_path"] and saved_crawl["event_path"].is_fi
                     st.plotly_chart(fig_trend, use_container_width=True)
 
                 st.markdown("#### 新聞明細")
-                filter_cols = st.columns([2, 1, 1])
-                search = filter_cols[0].text_input("搜尋公司名稱、股票代號、標題", key="negative_search")
+                render_manual_review_table(
+                    negative_df,
+                    section_key="negative",
+                    extra_display_columns=["曝險金額"] if exposure_map else None,
+                )
 
-                # 新增中文事件動態選單
-                event_options = ["全部"] + sorted([str(e) for e in negative_df["事件中文"].dropna().unique() if str(e).strip()])
-                event_filter = filter_cols[1].selectbox("事件種類", event_options, key="negative_event_filter")
-
-                # 事件等級選單（支援各級選取）
-                level_options = ["全部", "Level 5", "Level 4", "Level 3", "Level 2", "Level 1"]
-                level_filter = filter_cols[2].selectbox("事件等級", level_options, key="negative_level_filter")
-
-                filtered = negative_df.copy()
-                if search:
-                    mask = filtered[["Ticker", "Company", "Title", "事件中文"]].fillna("").astype(str).apply(
-                        lambda column: column.str.contains(search, case=False, regex=False)
-                    ).any(axis=1)
-                    filtered = filtered[mask]
-
-                if event_filter != "全部":
-                    filtered = filtered[filtered["事件中文"] == event_filter]
-
-                if level_filter == "Level 4 以上":
-                    filtered = filtered[filtered["Level"] >= 4]
-                elif level_filter == "Level 3 以下":
-                    filtered = filtered[filtered["Level"] < 4]
-                elif level_filter.startswith("Level "):
-                    target_lvl = int(level_filter.replace("Level ", ""))
-                    filtered = filtered[filtered["Level"] == target_lvl]
-
-                st.caption(f"篩選結果：顯示 {len(filtered):,}／{len(negative_df):,} 則")
-
-                display_columns = ["Published Time", "Ticker", "Company", "事件中文", "Level", "Title_ZH", "Action", "URL"]
-                if "已人工覆核" in filtered.columns:
-                    display_columns.insert(4, "已人工覆核")
-                display_frame = filtered.copy()
-                if exposure_map:
-                    display_columns.insert(3, "曝險金額")
-
-                review_mode = st.toggle("✏️ 人工覆核模式（可修改等級／事件中文／Action）", key="negative_review_mode")
-
-                if not review_mode:
-                    st.dataframe(
-                        display_frame[display_columns],
-                        use_container_width=True, hide_index=True,
-                        column_config={"URL": st.column_config.LinkColumn("新聞", display_text="開啟")},
-                        height=560,
-                    )
-                else:
-                    st.caption("直接在下表修改「事件中文」「Level」「Action」欄位，改完按下方「儲存人工覆核結果」即可回存；下次讀取新聞時會自動套用。")
-                    reviewer_name = st.text_input("覆核人（選填，會一併記錄）", key="negative_reviewer_name")
-                    editor_columns = ["Published Time", "Ticker", "Company", "Title_ZH", "事件中文", "Level", "Action", "URL"]
-                    editable_frame = filtered[editor_columns].copy().reset_index(drop=True)
-                    edited_frame = st.data_editor(
-                        editable_frame,
-                        use_container_width=True, hide_index=True, height=560,
-                        key="negative_review_editor",
-                        disabled=["Published Time", "Ticker", "Company", "Title_ZH", "URL"],
-                        column_config={
-                            "URL": st.column_config.LinkColumn("新聞", display_text="開啟"),
-                            "事件中文": st.column_config.TextColumn("事件中文"),
-                            "Level": st.column_config.SelectboxColumn("Level", options=[1, 2, 3, 4, 5]),
-                            "Action": st.column_config.TextColumn("Action", width="large"),
-                        },
-                    )
-                    if st.button("💾 儲存人工覆核結果", use_container_width=True, key="save_manual_review"):
-                        comparable_cols = ["事件中文", "Level", "Action"]
-                        original_indexed = editable_frame.set_index("URL")
-                        edited_indexed = edited_frame.set_index("URL")
-                        changed_urls = [
-                            url for url in edited_indexed.index
-                            if url in original_indexed.index
-                            and not original_indexed.loc[url, comparable_cols].equals(edited_indexed.loc[url, comparable_cols])
-                        ]
-                        if not changed_urls:
-                            st.info("沒有偵測到任何欄位變更。")
-                        else:
-                            changed_rows = edited_frame[edited_frame["URL"].isin(changed_urls)][["URL", "Ticker", "Company", "事件中文", "Level", "Action"]]
-                            success, save_message = save_manual_overrides(changed_rows, reviewer=reviewer_name)
-                            if success:
-                                st.success(save_message)
-                                st.rerun()
-                            else:
-                                st.error(save_message)
+            # ============================================================
+            # 區塊：待人工覆核新聞（規則沒能自動分類的新聞）
+            # 跟「負面新聞」共用同一份 event_path Excel（分頁「待人工覆核」），
+            # 也共用同一套人工覆核回存機制（用 URL 當唯一鍵，寫回同一份覆寫紀錄）。
+            # 獨立於上面「負面新聞」是否有資料，只要這次執行有 event_path 就顯示。
+            # ============================================================
+            try:
+                unknown_df = pd.read_excel(saved_crawl["event_path"], sheet_name="待人工覆核")
+            except Exception:
+                unknown_df = pd.DataFrame(columns=NEGATIVE_OUTPUT_COLUMNS)
+            st.markdown("#### 待人工覆核新聞")
+            if unknown_df.empty:
+                st.caption("這次沒有待人工覆核的新聞。")
+            else:
+                unknown_df["Level"] = pd.to_numeric(unknown_df["Level"], errors="coerce").fillna(0).astype(int)
+                unknown_df["Ticker"] = unknown_df["Ticker"].fillna("").astype(str).str.strip()
+                unknown_df = apply_manual_overrides(unknown_df, load_manual_overrides())
+                render_manual_review_table(unknown_df, section_key="pending_review")
 else:
         current_job = crawl_job_registry().get("current")
         if current_job and current_job.get("status") in ("running", "stopping"):
