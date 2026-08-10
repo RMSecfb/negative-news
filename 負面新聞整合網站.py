@@ -1469,7 +1469,7 @@ def append_negative_history_to_github(event_frame: pd.DataFrame, event_date: dat
 # 確保 GitHub 上留著的永遠是「當天最新（含人工修正後）」的版本。
 # 沒設定 GITHUB_TOKEN/GITHUB_REPO 就直接跳過，不影響其他功能。
 # ============================================================
-GITHUB_RISK_NEWS_DIR_DEFAULT = "history/risk_news_daily"
+GITHUB_RISK_NEWS_DIR_DEFAULT = "risk_news_daily"
 
 
 def _github_risk_news_path(snapshot_date: date) -> str:
