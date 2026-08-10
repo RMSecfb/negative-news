@@ -1461,9 +1461,9 @@ def append_negative_history_to_github(event_frame: pd.DataFrame, event_date: dat
 
 
 # ============================================================
-# 區塊：每天的風險新聞明細（負面新聞，含全部欄位）自動回存 GitHub
+# 區塊：每天的負面新聞明細（負面新聞，含全部欄位）自動回存 GitHub
 # 跟上面「歷史統計」（只有 日期/Ticker/則數/最高Level 的彙總）不同，
-# 這裡存的是當天完整的風險新聞明細（每一則新聞、每個欄位都在），
+# 這裡存的是當天完整的負面新聞明細（每一則新聞、每個欄位都在），
 # 一天一個檔案，路徑用日期命名，同一天重新爬蟲或人工覆核修改都會整批覆蓋，
 # 確保 GitHub 上留著的永遠是「當天最新（含人工修正後）」的版本。
 # 沒設定 GITHUB_TOKEN/GITHUB_REPO 就直接跳過，不影響其他功能。
@@ -1510,7 +1510,7 @@ def _github_push_risk_news_snapshot(frame: pd.DataFrame, snapshot_date: date, sh
     content_b64 = base64.b64encode(csv_text.encode("utf-8")).decode("ascii")
     url = f"https://api.github.com/repos/{config['repo']}/contents/{path}"
     body = {
-        "message": f"更新 {snapshot_date.strftime('%Y-%m-%d')} 風險新聞明細（{datetime.now(TAIPEI).strftime('%Y-%m-%d %H:%M')}）",
+        "message": f"更新 {snapshot_date.strftime('%Y-%m-%d')} 負面新聞明細（{datetime.now(TAIPEI).strftime('%Y-%m-%d %H:%M')}）",
         "content": content_b64,
         "branch": config["branch"],
     }
@@ -1524,7 +1524,7 @@ def _github_push_risk_news_snapshot(frame: pd.DataFrame, snapshot_date: date, sh
 
 
 def save_risk_news_snapshot_to_github(frame: pd.DataFrame, snapshot_date: date) -> bool:
-    """把某一天的風險新聞明細整份存到 GitHub，每次都整批覆蓋（不是累加）。
+    """把某一天的負面新聞明細整份存到 GitHub，每次都整批覆蓋（不是累加）。
     每天爬蟲跑完會自動呼叫一次；之後若有人工覆核修改，也會呼叫這個函式重新整批覆蓋，
     確保存的版本永遠反映最新的人工修正結果。沒設定 GitHub Secrets 就直接跳過。"""
     if not _github_config() or frame is None or frame.empty:
@@ -1736,7 +1736,7 @@ def render_manual_review_table(
     """通用的『可篩選＋人工覆核可編輯』新聞明細表，負面新聞與待人工覆核新聞共用同一套邏輯。
     source_df 必須已經套用過 apply_manual_overrides（含「已人工覆核」欄位）。
     auto_backup_date：若有帶入日期，儲存人工覆核結果時會一併把當天完整風險新聞快照回存 GitHub
-    （覆蓋掉當天原本存的版本），只有「風險新聞明細」會傳入這個參數。"""
+    （覆蓋掉當天原本存的版本），只有「負面新聞明細」會傳入這個參數。"""
     filter_cols = st.columns([2, 1, 1])
     search = filter_cols[0].text_input(search_placeholder, key=f"{section_key}_search")
 
@@ -1817,7 +1817,7 @@ def render_manual_review_table(
             success, save_message = save_manual_overrides(changed_rows, reviewer=reviewer_name)
             if success:
                 if auto_backup_date is not None:
-                    # 把這次修改併回完整風險新聞明細，整批覆蓋回存到 GitHub 當天的快照
+                    # 把這次修改併回完整負面新聞明細，整批覆蓋回存到 GitHub 當天的快照
                     updated_snapshot = source_df.copy()
                     updated_snapshot["URL"] = updated_snapshot["URL"].fillna("").astype(str).str.strip()
                     for _, changed_row in changed_rows.iterrows():
@@ -2071,7 +2071,7 @@ if True:
             history_note = ""
             if _github_config():
                 history_note = "；歷史統計已同步至 GitHub" if job.get("history_pushed") else "；歷史統計同步 GitHub 失敗（請檢查 Secrets 設定）"
-                history_note += "；風險新聞明細已同步至 GitHub" if job.get("risk_news_snapshot_pushed") else "；風險新聞明細同步 GitHub 失敗"
+                history_note += "；負面新聞明細已同步至 GitHub" if job.get("risk_news_snapshot_pushed") else "；負面新聞明細同步 GitHub 失敗"
             status_messages = {
                 "running": "⏳ 程式執行中，可於本頁查看最新進度。",
                 "stopping": "🚫 已停止執行。",
@@ -2316,7 +2316,7 @@ if saved_crawl and saved_crawl["event_path"] and saved_crawl["event_path"].is_fi
                     fig_trend.update_layout(xaxis_title=None, yaxis_title="負面新聞則數", height=310, margin=dict(t=20, b=20, l=20, r=20))
                     st.plotly_chart(fig_trend, use_container_width=True)
 
-                st.markdown("#### 風險新聞明細")
+                st.markdown("#### 負面新聞明細")
                 render_manual_review_table(
                     negative_df,
                     section_key="negative",
