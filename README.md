@@ -86,7 +86,7 @@ Streamlit Community Cloud 的儲存空間**非永久保留**：重開、休眠�
 
 ```toml
 GITHUB_TOKEN = "ghp_xxxxxxxxxxxxxxxxxxxx"
-GITHUB_REPO = "chengyu1212/negative-news"
+GITHUB_REPO = "RMSecfb/negative-news"
 ```
 
 - `GITHUB_TOKEN`：GitHub Personal Access Token（Fine-grained token），權限只需要對這個 repo 開 **Contents → Read and write**
