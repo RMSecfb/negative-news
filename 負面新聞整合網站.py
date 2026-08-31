@@ -161,7 +161,13 @@ def latest_crawl_result(today_only: bool = False) -> dict | None:
     with sqlite3.connect(DB_PATH) as connection:
         rows = connection.execute(
             """SELECT started_at,finished_at,start_time,end_time,universe,rows,output_path,message
-               FROM runs WHERE status='success' AND (universe LIKE '方法一｜%' OR universe LIKE '方法二｜%' OR universe LIKE '方法一＋方法二｜%')
+               FROM runs
+               WHERE status IN ('success', 'partial')
+                 AND (
+                     universe LIKE '方法一｜%'
+                     OR universe LIKE '方法二｜%'
+                     OR universe LIKE '方法一＋方法二｜%'
+                 )
                ORDER BY id DESC"""
         ).fetchall()
     today = datetime.now(TAIPEI).date()
@@ -555,27 +561,55 @@ def run_crawl_job(job: dict, method_name: str, universe: str, companies: pd.Data
                 end_dt.date(),
             )
         
-            history_pushed = append_negative_history_to_github(
-                event_frame,
-                end_dt,
-            )
+            if risk_news_snapshot_pushed:
+                history_pushed = append_negative_history_to_github(
+                    event_frame,
+                    end_dt,
+                )
         
             news_daily_snapshot_pushed = save_news_snapshot_to_github(
                 frame,
                 end_dt.date(),
             )
         
-        finish_run(run_id, "success", len(frame), str(path), "；".join(all_errors))
-        job.update(status="success", progress=1.0, progress_text="抓取與分類全部完成",
-                   history_pushed=history_pushed,
-                   risk_news_snapshot_pushed=risk_news_snapshot_pushed,
-                   news_daily_snapshot_pushed=news_daily_snapshot_pushed,
-                   rows=len(frame), event_rows=len(event_frame), unknown_rows=len(unknown_frame),
-                   irrelevant_rows=len(irrelevant_frame), translation_failures=translation_failures,
-                   negative_translation_failures=negative_translation_failures,
-                   unknown_translation_failures=unknown_translation_failures,
-                   irrelevant_translation_failures=irrelevant_translation_failures,
-                   path=str(path))
+        is_partial_run = (
+            method_name == "方法一＋方法二"
+            and not formal_success
+        )
+        
+        run_status = "partial" if is_partial_run else "success"
+        
+        progress_text = (
+            "部分完成；未更新正式歷史資料"
+            if is_partial_run
+            else "抓取與分類全部完成"
+        )
+        
+        finish_run(
+            run_id,
+            run_status,
+            len(frame),
+            str(path),
+            "；".join(all_errors),
+        )
+        
+        job.update(
+            status=run_status,
+            progress=1.0,
+            progress_text=progress_text,
+            history_pushed=history_pushed,
+            risk_news_snapshot_pushed=risk_news_snapshot_pushed,
+            news_daily_snapshot_pushed=news_daily_snapshot_pushed,
+            rows=len(frame),
+            event_rows=len(event_frame),
+            unknown_rows=len(unknown_frame),
+            irrelevant_rows=len(irrelevant_frame),
+            translation_failures=translation_failures,
+            negative_translation_failures=negative_translation_failures,
+            unknown_translation_failures=unknown_translation_failures,
+            irrelevant_translation_failures=irrelevant_translation_failures,
+            path=str(path),
+        )
     except CrawlCancelled:
         if active_method_key and job.get(active_method_key, {}).get("status") == "running":
             job[active_method_key].update(status="stopped", stage="使用者停止")
@@ -1919,6 +1953,63 @@ def _github_fetch_excel_snapshot(
 
     return frame, sha
 
+
+def _github_fetch_file_bytes(
+    path: str,
+) -> bytes | None:
+    """
+    從 GitHub 讀取指定檔案的原始 bytes。
+
+    - 404：回傳 None，代表檔案不存在
+    - 網路/API 異常：拋出例外
+    - 內容解析失敗：拋出例外
+    """
+    config = _github_config()
+
+    if not config:
+        raise RuntimeError(
+            "GitHub 設定不存在，無法讀取檔案。"
+        )
+
+    url = (
+        f"https://api.github.com/repos/"
+        f"{config['repo']}/contents/{path}"
+    )
+
+    try:
+        response = requests.get(
+            url,
+            headers=_github_headers(config["token"]),
+            params={"ref": config["branch"]},
+            timeout=20,
+        )
+    except requests.RequestException as exc:
+        raise RuntimeError(
+            f"讀取 GitHub 檔案失敗：{path}；{exc}"
+        ) from exc
+
+    if response.status_code == 404:
+        return None
+
+    if response.status_code != 200:
+        raise RuntimeError(
+            f"讀取 GitHub 檔案失敗：{path}；"
+            f"HTTP {response.status_code}"
+        )
+
+    payload = response.json()
+
+    try:
+        return base64.b64decode(
+            payload["content"]
+        )
+
+    except Exception as exc:
+        raise RuntimeError(
+            f"GitHub 檔案內容解析失敗：{path}"
+        ) from exc
+
+
 def merge_daily_news_snapshot(
     existing: pd.DataFrame,
     incoming: pd.DataFrame,
@@ -2789,7 +2880,7 @@ if True:
                 })
             button_labels = {
                 "running": "停止執行", "stopping": "停止中…", "success": "已完成",
-                "stopped": "已停止", "failed": "執行失敗",
+                "partial": "部分完成", "stopped": "已停止", "failed": "執行失敗",
             }
             stop_clicked = st.button(
                 button_labels.get(status, "目前不可用"),
@@ -2813,12 +2904,20 @@ if True:
                     f"翻譯失敗 {job.get('translation_failures', 0)} 則。"
                     f"總耗時 {elapsed_text}{history_note}"
                 ),
+                "partial": (
+                    f"{job.get('summary', '部分完成')}；負面新聞 {job.get('event_rows', 0)} 則；"
+                    f"待人工覆核 {job.get('unknown_rows', 0)} 則；無關新聞 {job.get('irrelevant_rows', 0)} 則。"
+                    f"翻譯失敗 {job.get('translation_failures', 0)} 則。"
+                    f"總耗時 {elapsed_text}；本次未更新正式 GitHub 歷史資料。"
+                ),
                 "stopped": f"🚫 已停止執行。總耗時 {elapsed_text}；未完成的結果不會覆蓋前次紀錄。",
                 "failed": f"抓取失敗：{job.get('error', '未知錯誤')}（耗時 {elapsed_text}）",
-            }
+            }           
             status_message = status_messages.get(status, "正在更新執行狀態…")
             if status == "success":
                 st.success(f"✅ 執行完成｜{status_message}")
+            elif status == "partial":
+                st.warning(f"⚠️ 部分完成｜{status_message}")
             elif status == "failed":
                 st.error(status_message)
             elif status in ("stopping", "stopped"):
@@ -3048,6 +3147,103 @@ if saved_crawl and saved_crawl["event_path"] and saved_crawl["event_path"].is_fi
                     fig_trend.update_layout(xaxis_title=None, yaxis_title="負面新聞則數", height=310, margin=dict(t=20, b=20, l=20, r=20))
                     st.plotly_chart(fig_trend, use_container_width=True)
 
+                st.markdown("#### 歷史資料下載")
+                
+                download_date = st.date_input(
+                    "選擇資料日期",
+                    value=available_days[-1] if available_days else snapshot_date,
+                    key="history_download_date",
+                )
+                
+                if _github_config():
+                    news_daily_path = _github_news_path(download_date)
+                    risk_daily_path = _github_risk_news_path(download_date)
+                
+                    col1, col2, col3 = st.columns(3)
+                
+                    with col1:
+                        try:
+                            news_bytes = _github_fetch_file_bytes(news_daily_path)
+                
+                            if news_bytes:
+                                st.download_button(
+                                    "下載完整新聞母體",
+                                    data=news_bytes,
+                                    file_name=f"news_daily_{download_date}.xlsx",
+                                    mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+                                    key=f"download_news_daily_{download_date}",
+                                    use_container_width=True,
+                                )
+                            else:
+                                st.button(
+                                    "當日無完整新聞母體",
+                                    disabled=True,
+                                    use_container_width=True,
+                                    key=f"no_news_daily_{download_date}",
+                                )
+                
+                        except Exception as exc:
+                            st.error(f"完整新聞母體讀取失敗：{exc}")
+                
+                    with col2:
+                        try:
+                            risk_bytes = _github_fetch_file_bytes(risk_daily_path)
+                
+                            if risk_bytes:
+                                st.download_button(
+                                    "下載風險新聞明細",
+                                    data=risk_bytes,
+                                    file_name=f"risk_news_daily_{download_date}.xlsx",
+                                    mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+                                    key=f"download_risk_daily_{download_date}",
+                                    use_container_width=True,
+                                )
+                            else:
+                                st.button(
+                                    "當日無風險新聞",
+                                    disabled=True,
+                                    use_container_width=True,
+                                    key=f"no_risk_daily_{download_date}",
+                                )
+                
+                        except Exception as exc:
+                            st.error(f"風險新聞明細讀取失敗：{exc}")
+                
+                    with col3:
+                        try:
+                            history_download = history_df.copy()
+                
+                            if not history_download.empty:
+                                history_bytes = _dataframe_to_excel_bytes(
+                                    history_download,
+                                    sheet_name="歷史統計",
+                                )
+                
+                                st.download_button(
+                                    "下載歷史統計",
+                                    data=history_bytes,
+                                    file_name="negative_news_history.xlsx",
+                                    mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+                                    key="download_negative_history",
+                                    use_container_width=True,
+                                )
+                            else:
+                                st.button(
+                                    "目前無歷史統計",
+                                    disabled=True,
+                                    use_container_width=True,
+                                    key="no_negative_history",
+                                )
+                
+                        except Exception as exc:
+                            st.error(f"歷史統計產生失敗：{exc}")
+                
+                else:
+                    st.caption(
+                        "目前未設定 GitHub 歷史資料來源，因此無法下載長期保存的每日資料。"
+                    )
+                
+                
                 st.markdown("#### 風險新聞明細")
                 render_manual_review_table(
                     negative_df,
@@ -3091,7 +3287,7 @@ if saved_crawl:
         current_job = crawl_job_registry().get("current")
         is_current_result = bool(
             current_job
-            and current_job.get("status") == "success"
+            and current_job.get("status") in ("success", "partial")
             and current_job.get("path")
             and Path(current_job["path"]) == saved_crawl["path"]
         )
