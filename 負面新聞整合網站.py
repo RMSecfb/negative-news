@@ -313,46 +313,221 @@ def run_crawl_job(job: dict, method_name: str, universe: str, companies: pd.Data
             write_excel(finbert_path, {"FinBERT_News": negative_frame})
             job["summary"] = f"方法二已完成：{batch_count} 批、爬得 {len(frame)} 則；FinBERT ≤ 0 共 {len(negative_frame)} 則"
         else:
+            # ============================================================
+            # 正式模式：方法一＋方法二
+            # 單一方法整體失敗時，另一方法仍繼續執行。
+            # 只有兩個方法都正常完成，才允許更新正式 GitHub 歷史資料。
+            # ============================================================
+            method1_completed = False
+            method2_completed = False
+
+            method1_errors = []
+            method2_errors = []
+
+            source_counts = {}
+            batch_count = 0
+
+            method1_frame = pd.DataFrame(columns=NEWS_COLUMNS)
+            method2_frame = pd.DataFrame(columns=NEWS_COLUMNS)
+
+            # -------------------------
+            # 方法一
+            # -------------------------
             begin_job_stage(job, "方法一｜多來源新聞擷取")
+
             active_method_key = "method1_monitor"
-            job[active_method_key].update(status="running", stage="建立多來源新聞池")
-            progress.progress(0, text="完整整合 1/4｜執行方法一")
-            method1_frame, method1_errors, source_counts = fetch_method1_news(companies, start_dt, end_dt, progress)
+
             job[active_method_key].update(
-                status="success", stage="完成", rows=len(method1_frame), errors=list(method1_errors),
-                source_counts=dict(source_counts),
+                status="running",
+                stage="建立多來源新聞池",
             )
-            active_method_key = "method2_monitor"
+
+            progress.progress(
+                0,
+                text="完整整合 1/4｜執行方法一",
+            )
+
+            try:
+                method1_frame, method1_errors, source_counts = fetch_method1_news(
+                    companies,
+                    start_dt,
+                    end_dt,
+                    progress,
+                )
+
+                method1_completed = True
+
+                job[active_method_key].update(
+                    status="success",
+                    stage="完成",
+                    rows=len(method1_frame),
+                    errors=list(method1_errors),
+                    source_counts=dict(source_counts),
+                )
+
+            except CrawlCancelled:
+                raise
+
+            except Exception as exc:
+                method1_errors = [f"方法一整體失敗：{exc}"]
+
+                job[active_method_key].update(
+                    status="failed",
+                    stage="方法一整體失敗",
+                    rows=0,
+                    errors=list(method1_errors),
+                )
+
+            # -------------------------
+            # 方法二
+            # -------------------------
             begin_job_stage(job, "方法二｜Google News 擷取")
-            job[active_method_key].update(status="running", stage="分批抓取 Google News")
-            progress.progress(0, text="完整整合 2/4｜執行方法二 Google News")
-            method2_frame, method2_errors, batch_count = fetch_method2_raw(companies, start_dt, end_dt, progress)
+
+            active_method_key = "method2_monitor"
+
             job[active_method_key].update(
-                stage="FinBERT 評分中", raw_rows=len(method2_frame), batches=batch_count,
-                errors=list(method2_errors),
+                status="running",
+                stage="分批抓取 Google News",
             )
+
+            progress.progress(
+                0,
+                text="完整整合 2/4｜執行方法二 Google News",
+            )
+
+            try:
+                method2_frame, method2_errors, batch_count = fetch_method2_raw(
+                    companies,
+                    start_dt,
+                    end_dt,
+                    progress,
+                )
+
+                method2_completed = True
+
+                job[active_method_key].update(
+                    status="success",
+                    stage="完成",
+                    rows=len(method2_frame),
+                    batches=batch_count,
+                    errors=list(method2_errors),
+                )
+
+            except CrawlCancelled:
+                raise
+
+            except Exception as exc:
+                method2_errors = [f"方法二整體失敗：{exc}"]
+
+                job[active_method_key].update(
+                    status="failed",
+                    stage="方法二整體失敗",
+                    rows=0,
+                    errors=list(method2_errors),
+                )
+
+            # 兩個方法都整體失敗，這次工作直接失敗
+            if not method1_completed and not method2_completed:
+                raise RuntimeError(
+                    "方法一與方法二皆執行失敗，無可用新聞資料。"
+                )
+
+            # 至少一個方法成功，仍產生部分結果供查看與下載
             begin_job_stage(job, "合併並刪除重複")
-            progress.progress(0.55, text="完整整合 3/4｜合併並去除重複新聞")
-            merged_frame, duplicate_log = merge_frames(method1_frame, method2_frame)
+
+            progress.progress(
+                0.55,
+                text="完整整合 3/4｜合併並去除重複新聞",
+            )
+
+            merged_frame, duplicate_log = merge_frames(
+                method1_frame,
+                method2_frame,
+            )
+
             begin_job_stage(job, "FinBERT 新聞評分")
-            progress.progress(0.58, text="完整整合 4/4｜對全部整合新聞執行 FinBERT")
-            frame, negative_frame = score_method2_finbert(merged_frame, progress)
-            job[active_method_key].update(
-                status="success", stage="完成", rows=len(method2_frame), merged_rows=len(frame),
-                negative_rows=len(negative_frame), batches=batch_count, errors=list(method2_errors),
+
+            progress.progress(
+                0.58,
+                text="完整整合 4/4｜對全部整合新聞執行 FinBERT",
             )
+
+            frame, negative_frame = score_method2_finbert(
+                merged_frame,
+                progress,
+            )
+
             all_errors = method1_errors + method2_errors
-            path = OUTPUT_DIR / f"MergeNews_{stamp}.xlsx"
-            finbert_path = OUTPUT_DIR / f"MergeNews_FinBERT_{stamp}.xlsx"
-            source_summary = pd.DataFrame(
-                [{"來源": source, "新聞則數": count} for source, count in source_counts.items()]
-                + [{"來源": "Google News（方法二）", "新聞則數": len(method2_frame)}]
+
+            # 只有兩個方法都完成，才算正式成功
+            formal_success = (
+                method1_completed
+                and method2_completed
             )
+
+            path = OUTPUT_DIR / f"MergeNews_{stamp}.xlsx"
+
+            finbert_path = (
+                OUTPUT_DIR / f"MergeNews_FinBERT_{stamp}.xlsx"
+            )
+
+            source_summary = pd.DataFrame(
+                [
+                    {
+                        "來源": source,
+                        "新聞則數": count,
+                    }
+                    for source, count in source_counts.items()
+                ]
+                + [
+                    {
+                        "來源": "Google News（方法二）",
+                        "新聞則數": len(method2_frame),
+                    }
+                ]
+            )
+
             begin_job_stage(job, "產生完整整合檔案")
-            progress.progress(0.94, text="正在產生完整整合檔案")
-            write_excel(path, {"總新聞": frame, "重複紀錄": duplicate_log, "來源摘要": source_summary})
-            write_excel(finbert_path, {"FinBERT小於等於0": negative_frame})
-            job["summary"] = f"排除重複後共 {len(frame)} 則；FinBERT ≤ 0  {len(negative_frame)} 則"
+
+            progress.progress(
+                0.94,
+                text="正在產生完整整合檔案",
+            )
+
+            write_excel(
+                path,
+                {
+                    "總新聞": frame,
+                    "重複紀錄": duplicate_log,
+                    "來源摘要": source_summary,
+                },
+            )
+
+            write_excel(
+                finbert_path,
+                {
+                    "FinBERT小於等於0": negative_frame,
+                },
+            )
+
+            if formal_success:
+                job["summary"] = (
+                    f"正式完整模式完成：排除重複後共 {len(frame)} 則；"
+                    f"FinBERT ≤ 0 共 {len(negative_frame)} 則"
+                )
+
+            else:
+                failed_method = (
+                    "方法一"
+                    if not method1_completed
+                    else "方法二"
+                )
+
+                job["summary"] = (
+                    f"部分完成：{failed_method}整體失敗；"
+                    f"目前取得 {len(frame)} 則新聞。"
+                    "本次結果僅供查看／下載，不覆蓋正式歷史資料。"
+                )
         begin_job_stage(job, "負面事件分類與中文翻譯")
         progress.progress(0.97, text="正在執行負面事件分類")
         rule_modified_ns = RULE_PATH.stat().st_mtime_ns
@@ -370,14 +545,31 @@ def run_crawl_job(job: dict, method_name: str, universe: str, companies: pd.Data
             "待人工覆核": unknown_frame,
             "無關新聞": irrelevant_frame,
         })
-        history_pushed = append_negative_history_to_github(event_frame, end_dt)
-        risk_news_snapshot_pushed = save_risk_news_snapshot_to_github(
-            event_frame.assign(已人工覆核=False) if not event_frame.empty else event_frame, end_dt.date()
-        )
+        history_pushed = False
+        risk_news_snapshot_pushed = False
+        news_daily_snapshot_pushed = False
+        
+        if method_name == "方法一＋方法二" and formal_success:
+            risk_news_snapshot_pushed = save_risk_news_snapshot_to_github(
+                event_frame.assign(已人工覆核=False) if not event_frame.empty else event_frame,
+                end_dt.date(),
+            )
+        
+            history_pushed = append_negative_history_to_github(
+                event_frame,
+                end_dt,
+            )
+        
+            news_daily_snapshot_pushed = save_news_snapshot_to_github(
+                frame,
+                end_dt.date(),
+            )
+        
         finish_run(run_id, "success", len(frame), str(path), "；".join(all_errors))
         job.update(status="success", progress=1.0, progress_text="抓取與分類全部完成",
                    history_pushed=history_pushed,
                    risk_news_snapshot_pushed=risk_news_snapshot_pushed,
+                   news_daily_snapshot_pushed=news_daily_snapshot_pushed,
                    rows=len(frame), event_rows=len(event_frame), unknown_rows=len(unknown_frame),
                    irrelevant_rows=len(irrelevant_frame), translation_failures=translation_failures,
                    negative_translation_failures=negative_translation_failures,
@@ -1392,27 +1584,103 @@ def _github_headers(token: str) -> dict:
 
 
 def _github_fetch_history() -> tuple[pd.DataFrame, str | None]:
-    """讀回 GitHub repo 裡的歷史統計 CSV；檔案不存在時回傳空表＋sha=None（代表之後要新建檔案）。"""
-    empty = pd.DataFrame(columns=["日期", "Ticker", "Company", "則數", "最高Level"])
+    """
+    讀取 GitHub repo 裡的歷史統計 CSV。
+
+    - 404：代表 history 尚未建立，回傳空表、sha=None
+    - GitHub/API/網路錯誤：直接拋出例外，禁止後續覆寫
+    - CSV 內容解析失敗：直接拋出例外，禁止後續覆寫
+
+    目的：避免把「讀取失敗」誤認成「沒有歷史資料」，
+    進而用不完整資料覆蓋既有 history。
+    """
+    empty = pd.DataFrame(
+        columns=["日期", "Ticker", "Company", "則數", "最高Level"]
+    )
+
     config = _github_config()
+
     if not config:
-        return empty, None
-    url = f"https://api.github.com/repos/{config['repo']}/contents/{config['path']}"
+        raise RuntimeError(
+            "GitHub 設定不存在，無法讀取歷史統計。"
+        )
+
+    url = (
+        f"https://api.github.com/repos/"
+        f"{config['repo']}/contents/{config['path']}"
+    )
+
     try:
-        response = requests.get(url, headers=_github_headers(config["token"]), params={"ref": config["branch"]}, timeout=20)
-    except requests.RequestException:
+        response = requests.get(
+            url,
+            headers=_github_headers(config["token"]),
+            params={"ref": config["branch"]},
+            timeout=20,
+        )
+    except requests.RequestException as exc:
+        raise RuntimeError(
+            f"讀取 GitHub 歷史統計失敗：{config['path']}；{exc}"
+        ) from exc
+
+    # 只有真正 404 才代表 history 尚未建立
+    if response.status_code == 404:
         return empty, None
+
     if response.status_code != 200:
-        return empty, None
+        raise RuntimeError(
+            f"讀取 GitHub 歷史統計失敗：{config['path']}；"
+            f"HTTP {response.status_code}"
+        )
+
     payload = response.json()
     sha = payload.get("sha")
+
+    if not sha:
+        raise RuntimeError(
+            f"GitHub 歷史統計缺少 sha：{config['path']}"
+        )
+
     try:
-        content = base64.b64decode(payload["content"]).decode("utf-8-sig")
-        frame = pd.read_csv(io.StringIO(content))
-        frame["日期"] = pd.to_datetime(frame["日期"])
-        return frame, sha
-    except Exception:
-        return empty, sha
+        content = (
+            base64.b64decode(payload["content"])
+            .decode("utf-8-sig")
+        )
+
+        frame = pd.read_csv(
+            io.StringIO(content)
+        )
+
+        required_columns = {
+            "日期",
+            "Ticker",
+            "Company",
+            "則數",
+            "最高Level",
+        }
+
+        missing_columns = (
+            required_columns - set(frame.columns)
+        )
+
+        if missing_columns:
+            raise ValueError(
+                "history 缺少必要欄位："
+                + "、".join(sorted(missing_columns))
+            )
+
+        frame["日期"] = pd.to_datetime(
+            frame["日期"],
+            errors="raise",
+        )
+
+    except Exception as exc:
+        raise RuntimeError(
+            f"GitHub 歷史統計讀取或解析失敗："
+            f"{config['path']}；"
+            "為避免破壞既有 history，本次停止覆寫。"
+        ) from exc
+
+    return frame, sha
 
 
 def _github_push_history(frame: pd.DataFrame, sha: str | None) -> bool:
@@ -1436,28 +1704,118 @@ def _github_push_history(frame: pd.DataFrame, sha: str | None) -> bool:
     return response.status_code in (200, 201)
 
 
-def append_negative_history_to_github(event_frame: pd.DataFrame, event_date: datetime) -> bool:
-    """把今天的負面新聞彙整成「日期 x 公司 x 則數」寫回 GitHub repo。
-    沒設定 GITHUB_TOKEN/GITHUB_REPO 就直接跳過（不影響抓取流程本身）。"""
-    if not _github_config() or event_frame is None or event_frame.empty:
+def append_negative_history_to_github(
+    event_frame: pd.DataFrame,
+    event_date: datetime,
+) -> bool:
+    """
+    更新 GitHub 歷史統計。
+
+    history 不直接使用單次爬蟲結果累加，
+    而是以當天 risk_news_daily 的累積最終結果重新彙總，
+    避免同一天重跑造成遺失或重複計數。
+    """
+    if not _github_config():
         return False
-    daily = event_frame.copy()
-    daily["Level"] = pd.to_numeric(daily.get("Level"), errors="coerce").fillna(0).astype(int)
-    daily["Ticker"] = daily.get("Ticker", "").fillna("").astype(str).str.strip()
-    daily["Company"] = daily.get("Company", "").fillna("").astype(str).str.strip()
-    daily = daily[daily["Ticker"] != ""]
+
+    snapshot_date = event_date.date()
+
+    # 先讀取當天已累積的風險新聞快照
+    risk_path = _github_risk_news_path(snapshot_date)
+
+    risk_frame, _ = _github_fetch_excel_snapshot(
+        risk_path,
+        sheet_name="風險新聞",
+    )
+
+    # 如果當天 risk_news_daily 尚不存在，
+    # 才退回使用本次 event_frame。
+    if risk_frame is None or risk_frame.empty:
+        if event_frame is None or event_frame.empty:
+            return False
+
+        daily = event_frame.copy()
+    else:
+        daily = risk_frame.copy()
+
     if daily.empty:
         return False
-    grouped = daily.groupby(["Ticker", "Company"]).agg(則數=("Ticker", "size"), 最高Level=("Level", "max")).reset_index()
-    grouped["日期"] = pd.to_datetime(event_date.date())
 
+    if "Level" not in daily.columns:
+        daily["Level"] = 0
+
+    if "Ticker" not in daily.columns:
+        daily["Ticker"] = ""
+
+    if "Company" not in daily.columns:
+        daily["Company"] = ""
+
+    daily["Level"] = (
+        pd.to_numeric(
+            daily["Level"],
+            errors="coerce",
+        )
+        .fillna(0)
+        .astype(int)
+    )
+
+    daily["Ticker"] = (
+        daily["Ticker"]
+        .fillna("")
+        .astype(str)
+        .str.strip()
+    )
+
+    daily["Company"] = (
+        daily["Company"]
+        .fillna("")
+        .astype(str)
+        .str.strip()
+    )
+
+    daily = daily[daily["Ticker"] != ""]
+
+    if daily.empty:
+        return False
+
+    # 依當天最終累積風險新聞重新彙總
+    grouped = (
+        daily.groupby(
+            ["Ticker", "Company"]
+        )
+        .agg(
+            則數=("Ticker", "size"),
+            最高Level=("Level", "max"),
+        )
+        .reset_index()
+    )
+
+    grouped["日期"] = pd.to_datetime(snapshot_date)
+
+    # 讀取既有 history
     history, sha = _github_fetch_history()
+
     if not history.empty:
-        history = history[history["日期"].dt.date != event_date.date()]  # 同一天重跑就整批覆蓋，不會重複累加
-    merged = pd.concat([history, grouped], ignore_index=True)
-    pushed = _github_push_history(merged, sha)
+        history = history[
+            history["日期"].dt.date != snapshot_date
+        ]
+
+    merged = pd.concat(
+        [
+            history,
+            grouped,
+        ],
+        ignore_index=True,
+    )
+
+    pushed = _github_push_history(
+        merged,
+        sha,
+    )
+
     if pushed:
         load_negative_history.clear()
+
     return pushed
 
 
@@ -1494,6 +1852,233 @@ def _github_get_file_sha(path: str) -> str | None:
         return None
     return response.json().get("sha")
 
+def _github_fetch_excel_snapshot(
+    path: str,
+    sheet_name: str,
+) -> tuple[pd.DataFrame, str | None]:
+    """
+    讀取 GitHub 上既有的每日 Excel 快照。
+
+    - 404：代表檔案真的不存在，回傳空 DataFrame、sha=None
+    - GitHub/API/網路錯誤：直接拋出例外，禁止後續覆寫
+    - Excel 內容解析失敗：直接拋出例外，禁止後續覆寫
+
+    目的：避免把「讀取失敗」誤認成「原本沒有資料」，
+    進而誤覆蓋既有的每日正式資料。
+    """
+    config = _github_config()
+
+    if not config:
+        raise RuntimeError("GitHub 設定不存在，無法讀取每日快照。")
+
+    url = f"https://api.github.com/repos/{config['repo']}/contents/{path}"
+
+    try:
+        response = requests.get(
+            url,
+            headers=_github_headers(config["token"]),
+            params={"ref": config["branch"]},
+            timeout=20,
+        )
+    except requests.RequestException as exc:
+        raise RuntimeError(
+            f"讀取 GitHub 每日快照失敗：{path}；{exc}"
+        ) from exc
+
+    # 只有真正 404 才代表「今天尚未建立檔案」
+    if response.status_code == 404:
+        return pd.DataFrame(), None
+
+    if response.status_code != 200:
+        raise RuntimeError(
+            f"讀取 GitHub 每日快照失敗：{path}；"
+            f"HTTP {response.status_code}"
+        )
+
+    payload = response.json()
+    sha = payload.get("sha")
+
+    if not sha:
+        raise RuntimeError(
+            f"GitHub 每日快照缺少 sha：{path}"
+        )
+
+    try:
+        file_bytes = base64.b64decode(payload["content"])
+
+        frame = pd.read_excel(
+            io.BytesIO(file_bytes),
+            sheet_name=sheet_name,
+        )
+
+    except Exception as exc:
+        raise RuntimeError(
+            f"GitHub 每日快照讀取或解析失敗：{path}；"
+            "為避免破壞既有資料，本次停止覆寫。"
+        ) from exc
+
+    return frame, sha
+
+def merge_daily_news_snapshot(
+    existing: pd.DataFrame,
+    incoming: pd.DataFrame,
+) -> pd.DataFrame:
+    """
+    同一資料日的完整新聞母體採增量合併：
+
+    - 舊資料不因本次沒抓到就刪除
+    - 新新聞加入
+    - 同一新聞再次抓到時，以本次結果為準
+    """
+    if existing is None or existing.empty:
+        return normalize_news(incoming)
+
+    if incoming is None or incoming.empty:
+        return normalize_news(existing)
+
+    old_frame = normalize_news(existing)
+    new_frame = normalize_news(incoming)
+
+    combined = pd.concat(
+        [
+            old_frame.assign(_priority=0),
+            new_frame.assign(_priority=1),
+        ],
+        ignore_index=True,
+    )
+
+    # 先建立每則新聞的識別鍵。
+    # 優先使用正規化後 URL；若 URL 無法使用，再退回 Ticker + Title。
+    combined["_news_key"] = combined.apply(
+        lambda row: (
+            f"url|{str(row.get('Ticker', '')).strip().upper()}|"
+            f"{normalize_url(row.get('URL', ''))}"
+            if normalize_url(row.get("URL", ""))
+            else
+            f"title|{str(row.get('Ticker', '')).strip().upper()}|"
+            f"{exact_title(row.get('Title', ''))}"
+        ),
+        axis=1,
+    )
+
+    # 新資料 priority=1，放最後，因此同一新聞保留本次最新結果。
+    combined = (
+        combined
+        .sort_values("_priority")
+        .drop_duplicates("_news_key", keep="last")
+        .drop(columns=["_priority", "_news_key"])
+        .reset_index(drop=True)
+    )
+
+    return combined.reindex(columns=NEWS_COLUMNS)
+
+
+def merge_daily_risk_snapshot(
+    existing: pd.DataFrame,
+    incoming: pd.DataFrame,
+) -> pd.DataFrame:
+    """
+    同一資料日的風險新聞採增量合併：
+
+    - 舊風險新聞保留
+    - 新風險新聞加入
+    - 同一新聞再次出現時，原則上以本次資料更新
+    - 若舊資料已人工覆核，則保留人工覆核的事件、Level、Action
+    """
+    if existing is None or existing.empty:
+        return incoming.copy().reset_index(drop=True)
+
+    if incoming is None or incoming.empty:
+        return existing.copy().reset_index(drop=True)
+
+    old_frame = existing.copy()
+    new_frame = incoming.copy()
+
+    # 新舊欄位取聯集
+    all_columns = list(
+        dict.fromkeys(
+            list(old_frame.columns) + list(new_frame.columns)
+        )
+    )
+
+    for column in all_columns:
+        if column not in old_frame.columns:
+            old_frame[column] = ""
+        if column not in new_frame.columns:
+            new_frame[column] = ""
+
+    def make_key(row) -> str:
+        normalized = normalize_url(row.get("URL", ""))
+
+        if normalized:
+            return (
+                f"url|{str(row.get('Ticker', '')).strip().upper()}|"
+                f"{normalized}"
+            )
+
+        return (
+            f"title|{str(row.get('Ticker', '')).strip().upper()}|"
+            f"{exact_title(row.get('Title', ''))}"
+        )
+
+    old_frame["_risk_key"] = old_frame.apply(make_key, axis=1)
+    new_frame["_risk_key"] = new_frame.apply(make_key, axis=1)
+
+    # 找出已人工覆核的舊資料
+    if "已人工覆核" in old_frame.columns:
+        reviewed_map = (
+            old_frame
+            .drop_duplicates("_risk_key", keep="last")
+            .set_index("_risk_key")
+        )
+
+        manual_columns = [
+            "事件中文",
+            "Level",
+            "Action",
+            "已人工覆核",
+        ]
+
+        for index, new_row in new_frame.iterrows():
+            risk_key = new_row["_risk_key"]
+
+            if risk_key not in reviewed_map.index:
+                continue
+
+            old_row = reviewed_map.loc[risk_key]
+
+            reviewed_value = old_row.get("已人工覆核", False)
+
+            is_reviewed = (
+                reviewed_value is True
+                or str(reviewed_value).strip().lower()
+                in {"true", "1", "yes"}
+            )
+
+            # 已人工覆核的結果優先，不讓自動重跑洗掉
+            if is_reviewed:
+                for column in manual_columns:
+                    if column in old_row.index:
+                        new_frame.at[index, column] = old_row[column]
+
+    combined = pd.concat(
+        [
+            old_frame.assign(_priority=0),
+            new_frame.assign(_priority=1),
+        ],
+        ignore_index=True,
+    )
+
+    combined = (
+        combined
+        .sort_values("_priority")
+        .drop_duplicates("_risk_key", keep="last")
+        .drop(columns=["_priority", "_risk_key"])
+        .reset_index(drop=True)
+    )
+
+    return combined
+
 
 def _dataframe_to_excel_bytes(frame: pd.DataFrame, sheet_name: str = "風險新聞") -> bytes:
     with tempfile.TemporaryDirectory() as tmp_dir:
@@ -1523,22 +2108,57 @@ def _github_push_risk_news_snapshot(file_bytes: bytes, snapshot_date: date, sha:
     return response.status_code in (200, 201)
 
 
-def save_risk_news_snapshot_to_github(frame: pd.DataFrame, snapshot_date: date) -> bool:
-    """把某一天的風險新聞明細整份存成 Excel 檔回存 GitHub，每次都整批覆蓋（不是累加）。
-    每天爬蟲跑完會自動呼叫一次；之後若有人工覆核修改，也會呼叫這個函式重新整批覆蓋，
-    確保存的版本永遠反映最新的人工修正結果（新的蓋掉舊的）。沒設定 GitHub Secrets 就直接跳過。"""
-    if not _github_config() or frame is None or frame.empty:
+def save_risk_news_snapshot_to_github(
+    frame: pd.DataFrame,
+    snapshot_date: date,
+) -> bool:
+    """
+    儲存某一天的風險新聞明細。
+
+    同一天重新執行採增量合併：
+    - 舊新聞保留
+    - 新新聞加入
+    - 重複新聞更新
+    - 已人工覆核結果優先保留
+    """
+    if not _github_config():
         return False
+
     path = _github_risk_news_path(snapshot_date)
-    sha = _github_get_file_sha(path)
-    file_bytes = _dataframe_to_excel_bytes(frame)
-    return _github_push_risk_news_snapshot(file_bytes, snapshot_date, sha)
+
+    existing_frame, sha = _github_fetch_excel_snapshot(
+        path,
+        sheet_name="風險新聞",
+    )
+
+    # 本次沒有新增風險新聞時，不刪除既有資料
+    if frame is None or frame.empty:
+        return bool(sha)
+
+    merged_frame = merge_daily_risk_snapshot(
+        existing_frame,
+        frame,
+    )
+
+    if merged_frame.empty:
+        return bool(sha)
+
+    file_bytes = _dataframe_to_excel_bytes(
+        merged_frame,
+        sheet_name="風險新聞",
+    )
+
+    return _github_push_risk_news_snapshot(
+        file_bytes,
+        snapshot_date,
+        sha,
+    )
 
 
 # ============================================================
 # 區塊：每天完整新聞母體自動回存 GitHub
 # 儲存的是方法一＋方法二完整整合、去重並完成 FinBERT 評分後的全部新聞。
-# 一天一個檔案，同一天重新執行時整批覆蓋。
+# 一天一個檔案；同一天重新執行採增量合併：舊新聞保留、新新聞加入、重複新聞更新。
 # 只有正式模式「方法一＋方法二」會呼叫這個功能。
 # ============================================================
 GITHUB_NEWS_DIR_DEFAULT = "news_daily"
@@ -1583,19 +2203,43 @@ def _github_push_news_snapshot(file_bytes: bytes, snapshot_date: date, sha: str 
     return response.status_code in (200, 201)
 
 
-def save_news_snapshot_to_github(frame: pd.DataFrame, snapshot_date: date) -> bool:
+def save_news_snapshot_to_github(
+    frame: pd.DataFrame,
+    snapshot_date: date,
+) -> bool:
     """
-    把某一天的完整新聞母體整份存成 Excel 回存 GitHub。
-    同一天重新執行時直接覆蓋舊檔，不累加。
+    把某一天的完整新聞母體存成 Excel 回存 GitHub。
+
+    同一天重新執行採增量合併：
+    - 舊新聞保留
+    - 新新聞加入
+    - 同一新聞重新抓到時，以本次結果更新
     """
-    if not _github_config() or frame is None or frame.empty:
+    if not _github_config():
         return False
 
     path = _github_news_path(snapshot_date)
-    sha = _github_get_file_sha(path)
+
+    existing_frame, sha = _github_fetch_excel_snapshot(
+        path,
+        sheet_name="完整新聞",
+    )
+
+    # 本次沒有任何資料：
+    # 若 GitHub 已經有當日檔案，就保留原檔，不做覆寫。
+    if frame is None or frame.empty:
+        return bool(sha)
+
+    merged_frame = merge_daily_news_snapshot(
+        existing_frame,
+        frame,
+    )
+
+    if merged_frame.empty:
+        return bool(sha)
 
     file_bytes = _dataframe_to_excel_bytes(
-        frame,
+        merged_frame,
         sheet_name="完整新聞",
     )
 
