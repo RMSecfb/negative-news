@@ -1535,6 +1535,77 @@ def save_risk_news_snapshot_to_github(frame: pd.DataFrame, snapshot_date: date) 
     return _github_push_risk_news_snapshot(file_bytes, snapshot_date, sha)
 
 
+# ============================================================
+# 區塊：每天完整新聞母體自動回存 GitHub
+# 儲存的是方法一＋方法二完整整合、去重並完成 FinBERT 評分後的全部新聞。
+# 一天一個檔案，同一天重新執行時整批覆蓋。
+# 只有正式模式「方法一＋方法二」會呼叫這個功能。
+# ============================================================
+GITHUB_NEWS_DIR_DEFAULT = "news_daily"
+
+
+def _github_news_path(snapshot_date: date) -> str:
+    try:
+        base_dir = st.secrets.get("GITHUB_NEWS_DIR", GITHUB_NEWS_DIR_DEFAULT)
+    except Exception:
+        base_dir = GITHUB_NEWS_DIR_DEFAULT
+    return f"{base_dir}/{snapshot_date.strftime('%Y-%m-%d')}.xlsx"
+
+
+def _github_push_news_snapshot(file_bytes: bytes, snapshot_date: date, sha: str | None) -> bool:
+    config = _github_config()
+    if not config:
+        return False
+
+    path = _github_news_path(snapshot_date)
+    content_b64 = base64.b64encode(file_bytes).decode("ascii")
+    url = f"https://api.github.com/repos/{config['repo']}/contents/{path}"
+
+    body = {
+        "message": f"更新 {snapshot_date.strftime('%Y-%m-%d')} 完整新聞母體（{datetime.now(TAIPEI).strftime('%Y-%m-%d %H:%M')}）",
+        "content": content_b64,
+        "branch": config["branch"],
+    }
+
+    if sha:
+        body["sha"] = sha
+
+    try:
+        response = requests.put(
+            url,
+            headers=_github_headers(config["token"]),
+            json=body,
+            timeout=20,
+        )
+    except requests.RequestException:
+        return False
+
+    return response.status_code in (200, 201)
+
+
+def save_news_snapshot_to_github(frame: pd.DataFrame, snapshot_date: date) -> bool:
+    """
+    把某一天的完整新聞母體整份存成 Excel 回存 GitHub。
+    同一天重新執行時直接覆蓋舊檔，不累加。
+    """
+    if not _github_config() or frame is None or frame.empty:
+        return False
+
+    path = _github_news_path(snapshot_date)
+    sha = _github_get_file_sha(path)
+
+    file_bytes = _dataframe_to_excel_bytes(
+        frame,
+        sheet_name="完整新聞",
+    )
+
+    return _github_push_news_snapshot(
+        file_bytes,
+        snapshot_date,
+        sha,
+    )
+
+
 def _load_negative_history_from_local(output_dir_str: str) -> pd.DataFrame:
     """備用方案：沒設定 GitHub 時，退回掃描本機 output 資料夾（容器重開就會不見）。"""
     output_dir = Path(output_dir_str)
