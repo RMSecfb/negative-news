@@ -20,9 +20,12 @@ from pathlib import Path
 from urllib.parse import urljoin
 
 import pandas as pd
+import numpy as np
 import requests
 import streamlit as st
+import plotly.express as px
 import streamlit.components.v1 as components
+from st_aggrid import AgGrid, ColumnsAutoSizeMode, DataReturnMode, GridOptionsBuilder, JsCode
 from streamlit.runtime.scriptrunner import RerunData, get_script_run_ctx
 from streamlit.runtime import Runtime
 from bs4 import BeautifulSoup
@@ -52,6 +55,31 @@ DOWJONES_PATH = CONFIG_DIR / "DowJones30.xlsx"
 SP500_PATH = CONFIG_DIR / "SP500.xlsx"
 CUSTOM_COMPANY_PATH = CONFIG_DIR / "Company_List_Custom.xlsx"
 EXPOSURE_PATH = CONFIG_DIR / "Exposure_Custom.xlsx"
+SEC13F_DIR = CONFIG_DIR / "13f"
+SEC13F_PATH = SEC13F_DIR / "13F_latest.xlsx"
+
+
+# ============================================================
+# 區塊：HTTP 連線輔助（V4 整合）
+# 一般連線若被失效的系統 Proxy 阻擋，自動改用直接連線重試；
+# 供本次新增的翻譯／股價／13F 功能使用，不影響既有抓取方法一/二的連線邏輯。
+# ============================================================
+def http_get(url: str, **kwargs) -> requests.Response:
+    try:
+        return requests.get(url, **kwargs)
+    except requests.exceptions.ProxyError:
+        direct_session = requests.Session()
+        direct_session.trust_env = False
+        return direct_session.get(url, **kwargs)
+
+
+def http_post(url: str, **kwargs) -> requests.Response:
+    try:
+        return requests.post(url, **kwargs)
+    except requests.exceptions.ProxyError:
+        direct_session = requests.Session()
+        direct_session.trust_env = False
+        return direct_session.post(url, **kwargs)
 
 
 # ============================================================
@@ -90,7 +118,7 @@ NEGATIVE_OUTPUT_COLUMNS = [
 # Dow Jones 30／S&P 500 名單直接讀取 GitHub repo 內的 Excel 檔，不再需要另外記錄版本。
 # ============================================================
 def initialize() -> None:
-    for folder in (DATA_ROOT, OUTPUT_DIR, UPLOAD_DIR, CONFIG_DIR):
+    for folder in (DATA_ROOT, OUTPUT_DIR, UPLOAD_DIR, CONFIG_DIR, SEC13F_DIR):
         folder.mkdir(parents=True, exist_ok=True)
     rule_is_incomplete = not RULE_PATH.exists()
     if RULE_PATH.exists():
@@ -123,6 +151,19 @@ def initialize() -> None:
             CREATE TABLE IF NOT EXISTS runs (
                 id INTEGER PRIMARY KEY, started_at TEXT, finished_at TEXT, status TEXT,
                 start_time TEXT, end_time TEXT, universe TEXT, rows INTEGER, output_path TEXT, message TEXT
+            );
+            CREATE TABLE IF NOT EXISTS translation_cache (
+                text_key TEXT NOT NULL, target_language TEXT NOT NULL,
+                source_text TEXT NOT NULL, translated_text TEXT NOT NULL, updated_at TEXT NOT NULL,
+                PRIMARY KEY (text_key, target_language)
+            );
+            CREATE TABLE IF NOT EXISTS finbert_cache (
+                title_key TEXT PRIMARY KEY, title TEXT NOT NULL, score REAL NOT NULL, updated_at TEXT NOT NULL
+            );
+            CREATE TABLE IF NOT EXISTS settings (key TEXT PRIMARY KEY, value TEXT);
+            CREATE TABLE IF NOT EXISTS manual_status (
+                company_key TEXT PRIMARY KEY, ticker TEXT, company TEXT, status TEXT,
+                owner TEXT, next_review TEXT, note TEXT, updated_at TEXT
             );
         """)
     if not RULE_PATH.exists():
@@ -219,6 +260,17 @@ class CrawlCancelled(Exception):
     """使用者主動停止執行。"""
 
 
+_ACTIVE_CRAWL_STOP_EVENT: threading.Event | None = None
+
+
+def check_crawl_cancelled() -> None:
+    """讓翻譯／股價查詢等無法直接拿到 progress 物件的深層函式，
+    也能在小步驟之間立即回應使用者按下的停止要求。"""
+    event = _ACTIVE_CRAWL_STOP_EVENT
+    if event is not None and event.is_set():
+        raise CrawlCancelled("使用者已停止執行")
+
+
 class BackgroundProgress:
     def __init__(self, job: dict):
         self.job = job
@@ -271,9 +323,11 @@ def finish_job_stage(job: dict) -> None:
 
 def run_crawl_job(job: dict, method_name: str, universe: str, companies: pd.DataFrame,
                   start_dt: datetime, end_dt: datetime) -> None:
+    global _ACTIVE_CRAWL_STOP_EVENT
     run_id = job["run_id"]
     progress = BackgroundProgress(job)
     active_method_key = ""
+    _ACTIVE_CRAWL_STOP_EVENT = job["stop_event"]
     try:
         stamp = end_dt.strftime("%Y%m%d")
         if method_name == "方法一":
@@ -395,6 +449,7 @@ def run_crawl_job(job: dict, method_name: str, universe: str, companies: pd.Data
         finish_run(run_id, "failed", message=str(exc))
         job.update(status="failed", error=str(exc), progress_text="執行失敗")
     finally:
+        _ACTIVE_CRAWL_STOP_EVENT = None
         finish_job_stage(job)
         job["finished_monotonic"] = time.monotonic()
         job["finished_at"] = datetime.now(TAIPEI).isoformat(timespec="seconds")
@@ -646,69 +701,270 @@ def merge_frames(first: pd.DataFrame, second: pd.DataFrame) -> tuple[pd.DataFram
     return result.reindex(columns=NEWS_COLUMNS), pd.DataFrame(duplicates)
 
 
-def translate_text_zh(text: str) -> str:
+def translate_text(text: str, target_language: str) -> str:
+    """雙向翻譯（V4 整合）：target_language 可為 'zh-TW' 或 'en'。"""
+    check_crawl_cancelled()
     text = str(text or "").strip()
     if not text:
         return ""
-    for attempt in range(3):
+    for attempt in range(2):
+        check_crawl_cancelled()
         try:
-            response = requests.get(
-                "https://translate.googleapis.com/translate_a/single",
-                params={"client": "gtx", "sl": "auto", "tl": "zh-TW", "dt": "t", "q": text},
-                headers={"User-Agent": "Mozilla/5.0"}, timeout=15,
-            )
+            request_data = {"client": "gtx", "sl": "auto", "tl": target_language, "dt": "t", "q": text}
+            if len(text) > 700:
+                response = http_post(
+                    "https://translate.googleapis.com/translate_a/single", data=request_data,
+                    headers={"User-Agent": "Mozilla/5.0"}, timeout=(3, 8),
+                )
+            else:
+                response = http_get(
+                    "https://translate.googleapis.com/translate_a/single", params=request_data,
+                    headers={"User-Agent": "Mozilla/5.0"}, timeout=(3, 6),
+                )
             response.raise_for_status()
             payload = response.json()
             translated = "".join(str(part[0]) for part in payload[0] if part and part[0]).strip()
             if translated:
                 return translated
+        except CrawlCancelled:
+            raise
         except Exception:
             pass
-        if attempt < 2:
-            time.sleep(1.5 * (attempt + 1))
+        if attempt < 1:
+            if _ACTIVE_CRAWL_STOP_EVENT is not None and _ACTIVE_CRAWL_STOP_EVENT.wait(1.0):
+                raise CrawlCancelled("使用者已停止執行")
     return ""
+
+
+def translate_text_zh(text: str) -> str:
+    return translate_text(text, "zh-TW")
+
+
+def translate_text_en(text: str) -> str:
+    return translate_text(text, "en")
+
+
+def translation_text_key(text: str) -> str:
+    return re.sub(r"\s+", " ", str(text or "")).strip().casefold()
+
+
+def load_translation_cache(texts: list[str], target_language: str) -> dict[str, str]:
+    keys = list(dict.fromkeys(translation_text_key(text) for text in texts if translation_text_key(text)))
+    if not keys:
+        return {}
+    cached: dict[str, str] = {}
+    with sqlite3.connect(DB_PATH) as connection:
+        for start_index in range(0, len(keys), 700):
+            chunk = keys[start_index:start_index + 700]
+            placeholders = ",".join("?" for _ in chunk)
+            rows = connection.execute(
+                f"SELECT text_key,translated_text FROM translation_cache "
+                f"WHERE target_language=? AND text_key IN ({placeholders})",
+                [target_language, *chunk],
+            ).fetchall()
+            cached.update({str(key): str(translated) for key, translated in rows if translated})
+    return cached
+
+
+def save_translation_cache(items: list[tuple[str, str]], target_language: str) -> None:
+    now_text = datetime.now(TAIPEI).isoformat(timespec="seconds")
+    rows = []
+    for source_text, translated_text in items:
+        key = translation_text_key(source_text)
+        translated = str(translated_text or "").strip()
+        if key and translated:
+            rows.append((key, target_language, str(source_text), translated, now_text))
+    if not rows:
+        return
+    with sqlite3.connect(DB_PATH) as connection:
+        connection.executemany(
+            "INSERT OR REPLACE INTO translation_cache"
+            "(text_key,target_language,source_text,translated_text,updated_at) VALUES(?,?,?,?,?)",
+            rows,
+        )
 
 
 def translate_title_zh(title: str) -> str:
     return translate_text_zh(title)
 
 
+TRANSLATION_SEPARATOR = "<<<FUBON_NEWS_SPLIT>>>"
+
+
+def make_translation_batches(items: list, text_getter, max_items: int = 40, max_characters: int = 4500) -> list[list]:
+    """同時限制篇數與總字數，避免少數長標題讓整個翻譯批次失敗。"""
+    batches: list[list] = []
+    current: list = []
+    current_characters = 0
+    separator_characters = len(TRANSLATION_SEPARATOR) + 2
+    for item in items:
+        text_length = len(str(text_getter(item) or "").strip())
+        added_characters = text_length + (separator_characters if current else 0)
+        if current and (len(current) >= max_items or current_characters + added_characters > max_characters):
+            batches.append(current)
+            current = []
+            current_characters = 0
+            added_characters = text_length
+        current.append(item)
+        current_characters += added_characters
+    if current:
+        batches.append(current)
+    return batches
+
+
+def translate_titles_resilient(titles: list[str], target_language: str) -> list[str]:
+    """批次失敗時只拆分該批；不再把整批所有標題直接改為逐篇重跑。"""
+    check_crawl_cancelled()
+    if not titles:
+        return []
+    if len(titles) == 1:
+        return [translate_text(titles[0], target_language)]
+    translated = translate_text(f"\n{TRANSLATION_SEPARATOR}\n".join(titles), target_language)
+    parts = [part.strip() for part in translated.split(TRANSLATION_SEPARATOR)] if translated else []
+    if len(parts) == len(titles) and all(parts):
+        return parts
+    midpoint = len(titles) // 2
+    return (
+        translate_titles_resilient(titles[:midpoint], target_language)
+        + translate_titles_resilient(titles[midpoint:], target_language)
+    )
+
+
+def prepare_english_titles(frame: pd.DataFrame, progress=None) -> pd.DataFrame:
+    """（V4 整合）中文原標題存入 Title_ZH，翻成英文寫回 Title，供 FinBERT 與關鍵字規則使用。
+    取代原本「中文標題直接跳過 FinBERT、標記 N/A」的作法，讓中文新聞也能算出情緒分數。"""
+    result = frame.copy()
+    if "Title_ZH" not in result.columns:
+        result["Title_ZH"] = ""
+    if "Title" in result.columns:
+        title_zh_values = result.pop("Title_ZH")
+        result.insert(result.columns.get_loc("Title") + 1, "Title_ZH", title_zh_values)
+    if result.empty:
+        result.attrs["english_translation_failures"] = 0
+        return result
+    all_chinese_indexes = [
+        index for index, title in result["Title"].fillna("").astype(str).items()
+        if re.search(r"[\u3400-\u9fff]", title)
+    ]
+    if not all_chinese_indexes:
+        result.attrs["english_translation_failures"] = 0
+        return result
+    original_titles = [str(result.at[index, "Title"] or "").strip() for index in all_chinese_indexes]
+    cached_translations = load_translation_cache(original_titles, "en")
+    chinese_indexes = []
+    for index, original_title in zip(all_chinese_indexes, original_titles):
+        result.at[index, "Title_ZH"] = original_title
+        translated_title = cached_translations.get(translation_text_key(original_title), "")
+        if translated_title and not re.search(r"[\u3400-\u9fff]", translated_title):
+            result.at[index, "Title"] = translated_title
+        else:
+            chinese_indexes.append(index)
+    if not chinese_indexes:
+        result.attrs["english_translation_failures"] = 0
+        return result
+    index_groups: dict[str, list[int]] = {}
+    for index in chinese_indexes:
+        index_groups.setdefault(translation_text_key(result.at[index, "Title"]), []).append(index)
+    representative_indexes = [indexes[0] for indexes in index_groups.values()]
+    batches = make_translation_batches(representative_indexes, lambda index: result.at[index, "Title"])
+
+    def translate_batch(indexes: list[int]) -> list[str]:
+        check_crawl_cancelled()
+        titles = [str(result.at[index, "Title"] or "").strip() for index in indexes]
+        return translate_titles_resilient(titles, "en")
+
+    failures = 0
+    done = 0
+    new_cache_items: list[tuple[str, str]] = []
+    with ThreadPoolExecutor(max_workers=6) as executor:
+        futures = {executor.submit(translate_batch, indexes): indexes for indexes in batches}
+        for future in as_completed(futures):
+            check_crawl_cancelled()
+            indexes = futures[future]
+            try:
+                parts = future.result()
+            except CrawlCancelled:
+                raise
+            except Exception:
+                parts = [""] * len(indexes)
+            for index, translated_title in zip(indexes, parts):
+                original_title = str(result.at[index, "Title"] or "").strip()
+                duplicate_indexes = index_groups.get(translation_text_key(original_title), [index])
+                for duplicate_index in duplicate_indexes:
+                    result.at[duplicate_index, "Title_ZH"] = str(result.at[duplicate_index, "Title"] or "").strip()
+                if translated_title and not re.search(r"[\u3400-\u9fff]", translated_title):
+                    for duplicate_index in duplicate_indexes:
+                        result.at[duplicate_index, "Title"] = translated_title
+                    new_cache_items.append((original_title, translated_title))
+                else:
+                    failures += len(duplicate_indexes)
+            done += sum(len(index_groups.get(translation_text_key(result.at[index, "Title_ZH"] or result.at[index, "Title"]), [index])) for index in indexes)
+            if progress is not None:
+                progress.progress(0.55, text=f"中文標題翻譯成英文｜{min(done, len(chinese_indexes))}/{len(chinese_indexes)}")
+    save_translation_cache(new_cache_items, "en")
+    result.attrs["english_translation_failures"] = failures
+    return result
+
+
 def translate_output_rows(rows: list[dict], label: str, progress=None,
                           progress_start: float = 0.97, progress_end: float = 0.995) -> int:
-    """批次翻譯輸出列；批次無法正確分割時再逐篇重試。"""
-    if not rows:
+    """批次翻譯輸出列（V4 整合：改用快取＋批次失敗只拆分該批重試）。"""
+    rows_to_translate = [row for row in rows if not str(row.get("Title_ZH", "") or "").strip()]
+    if not rows_to_translate:
         return 0
-    separator = "<<<FUBON_NEWS_SPLIT>>>"
-    batch_size = 15
+    cached_translations = load_translation_cache(
+        [str(row.get("Title", "") or "") for row in rows_to_translate], "zh-TW"
+    )
+    uncached_rows = []
+    for row in rows_to_translate:
+        translated = cached_translations.get(translation_text_key(row.get("Title", "")), "")
+        if translated:
+            row["Title_ZH"] = translated
+        else:
+            uncached_rows.append(row)
+    rows_to_translate = uncached_rows
+    if not rows_to_translate:
+        return 0
     failures = 0
-    batches = [rows[start:start + batch_size] for start in range(0, len(rows), batch_size)]
+    row_groups: dict[str, list[dict]] = {}
+    for row in rows_to_translate:
+        row_groups.setdefault(translation_text_key(row.get("Title", "")), []).append(row)
+    representative_rows = [group[0] for group in row_groups.values()]
+    batches = make_translation_batches(representative_rows, lambda row: row.get("Title", ""))
 
     def translate_batch(batch: list[dict]) -> list[str]:
+        check_crawl_cancelled()
         titles = [str(row.get("Title", "") or "").strip() for row in batch]
-        joined = f"\n{separator}\n".join(titles)
-        translated = translate_text_zh(joined)
-        parts = [part.strip() for part in translated.split(separator)] if translated else []
-        if len(parts) != len(batch):
-            parts = [translate_title_zh(title) for title in titles]
-        return parts
+        return translate_titles_resilient(titles, "zh-TW")
 
     done = 0
-    with ThreadPoolExecutor(max_workers=4) as executor:
+    new_cache_items: list[tuple[str, str]] = []
+    with ThreadPoolExecutor(max_workers=6) as executor:
         futures = {executor.submit(translate_batch, batch): batch for batch in batches}
         for future in as_completed(futures):
+            check_crawl_cancelled()
             batch = futures[future]
             try:
                 parts = future.result()
+            except CrawlCancelled:
+                raise
             except Exception:
                 parts = [""] * len(batch)
+            completed_rows = 0
             for row, title_zh in zip(batch, parts):
-                row["Title_ZH"] = title_zh
-                if not title_zh:
-                    failures += 1
-            done += len(batch)
+                duplicate_rows = row_groups.get(translation_text_key(row.get("Title", "")), [row])
+                for duplicate_row in duplicate_rows:
+                    duplicate_row["Title_ZH"] = title_zh
+                completed_rows += len(duplicate_rows)
+                if title_zh:
+                    new_cache_items.append((str(row.get("Title", "") or ""), title_zh))
+                else:
+                    failures += len(duplicate_rows)
+            done += completed_rows
             if progress is not None:
-                value = progress_start + (progress_end - progress_start) * done / len(rows)
-                progress.progress(value, text=f"翻譯{label}標題｜{done}/{len(rows)}")
+                value = progress_start + (progress_end - progress_start) * done / len(rows_to_translate)
+                progress.progress(value, text=f"翻譯{label}標題｜{done}/{len(rows_to_translate)}")
+    save_translation_cache(new_cache_items, "zh-TW")
     return failures
 
 
@@ -891,6 +1147,26 @@ def method1_company_terms(ticker: str, company: str) -> list[str]:
     return list(dict.fromkeys(term for term in terms if len(term) >= 4))
 
 
+def company_is_information_source(title: str, ticker: str, company: str) -> bool:
+    """（V4 整合）排除公司只是研究發布者或評等機構、而非新聞事件當事人的標題。
+    例如「XX Research downgrades AAPL」，AAPL 只是被評等對象，不該算成 AAPL 自己的負面事件。"""
+    text = re.sub(r"\s+", " ", str(title or "")).strip()
+    actor_terms = list(dict.fromkeys(method1_company_terms(ticker, company) + [str(company).strip(), str(ticker).strip()]))
+    for term in (value for value in actor_terms if len(value) >= 2):
+        escaped = re.escape(term)
+        if re.search(
+            rf"(?<![A-Za-z0-9]){escaped}(?:'s)?\s+(?:study|survey|report|index|analysts?)\b",
+            text, re.I,
+        ):
+            return True
+        if re.search(
+            rf"(?<![A-Za-z0-9]){escaped}\s+(?:downgrades?|upgrades?|initiates?|rates?|cuts|raises|lowers)\b",
+            text, re.I,
+        ):
+            return True
+    return False
+
+
 def method1_match_company(title: str, summary: str, companies: pd.DataFrame) -> tuple[str, str] | None:
     text = re.sub(r"\s+", " ", f"{title} {summary}").strip()
     candidates: list[tuple[int, str, str]] = []
@@ -898,6 +1174,8 @@ def method1_match_company(title: str, summary: str, companies: pd.DataFrame) -> 
         ticker, company = str(row.Ticker).upper(), str(row.Company)
         structured = re.search(rf"(?:\${re.escape(ticker)}\b|\({re.escape(ticker)}\)|(?:NASDAQ|NYSE|AMEX)\s*:\s*{re.escape(ticker)}\b)", text, re.I)
         matched_terms = [term for term in method1_company_terms(ticker, company) if re.search(rf"(?<![A-Za-z0-9]){re.escape(term)}(?![A-Za-z0-9])", text, re.I)]
+        if not structured and matched_terms and company_is_information_source(text, ticker, company):
+            continue
         if structured or matched_terms:
             strength = 1000 if structured else max(len(term) for term in matched_terms)
             candidates.append((strength, ticker, company))
@@ -1107,16 +1385,37 @@ def fetch_method1_news(companies: pd.DataFrame, start: datetime, end: datetime, 
 # 分批查詢英文 Google News RSS，再用 ProsusAI/finbert 模型
 # 對新聞標題評分（正面機率－負面機率），輸出 FinBERT 分數。
 # ============================================================
+METHOD2_AMBIGUOUS_TICKERS = {
+    "A", "AI", "ALL", "AN", "APP", "ARE", "AT", "BALL", "BE", "BY", "C", "CAT", "COST",
+    "D", "DE", "DOW", "F", "FAST", "FOR", "HAS", "ICE", "IT", "KEY", "LOW", "NOW",
+    "MAR", "NWS", "O", "ON", "OR", "SO", "T", "TECH", "TEL", "V", "WELL",
+}
+
+
 def method2_matches(title: str, companies: pd.DataFrame) -> list[tuple[str, str]]:
-    """比對 Google News 標題；同一則新聞可對應多家公司。"""
+    """比對 Google News 標題；同一則新聞可對應多家公司。
+    （V4 整合）新增結構化代號比對（$AAPL／(AAPL)／NASDAQ:AAPL）、以公司關鍵字比對取代單純子字串比對，
+    並套用 company_is_information_source 排除「公司只是研究/評等發布者」的誤判。"""
     text = str(title).strip()
-    lowered = text.lower()
     matches: list[tuple[str, str]] = []
-    ambiguous = {"A", "AI", "ALL", "AN", "ARE", "AT", "BE", "BY", "FOR", "IT", "ON", "OR", "SO"}
     for row in companies.itertuples(index=False):
         ticker, company = str(row.Ticker).strip().upper(), str(row.Company).strip()
-        ticker_hit = bool(ticker and ticker not in ambiguous and re.search(rf"(?<![A-Za-z0-9]){re.escape(ticker)}(?![A-Za-z0-9])", text, re.I))
-        company_hit = bool(company and len(company) >= 3 and company.lower() in lowered)
+        structured_ticker = bool(ticker and re.search(
+            rf"(?:\${re.escape(ticker)}\b|\({re.escape(ticker)}\)|(?:NASDAQ|NYSE|AMEX)\s*:\s*{re.escape(ticker)}\b)",
+            text, re.I,
+        ))
+        plain_ticker = bool(
+            ticker and len(ticker) >= 3 and ticker not in METHOD2_AMBIGUOUS_TICKERS
+            and re.search(rf"(?<![A-Za-z0-9]){re.escape(ticker)}(?![A-Za-z0-9])", text)
+        )
+        company_hit = any(
+            re.search(rf"(?<![A-Za-z0-9]){re.escape(term)}(?![A-Za-z0-9])", text, re.I)
+            for term in method1_company_terms(ticker, company)
+        )
+        ticker_hit = structured_ticker or plain_ticker
+        if not structured_ticker and (company_hit or plain_ticker) and company_is_information_source(text, ticker, company):
+            company_hit = False
+            ticker_hit = False
         if ticker_hit or company_hit:
             matches.append((ticker, company))
     return matches
@@ -1176,7 +1475,7 @@ CHINESE_CHAR_PATTERN = re.compile(r"[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff]")
 
 
 def is_chinese_title(text: str) -> bool:
-    """FinBERT 僅支援英文，原始標題含中文字元者視為中文新聞，評分改標記 N/A。"""
+    """（保留供其他用途參考；V4 整合後 FinBERT 評分已改用 prepare_english_titles 翻譯，不再用這個函式跳過中文標題。）"""
     return bool(CHINESE_CHAR_PATTERN.search(str(text or "")))
 
 
@@ -1205,47 +1504,73 @@ def load_finbert_model():
 
 def score_method2_finbert(frame: pd.DataFrame, progress=None) -> tuple[pd.DataFrame, pd.DataFrame]:
     """方法二第二階段：FinBERT = positive probability - negative probability。
-    FinBERT 模型只認得英文，原始標題含中文字元的新聞不送進模型評分，
-    一律將 FinBERT 標記為「N/A」，避免出現不準確的中文評分。"""
-    scored = frame.copy()
+    （V4 整合）中文標題會先透過 prepare_english_titles 翻譯成英文再評分，
+    不再直接標記 N/A；重複出現過的標題會沿用 finbert_cache 內的分數，不必重跑模型。"""
+    scored = prepare_english_titles(frame, progress)
+    english_translation_failures = int(scored.attrs.get("english_translation_failures", 0))
     if scored.empty:
-        scored["FinBERT"] = pd.Series(dtype=object)
+        scored["FinBERT"] = pd.Series(dtype=float)
+        scored.attrs["english_translation_failures"] = english_translation_failures
         return scored, scored.copy()
     titles = scored["Title"].fillna("").astype(str).tolist()
-    is_chinese_flags = [is_chinese_title(title) for title in titles]
-    scoreable_indexes = [index for index, is_zh in enumerate(is_chinese_flags) if not is_zh]
-    skipped_count = len(titles) - len(scoreable_indexes)
-    scores: list[float] = [float("nan")] * len(titles)
-    if scoreable_indexes:
+    title_keys = [translation_text_key(title) for title in titles]
+    cached_scores: dict[str, float] = {}
+    unique_keys = list(dict.fromkeys(key for key in title_keys if key))
+    with sqlite3.connect(DB_PATH) as connection:
+        for start_index in range(0, len(unique_keys), 800):
+            chunk = unique_keys[start_index:start_index + 800]
+            placeholders = ",".join("?" for _ in chunk)
+            cached_scores.update({
+                str(key): float(value)
+                for key, value in connection.execute(
+                    f"SELECT title_key,score FROM finbert_cache WHERE title_key IN ({placeholders})", chunk
+                ).fetchall()
+            })
+    uncached_items: dict[str, tuple[int, str]] = {}
+    for index, (key, title) in enumerate(zip(title_keys, titles)):
+        if key and key not in cached_scores and key not in uncached_items:
+            uncached_items[key] = (index, title)
+    scores: list[float] = [cached_scores.get(key, 0.0) for key in title_keys]
+    if uncached_items:
         torch, tokenizer, model, device = load_finbert_model()
         # 本機 CPU 用較大批次降低模型呼叫開銷；依標題長度分組可減少 padding 的無效運算。
         batch_size = 128
-        ordered_indexes = sorted(scoreable_indexes, key=lambda index: len(titles[index].split()))
+        ordered_items = sorted(uncached_items.items(), key=lambda item: len(item[1][1].split()))
         labels = {int(key): str(value).lower() for key, value in model.config.id2label.items()}
         with torch.inference_mode():
-            for index in range(0, len(ordered_indexes), batch_size):
-                batch_indexes = ordered_indexes[index:index + batch_size]
-                batch = [titles[i] for i in batch_indexes]
+            for index in range(0, len(ordered_items), batch_size):
+                check_crawl_cancelled()
+                batch_items = ordered_items[index:index + batch_size]
+                batch_keys = [item[0] for item in batch_items]
+                original_indexes = [item[1][0] for item in batch_items]
+                batch = [item[1][1] for item in batch_items]
                 inputs = tokenizer(batch, padding=True, truncation=True, max_length=64, return_tensors="pt").to(device)
                 probabilities = torch.nn.functional.softmax(model(**inputs).logits, dim=-1).cpu().numpy()
-                for original_index, values in zip(batch_indexes, probabilities):
+                for key, original_index, values in zip(batch_keys, original_indexes, probabilities):
                     mapped = {labels[position]: float(values[position]) for position in range(len(values))}
-                    scores[original_index] = round(mapped.get("positive", 0.0) - mapped.get("negative", 0.0), 3)
+                    score = round(mapped.get("positive", 0.0) - mapped.get("negative", 0.0), 3)
+                    cached_scores[key] = score
+                    scores[original_index] = score
                 if progress is not None:
-                    done = min(index + batch_size, len(ordered_indexes))
+                    done = min(index + batch_size, len(ordered_items))
                     progress.progress(
-                        0.55 + 0.45 * done / len(ordered_indexes),
-                        text=f"方法二 FinBERT 評分｜{done}/{len(ordered_indexes)}（另有 {skipped_count} 則中文新聞標記為 N/A）",
+                        0.55 + 0.45 * done / len(ordered_items),
+                        text=f"方法二 FinBERT 評分｜新標題 {done}/{len(ordered_items)}；快取 {len(titles) - len(ordered_items):,}",
                     )
+        now_text = datetime.now(TAIPEI).isoformat(timespec="seconds")
+        with sqlite3.connect(DB_PATH) as connection:
+            connection.executemany(
+                "INSERT OR REPLACE INTO finbert_cache(title_key,title,score,updated_at) VALUES(?,?,?,?)",
+                [(key, title, cached_scores[key], now_text) for key, (_, title) in uncached_items.items() if key in cached_scores],
+            )
     elif progress is not None:
-        progress.progress(1.0, text=f"方法二 FinBERT 評分｜全數 {skipped_count} 則為中文新聞，已標記為 N/A")
-    scored["_finbert_numeric"] = scores
-    scored = scored.sort_values("_finbert_numeric", na_position="last").reset_index(drop=True)
-    filtered = scored[(scored["_finbert_numeric"] >= -1) & (scored["_finbert_numeric"] <= 0)].reset_index(drop=True)
-    filtered["FinBERT"] = filtered["_finbert_numeric"]
-    scored["FinBERT"] = scored["_finbert_numeric"].apply(lambda value: "N/A" if pd.isna(value) else value)
-    scored = scored.drop(columns=["_finbert_numeric"])
-    filtered = filtered.drop(columns=["_finbert_numeric"])
+        progress.progress(1.0, text=f"方法二 FinBERT 評分｜全數 {len(titles):,} 則沿用快取分數")
+    scores = [cached_scores.get(key, score) for key, score in zip(title_keys, scores)]
+    scored["FinBERT"] = scores
+    scored = scored.sort_values("FinBERT").reset_index(drop=True)
+    scored.attrs["english_translation_failures"] = english_translation_failures
+    filtered = scored[(scored["FinBERT"] >= -1) & (scored["FinBERT"] <= 0)].reset_index(drop=True)
+    filtered.attrs["english_translation_failures"] = english_translation_failures
     return scored, filtered
 
 
@@ -1299,8 +1624,15 @@ BUSINESS_LINE_ALL = "全部（加總）"
 
 
 def _parse_exposure_frame(frame: pd.DataFrame) -> pd.DataFrame:
+    """（V4 整合）同時支援長表（Ticker + 曝險金額 [+ 業務別]）與寬表
+    （Ticker + 財管／經紀／自營各一個金額欄，沒有「業務別」欄時自動判斷）。
+    輸出欄位固定為 Ticker／業務別／Exposure，供既有 exposure_map_for_business 等函式使用。"""
+    if frame.empty:
+        return pd.DataFrame(columns=["Ticker", "業務別", "Exposure"])
     columns = {str(column).strip().lower(): column for column in frame.columns}
-    ticker_col = next((columns[key] for key in ("ticker", "symbol", "股票代號") if key in columns), None)
+    ticker_col = next((columns[key] for key in ("ticker", "symbol", "股票代號", "代號") if key in columns), None)
+    if not ticker_col:
+        raise ValueError("曝險清單需要 Ticker、Symbol、股票代號或代號欄位")
     exposure_col = next(
         (columns[key] for key in ("exposure", "amount", "曝險金額", "曝險", "部位金額", "部位") if key in columns),
         None,
@@ -1309,21 +1641,36 @@ def _parse_exposure_frame(frame: pd.DataFrame) -> pd.DataFrame:
         (columns[key] for key in ("業務別", "業務", "部門", "business", "businessline", "business_line", "desk") if key in columns),
         None,
     )
-    if not ticker_col or not exposure_col:
-        raise ValueError("曝險清單需要 Ticker/Symbol 與 Exposure/Amount（曝險金額）欄位")
-    use_cols = [ticker_col, exposure_col] + ([business_col] if business_col else [])
-    rename_map = {ticker_col: "Ticker", exposure_col: "Exposure"}
-    if business_col:
-        rename_map[business_col] = "業務別"
-    result = frame[use_cols].rename(columns=rename_map)
-    result["Ticker"] = result["Ticker"].astype(str).str.strip().str.upper()
-    result["Exposure"] = pd.to_numeric(result["Exposure"], errors="coerce").fillna(0)
-    if business_col:
-        raw_business = result["業務別"].fillna("").astype(str).str.strip()
-        result["業務別"] = raw_business.map(lambda v: BUSINESS_LINE_ALIASES.get(v.lower(), v)).replace("", "未分類")
+    if exposure_col is not None:
+        # 長表：一列一筆曝險金額（可選填業務別）
+        use_cols = [ticker_col, exposure_col] + ([business_col] if business_col else [])
+        rename_map = {ticker_col: "Ticker", exposure_col: "Exposure"}
+        if business_col:
+            rename_map[business_col] = "業務別"
+        result = frame[use_cols].rename(columns=rename_map)
+        if not business_col:
+            result["業務別"] = BUSINESS_LINE_ALL
     else:
-        result["業務別"] = BUSINESS_LINE_ALL
-    result = result[result["Ticker"] != ""]
+        # 寬表：財管／經紀／自營各一個金額欄，沒有明確的曝險金額欄
+        wide_columns = [
+            (original, BUSINESS_LINE_ALIASES[raw_name])
+            for raw_name, original in columns.items() if raw_name in BUSINESS_LINE_ALIASES
+        ]
+        if not wide_columns:
+            raise ValueError("曝險清單需要 Exposure/Amount（曝險金額）欄，或財管／經紀／自營任一金額欄")
+        parts = [
+            pd.DataFrame({"Ticker": frame[ticker_col], "業務別": business_name, "Exposure": frame[original]})
+            for original, business_name in wide_columns
+        ]
+        result = pd.concat(parts, ignore_index=True)
+    result["Ticker"] = result["Ticker"].astype(str).str.strip().str.upper()
+    result["Exposure"] = pd.to_numeric(
+        result["Exposure"].astype(str).str.replace(",", "", regex=False).str.replace("$", "", regex=False),
+        errors="coerce",
+    ).fillna(0)
+    raw_business = result["業務別"].fillna("").astype(str).str.strip()
+    result["業務別"] = raw_business.map(lambda v: BUSINESS_LINE_ALIASES.get(v.lower(), v)).replace("", "未分類")
+    result = result[(result["Ticker"] != "") & (result["Exposure"] != 0)]
     return result.groupby(["Ticker", "業務別"], as_index=False)["Exposure"].sum()
 
 
@@ -1357,6 +1704,341 @@ def load_exposure_list(path_str: str, modified_ns: int) -> pd.DataFrame:
 def load_exposure_list_from_upload(upload) -> pd.DataFrame:
     frame = pd.read_excel(io.BytesIO(upload.getvalue()), dtype=str)
     return _parse_exposure_frame(frame)
+
+
+# ============================================================
+# 區塊：股價查詢（V4 整合）
+# 資料來源：Yahoo Finance chart API，僅取每日收盤價。
+# ============================================================
+@st.cache_data(ttl=3600)
+def stock_prices(ticker: str, start_text: str, end_text: str) -> pd.DataFrame:
+    start = int(datetime.fromisoformat(start_text).replace(tzinfo=timezone.utc).timestamp())
+    end = int((datetime.fromisoformat(end_text) + timedelta(days=1)).replace(tzinfo=timezone.utc).timestamp())
+    url = f"https://query1.finance.yahoo.com/v8/finance/chart/{urllib.parse.quote(ticker)}?period1={start}&period2={end}&interval=1d&events=history"
+    headers = {"User-Agent": "Mozilla/5.0"}
+    response = http_get(url, timeout=15, headers=headers)
+    response.raise_for_status()
+    chart = response.json().get("chart", {})
+    results = chart.get("result") or []
+    if not results:
+        message = (chart.get("error") or {}).get("description") or "Yahoo Finance 未回傳股價資料"
+        raise ValueError(message)
+    result = results[0]
+    timestamps = result.get("timestamp", [])
+    quotes = result["indicators"]["quote"][0]
+    rows = []
+    for index, stamp in enumerate(timestamps):
+        close = quotes["close"][index]
+        if close is not None:
+            rows.append({"Date": datetime.fromtimestamp(stamp, timezone.utc).date(), "Close": float(close)})
+    if not rows:
+        raise ValueError("選定期間沒有可用的收盤價資料")
+    return pd.DataFrame(rows)
+
+
+# ============================================================
+# 區塊：13F 機構持股動向（V4 整合，選填功能）
+# 本區塊只負責「讀取」另一個獨立專案（例如 JUWangWang/SEC13F 的 13F_FINAL.py）
+# 產出的完整 Excel（需含 Ticker Summary／13F Detail 工作表），不會連線 SEC EDGAR，
+# 因此不需要在這裡設定 SEC_IDENTITY；那個設定只在 13F_FINAL.py 那支獨立程式裡用得到。
+# 13F 為輔助訊號，不會改變負面新聞本身的 Level。
+# ============================================================
+def parse_sec13f_workbook(path_or_bytes) -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame]:
+    """讀取 SEC13F 專案的成果檔；同時相容其部分中文欄名已亂碼的範例檔。"""
+    excel = pd.ExcelFile(path_or_bytes)
+    required = {"Ticker Summary", "13F Detail"}
+    missing = sorted(required - set(excel.sheet_names))
+    if missing:
+        raise ValueError(f"13F 檔案缺少工作表：{'、'.join(missing)}")
+    raw_summary = pd.read_excel(excel, sheet_name="Ticker Summary")
+    detail = pd.read_excel(excel, sheet_name="13F Detail")
+    run_log = pd.read_excel(excel, sheet_name="Run Log") if "Run Log" in excel.sheet_names else pd.DataFrame()
+    if raw_summary.shape[1] < 20:
+        raise ValueError("Ticker Summary 欄位不足，請使用 SEC13F 專案產出的完整檔案")
+    # 舊專案欄位順序固定；使用位置重新命名可避開舊檔中文編碼損壞。
+    summary = raw_summary.iloc[:, :20].copy()
+    summary.columns = [
+        "Quarter", "Quarter End", "Ticker", "Company", "追蹤Universe", "本季納入機構數",
+        "本季持有機構數", "前季持有機構數", "Current Shares", "Previous Shares", "機構持股QoQ",
+        "增持家數", "減持家數", "新建倉", "清倉", "持股不變家數", "淨增持家數",
+        "持股量方向", "機構持股方向", "13F訊號",
+    ]
+    summary["Ticker"] = summary["Ticker"].fillna("").astype(str).str.strip().str.upper().str.replace(".", "-", regex=False)
+    summary["Company"] = summary["Company"].fillna("").astype(str).str.strip()
+    numeric_columns = [
+        "追蹤Universe", "本季納入機構數", "本季持有機構數", "前季持有機構數",
+        "Current Shares", "Previous Shares", "機構持股QoQ", "增持家數", "減持家數",
+        "新建倉", "清倉", "持股不變家數", "淨增持家數",
+    ]
+    for column in numeric_columns:
+        summary[column] = pd.to_numeric(summary[column], errors="coerce")
+    summary["持股量方向"] = np.select(
+        [summary["機構持股QoQ"] > 0, summary["機構持股QoQ"] < 0],
+        ["持股增加", "持股下降"], default="持股不變",
+    )
+    summary["機構持股方向"] = np.select(
+        [summary["增持家數"] > summary["減持家數"], summary["增持家數"] < summary["減持家數"]],
+        ["增持家數較多", "減持家數較多"], default="增減持家數相同",
+    )
+    summary["13F顯示"] = summary.apply(
+        lambda row: (
+            f"{'↑' if row['機構持股QoQ'] > 0 else '↓' if row['機構持股QoQ'] < 0 else '→'} "
+            f"{row['機構持股QoQ']:.1%}｜{int(row['增持家數'] or 0)}增/{int(row['減持家數'] or 0)}減"
+        ) if pd.notna(row["機構持股QoQ"]) else "— 尚無前季比較",
+        axis=1,
+    )
+    if "Ticker" not in detail.columns or "Institution" not in detail.columns:
+        raise ValueError("13F Detail 缺少 Ticker 或 Institution 欄位")
+    detail["Ticker"] = detail["Ticker"].fillna("").astype(str).str.strip().str.upper().str.replace(".", "-", regex=False)
+    return summary[summary["Ticker"] != ""].reset_index(drop=True), detail, run_log
+
+
+@st.cache_data(ttl=60)
+def load_sec13f_file(path_text: str, modified_ns: int) -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame]:
+    del modified_ns
+    return parse_sec13f_workbook(path_text)
+
+
+def latest_sec13f_path() -> Path | None:
+    if SEC13F_PATH.is_file():
+        return SEC13F_PATH
+    candidates = sorted(SEC13F_DIR.glob("*.xlsx"), key=lambda path: path.stat().st_mtime, reverse=True) if SEC13F_DIR.is_dir() else []
+    return candidates[0] if candidates else None
+
+
+def sec13f_lookup() -> tuple[dict[str, str], str]:
+    path = latest_sec13f_path()
+    if path is None:
+        return {}, ""
+    try:
+        summary, _, _ = load_sec13f_file(str(path), path.stat().st_mtime_ns)
+        quarter = str(summary["Quarter"].dropna().iloc[0]) if summary["Quarter"].notna().any() else ""
+        return summary.set_index("Ticker")["13F顯示"].to_dict(), quarter
+    except Exception:
+        return {}, ""
+
+
+def render_sec13f_panel(negative_news: pd.DataFrame, exposure: pd.DataFrame) -> None:
+    st.divider()
+    st.markdown("### 13F 機構持股動向")
+    st.markdown(
+        "<div class='method-card'><div class='method-title'>13F｜機構季度持股動向</div>"
+        "<div class='method-desc'>比較追蹤機構本季與前季持股，並與負面新聞及曝險部位交叉查看。"
+        "13F 並非即時持股，只作輔助判讀，不會改變負面新聞 Level。</div></div>",
+        unsafe_allow_html=True,
+    )
+    path = latest_sec13f_path()
+    if path is None:
+        st.info("目前尚無 13F 成果檔。可在上方「上傳 13F 機構持股成果檔」上傳 SEC13F 專案產出的完整 Excel。")
+        return
+    try:
+        summary, detail, run_log = load_sec13f_file(str(path), path.stat().st_mtime_ns)
+    except Exception as exc:
+        st.warning(f"目前 13F 檔案無法讀取：{exc}")
+        return
+    if summary.empty:
+        st.info("目前 13F 成果檔沒有股票資料。")
+        return
+    quarter = str(summary["Quarter"].dropna().iloc[0]) if summary["Quarter"].notna().any() else "未知"
+    quarter_end = pd.to_datetime(summary["Quarter End"], errors="coerce").max()
+    filing_dates = pd.to_datetime(detail.get("Filing Date"), errors="coerce").dropna()
+    filing_range = f"{filing_dates.min():%Y-%m-%d} ～ {filing_dates.max():%Y-%m-%d}" if not filing_dates.empty else "未知"
+    successful_managers = int((run_log.get("Status", pd.Series(dtype=str)).astype(str).str.upper() == "OK").sum()) if not run_log.empty else int(summary["本季納入機構數"].max() or 0)
+    included_managers = int(summary["本季納入機構數"].max() or 0)
+    st.caption(
+        f"資料季度 {quarter}｜截止日 {quarter_end.strftime('%Y-%m-%d') if pd.notna(quarter_end) else '未知'}｜"
+        f"涵蓋 {summary['Ticker'].nunique():,} 檔股票｜正常完成 {successful_managers:,} 家機構"
+        + (f"／納入彙總 {included_managers:,} 家" if included_managers else "")
+        + f"｜SEC 申報日期 {filing_range}｜網站套用 {datetime.fromtimestamp(path.stat().st_mtime):%Y-%m-%d %H:%M}"
+    )
+    st.info(
+        f"本期 13F 成果檔涵蓋 {summary['Ticker'].nunique():,} 檔股票；未出現在本頁不代表機構沒有持股，"
+        "也可能只是未列入本期股票範圍。"
+    )
+
+    news = negative_news.copy()
+    if not news.empty:
+        news["Ticker"] = news.get("Ticker", "").fillna("").astype(str).str.upper().str.strip()
+        news["Level"] = pd.to_numeric(news.get("Level"), errors="coerce")
+        news_summary = news.groupby("Ticker", as_index=False).agg(最高新聞Level=("Level", "max"), 負面新聞則數=("Ticker", "size"))
+        summary = summary.merge(news_summary, on="Ticker", how="left")
+    else:
+        summary["最高新聞Level"] = np.nan
+        summary["負面新聞則數"] = 0
+    summary["最高新聞Level"] = pd.to_numeric(summary["最高新聞Level"], errors="coerce")
+    summary["負面新聞則數"] = pd.to_numeric(summary["負面新聞則數"], errors="coerce").fillna(0).astype(int)
+    exposure_map = exposure_map_for_business(exposure, BUSINESS_LINE_ALL) if not exposure.empty else {}
+    summary["曝險金額"] = summary["Ticker"].map(exposure_map).fillna(0.0)
+    summary["輔助提示"] = np.select(
+        [
+            summary["最高新聞Level"].ge(4) & summary["機構持股QoQ"].lt(0),
+            summary["最高新聞Level"].ge(4) & summary["機構持股QoQ"].gt(0),
+            summary["最高新聞Level"].isna() & summary["機構持股QoQ"].lt(0),
+        ],
+        ["重大新聞＋機構持股下降", "重大新聞＋機構持股增加", "無重大新聞＋機構持股下降"],
+        default="—",
+    )
+    summary["方向判讀"] = np.select(
+        [
+            summary["機構持股QoQ"].gt(0) & summary["減持家數"].gt(summary["增持家數"]),
+            summary["機構持股QoQ"].lt(0) & summary["增持家數"].gt(summary["減持家數"]),
+        ],
+        ["⚠️ 股數增加、減持家數較多", "⚠️ 股數下降、增持家數較多"],
+        default="—",
+    )
+    st.markdown("#### 優先注意摘要")
+    st.caption("先看機構合計持股是否下降，再確認是否同時出現重大新聞或現有曝險部位。")
+    action_metrics = st.columns(4)
+    action_metrics[0].metric("機構持股下降", f"{int(summary['機構持股QoQ'].lt(0).sum()):,} 檔")
+    action_metrics[1].metric("減持家數較多", f"{int((summary['減持家數'] > summary['增持家數']).sum()):,} 檔")
+    action_metrics[2].metric("重大新聞＋持股下降", f"{int((summary['最高新聞Level'].ge(4) & summary['機構持股QoQ'].lt(0)).sum()):,} 檔")
+    action_metrics[3].metric("曝險部位＋持股下降", f"{int((summary['曝險金額'].ne(0) & summary['機構持股QoQ'].lt(0)).sum()):,} 檔")
+    st.caption(
+        "「機構持股下降」看所有追蹤機構的合計股數；「減持家數較多」比較增持與減持的機構家數。"
+        "兩者可能不同，例如少數大型機構增持的股數可能高於多家小型機構的減持總量。"
+    )
+
+    filters = st.columns([2, 1.5])
+    search = filters[0].text_input("搜尋 Ticker 或公司", key="sec13f_search")
+    priority_view = filters[1].selectbox(
+        "優先查看",
+        ["全部股票", "重大新聞＋機構減持", "曝險部位＋機構減持", "機構持股增加", "機構持股下降", "持股方向分歧"],
+        key="sec13f_priority_view",
+    )
+    shown = summary.copy()
+    if search:
+        shown = shown[shown[["Ticker", "Company"]].fillna("").astype(str).apply(lambda column: column.str.contains(search, case=False, regex=False)).any(axis=1)]
+    if priority_view == "重大新聞＋機構減持":
+        shown = shown[shown["最高新聞Level"].ge(4) & shown["機構持股QoQ"].lt(0)]
+    elif priority_view == "曝險部位＋機構減持":
+        shown = shown[shown["曝險金額"].ne(0) & shown["機構持股QoQ"].lt(0)]
+    elif priority_view == "機構持股增加":
+        shown = shown[shown["機構持股QoQ"].gt(0)]
+    elif priority_view == "機構持股下降":
+        shown = shown[shown["機構持股QoQ"].lt(0)]
+    elif priority_view == "持股方向分歧":
+        shown = shown[shown["方向判讀"].ne("—")]
+    shown = shown.sort_values(["最高新聞Level", "負面新聞則數", "機構持股QoQ"], ascending=[False, False, True], na_position="last")
+
+    chart_heading, chart_control = st.columns([3, 1])
+    chart_heading.markdown("#### 機構持股季增減排名")
+    chart_scope = chart_control.selectbox("圖表範圍", ["變化最大 20 檔", "全部股票"], key="sec13f_chart_scope")
+    st.caption("藍色向右代表機構合計持股增加，紅色向左代表下降；依變動幅度排列，游標移到橫條可查看機構家數與建倉狀況。")
+    ranked = shown.dropna(subset=["機構持股QoQ"]).copy()
+    ranked["變動幅度"] = ranked["機構持股QoQ"].abs()
+    if chart_scope == "變化最大 20 檔":
+        ranked = ranked.nlargest(20, "變動幅度")
+    ranked = ranked.sort_values("機構持股QoQ")
+    ranked["方向"] = np.where(ranked["機構持股QoQ"] >= 0, "持股增加", "持股下降")
+    ranked["變動標籤"] = ranked["機構持股QoQ"].map(lambda value: f"{value:+.1%}")
+    holding_counts = ranked["本季持有機構數"].fillna(0).astype(float)
+    holding_min = float(holding_counts.min()) if not holding_counts.empty else 0.0
+    holding_max = float(holding_counts.max()) if not holding_counts.empty else 0.0
+    holding_span = max(holding_max - holding_min, 1.0)
+    coverage_strength = ((holding_counts - holding_min) / holding_span).clip(0, 1)
+
+    def soft_direction_color(direction_value: str, strength: float) -> str:
+        light = np.array([191, 219, 254]) if direction_value == "持股增加" else np.array([254, 202, 202])
+        dark = np.array([59, 130, 246]) if direction_value == "持股增加" else np.array([220, 88, 88])
+        ratio = 0.22 + 0.58 * float(strength)
+        rgb = np.rint(light * (1 - ratio) + dark * ratio).astype(int)
+        return f"rgb({rgb[0]},{rgb[1]},{rgb[2]})"
+
+    ranked["圖表顏色"] = [
+        soft_direction_color(direction_value, strength)
+        for direction_value, strength in zip(ranked["方向"], coverage_strength)
+    ]
+    if ranked.empty:
+        st.info("目前篩選條件沒有可顯示的股票。")
+    else:
+        figure = px.bar(
+            ranked, x="機構持股QoQ", y="Ticker", orientation="h", text="變動標籤",
+            hover_name="Company",
+            hover_data={"機構持股QoQ": ":.1%", "增持家數": True, "減持家數": True, "新建倉": True,
+                        "清倉": True, "本季持有機構數": True, "變動幅度": False, "方向": True,
+                        "圖表顏色": False},
+        )
+        figure.update_traces(
+            textposition="outside", cliponaxis=False, marker_color=ranked["圖表顏色"].tolist(),
+            marker_line_color="white", marker_line_width=.6,
+        )
+        figure.add_vline(x=0, line_color="#64748B", line_width=1.2)
+        figure.update_layout(
+            height=max(410, 30 * len(ranked) + 95), margin={"t": 15, "b": 20, "l": 20, "r": 65},
+            plot_bgcolor="white", paper_bgcolor="white", xaxis_title="機構合計持股季增減", yaxis_title=None,
+            showlegend=False,
+        )
+        figure.update_xaxes(showgrid=True, gridcolor="#E2E8F0", tickformat=".0%", zeroline=False)
+        figure.update_yaxes(showgrid=False, categoryorder="array", categoryarray=ranked["Ticker"].tolist())
+        st.plotly_chart(figure, use_container_width=True, config={"displaylogo": False})
+        st.caption("色彩說明：藍色為持股增加、紅色為持股下降；同一色系越深，代表本季持有該股票的追蹤機構越多。")
+
+    st.markdown("#### 股票持股與風險對照")
+    st.caption(
+        "把 13F 持股方向、機構家數、負面新聞與曝險部位放在同一列。"
+        "出現「方向分歧」時，代表合計股數與增減持機構家數方向不同，需查看下方機構明細確認。"
+    )
+    table_columns = ["Ticker", "Company", "13F顯示", "方向判讀", "輔助提示", "最高新聞Level", "曝險金額", "增持家數", "減持家數", "新建倉", "清倉", "負面新聞則數"]
+    st.dataframe(
+        shown[table_columns], use_container_width=True, hide_index=True,
+        column_config={
+            "Company": st.column_config.TextColumn("公司"), "13F顯示": st.column_config.TextColumn("13F 機構動向", width="medium"),
+            "方向判讀": st.column_config.TextColumn("持股方向判讀", width="medium"),
+            "輔助提示": st.column_config.TextColumn("新聞與籌碼提示", width="medium"),
+            "最高新聞Level": st.column_config.NumberColumn("最高 Level", format="%.0f"),
+            "負面新聞則數": st.column_config.NumberColumn("負面新聞", format="%d 則"),
+            "曝險金額": st.column_config.NumberColumn("曝險金額", format="%.2f"),
+            "增持家數": st.column_config.NumberColumn("增持機構", format="%d 家"),
+            "減持家數": st.column_config.NumberColumn("減持機構", format="%d 家"),
+        },
+    )
+    ticker_options = shown["Ticker"].dropna().astype(str).tolist()
+    if ticker_options:
+        st.markdown("#### 單一股票機構明細")
+        st.caption("選擇股票後，顯示持股增減幅度最大的 10 家機構；其餘資料可在完整明細中展開查看。")
+        detail_filter_key = re.sub(r"[^A-Za-z0-9]+", "_", f"{priority_view}_{search}")
+        selected_ticker = st.selectbox("查看機構明細", ticker_options, key=f"sec13f_detail_ticker_{detail_filter_key}")
+        selected_summary = summary[summary["Ticker"] == selected_ticker].iloc[0]
+        st.markdown(f"#### {selected_ticker}｜{selected_summary['Company']}｜{quarter}")
+        selected_detail = detail[detail["Ticker"] == selected_ticker].copy()
+        if selected_detail.empty:
+            st.info("此股票沒有可顯示的機構明細。")
+        else:
+            status_map = {"INCREASED": "增持", "DECREASED": "減持", "NEW": "新建倉", "CLOSED": "清倉", "UNCHANGED": "持股不變"}
+            selected_detail["狀態"] = selected_detail.get("Status", "").astype(str).str.upper().map(status_map).fillna(selected_detail.get("Status", ""))
+            selected_detail["Change Shares"] = pd.to_numeric(selected_detail.get("Change Shares"), errors="coerce").fillna(0)
+            changed_managers = selected_detail[selected_detail["Change Shares"].ne(0)].copy()
+            if not changed_managers.empty:
+                changed_managers["變動幅度"] = changed_managers["Change Shares"].abs()
+                changed_managers = changed_managers.nlargest(10, "變動幅度").sort_values("Change Shares")
+                changed_managers["方向"] = np.where(changed_managers["Change Shares"] >= 0, "增持／新建倉", "減持／清倉")
+                changed_managers["股數標籤"] = changed_managers["Change Shares"].map(lambda value: f"{value:+,.0f}")
+                manager_figure = px.bar(
+                    changed_managers, x="Change Shares", y="Institution", orientation="h", color="方向", text="股數標籤",
+                    hover_data={"Shares": ":,.0f", "Previous Shares": ":,.0f", "Change %": ":.1%", "狀態": True,
+                                "變動幅度": False, "方向": False},
+                    color_discrete_map={"增持／新建倉": "#7CA9E8", "減持／清倉": "#E89A9A"},
+                )
+                manager_figure.update_traces(textposition="outside", cliponaxis=False, marker_line_color="white", marker_line_width=.6)
+                manager_figure.add_vline(x=0, line_color="#64748B", line_width=1)
+                manager_figure.update_layout(
+                    height=max(350, 35 * len(changed_managers) + 80), margin={"t": 15, "b": 20, "l": 20, "r": 80},
+                    plot_bgcolor="white", paper_bgcolor="white", xaxis_title="本季相較前季增減股數", yaxis_title=None,
+                    legend_title=None, legend={"orientation": "h", "yanchor": "bottom", "y": 1.01, "xanchor": "right", "x": 1},
+                )
+                manager_figure.update_xaxes(showgrid=True, gridcolor="#E2E8F0", tickformat=",.0f", zeroline=False)
+                manager_figure.update_yaxes(showgrid=False)
+                st.markdown("##### 機構持股增減前 10 名")
+                st.caption("橫條向右為增持或新建倉，向左為減持或清倉；長度代表相較前季的增減股數，並非交易金額。")
+                st.plotly_chart(manager_figure, use_container_width=True, config={"displaylogo": False})
+            with st.expander("查看完整機構持股明細", expanded=False):
+                detail_columns = ["Institution", "狀態", "Shares", "Previous Shares", "Change Shares", "Change %", "Filing Date"]
+                st.dataframe(selected_detail[[column for column in detail_columns if column in selected_detail.columns]], use_container_width=True, hide_index=True,
+                             column_config={"Institution": st.column_config.TextColumn("機構", width="large"), "Shares": st.column_config.NumberColumn("本季持股", format="%,.0f"),
+                                            "Previous Shares": st.column_config.NumberColumn("前季持股", format="%,.0f"), "Change Shares": st.column_config.NumberColumn("增減股數", format="%+,.0f"),
+                                            "Change %": st.column_config.NumberColumn("增減幅", format="%.1%%"), "Filing Date": st.column_config.DateColumn("申報日期")})
+    st.caption("下載檔包含股票彙總、13F 機構明細與執行紀錄；如有新季度資料，請重新上傳並套用。")
+    st.download_button("下載目前 13F 完整 Excel", path.read_bytes(), path.name, use_container_width=True, key="download_sec13f")
 
 
 # ============================================================
@@ -1718,6 +2400,59 @@ def apply_manual_overrides(negative_df: pd.DataFrame, overrides: pd.DataFrame) -
     return frame
 
 
+def assign_event_batches(frame: pd.DataFrame) -> pd.DataFrame:
+    """（V4 整合）同公司、同事件種類超過設定的間隔天數後，下一則即建立新事件（Event_ID）。
+    間隔天數可存在 settings 資料表的 event_group_gap_days，未設定時預設 14 天。"""
+    if frame.empty:
+        result = frame.copy()
+        result["Event_ID"] = pd.Series(dtype=str)
+        return result
+    with sqlite3.connect(DB_PATH) as connection:
+        saved_gap_days = connection.execute(
+            "SELECT value FROM settings WHERE key='event_group_gap_days'"
+        ).fetchone()
+    try:
+        gap_days = max(1, min(3650, int(saved_gap_days[0]))) if saved_gap_days else 14
+    except (TypeError, ValueError):
+        gap_days = 14
+    data = frame.copy()
+    data["_公司鍵"] = data["Ticker"].fillna("").where(data["Ticker"].fillna("") != "", data["Company"].fillna("").str.lower())
+    data["_事件時間值"] = pd.to_datetime(data["Published Time"], errors="coerce")
+    data["Event_ID"] = ""
+    for (company_key, event_code), indexes in data.groupby(["_公司鍵", "Event_Code"], dropna=False).groups.items():
+        ordered_indexes = sorted(indexes, key=lambda index: (data.at[index, "_事件時間值"] if pd.notna(data.at[index, "_事件時間值"]) else pd.Timestamp.max, index))
+        safe_company = re.sub(r"[^A-Za-z0-9]+", "", str(company_key).upper()) or "COMPANY"
+        safe_event = re.sub(r"[^A-Za-z0-9_]+", "_", str(event_code).upper()) or "EVENT"
+        event_number = 0
+        previous_time = pd.NaT
+        for index in ordered_indexes:
+            event_time = data.at[index, "_事件時間值"]
+            if event_number == 0:
+                event_number = 1
+            elif pd.isna(event_time) or pd.isna(previous_time) or (event_time.normalize() - previous_time.normalize()).days > gap_days:
+                event_number += 1
+            data.at[index, "Event_ID"] = f"{safe_company}-{safe_event}-{event_number:03d}"
+            if pd.notna(event_time):
+                previous_time = event_time
+    return data.drop(columns=["_公司鍵", "_事件時間值"])
+
+
+def validate_negative_frame(frame: pd.DataFrame) -> pd.DataFrame:
+    """（V4 整合）檢查負面新聞資料是否具備必要欄位、Level 是否為可辨識數字。
+    目前尚未掛在既有存檔流程上（GitHub 版的存檔對象是「單筆覆寫紀錄」而非整份負面新聞表），
+    先以工具函式形式提供，之後若要新增「整份匯入/批次編輯」的頁面可直接呼叫。"""
+    required = {"Published Time", "Ticker", "Company", "Title", "Level", "Action", "Event_Code", "Event_type"}
+    missing = sorted(required - set(frame.columns))
+    if missing:
+        raise ValueError(f"缺少必要欄位：{', '.join(missing)}")
+    result = frame.copy()
+    result["Level"] = pd.to_numeric(result["Level"], errors="coerce")
+    if result["Level"].isna().any():
+        raise ValueError("Level 欄含有無法辨識的值")
+    result["Level"] = result["Level"].astype(int)
+    return result[result["Level"].between(3, 5, inclusive="both")].reset_index(drop=True)
+
+
 def _style_by_level(row: pd.Series) -> list[str]:
     """Level 5 整列標紅、Level 4 整列標橘，其餘不上色。"""
     level = row.get("Level")
@@ -1734,6 +2469,35 @@ def _format_decimals(value, decimals: int):
         return f"{float(value):.{decimals}f}"
     except (TypeError, ValueError):
         return value
+
+
+_METHOD_STATUS_LABELS = {
+    "pending": "⏳ 等待中", "running": "🔄 執行中", "success": "✅ 已完成",
+    "failed": "❌ 執行異常", "stopped": "⏹️ 已停止", "skipped": "— 本次未執行",
+}
+
+
+def render_method_monitor(container, title: str, monitor: dict, is_method1: bool) -> None:
+    """（V4 整合）顯示方法一／方法二各自的執行狀態與新聞筆數。
+    資料沿用既有 job['method1_monitor']／job['method2_monitor']（原本程式已經在蒐集，只是沒有畫面顯示）。"""
+    shown_status = monitor.get("status", "pending")
+    status_text = _METHOD_STATUS_LABELS.get(shown_status, shown_status)
+    with container:
+        with st.container(border=True):
+            st.markdown(f"**{title}｜{status_text}**")
+            st.caption(str(monitor.get("stage") or "等待更新"))
+            st.metric("新聞筆數", f"{int(monitor.get('rows') or monitor.get('raw_rows') or 0):,}")
+            if is_method1:
+                counts = {source: count for source, count in (monitor.get("source_counts") or {}).items()}
+                if counts:
+                    source_text = "｜".join(f"{source} {int(count):,}" for source, count in sorted(counts.items()))
+                    st.caption(f"來源筆數：{source_text}")
+                else:
+                    st.caption("來源筆數：尚未產生")
+            else:
+                st.caption(f"Google News 批次：{int(monitor.get('batches') or 0):,}")
+            if monitor.get("fatal_error"):
+                st.error(str(monitor["fatal_error"]))
 
 
 def render_manual_review_table(
@@ -1778,9 +2542,45 @@ def render_manual_review_table(
             if column in filtered.columns:
                 display_columns.insert(insert_at + offset, column)
 
-    review_mode = st.toggle("✏️ 人工覆核模式（可修改等級／事件中文／Action）", key=f"{section_key}_review_mode")
+    view_cols = st.columns([1, 1])
+    review_mode = view_cols[0].toggle("✏️ 人工覆核模式（可修改等級／事件中文／Action）", key=f"{section_key}_review_mode")
+    use_aggrid = view_cols[1].toggle("📊 進階表格檢視（AgGrid，可排序／篩選／調欄寬）", key=f"{section_key}_use_aggrid", disabled=review_mode)
 
     if not review_mode:
+        if use_aggrid:
+            grid_frame = filtered[display_columns].copy()
+            grid_builder = GridOptionsBuilder.from_dataframe(grid_frame)
+            grid_builder.configure_default_column(editable=False, sortable=True, filter=True, resizable=True, minWidth=90)
+            if "Level" in grid_frame.columns:
+                grid_builder.configure_column("Level", width=82)
+            if "Title" in grid_frame.columns:
+                grid_builder.configure_column("Title", width=380)
+            if "Title_ZH" in grid_frame.columns:
+                grid_builder.configure_column("Title_ZH", width=380)
+            if "Action" in grid_frame.columns:
+                grid_builder.configure_column("Action", width=280)
+            if "URL" in grid_frame.columns:
+                grid_builder.configure_column("URL", width=300)
+            grid_builder.configure_grid_options(
+                rowHeight=38, headerHeight=38,
+                getRowStyle=JsCode("""
+                    function(params) {
+                        const level = Number(params.data.Level || 0);
+                        if (level === 5) { return {backgroundColor: '#FFCDD2'}; }
+                        if (level === 4) { return {backgroundColor: '#FFE0B2'}; }
+                        return null;
+                    }
+                """),
+            )
+            AgGrid(
+                grid_frame, gridOptions=grid_builder.build(), height=560,
+                use_container_width=True, fit_columns_on_grid_load=False,
+                columns_auto_size_mode=ColumnsAutoSizeMode.NO_AUTOSIZE,
+                data_return_mode=DataReturnMode.AS_INPUT, update_on=[],
+                allow_unsafe_jscode=True, theme="streamlit",
+                key=f"{section_key}_aggrid_{len(grid_frame)}",
+            )
+            return
         styled = filtered[display_columns].style.apply(_style_by_level, axis=1)
         format_dict = {}
         if "FinBERT" in display_columns:
@@ -2072,6 +2872,16 @@ if True:
                     "所用時間": format_elapsed(time.monotonic() - float(current_stage_started)),
                     "狀態": "執行中" if status == "running" else "停止中",
                 })
+            if stage_rows:
+                st.markdown("#### 各階段所用時間")
+                st.caption("顯示本次任務目前執行到哪個階段，以及各階段實際耗時，可用來找出速度異常的步驟。")
+                st.dataframe(pd.DataFrame(stage_rows), hide_index=True, use_container_width=True)
+            if job.get("method") == "方法一＋方法二":
+                st.markdown("#### 方法別監控")
+                st.caption("分別顯示方法一與方法二的執行狀態與新聞筆數，方便確認兩種方法是否都有正常完成。")
+                monitor_columns = st.columns(2)
+                render_method_monitor(monitor_columns[0], "方法一｜多來源", job.get("method1_monitor", {}), True)
+                render_method_monitor(monitor_columns[1], "方法二｜Google News＋FinBERT", job.get("method2_monitor", {}), False)
             button_labels = {
                 "running": "停止執行", "stopping": "停止中…", "success": "已完成",
                 "stopped": "已停止", "failed": "執行失敗",
@@ -2167,6 +2977,9 @@ if saved_crawl and saved_crawl["event_path"] and saved_crawl["event_path"].is_fi
                 exposure_map = exposure_map_for_business(exposure_df, business_filter)
                 negative_df["曝險金額"] = negative_df["Ticker"].str.upper().map(exposure_map).fillna(0.0)
 
+                # V4 整合：事件批次判斷，同公司同事件種類超過間隔天數視為新一輪事件
+                negative_df = assign_event_batches(negative_df)
+
                 # 最左邊第一格加上總新聞數量，並移除持續追蹤
                 metric_cols = st.columns(4)
                 metric_cols[0].metric("總新聞", f"{saved_crawl['rows']:,} 則")
@@ -2180,7 +2993,6 @@ if saved_crawl and saved_crawl["event_path"] and saved_crawl["event_path"].is_fi
                     st.caption(f"曝險加權{business_label}：本次負面新聞涉及 {exposed_companies:,} 家有曝險之公司，合計曝險金額 {total_exposure_hit:,.0f}。")
 
                 chart_left, chart_right = st.columns(2)
-                import plotly.express as px
 
                 # 1. 左圖：事件類型分布（加入「其他」類別以完整呈現代碼 100% 占比）
                 chart_left.markdown("#### 事件類型總占比")
@@ -2334,12 +3146,60 @@ if saved_crawl and saved_crawl["event_path"] and saved_crawl["event_path"].is_fi
                     st.plotly_chart(fig_trend, use_container_width=True)
 
                 st.markdown("#### 風險新聞明細")
+                _extra_display_columns = ["Event_ID"] + (["曝險金額"] if exposure_map else [])
                 render_manual_review_table(
                     negative_df,
                     section_key="negative",
-                    extra_display_columns=["曝險金額"] if exposure_map else None,
+                    extra_display_columns=_extra_display_columns,
                     auto_backup_date=snapshot_date,
                 )
+
+                # ============================================================
+                # 區塊：13F 機構持股動向（V4 整合，選填功能）
+                # 讀取另外執行 SEC13F 專案（例如 JUWangWang/SEC13F）產出的完整 Excel，
+                # 與本頁負面新聞、曝險部位交叉比對。13F 只是輔助訊號，不會改變負面新聞 Level。
+                # ============================================================
+                with st.expander("上傳 13F 機構持股成果檔（選填）", expanded=False):
+                    st.caption(
+                        "上傳另外執行 SEC13F 專案（例如 JUWangWang/SEC13F 的 13F_FINAL.py）產出的完整 Excel，"
+                        "需包含「Ticker Summary」與「13F Detail」兩個工作表。"
+                        "本頁本身不會連線 SEC EDGAR，只讀取已產生好的成果檔。"
+                    )
+                    sec13f_upload = st.file_uploader("上傳 13F 成果 Excel", type=["xlsx"], key="sec13f_upload")
+                    if st.button("套用 13F 成果檔", use_container_width=True, disabled=sec13f_upload is None, key="apply_sec13f"):
+                        try:
+                            checked_summary, _, _ = parse_sec13f_workbook(io.BytesIO(sec13f_upload.getvalue()))
+                            if checked_summary.empty:
+                                raise ValueError("13F 成果檔沒有可用的股票資料")
+                            SEC13F_PATH.write_bytes(sec13f_upload.getvalue())
+                            load_sec13f_file.clear()
+                            st.success(f"13F 成果檔已套用，涵蓋 {checked_summary['Ticker'].nunique():,} 檔股票。")
+                        except Exception as exc:
+                            st.error(f"13F 成果檔無法套用：{exc}")
+                    elif SEC13F_PATH.is_file():
+                        st.caption("已套用過 13F 成果檔，重新上傳並按「套用 13F 成果檔」可覆蓋。")
+                render_sec13f_panel(negative_df, exposure_df)
+
+                # ============================================================
+                # 區塊：股價查詢（V4 整合，選填功能）
+                # ============================================================
+                with st.expander("📈 股價查詢（選填）", expanded=False):
+                    st.caption("查詢指定股票在設定新聞期間內的每日收盤價（資料來源：Yahoo Finance）。")
+                    price_cols = st.columns([1, 1, 1])
+                    price_ticker = price_cols[0].text_input("股票代號（Ticker）", key="stock_price_ticker", placeholder="例如 AAPL")
+                    price_start = price_cols[1].date_input("開始日期", value=start_dt.date(), key="stock_price_start")
+                    price_end = price_cols[2].date_input("結束日期", value=end_dt.date(), key="stock_price_end")
+                    if st.button("查詢股價", use_container_width=True, disabled=not price_ticker, key="fetch_stock_price"):
+                        try:
+                            prices = stock_prices(price_ticker.strip().upper(), price_start.isoformat(), price_end.isoformat())
+                            price_figure = px.line(prices, x="Date", y="Close", markers=True)
+                            price_figure.update_layout(
+                                xaxis_title=None, yaxis_title="收盤價", height=320,
+                                margin=dict(t=20, b=20, l=20, r=20),
+                            )
+                            st.plotly_chart(price_figure, use_container_width=True)
+                        except Exception as exc:
+                            st.error(f"股價查詢失敗：{exc}")
 
             # ============================================================
             # 區塊：待人工覆核新聞（規則沒能自動分類的新聞）
