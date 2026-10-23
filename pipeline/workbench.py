@@ -60,6 +60,7 @@ def render_results():
         st.info('目前分類沒有新聞。')
         return
     preferred = ['日期', 'Market', 'Ticker', 'Company', 'Published Time', 'Title', 'Level', '事件中文', 'Action', '分類狀態', '已人工覆核', '覆核註記', '最終判斷來源', '來源方法', 'FinBERT', 'Rule_Event_Code', 'Rule_Level', 'LLM事件代碼', 'LLM辨識公司', 'Ticker來源', '中文摘要', 'URL', 'Source']
+    current = current[[c for c in preferred if c in current] + [c for c in current if c not in preferred]]
     current['Level'] = current['Level'].astype(str).str.replace(r'\.0$', '', regex=True)
     builder = GridOptionsBuilder.from_dataframe(current)
     builder.configure_default_column(editable=False, sortable=True, filter=True, resizable=True, minWidth=105)
