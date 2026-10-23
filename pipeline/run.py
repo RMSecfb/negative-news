@@ -41,7 +41,7 @@ def useful_candidate(r):
     hits=str(r.get('Keyword候選',''))
     if CDS_PAT.search(title) or ACTUAL_DEFAULT.search(title):return True
     if hits:return True
-    if r.get('監控池','').find('MARKET_DISCOVERY')>=0:return True
+    if any(pool in str(r.get('監控池','')) for pool in ('MARKET_DISCOVERY','CUSTOM')):return True
     try:return float(r.get('FinBERT','1'))<=0
     except (TypeError,ValueError):return False
 
@@ -86,6 +86,8 @@ def classify(frame:pd.DataFrame,rules:list[dict],api_key:str,max_llm:int,daystr:
         r['output_tokens']=usage.get('output_tokens','')
         if answer is None:
             r['LLM狀態']='API_ERROR';r['API錯誤']=error;r['分類狀態']='待人工覆核';r['需要人工覆核']='True'
+            if 'rate limit' in str(error).lower():
+                break
             continue
         r['LLM狀態']='OK'
         r['LLM辨識公司']=answer['company_mentioned']
@@ -118,6 +120,11 @@ def classify(frame:pd.DataFrame,rules:list[dict],api_key:str,max_llm:int,daystr:
         if not answer['relevant']:
             r['分類狀態']='待人工覆核' if needs else '無關新聞'
     for r in rows:
+        if str(r.get('Event_Code','')).upper() == 'DEFAULT' and (
+            str(r.get('Confirmed_Default','')).lower() not in ('true','1') or
+            str(r.get('事件狀態','')) != 'CONFIRMED'
+        ) and str(r.get('已人工覆核','')).lower() not in ('true','1'):
+            r.update({'Event_Code':'','事件中文':'疑似違約／尚未確認（待覆核）','Level':'','Action':'人工核實新聞證據','分類狀態':'待人工覆核','需要人工覆核':'True'})
         if not useful_candidate(r):
             r.setdefault('分類狀態','未入選初篩')
         elif str(r.get('LLM狀態','')) not in ('OK','MANUAL'):
@@ -158,7 +165,7 @@ def run():
         oldresult=oldresult[oldresult['news_id'].isin(set(merged.get('news_id',[])))]
     enriched=merge_records(merged,oldresult)
     output, cls_stats=classify(enriched,rules,os.getenv('GROQ_API_KEY',''),max(0,a.max_llm),a.date)
-    output=merge_records(oldresult,output)
+    # classify already includes cached/manual rows; empty corrected fields must stay empty.
     # Respect older human decisions from the existing Streamlit manual override file.
     overrides=load_csv(repo/'history'/'negative_news_manual_overrides.csv')
     if not overrides.empty and not output.empty and 'URL' in overrides:
