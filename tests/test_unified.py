@@ -187,6 +187,15 @@ class UnifiedTests(unittest.TestCase):
         self.assertEqual(result['llm_calls'],1)
         self.assertEqual(analyzer.call_count,2)
 
+    def test_legacy_previous_day_not_hidden_by_newer_canonical_file(self):
+        old=pd.DataFrame([item(day='2026-10-22',url='https://example.com/old')])
+        current=normalize(pd.DataFrame([item(day='2026-10-23',url='https://example.com/current')]))
+        self.repo.transaction(lambda read,rev:({'ai_news_daily/2026-10-23.csv':old.to_csv(index=False),'news_daily/2026-10-23.csv':current.to_csv(index=False)},None),'fixture')
+        found=read_days(self.repo,date(2026,10,22),date(2026,10,24))
+        self.assertEqual(len(found),2)
+        self.assertEqual(set(found['日期']),{'2026-10-22','2026-10-23'})
+        self.assertEqual(len(read_days(self.repo,date(2026,10,22),date(2026,10,22))),1)
+
 
 if __name__=='__main__':
     unittest.main()
