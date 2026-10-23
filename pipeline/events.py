@@ -5,7 +5,7 @@ from pathlib import Path
 from openpyxl import load_workbook
 
 SYSTEM_CODES={'UNKNOWN','NOT_RELEVANT','NON_CORE_SOURCE'}
-CDS_PAT = re.compile(r'\b(?:credit\s+default\s+swaps?|cds(?:\s+spreads?)?)\b|信用違約交換|信用違約互換|信用違約掉期', re.I)
+CDS_PAT = re.compile(r'(?<![A-Za-z])(?:credit\s+default\s+swaps?|cds(?:\s+spreads?)?)(?![A-Za-z])|信用違約交換|信用違約互換|信用違約掉期', re.I)
 ACTUAL_DEFAULT = re.compile(r'\b(?:(?:defaults?|defaulted)\s+on\s+(?:its\s+)?(?:loans?|debts?|bonds?|payments?)|missed?\s+(?:an?\s+)?(?:interest|debt|bond)\s+payment|failed?\s+to\s+repay|payment\s+default|event\s+of\s+default)\b|實際違約|未能償還|未支付利息|債務違約', re.I)
 
 
