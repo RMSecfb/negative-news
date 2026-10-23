@@ -185,10 +185,11 @@ def read_days(repository, start, end, market='ALL', revision=None):
         day += timedelta(days=1)
     # Legacy AI files are named by execution day, while stories may belong to
     # either preceding day. Read that bounded overlap when migrating old dates.
-    for extra_day in sorted({d + timedelta(days=n) for d in missing_days for n in (1, 2) if d + timedelta(days=n) > end}):
+    missing_dates = {d.isoformat() for d in missing_days}
+    for extra_day in sorted({d + timedelta(days=n) for d in missing_days for n in (1, 2)}):
         frame = normalize(csv_frame(repository.read(f'ai_news_daily/{extra_day.isoformat()}.csv', revision)))
         if not frame.empty:
-            frames.append(frame)
+            frames.append(frame[frame['日期'].isin(missing_dates)])
     result = pd.concat(frames, ignore_index=True).fillna('') if frames else pd.DataFrame()
     if not result.empty:
         result = result.drop_duplicates('news_id')
