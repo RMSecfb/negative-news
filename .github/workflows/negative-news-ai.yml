@@ -1,88 +1,70 @@
-name: US Risk News AI (free-tier POC)
+name: Unified Risk News · FinBERT + LLM
 
 on:
   workflow_dispatch:
     inputs:
-      scope:
-        type: choice
-        description: 'Market events (independent of legacy SP500 app) or hybrid scan'
-        options: [market, hybrid]
-        default: market
-      max_tickers:
-        description: 'SP500 names per run (0 means full list; start with 60)'
-        required: false
-        default: '60'
       max_llm:
-        description: 'Maximum LLM API calls (start with 35)'
+        description: 'Maximum NEW LLM requests this run (cached/manual results are reused)'
         required: false
         default: '35'
-      run_date:
-        description: 'Optional YYYY-MM-DD for backfill; use with no_fetch=true'
-        required: false
-        default: ''
-      no_fetch:
+      resume:
         type: boolean
-        description: 'Only reclassify existing data (no RSS fetch)'
+        description: 'Only analyze existing last-48h news; do not crawl again'
         default: false
+  push:
+    paths:
+      - 'news_requests/*.json'
   schedule:
-    - cron: '20 0 * * *' # 08:20 Asia/Taipei; UTC, may be delayed
+    - cron: '20 0 * * *' # 08:20 Asia/Taipei; previous 08:20 to current 08:20
 
 permissions:
   contents: write
+
 concurrency:
-  group: ai-risk-news-main
+  group: unified-risk-news-main
   cancel-in-progress: false
 
 jobs:
-  daily-ai:
+  unified-news:
     runs-on: ubuntu-latest
     timeout-minutes: 90
+    env:
+      GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      GITHUB_REPOSITORY: ${{ github.repository }}
+      PYTHONUNBUFFERED: '1'
+      LLM_DAILY_MAX: '120'
+      GROQ_MIN_INTERVAL_SECONDS: '20'
     steps:
       - uses: actions/checkout@v4
-        with:
-          persist-credentials: true
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
           cache: pip
-          cache-dependency-path: requirements-ai.txt
-      - name: Install minimal batch dependencies
-        run: pip install -r requirements-ai.txt
-      - name: Run regression tests
-        run: python -m unittest discover -s tests -v
-      - name: Validate LLM configuration
-        env:
-          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
-          MAX_LLM_CALLS: ${{ inputs.max_llm || '35' }}
+          cache-dependency-path: requirements.txt
+      - name: Install original crawler and CPU FinBERT dependencies
         run: |
-          if [[ "$MAX_LLM_CALLS" != "0" && -z "$GROQ_API_KEY" ]]; then
-            echo '::error::Set the GROQ_API_KEY repository Actions secret before enabling LLM analysis.'
-            exit 1
-          fi
-      - name: Run independent RSS crawler and LLM
+          pip install --timeout 180 torch --index-url https://download.pytorch.org/whl/cpu
+          pip install --timeout 180 -r requirements.txt
+      - uses: actions/cache@v4
+        with:
+          path: ~/.cache/huggingface
+          key: finbert-prosus-cpu-v1
+      - uses: actions/cache@v4
+        with:
+          path: 負面新聞整合資料/system.db
+          key: news-score-db-${{ runner.os }}-${{ github.run_id }}
+          restore-keys: news-score-db-${{ runner.os }}-
+      - name: Run regression and integration tests
+        run: python -m unittest discover -s tests -v
+      - name: Refresh verified US issuer directory
+        run: python -m pipeline.symbols
+      - name: Run unified schedule or drain queued manual requests
         env:
-          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
-          MAX_TICKERS: ${{ inputs.max_tickers || '60' }}
-          MAX_LLM_CALLS: ${{ inputs.max_llm || '35' }}
-          NO_FETCH: ${{ inputs.no_fetch || 'false' }}
-          SCAN_SCOPE: ${{ inputs.scope || 'market' }}
-          RUN_DATE: ${{ inputs.run_date || '' }}
+          MAX_LLM: ${{ inputs.max_llm || '35' }}
+          RESUME: ${{ inputs.resume || 'false' }}
         shell: bash
         run: |
           extra=()
-          if [[ "$NO_FETCH" == "true" ]]; then extra+=(--no-fetch); fi
-          if [[ -n "$RUN_DATE" ]]; then extra+=(--date "$RUN_DATE"); fi
-          python -m pipeline.run --scope "$SCAN_SCOPE" --max-tickers "$MAX_TICKERS" --max-llm "$MAX_LLM_CALLS" "${extra[@]}"
-      - name: Commit daily CSV and run report (not legacy snapshot)
-        shell: bash
-        run: |
-          git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add ai_news_daily/ ai_news_raw/
-          if git diff --cached --quiet; then echo 'Nothing changed'; exit 0; fi
-          git commit -m "AI risk news daily result"
-          for attempt in 1 2 3; do
-            git pull --rebase origin main && git push origin HEAD:main && exit 0
-            sleep 5
-          done
-          echo 'Could not push after retries'; exit 1
+          if [[ "$RESUME" == "true" ]]; then extra+=(--resume); fi
+          python -m pipeline.integrated --event "$GITHUB_EVENT_NAME" --max-llm "$MAX_LLM" "${extra[@]}"
