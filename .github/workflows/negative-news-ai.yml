@@ -43,6 +43,17 @@ jobs:
           cache-dependency-path: requirements-ai.txt
       - name: Install minimal batch dependencies
         run: pip install -r requirements-ai.txt
+      - name: Run regression tests
+        run: python -m unittest discover -s tests -v
+      - name: Validate LLM configuration
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          MAX_LLM_CALLS: ${{ inputs.max_llm || '35' }}
+        run: |
+          if [[ "$MAX_LLM_CALLS" != "0" && -z "$GROQ_API_KEY" ]]; then
+            echo '::error::Set the GROQ_API_KEY repository Actions secret before enabling LLM analysis.'
+            exit 1
+          fi
       - name: Run independent RSS crawler and LLM
         env:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
