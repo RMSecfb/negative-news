@@ -41,19 +41,23 @@ def analyze(record:dict, available_codes:list[str],api_key:str,code_labels:dict[
        },ensure_ascii=False)}],
        'response_format':{'type':'json_schema','json_schema':{'name':'risk_news_event','strict':True,'schema':SCHEMA}}}
     error=''
-    for attempt in range(3):
+    # A reserved request means exactly one HTTP attempt. Failed attempts remain queued.
+    for attempt in range(1):
         try:
             res=requests.post(API_URL,headers={'Authorization':'Bearer '+api_key,'Content-Type':'application/json'},json=payload,timeout=65)
             if res.status_code==429:
-                # Respect server rate control; cap retry to avoid stalled Actions.
-                try: delay=float(res.headers.get('retry-after','5'))
-                except ValueError: delay=5
-                if delay>35: raise RuntimeError('API_RATE_LIMIT_DAILY_OR_LONG_WAIT')
-                time.sleep(min(35,max(2,delay)))
-                continue
+                return None, {}, 'API_RATE_LIMIT_429'
             res.raise_for_status()
             ans=json.loads(res.json()['choices'][0]['message']['content'])
             if set(ans)!=set(SCHEMA['properties']): raise ValueError('schema fields mismatch')
+            if any(not isinstance(ans[k],bool) for k in ('relevant','confirmed_default','requires_review')):
+                raise ValueError('schema boolean fields mismatch')
+            if not isinstance(ans['event_codes'],list) or any(not isinstance(c,str) for c in ans['event_codes']):
+                raise ValueError('schema event codes mismatch')
+            if ans['event_status'] not in SCHEMA['properties']['event_status']['enum']:
+                raise ValueError('schema event status mismatch')
+            if any(not isinstance(ans[k],str) for k in ('company_mentioned','evidence','summary_zh')):
+                raise ValueError('schema text fields mismatch')
             if ans['evidence'] and ans['evidence'] not in evidence_input:
                 ans['evidence']=''
                 ans['requires_review']=True
