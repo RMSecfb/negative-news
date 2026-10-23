@@ -179,6 +179,14 @@ class UnifiedTests(unittest.TestCase):
         self.assertEqual(index.resolve('Meta','US')[0]['Ticker'],'META')
         self.assertEqual(index.resolve('MET$A','US')[0]['Ticker'],'MET$A')
 
+    def test_cache_is_issuer_scoped(self):
+        analyzer=Mock(side_effect=answer)
+        execute(self.repo,self.request,api_key='test',collector=lambda *a:(pd.DataFrame([item()]),[],[]),analyzer=analyzer,interval=0)
+        other={**item(ticker='AAPL'),'Company':'Apple'}
+        result=execute(self.repo,{**self.request,'id':'second-issuer'},api_key='test',collector=lambda *a:(pd.DataFrame([other]),[],[]),analyzer=analyzer,interval=0)
+        self.assertEqual(result['llm_calls'],1)
+        self.assertEqual(analyzer.call_count,2)
+
 
 if __name__=='__main__':
     unittest.main()
