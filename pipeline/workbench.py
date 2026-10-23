@@ -50,7 +50,7 @@ def render_results():
     st.caption(f'已完成 AI／人工判讀 {int(done.sum())} / {len(frame)} 筆。待補分析不等於無風險；待人工覆核表示已有判讀但仍須確認。')
     left, right = st.columns([2, 1])
     mode = left.radio('結果分類', ['主要負面事件', '完整新聞', '待人工覆核', '待補分析'], horizontal=True)
-    right.download_button('下載查詢期間合併 Excel', excel_bytes(frame), file_name='Negative_News_' + st.session_state.get('news_query_period', 'period') + '.xlsx', mime='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', use_container_width=True)
+    right.download_button('下載查詢期間合併 Excel', excel_bytes(frame, st.session_state.get('news_query_runs', [])), file_name='Negative_News_' + st.session_state.get('news_query_period', 'period') + '.xlsx', mime='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', use_container_width=True)
     current = {'主要負面事件': major(frame), '完整新聞': frame, '待人工覆核': review(frame), '待補分析': pending(frame)}[mode].copy()
     st.markdown('<span class="level-chip level3">Level 3 · 黃色</span> <span class="level-chip level4">Level 4 · 橘色</span> <span class="level-chip level5">Level 5 · 紅色</span>', unsafe_allow_html=True)
     edit = st.toggle('開啟人工編輯', key='unified_edit_enabled')
@@ -124,6 +124,7 @@ def query_panel():
             try:
                 with st.spinner('讀取排程與人工補跑合併結果…'):
                     frame = read_days(repository(), start, end, market)
+                    st.session_state['news_query_runs'] = read_json(repository().read('news_runs/index.json'), {'runs': []})['runs']
                 st.session_state.update(news_query_frame=frame, news_query_dates=(start, end), news_query_market=market, news_query_period=f'{start}_{end}_{market}')
             except Exception as exc:
                 st.error(f'查詢失敗：{exc}')

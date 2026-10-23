@@ -203,8 +203,12 @@ def rule_fields(record, rules, core_sources=None):
     return {f'Rule_{key}': str(chosen.get(key, '') or '') if chosen else '' for key in ('Event_Code', '事件中文', 'Level', 'Action')}
 
 
-def fingerprint(record, rule_hash):
+def fingerprint(record, rule_hash, scoped=True):
     fields = [MODEL, PROMPT_VERSION, rule_hash, record.get('Market', ''), record.get('Title', ''), record.get('Summary', '')]
+    if scoped:
+        # The prompt contains an issuer. The same article about two companies
+        # must not reuse a classification intended for the other company.
+        fields.append(record.get('news_id', ''))
     return hashlib.sha256(json.dumps(fields, ensure_ascii=False).encode()).hexdigest()
 
 
@@ -308,7 +312,7 @@ def execute(repository, request, repo=ROOT, api_key='', collector=None, analyzer
             r = apply_answer(r, cache[key]['answer'], rules, index)
             r['分析快取'] = '沿用'
             reused += 1
-        elif r.get('LLM狀態') == 'OK' and r.get('Prompt版本') == PROMPT_VERSION and str(r.get('LLM模型', '')) == MODEL and (not r.get('分析指紋') or r['分析指紋'] == key):
+        elif r.get('LLM狀態') == 'OK' and r.get('Prompt版本') == PROMPT_VERSION and str(r.get('LLM模型', '')) == MODEL and (not r.get('分析指紋') or r['分析指紋'] in (key, fingerprint(r, rule_hash, scoped=False))):
             # Valid old daily results remain available when first upgrading to the unified store.
             answer = {'company_mentioned': r.get('LLM辨識公司', ''), 'event_codes': str(r.get('LLM事件代碼', '')).split('|') if r.get('LLM事件代碼') else [],
                       'event_status': r.get('事件狀態') or 'UNCLEAR', 'confirmed_default': truth(r.get('Confirmed_Default')),
