@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-23",
+  "rss_calls": 31,
+  "ticker_count": 11,
+  "sp500_total": 503,
+  "errors": [],
+  "scan_mode": "ROTATING_SUBSET",
+  "news_rows": 118,
+  "llm_calls": 15,
+  "pending": 53,
+  "processed": 15,
+  "no_key": false,
+  "raw_distinct": 118,
+  "final_rows": 118,
+  "note": "AI CSV is separate from legacy Streamlit snapshot; no replacement of old risk_news_daily."
+}
