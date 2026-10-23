@@ -3,6 +3,11 @@ name: US Risk News AI (free-tier POC)
 on:
   workflow_dispatch:
     inputs:
+      scope:
+        type: choice
+        description: 'Market events (independent of legacy SP500 app) or hybrid scan'
+        options: [market, hybrid]
+        default: market
       max_tickers:
         description: 'SP500 names per run (0 means full list; start with 60)'
         required: false
@@ -60,13 +65,14 @@ jobs:
           MAX_TICKERS: ${{ inputs.max_tickers || '60' }}
           MAX_LLM_CALLS: ${{ inputs.max_llm || '35' }}
           NO_FETCH: ${{ inputs.no_fetch || 'false' }}
+          SCAN_SCOPE: ${{ inputs.scope || 'market' }}
           RUN_DATE: ${{ inputs.run_date || '' }}
         shell: bash
         run: |
           extra=()
           if [[ "$NO_FETCH" == "true" ]]; then extra+=(--no-fetch); fi
           if [[ -n "$RUN_DATE" ]]; then extra+=(--date "$RUN_DATE"); fi
-          python -m pipeline.run --max-tickers "$MAX_TICKERS" --max-llm "$MAX_LLM_CALLS" "${extra[@]}"
+          python -m pipeline.run --scope "$SCAN_SCOPE" --max-tickers "$MAX_TICKERS" --max-llm "$MAX_LLM_CALLS" "${extra[@]}"
       - name: Commit daily CSV and run report (not legacy snapshot)
         shell: bash
         run: |
