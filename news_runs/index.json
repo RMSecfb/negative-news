@@ -1,0 +1,31 @@
+{
+  "runs": [
+    {
+      "id": "a62af6ad2a0044b7a685a4178159b27a",
+      "type": "manual",
+      "status": "success",
+      "start": "2026-10-23T00:16:00+08:00",
+      "end": "2026-10-24T00:16:00+08:00",
+      "market": "US",
+      "methods": "方法一|方法二",
+      "ai": true,
+      "started_at": "2026-10-24T00:19:11.949238+08:00",
+      "finished_at": "2026-10-24T00:19:18.833437+08:00",
+      "llm_calls": 0,
+      "cache_reused": 33,
+      "pending": 0,
+      "review": 30,
+      "major": 17,
+      "selected_company_count": 0,
+      "collected": 0,
+      "rows": 33,
+      "errors": [],
+      "stages": [
+        "沿用已擷取資料；不重新抓取"
+      ],
+      "quota_reserved": 1,
+      "新增": 0,
+      "重複合併": 0
+    }
+  ]
+}
