@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+.streamlit/secrets.toml
+負面新聞整合資料/
+*.tmp
+config/us_symbol_reference.csv
