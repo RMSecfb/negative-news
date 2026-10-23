@@ -2119,28 +2119,12 @@ def _github_push_history(frame: pd.DataFrame, sha: str | None) -> bool:
 
 
 def append_negative_history_to_github(event_frame: pd.DataFrame, event_date: datetime) -> bool:
-    """把今天的負面新聞彙整成「日期 x 公司 x 則數」寫回 GitHub repo。
-    沒設定 GITHUB_TOKEN/GITHUB_REPO 就直接跳過（不影響抓取流程本身）。"""
-    if not _github_config() or event_frame is None or event_frame.empty:
-        return False
-    daily = event_frame.copy()
-    daily["Level"] = pd.to_numeric(daily.get("Level"), errors="coerce").fillna(0).astype(int)
-    daily["Ticker"] = daily.get("Ticker", "").fillna("").astype(str).str.strip()
-    daily["Company"] = daily.get("Company", "").fillna("").astype(str).str.strip()
-    daily = daily[daily["Ticker"] != ""]
-    if daily.empty:
-        return False
-    grouped = daily.groupby(["Ticker", "Company"]).agg(則數=("Ticker", "size"), 最高Level=("Level", "max")).reset_index()
-    grouped["日期"] = pd.to_datetime(event_date.date())
+    """Recompute same-date summary from old snapshot + current run, never discard other tickers."""
+    from pipeline.legacy_bridge import merge_daily_history
+    return merge_daily_history(event_frame, event_date,
+        _github_config, _github_risk_news_path, _github_headers,
+        _github_fetch_history, _github_push_history, load_negative_history.clear)
 
-    history, sha = _github_fetch_history()
-    if not history.empty:
-        history = history[history["日期"].dt.date != event_date.date()]  # 同一天重跑就整批覆蓋，不會重複累加
-    merged = pd.concat([history, grouped], ignore_index=True)
-    pushed = _github_push_history(merged, sha)
-    if pushed:
-        load_negative_history.clear()
-    return pushed
 
 
 # ============================================================
@@ -2206,15 +2190,13 @@ def _github_push_risk_news_snapshot(file_bytes: bytes, snapshot_date: date, sha:
 
 
 def save_risk_news_snapshot_to_github(frame: pd.DataFrame, snapshot_date: date) -> bool:
-    """把某一天的風險新聞明細整份存成 Excel 檔回存 GitHub，每次都整批覆蓋（不是累加）。
-    每天爬蟲跑完會自動呼叫一次；之後若有人工覆核修改，也會呼叫這個函式重新整批覆蓋，
-    確保存的版本永遠反映最新的人工修正結果（新的蓋掉舊的）。沒設定 GitHub Secrets 就直接跳過。"""
-    if not _github_config() or frame is None or frame.empty:
-        return False
-    path = _github_risk_news_path(snapshot_date)
-    sha = _github_get_file_sha(path)
-    file_bytes = _dataframe_to_excel_bytes(frame)
-    return _github_push_risk_news_snapshot(file_bytes, snapshot_date, sha)
+    """Merge with existing same-date data; preserve earlier universe and manual reviews."""
+    from pipeline.legacy_bridge import merge_daily_snapshot
+    return merge_daily_snapshot(frame, snapshot_date,
+        _github_config, _github_risk_news_path, _github_headers,
+        _github_get_file_sha, _dataframe_to_excel_bytes,
+        _github_push_risk_news_snapshot)
+
 
 
 def _load_negative_history_from_local(output_dir_str: str) -> pd.DataFrame:
@@ -3285,3 +3267,38 @@ if saved_crawl:
         if not saved_crawl["is_today"]:
             st.caption("今日新聞尚未完成；目前提供最近一次執行結果")
 
+
+
+# === NEGATIVE_NEWS_AI_ADDON_V1 ===
+# This independent table does not overwrite the original Streamlit dashboard.
+try:
+    import io as _ai_io
+    st.divider()
+    st.subheader("AI 事件辨識（GitHub Actions）")
+    st.caption("此區顯示新增的批次 LLM 結果；原本的新聞搜尋、歷史統計與人工覆核功能保留。")
+    _ai_day = st.date_input("AI 批次日期", value=datetime.now(TAIPEI).date(), key="ai_addon_day")
+    try:
+        _ai_repo = st.secrets.get("GITHUB_REPO", "RMSecfb/negative-news")
+    except Exception:
+        _ai_repo = "RMSecfb/negative-news"
+    _ai_url = f"https://raw.githubusercontent.com/{_ai_repo}/main/ai_news_daily/{_ai_day.isoformat()}.csv"
+    if st.button("讀取 AI 分析結果", key="load_ai_news"):
+        _ai_response = requests.get(_ai_url, timeout=18)
+        if _ai_response.status_code == 200:
+            _ai_data = pd.read_csv(_ai_io.BytesIO(_ai_response.content), dtype=str).fillna('')
+            st.session_state['ai_addon_frame'] = _ai_data
+            st.session_state['ai_addon_loaded_date'] = _ai_day.isoformat()
+        elif _ai_response.status_code == 404:
+            st.info("這天尚未有 GitHub Actions 的 AI CSV，請選擇已執行日期。")
+        else:
+            st.warning(f"讀取 AI CSV 失敗：HTTP {_ai_response.status_code}")
+    _ai_data = st.session_state.get('ai_addon_frame',pd.DataFrame())
+    if not _ai_data.empty:
+        st.caption(f"目前載入日期：{st.session_state.get('ai_addon_loaded_date','')}｜新聞 {_ai_data.shape[0]} 筆")
+        _ai_filter = st.selectbox("AI 分類狀態", ["全部", "已分類", "待人工覆核", "無關新聞", "未入選初篩"], key="ai_addon_filter")
+        _ai_show = _ai_data if _ai_filter == '全部' else _ai_data[_ai_data.get('分類狀態',pd.Series('',index=_ai_data.index)) == _ai_filter]
+        _ai_cols = [x for x in ("Ticker","Company","Title","Event_Code","事件中文","Level","事件狀態","分類狀態","需要人工覆核","中文摘要","Evidence","URL","監控池") if x in _ai_show.columns]
+        st.dataframe(_ai_show[_ai_cols],use_container_width=True,hide_index=True)
+        st.download_button("下載 AI CSV",_ai_show.to_csv(index=False).encode('utf-8-sig'),file_name=f"AI_News_{st.session_state.get('ai_addon_loaded_date','')}.csv",mime='text/csv')
+except Exception as _ai_error:
+    st.warning(f"AI 模組讀取失敗（不影響原網站）：{_ai_error}")
