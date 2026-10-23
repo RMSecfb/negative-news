@@ -435,5 +435,17 @@
       "relevant": true,
       "requires_review": true
     }
+  },
+  "5561c485d0bf6a8f7f3c02db776ad98b37ba9deae1b4991a83a6428d34222d39": {
+    "answer": {
+      "company_mentioned": "Meta Platforms",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前沒有足夠證據顯示 Meta Platforms 發生任何信用風險事件。"
+    }
   }
 }
