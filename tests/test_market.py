@@ -11,8 +11,14 @@ except ModuleNotFoundError:
     sys.modules['requests']=types.ModuleType('requests')
 from pipeline.market import recent_records, deduplicate_headlines, priority
 from pipeline.ingest import fetch_news
+from pipeline.run import classify
 
 class MarketTests(unittest.TestCase):
+    def test_unconfirmed_default_is_not_classified_as_default(self):
+        frame=pd.DataFrame([{'Ticker':'CRWV','Title':'Possible default','監控池':'CUSTOM','LLM狀態':'OK','Event_Code':'DEFAULT','Level':'5','Confirmed_Default':'False','事件狀態':'RUMORED'}])
+        out,_=classify(frame,[], '',0,'2026-10-23')
+        self.assertEqual(out.iloc[0]['Event_Code'],'')
+        self.assertEqual(out.iloc[0]['分類狀態'],'待人工覆核')
     def test_dates(self):
         df=pd.DataFrame({'Published Time':['Fri, 23 Oct 2026 12:00:00 GMT','Tue, 28 Jul 2026 07:00:00 GMT','invalid','Sat, 24 Oct 2026 12:00:00 GMT']})
         result, excluded=recent_records(df,datetime(2026,10,23,15,tzinfo=timezone.utc))
