@@ -447,5 +447,658 @@
       "requires_review": true,
       "summary_zh": "目前沒有足夠證據顯示 Meta Platforms 發生任何信用風險事件。"
     }
+  },
+  "3f2494e218bc0e1eecba3fd070542744a25a1d2d49b9957593ed742cdfc67af3": {
+    "answer": {
+      "company_mentioned": "Getty Images",
+      "event_codes": [
+        "BANKRUPTCY"
+      ],
+      "event_status": "CONFIRMED",
+      "confirmed_default": false,
+      "evidence": "Getty Images Files Prepackaged Chapter 11 in Delaware",
+      "summary_zh": "Getty Images 申請預先包裝的第11章破產程序，表明公司正進入破產程序。",
+      "relevant": true,
+      "requires_review": true
+    }
+  },
+  "858cacb37eb67b542539e06c9db58dd953174c1112c39812f19141d474956f9b": {
+    "answer": {
+      "company_mentioned": "Getty Images",
+      "event_codes": [
+        "BANKRUPTCY"
+      ],
+      "event_status": "CONFIRMED",
+      "confirmed_default": false,
+      "evidence": "Getty Images’ Reported Chapter 11 Filing Would Cancel Shares",
+      "summary_zh": "Getty Images 已報告將進行第 11 章破產申請，將取消其股份。",
+      "relevant": true,
+      "requires_review": true
+    }
+  },
+  "ee60dbb626b10b42906c52973342d901ef7b3d71440b43fc63cd28043abbe400": {
+    "answer": {
+      "company_mentioned": "West Palm Beach bakery",
+      "event_codes": [
+        "BANKRUPTCY"
+      ],
+      "event_status": "CONFIRMED",
+      "confirmed_default": false,
+      "evidence": "West Palm Beach bakery files Chapter 11 bankruptcy with $2 million in liabilities",
+      "summary_zh": "西棕櫚海灘烘焙店申請第11章破產，負債約200萬美元。",
+      "relevant": true,
+      "requires_review": true
+    }
+  },
+  "165aaf928e1ab154225c3474a29df9f97a5300f7b263bdc6622b830e38a6a440": {
+    "answer": {
+      "company_mentioned": "Getty Images",
+      "event_codes": [
+        "BANKRUPTCY"
+      ],
+      "event_status": "CONFIRMED",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "Getty Images 已經提交第11章破產申請，正式進入破產程序。",
+      "relevant": true,
+      "requires_review": true
+    }
+  },
+  "88924c348bff62bff0ac8702762fc6d7b14f97483fccaf0c8739797c7176bb4f": {
+    "answer": {
+      "company_mentioned": "Meta",
+      "event_codes": [
+        "CDS_SPREAD_WIDENING",
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "MARKET_IMPLIED",
+      "confirmed_default": false,
+      "evidence": "Meta崩跌近7% 自由現金流轉負、CDS利差升至歷史新高",
+      "summary_zh": "Meta 股價下跌近7%，自由現金流為負，CDS利差升至歷史新高，顯示市場對其信用風險的擔憂。",
+      "relevant": true,
+      "requires_review": true
+    }
+  },
+  "636ff7b98c973316542530b9db36c941119ed7b3d4e0a29ff671af38868cf549": {
+    "answer": {
+      "company_mentioned": "",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "無足夠資訊判斷是否有信用風險事件。",
+      "relevant": true,
+      "requires_review": true
+    }
+  },
+  "96fe9c4aea452cafb38eb9b316863b8b873d4bac780bc7626045f065fb864e0c": {
+    "answer": {
+      "company_mentioned": "CoreWeave",
+      "event_codes": [
+        "CDS_SPREAD_WIDENING",
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "MARKET_IMPLIED",
+      "confirmed_default": false,
+      "evidence": "CDS利差飆升",
+      "summary_zh": "CoreWeave 股價在一個月內下跌36%，同時其 CDS 利差急劇擴大，顯示市場對其信用風險的擔憂升高，但並未有任何明確的違約或破產訊息。",
+      "relevant": true,
+      "requires_review": false
+    }
+  },
+  "7ae45cdb4433a4a84f6cef6cb6bc376cd7a669f325e1703a3f7005a0c8de4359": {
+    "answer": {
+      "company_mentioned": "CoreWeave",
+      "event_codes": [
+        "CDS_SPREAD_WIDENING",
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "MARKET_IMPLIED",
+      "confirmed_default": false,
+      "evidence": "股價月內跌36%、CDS利差飆升 AI雲服務商CoreWeave深陷信心危機",
+      "summary_zh": "CoreWeave 股價在一個月內下跌36%，同時 CDS 利差急劇擴大，顯示市場對其信用風險的擔憂升高，但並未確認任何違約或其他重大事件。",
+      "relevant": true,
+      "requires_review": false
+    }
+  },
+  "95e7d13ed0dbe46f108916eb1a8e616902b0379935ad571ba5596aff71b5d813": {
+    "answer": {
+      "company_mentioned": "",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "無相關信用風險事件。",
+      "relevant": true,
+      "requires_review": true
+    }
+  },
+  "13b14efb0652327cd3fa331170283475c7ba9b53bd3863784fda7f0121dd7e28": {
+    "answer": {
+      "company_mentioned": "",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "本新聞未提及任何公司債務違約或信用事件，僅報導股價波動與AI支出疑慮。",
+      "relevant": true,
+      "requires_review": true
+    }
+  },
+  "5c6e5e1338211ad9ff12890c09dea50568a68fb8a73cb5671e7f1edfdeae2c60": {
+    "answer": {
+      "company_mentioned": "無",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "本新聞未提及任何公司債務違約、CDS利差擴大或其他信用風險事件，僅報導股價變動。",
+      "relevant": true,
+      "requires_review": true
+    }
+  },
+  "f16e643da6decfa9cfa028489943f1f58dead9ac1463b0c7049f61a6a5091721": {
+    "answer": {
+      "company_mentioned": "",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "本新聞未提供任何關於公司違約、破產或其他信用風險事件的具體訊息，僅提及美股市場整體走勢。",
+      "relevant": true,
+      "requires_review": true
+    }
+  },
+  "a0d00b59e76935d81428a91f3258118f0cfecaecf3ded0e60172850efedbba04": {
+    "answer": {
+      "company_mentioned": "",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "無可辨識的信用風險事件。",
+      "relevant": true,
+      "requires_review": true
+    }
+  },
+  "3105206721b31ed41e0dbf793d7370d073ecbb3f058416614c21f9115576dccc": {
+    "answer": {
+      "company_mentioned": "CoreWeave",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "此新聞未提及 CoreWeave 之任何信用風險事件，無法確認是否有違約、破產或其他相關風險。",
+      "relevant": true,
+      "requires_review": true
+    }
+  },
+  "695fb63e1bb75f4694515d67896cc171598cabd881c54d393386eb4ba33be88d": {
+    "answer": {
+      "company_mentioned": "CoreWeave",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "文章未明確指出 CoreWeave 已經違約或發生任何具體信用事件，僅提及若發生違約情況時華爾街可能的反應，故目前無法確定是否屬於已確認違約或其他信用風險事件。",
+      "relevant": true,
+      "requires_review": true
+    }
+  },
+  "31ac25c21d4bebfbab59df4480f0ddb4c09ea712500f7bdf0468bebdce0a3dfb": {
+    "answer": {
+      "company_mentioned": "CoreWeave",
+      "event_codes": [
+        "LIQUIDITY_CRISIS"
+      ],
+      "event_status": "RUMORED",
+      "confirmed_default": false,
+      "evidence": "CoreWeave債務壓力升溫 市值蒸發440億美元",
+      "summary_zh": "CoreWeave 的債務壓力升溫，市值蒸發 440 億美元，顯示公司可能面臨流動性危機，但尚未確認違約或其他重大事件。",
+      "relevant": true,
+      "requires_review": true
+    }
+  },
+  "f0d840da549481f47e5ec484f645ac865679395b49dae53f0b418001a63b3846": {
+    "answer": {
+      "company_mentioned": "Meta",
+      "event_codes": [
+        "CDS_SPREAD_WIDENING"
+      ],
+      "event_status": "MARKET_IMPLIED",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "Meta 的信用風險指標顯示 CDS 利差擴大，市場對其債務風險擔憂升高，但並未確認任何違約或其他財務事件。",
+      "relevant": true,
+      "requires_review": true
+    }
+  },
+  "95c7c2a6b8c17b4c70e3b89273c3388b6d6ba20b97f994efaef9bf6d3a42bbf0": {
+    "answer": {
+      "company_mentioned": "Capcom",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "Capcom 確認發生資料外洩事件，未提及任何債務違約或信用風險升高的訊息。",
+      "relevant": true,
+      "requires_review": true
+    }
+  },
+  "1a98cdbca58ab019d9282ae07fe1105d0d3727cb89d10bdec72a3b1c9a73b6c6": {
+    "answer": {
+      "company_mentioned": "CoreWeave",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "核心計算公司CoreWeave的債務風險被評估為60％違約機率，但目前並未確認實際違約事件。",
+      "relevant": true,
+      "requires_review": true
+    }
+  },
+  "2ef7099c2881d6f63f62a0fea8f75b530f8512ca5179af0d55955a14ec110dbe": {
+    "answer": {
+      "company_mentioned": "",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "此新聞報導關於曼哈頓律師事務所的資料外洩事件，並未提及任何公司債務違約或信用風險相關訊息。",
+      "relevant": true,
+      "requires_review": true
+    }
+  },
+  "e748226659831de0bb4541d1da055931db5b8a4e6d4d94283f744d7443920005": {
+    "answer": {
+      "company_mentioned": "Capcom",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "Capcom 近期發生資料外洩事件，曝光約 1,170 萬筆帳號紀錄，但目前並未有任何關於公司債務違約或信用風險升高的具體訊息。",
+      "relevant": true,
+      "requires_review": true
+    }
+  },
+  "101eb1810e77321e67644d25789ae03393ad85e6b49c0c0e22d2fbaf0b2d4572": {
+    "answer": {
+      "company_mentioned": "Karooooo",
+      "event_codes": [
+        "EARNINGS_MISS"
+      ],
+      "event_status": "CONFIRMED",
+      "confirmed_default": false,
+      "evidence": "Karooooo reports record profit. Earnings miss hit Karooooo stock",
+      "summary_zh": "Karooooo 公布創紀錄利潤，但財報未達預期，股價受到影響。",
+      "relevant": true,
+      "requires_review": true
+    }
+  },
+  "74f36f7ff784fc6dd497785eeb98a4085a2f388428b2056d6cece7e93496127a": {
+    "answer": {
+      "company_mentioned": "CoreWeave",
+      "event_codes": [
+        "DEFAULT"
+      ],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "核心算力公司CoreWeave被指可能違約，但目前尚無確定的違約證據，需進一步調查確認。",
+      "relevant": true,
+      "requires_review": true
+    }
+  },
+  "0c54163024f73530fe8a69871bef0aa1ec59c0fcaec0fd0089d1f707e67bd6cb": {
+    "answer": {
+      "company_mentioned": "Chesapeake",
+      "event_codes": [
+        "CYBER_ATTACK",
+        "DATA_BREACH"
+      ],
+      "event_status": "CONFIRMED",
+      "confirmed_default": false,
+      "evidence": "Data breach at Chesapeake business",
+      "summary_zh": "本新聞報導指出 Chesapeake 企業遭遇資料外洩事件，屬於資安攻擊與資料外洩類別，並未涉及債務違約或信用風險升高。",
+      "relevant": true,
+      "requires_review": true
+    }
+  },
+  "cc5e4ca2634ed6b55f67ad0b7f897205979738c904cd55e93372f6ca8ba983df": {
+    "answer": {
+      "company_mentioned": "Northern Light Health",
+      "event_codes": [
+        "DATA_BREACH"
+      ],
+      "event_status": "MARKET_IMPLIED",
+      "confirmed_default": false,
+      "evidence": "Northern Light Health lab manager suffers data breach",
+      "summary_zh": "北方光健康實驗室經理遭遇資料外洩事件，未涉及債務違約或其他財務風險。",
+      "relevant": true,
+      "requires_review": true
+    }
+  },
+  "d0c89ac0978ce4a4da75684fb2fc8361eed3370fa3e36faeffd7772447123b13": {
+    "answer": {
+      "company_mentioned": "Sands",
+      "event_codes": [
+        "EARNINGS_MISS",
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "CONFIRMED",
+      "confirmed_default": false,
+      "evidence": "Sands Boosts Dividend 20%, But Stock Slumps Following Q3 Earnings Miss",
+      "summary_zh": "Sands 於第三季財報不及預期，股價大幅下跌，儘管公司提升股利20%。",
+      "relevant": true,
+      "requires_review": true
+    }
+  },
+  "f80136a94c40ca97648545179781402c508a2190f1e5997765e9ff086f7a0ef5": {
+    "answer": {
+      "company_mentioned": "Meta Platforms",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前無足夠資訊判斷 Meta Platforms 是否存在信用風險事件。"
+    }
+  },
+  "47c1b31266d05ddaa22517da130de1c8045ed17424f50ac7a377447ca0860fa0": {
+    "answer": {
+      "company_mentioned": "Meta Platforms",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "此新聞未提及任何與信用風險相關的事件，無法判斷是否存在違約或其他信用風險指標。"
+    }
+  },
+  "c702ff49b27d3a36cd9fc7128dcc888df5333e430bd9d1a59bb0c0b3297250f2": {
+    "answer": {
+      "company_mentioned": "Meta Platforms",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前沒有足夠證據顯示 Meta Platforms 發生任何信用風險事件。"
+    }
+  },
+  "3d2f7d8d1cc6978ee5580259eb22d769f60414435b4966fccc4a7efcfab3006b": {
+    "answer": {
+      "company_mentioned": "Meta Platforms",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前沒有足夠證據顯示 Meta Platforms 相關的信用風險事件。"
+    }
+  },
+  "fa06725b52e12ba1dac5240c7b40621c70203942309f18bf710efb12eb141cfc": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Meta Platforms",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "Meta Platforms 將於 11 月 20 日實施新的商業條款，並未涉及任何信用風險事件。",
+      "requires_review": true
+    }
+  },
+  "3b3ecec0bb0d4667d56b8eca57711b8f7fc32ca367c1d3a3c0daf724e7aa6deb": {
+    "answer": {
+      "company_mentioned": "Meta Platforms",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "目前沒有足夠證據顯示 Meta Platforms 發生任何信用風險事件。",
+      "relevant": true,
+      "requires_review": true
+    }
+  },
+  "16a4321cafcedd1de655faef6363e09c943abbfca2e21020dcd4978852904046": {
+    "answer": {
+      "company_mentioned": "Meta Platforms",
+      "relevant": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "無足夠證據表明 Meta Platforms 目前存在任何信用風險事件。",
+      "requires_review": true
+    }
+  },
+  "da1d8d50a8880e36b4c6f7fe3437a374f0f1c55828e104ac239cb9cfd44548d5": {
+    "answer": {
+      "company_mentioned": "Meta Platforms",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "巴西總統指控Meta操縱大選，但未涉及任何信用風險或債務違約訊息。"
+    }
+  },
+  "cd41978c9789b32ffc7b5d3c66226f253f4d8249a787a7cdb6610e88ba8266b7": {
+    "answer": {
+      "company_mentioned": "Meta Platforms",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前無足夠資訊判斷 Meta Platforms 是否存在信用風險事件。"
+    }
+  },
+  "4f99cded53ff3e3c49b05cb98ccb3dbdabe3155f942fa5ce4ab5675ff0792f09": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Meta Platforms",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "此新聞未提及任何信用風險事件。",
+      "requires_review": true
+    }
+  },
+  "e80328332c4f74df8e9629757ce5aca0978b96338cf043ff9bf41b5a74327514": {
+    "answer": {
+      "company_mentioned": "Meta Platforms",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "Meta Platforms 的股價下跌並未顯示任何明確的信用風險事件。"
+    }
+  },
+  "db65943cb30691cbfcfe6b2a7090d142ae715f7a8ef19d34e1151ebf7ddcd53a": {
+    "answer": {
+      "company_mentioned": "Meta Platforms",
+      "relevant": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "無足夠資訊表明 Meta Platforms 之信用風險事件。",
+      "requires_review": true
+    }
+  },
+  "4ef9cf41dc72910c07585b78c215ad5d73cf5f5066d0f549bf40ee5ecd2443d9": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Meta Platforms",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "目前無足夠證據顯示 Meta Platforms 相關信用風險事件。",
+      "requires_review": true
+    }
+  },
+  "21528d2dd40eb81f0d101c585a9eb53e9dd572004397a890ae760bf47f3ae0c9": {
+    "answer": {
+      "company_mentioned": "Meta Platforms",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前沒有足夠資訊顯示 Meta Platforms 相關的信用風險事件。"
+    }
+  },
+  "2902f0283f78587c48ffddceaf65e4f00ab9320a538b70310b7a65cb2e66c32c": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Meta Platforms",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "requires_review": false,
+      "summary_zh": "Meta Platforms 的目標價被小摩上調至 940 美元，並未涉及任何信用風險或違約訊息。"
+    }
+  },
+  "9a4374bb2beaeb0b1ed12ac500e3d948f565b7eee6a6daecbeaefe1dd6133486": {
+    "answer": {
+      "company_mentioned": "Meta Platforms",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "Meta Platforms 目前沒有任何明確的違約或信用風險事件。"
+    }
+  },
+  "7a654fc0a5274169b4f9fe947b8b8ec03dde033c6251e2de209d9ba7c3c6001a": {
+    "answer": {
+      "company_mentioned": "Meta Platforms",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前沒有足夠證據顯示 Meta Platforms 相關的信用風險事件。"
+    }
+  },
+  "b4f5e9f012bc989693d27c1622d2ebc0f82bc3027570c6eb88919f68612e818b": {
+    "answer": {
+      "company_mentioned": "CoreWeave",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "目前無足夠資訊確認 CoreWeave 是否有違約或其他信用風險事件。",
+      "relevant": true,
+      "requires_review": true
+    }
+  },
+  "bdd24ef76a4546a256b32abb28cf5302a1284bf39f2af20abba1b36fa21f18bb": {
+    "answer": {
+      "company_mentioned": "CoreWeave",
+      "event_codes": [
+        "CDS_SPREAD_WIDENING"
+      ],
+      "event_status": "MARKET_IMPLIED",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "核心雲端公司核心債務再次下跌，市場對其信用風險的擔憂升高，導致 CDS 利差擴大。",
+      "relevant": true,
+      "requires_review": true
+    }
+  },
+  "4d6c8b7e7d6c2da825bd038a8178b6c9987a58255a01270f95766656ce678a43": {
+    "answer": {
+      "company_mentioned": "CoreWeave",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "目前缺乏足夠資訊來判斷 CoreWeave 是否存在信用風險事件。",
+      "relevant": true,
+      "requires_review": true
+    }
+  },
+  "9a8b6db6b9fb5ef6fbca7c90bc14efb93749f3f82f0d51ff32cc8e02991479f8": {
+    "answer": {
+      "company_mentioned": "CoreWeave",
+      "event_codes": [
+        "CDS_SPREAD_WIDENING"
+      ],
+      "event_status": "MARKET_IMPLIED",
+      "confirmed_default": false,
+      "evidence": "CoreWeave Stock Tumbles as Bernstein Cuts Target on AI Debt Fears",
+      "summary_zh": "核心算力公司CoreWeave因市場對其AI債務的擔憂，股價大幅下跌，顯示投資者對其信用風險的擔憂升高。",
+      "relevant": true,
+      "requires_review": false
+    }
+  },
+  "f4eb6c4702ab24462aa85a061a50c385a20fa2649060066185f80a5055aff49c": {
+    "answer": {
+      "company_mentioned": "FuelCell Energy, Inc.",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "本新聞未提供任何關於 FuelCell Energy, Inc. 的信用違約、CDS利差擴大或其他信用風險事件的具體訊息，僅提及投資者有機會領導該公司證券欺詐訴訟。",
+      "relevant": true,
+      "requires_review": true
+    }
+  },
+  "d2d328d3d98076805e6f6b9cb8237e2e9e200e6d9bb5e0fa882c8acf35b97fee": {
+    "answer": {
+      "company_mentioned": "CoreWeave",
+      "event_codes": [
+        "CDS_SPREAD_WIDENING"
+      ],
+      "event_status": "MARKET_IMPLIED",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "核心雲端公司CoreWeave的債務警訊升高，市場對其信用風險有所擔憂，但並未確認實際違約或其他重大財務事件。",
+      "relevant": true,
+      "requires_review": true
+    }
+  },
+  "66f86d7d3aa8fc873a061c7ceda00a72f77e5f42e9f1c60b74e72af9e961e92a": {
+    "answer": {
+      "company_mentioned": "Nvidia",
+      "event_codes": [
+        "CDS_SPREAD_WIDENING"
+      ],
+      "event_status": "MARKET_IMPLIED",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "輝達警告資本稀缺，AI擴張將依賴巨額發債，可能提升市場對其信用風險的擔憂。",
+      "relevant": true,
+      "requires_review": true
+    }
+  },
+  "96228df4d354588d61a5e4fee402dae26f2644c637ffd31d091328d77cef2bdb": {
+    "answer": {
+      "company_mentioned": "Meta Platforms",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "Meta Platforms 相關新聞未提及任何信用風險事件，無法判斷是否存在違約或其他信用事件。"
+    }
   }
 }
