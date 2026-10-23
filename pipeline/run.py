@@ -10,6 +10,7 @@ import pandas as pd
 from .common import load_csv, save_csv, merge_records, news_key
 from .events import load_rules, candidate_rules, CDS_PAT, ACTUAL_DEFAULT, pick_rule, SYSTEM_CODES
 from .ingest import fetch_news
+from .market import priority, recent_records, deduplicate_headlines, coverage
 from .llm import analyze, MODEL, PROMPT_VERSION
 
 TPE=ZoneInfo('Asia/Taipei')
@@ -45,12 +46,7 @@ def useful_candidate(r):
     except (TypeError,ValueError):return False
 
 def get_priority(r):
-    t=str(r.get('Title',''))
-    # Order mandatory credit cases before catch-all topics; then market discovery.
-    return (100 if CDS_PAT.search(t) or ACTUAL_DEFAULT.search(t) else 0)+\
-           (30 if r.get('Keyword候選','') else 0)+\
-           (25 if 'MARKET_DISCOVERY' in str(r.get('監控池','')) else 0)+\
-           (10 if r.get('FinBERT','') else 0)
+    return priority(r)
 
 def classify(frame:pd.DataFrame,rules:list[dict],api_key:str,max_llm:int,daystr:str):
     if frame.empty:return pd.DataFrame(columns=OUTPUT_FIELDS),{'llm_calls':0,'pending':0}
@@ -136,6 +132,7 @@ def run():
     p.add_argument('--date',default=datetime.now(TPE).date().isoformat())
     p.add_argument('--max-tickers',type=int,default=int(os.getenv('MAX_TICKERS','60')))
     p.add_argument('--max-llm',type=int,default=int(os.getenv('MAX_LLM_CALLS','35')))
+    p.add_argument('--scope',choices=['market','hybrid'],default='market')
     p.add_argument('--no-fetch',action='store_true',help='Reprocess existing snapshot and AI raw news without RSS.')
     a=p.parse_args(); day=datetime.fromisoformat(a.date).replace(tzinfo=TPE)
     if not a.no_fetch and a.date != datetime.now(TPE).date().isoformat():
@@ -146,12 +143,19 @@ def run():
     oldraw=load_csv(rawfile)
     oldresult=load_csv(repo/'ai_news_daily'/f'{a.date}.csv')
     if a.no_fetch: fresh=pd.DataFrame(); crawl_stats={'fetch':'skipped'}
-    else: fresh,crawl_stats=fetch_news(repo,day,a.max_tickers)
-    legacy=normalize_legacy(repo,a.date)
+    else: fresh,crawl_stats=fetch_news(repo,day,a.max_tickers,scope=a.scope)
+    legacy=normalize_legacy(repo,a.date) if a.scope=='hybrid' else pd.DataFrame()
     merged=merge_records(oldraw,fresh)
     merged=merge_records(merged,legacy)
+    reference_time=datetime.now(TPE) if a.date==datetime.now(TPE).date().isoformat() else day.replace(hour=23,minute=59,second=59)
+    merged, excluded_dates=recent_records(merged,reference_time)
+    if a.scope=='market' and not merged.empty:
+        merged=merged[merged.get('監控池',pd.Series('',index=merged.index)).astype(str).str.contains('MARKET_DISCOVERY|CUSTOM',regex=True)]
+    merged=deduplicate_headlines(merged)
     save_csv(rawfile,merged)
     # Preserve previously analyzed results: enrich fresh with old result before scoring.
+    if not oldresult.empty:
+        oldresult=oldresult[oldresult['news_id'].isin(set(merged.get('news_id',[])))]
     enriched=merge_records(merged,oldresult)
     output, cls_stats=classify(enriched,rules,os.getenv('GROQ_API_KEY',''),max(0,a.max_llm),a.date)
     output=merge_records(oldresult,output)
@@ -171,7 +175,7 @@ def run():
             output.loc[mask,'分類狀態']='人工覆核'
             output.loc[mask,'需要人工覆核']='False'
     save_csv(repo/'ai_news_daily'/f'{a.date}.csv',output)
-    stats={'date':a.date,**crawl_stats,**cls_stats,'raw_distinct':len(merged),'final_rows':len(output),
+    stats={'date':a.date,'scope':a.scope,'window_hours':48,'excluded_stored_dates':excluded_dates,**coverage(output),**crawl_stats,**cls_stats,'raw_distinct':len(merged),'final_rows':len(output),
       'note':'AI CSV is separate from legacy Streamlit snapshot; no replacement of old risk_news_daily.'}
     out=repo/'ai_news_daily'/f'{a.date}.json';out.write_text(json.dumps(stats,ensure_ascii=False,indent=2),encoding='utf-8')
     print(json.dumps(stats,ensure_ascii=False,indent=2))

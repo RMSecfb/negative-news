@@ -10,18 +10,8 @@ from xml.etree import ElementTree as ET
 import pandas as pd
 import requests
 from .common import news_key
+from .market import MARKET_QUERIES, recent_records, deduplicate_headlines
 
-MARKET_QUERIES=[
- '"credit default swap" spreads surge OR spike stocks',
- '"debt default" OR "missed interest payment" company',
- '"credit rating downgrade" OR "going concern" company',
- '"liquidity crisis" OR "debt restructuring" stocks',
- '"SEC investigation" OR "securities fraud" company',
- '"bankruptcy filing" OR "chapter 11" company',
- '"major cyberattack" OR "data breach" company',
- '美股 公司 違約 信用違約交換 CDS 信用風險',
- '美股 監管 調查 重大 訴訟 債務 危機',
-]
 
 def company_file(path:Path):
     df=pd.read_excel(path,dtype=str).fillna('')
@@ -79,11 +69,11 @@ def find_issuers(title:str,known:list[tuple[str,str]]):
             match.append((t,c))
     return list(dict.fromkeys(match))[:3]
 
-def fetch_news(repo:Path, day:datetime, count:int=60, per_feed:int=6, pause:float=.3):
+def fetch_news(repo:Path, day:datetime, count:int=60, per_feed:int=6, pause:float=.3, scope:str='market'):
     sp=company_file(repo/'SP500.xlsx')
     watch=optional_watchlist(repo/'config'/'extra_watchlist.csv')
     all_known=list(dict.fromkeys(watch+sp))
-    tickers=list(dict.fromkeys(watch+ticker_batch(sp,count,day)))
+    tickers=list(dict.fromkeys(watch+(ticker_batch(sp,count,day) if scope=='hybrid' else [])))
     session=requests.Session()
     rows=[]; errors=[]; calls=0
     # Limit Yahoo-like scrape rate / RSS fetching; still subject to provider throttling.
@@ -98,9 +88,10 @@ def fetch_news(repo:Path, day:datetime, count:int=60, per_feed:int=6, pause:floa
             time.sleep(pause)
     # Market-wide discovery is independent of ticker list.
     for q in MARKET_QUERIES:
+        q = '(' + q + ') when:2d'
         lang='zh' if re.search('[\u4e00-\u9fff]',q) else 'en'
         try:
-            for x in rss_fetch(q,lang,session,per_feed):
+            for x in rss_fetch(q,lang,session,max(per_feed,20)):
                 issuers=find_issuers(x['Title'],all_known)
                 if not issuers: issuers=[('','')]
                 for ticker,company in issuers:rows.append({**x,'Ticker':ticker,'Company':company,'監控池':'MARKET_DISCOVERY'})
@@ -110,5 +101,7 @@ def fetch_news(repo:Path, day:datetime, count:int=60, per_feed:int=6, pause:floa
     df=pd.DataFrame(rows)
     if not df.empty:
         df=df.drop_duplicates(['news_id','監控池']).reset_index(drop=True)
-    return df,{'rss_calls':calls,'ticker_count':len(tickers),'sp500_total':len(sp),'errors':errors,
-               'scan_mode':'FULL_SP500' if count>=len(sp) else 'ROTATING_SUBSET', 'news_rows':len(df)}
+    df, rejected_dates = recent_records(df, datetime.now(day.tzinfo))
+    df = deduplicate_headlines(df)
+    return df,{'excluded_dates':rejected_dates,'market_query_count':len(MARKET_QUERIES),'rss_calls':calls,'ticker_count':len(tickers),'sp500_total':len(sp),'errors':errors,
+               'scan_mode':'MARKET_EVENTS' if scope=='market' else ('FULL_SP500' if count<=0 or count>=len(sp) else 'ROTATING_SUBSET'), 'news_rows':len(df)}
