@@ -3274,8 +3274,8 @@ if saved_crawl:
 try:
     import io as _ai_io
     st.divider()
-    st.subheader("AI 事件辨識（GitHub Actions）")
-    st.caption("此區顯示新增的批次 LLM 結果；原本的新聞搜尋、歷史統計與人工覆核功能保留。")
+    st.subheader("全市場主要負面事件（AI）")
+    st.caption("獨立監控全市場事件，不限 S&P 500 或自訂名單。優先分析重大負面新聞；下方顯示免費額度內的完成情況。原有公司搜尋流程照舊。")
     _ai_day = st.date_input("AI 批次日期", value=datetime.now(TAIPEI).date(), key="ai_addon_day")
     try:
         _ai_repo = st.secrets.get("GITHUB_REPO", "RMSecfb/negative-news")
@@ -3288,6 +3288,11 @@ try:
             _ai_data = pd.read_csv(_ai_io.BytesIO(_ai_response.content), dtype=str).fillna('')
             st.session_state['ai_addon_frame'] = _ai_data
             st.session_state['ai_addon_loaded_date'] = _ai_day.isoformat()
+            try:
+                _ai_report_response = requests.get(_ai_url.replace(".csv", ".json"), timeout=18)
+                st.session_state['ai_addon_report'] = _ai_report_response.json() if _ai_report_response.status_code == 200 else {}
+            except Exception:
+                st.session_state['ai_addon_report'] = {}
         elif _ai_response.status_code == 404:
             st.info("這天尚未有 GitHub Actions 的 AI CSV，請選擇已執行日期。")
         else:
@@ -3295,9 +3300,16 @@ try:
     _ai_data = st.session_state.get('ai_addon_frame',pd.DataFrame())
     if not _ai_data.empty:
         st.caption(f"目前載入日期：{st.session_state.get('ai_addon_loaded_date','')}｜新聞 {_ai_data.shape[0]} 筆")
-        _ai_filter = st.selectbox("AI 分類狀態", ["全部", "已分類", "待人工覆核", "無關新聞", "未入選初篩"], key="ai_addon_filter")
+        _ai_report = st.session_state.get('ai_addon_report', {})
+        _ai_done = int(_ai_data.get('LLM狀態', pd.Series('', index=_ai_data.index)).isin(['OK','MANUAL']).sum())
+        st.caption(f"已分析 {_ai_done} / {len(_ai_data)} 筆候選｜最近 {_ai_report.get('window_hours', '未記錄')} 小時｜模式：{_ai_report.get('scope', '舊版')}。搜尋結果與分析額度有限，未分析新聞不代表沒有風險。")
+        _ai_filter = st.selectbox("AI 分類狀態", ["主要負面事件", "全部", "已分類", "待人工覆核", "無關新聞", "未入選初篩"], key="ai_addon_filter")
         _ai_show = _ai_data if _ai_filter == '全部' else _ai_data[_ai_data.get('分類狀態',pd.Series('',index=_ai_data.index)) == _ai_filter]
-        _ai_cols = [x for x in ("Ticker","Company","Title","Event_Code","事件中文","Level","事件狀態","分類狀態","需要人工覆核","中文摘要","Evidence","URL","監控池") if x in _ai_show.columns]
+        if _ai_filter == '主要負面事件':
+            _ai_levels = pd.to_numeric(_ai_data.get('Level', pd.Series('', index=_ai_data.index)), errors='coerce')
+            _ai_show = _ai_data[(_ai_levels >= 3) & (_ai_data.get('分類狀態', pd.Series('', index=_ai_data.index)) != '無關新聞')]
+            st.caption("主要事件：Level 3–5；待人工覆核的判斷會保留標示。請切換「全部」查看未完成分析的候選新聞。")
+        _ai_cols = [x for x in ("Ticker","Company","LLM辨識公司","Published Time","Source","Title","Event_Code","事件中文","Level","事件狀態","分類狀態","需要人工覆核","中文摘要","Evidence","URL","監控池") if x in _ai_show.columns]
         st.dataframe(_ai_show[_ai_cols],use_container_width=True,hide_index=True)
         st.download_button("下載 AI CSV",_ai_show.to_csv(index=False).encode('utf-8-sig'),file_name=f"AI_News_{st.session_state.get('ai_addon_loaded_date','')}.csv",mime='text/csv')
 except Exception as _ai_error:
