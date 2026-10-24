@@ -1,5 +1,7 @@
 # negative-news 架構、判讀方式與 SEC13F 整合評估
 
+> 更新：機構持股與Form4現已統一為「機構內部人交易」，新增新聞摘要欄與每日07:00成果同步。最新實作與限制請見 [INSTITUTIONAL_INSIDER.md](INSTITUTIONAL_INSIDER.md)。本文件以下保留先前架構核對紀錄。
+
 核對日期：2026-10-24。新聞來源 RMSecfb/negative-news main；13F 來源 JUWangWang/SEC13F main（dae0d8ec9ec978bfc3e593bbff44327b607a80c8）。本文件區分既有執行行為、本次頁面功能，以及尚未建立的13F排程。
 
 ## 一、主程式與新舊檔案
