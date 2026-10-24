@@ -11,6 +11,10 @@ on:
         type: boolean
         description: 'Only analyze existing last-48h news; do not crawl again'
         default: false
+      repair_tickers:
+        type: boolean
+        description: 'Audit/backfill tickers across ALL stored news dates; zero LLM calls'
+        default: false
   push:
     paths:
       - 'news_requests/*.json'
@@ -63,8 +67,13 @@ jobs:
         env:
           MAX_LLM: ${{ inputs.max_llm || '35' }}
           RESUME: ${{ inputs.resume || 'false' }}
+          REPAIR_TICKERS: ${{ inputs.repair_tickers || 'false' }}
         shell: bash
         run: |
           extra=()
+          if [[ "$REPAIR_TICKERS" == "true" ]]; then
+            python -m pipeline.ticker_audit
+            exit 0
+          fi
           if [[ "$RESUME" == "true" ]]; then extra+=(--resume); fi
           python -m pipeline.integrated --event "$GITHUB_EVENT_NAME" --max-llm "$MAX_LLM" "${extra[@]}"
