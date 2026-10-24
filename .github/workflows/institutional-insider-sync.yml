@@ -1,0 +1,31 @@
+name: Institutional and Insider Results Sync
+
+on:
+  schedule:
+    - cron: '0 23 * * *' # 07:00 Asia/Taipei; source results only, no LLM
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: institutional-insider-sync
+  cancel-in-progress: false
+
+jobs:
+  sync-results:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      GITHUB_REPOSITORY: ${{ github.repository }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install 'pandas>=2.2,<3' openpyxl requests
+      - name: Validate adapters
+        run: python -m unittest discover -s tests -p test_participants.py -v
+      - name: Import validated source workbooks and retain last good results
+        run: python -m pipeline.participants
