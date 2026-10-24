@@ -15,6 +15,10 @@ on:
         type: boolean
         description: 'Audit/backfill tickers across ALL stored news dates; zero LLM calls'
         default: false
+      as_schedule:
+        type: boolean
+        description: '外部定時觸發用：以每日排程身分執行（記為 daily-日期），之後晚到的 GitHub 排程會略過'
+        default: false
   push:
     paths:
       - 'news_requests/*.json'
@@ -68,6 +72,7 @@ jobs:
           MAX_LLM: ${{ inputs.max_llm || '35' }}
           RESUME: ${{ inputs.resume || 'false' }}
           REPAIR_TICKERS: ${{ inputs.repair_tickers || 'false' }}
+          RUN_EVENT: ${{ inputs.as_schedule && 'schedule' || github.event_name }}
         shell: bash
         run: |
           extra=()
@@ -76,4 +81,4 @@ jobs:
             exit 0
           fi
           if [[ "$RESUME" == "true" ]]; then extra+=(--resume); fi
-          python -m pipeline.integrated --event "$GITHUB_EVENT_NAME" --max-llm "$MAX_LLM" "${extra[@]}"
+          python -m pipeline.integrated --event "$RUN_EVENT" --max-llm "$MAX_LLM" "${extra[@]}"
