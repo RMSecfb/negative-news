@@ -63,54 +63,8 @@ def frequency_panel(frame):
 
 
 def sec_panel():
-    st.subheader('13F 機構持股整合')
-    st.caption('直接讀取 JUWangWang/SEC13F 的季度成果；保留機構明細與 Run Log，13F 不改變新聞 Level。')
-    st.link_button('開啟 SEC13F 原始專案', 'https://github.com/' + SEC_REPO)
-    if st.button('讀取／更新 13F 季度清單', key='load_sec_catalog'):
-        try:
-            source = GitHubRepository(SEC_REPO)
-            revision = source.revision()
-            paths = sec_paths(source.list('institutional_13f/', revision))
-            st.session_state['sec_catalog'] = (revision, paths)
-        except Exception as exc:
-            st.error(f'13F 目錄讀取失敗：{exc}')
-    if 'sec_catalog' in st.session_state:
-        revision, paths = st.session_state['sec_catalog']
-        if not paths:
-            st.info('來源尚無符合格式的季度成果。')
-        else:
-            path = st.selectbox('13F 季度成果', paths, key='sec_quarter_path')
-            if st.button('載入這份季度成果', key='load_sec_workbook'):
-                try:
-                    raw = GitHubRepository(SEC_REPO).read(path, revision)
-                    sheets = parse_sec(raw)
-                    st.session_state['sec_loaded'] = (raw, sheets, {'來源Repository': SEC_REPO, '來源版本SHA': revision, '來源檔案': path, '載入時間': datetime.now(TPE).isoformat(), '對照用途': '所選季度參考；非歷史當時已公開資料回測'})
-                except Exception as exc:
-                    st.error(f'13F 成果載入失敗：{exc}')
-    if 'sec_loaded' not in st.session_state:
-        st.info('先讀取季度清單再載入成果，不需要手動下載後重新上傳。')
-        return
-    raw, sheets, provenance = st.session_state['sec_loaded']
-    summary = sheets['Ticker Summary']
-    st.success(f'已載入 {summary["Quarter"].iloc[0]}，{len(summary)} 檔股票；持倉基準日 {summary["Quarter End"].iloc[0]}。')
-    st.caption(provenance['來源檔案'] + ' · SHA ' + provenance['來源版本SHA'][:12])
-    st.warning('13F 是所選追蹤機構的季度申報，並非即時全市場持倉。與新聞對照僅供季度參考；查詢早於申報日期的新聞時，不代表當時已可取得這份資料。未涵蓋股票不代表機構未持有。')
-    search = st.text_input('篩選 13F 股票代號或公司', key='sec_live_search').strip()
-    shown = summary
-    if search:
-        shown = summary[summary.astype(str).apply(lambda col: col.str.contains(search, case=False, regex=False)).any(axis=1)]
-    st.dataframe(shown, hide_index=True, use_container_width=True)
-    st.download_button('下載來源 13F 完整 Excel', raw, Path(provenance['來源檔案']).name, key='sec_original_download')
-    with st.expander('13F 執行品質與機構明細'):
-        st.dataframe(sheets['Run Log'], hide_index=True)
-        st.dataframe(sheets['13F Detail'], hide_index=True)
-    news = st.session_state.get('news_query_frame', pd.DataFrame())
-    if news.empty:
-        st.info('先在「查詢新聞期間」查詢，可在這裡對照新聞並下載整合 Excel。')
-    else:
-        st.markdown('#### 查詢新聞與所選季度持倉對照')
-        st.dataframe(join_sec(news, summary), hide_index=True)
-        st.download_button('下載新聞＋13F 整合 Excel', combined_excel(news, sheets, provenance, st.session_state.get('news_query_runs', [])), 'Negative_News_SEC13F.xlsx', key='sec_combined_download')
+    from .participants_ui import render
+    render(repository(), st.session_state.get('news_query_frame', pd.DataFrame()))
 
 
 def render_results():
@@ -142,9 +96,13 @@ def render_results():
         st.info('目前分類沒有新聞。')
         return
     preferred = ['日期', 'Market', 'Ticker', 'Ticker狀態', 'Company', 'Published Time', 'Title', 'Level', '事件中文', 'Action', '分類狀態', '已人工覆核', '覆核註記', '最終判斷來源', '來源方法', 'FinBERT', 'Rule_Event_Code', 'Rule_Level', 'LLM事件代碼', 'LLM辨識公司', 'Ticker來源', 'Ticker候選', 'Ticker核對依據', 'Ticker參照日期', '上市狀態', '原始Ticker', '中文摘要', 'URL', 'Source']
+    preferred += ['13F 機構動向', 'Form4 內部人動向']
     current = current[[c for c in preferred if c in current] + [c for c in current if c not in preferred]]
     if 'Ticker稽核警示' in current:
         preferred.append('Ticker稽核警示')
+    participant_fields = ['13F 機構動向', 'Form4 內部人動向']
+    current = current[[c for c in current if c not in participant_fields] + [c for c in participant_fields if c in current]]
+    st.caption('表格最後為機構內部人交易摘要：13F保留季度，Form4保留截至日；依最新已匯入成果對照，不作歷史當時資訊回測。')
     current['Level'] = current['Level'].astype(str).str.replace(r'\.0$', '', regex=True)
     builder = GridOptionsBuilder.from_dataframe(current)
     builder.configure_default_column(editable=False, sortable=True, filter=True, resizable=True, minWidth=105)
@@ -157,6 +115,8 @@ def render_results():
     builder.configure_column('Level', width=88, cellEditor='agSelectCellEditor', cellEditorParams={'values': ['1', '2', '3', '4', '5']})
     builder.configure_column('Title', width=390, wrapText=True, autoHeight=True)
     builder.configure_column('Ticker狀態', width=210, wrapText=True, autoHeight=True)
+    builder.configure_column('13F 機構動向', width=290, wrapText=True, autoHeight=True)
+    builder.configure_column('Form4 內部人動向', width=330, wrapText=True, autoHeight=True)
     builder.configure_column('Action', width=260)
     builder.configure_column('事件中文', width=220)
     builder.configure_grid_options(getRowStyle=JsCode("""function(p) {
@@ -179,7 +139,7 @@ def render_results():
                 st.rerun()
             except Exception as exc:
                 st.error(f'未儲存：{exc}')
-    with st.expander('保留原有曝險與 13F 分析功能'):
+    with st.expander('原有曝險清單與本機13F相容功能'):
         import legacy_engine as engine
         upload = st.file_uploader('曝險清單 Excel（選填）', type=['xlsx'], key='unified_exposure')
         exposure = engine.load_exposure_list_from_upload(upload) if upload else pd.DataFrame(columns=['Ticker', 'Exposure'])
@@ -323,7 +283,7 @@ def main():
     st.title('負面新聞整合中心')
     st.caption('跨市場新聞監控 · 原有 FinBERT／規則保留 · 合併後由 LLM 統一判讀 · 人工覆核優先')
     st.info('每日 08:20（台北時間）：AI 全市場事件搜尋 ＋ 完整 S&P 500 方法一／方法二 → 去重 → FinBERT／規則 → LLM → 合併 Excel。')
-    query, manual, sec, history = st.tabs(['查詢新聞期間', '人工執行新聞期間', '13F 機構持股', '執行紀錄'])
+    query, manual, sec, history = st.tabs(['查詢新聞期間', '人工執行新聞期間', '機構內部人交易', '執行紀錄'])
     with query:
         query_panel()
     with manual:

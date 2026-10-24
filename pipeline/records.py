@@ -131,6 +131,8 @@ def excel_bytes(frame, runs=None):
     out = io.BytesIO()
     preferred = ['日期', 'Market', 'Ticker', 'Company', 'Published Time', 'Title', '中文摘要', 'Level', '事件中文', 'Action', '最終判斷來源', '分類狀態', '已人工覆核', '來源方法', 'FinBERT', 'Rule_Event_Code', 'Rule_Level', 'LLM事件代碼', 'LLM辨識公司', 'Ticker來源', 'URL', 'Source']
     cols = [c for c in preferred if c in frame] + [c for c in frame if c not in preferred]
+    from .participants import DISPLAY_FIELDS
+    cols = [c for c in cols if c not in DISPLAY_FIELDS] + [c for c in DISPLAY_FIELDS if c in frame]
     frame = frame.reindex(columns=cols)
     sheets = {'完整新聞': frame, '主要負面事件': major(frame), '待人工覆核': review(frame), '待補分析': pending(frame), '執行紀錄': pd.DataFrame(runs or [])}
     with pd.ExcelWriter(out, engine='openpyxl') as writer:
@@ -215,6 +217,8 @@ def read_days(repository, start, end, market='ALL', revision=None, issuer_index=
         from .issuers import load_index
         issuer_index = issuer_index or load_index(Path(__file__).resolve().parents[1], repository)
         result = issuer_index.enrich(result)
+        from .participants import annotate_from_repository
+        result = annotate_from_repository(result, repository, revision)
     return result.reset_index(drop=True)
 
 

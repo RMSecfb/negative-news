@@ -366,6 +366,11 @@ def execute(repository, request, repo=ROOT, api_key='', collector=None, analyzer
                         row.update(update)
                     result.append(row)
                 frame = pd.DataFrame(result).fillna('')
+                from .participants import annotate_from_repository
+                class ParticipantSnapshot:
+                    def read(self, path, revision=None):
+                        return read(path)
+                frame = annotate_from_repository(frame, ParticipantSnapshot())
                 files[f'news_daily/{day}.csv'] = frame.to_csv(index=False).encode('utf-8-sig')
                 files[f'news_daily/{day}.xlsx'] = excel_bytes(frame, run_index['runs'])
         latest_cache = read_json(read(cache_path))
