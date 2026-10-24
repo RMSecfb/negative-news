@@ -1100,5 +1100,405 @@
       "requires_review": true,
       "summary_zh": "Meta Platforms 相關新聞未提及任何信用風險事件，無法判斷是否存在違約或其他信用事件。"
     }
+  },
+  "4b341a9a11f1c6fc6c3b710acfd1b3c514e9309757fc3a38c178d91bb41d406a": {
+    "answer": {
+      "company_mentioned": "",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "無足夠資訊判斷是否有信用風險事件。"
+    }
+  },
+  "85d620a8eafde8294e761fea3af92ef5c20e9bf6da53340e34f54b9297ed1924": {
+    "answer": {
+      "company_mentioned": "Moderna",
+      "confirmed_default": false,
+      "event_codes": [
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "MARKET_IMPLIED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "Moderna 股價因癌症疫苗資料外洩而大幅下跌，儘管結果仍為正面。"
+    }
+  },
+  "1d3936e8336f71a900c2ad7be5730d135c7d7169ed41996ac8264f6c5a9308e2": {
+    "answer": {
+      "company_mentioned": "FactSet",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "此新聞僅提及FactSet的財務預估調整，未涉及任何信用風險事件。"
+    }
+  },
+  "93d4a0f8e01626f17407663feb68845adff48500c928112300b98c949bcd01f1": {
+    "answer": {
+      "company_mentioned": "FactSet",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "此新聞未提及任何與信用風險或違約相關的事件，僅為財務預估調整，無法判斷是否存在信用事件。"
+    }
+  },
+  "2a5a574eceb17b10d0b8b089b9963fbc1ed21078403d8bf3fc8100f5c85e87dd": {
+    "answer": {
+      "company_mentioned": "FactSet",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "此新聞未提及任何與信用風險相關的事件，僅為目標價調整報告。"
+    }
+  },
+  "9b0582f581ec489c255f4b70a834fa3ff22f9f9f2eef7c11b24c065f9e398011": {
+    "answer": {
+      "company_mentioned": "FactSet",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "此新聞僅提及FactSet對Spotify的EPS預估調整，並未涉及任何信用風險事件。"
+    }
+  },
+  "7e19d3875d17701e61d049591d57891e98588ea805547bbae3747d4c03109b38": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "FactSet",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "此新聞僅提及FactSet的財務預估調整，未涉及任何信用風險事件。",
+      "requires_review": true
+    }
+  },
+  "57e85052dc07a9a16d4356a56600e546a26f73ec8a513f19568b5a8d0412b7c6": {
+    "answer": {
+      "company_mentioned": "FactSet",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前無足夠資訊顯示 FactSet 相關信用風險事件。"
+    }
+  },
+  "229aa8cb68745d38cd487c2cab2f0d4464998e68257e8d1e6b559f47119eb310": {
+    "answer": {
+      "company_mentioned": "FactSet",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "FactSet 的最新調查將杭庭頓的 EPS 預估下修至 1.31 元，目標價為 19.00 元，並未提及任何違約或信用風險升高的訊息。"
+    }
+  },
+  "91f62d75951dbd3de27e057cea64b736b6a43f454b7a9892f07c6ae70c84950e": {
+    "answer": {
+      "company_mentioned": "FactSet",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前無足夠資訊顯示 FactSet 相關信用風險事件，需進一步調查。"
+    }
+  },
+  "e157e1b48c5d34fec15feca3764037528cb0daa0af2fd326c20cd6c0e6561dbd": {
+    "answer": {
+      "company_mentioned": "FactSet",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "本新聞未提及任何與信用風險相關的事件，僅為財務預估調整。"
+    }
+  },
+  "f5ac82f07cb86f010e5f038cbc32621c211f0c7c4458bcad4c0549048278e289": {
+    "answer": {
+      "company_mentioned": "FactSet",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "此新聞僅提及 FactSet 的目標價調降，未涉及任何信用風險或違約訊息。"
+    }
+  },
+  "da2e39e5734f928948181acb113862f15ed1d6b77704c78784b75b324eafdb59": {
+    "answer": {
+      "company_mentioned": "FactSet",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "此新聞未提及任何與信用風險相關的事件，僅為財務預估調整。"
+    }
+  },
+  "5f31bbcb642fede0eaa5e01cb91e8448af94b016d8b8972881e3689487abc81f": {
+    "answer": {
+      "company_mentioned": "FactSet",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "本新聞未提及任何與信用風險相關的事件，僅為財報預估調整。"
+    }
+  },
+  "786376a58f4a0975180287e481dc70159777a1bce22e49f58de4b1501834824f": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "FactSet",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "requires_review": true,
+      "summary_zh": "此新聞僅提及FactSet目標價調降，未提及任何信用風險事件或違約訊息。"
+    }
+  },
+  "a8e2e5d49e145695b58ac61f16981a8db3787309e82d003d845660354e412334": {
+    "answer": {
+      "company_mentioned": "FactSet",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "此新聞僅提及FactSet的目標價調整，未涉及任何信用風險事件。"
+    }
+  },
+  "f001d5febc7e475bfa2083fc2d6e33ad036b79bd4f8145f3112429427ec5b4c1": {
+    "answer": {
+      "company_mentioned": "FactSet",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前無足夠資訊顯示 FactSet 相關信用風險事件。"
+    }
+  },
+  "4487e35ca4823b6cf74335af0df955d28979a71c31a7ef491ad1151e42c4289b": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "FactSet",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "requires_review": true,
+      "summary_zh": "本新聞僅提及FactSet目標價調降，未提及任何違約、信用風險升高或其他財務危機訊號，故無法確認任何信用事件。"
+    }
+  },
+  "6b9776a13ae86dd0aeedfa2d4b8aaf49c23e1d3977b0ccf9699ab4aa6e2bd9e6": {
+    "answer": {
+      "company_mentioned": "FactSet",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "此新聞僅提及FactSet的目標價調降，未涉及任何信用風險或違約訊息。"
+    }
+  },
+  "10233a63c9938fc9fc94eb6b1cef823e49ba39806c89e9fe75fcf7c17f0e15f9": {
+    "answer": {
+      "company_mentioned": "FactSet",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "此新聞未提供任何關於公司債務違約、CDS利差擴大或其他信用風險事件的具體訊息，僅提及目標價調降。"
+    }
+  },
+  "a965db1195a19e00ab79f919fafcce3f0833d1777a223c232fe4947cbc8a221f": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "FactSet",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "requires_review": true,
+      "summary_zh": "此新聞僅提及FactSet目標價調降，未涉及任何信用風險事件。"
+    }
+  },
+  "f2d0b1fd65d02e660e1246aa6ed0458807b59783148d5844ef9e1ed09d02a886": {
+    "answer": {
+      "company_mentioned": "FactSet",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "此新聞僅提及FactSet的目標價調降，未涉及任何信用風險事件。"
+    }
+  },
+  "a58234cfd0f35f009379ebd60712a273d919e1e4fde0e29757682c8727196733": {
+    "answer": {
+      "company_mentioned": "Moderna",
+      "confirmed_default": false,
+      "event_codes": [
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "Moderna 股價因癌症疫苗資料外洩而大幅下跌。"
+    }
+  },
+  "4c99a8a6f2cf27a30d3d07e5e854c1cfac80e7452b86d43d3c78becc3f9838a2": {
+    "answer": {
+      "company_mentioned": "FactSet",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "FactSet 的最新調查報告僅提及布魯姆能源的 EPS 預估上修及目標價，並未提及任何違約、信用風險升高或其他財務危機事件。"
+    }
+  },
+  "8f4250a909af565821675ec0c4c4f8ba1776c947347aba3c5d5ec50603152db7": {
+    "answer": {
+      "company_mentioned": "FactSet",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "此新聞僅提及FactSet的EPS預估上修，並未提及任何信用風險事件。"
+    }
+  },
+  "f37ef07a3ee719d8f5066a92b64ee3a1221ab76326fa54594de4455cd15b1565": {
+    "answer": {
+      "company_mentioned": "FactSet",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "此新聞僅提及FactSet的目標價調升，未提及任何信用風險或違約訊息。"
+    }
+  },
+  "5a4403271d149c3d17ffd8f1feed28fb49f952b520198659d8a3cd62dd23c041": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "FactSet",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "此新聞僅提及FactSet對Sasol的調查與估值，未提及任何信用風險或違約訊息。",
+      "requires_review": true
+    }
+  },
+  "7a6bbeaff99670d6e7381577b8a7cd97aaa11cc2f2e0c06f77ea905ebf90f4f2": {
+    "answer": {
+      "company_mentioned": "FactSet",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前無足夠資訊顯示 FactSet 相關信用風險事件。"
+    }
+  },
+  "6ddf32b84da47c1a7f8bcfc65222607b31845279847a5334f2ac3049dd82c70b": {
+    "answer": {
+      "company_mentioned": "FactSet",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "本新聞未提及任何關於FactSet的信用違約、CDS利差擴大或其他財務風險事件，僅為調整EPS預估與目標價的報告。"
+    }
+  },
+  "e8e7d5626d22b62cd33b5ebc9f9911df7af6631a347cd958dd0f41415c6769d7": {
+    "answer": {
+      "company_mentioned": "FactSet",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "本新聞未提及任何關於FactSet的債務違約、信用風險升高或其他財務風險事件的具體訊息。"
+    }
+  },
+  "b2d24a79dd430ce64c710d43a53587a1d997d6a6f9b4de157a53281d539f943b": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "FactSet",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "requires_review": true,
+      "summary_zh": "此新聞僅提及FactSet的EPS預估上修及目標價調整，未提及任何違約、信用風險升高或其他財務危機事件。"
+    }
+  },
+  "7d05008607c0dd334cb37fa8166f4dc3d602dde0aae84320529da110349f4127": {
+    "answer": {
+      "company_mentioned": "FactSet",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "此新聞僅提及FactSet的財務預估，未提及任何違約、破產或其他信用風險事件。"
+    }
+  },
+  "3de94462b4f35d92c5850dbf5494ca7cd10a73aaa8eb2e94fa921f35f945280e": {
+    "answer": {
+      "company_mentioned": "FactSet",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "本新聞僅提及FactSet的調查結果，並未提及任何違約、破產、信用風險升高等事件，故無法確認任何信用風險事件。"
+    }
   }
 }
