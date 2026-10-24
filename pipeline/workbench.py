@@ -41,9 +41,9 @@ def frequency_panel(frame):
         else:
             st.caption(f'比較日 {days[-1]}；基準為前 {len(days)-1} 個有資料發布日。至少兩則且達平均兩倍，或基準零而新增至少三則。來源或擷取範圍變動也會影響頻率，這是規則警示。')
             if anomalies.empty:
-                st.info('這個比較日未達原有放量門檻。')
+                st.info('公司新聞量突然增加：0家')
             else:
-                st.warning(f'有 {len(anomalies)} 家公司達放量門檻。')
+                st.warning(f'公司新聞量突然增加：{len(anomalies)}家')
                 st.dataframe(anomalies, hide_index=True, use_container_width=True)
         if not counts.empty:
             pairs = sorted(set(zip(counts.get('Market', []), counts.get('Ticker', []))) - {('', '')})
