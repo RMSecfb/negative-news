@@ -20,7 +20,19 @@ class IssuerTests(unittest.TestCase):
         for (market,ticker),expected in self.index.symbols.items():
             if market=='US':
                 found,_=self.index.resolve(ticker,market)
-                self.assertEqual(found['Ticker'],ticker,ticker)
+                if found is None:
+                    from pipeline.issuers import name_key
+                    self.assertGreater(len(self.index.exact.get((market,name_key(ticker)),{})),1,ticker)
+                else:
+                    self.assertEqual(found['Ticker'],ticker,ticker)
+
+    def test_company_brand_cannot_be_confused_with_another_ticker(self):
+        index=IssuerIndex(pd.DataFrame([{'Market':'US','Ticker':'HP','Company':'Helmerich & Payne Inc.'},{'Market':'US','Ticker':'HPQ','Company':'HP Inc.'}]))
+        self.assertIsNone(index.resolve('HP')[0])
+        unknown=index.enrich(pd.DataFrame([self.row('HP','HP reports earnings')])).iloc[0]
+        self.assertEqual(unknown.Ticker,'')
+        hinted=index.enrich(pd.DataFrame([self.row('HP','HP reports earnings','HPQ')])).iloc[0]
+        self.assertEqual(hinted.Ticker,'HPQ')
 
     def test_general_security_descriptions_and_multiple_issuers(self):
         companies=pd.DataFrame([{'Market':'US','Ticker':'ALFA','Company':'Alpha Systems Inc. Class A Common Stock'}, {'Market':'US','Ticker':'BETA','Company':'Beta Digital Ltd. American Depositary Shares, each representing two shares'}, {'Market':'US','Ticker':'GAM','Company':'Gamma Group Corporation Common Stock'}])
