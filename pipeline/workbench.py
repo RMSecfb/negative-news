@@ -74,6 +74,7 @@ def render_results():
         builder.configure_column(col, editable=edit)
     builder.configure_column('Level', width=88, cellEditor='agSelectCellEditor', cellEditorParams={'values': ['1', '2', '3', '4', '5']})
     builder.configure_column('Title', width=390, wrapText=True, autoHeight=True)
+    builder.configure_column('Ticker狀態', width=210, wrapText=True, autoHeight=True)
     builder.configure_column('Action', width=260)
     builder.configure_column('事件中文', width=220)
     builder.configure_grid_options(getRowStyle=JsCode("""function(p) {

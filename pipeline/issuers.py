@@ -107,14 +107,17 @@ class IssuerIndex:
 
     def resolve(self, company, market='US'):
         direct = self.symbols.get((market, str(company).strip().upper()))
-        if direct:
-            return dict(direct), '股票代號精確核對'
+        if direct and not re.fullmatch(r'[A-Za-z0-9]+', str(company).strip()):
+            return dict(direct), '股票代號精確核對（保留符號）'
         key = name_key(company)
         exact = self.exact.get((market, key), {})
         if len(exact) == 1:
             return dict(next(iter(exact.values()))), '公司清單／別名核對'
         if len(exact) > 1:
             return None, '同名公司，需人工確認'
+        direct = self.symbols.get((market, str(company).strip().upper()))
+        if direct:
+            return dict(direct), '股票代號精確核對'
         # A name containing a ticker still needs its name and ticker to agree.
         explicit = re.search(r'\(([A-Z][A-Z0-9.$-]{0,10})\)', str(company))
         if explicit:
@@ -181,6 +184,8 @@ class IssuerIndex:
                 entities = self.entities.get(name_key(subject), {})
                 entity = next(iter(entities.values())) if len(entities) == 1 else None
                 status = '主體證據不足' if match else '公司代號待核對' if subject else '市場／多公司或主體待辨識'
+                if '同名公司' in reason:
+                    status = '公司名稱／股票代號歧義'
                 if supplied and match and supplied != match['Ticker']:
                     status = '代號與主體衝突'
                 if entity and entity.get('EntityType') != 'LISTED':
