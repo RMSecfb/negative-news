@@ -14,6 +14,7 @@ from .issuers import company_frame, load_companies
 from .integrated import enqueue, validate_request
 from .records import TPE, read_days, major, review, pending, excel_bytes, manual_save
 from .repository import GitHubRepository, LocalRepository, read_json
+from .analytics import SEC_REPO, frequency_tables, sec_paths, parse_sec, join_sec, combined_excel
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -32,6 +33,86 @@ def repository():
     return GitHubRepository(setting('GITHUB_REPO', 'RMSecfb/negative-news'), setting('GITHUB_TOKEN'), setting('GITHUB_BRANCH', 'main'))
 
 
+def frequency_panel(frame):
+    with st.expander('新聞頻率異常偵測 ＋ 時間序列走勢圖', expanded=True):
+        counts, anomalies, days = frequency_tables(frame)
+        st.caption('依查詢期間內已保存的發布日比較，採已分類 L1–5 新聞；待 AI 補分析不計為已確認負面。無資料日不當作零，未核對代號不做個股警示。不同公司的同篇新聞各算一筆。')
+        if len(days) < 2:
+            st.info('至少需要兩個有保存資料的發布日；可擴大上方查詢期間。')
+        else:
+            st.caption(f'比較日 {days[-1]}；基準為前 {len(days)-1} 個有資料發布日。至少兩則且達平均兩倍，或基準零而新增至少三則。來源或擷取範圍變動也會影響頻率，這是規則警示。')
+            if anomalies.empty:
+                st.info('這個比較日未達原有放量門檻。')
+            else:
+                st.warning(f'有 {len(anomalies)} 家公司達放量門檻。')
+                st.dataframe(anomalies, hide_index=True, use_container_width=True)
+        if not counts.empty:
+            pairs = sorted(set(zip(counts.get('Market', []), counts.get('Ticker', []))) - {('', '')})
+            choices = ['全部市場'] + [f'{m}｜{t}' for m, t in pairs if t]
+            pick = st.selectbox('查看頻率趨勢', choices, key='unified_frequency_pick')
+            selected = counts
+            if pick != '全部市場':
+                m, t = pick.split('｜', 1)
+                selected = counts[counts['Market'].eq(m) & counts['Ticker'].eq(t)]
+            trend = selected.groupby('日期')['則數'].sum().reindex(days, fill_value=0).rename_axis('日期').reset_index()
+            import plotly.express as px
+            fig = px.line(trend, x='日期', y='則數', markers=True)
+            fig.update_layout(height=310, yaxis_title='已分類負面新聞則數')
+            st.plotly_chart(fig, use_container_width=True)
+            st.download_button('下載頻率統計 CSV', counts.to_csv(index=False).encode('utf-8-sig'), 'news_frequency.csv')
+
+
+def sec_panel():
+    st.subheader('13F 機構持股整合')
+    st.caption('直接讀取 JUWangWang/SEC13F 的季度成果；保留機構明細與 Run Log，13F 不改變新聞 Level。')
+    st.link_button('開啟 SEC13F 原始專案', 'https://github.com/' + SEC_REPO)
+    if st.button('讀取／更新 13F 季度清單', key='load_sec_catalog'):
+        try:
+            source = GitHubRepository(SEC_REPO)
+            revision = source.revision()
+            paths = sec_paths(source.list('institutional_13f/', revision))
+            st.session_state['sec_catalog'] = (revision, paths)
+        except Exception as exc:
+            st.error(f'13F 目錄讀取失敗：{exc}')
+    if 'sec_catalog' in st.session_state:
+        revision, paths = st.session_state['sec_catalog']
+        if not paths:
+            st.info('來源尚無符合格式的季度成果。')
+        else:
+            path = st.selectbox('13F 季度成果', paths, key='sec_quarter_path')
+            if st.button('載入這份季度成果', key='load_sec_workbook'):
+                try:
+                    raw = GitHubRepository(SEC_REPO).read(path, revision)
+                    sheets = parse_sec(raw)
+                    st.session_state['sec_loaded'] = (raw, sheets, {'來源Repository': SEC_REPO, '來源版本SHA': revision, '來源檔案': path, '載入時間': datetime.now(TPE).isoformat(), '對照用途': '所選季度參考；非歷史當時已公開資料回測'})
+                except Exception as exc:
+                    st.error(f'13F 成果載入失敗：{exc}')
+    if 'sec_loaded' not in st.session_state:
+        st.info('先讀取季度清單再載入成果，不需要手動下載後重新上傳。')
+        return
+    raw, sheets, provenance = st.session_state['sec_loaded']
+    summary = sheets['Ticker Summary']
+    st.success(f'已載入 {summary["Quarter"].iloc[0]}，{len(summary)} 檔股票；持倉基準日 {summary["Quarter End"].iloc[0]}。')
+    st.caption(provenance['來源檔案'] + ' · SHA ' + provenance['來源版本SHA'][:12])
+    st.warning('13F 是所選追蹤機構的季度申報，並非即時全市場持倉。與新聞對照僅供季度參考；查詢早於申報日期的新聞時，不代表當時已可取得這份資料。未涵蓋股票不代表機構未持有。')
+    search = st.text_input('篩選 13F 股票代號或公司', key='sec_live_search').strip()
+    shown = summary
+    if search:
+        shown = summary[summary.astype(str).apply(lambda col: col.str.contains(search, case=False, regex=False)).any(axis=1)]
+    st.dataframe(shown, hide_index=True, use_container_width=True)
+    st.download_button('下載來源 13F 完整 Excel', raw, Path(provenance['來源檔案']).name, key='sec_original_download')
+    with st.expander('13F 執行品質與機構明細'):
+        st.dataframe(sheets['Run Log'], hide_index=True)
+        st.dataframe(sheets['13F Detail'], hide_index=True)
+    news = st.session_state.get('news_query_frame', pd.DataFrame())
+    if news.empty:
+        st.info('先在「查詢新聞期間」查詢，可在這裡對照新聞並下載整合 Excel。')
+    else:
+        st.markdown('#### 查詢新聞與所選季度持倉對照')
+        st.dataframe(join_sec(news, summary), hide_index=True)
+        st.download_button('下載新聞＋13F 整合 Excel', combined_excel(news, sheets, provenance, st.session_state.get('news_query_runs', [])), 'Negative_News_SEC13F.xlsx', key='sec_combined_download')
+
+
 def render_results():
     frame = st.session_state.get('news_query_frame', pd.DataFrame())
     if frame.empty:
@@ -48,6 +129,7 @@ def render_results():
     metrics[3].metric('待 AI 補分析', len(pending(frame)))
     done = frame.get('LLM狀態', pd.Series('', index=frame.index)).eq('OK') | frame.get('已人工覆核', pd.Series('', index=frame.index)).map(truth)
     st.caption(f'已完成 AI／人工判讀 {int(done.sum())} / {len(frame)} 筆。待補分析不等於無風險；待人工覆核表示已有判讀但仍須確認。')
+    frequency_panel(frame)
     left, right = st.columns([2, 1])
     mode = left.radio('結果分類', ['主要負面事件', '完整新聞', '待人工覆核', '待補分析'], horizontal=True)
     right.download_button('下載查詢期間合併 Excel', excel_bytes(frame, st.session_state.get('news_query_runs', [])), file_name='Negative_News_' + st.session_state.get('news_query_period', 'period') + '.xlsx', mime='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', use_container_width=True)
@@ -241,10 +323,12 @@ def main():
     st.title('負面新聞整合中心')
     st.caption('跨市場新聞監控 · 原有 FinBERT／規則保留 · 合併後由 LLM 統一判讀 · 人工覆核優先')
     st.info('每日 08:20（台北時間）：AI 全市場事件搜尋 ＋ 完整 S&P 500 方法一／方法二 → 去重 → FinBERT／規則 → LLM → 合併 Excel。')
-    query, manual, history = st.tabs(['查詢新聞期間', '人工執行新聞期間', '執行紀錄'])
+    query, manual, sec, history = st.tabs(['查詢新聞期間', '人工執行新聞期間', '13F 機構持股', '執行紀錄'])
     with query:
         query_panel()
     with manual:
         manual_panel()
+    with sec:
+        sec_panel()
     with history:
         history_panel()
