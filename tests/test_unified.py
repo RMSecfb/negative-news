@@ -13,7 +13,7 @@ from pipeline.repository import LocalRepository, read_json
 from pipeline.events import load_rules
 
 
-def item(title='Credit default swap spreads surge', ticker='META', day='2026-10-23', url='https://example.com/story?utm_source=x'):
+def item(title='Meta credit default swap spreads surge', ticker='META', day='2026-10-23', url='https://example.com/story?utm_source=x'):
     return {'Ticker': ticker, 'Company': 'Meta Platforms' if ticker else '', 'Market': 'US', 'Published Time': day + 'T10:00:00+08:00', 'Title': title, 'URL': url, 'Source': 'Test', '來源方法': '方法一'}
 
 
@@ -180,9 +180,14 @@ class UnifiedTests(unittest.TestCase):
         self.assertEqual(index.resolve('MET$A','US')[0]['Ticker'],'MET$A')
 
     def test_cache_is_issuer_scoped(self):
-        analyzer=Mock(side_effect=answer)
-        execute(self.repo,self.request,api_key='test',collector=lambda *a:(pd.DataFrame([item()]),[],[]),analyzer=analyzer,interval=0)
-        other={**item(ticker='AAPL'),'Company':'Apple'}
+        def issuer_answer(record,*args):
+            result,usage,error=answer(record,*args)
+            result['company_mentioned']='Apple' if record.get('Ticker')=='AAPL' else 'Meta'
+            return result,usage,error
+        analyzer=Mock(side_effect=issuer_answer)
+        story=item(title='Meta and Apple face widening CDS spreads')
+        execute(self.repo,self.request,api_key='test',collector=lambda *a:(pd.DataFrame([story]),[],[]),analyzer=analyzer,interval=0)
+        other={**story,'Ticker':'AAPL','Company':'Apple'}
         result=execute(self.repo,{**self.request,'id':'second-issuer'},api_key='test',collector=lambda *a:(pd.DataFrame([other]),[],[]),analyzer=analyzer,interval=0)
         self.assertEqual(result['llm_calls'],1)
         self.assertEqual(analyzer.call_count,2)
