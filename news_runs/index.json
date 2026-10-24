@@ -1,6 +1,28 @@
 {
   "runs": [
     {
+      "id": "ticker-audit-20261024-081549",
+      "type": "ticker-audit",
+      "status": "success",
+      "started_at": "2026-10-24T08:15:49.296780+08:00",
+      "finished_at": "2026-10-24T08:15:49.296790+08:00",
+      "sources": 19,
+      "rows": 1691,
+      "changed": 257,
+      "missing_publication_time": 0,
+      "ticker_statuses": {
+        "已核對": 1429,
+        "主體證據不足": 218,
+        "人工確認": 20,
+        "市場／多公司或主體待辨識": 10,
+        "公司名稱／股票代號歧義": 7,
+        "公司代號待核對": 4,
+        "非本市場上市主體": 2,
+        "非上市機構": 1
+      },
+      "llm_calls": 0
+    },
+    {
       "id": "resume-8ace4fc710054c79af17e3416a397b99",
       "type": "manual",
       "status": "success",
