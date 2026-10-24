@@ -1,10 +1,9 @@
 """Streamlit UI: period queries, direct review and queued unified crawls."""
 from __future__ import annotations
 import hashlib
-import io
 import os
 import uuid
-from datetime import datetime, timedelta, time as dt_time
+from datetime import datetime, timedelta
 from pathlib import Path
 import pandas as pd
 import streamlit as st
@@ -14,7 +13,7 @@ from .issuers import company_frame, load_companies
 from .integrated import enqueue, validate_request
 from .records import TPE, read_days, major, review, pending, excel_bytes, manual_save
 from .repository import GitHubRepository, LocalRepository, read_json
-from .analytics import SEC_REPO, frequency_tables, sec_paths, parse_sec, join_sec, combined_excel
+from .analytics import frequency_tables
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -57,6 +56,7 @@ def frequency_panel(frame):
             trend = selected.groupby('日期')['則數'].sum().reindex(days, fill_value=0).rename_axis('日期').reset_index()
             import plotly.express as px
             fig = px.line(trend, x='日期', y='則數', markers=True)
+            fig.update_xaxes(type='category', categoryorder='array', categoryarray=days)
             fig.update_layout(height=310, yaxis_title='已分類負面新聞則數')
             st.plotly_chart(fig, use_container_width=True)
             st.download_button('下載頻率統計 CSV', counts.to_csv(index=False).encode('utf-8-sig'), 'news_frequency.csv')
@@ -139,13 +139,6 @@ def render_results():
                 st.rerun()
             except Exception as exc:
                 st.error(f'未儲存：{exc}')
-    with st.expander('原有曝險清單與本機13F相容功能'):
-        import legacy_engine as engine
-        upload = st.file_uploader('曝險清單 Excel（選填）', type=['xlsx'], key='unified_exposure')
-        exposure = engine.load_exposure_list_from_upload(upload) if upload else pd.DataFrame(columns=['Ticker', 'Exposure'])
-        if upload:
-            st.dataframe(exposure, hide_index=True)
-        engine.render_sec13f_panel(major(frame), exposure)
     with st.expander('個股價格查詢（原功能）'):
         ticker = st.text_input('股票代號', value='META', key='unified_price_ticker')
         if st.button('查詢股價', key='unified_price_load'):
