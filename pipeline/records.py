@@ -66,13 +66,13 @@ def merge_news(old, incoming):
     records = normalize(old).to_dict('records')
     added = duplicates = 0
     for r in normalize(incoming).to_dict('records'):
-        ticker = str(r.get('Ticker', '')).upper()
+        ticker = str(r.get('Ticker') or r.get('原始Ticker') or '').upper()
         company = str(r.get('Company', '')).casefold()
         candidates = []
         for i, prev in enumerate(records):
             if prev['Market'] != r['Market']:
                 continue
-            pt = str(prev.get('Ticker', '')).upper()
+            pt = str(prev.get('Ticker') or prev.get('原始Ticker') or '').upper()
             pc = str(prev.get('Company', '')).casefold()
             issuer_match = (ticker and pt and ticker == pt) or (company and pc and company == pc)
             same_article = prev['article_id'] == r['article_id']
@@ -163,7 +163,7 @@ def excel_bytes(frame, runs=None):
     return out.getvalue()
 
 
-def read_days(repository, start, end, market='ALL', revision=None):
+def read_days(repository, start, end, market='ALL', revision=None, issuer_index=None):
     frames = []
     missing_days = []
     day = start
@@ -210,6 +210,11 @@ def read_days(repository, start, end, market='ALL', revision=None):
                     result.loc[mask, field] = str(override[field])
             for field, value in {'已人工覆核': 'True', '分類狀態': '人工覆核', '需要人工覆核': 'False', '最終判斷來源': '人工覆核'}.items():
                 result.loc[mask, field] = value
+    if not result.empty:
+        from pathlib import Path
+        from .issuers import load_index
+        issuer_index = issuer_index or load_index(Path(__file__).resolve().parents[1], repository)
+        result = issuer_index.enrich(result)
     return result.reset_index(drop=True)
 
 
@@ -249,6 +254,8 @@ def manual_save(repository, original, edited, reviewer=''):
             index = matches[0]
             if str(df.loc[index].get('人工版本', '')) != str(old.get('人工版本', '')):
                 raise ValueError('這筆新聞已有新的人工覆核，請重新載入後再修改')
+            modified = [k for k in FINAL_FIELDS if k != 'Company' and str(changed.get(k,'')).strip() != str(old.get(k,'')).strip()]
+            df.loc[index, '人工修改欄位'] = tags(df.loc[index].get('人工修改欄位',''), '|'.join(modified))
             for field in FINAL_FIELDS:
                 if field != 'Company':
                     df.loc[index, field] = str(changed.get(field, '')).strip()

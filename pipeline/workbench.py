@@ -59,8 +59,10 @@ def render_results():
     if current.empty:
         st.info('目前分類沒有新聞。')
         return
-    preferred = ['日期', 'Market', 'Ticker', 'Company', 'Published Time', 'Title', 'Level', '事件中文', 'Action', '分類狀態', '已人工覆核', '覆核註記', '最終判斷來源', '來源方法', 'FinBERT', 'Rule_Event_Code', 'Rule_Level', 'LLM事件代碼', 'LLM辨識公司', 'Ticker來源', '中文摘要', 'URL', 'Source']
+    preferred = ['日期', 'Market', 'Ticker', 'Ticker狀態', 'Company', 'Published Time', 'Title', 'Level', '事件中文', 'Action', '分類狀態', '已人工覆核', '覆核註記', '最終判斷來源', '來源方法', 'FinBERT', 'Rule_Event_Code', 'Rule_Level', 'LLM事件代碼', 'LLM辨識公司', 'Ticker來源', 'Ticker候選', 'Ticker核對依據', 'Ticker參照日期', '上市狀態', '原始Ticker', '中文摘要', 'URL', 'Source']
     current = current[[c for c in preferred if c in current] + [c for c in current if c not in preferred]]
+    if 'Ticker稽核警示' in current:
+        preferred.append('Ticker稽核警示')
     current['Level'] = current['Level'].astype(str).str.replace(r'\.0$', '', regex=True)
     builder = GridOptionsBuilder.from_dataframe(current)
     builder.configure_default_column(editable=False, sortable=True, filter=True, resizable=True, minWidth=105)

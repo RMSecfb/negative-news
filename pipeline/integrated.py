@@ -11,7 +11,7 @@ from pathlib import Path
 import pandas as pd
 from .common import truth
 from .events import load_rules, candidate_rules, pick_rule, CDS_PAT, ACTUAL_DEFAULT
-from .issuers import IssuerIndex, load_companies, company_frame
+from .issuers import IssuerIndex, load_companies, company_frame, load_index
 from .llm import analyze, MODEL, PROMPT_VERSION
 from .market import MARKET_QUERIES, priority
 from .ingest import rss_fetch
@@ -90,14 +90,7 @@ def event_discovery(start, end, market='US', pause=.3):
 
 def reference_companies(repo, request):
     selected = load_companies(repo, request['lists'], request['companies'], request['market'])
-    reference = load_companies(repo, ['SP500', 'DowJones30'])
-    watch = repo / 'config' / 'extra_watchlist.csv'
-    if watch.exists():
-        reference = pd.concat([reference, company_frame(pd.read_csv(watch, dtype=str), 'US')], ignore_index=True)
-    symbols = repo / 'config' / 'us_symbol_reference.csv'
-    if symbols.exists():
-        reference = pd.concat([reference, company_frame(pd.read_csv(symbols, dtype=str), 'US')], ignore_index=True)
-    return selected, IssuerIndex(pd.concat([reference, selected], ignore_index=True))
+    return selected, load_index(repo, extra=selected)
 
 
 def collect(repo, request, companies, progress=None):
@@ -274,12 +267,12 @@ def execute(repository, request, repo=ROOT, api_key='', collector=None, analyzer
     print(f'Run {run_id}: {request["methods"]}, AI={request["ai"]}, {start} → {end}', flush=True)
     cache_path = f'news_cache/{usage_day[:7]}.json'
     cache = read_json(repository.read(cache_path))
-    base = index.enrich(read_days(repository, start.astimezone(TPE).date(), (end - timedelta(microseconds=1)).astimezone(TPE).date()))
+    base = read_days(repository, start.astimezone(TPE).date(), (end - timedelta(microseconds=1)).astimezone(TPE).date(), issuer_index=index)
     if request.get('resume'):
         fresh, errors, stages = pd.DataFrame(), [], ['沿用已擷取資料；不重新抓取']
     else:
         fresh, errors, stages = (collector or collect)(repo, request, selected)
-    fresh = index.enrich(normalize(fresh))
+    fresh = index.enrich(normalize(fresh), audit_existing=False)
     combined, merge_stats = merge_news(base, fresh)
     if combined.empty:
         targets = pd.DataFrame()
@@ -287,7 +280,7 @@ def execute(repository, request, repo=ROOT, api_key='', collector=None, analyzer
         times = combined['Published Time'].map(published)
         targets = combined[(times >= start) & (times < end) & (combined['Market'] == request['market'])].copy()
         if request['scope'] == 'list' and not request.get('discover_market'):
-            targets = targets[targets['Ticker'].isin(set(selected['Ticker']))]
+            targets = targets[targets['Ticker'].isin(set(selected['Ticker'])) | targets.get('原始Ticker', pd.Series('',index=targets.index)).isin(set(selected['Ticker']))]
     requested = request['max_llm'] if request['ai'] and api_key else 0
     allowance = reserve(repository, run_id, requested, usage_day, int(os.getenv('LLM_DAILY_MAX', '120'))) if requested else 0
     calls = reused = 0
@@ -344,7 +337,7 @@ def execute(repository, request, repo=ROOT, api_key='', collector=None, analyzer
                 new_cache[key] = {'answer': answer}
         r.update(分析指紋=key, LLM模型=MODEL if request['ai'] else '', Prompt版本=PROMPT_VERSION if request['ai'] else '', 最近執行=run_id)
         decisions.append(r)
-    analyzed = pd.DataFrame(decisions).fillna('')
+    analyzed = index.enrich(pd.DataFrame(decisions).fillna(''))
     report.update(status='success', finished_at=datetime.now(TPE).isoformat(), llm_calls=calls, cache_reused=reused,
                   pending=len(pending(analyzed)), review=len(review(analyzed)), major=len(major(analyzed)),
                   selected_company_count=len(selected), collected=len(fresh), rows=len(targets), errors=errors,
@@ -352,6 +345,9 @@ def execute(repository, request, repo=ROOT, api_key='', collector=None, analyzer
     # Re-read in the final transaction so a manual review made during crawling always wins.
     def publish(read, revision):
         files = {}
+        symbol_reference = repo / 'config' / 'us_symbol_reference.csv'
+        if symbol_reference.exists():
+            files['config/us_symbol_reference.csv'] = symbol_reference.read_bytes()
         run_index = read_json(read('news_runs/index.json'), {'runs': []})
         run_index['runs'] = sorted([r for r in run_index['runs'] if r.get('id') != run_id] + [report], key=lambda r: r.get('started_at', ''), reverse=True)[:100]
         if not combined.empty:
