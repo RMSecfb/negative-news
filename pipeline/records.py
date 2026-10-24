@@ -269,6 +269,8 @@ def manual_save(repository, original, edited, reviewer=''):
             for field, value in {'已人工覆核': 'True', '需要人工覆核': 'False', '分類狀態': '人工覆核', '最終判斷來源': '人工覆核', '人工版本': uuid.uuid4().hex, '人工覆核人': reviewer, '人工覆核時間': datetime.now(TPE).isoformat()}.items():
                 df.loc[index, field] = value
         for day, df in days.items():
+            from .participants import annotate_from_repository
+            df = annotate_from_repository(df, Snapshot())
             files[f'news_daily/{day}.csv'] = df.to_csv(index=False).encode('utf-8-sig')
             files[f'news_daily/{day}.xlsx'] = excel_bytes(df, read_json(read('news_runs/index.json'), {'runs': []})['runs'])
         return files, len(changes)
