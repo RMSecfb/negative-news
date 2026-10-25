@@ -1500,5 +1500,444 @@
       "requires_review": true,
       "summary_zh": "本新聞僅提及FactSet的調查結果，並未提及任何違約、破產、信用風險升高等事件，故無法確認任何信用風險事件。"
     }
+  },
+  "1a17ea590630b3607ab8d8d8ba574032fc23de2f8d31b369e09b87d42c52de50": {
+    "answer": {
+      "company_mentioned": "",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "無足夠資訊判斷是否有信用風險事件。"
+    }
+  },
+  "1515e5b1f92d3e7c49209ab92a6852ef7583147c09678f15a45816f3f423f949": {
+    "answer": {
+      "company_mentioned": "Genuine Parts Company",
+      "confirmed_default": false,
+      "event_codes": [
+        "EARNINGS_WARNING"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "Genuine Parts Company（GPC）宣布下調財務預測，表明未來營收與利潤預期低於市場預期。"
+    }
+  },
+  "686d08dc5eafa1c44754f208d37c722e060b76d8f27ad2e336ad935cdc5dcbc4": {
+    "answer": {
+      "company_mentioned": "Nike, Inc.",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "耐克公司因客服帳號被攻擊發送色情引流鏈接而向公眾道歉，警方正在調查此事件。"
+    }
+  },
+  "52c841547419e6ee141579ebdac270c90021cd508b732bbb725f7f94cbddede9": {
+    "answer": {
+      "company_mentioned": "McDonald's",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "此新聞僅提及一名管理員涉嫌性侵，並未涉及任何財務或信用風險事件。"
+    }
+  },
+  "5964c2bbcdd08b65280c3ad4e4890f462eb08f78584dc80efa39819b93373952": {
+    "answer": {
+      "company_mentioned": "Chipotle Mexican Grill",
+      "confirmed_default": false,
+      "event_codes": [
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "MARKET_IMPLIED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "Chipotle Mexican Grill 股價因市場情緒波動而下跌，並未出現任何違約或其他財務風險訊號。"
+    }
+  },
+  "b4dfaf8b26d24671e5fab435e0f5049751ab261885c9957574a39354f7841715": {
+    "answer": {
+      "company_mentioned": "Amazon",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "本新聞報導關於亞馬遜貨運飛機事故，並未提及任何信用風險或債務違約訊息。"
+    }
+  },
+  "908471b7a67b20a24e8a9ad4f15889211a6d1c5ba832426710369ccf2baad02a": {
+    "answer": {
+      "company_mentioned": "Amazon",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "此新聞僅提及亞馬遜產品召回，並未涉及任何信用風險事件。"
+    }
+  },
+  "4cc20dbe92cfa6d5d71d3a5bcae4c2cbd99fb56fe3e329702a16600489a7b4d4": {
+    "answer": {
+      "company_mentioned": "Public Storage",
+      "confirmed_default": false,
+      "event_codes": [
+        "REGULATORY_INVESTIGATION"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "FBI Officially Launch Investigation Into Massive Theft Of 6,451 PSA-Rated TCG Cards",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "美國聯邦調查局正式展開調查，針對大量盜取的 6,451 張 PSA 評級 TCG 卡片。"
+    }
+  },
+  "cc9c9f243be4a6c302f52369fb0da5a104e2d871894f8fd26dee2a172e36b98e": {
+    "answer": {
+      "company_mentioned": "Public Storage",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "本新聞未提及任何與信用風險相關的事件，僅報導被盜卡片清單。"
+    }
+  },
+  "2d4b7de0e58ca90687bde19c8c8c0fbdc1978fafa3cbf24f0019aa90838999e5": {
+    "answer": {
+      "company_mentioned": "Ball Corporation",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "本新聞僅提及 Subaru 對 2026 年 Crosstrek 與 Forester 的召回，並未涉及 Ball Corporation 的任何信用風險事件。"
+    }
+  },
+  "8d42f19c0f0df50569079067f32cf7f18c5a86300b39e5a3d3d3ca0897e570be": {
+    "answer": {
+      "company_mentioned": "Jabil",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前沒有足夠資訊顯示 Jabil 相關的信用風險事件。"
+    }
+  },
+  "b4fffdcb3d07c1c6da73381649e06b5976636b1c5989fb8fb7f3a0bfe09f3c77": {
+    "answer": {
+      "company_mentioned": "Alphabet Inc. (Class A)",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前無足夠資訊顯示 Alphabet Inc. (Class A) 之信用風險事件。"
+    }
+  },
+  "88a8c0ae2329202cd9e9c7a481c59ec1136dddd95b2278603ba7097d45875e7f": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Alphabet Inc. (Class C)",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "本新聞未提及任何與信用風險相關的事件。",
+      "requires_review": true
+    }
+  },
+  "e3e958b74162fa5a941a5c61461b717d5fc002d9736e890a26ee4a5a90989d08": {
+    "answer": {
+      "company_mentioned": "Meta Platforms",
+      "confirmed_default": false,
+      "event_codes": [
+        "EARNINGS_WARNING"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "Meta: The Q4 Guide Is The Real Profit Warning",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "Meta Platforms 公布第四季指引，警示利潤可能下滑，屬於財務預警事件。"
+    }
+  },
+  "a7332851f9c418b53d95ea9dc918c8896f8123935a12701749e6027e72b59c19": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Walmart",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "此新聞僅提及產品召回，未涉及任何信用風險事件。",
+      "requires_review": true
+    }
+  },
+  "9b482fd74f229ca6fd10816fdf88cae694079c48429f7696e6655574cf204f64": {
+    "answer": {
+      "company_mentioned": "Netflix",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前沒有足夠資訊顯示Netflix存在違約或其他信用風險事件，需進一步調查。"
+    }
+  },
+  "c98b46a77853dbe2b6b0a742d771f7eee0d1a9782f1bb69bce47803986ec347a": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "requires_review": true,
+      "summary_zh": "本篇新聞未提及任何具體公司，僅描述美國債券殖利率下跌與企業信用風險上升，無法判斷是否涉及任何信用事件。"
+    }
+  },
+  "9723d5c45f64352793412034545805cb3cbe4c64fe42660cd1cbe93130579b25": {
+    "answer": {
+      "company_mentioned": "Apple Inc.",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前無足夠資訊顯示 Apple Inc. 有任何違約或信用風險事件，需進一步確認。"
+    }
+  },
+  "5eb09c456805b2ff1b9f6a67d1e1e67e076a9e2f16fb028bf68945f1b4a6a415": {
+    "answer": {
+      "company_mentioned": "美國資料中心",
+      "confirmed_default": false,
+      "event_codes": [
+        "CREDIT_DOWNGRADE"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "示警美國資料中心信用降評風險",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "標普對美國資料中心的信用評級進行降評，提示市場對其債務風險的擔憂。"
+    }
+  },
+  "b1de087b384b96a6853d7959725d54881383c63153313a6e45281f776292e570": {
+    "answer": {
+      "company_mentioned": "Bristol Myers Squibb",
+      "confirmed_default": false,
+      "event_codes": [
+        "PATENT_LITIGATION"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "泰合抗血栓新藥遭 BMS 提專利訴訟 美國上市前關鍵挑戰",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "Bristol Myers Squibb（BMS）因泰合抗血栓新藥被提起專利訴訟，面臨上市前的重大法律挑戰。"
+    }
+  },
+  "808601cf2737b8faec64ef4c0e688ab7b7ede522a0ec0602d46dd90a1439265b": {
+    "answer": {
+      "company_mentioned": "Netflix",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前沒有足夠資訊顯示Netflix存在違約或其他信用風險事件，需進一步調查。"
+    }
+  },
+  "15f801819352eb19b964de3d7833fdf93d0a21346ee64ad612e1769f60c5d8fa": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Amazon",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "此新聞未提及任何與信用風險相關的事件。",
+      "requires_review": true
+    }
+  },
+  "0e411bcb207b56b7f85bde6c8193289033de52205a8532ce1578b170e4d1946b": {
+    "answer": {
+      "company_mentioned": "Nvidia",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "本新聞未提及任何與Nvidia信用風險相關的事件，僅討論AI相關技術與市場動態。"
+    }
+  },
+  "a7f757c216ea3463ba9fc403665a6a84cbef333f5b16b789e23481be998699f2": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Berkshire Hathaway",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "此新聞未提及任何信用風險事件。",
+      "requires_review": true
+    }
+  },
+  "8c25744227bbd50526f50c41ad3e2302a269bc86074b60d97e2d111801cc5ce9": {
+    "answer": {
+      "company_mentioned": "Apple Inc.",
+      "relevant": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "requires_review": true,
+      "summary_zh": "目前無足夠資訊顯示 Apple Inc. 有任何信用風險事件。"
+    }
+  },
+  "6087f7e4762617da9c7957f397908453acd9fd0ad9c530fdef695d5091bab68f": {
+    "answer": {
+      "company_mentioned": "Nvidia",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前無足夠資訊顯示 Nvidia 之信用事件，需進一步調查。"
+    }
+  },
+  "b2db32f54e8bcb9d303591a4f9a14ad5e14ee1a59d4d55fe54565c0db9aab61f": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Amgen",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "此新聞未提及任何與信用風險相關的事件。",
+      "requires_review": true
+    }
+  },
+  "ad6fe96a8b9b7c87eb1434a2e018443bf7190c75326b4771a6982d24cdc9096e": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "GE HealthCare",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "此新聞僅報告 GE HealthCare 與禾榮科簽署合作協議，並未提及任何信用風險事件。",
+      "requires_review": true
+    }
+  },
+  "f44146ff597b521f70e30ec3ef6af7b64129cf181debff16f0134ea938d9a5f9": {
+    "answer": {
+      "company_mentioned": "Amgen",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "此新聞主要報導Amgen藥物組合在治療侵襲性肺癌患者時降低死亡風險58%，並未提及任何信用風險或違約訊息。"
+    }
+  },
+  "1d5bedbb0cee0a96dfe7c8930266badd45407b26b0b2490e453096cbbf93b338": {
+    "answer": {
+      "company_mentioned": "Amgen",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "本新聞未提及任何與信用風險相關的事件，僅報導藥物臨床試驗結果。"
+    }
+  },
+  "980d74f9148599b403a85ddb7e3cd282264491c078cd85fd361784f9378cbb0b": {
+    "answer": {
+      "company_mentioned": "PulteGroup",
+      "confirmed_default": false,
+      "event_codes": [
+        "EARNINGS_MISS"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "普爾特集團第三季財報因住房需求疲軟而下滑，顯示營收未達市場預期。"
+    }
+  },
+  "d3574771e72c5fc584ba17825699ddc304b929bd53a931d7e4a93bd0939ecdb9": {
+    "answer": {
+      "company_mentioned": "Globe Life",
+      "confirmed_default": false,
+      "event_codes": [
+        "CREDIT_DOWNGRADE",
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "Globe Life 股價因展望下調及信用評級下調而下跌 8%。"
+    }
+  },
+  "1448e840e3004078d61a2454a075a0a79661bf7ecf247298a55e3a9a1f5eb89a": {
+    "answer": {
+      "company_mentioned": "Jabil",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "此新聞僅提及 JBL Sense Pro 真無線耳機的價格調降，並未涉及任何信用風險或債務違約訊息。"
+    }
+  },
+  "a833d1d6771c9e86da2b4ac3deb6bf9700342ce1477484a4e5cb1b925a604289": {
+    "answer": {
+      "company_mentioned": "American Express",
+      "confirmed_default": false,
+      "event_codes": [
+        "WORKFORCE_REDUCTION"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "American Express to cut 3,500 jobs despite 28% profit surge",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "美國運通將裁減3,500名員工，儘管利潤增長28%。"
+    }
+  },
+  "39ec7d0cbbe29361cc163f686ba52e354a8bb7811b7b17c277fd439ddfb96719": {
+    "answer": {
+      "company_mentioned": "CMS Energy",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前無足夠資訊顯示 CMS Energy 相關信用風險事件。"
+    }
   }
 }
