@@ -1,0 +1,21 @@
+﻿序號,news_id,日期,公司,標題,最終決定,結果,原因
+1,186edc11e6e2733c1b392fa0,2026-08-10,Costco,Eleven months cost Galaxy S23 owners what the Galaxy S24 got by default,排除,已套用,更改：Event_Code、事件中文、Level、Action
+2,923a54dbb7f4a578eac7afb8,2026-08-19,Hasbro,Cost to battle 20 wildfires in WA has topped $200M,排除,已套用,更改：Event_Code、事件中文、Level、Action
+3,f19851e67b627749486d6c9c,2026-08-19,Costco,Cost to battle 20 wildfires in WA has topped $200M,排除,已套用,更改：Event_Code、事件中文、Level、Action
+4,8951ae3cb35f7f6be454dab8,2026-08-20,AT&T,Trump’s tariff strategy has changed. But his goal hasn’t | CNN Business,排除,已套用,更改：Event_Code、事件中文、Level、Action
+5,fc2113953d40e000f93910c2,2026-08-20,Hasbro,Trump’s tariff strategy has changed. But his goal hasn’t | CNN Business,排除,已套用,更改：Event_Code、事件中文、Level、Action
+6,6bb0d2c21481e144b47096ef,2026-08-21,Amazon,Amazon Linux default SSM parameter will now track the latest kernel,排除,已套用,更改：Event_Code、事件中文、Level
+7,7c24eb0447639164dbc4818e,2026-08-21,ServiceNow,Amazon Linux default SSM parameter will now track the latest kernel,排除,已套用,更改：Event_Code、事件中文、Level
+8,2ffb51a927beed95715fac74,2026-10-01,FedEx,"CMA CGM Group completes acquisition of FedEx Supply Chain, strengthening its log",排除,已套用,更改：Event_Code、事件中文、Level
+9,614ff8b8a90f2d0b6f1f886a,2026-10-02,Western Digital,希捷和西部數據股價大跌，東芝擬提高硬盤產能,維持,已套用,維持原分類，僅標記已人工覆核
+10,6b9a551ae5cb303f9ddedd6b,2026-10-02,Seagate Technology,希捷和西部數據股價大跌，東芝擬提高硬盤產能,維持,已套用,維持原分類，僅標記已人工覆核
+11,238fbbb32cdb05e0b8ba5a1d,2026-10-05,Dollar Tree,"Dollar Tree Upgraded, Kroger Downgraded: Updated Rankings on Top Blue-Chip Stock",排除,已套用,更改：Event_Code、事件中文、Level、Action
+12,98e2cd757bfc1e8fdaadb03b,2026-10-05,Kroger,"Dollar Tree Upgraded, Kroger Downgraded: Updated Rankings on Top Blue-Chip Stock",維持,已套用,維持原分類，僅標記已人工覆核
+13,1081cb3c87841c978edfc30c,2026-10-07,Duke Energy,Duke Energy comes to an agreement on long-sought large load tariff for data cent,排除,已套用,更改：Event_Code、事件中文、Level
+14,7de6b6941ebfdc5d0cd651f7,2026-10-08,NetApp,"NetApp (NTAP) Wins An Analyst Upgrade, Is It 19% Overvalued?",排除,已套用,更改：Event_Code、事件中文、Level
+15,91c9245aa9afef9c9febfba1,2026-10-08,Duke Energy,Duke Energy reaches settlement to enhance protections from data center costs (DU,排除,已套用,更改：Event_Code、事件中文、Level
+16,57c8e5c18b2c345a45a74c51,2026-10-10,T-Mobile US,SpaceX挑戰美國三大運營商 美國運營商巨頭股價暴跌,維持,已套用,維持原分類，僅標記已人工覆核
+17,f06fea4c38810e54c31c769d,2026-10-10,AT&T,SpaceX挑戰美國三大運營商 美國運營商巨頭股價暴跌,維持,已套用,維持原分類，僅標記已人工覆核
+18,30c6d5602c48c8a8e5daa9d9,2026-10-10,AT&T,"As AT&T, Verizon and T-Mobile shares fall, Wall Street assesses the growing Spac",維持,已套用,維持原分類，僅標記已人工覆核
+19,e90ce4eaa1e16eddf83751f2,2026-10-10,Verizon,"As AT&T, Verizon and T-Mobile shares fall, Wall Street assesses the growing Spac",維持,已套用,維持原分類，僅標記已人工覆核
+20,0cfaa1f223a91427c6a34408,2026-10-10,Uber,"Deal Dispatch: Uber Buys ezCater For $2.3B, Skydance Takes Over Warner Bros., Tr",排除,已套用,更改：Event_Code、事件中文、Level
