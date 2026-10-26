@@ -31,6 +31,14 @@ class MarketTests(unittest.TestCase):
         self.assertIn('MARKET_DISCOVERY',out.iloc[0]['監控池'])
     def test_major_events_rank_first(self):
         self.assertGreater(priority({'Title':'Company files bankruptcy','Source':'Reuters'}),priority({'Title':'Stock analyst changes price target','Keyword候選':'target'}))
+    def test_routine_factset_survey_is_not_an_investigation(self):
+        routine=priority({'Title':'鉅亨速報 - Factset 最新調查：洛克希德馬丁LMT-US的目標價調升至629.5元','Source':'鉅亨網'})
+        probe=priority({'Title':'美國運通遭聯邦調查 涉反洗錢缺失','Source':'鉅亨網'})
+        police=priority({'Title':'消息人士稱，FTC已展開調查','Source':'Test'})
+        self.assertEqual(routine,0)
+        self.assertGreaterEqual(probe,70)
+        self.assertGreaterEqual(police,70)
+        self.assertGreaterEqual(priority({'Title':'Factset 最新調查：某公司聲請破產'}),120)
     def test_llm_order_uses_finbert_within_same_priority(self):
         from pipeline.integrated import llm_order
         rows=[

@@ -30,7 +30,10 @@ MARKET_QUERIES = [
 ]
 
 SEVERE = re.compile(r'bankrupt|chapter 11|insolven|missed.{0,20}payment|default on|liquidity crisis|accounting fraud|criminal charges|going concern|破產|債務違約|流動性危機|財報造假|會計弊案', re.I)
-SIGNIFICANT = re.compile(r'cuts guidance|profit warning|credit rating downgrade|investigation|restatement|cyberattack|recall|plung|下修財測|調查|重大召回|暴跌|信評降級', re.I)
+# 中文「調查」只比對監管／司法調查的說法；單獨的「調查」常是「Factset 最新調查」這類分析師預估速報。
+SIGNIFICANT = re.compile(r'cuts guidance|profit warning|credit rating downgrade|investigation|restatement|cyberattack|recall|plung|下修財測|(?:遭|被|展開|啟動|立案|進行|接受|面臨|涉嫌|介入)(?:[^，。,\s]{0,6})?調查|調查局|重大召回|暴跌|信評降級', re.I)
+# 例行分析師預估、目標價調整速報：不給事件分數（仍依 FinBERT 排序，不會被排除）。
+ROUTINE_ESTIMATE = re.compile(r'factset\s*最新調查|eps\s*預估(?:上修|下修)|目標價(?:調升|調降|上調|下調)', re.I)
 EDITORIAL_SOURCE = re.compile(r'reuters|bloomberg|associated press|financial times|wall street journal|cnbc|路透|彭博|中央社|經濟日報|鉅亨', re.I)
 
 def publication_time(value):
@@ -73,6 +76,8 @@ def deduplicate_headlines(frame):
 
 def priority(record):
     text = str(record.get('Title','')) + ' ' + str(record.get('Summary',''))
+    if ROUTINE_ESTIMATE.search(text) and not SEVERE.search(text):
+        return 0
     score = 120 if SEVERE.search(text) else 70 if SIGNIFICANT.search(text) else 0
     if re.search(r'(?<![A-Za-z])CDS(?![A-Za-z])|credit default swap|信用違約交換', text, re.I):
         score = max(score, 100)
