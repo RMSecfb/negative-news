@@ -118,3 +118,13 @@ Form4_FINAL.py雖已存在，但目前repo沒有Form4成果檔，不應顯示虛
 - SEC13F來源：https://github.com/JUWangWang/SEC13F
 - Groq限制：https://console.groq.com/docs/rate-limits
 - SEC 13F FAQ：https://www.sec.gov/rules-regulations/staff-guidance/frequently-asked-questions-about-form-13f
+
+## 九、離線總覆核匯入
+
+不定期對歷史新聞（待人工覆核、待補分析、疑似歸錯）做離線總覆核，不使用 Groq 額度。
+
+- 覆核檔由人工／Claude 在線下產生，確認後另存為 `*_已確認.xlsx`，上傳到 `review_inbox/`。
+- `.github/workflows/review-import.yml` 偵測到新檔後執行 `python -m pipeline.review_import`，沿用 `manual_save` 的人工覆核標記寫回 `news_daily`；與每日排程共用 concurrency group。
+- 只修改被覆核的那幾列，其他列保持原樣；人工版本或分類不一致的列會略過並列在 `review_inbox/done/*_結果.csv`。
+- 「排除」記為 `NOT_RELEVANT`、Level 0、Action「排除、不納入風險事件」，因此 `manual_save` 的 Level 限制已放寬為 0–5。
+- 詳細欄位與略過規則見 `review_inbox/README.md`。

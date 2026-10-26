@@ -233,10 +233,10 @@ def manual_save(repository, original, edited, reviewer=''):
         if any(str(r.get(k, '')).strip() != str(old.get(k, '')).strip() for k in FINAL_FIELDS if k != 'Company'):
             try:
                 level = float(r.get('Level', ''))
-                if not level.is_integer() or not 1 <= level <= 5:
+                if not level.is_integer() or not 0 <= level <= 5:
                     raise ValueError()
             except (ValueError, TypeError):
-                raise ValueError('人工修改的 Level 必須是 1–5 的整數')
+                raise ValueError('人工修改的 Level 必須是 0–5 的整數（0 代表排除）')
             changes.append((old, r))
     if not changes:
         return 0

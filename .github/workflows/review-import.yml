@@ -1,0 +1,63 @@
+name: 離線覆核匯入
+
+# 把確認後的 review_inbox/*_已確認.xlsx 寫回 news_daily。全程不呼叫 LLM。
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'review_inbox/*_已確認.xlsx'
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        type: boolean
+        description: '只檢查並列出結果，不寫入任何資料'
+        default: false
+
+permissions:
+  contents: write
+
+# 與每日負面新聞排程共用同一組，避免同時寫入 news_daily
+concurrency:
+  group: unified-risk-news-main
+  cancel-in-progress: false
+
+jobs:
+  import-review:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install minimal dependencies
+        run: pip install "pandas>=2.2,<3" openpyxl requests
+      - name: Test review import
+        run: python -m unittest tests.test_review_import -v
+      - name: Apply review files
+        env:
+          DRY_RUN: ${{ inputs.dry_run && 'true' || 'false' }}
+        run: |
+          if [[ "$DRY_RUN" == "true" ]]; then
+            python -m pipeline.review_import --dry-run
+          else
+            python -m pipeline.review_import
+          fi
+      - name: Commit and push results
+        if: ${{ !inputs.dry_run }}
+        run: |
+          git config user.name "RMSecfb"
+          git config user.email "313385187+RMSecfb@users.noreply.github.com"
+          git add -A review_inbox news_daily
+          if git diff --cached --quiet; then
+            echo "沒有需要提交的變更"
+            exit 0
+          fi
+          git commit -m "離線覆核匯入：review_inbox/done 已更新"
+          for attempt in 1 2 3; do
+            git pull --rebase origin main && git push origin HEAD:main && exit 0
+            git rebase --abort 2>/dev/null || true
+            sleep $((attempt * 5))
+          done
+          echo "::error::推送失敗：news_daily 在匯入期間被他人修改，檔案仍在 review_inbox，請重新執行本流程"
+          exit 1
