@@ -9,7 +9,7 @@
       "summary_path": "institutional_insider/13f/summary.csv",
       "workbook_path": "institutional_insider/13f/13F_2026Q2_Full_Universe.xlsx",
       "rows": 30,
-      "loaded_at": "2026-10-25T08:46:18.581276+08:00"
+      "loaded_at": "2026-10-26T08:57:49.602786+08:00"
     },
     "form4": {
       "status": "ready",
@@ -20,10 +20,10 @@
       "summary_path": "institutional_insider/form4/summary.csv",
       "workbook_path": "institutional_insider/form4/Form4_2026-10-24_30D_Full_Universe.xlsx",
       "rows": 30,
-      "loaded_at": "2026-10-25T08:46:18.581276+08:00"
+      "loaded_at": "2026-10-26T08:57:49.602786+08:00"
     }
   },
-  "synced_at": "2026-10-25T08:46:18.581276+08:00",
+  "synced_at": "2026-10-26T08:57:49.602786+08:00",
   "source_repo": "JUWangWang/SEC13F",
   "checked_source_sha": "abc6449aca7686d253c0b48d6d6b9c42b27db825"
 }
