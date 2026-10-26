@@ -3,27 +3,27 @@
     "13f": {
       "status": "ready",
       "source_status": "available",
-      "source_repo": "JUWangWang/SEC13F",
-      "source_sha": "abc6449aca7686d253c0b48d6d6b9c42b27db825",
+      "source_repo": "RMSecfb/negative-news",
+      "source_sha": "5da00a88e8371a68bf17c694df87acfef21c28c1",
       "source_path": "institutional_13f/2026Q2/13F_2026Q2_Full_Universe.xlsx",
       "summary_path": "institutional_insider/13f/summary.csv",
       "workbook_path": "institutional_insider/13f/13F_2026Q2_Full_Universe.xlsx",
       "rows": 30,
-      "loaded_at": "2026-10-26T08:57:49.602786+08:00"
+      "loaded_at": "2026-10-26T17:01:25.735610+08:00"
     },
     "form4": {
       "status": "ready",
       "source_status": "available",
-      "source_repo": "JUWangWang/SEC13F",
-      "source_sha": "abc6449aca7686d253c0b48d6d6b9c42b27db825",
+      "source_repo": "RMSecfb/negative-news",
+      "source_sha": "5da00a88e8371a68bf17c694df87acfef21c28c1",
       "source_path": "insider_form4/2026-10-24/Form4_2026-10-24_30D_Full_Universe.xlsx",
       "summary_path": "institutional_insider/form4/summary.csv",
       "workbook_path": "institutional_insider/form4/Form4_2026-10-24_30D_Full_Universe.xlsx",
       "rows": 30,
-      "loaded_at": "2026-10-26T08:57:49.602786+08:00"
+      "loaded_at": "2026-10-26T17:01:25.735610+08:00"
     }
   },
-  "synced_at": "2026-10-26T08:57:49.602786+08:00",
-  "source_repo": "JUWangWang/SEC13F",
-  "checked_source_sha": "abc6449aca7686d253c0b48d6d6b9c42b27db825"
+  "synced_at": "2026-10-26T17:01:25.735610+08:00",
+  "source_repo": "RMSecfb/negative-news",
+  "checked_source_sha": "5da00a88e8371a68bf17c694df87acfef21c28c1"
 }
