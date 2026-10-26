@@ -10,6 +10,8 @@
 
 每天台北時間 08:20，`.github/workflows/negative-news-ai.yml` 對完整 S&P 500 公司清單執行方法一、方法二，並加上全市場事件搜尋。新聞時間窗固定為前一天 08:20 到當天 08:20。GitHub 排程常有延遲，因此另由 Cloudflare Worker（`risk-scheduler`）在 08:22 準時觸發，GitHub 排程保留為備援；晚到的備援排程會略過。
 
+排程總覽（台北時間）：週二至週六 06:00 Form 4 → 週一至週五 06:30 13F → 每天 07:00 機構內部人保底同步 → 08:22 負面新聞。細節見 [docs/INSTITUTIONAL_INSIDER.md](docs/INSTITUTIONAL_INSIDER.md)。
+
 處理流程：
 
 新聞擷取 → 同市場、同公司相同網址／相同標題去重 → FinBERT 與規則留存 → 選用 LLM 統一事件判讀 → 人工覆核優先 → 依新聞發布日期合併寫入 `news_daily/`（CSV 與 Excel）。
@@ -54,7 +56,7 @@ Streamlit 入口為 `負面新聞整合網站.py`。
 - **查詢新聞期間**：設定開始、結束日期與市場，支援跨日。可直接編輯 Ticker、Level、事件中文、Action、覆核註記並儲存。Level 3 黃、4 橘、5 紅。
 - **人工執行新聞期間**：指定日期與時間，可複選 AI LLM／方法一／方法二，範圍可選全市場或指定公司清單（Dow Jones 30、S&P 500、上傳清單可複選）。單次最多 31 天；歷史擷取受新聞來源保留範圍限制。
 - **只補分析既有新聞**：不重新抓取，優先使用既有資料與快取，補跑寫入同一批 `news_daily` 並保留人工修改。
-- **機構內部人交易**：13F 與 Form 4 整合頁，見 [INSTITUTIONAL_INSIDER.md](INSTITUTIONAL_INSIDER.md)。
+- **機構內部人交易**：13F 與 Form 4 整合頁，見 [docs/INSTITUTIONAL_INSIDER.md](docs/INSTITUTIONAL_INSIDER.md)。
 - **執行紀錄**：查看新判讀、沿用、待補分析與新聞來源異常。
 - **下載**：Excel 含「完整新聞、主要負面事件（L3–5）、待人工覆核、待補分析、執行紀錄」五張表。
 - **曝險加權（選填）**：上傳含 `Ticker`／`Symbol`／股票代號，以及 `Exposure`／`Amount`／`曝險金額`／`曝險`／`部位金額`／`部位` 其中一欄的 Excel，系統會併入曝險並繪製曝險風險象限圖（X 曝險金額、Y 事件嚴重度、泡泡大小為則數、顏色為最高 Level，以中位數十字線劃分優先處理區）。
@@ -73,11 +75,13 @@ Streamlit 入口為 `負面新聞整合網站.py`。
 | `news_audits/` | 歷史 Ticker 核對報告 |
 | `review_inbox/` | 離線覆核收件匣（見下節） |
 | `history/` | 原始歷史統計與舊版人工覆核紀錄（`negative_news_manual_overrides.csv`），程式仍會讀取，請勿刪除 |
-| `institutional_insider/` | 機構內部人交易成果 |
+| `sec_filings/` | 13F／Form 4 擷取程式、機構與股票清單、原始成果（`institutional_13f/`、`insider_form4/`） |
+| `institutional_insider/` | 經驗證後給網站與新聞使用的 13F／Form 4 摘要與 `latest.json` |
+| `docs/` | 架構與機構內部人說明 |
+| `archive/` | 歷史程式備份與舊升級工具，不是部署入口 |
 | `config/` | 公司別名、發行人登錄、美股代號參照 |
 | `pipeline/` | 現行主流程與覆核匯入程式 |
 | `legacy_engine.py` | 原始擷取、FinBERT、曝險等函式，由新版調用 |
-| `BackupCode/` | 歷史程式備份，不是部署入口 |
 | `Parameter_Event.xlsx`、`SP500.xlsx`、`DowJones30.xlsx` | 事件規則與公司名單；缺任何一份程式會停止。覆蓋檔案即可更新，不需改程式 |
 
 前期的 `risk_news_daily/`（舊版每日 Excel）、`ai_news_daily/`、`ai_news_raw/` 內容已全部併入 `news_daily/` 並移除，歷史仍可在 Git 紀錄中找回。
@@ -107,6 +111,7 @@ Streamlit 入口為 `負面新聞整合網站.py`。
 | 位置 | 名稱 | 用途 |
 |---|---|---|
 | GitHub Actions secret | `GROQ_API_KEY` | LLM 判讀；不需放到網站 |
+| GitHub Actions secret | `SEC_IDENTITY` | SEC 存取聲明（名稱＋聯絡信箱），未設定時 13F／Form 4 擷取會略過 |
 | Streamlit secrets | `GITHUB_TOKEN` | 網站送出人工執行請求與儲存人工修改；需此 repo 的 Contents read/write |
 | Streamlit secrets | `GITHUB_REPO = "RMSecfb/negative-news"` | 目標 repo |
 | Streamlit secrets（選填） | `GITHUB_BRANCH`（預設 `main`）、`GITHUB_HISTORY_PATH`（預設 `history/negative_news_history.csv`） | 分支與歷史統計路徑 |
@@ -133,6 +138,7 @@ python -m unittest discover -s tests -v
 
 ## 相關文件
 
-- [CURRENT_ARCHITECTURE.md](CURRENT_ARCHITECTURE.md)：程式分工、排程流程、FinBERT／規則／LLM 的實際分工與用量限制。
-- [INSTITUTIONAL_INSIDER.md](INSTITUTIONAL_INSIDER.md)：機構持股與 Form 4 整合。
+- [docs/CURRENT_ARCHITECTURE.md](docs/CURRENT_ARCHITECTURE.md)：程式分工、排程流程、FinBERT／規則／LLM 的實際分工與用量限制。
+- [docs/INSTITUTIONAL_INSIDER.md](docs/INSTITUTIONAL_INSIDER.md)：13F／Form 4 擷取、排程、Secret 與同步。
+- [sec_filings/METHODOLOGY.md](sec_filings/METHODOLOGY.md)：13F 與 Form 4 的判讀方法。
 - [review_inbox/README.md](review_inbox/README.md)：離線覆核匯入規則。

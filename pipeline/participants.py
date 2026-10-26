@@ -1,21 +1,34 @@
-"""Institutional/insider result adapter for JUWangWang/SEC13F.
+"""Institutional/insider result adapter.
 
-Consumes the source project's workbooks. Does not turn missing/failed filings
+Consumes the workbooks produced by sec_filings/ (13F_FINAL.py, Form4_FINAL.py) in this repository. Does not turn missing/failed filings
 into zero holdings or no-trade signals, and never changes news decisions.
 """
 from __future__ import annotations
 import io
 import json
+import os
 import re
+import subprocess
+from pathlib import Path
 from datetime import datetime, date, timedelta
 from zoneinfo import ZoneInfo
 import pandas as pd
-from .repository import GitHubRepository, read_json, json_bytes
+from .repository import GitHubRepository, LocalRepository, read_json, json_bytes
 
-SOURCE_REPO = 'JUWangWang/SEC13F'
+SOURCE_REPO = os.getenv('GITHUB_REPOSITORY', 'RMSecfb/negative-news')
+SEC_DIR = Path(__file__).resolve().parents[1] / 'sec_filings'
 PREFIX = 'institutional_insider/'
 DISPLAY_FIELDS = ['13F 機構動向', 'Form4 內部人動向']
 AUDIT_FIELDS = ['13F參考季度', '13F最近申報日', '13F資料狀態', 'Form4分析開始', 'Form4分析結束', 'Form4資料狀態', '機構內部人來源版本', '機構內部人同步時間']
+
+
+class LocalSource(LocalRepository):
+    """Results written by sec_filings/ in this checkout; version is the checked-out commit."""
+    def revision(self):
+        try:
+            return subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=self.root, text=True).strip()
+        except Exception:
+            return os.getenv('GITHUB_SHA', '') or 'local'
 
 
 def workbook_paths(paths, kind):
@@ -168,7 +181,7 @@ def annotate_from_repository(news, repository, revision=None):
 def sync(target, source=None):
     """Publish one validated snapshot. Failed imports retain the last good dataset."""
     from .analytics import parse_sec
-    source = source or GitHubRepository(SOURCE_REPO)
+    source = source or LocalSource(SEC_DIR)
     revision = source.revision()
     paths = source.list('', revision)
     imported, errors = {}, {}

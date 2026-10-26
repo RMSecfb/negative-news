@@ -1,0 +1,33 @@
+{
+  "source_repo": "JUWangWang/SEC13F",
+  "source_sha256": "6a136da6d4bcc26d52050cf059f4d8164e8b78ef9f6901e07779e8a8127f3dbe",
+  "edgartools": "5.62.1",
+  "pandas": "3.1.0",
+  "started_at": "2026-10-24T11:18:14.773309+08:00",
+  "finished_at": "2026-10-24T11:21:30.073558+08:00",
+  "timezone": "Asia/Taipei",
+  "analysis_start": "2026-09-25",
+  "analysis_end": "2026-10-24",
+  "tickers": 30,
+  "ps_transactions": 75,
+  "excluded_transactions": 202,
+  "status_counts": {
+    "OK": 30
+  },
+  "runtime_changes": [
+    "workspace BASE_DIR",
+    "Taipei run date",
+    "4 requests/sec",
+    "raw per-transaction dates for non-P/S excluded records",
+    "amendments=False for Form 4; amendments=True for explicit Form 4/A query"
+  ],
+  "output_file": "insider_form4/2026-10-24/Form4_2026-10-24_30D_Full_Universe.xlsx",
+  "source_base_commit": "dae0d8ec9ec978bfc3e593bbff44327b607a80c8",
+  "execution_commit": "local",
+  "amendment_counts_revalidated": true,
+  "amendments_total": 1,
+  "issuer_mismatch_excluded": 12,
+  "parse_errors": 0,
+  "issuer_unknown": 0,
+  "validated_at": "2026-10-24T11:23:43.275117+08:00"
+}

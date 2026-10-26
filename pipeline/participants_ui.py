@@ -44,7 +44,7 @@ def render(repository, news):
     import streamlit as st
     st.subheader('機構內部人交易')
     st.caption('13F 機構季度持股 ＋ Form 4 內部人交易；沿用 SEC13F 專案結果與方法，不改變新聞 Level。')
-    st.link_button('開啟機構內部人交易來源專案', 'https://github.com/'+SOURCE_REPO)
+    st.link_button('開啟機構內部人交易來源專案', 'https://github.com/'+SOURCE_REPO+'/tree/main/sec_filings')
     st.caption('獨立同步排程：每日台北 07:00 匯入來源已發布 Excel。這是成果同步，不代表已重新擷取 SEC。')
     refresh = st.button('重新讀取機構內部人成果',key='refresh_participants')
     if refresh or 'participants_snapshot' not in st.session_state:

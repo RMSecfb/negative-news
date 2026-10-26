@@ -4,3 +4,6 @@ __pycache__/
 負面新聞整合資料/
 *.tmp
 config/us_symbol_reference.csv
+sec_filings/.staging_13f/
+sec_filings/run_manifest.json
+sec_filings/run_manifest_13f.json

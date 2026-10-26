@@ -6,7 +6,7 @@ import pandas as pd
 from openpyxl import load_workbook
 from .records import excel_bytes
 
-SEC_REPO = 'JUWangWang/SEC13F'
+SEC_REPO = 'RMSecfb/negative-news'
 
 
 def frequency_tables(frame):

@@ -1,6 +1,8 @@
 # negative-news 架構、判讀方式與 SEC13F 整合評估
 
-> 更新：機構持股與Form4現已統一為「機構內部人交易」，新增新聞摘要欄與每日07:00成果同步。最新實作與限制請見 [INSTITUTIONAL_INSIDER.md](INSTITUTIONAL_INSIDER.md)。本文件以下保留先前架構核對紀錄。
+> 2026-10-26：13F 與 Form 4 已搬入本 repo 的 `sec_filings/` 並由 Actions 自動擷取，第六、七節描述的是搬移前的評估（來源為另一個 repo、無排程），僅保留作歷史紀錄。現況請見 [INSTITUTIONAL_INSIDER.md](INSTITUTIONAL_INSIDER.md)。
+
+> 更新：機構持股與Form4現已統一為「機構內部人交易」，新增新聞摘要欄與每日07:00保底同步。最新實作與限制請見 [INSTITUTIONAL_INSIDER.md](INSTITUTIONAL_INSIDER.md)。本文件以下保留先前架構核對紀錄。
 
 核對日期：2026-10-24。新聞來源 RMSecfb/negative-news main；13F 來源 JUWangWang/SEC13F main（dae0d8ec9ec978bfc3e593bbff44327b607a80c8）。本文件區分既有執行行為、本次頁面功能，以及尚未建立的13F排程。
 
@@ -21,8 +23,8 @@
 |pipeline/records.py、repository.py|跨日查詢、去重、人工覆核、Excel、GitHub原子提交|
 |pipeline/ticker_audit.py|全歷史Ticker核對補修，不使用LLM|
 |pipeline/analytics.py|本次新增：新聞頻率計算、SEC13F成果解析、跨市場限制與整合Excel|
-|pipeline/run.py、legacy_bridge.py、scripts/patch_existing_app.py|先前AI版本及升級工具，現行workflow未直接啟用|
-|BackupCode/|歷史程式備份，並非部署入口；不要用它判斷現行行為|
+|pipeline/run.py、legacy_bridge.py、archive/scripts/patch_existing_app.py|先前AI版本及升級工具，現行workflow未直接啟用|
+|archive/BackupCode/|歷史程式備份，並非部署入口；不要用它判斷現行行為|
 |Parameter_Event.xlsx|事件代碼、中文名稱、Level、Action、關鍵字、排除詞、優先順序與主要網站|
 |SP500.xlsx、DowJones30.xlsx、config/extra_watchlist.csv|公司參照或指定擷取清單|
 |config/us_symbol_reference.csv、issuer_registry.csv|共享美股代號、公司別名、歷史／OTC／非美股或非上市主體參照|
@@ -112,7 +114,6 @@ Form4_FINAL.py雖已存在，但目前repo沒有Form4成果檔，不應顯示虛
 
 - 現行新聞主流程：https://github.com/RMSecfb/negative-news/blob/main/pipeline/integrated.py
 - 現行workflow：https://github.com/RMSecfb/negative-news/blob/main/.github/workflows/negative-news-ai.yml
-- SEC13F來源：https://github.com/JUWangWang/SEC13F
 - Groq限制：https://console.groq.com/docs/rate-limits
 - SEC 13F FAQ：https://www.sec.gov/rules-regulations/staff-guidance/frequently-asked-questions-about-form-13f
 
