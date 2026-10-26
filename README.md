@@ -78,6 +78,7 @@ Streamlit 入口為 `負面新聞整合網站.py`。
 | `sec_filings/` | 13F／Form 4 擷取程式、機構與股票清單、原始成果（`institutional_13f/`、`insider_form4/`） |
 | `institutional_insider/` | 經驗證後給網站與新聞使用的 13F／Form 4 摘要與 `latest.json` |
 | `docs/` | 架構與機構內部人說明 |
+| `tools/sqlserver/` | 在公司電腦把每日新聞增量匯入 SQL Server 的腳本與說明 |
 | `archive/` | 歷史程式備份與舊升級工具，不是部署入口 |
 | `config/` | 公司別名、發行人登錄、美股代號參照 |
 | `pipeline/` | 現行主流程與覆核匯入程式 |
