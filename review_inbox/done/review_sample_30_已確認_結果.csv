@@ -1,0 +1,31 @@
+﻿序號,news_id,日期,公司,標題,最終決定,結果,原因
+1,26a1ad393c1cc9e9c11186e2,2026-10-23,"Getty Images Holdings, Inc.",Getty Images Files Prepackaged Chapter 11 in Delaware,維持,已套用,維持原分類，僅標記已人工覆核
+2,2dcb018737c84e3d434366ac,2026-10-23,"Getty Images Holdings, Inc.",Getty Images’ Reported Chapter 11 Filing Would Cancel Shares,維持,已套用,維持原分類，僅標記已人工覆核
+3,f097dfc93880c10c18a4ffdc,2026-10-23,"Getty Images Holdings, Inc.",Case Summary: Getty Images Chapter 11,維持,已套用,維持原分類，僅標記已人工覆核
+4,a18bd00bf42db9315918f062,2026-10-22,EON Resources Inc. Class A Common Stock,Eon Resources CEO Defends Liquidity Despite Recurring Going-Concern Warnings,維持,已套用,維持原分類，僅標記已人工覆核
+5,9f5e4c8fa92063aecb307529,2026-10-23,"CoreWeave, Inc.",CoreWeave債務壓力升溫 市值蒸發440億美元,維持,已套用,維持原分類，僅標記已人工覆核
+6,5a0e0d95455677066de7d303,2026-10-22,RNDC,"RNDC Files for Chapter 11, Pursues Sales and Wind-Down",維持,已套用,維持原分類，僅標記已人工覆核
+7,e38e29eaf5c6faa3f5dcc44f,2026-08-30,Apple Inc.,蘋果Siri功能跳票賠17億,修改,已套用,更改：Event_Code、事件中文、Level
+8,d4871428d73a5f522ce6f6e8,2026-10-13,Walt Disney Company (The),Character.AI files for bankruptcy reorganization and agrees to sell some assets ,排除,已套用,更改：Event_Code、事件中文、Level、Action
+9,12ad0d8ae11f6d17e1b235e4,2026-08-11,Visa Inc.,Client Alert: Subchapter V Surge: What Florida Trade Creditors and Lenders Need ,排除,已套用,更改：Event_Code、事件中文、Level、Action
+10,7fb4ffc75dba5008caff4ea0,2026-08-14,Ameriprise Financial,The TL072: A JFET Op Amp That Became the Default for Audio,排除,已套用,更改：Event_Code、事件中文、Level、Action
+11,bc906869ade2807298deba23,2026-08-16,Intercontinental Exchange,Major ice cream brand seeks Chapter 11 bankruptcy after lawsuit,排除,已套用,更改：Event_Code、事件中文、Level、Action
+12,a85ae63eb43f73633d49b45f,2026-08-16,Intercontinental Exchange,Ice cream brand sold in Houston files for bankruptcy after Van Leeuwen lawsuit,排除,已套用,更改：Event_Code、事件中文、Level、Action
+13,c102ff8d98a6d71791c190c6,2026-08-16,Intercontinental Exchange,Maker of ice cream sold at grocery stores nationwide files for bankruptcy as it ,排除,已套用,更改：Event_Code、事件中文、Level、Action
+14,11dfdd497cf6d878e41e446f,2026-08-17,Intercontinental Exchange,Popular ice cream brand sold at Walmart and Target files for bankruptcy,排除,已套用,更改：Event_Code、事件中文、Level、Action
+15,4b684ac9d5af90e4b5ffdda5,2026-08-17,Costco,The mistake that helped cost Rebel Creamery $23.8 million and pushed it into ban,排除,已套用,更改：Event_Code、事件中文、Level、Action
+16,7c7dddbb36f73ba60dc653c0,2026-08-15,Warner Bros. Discovery,Paramount-WBD Merger: David Ellison Complains About Cost Of States' Antitrust Su,維持,已套用,維持原分類，僅標記已人工覆核
+17,9c0b1c683bbf8fe47bb8f5e6,2026-08-26,"Meta Platforms, Inc.",Meta就多個州的致兒童成癮訴訟達成167億美元和解,維持,已套用,維持原分類，僅標記已人工覆核
+18,ba7c5621b413520ed3012946,2026-10-09,American Express,美國運通因反洗錢計劃不完善被罰款3.5億美元,維持,已套用,維持原分類，僅標記已人工覆核
+19,8a311f19c6ae51248071cbc4,2026-09-03,Boeing,波音因普遍存在的安全違規行為向美國聯邦航空管理局（FAA）支付了310萬美元罰款,維持,已套用,維持原分類，僅標記已人工覆核
+20,769df537c0dad0a13fcbec07,2026-09-18,Corpay,Corpay to Pay $100 Million to Resolve FTC Allegations,修改,已套用,更改：Event_Code、事件中文
+21,9041019a7c22ab6139fb54f9,2026-10-24,Globe Life,Globe Life shares fall 8% after outlook cut and downgrade,修改,已套用,更改：Event_Code、事件中文、Level、Action
+22,53452bb45fbda9cdb9797775,2026-10-21,Yiren Digital Ltd. American Depositary S,Securities Fraud Investigation Into Yiren Digital Ltd. (YRD) Cont,維持,已套用,維持原分類，僅標記已人工覆核
+23,ee5754561338bdfca7341bae,2026-08-19,AppLovin,Apple Changes App Store Terms to Resolve E.U. Antitrust Dispute,維持,已套用,維持原分類，僅標記已人工覆核
+24,2f9132328e1a6e29bfc911ef,2026-10-24,美國資料中心,標普為AI債務危機「火上澆油」？示警美國資料中心信用降評風險,排除,已套用,更改：Event_Code、事件中文、Level、Action
+25,4ce2f2951b07ed8eb8da64ae,2026-08-20,CME Group Inc.,CME CEO Spars With CFTC Chair About Prediction Market Oversight,排除,已套用,更改：Event_Code、事件中文、Level、Action
+26,fe69b51d84a7081e8d214db9,2026-08-13,Duke Energy,Duke Energy cuts proposed rate hike nearly in half as NC regulators weigh settle,排除,已套用,更改：Event_Code、事件中文、Level、Action
+27,13f18784179d9c781c259e85,2026-10-25,McDonald's,Latham McDonald's Grease Dump Draws DEC Investigation,排除,已套用,更改：Event_Code、事件中文、Level、Action
+28,03c1409f652a8600d1cad61e,2026-08-15,KeyCorp,Attorney General Jay Jones Announces Key Personnel Appointments,排除,已套用,更改：Event_Code、事件中文、Level、Action
+29,44d610cecd4564b7ccd32929,2026-08-28,Ford Motor Company,Last minute penalty lifts Arkansas State women’s soccer past Stephen F. Austin,排除,已套用,更改：Event_Code、事件中文、Level、Action
+30,630eed693f3793c4957828db,2026-10-24,Public Storage,"FBI Officially Launch Investigation Into Massive Theft Of 6,451 PSA-Rated TCG Ca",排除,已套用,更改：Event_Code、事件中文、Level、Action

@@ -1,0 +1,501 @@
+﻿序號,news_id,日期,公司,標題,最終決定,結果,原因
+1,cd48ecb1c435cf9129b1ca0b,2026-08-13,PTC Inc.,"PTC, Lilly scoop up Sangamo gene therapies in bankruptcy auction",排除,已套用,更改：Event_Code、事件中文、Level、Action
+2,69569332e3547612f4256e58,2026-08-14,PTC Inc.,PTC Therapeutics’ $211M Bid Wins Bankruptcy Auction for Sangamo Gene Therapy,排除,已套用,更改：Event_Code、事件中文、Level、Action
+3,60ea1e3abbc599d31c720c87,2026-08-15,PTC Inc.,"PTC Therapeutics, Lilly to buy up bits of Sangamo in bankruptcy auction",排除,已套用,更改：Event_Code、事件中文、Level、Action
+4,96b0be9b7b1d40aa79ce1229,2026-08-16,PTC Inc.,PTC Therapeutics Targets Fabry Gene Therapy in $111M Bankruptcy Auction Deal,排除,已套用,更改：Event_Code、事件中文、Level、Action
+5,eafa3d6aa64a83ae63a20750,2026-08-16,Kroger,"Major ice cream brand sold at Walmart, Kroger, and Target files for bankruptcy",排除,已套用,更改：Event_Code、事件中文、Level、Action
+6,101a5c0eec5ff35f912347c8,2026-08-17,Walmart Inc.,Popular ice cream brand sold at Walmart and Target files for bankruptcy,排除,已套用,更改：Event_Code、事件中文、Level、Action
+7,9063606cf67dcb49b5e0ff66,2026-08-18,Kroger,"Ice cream brand sold at Kroger, Walmart and Target files for bankruptcy",排除,已套用,更改：Event_Code、事件中文、Level、Action
+8,8797dd1de30c63f33cb927ef,2026-08-19,Coinbase,"Coinbase Must Face Investor Suit Over SEC, Bankruptcy Risks",修改,已套用,更改：Event_Code、事件中文、Level
+9,5702810c2ddce843eef3cf9d,2026-08-26,EchoStar Corporation,US Bankruptcy: Hughes Satellite Systems judge to order examiner appointment to i,維持,已套用,維持原分類，僅標記已人工覆核
+10,598c2ffe45c5df02be123819,2026-08-27,EchoStar Corporation,Judge Pérez orders examiner in Hughes Satellite Systems bankruptcy to probe $1.5,維持,已套用,維持原分類，僅標記已人工覆核
+11,239c8ebf393be1c5a12d1676,2026-09-19,CVS Health Corporation Common Stock,$949 million fraud verdict costs CVS a business in Chapter 11,維持,已套用,維持原分類，僅標記已人工覆核
+12,ce135397e6d5382cbe073479,2026-10-16,"Uber Technologies, Inc. Common Stock","Starbucks/Chipotle merge rumors, True Food’s bankruptcy, and Uber’s big acquisit",排除,已套用,更改：Event_Code、事件中文、Level、Action
+13,c17eb129d848fab538fd0118,2026-08-11,"Automatic Data Processing, Inc.",Fantasy Football ADP : Exploiting Default Rankings for 2026,排除,已套用,更改：Event_Code、事件中文、Level、Action
+14,a5a01131c7cb2c26d5693a83,2026-08-11,Goldman Sachs,Goldman Sachs' Reynolds: Private credit industry 'remains very healthy' amid upt,排除,已套用,更改：Event_Code、事件中文、Level、Action
+15,bcf2b94ed920149903b776f1,2026-08-13,Public Storage Common Stock,PSA: Setting different default languages in different Mac apps,排除,已套用,更改：Event_Code、事件中文、Level、Action
+16,4620eaebfb676b17ec8d81ea,2026-08-13,Amazon,"Amazon will train on Twitch streamers’ content by default, unless they opt out",排除,已套用,更改：Event_Code、事件中文、Level、Action
+17,c2f85ac5cdb0f7db2fffb165,2026-08-15,Public Storage Common Stock,"PSA: Claude Code now enables auto mode as default, Anthropic says",排除,已套用,更改：Event_Code、事件中文、Level、Action
+18,6b8fda4a1b3b10248ded95ba,2026-08-21,"Automatic Data Processing, Inc.",Fantasy Football ADP: Exploiting Default Rankings for 2026,排除,已套用,更改：Event_Code、事件中文、Level、Action
+19,ff3f385b58f0ac6dc49a5cd1,2026-10-05,Electronic Arts,Exclusive | Electronic Arts Bondholders Allege Default Following Largest LBO,維持,已套用,維持原分類，僅標記已人工覆核
+20,be5b6c35dfdad987def51679,2026-10-06,Ball Corporation Common Stock,Daniil Medvedev defaulted from China Open after striking spectator with ball - T,排除,已套用,更改：Event_Code、事件中文、Level、Action
+21,5825037cb9a0a6655e38ffce,2026-10-06,Electronic Arts,Private Equity Daily: Electronic Arts Bondholders Allege Default on LBO Debt,維持,已套用,維持原分類，僅標記已人工覆核
+22,ef9f73cb3ef5e6f868a0ffc6,2026-10-09,"NetApp, Inc.",Can AWS Transform Make NetApp (NTAP) the Default Storage Landing Zone in the Clo,排除,已套用,更改：Event_Code、事件中文、Level、Action
+23,e6add1d0712605452c504cd1,2026-10-15,Veeva Systems Inc. Class A Common Stock,Veeva Systems (VEEV) Becomes Default Clinical Software Across A Major Research P,排除,已套用,更改：Event_Code、事件中文、Level、Action
+24,bb52f9b5bbfeed84bb46932d,2026-10-16,"CoreWeave, Inc.","CoreWeave Credit Risk Hits Record, Pricing 60% Odds of Default",修改,已套用,更改：Event_Code、事件中文、Level、Action
+25,0040b1fc371664e2cde9c86e,2026-10-16,"CoreWeave, Inc.",CoreWeave credit default swaps hit distress levels as investors sour on AI debt,修改,已套用,更改：Event_Code、事件中文、Level、Action
+26,5cd94e78a12547adde9efc74,2026-08-14,MSCI Inc. Common Stock,MicroStrategy sends harsh response to fresh MSCI delisting threat,排除,已套用,更改：Event_Code、事件中文、Level、Action
+27,1fac21a102bf6a2d6865cc3a,2026-08-14,Trane Technologies plc,"Upbit Delisting Puts JASMY, STORJ and TT Under Pressure",排除,已套用,更改：Event_Code、事件中文、Level、Action
+28,d09fe613cb8999f176db4321,2026-08-16,MSCI Inc. Common Stock,MicroStrategy sends harsh response to fresh MSCI delisting threat,排除,已套用,更改：Event_Code、事件中文、Level、Action
+29,fc1d1e7e6e748c86083373f8,2026-09-01,MSCI Inc. Common Stock,"Michael Saylor’s Strategy Calls MSCI’s New Delisting Test ‘Fundamentally Flawed,",排除,已套用,更改：Event_Code、事件中文、Level、Action
+30,259dbb1c13d2e5d35951a896,2026-09-04,AbbVie Inc. Common Stock,"AbbVie Finalizes $10.9 Billion Acquisition of Apogee Therapeutics, Initiates Nas",排除,已套用,更改：Event_Code、事件中文、Level、Action
+31,077743b9fb6f97c683cbd534,2026-08-14,Amgen Inc.,OMI Urges Appeals Court to Allow Antitrust Challenge to Amgen’s Extension of Enb,維持,已套用,維持原分類，僅標記已人工覆核
+32,a42be4e24e8288921644b976,2026-08-14,Warner Bros. Discovery,Parties Lay Out Key Discovery And Other Dates For Pending Paramount-WBD Antitrus,維持,已套用,維持原分類，僅標記已人工覆核
+33,5fcd249de4fcdef1e79b603a,2026-08-14,Humana Inc. Common Stock,CPI | Glenmark to Pay $15.3 Million to Settle Humana Antitrust Claims,排除,已套用,更改：Event_Code、事件中文、Level、Action
+34,46ecea8dff1c19fe72abb3e9,2026-08-15,"Corteva, Inc. Common Stock",Corteva To Pay $3.1M In Ark. AG's Pesticides Antitrust Suit,維持,已套用,維持原分類，僅標記已人工覆核
+35,644247059e602af11f7e4e44,2026-08-27,Sysco Corporation Common Stock,"Nadler, Frost Demand Antitrust Investigation Into Sysco’s $29.1 Billion Acquisit",排除,已套用,更改：Event_Code、事件中文、Level、Action
+36,84be2c6f8b44dd8e490087fe,2026-09-03,Walmart Inc.,"Amazon, Walmart Face Data Requests in DOJ Beef Antitrust Probe",維持,已套用,維持原分類，僅標記已人工覆核
+37,d15fab4c1d7cde3d6d1bec75,2026-09-06,"Uber Technologies, Inc. Common Stock",CPI | Nigeria Antitrust Regulator Probes Uber’s Abrupt Exit,維持,已套用,維持原分類，僅標記已人工覆核
+38,c466f8035361640170fe7a8e,2026-09-06,"Uber Technologies, Inc. Common Stock",Nigeria’s Antitrust Agency Probes Uber’s Exit From Country,維持,已套用,維持原分類，僅標記已人工覆核
+39,65f4a43a0a004ec780516d71,2026-09-06,"Uber Technologies, Inc. Common Stock",Nigeria Antitrust Watchdog Probes Uber's Sudden Exit,維持,已套用,維持原分類，僅標記已人工覆核
+40,a618065403c199658544cc68,2026-09-10,Texas Instruments Incorporated,Texas Instruments/Silicon Labs: Deal Said To Be Slated for Phase 2 Review by Chi,維持,已套用,維持原分類，僅標記已人工覆核
+41,f92a35800ca4d4b22cf8ea5d,2026-09-17,Warner Bros. Discovery,Paramount ‘Deadly Serious’ About Leaving California as $110B Warner Bros. Discov,維持,已套用,維持原分類，僅標記已人工覆核
+42,0519bdf4e1ee55f43db84ed6,2026-09-17,Kroger,Inside the market where Kroger and Giant Eagle will likely be under the antitrus,維持,已套用,維持原分類，僅標記已人工覆核
+43,810c4e106a4cdc3184eae971,2026-09-18,Warner Bros. Discovery,Paramount in talks to settle antitrust lawsuit blocking WBD deal,維持,已套用,維持原分類，僅標記已人工覆核
+44,e49d044dd63409204885d9eb,2026-09-18,"BlackRock, Inc. Common Stock",DOJ weighs joining state antitrust suit against BlackRock and State Street -repo,維持,已套用,維持原分類，僅標記已人工覆核
+45,ecc65a4fad49a3e825adac1f,2026-09-18,"BlackRock, Inc. Common Stock","DOJ Weighs Joining Texas BlackRock, State Street Antitrust Case",維持,已套用,維持原分類，僅標記已人工覆核
+46,bdabe3b050d6678ef0d7966e,2026-09-19,Kroger,Kroger (KR) Draws Tougher Antitrust Review For Its Planned Grocery Deal,維持,已套用,維持原分類，僅標記已人工覆核
+47,0c52b19c295595679e0b6174,2026-09-21,Warner Bros. Discovery,WGA Settles Antitrust Lawsuit With Paramount Over Warner Bros. Discovery Merger,維持,已套用,維持原分類，僅標記已人工覆核
+48,b25f271fb4a08bb93d42202f,2026-09-21,Warner Bros. Discovery,"Done! Paramount Settles Antitrust Suit, Set To Seal Deal For Warner Bros. Discov",維持,已套用,維持原分類，僅標記已人工覆核
+49,10c9afdbb65f9a4554453d23,2026-10-01,Otis Worldwide,據消息人士稱，芬蘭通力公司正準備出售TK Elevator的歐洲業務，以應對反壟斷方面的擔憂,排除,已套用,更改：Event_Code、事件中文、Level、Action
+50,20cbf3ba12cb24e4d14bcb62,2026-10-14,"Copart, Inc.",Copart Clears U.S. Antitrust Waiting Period for $10.50-Per-Share Acquisition of ,排除,已套用,更改：Event_Code、事件中文、Level、Action
+51,1aa19f14c652c836c48cd3ac,2026-10-14,"Copart, Inc.",Copart Says Antitrust Waiting Period for ACV Auctions Acquisition Has Expired,排除,已套用,更改：Event_Code、事件中文、Level、Action
+52,12f9d20cfbeaed122a9bccd1,2026-10-15,"Copart, Inc.",Copart’s ACV acquisition clears antitrust waiting period before tender deadline,排除,已套用,更改：Event_Code、事件中文、Level、Action
+53,df0f258a5232fd59f2c5cad8,2026-10-16,"Copart, Inc.",Copart Rises as ACV Deal Clears Key Antitrust Hurdle,排除,已套用,更改：Event_Code、事件中文、Level、Action
+54,386eac8cf2406ab63509b891,2026-08-11,Hasbro,Knoxville officer who flirted with chief over text has history of misconduct at ,排除,已套用,更改：Event_Code、事件中文、Level、Action
+55,98576bdd217fb7936c2bddbd,2026-08-11,ConocoPhillips,NYC Says Action Over Cop Misconduct Was Filed Too Late,排除,已套用,更改：Event_Code、事件中文、Level、Action
+56,fa212a9e527233ce4fa52789,2026-08-16,"Uber Technologies, Inc. Common Stock",Bristol private hire driver stripped of licence after Uber sexual misconduct rep,排除,已套用,更改：Event_Code、事件中文、Level、Action
+57,b60049fda40dcd154e05fb75,2026-08-18,L3Harris,L3Harris fires Kubasik for repeating the misconduct that cost him Lockheed Marti,維持,已套用,維持原分類，僅標記已人工覆核
+58,72a5f616e77d706c1390a681,2026-08-26,AT&T,"Elon Musk won't face election bribery charges in Wisconsin, state prosecutor say",排除,已套用,更改：Event_Code、事件中文、Level、Action
+59,cb26369e7afea25be8d4a326,2026-08-21,Bank of America Corporation Common Stock,SEC charges former Bank of America investment banker with insider trading,維持,已套用,維持原分類，僅標記已人工覆核
+60,c39508443d8be20b632d3d10,2026-08-22,Bank of America Corporation Common Stock,What Do SEC Insider Trading Charges Mean For Bank Of America (BAC)?,維持,已套用,維持原分類，僅標記已人工覆核
+61,ee7c7a95f1fc0af1ce3dd69f,2026-09-08,Bank of America Corporation Common Stock,SEC charges Bank of America executive with insider trading,維持,已套用,維持原分類，僅標記已人工覆核
+62,4c91944f8ddb95b7bb45576e,2026-09-29,Jabil Inc. Common Stock,"JABIL Q4 2026 Earnings Preview: Recent $JBL Insider Trading, Hedge Fund Activity",排除,已套用,更改：Event_Code、事件中文、Level、Action
+63,580eab8a5130e6f0639929ac,2026-08-09,Intuit Inc.,"Intuit Inc. (NASDAQ: INTU) Investors: September 8, 2026, Deadline in Securities ",維持,已套用,維持原分類，僅標記已人工覆核
+64,ba82d159fb91412492dcf49e,2026-08-09,Intuit Inc.,"2026-08-09 | INTU SHAREHOLDER ALERT: Bronstein, Gewirtz and Grossman, LLC Announ",維持,已套用,維持原分類，僅標記已人工覆核
+65,37c4ad7c98deb70b8844d99a,2026-08-10,"First Solar, Inc.","FLSR Stock - The Deadline to Move for Lead Plaintiff is August 24, 2026 - First ",維持,已套用,維持原分類，僅標記已人工覆核
+66,85cea75bfc954706f9b1312b,2026-08-10,Pentair,PNR INVESTOR DEADLINE: Pentair plc Investors with Substantial Losses Have Opport,維持,已套用,維持原分類，僅標記已人工覆核
+67,0ea2c131f6355d8ce705fbe5,2026-08-10,"Regeneron Pharmaceuticals, Inc.","Regeneron Pharmaceuticals, Inc. Investors with Substantial Losses Have Opportuni",維持,已套用,維持原分類，僅標記已人工覆核
+68,9bd4780e71a5c017fed6bb8b,2026-08-10,Intuit Inc.,Intuit Class Action Follows 20% Stock Plunge,維持,已套用,維持原分類，僅標記已人工覆核
+69,1385c3fc0e96c3d1dad71de6,2026-08-10,Intercontinental Exchange,"Golda ice cream chain faces huge class action lawsuit, accused of falsely labeli",排除,已套用,更改：Event_Code、事件中文、Level、Action
+70,0ba4223e9b90d54e076400f3,2026-08-10,"Regeneron Pharmaceuticals, Inc.","Bronstein, Gewirtz & Grossman LLC Urges Regeneron Pharmaceuticals, Inc. Investor",維持,已套用,維持原分類，僅標記已人工覆核
+71,516bad5d71db59bbb3a60a95,2026-08-11,"Regeneron Pharmaceuticals, Inc.","REGN INVESTOR ALERT: Bronstein, Gewirtz and Grossman, LLC Announces that Regener",維持,已套用,維持原分類，僅標記已人工覆核
+72,6066ee3eef19b4621286eeb3,2026-08-11,"Meta Platforms, Inc.",美國上訴法院駁回Meta等科技公司上訴，社媒成癮訴訟繼續推進,維持,已套用,維持原分類，僅標記已人工覆核
+73,64b6507702719c09769d22a4,2026-08-11,Capital One,Würzburger Kickers - Schöne Momente Der Saison 2016/2017 Capital One Class Actio,排除,已套用,更改：Event_Code、事件中文、Level、Action
+74,ab81d6e3b2672e93d803acec,2026-08-11,Costco,Costco Can't Shake Wash. Workers' Moonlighting Class Action,排除,已套用,更改：Event_Code、事件中文、Level、Action
+75,f90444af6020bb4e4870a01e,2026-08-11,GoDaddy Inc. Class A Common Stock,GoDaddy shareholders may join a class action ov...,維持,已套用,維持原分類，僅標記已人工覆核
+76,f94afb8821bae1418329a688,2026-08-11,GoDaddy Inc. Class A Common Stock,Rosen Law Firm Encourages GoDaddy Inc. Investors to Inquire About Securities Cla,維持,已套用,維持原分類，僅標記已人工覆核
+77,d498685a1216a2cae2b1285f,2026-08-11,Pentair,Portnoy Law Firm Announces Class Action on Behalf of Pentair plc Investors,維持,已套用,維持原分類，僅標記已人工覆核
+78,e74a52381ae7d0f2d693c56e,2026-08-11,"Meta Platforms, Inc.",Attorney General Bonta Celebrates Yet Another Court Order Denying Meta’s Attempt,維持,已套用,維持原分類，僅標記已人工覆核
+79,7e64fd4a3ff0fb86d81b66b4,2026-08-11,Intuit Inc.,APPROACHING DEADLINE ALERT: Intuit Inc. (INTU) Securities Fraud Class Action Law,維持,已套用,維持原分類，僅標記已人工覆核
+80,d14978455212332b90250c51,2026-08-11,Capital One,Aaron Judge Gives Update On Recovery From Wall Crash Injury Capital One Class Ac,排除,已套用,更改：Event_Code、事件中文、Level、Action
+81,8ffec13f944ca4371b3a9e2d,2026-08-11,KeyCorp,Todd Blanche Sworn In—These Key Trump Loyalty Tests Await New Attorney General,排除,已套用,更改：Event_Code、事件中文、Level、Action
+82,abbb45af9eb25d9ed68bbd71,2026-08-11,CVS Health Corporation Common Stock,CVS class action claims toddler wipes falsely labeled as hypoallergenic,排除,已套用,更改：Event_Code、事件中文、Level、Action
+83,b66f8e0b4899895ab73acb9a,2026-08-11,Pentair,"Bronstein, Gewirtz & Grossman LLC Urges Pentair plc Investors to Act: Class Acti",維持,已套用,維持原分類，僅標記已人工覆核
+84,606aba1359cb2b50049d3c33,2026-08-11,"First Solar, Inc.","Bronstein, Gewirtz & Grossman LLC Urges First Solar, Inc. Investors to Act: Clas",維持,已套用,維持原分類，僅標記已人工覆核
+85,cb20e1124967a161734650a8,2026-08-12,"Regeneron Pharmaceuticals, Inc.","REGN DEADLINE: Levi & Korsinsky Reminds Regeneron Pharmaceuticals, Inc. Investor",維持,已套用,維持原分類，僅標記已人工覆核
+86,3d599e7687bec6655f555d22,2026-08-12,Intuit Inc.,INTU Investor Alert: Intuit Inc. Securities Class Action Notice - Contact Levi &,維持,已套用,維持原分類，僅標記已人工覆核
+87,07509b43e2cb28a3d64dc288,2026-08-12,Verizon,Verizon retailer Victra faces two class action lawsuits over data breach,修改,已套用,更改：Event_Code、事件中文、Level、Action
+88,d48eb91def4f14b22fac3bc2,2026-08-13,"Regeneron Pharmaceuticals, Inc.",INVESTOR ALERT: Pomerantz Law Firm Reminds Investors with Losses on their Invest,維持,已套用,維持原分類，僅標記已人工覆核
+89,7d1abc49ed6fb5766b544202,2026-08-13,Kroger,Kroger class action alleges ‘No Preservatives’ labels are false,排除,已套用,更改：Event_Code、事件中文、Level、Action
+90,a3ac9ab0fb3928c97bf27f11,2026-08-13,Paramount Skydance Corporation,派拉蒙考慮出售CNN以解決12州反壟斷訴訟,維持,已套用,更改：Ticker
+91,ac9eb76b90e70272f95a2366,2026-08-13,"Regeneron Pharmaceuticals, Inc.","Regeneron Pharmaceuticals, Inc. Investors with Substantial Losses Have Opportuni",維持,已套用,維持原分類，僅標記已人工覆核
+92,942c6ebe4330f2a7980d9172,2026-08-13,"Regeneron Pharmaceuticals, Inc.",REGN Stockholders May Be Entitled to Lead the Class Action,維持,已套用,維持原分類，僅標記已人工覆核
+93,b50b9f9e1bf5390488787b1b,2026-08-14,"Delta Air Lines, Inc. Common Stock",Federal judge certifies class action in Delta Air Lines pilots’ military pay law,維持,已套用,維持原分類，僅標記已人工覆核
+94,4544df079c31d85a6afc9da6,2026-08-14,Capital One,Capital One class action alleges late-night debt collection calls violated Flori,排除,已套用,更改：Event_Code、事件中文、Level、Action
+95,057d0563c5f2e41e4b3249bf,2026-08-14,"Regeneron Pharmaceuticals, Inc.","The Gross Law Firm Reminds Regeneron Pharmaceuticals, Inc. Investors of the Pend",維持,已套用,維持原分類，僅標記已人工覆核
+96,31ff835a0c76531203988206,2026-08-14,Pentair,"Pentair plc (NYSE: PNR) Investors: October 2, 2026 Deadline in Securities Fraud ",維持,已套用,維持原分類，僅標記已人工覆核
+97,731fdfb6733f64aa61dc111f,2026-08-14,Duke Energy,Duke Energy rate increase | NC attorney general challenges rate hike figure: 'De,排除,已套用,更改：Event_Code、事件中文、Level、Action
+98,3b9907dd75ec02ba40934135,2026-08-14,Intuit Inc.,INTU INVESTOR DEADLINE: Intuit Inc. Investors with Substantial Losses Have Oppor,維持,已套用,維持原分類，僅標記已人工覆核
+99,b3f929e1d89563e58c5cb72a,2026-08-14,Boeing,波音董事贏得737 MAX艙門脱落相關訴訟,維持,已套用,更改：Ticker
+100,e2d16013d86f22e2971d8cb4,2026-08-14,"Regeneron Pharmaceuticals, Inc.","REGN INVESTOR ALERT: Bronstein, Gewirtz and Grossman, LLC Announces that Regener",維持,已套用,維持原分類，僅標記已人工覆核
+101,67332d7d7834a5cf6f17b37b,2026-08-14,Duke Energy,Attorney general says Duke Energy Progress customers could see 9.3% rate increas,排除,已套用,更改：Event_Code、事件中文、Level、Action
+102,22865be225c70462c3034c24,2026-08-14,"Regeneron Pharmaceuticals, Inc.","REGN Shareholder Alert: Regeneron Pharmaceuticals, Inc. Securities Class Action ",維持,已套用,維持原分類，僅標記已人工覆核
+103,44e4669002c68dfa7a66ad64,2026-08-14,Intuit Inc.,"INTU Shareholder Alert: September 8, 2026 Lead Plaintiff Deadline in Intuit Inc.",維持,已套用,維持原分類，僅標記已人工覆核
+104,bd2b7ccd251b6bce8181f20d,2026-08-15,CVS Health Corporation Common Stock,SPRY Slides As CVS Caremark Delay Triggers Class Action Hit,排除,已套用,更改：Event_Code、事件中文、Level、Action
+105,88dce9620803a274d37e6ba4,2026-08-15,"Regeneron Pharmaceuticals, Inc.",INVESTOR ALERT: Pomerantz Law Firm Reminds Investors with Losses on their Invest,維持,已套用,維持原分類，僅標記已人工覆核
+106,a7c9236d29b29e45ba8730c9,2026-08-15,"First Solar, Inc.","Pomerantz Law Firm Announces the Filing of a Class Action Against First Solar, I",維持,已套用,維持原分類，僅標記已人工覆核
+107,f77c4c4ce8e106e85dc603da,2026-08-15,Micron Technology,美法官駁回長江存儲指控美光散布虛假言論的訴訟,排除,已套用,更改：Event_Code、事件中文、Level、Action
+108,e383e1ec6967003c4dd50486,2026-08-15,Pentair,PNR Alert: Hagens Berman Notifies Pentair plc (NYSE: PNR) Investors of Expanded ,維持,已套用,維持原分類，僅標記已人工覆核
+109,f098b4f44eb261c2d1e7bcad,2026-08-15,Amazon,亞馬遜恢復具有約束力的仲裁，禁止集體訴訟,排除,已套用,更改：Event_Code、事件中文、Level、Action
+110,1cf84168c856e441c1e85131,2026-08-15,Pentair,EXPANDED CLASS PERIOD - Law Offices of Frank R. Cruz Encourages Pentair plc (PNR,維持,已套用,維持原分類，僅標記已人工覆核
+111,aa8d349543d6d4f10250c2a2,2026-08-16,AppLovin,Apple class action alleges App Store failed to stop fake crypto wallet app,排除,已套用,更改：Event_Code、事件中文、Level、Action
+112,d4cfd68254a8e4063b3c0497,2026-08-16,"First Solar, Inc.","FSLR Stockholders Have Opportunity to Lead First Solar, Inc. Class Action Lawsui",維持,已套用,維持原分類，僅標記已人工覆核
+113,9c374c95c390f3941ad6b230,2026-08-16,Steris,Republican Doug Lloyd visits Sault Ste. Marie to campaign for Michigan Attorney ,排除,已套用,更改：Event_Code、事件中文、Level、Action
+114,441dc5808e35da8e78e9fce1,2026-08-17,Intuit Inc.,"APPROACHING DEADLINE ALERT: Intuit Inc. (INTU) Investors: September 8, 2026, Fil",維持,已套用,維持原分類，僅標記已人工覆核
+115,23143c5a5dd4c31fa03783dd,2026-08-17,Capital One,Boy George - Radio Interview (3 Jul 26) Capital One Class Action Lawsuit (61jGcn,排除,已套用,更改：Event_Code、事件中文、Level、Action
+116,b87674e722f99233c85565cf,2026-08-17,Insulet Corporation,"PODD UPCOMING DEADLINE: Faruqi & Faruqi, LLP Reminds Insulet (PODD) Investors of",維持,已套用,維持原分類，僅標記已人工覆核
+117,ee57266d6e4d6dfd4d68c58c,2026-08-17,Pentair,"2026-08-16 | PNR STOCKHOLDER ALERT: Bronstein, Gewirtz and Grossman, LLC Announc",維持,已套用,維持原分類，僅標記已人工覆核
+118,9a0a0fd909ef90019dc43539,2026-08-17,"Regeneron Pharmaceuticals, Inc.","Bronstein, Gewirtz & Grossman LLC Urges Regeneron Pharmaceuticals, Inc. Investor",維持,已套用,維持原分類，僅標記已人工覆核
+119,22fd0299db8c771718c417da,2026-08-18,Walt Disney Company (The),迪士尼旗下ABC起訴美國聯邦通信委員會，指其部分監管行為違法,維持,已套用,更改：Ticker
+120,16c498ebe35f9ed2f4a0d030,2026-08-18,Pentair,"PNR Shareholder Alert: October 2, 2026 Lead Plaintiff Deadline in Pentair plc Se",維持,已套用,維持原分類，僅標記已人工覆核
+121,016d51d5631e9130d8acf040,2026-08-18,Intercontinental Exchange Inc. Common St,Minnesota attorney general sues Texas governor to compel ICE agent’s extradition,排除,已套用,更改：Event_Code、事件中文、Level、Action
+122,9100ec78b6e606f865f3b807,2026-08-19,"Meta Platforms, Inc.","As Meta faces trial for hooking kids on social media, NC's attorney general offe",維持,已套用,維持原分類，僅標記已人工覆核
+123,00b3fe78af7ec9307af7c898,2026-08-20,Warner Bros. Discovery,California Attorney General Rob Bonta: Paramount-WBD lawsuit is a 'black-and-whi,維持,已套用,維持原分類，僅標記已人工覆核
+124,aa0e0d1cde37f85e1e33d68d,2026-08-20,Pentair,INVESTOR ALERT: Pomerantz Law Firm Reminds Investors with Losses on their Invest,維持,已套用,維持原分類，僅標記已人工覆核
+125,432e70cfc3cd017e4c677aa0,2026-08-20,Intercontinental Exchange Inc. Common St,Colorado attorney general sues ​ICE detention center operator ​i​n tuberculosis ,排除,已套用,更改：Event_Code、事件中文、Level、Action
+126,ec8e6b1a1b1c66ac1d45db71,2026-08-21,"Equifax, Inc. Common Stock",Equifax agrees to $100M deal to end class action claims over credit score error,維持,已套用,維持原分類，僅標記已人工覆核
+127,3659fbbaa3cea9a8a2d4b980,2026-08-21,Walt Disney Company (The),美司法部反對就迪士尼ABC牌照訴訟案舉行緊急聽證會,維持,已套用,更改：Ticker
+128,2c47dcd5fe84634ff135980b,2026-08-21,Abbott Laboratories,雅培將支付6.7億美元以了結部分早產兒配方奶粉訴訟,維持,已套用,更改：Ticker
+129,784e9e349fa690e0b9d8c895,2026-08-21,Pentair,PNR Investor Alert: Pentair plc Securities Class Action Notice - Contact SueWall,維持,已套用,維持原分類，僅標記已人工覆核
+130,c937b4988a142cad289af5a8,2026-08-21,Walt Disney Company (The),美國司法部反對在迪士尼ABC執照訴訟案中立即舉行聽證會,維持,已套用,更改：Ticker
+131,c5cc7637cf9a5876b35c475c,2026-08-21,Pentair,"Bronstein, Gewirtz & Grossman LLC Urges Pentair plc Investors to Act: Class Acti",維持,已套用,維持原分類，僅標記已人工覆核
+132,99f71492bbe380c4ae85903d,2026-08-26,"Meta Platforms, Inc.",消息稱Meta就各州指控其平台危害兒童健康的訴訟達成和解,維持,已套用,維持原分類，僅標記已人工覆核
+133,46ee5351059c05b03abf5ed1,2026-08-26,"Meta Platforms, Inc.",Meta據悉與多州檢察長就天價訴訟討論庭審中和解,維持,已套用,維持原分類，僅標記已人工覆核
+134,fb90f93be93ce7f3916b3e2b,2026-08-26,Kroger,If you get your meds at Kroger pay attention to this class action lawsuit,排除,已套用,更改：Event_Code、事件中文、Level、Action
+135,00b3eb0a13584fb6e7e61053,2026-08-27,KKR & Co. Inc. Common Stock,美股異動丨KKR盤前升2.36% 支付2.5億美元就美司法部併購申報訴訟達成和解,修改,已套用,更改：Event_Code、事件中文
+136,df17447d9bc471f1391300cd,2026-08-27,Pentair,PNR INVESTOR DEADLINE: Robbins Geller Rudman & Dowd LLP Files Class Action Lawsu,維持,已套用,維持原分類，僅標記已人工覆核
+137,da1b0f5d42dae22f74977dfa,2026-08-27,KKR & Co. Inc. Common Stock,KKR將支付2.5億美元了結司法部併購申報訴訟,修改,已套用,更改：Event_Code、事件中文
+138,466023413d68985d9685c100,2026-08-27,Pentair,Levi & Korsinsky Reminds Pentair plc Investors of the Pending Class Action Lawsu,維持,已套用,維持原分類，僅標記已人工覆核
+139,4c5cfe5dcb4c1082e86ed71c,2026-08-28,Kroger,Kroger to Pay $17M to Settle Class Action Over Drug Prices,排除,已套用,更改：Event_Code、事件中文、Level、Action
+140,becd80dd500a64133a6ce5b3,2026-08-28,Pentair,"PENTAIR CLASS ACTION ALERT: Bragar Eagel & Squire, P.C.",維持,已套用,維持原分類，僅標記已人工覆核
+141,3245a856ccbcb227925ccec7,2026-08-28,GoDaddy Inc. Class A Common Stock,SueWallSt Reminds GoDaddy Inc. Investors of the Pending Class Action Lawsuit Wit,維持,已套用,維持原分類，僅標記已人工覆核
+142,d6721a5147e05e76cff03436,2026-08-29,Alphabet Inc. (Class A),谷歌隱私訴訟案產生高達1.47億美元律師費,排除,已套用,更改：Event_Code、事件中文、Level、Action
+143,279b5b5b42a43fe1539f14f0,2026-08-29,Alphabet Inc. (Class C),谷歌隱私訴訟案產生高達1.47億美元律師費,排除,已套用,更改：Event_Code、事件中文、Level、Action
+144,ca55499683ca7bec961b27bb,2026-08-29,DTE Energy,Attorney General Dana Nessel seeks deep cuts to DTE’s $474 million rate request,排除,已套用,更改：Event_Code、事件中文、Level、Action
+145,f94f68e6c30c6b9ec890c074,2026-08-29,Pentair,"Pentair plc (PNR) Investors: Securities Fraud Class Action Filed, Contact Hagens",維持,已套用,維持原分類，僅標記已人工覆核
+146,8651d9bfdf03762529adf979,2026-08-31,Intuit Inc.,INTU Investor Alert: Intuit Inc. Securities Class Action Notice - Contact Levi &,維持,已套用,維持原分類，僅標記已人工覆核
+147,ffc491311ed3ecf2a7794c75,2026-08-31,Pentair,PNR Shareholder Alert: Pentair plc Securities Class Action,維持,已套用,維持原分類，僅標記已人工覆核
+148,4d5c7eec77f4b1bc946d1101,2026-08-31,Pentair,"Pentair plc (PNR) Notice of October 2, 2026 Application Deadline for Class Actio",維持,已套用,維持原分類，僅標記已人工覆核
+149,9c17ad3511da0ee331a5bfa2,2026-08-31,"United Parcel Service, Inc. Common Stock","UPS Settles Military Leave Class Action for $152,000, Plus Fees",排除,已套用,更改：Event_Code、事件中文、Level、Action
+150,600f2e555edeb20cf685722a,2026-09-01,GoDaddy Inc. Class A Common Stock,GDDY Class Action Alert: GoDaddy Customer Acquisition Issues and Subsequent 14% ,維持,已套用,維持原分類，僅標記已人工覆核
+151,2d28f25ad5da7f30392b61db,2026-09-01,"Meta Platforms, Inc.",美國法官駁回針對Meta旗下Instagram購物涉壟斷的訴訟,排除,已套用,更改：Event_Code、事件中文、Level、Action
+152,9a42bf61fc999309b2228e3a,2026-09-01,Intuit Inc.,Intuit (INTU) Faces Class Action Over AI And Investor Disclosure Claims,維持,已套用,維持原分類，僅標記已人工覆核
+153,4bc978645cd68b5cac62e4ad,2026-09-01,Pentair,PNR INVESTORS: Robbins Geller Rudman & Dowd LLP Files Class Action Lawsuit Again,維持,已套用,維持原分類，僅標記已人工覆核
+154,17d3ff618f29f32ead3e511f,2026-09-02,Intuit Inc.,INTU Shareholder Alert: Investors With Losses May Seek to Lead the Class Action ,維持,已套用,維持原分類，僅標記已人工覆核
+155,0bd66729964f637d8b56cde8,2026-09-02,"Regeneron Pharmaceuticals, Inc.",REGN Deadline Alert: Levi & Korsinsky Reminds Regeneron Pharmaceuticals (REGN) I,維持,已套用,維持原分類，僅標記已人工覆核
+156,a8f1b6448e246daba71190cb,2026-09-02,GoDaddy Inc. Class A Common Stock,GDDY Shareholder Alert: GoDaddy Inc. Securities Class Action Lawsuit - Investors,維持,已套用,維持原分類，僅標記已人工覆核
+157,6cddcbc9436b92f806872bbe,2026-09-02,Philip Morris International,法院記錄顯示，奧馳亞起訴美國食品藥品監督管理局,排除,已套用,更改：Event_Code、事件中文、Level、Action
+158,0904304e4d6a4d9ea1e94806,2026-09-02,Intuit Inc.,"Portnoy Law Firm Announces Class Action on Behalf of Intuit, Inc. Investors",維持,已套用,維持原分類，僅標記已人工覆核
+159,5c5583e9fb5fd9203ad46da2,2026-09-02,Pentair,PNR Alert: Hagens Berman Notifies Pentair plc (NYSE: PNR) Investors of Expanded ,維持,已套用,維持原分類，僅標記已人工覆核
+160,aeb36e3ec38b911419731993,2026-09-02,Intuit Inc.,"Bronstein, Gewirtz & Grossman LLC Urges Intuit Inc. Investors to Act: Class Acti",維持,已套用,維持原分類，僅標記已人工覆核
+161,186afc2fcb733cb2aefaeebe,2026-09-03,Pentair,PNR UPCOMING DEADLINE: SueWallSt Alerts Pentair plc Stockholders of Securities C,維持,已套用,維持原分類，僅標記已人工覆核
+162,8b128b26431ba36ca54ce040,2026-09-03,GoDaddy Inc. Class A Common Stock,GDDY UPCOMING DEADLINE: SueWallSt Alerts GoDaddy Inc. Stockholders of Securities,維持,已套用,維持原分類，僅標記已人工覆核
+163,5963e38cd3308e8ab89e26d4,2026-09-03,Intuit Inc.,SueWallSt Reminds Intuit Inc. Investors of the Pending Class Action Lawsuit With,維持,已套用,維持原分類，僅標記已人工覆核
+164,89376a7d55f327500616a7d4,2026-09-03,"Regeneron Pharmaceuticals, Inc.","REGN Investor Alert: Regeneron Pharmaceuticals, Inc. Securities Class Action Not",維持,已套用,維持原分類，僅標記已人工覆核
+165,54e3b50e03ad1dee9aaac622,2026-09-03,"Regeneron Pharmaceuticals, Inc.",INVESTOR ALERT: Pomerantz Law Firm Reminds Investors with Losses on their Invest,維持,已套用,維持原分類，僅標記已人工覆核
+166,99336e301f0137b9ca748465,2026-09-03,Intuit Inc.,Pomerantz Law Firm Announces the Filing of a Class Action Against Intuit Inc. an,維持,已套用,維持原分類，僅標記已人工覆核
+167,889992980bdacb2696be07b8,2026-09-03,GoDaddy Inc. Class A Common Stock,INVESTOR ALERT: Pomerantz Law Firm Reminds Investors with Losses on their Invest,維持,已套用,維持原分類，僅標記已人工覆核
+168,9edfa1ccb57ba57c90457c2e,2026-09-03,Pentair,INVESTOR ALERT: Pomerantz Law Firm Reminds Investors with Losses on their Invest,維持,已套用,維持原分類，僅標記已人工覆核
+169,6ca9b1528a97277ffad716e5,2026-09-03,Public Storage Common Stock,"Missouri attorney general spends $167,000 in state funds on anti-abortion PSA be",排除,已套用,更改：Event_Code、事件中文、Level、Action
+170,a37f44666d6b93b23fa84c03,2026-09-04,Meta Platforms,Apple faces $2.7 billion class action lawsuit in UK over app tracking rules,維持,已套用,更改：Ticker、Company
+171,1ad4c85e4c29e0c4f18c0761,2026-09-04,Pentair,PNR INVESTOR DEADLINE: Robbins Geller Rudman & Dowd LLP Files Class Action Lawsu,維持,已套用,維持原分類，僅標記已人工覆核
+172,3cde3885f386eda4a41847ca,2026-09-04,"Regeneron Pharmaceuticals, Inc.","REGN INVESTOR ALERT: Regeneron Pharmaceuticals, Inc. Investors with Substantial ",維持,已套用,維持原分類，僅標記已人工覆核
+173,32b8bc24f78de0d3c3294e4e,2026-09-04,Boeing,Boeing Investors Say 4th Circ. Ruling Imperils Class Actions,排除,已套用,更改：Event_Code、事件中文、Level、Action
+174,6b7c085a8386555b51d8b5a8,2026-09-04,"HCA Healthcare, Inc. Common Stock",HCA class action lawsuit: Patients say trackers needed to book urgent care appoi,修改,已套用,更改：Event_Code、事件中文、Level、Action
+175,ee6678be577c258f20468ef6,2026-09-04,Pentair,"Pentair plc (PNR) Notice of October 2, 2026 Application Deadline for Class Actio",維持,已套用,維持原分類，僅標記已人工覆核
+176,8cd5d0104f7177725ae04d1b,2026-09-04,"Regeneron Pharmaceuticals, Inc.","REGN ALERT: Hagens Berman Alerts Regeneron Pharmaceuticals, Inc. (REGN) Investor",維持,已套用,維持原分類，僅標記已人工覆核
+177,bd43b6190fadea4fa33334e2,2026-09-04,GoDaddy Inc. Class A Common Stock,"GDDY SHAREHOLDER ALERT: Bronstein, Gewirtz and Grossman, LLC Announces that GoDa",維持,已套用,維持原分類，僅標記已人工覆核
+178,bd70771ee4d2251c91648496,2026-09-04,Pentair,"Bronstein, Gewirtz & Grossman LLC Urges Pentair plc Investors to Act: Class Acti",維持,已套用,維持原分類，僅標記已人工覆核
+179,b545593e60d56060932416ef,2026-09-08,Amazon,Nationwide Class Action Against Amazon Claims Abusive Treatment of Pregnant Ware,排除,已套用,更改：Event_Code、事件中文、Level、Action
+180,c98baec383b420596255d17b,2026-09-08,PayPal,"PayPal sent private Venmo transaction data to outside companies, a new class act",修改,已套用,更改：Event_Code、事件中文、Level、Action
+181,088947dcda9acc028025c95e,2026-09-09,GoDaddy Inc. Class A Common Stock,"GDDY Shareholder Alert: October 20, 2026 Lead Plaintiff Deadline in GoDaddy Inc.",維持,已套用,維持原分類，僅標記已人工覆核
+182,385749f905ec5ecc1f64a8ee,2026-09-10,GoDaddy Inc. Class A Common Stock,Robbins LLP Urges GDDY Stockholders Who Lost Money Investing in GoDaddy Inc. to ,維持,已套用,維持原分類，僅標記已人工覆核
+183,5e5612bbf809454efc2fa3db,2026-09-10,GoDaddy Inc. Class A Common Stock,GDDY Shareholder Alert: Investors With Losses May Seek to Lead the Class Action ,維持,已套用,維持原分類，僅標記已人工覆核
+184,21cbba0f9e4e028e9347f982,2026-09-10,GoDaddy Inc. Class A Common Stock,"GoDaddy Inc. (GDDY) Investors: October 20, 2026, Deadline in Securities Fraud Cl",維持,已套用,維持原分類，僅標記已人工覆核
+185,598301bce0c925a4ac558f97,2026-09-10,"Netflix, Inc.",Florida attorney general sues Netflix over ‘bait-and-switch’ on privacy for kids,維持,已套用,維持原分類，僅標記已人工覆核
+186,75fec4b6c72d78e1d11f8371,2026-09-11,GoDaddy Inc. Class A Common Stock,GDDY Class Alert: GoDaddy Securities Fraud Class Action to,維持,已套用,維持原分類，僅標記已人工覆核
+187,52344d060d1108565bcee86c,2026-09-11,Pentair,Robbins LLP Urges PNR Stockholders to Contact the Firm for Information About the,維持,已套用,維持原分類，僅標記已人工覆核
+188,ab0f8f737ba4fa480c100a43,2026-09-16,GoDaddy Inc. Class A Common Stock,GDDY Shareholder Alert: GoDaddy Inc. Securities Class Action Lawsuit - Investors,維持,已套用,維持原分類，僅標記已人工覆核
+189,ad70b34cfda0aa20db65fd65,2026-09-17,GoDaddy Inc. Class A Common Stock,GDDY DEADLINE: SueWallSt Reminds GoDaddy Inc. Investors of Upcoming Securities C,維持,已套用,維持原分類，僅標記已人工覆核
+190,8edebe2e0f23398202b688cd,2026-09-17,Pentair,PNR Shareholder Alert: Pentair plc Securities Class Action Lawsuit - Investors S,維持,已套用,維持原分類，僅標記已人工覆核
+191,8630ba2dd82ff84adddaa7f4,2026-09-25,CVS Health Corporation Common Stock,"CVS texted consumers after they opted out, a new class action lawsuit claims.",排除,已套用,更改：Event_Code、事件中文、Level、Action
+192,f16f5e0f5e719faa2e28d4db,2026-09-27,Applovin Corporation,AppLovin Stock Is Down 54% in 2026 and Facing a Class Action. Here’s Where It Co,維持,已套用,維持原分類，僅標記已人工覆核
+193,3b46f49745e60c6b38e6f5c0,2026-09-28,Pentair,"PNR DEADLINE NOTICE: Faruqi & Faruqi, LLP Reminds Pentair (PNR) Investors of Sec",維持,已套用,維持原分類，僅標記已人工覆核
+194,7f3ec1945fddddab2bfb50ac,2026-09-29,Walmart Inc.,"US judge rejects class action over Energizer, Walmart battery prices",排除,已套用,更改：Event_Code、事件中文、Level、Action
+195,87b832be833919af16679865,2026-10-01,"Pfizer, Inc. Common Stock",Florida Attorney General sues Pfizer and CEO over COVID-19 vaccine claims,維持,已套用,維持原分類，僅標記已人工覆核
+196,49ef3f5655e631c8b912a1fe,2026-10-02,First Solar,第一太陽能起訴中國JA Solar侵犯專利權,排除,已套用,更改：Event_Code、事件中文、Level、Action
+197,db14b425341c66039d5f451a,2026-10-06,McDonald's Corporation Common Stock,McDonald's hit with class action alleging AI-powered menu price-fixing,維持,已套用,維持原分類，僅標記已人工覆核
+198,4a8a13c5a5587bf3082d6d0f,2026-10-06,J.B. Hunt,"Rosen Law Firm Encourages J.B. Hunt Transport Services, Inc. Investors to Inquir",維持,已套用,維持原分類，僅標記已人工覆核
+199,381d3368c6c9f41ce74590e9,2026-10-08,Ford Motor Company,英國法院駁回了針對汽車製造商的柴油車尾氣排放訴訟中的上訴許可申請,維持,已套用,更改：Ticker
+200,a47ec3a8e00258e537cfdb3e,2026-10-08,"Uber Technologies, Inc. Common Stock",Uber class action alleges company enrolled users in Uber One without consent,排除,已套用,更改：Event_Code、事件中文、Level、Action
+201,a56141ede6d0d4ab2b1ad0df,2026-10-08,ExxonMobil,Weil Wins Dismissal of Plastics Class Action for ExxonMobil,排除,已套用,更改：Event_Code、事件中文、Level、Action
+202,cf4be0c7b9098718f032aa3f,2026-10-09,"Uber Technologies, Inc. Common Stock",Class action alleges consumers enrolled in Uber One subscription without consent,排除,已套用,更改：Event_Code、事件中文、Level、Action
+203,2b3099325cb0d6bbe8f1a160,2026-10-09,ExxonMobil,埃克森美孚、殼牌、BP勝訴 成功駁回紐約市環保訴訟‌,排除,已套用,更改：Event_Code、事件中文、Level、Action
+204,aed03c1292af01ec9e457a52,2026-10-10,Walmart Inc.,"Tariff refund class action lawsuits target Walmart, Puma, others",排除,已套用,更改：Event_Code、事件中文、Level、Action
+205,6519595a0c4e31b51576fdc7,2026-10-13,Honeywell Aerospace Inc.,INVESTOR ALERT: Honeywell Aerospace Inc. (HONA) Investors with Substantial Losse,維持,已套用,維持原分類，僅標記已人工覆核
+206,9a51a8085af589668e5f9f74,2026-10-14,Honeywell Aerospace Inc.,HONA Shareholder Alert: Investors With Losses May Seek to Lead the Class Action ,維持,已套用,維持原分類，僅標記已人工覆核
+207,86bbf19629a0a200e4c3274b,2026-10-14,Honeywell Aerospace Inc.,Robbins LLP Urges HONA Stockholders Who Lost Money Investing in Honeywell Aerosp,維持,已套用,維持原分類，僅標記已人工覆核
+208,02b050204bee2e85c36cc8e2,2026-10-15,Amazon,Amazon faces coordinated class action lawsuits over alleged tariff overcharges,排除,已套用,更改：Event_Code、事件中文、Level、Action
+209,1889698fa52a43a521d5aed3,2026-10-15,Honeywell Aerospace Inc.,"HONA CLASS ACTION NOTICE: Faruqi & Faruqi, LLP Reminds Honeywell",維持,已套用,維持原分類，僅標記已人工覆核
+210,94bffaab1b83fe730a7d0067,2026-10-15,Applovin Corporation,APP Shareholder Alert: AppLovin Corporation Securities Class Action Lawsuit - In,維持,已套用,維持原分類，僅標記已人工覆核
+211,9bff809c2f6cb1741f0d9d84,2026-10-15,Honeywell Aerospace Inc.,SueWallSt Reminds Honeywell Aerospace Investors of the Pending Class Action Laws,維持,已套用,維持原分類，僅標記已人工覆核
+212,c80abc3f77b563d3412adfb1,2026-10-15,GoDaddy Inc. Class A Common Stock,SueWallSt Reminds GoDaddy Inc. Investors of the Pending Class Action Lawsuit Wit,維持,已套用,維持原分類，僅標記已人工覆核
+213,ecd479b29a54eeeb3d11d706,2026-10-15,Costco,Costco class action targets allulose in Kirkland sugar-free drink mix,排除,已套用,更改：Event_Code、事件中文、Level、Action
+214,44dcb3f8c38704b479bf1d71,2026-10-15,Honeywell Aerospace Inc.,INVESTOR ALERT: Pomerantz Law Firm Reminds Investors with Losses on their Invest,維持,已套用,維持原分類，僅標記已人工覆核
+215,aec7db2e5715262b689c205a,2026-10-15,Sysco Corporation Common Stock,Jacobson urges state attorney general to investigate Sysco’s acquisition of Rest,排除,已套用,更改：Event_Code、事件中文、Level、Action
+216,f084e7f42feace867ce0c5d7,2026-08-09,Amazon,Amazon Stock Rebounds From Slump: AI Ambitions and $2.5B FTC Deal Ignite $3 Tril,排除,已套用,更改：Event_Code、事件中文、Level、Action
+217,84493893e0416f70f80cc30a,2026-08-16,Archer Daniels Midland,FRONTAL TRUST ADM COR REND CON LIQUIDE CLPP Balance Sheet – BCS:CFIFTCLP_E1,排除,已套用,更改：Event_Code、事件中文、Level、Action
+218,84a28f6db916fb32846972ec,2026-08-16,"Cencora, Inc. Common Stock",FRONTAL TRUST ADM COR REND CON LIQUIDE CLPP Balance Sheet – BCS:CFIFTCLP_E1,排除,已套用,更改：Event_Code、事件中文、Level、Action
+219,29ca53ec6f51746b22cb1b98,2026-08-20,CME Group Inc.,CFTC Innovation Advisory Committee meeting: CME Group CEO Warns About Prediction,排除,已套用,更改：Event_Code、事件中文、Level、Action
+220,22a56251dfb3f01a27778045,2026-08-20,Delta Air Lines,美國聯邦貿易委員會（FTC）正考慮要求披露個性化定價,排除,已套用,更改：Event_Code、事件中文、Level、Action
+221,060383bbaaf5165da1fe8415,2026-08-24,CoStar Group,Zillow 就聯邦貿易委員會（FTC）指控其向Redfin支付款項以停止在公寓房源方面展開競爭一事達成和解,排除,已套用,更改：Event_Code、事件中文、Level、Action
+222,040dfa713c783337dd8a9c50,2026-08-25,Amgen Inc.,FTC Warns Patent-Right Acquisitions Cannot Escape Antitrust Review in Amgen Enbr,維持,已套用,維持原分類，僅標記已人工覆核
+223,ed8f2f7bebaadae9f1bc5d81,2026-09-01,Amazon,"Amazon’s ad auction surcharges secretly bilked brands of billions, FTC alleges",維持,已套用,維持原分類，僅標記已人工覆核
+224,714959e6841e99096a6381df,2026-09-01,Amazon,The Morning Risk Report: FTC Files Lawsuit Alleging Amazon Deceived Advertisers,維持,已套用,維持原分類，僅標記已人工覆核
+225,ca3a5f8f48bcb20c0dafa0e2,2026-09-01,Amazon,"How Amazon’s ‘Secret’ Ad Pricing System Worked, According to the FTC",維持,已套用,維持原分類，僅標記已人工覆核
+226,a964c576991971f973087284,2026-09-01,Amazon,"FTC, 22 states sue Amazon over advertising surcharges",維持,已套用,維持原分類，僅標記已人工覆核
+227,2677594f7ab6545f7b711ddc,2026-09-01,Amazon,FTC and 22 states file suit accusing Amazon of secretly overcharging advertisers,維持,已套用,維持原分類，僅標記已人工覆核
+228,6ba3004303d164e1910e915b,2026-09-01,Amazon,AG Davenport Sues Amazon with FTC and 21 States for Rigging Advertising Auctions,維持,已套用,維持原分類，僅標記已人工覆核
+229,004b1245213be0dd4574e8a2,2026-09-01,Amazon,FTC and 22 States Sue Amazon Over Advertising Practices,維持,已套用,維持原分類，僅標記已人工覆核
+230,ad64556ce1e6d19ce0b16072,2026-09-01,Amazon,"FTC sues Amazon, alleging it overcharged advertisers",維持,已套用,維持原分類，僅標記已人工覆核
+231,8143fc2d66639e2ae05eba17,2026-09-01,Amazon,FTC聯合22州起訴亞馬遜 涉嫌從廣吿主多收數百億美元,維持,已套用,更改：Ticker
+232,6a66ae2386df9bd095066f6e,2026-09-02,Walmart Inc.,DOJ Probes Soaring Beef Prices at Eight Major Stores Including Walmart,維持,已套用,維持原分類，僅標記已人工覆核
+233,5ba73d30ec10e43eb2f1e0c8,2026-09-02,Amazon,FTC alleges Amazon illegally made $20 billion by rigging billions of ad auctions,維持,已套用,維持原分類，僅標記已人工覆核
+234,ec69b956b26f9191149ed8e8,2026-09-02,Amazon,Amazon Stock Extends Losses After FTC Lawsuit Over Ad Practices,維持,已套用,維持原分類，僅標記已人工覆核
+235,9a0364d084bd89340cec4959,2026-09-02,Amazon,Jim Cramer says selling Amazon shares over new FTC lawsuit would be 'hysterical',維持,已套用,維持原分類，僅標記已人工覆核
+236,5fbbcd363c8c01d3895cc40d,2026-09-03,CME Group Inc.,CFTC Seeks Dismissal of CME's Crypto Perpetual Futures Lawsuit,排除,已套用,更改：Event_Code、事件中文、Level、Action
+237,f6932f23cad2315310789129,2026-09-03,CME Group Inc.,CFTC Seeks Dismissal of CME Suit Over Crypto Perpetual Futures,排除,已套用,更改：Event_Code、事件中文、Level、Action
+238,374ddc963548a64cb0366d68,2026-09-03,CME Group Inc.,CFTC Moves to Kill CME Lawsuit Over Kalshi’s Bitcoin Perpetual Futures,排除,已套用,更改：Event_Code、事件中文、Level、Action
+239,b125b25d89f18f2f44c0a8ce,2026-09-03,CME Group Inc.,CFTC Seeks Dismissal of CME’s Kalshi Bitcoin Futures Lawsuit,排除,已套用,更改：Event_Code、事件中文、Level、Action
+240,b1001b3a99a98eaf4fa02ec7,2026-09-03,CME Group Inc.,CFTC asks court to dismiss CME's lawsuit over B...,排除,已套用,更改：Event_Code、事件中文、Level、Action
+241,fd73a9333911a870f2ce25de,2026-09-03,CME Group Inc.,CFTC Called For the Dismissal of CME Group’s Lawsuit Over Crypto Perpetual Futur,排除,已套用,更改：Event_Code、事件中文、Level、Action
+242,67ffa221361413798c16bf08,2026-09-03,CME Group Inc.,CFTC seeks dismissal of CME crypto futures lawsuit,排除,已套用,更改：Event_Code、事件中文、Level、Action
+243,101b7a5d142569f98ec05a04,2026-09-03,CME Group Inc.,CFTC Asks Court to Dismiss CME’s Lawsuit Over Kalshi’s Bitcoin Perpetual Futures,排除,已套用,更改：Event_Code、事件中文、Level、Action
+244,43cd0a0bf0112a190d5a095a,2026-09-04,Amazon,Jennifer Driscoll Analyzes FTC Suit over Amazon’s Advertising Pricing Practices,維持,已套用,維持原分類，僅標記已人工覆核
+245,758f7a3c71ac948898cc14f5,2026-09-04,CME Group Inc.,Legal Experts Back the CFTC’s Perps-as-Futures Call as It Moves to Dismiss CME’s,排除,已套用,更改：Event_Code、事件中文、Level、Action
+246,7c8be19e4b8b88fef473815d,2026-09-04,Amazon,"FTC Says Amazon Promised Advertisers an Auction, Then Set Its Own Price",維持,已套用,維持原分類，僅標記已人工覆核
+247,66311ed7ffb0869b9e6d0777,2026-09-04,CME Group Inc.,CFTC Says CME Lacks Standing in Suit Over Crypto Perpetual Futures Approval,排除,已套用,更改：Event_Code、事件中文、Level、Action
+248,5bf559204a4a16fb35ade199,2026-09-04,CME Group Inc.,CFTC Says CME Perps Fight Is 'Much Ado About Nothing',排除,已套用,更改：Event_Code、事件中文、Level、Action
+249,128a99056718a2adfd7dbc5a,2026-09-04,CME Group Inc.,CFTC files to dismiss CME lawsuit over crypto perpetual futures,排除,已套用,更改：Event_Code、事件中文、Level、Action
+250,f1c535eaebdc7c37bd4d48f5,2026-09-04,CME Group Inc.,CFTC Files to Dismiss CME's Crypto Perpetual Futures Lawsuit,排除,已套用,更改：Event_Code、事件中文、Level、Action
+251,5fd6106f3deba98f36ff8fc9,2026-09-04,CME Group Inc.,‘CME lacks standing’: CFTC moves to dismiss lawsuit over Kalshi crypto perps,排除,已套用,更改：Event_Code、事件中文、Level、Action
+252,14acfaccf29d145b81fd1796,2026-09-04,Amazon,The FTC’s Amazon Lawsuit Is Ad Tech’s History Of Opacity Repeating Itself,維持,已套用,維持原分類，僅標記已人工覆核
+253,97a22b34f0e3f98ea20e1127,2026-09-04,CME Group Inc.,CFTC Asks Judge to Dismiss CME Lawsuit Over Crypto Perpetual Futures,排除,已套用,更改：Event_Code、事件中文、Level、Action
+254,8dbbd9ac7adb25e796953e93,2026-09-04,CME Group Inc.,CFTC asks judge to toss CME challenge to Kalshi perps,排除,已套用,更改：Event_Code、事件中文、Level、Action
+255,5f519eb5972478e4621689ff,2026-09-08,"Cencora, Inc. Common Stock",Cencora's MWI Animal Health Merger With Covetrus Sees 'Intensified' FTC Scrutiny,維持,已套用,維持原分類，僅標記已人工覆核
+256,334fcf2472f752482c91be25,2026-09-09,NVIDIA Corporation,"DOJ probes Nvidia's licensing deal with AI startup Groq, NYT reports",維持,已套用,維持原分類，僅標記已人工覆核
+257,9f5ec405fcd4176d62c2d489,2026-09-16,Cintas Corporation,Cintas-UniFirst deal spread widens on FTC scrutiny: Bernstein,維持,已套用,維持原分類，僅標記已人工覆核
+258,4c8ce532ed3f44986c6d250e,2026-09-17,Walmart Inc.,Exclusive | Senators Ask FTC to Probe Walmart and Amazon Over Bots’ ‘Made in Ame,排除,已套用,更改：Event_Code、事件中文、Level、Action
+259,ae301af573023d5f4e1ae54c,2026-09-17,"Corpay, Inc. Common Stock","Corpay, CEO to pay $100M to settle FTC action over unauthorized fees (CPAY:NYSE)",修改,已套用,更改：Event_Code、事件中文
+260,b7c0cc49b0cac84af44c300b,2026-09-17,Amazon,Exclusive | Senators Ask FTC to Probe Walmart and Amazon Over Bots’ ‘Made in Ame,排除,已套用,更改：Event_Code、事件中文、Level、Action
+261,4d32c640b9c8873434fc9a9d,2026-09-18,Walmart Inc.,The Morning Risk Report: Senators Ask FTC to Probe Walmart and Amazon Over Bots’,排除,已套用,更改：Event_Code、事件中文、Level、Action
+262,7264deeee7c659f317b1d52b,2026-09-18,Corpay,Corpay Agrees to Settle FTC Matter,修改,已套用,更改：Ticker、Event_Code、事件中文
+263,83aef3fa88f62dc450eaa09f,2026-09-19,Coinbase,"Coinbase Files With CFTC To List US Single-Stock Perpetual Futures, Including AA",排除,已套用,更改：Event_Code、事件中文、Level、Action
+264,2e351af99116e7943321cb38,2026-09-28,Coinbase,CFTC Approves Coinbase Clearing as First USDC-Native Clearinghouse,排除,已套用,更改：Event_Code、事件中文、Level、Action
+265,7e19b35937027c989c531e77,2026-09-28,Coinbase,Coinbase Receives CFTC Approval for Coinbase Clearing LLC,排除,已套用,更改：Event_Code、事件中文、Level、Action
+266,8ef66e4facf6b2e8d09fa3b9,2026-09-28,Coinbase,Coinbase Brings Derivatives Clearing In-House After CFTC Registration,排除,已套用,更改：Event_Code、事件中文、Level、Action
+267,a6eae97cee3c40ac00d3bf7f,2026-09-30,Coinbase,Coinbase receives CFTC greenlight to launch USDC-native clearing house,排除,已套用,更改：Event_Code、事件中文、Level、Action
+268,b18ab0e7b0df2c6140112fef,2026-10-08,ExxonMobil,Update: ExxonMobil Director Vote Prompts US SEC Investigation Into Climate Actio,排除,已套用,更改：Event_Code、事件中文、Level、Action
+269,a853d138cb477793c8bdce64,2026-10-08,ExxonMobil,ExxonMobil Director Vote Prompts US SEC Investigation Into Climate Action 100+; ,排除,已套用,更改：Event_Code、事件中文、Level、Action
+270,06a16fc3d0d85d6619b772bf,2026-10-08,Marriott International,消息人士稱，Priceline因發布誤導性酒店廣告將面臨美國聯邦貿易委員會（FTC）的處罰,排除,已套用,更改：Event_Code、事件中文、Level、Action
+271,26926663a032f19c53fb3dcc,2026-10-08,Booking Holdings,消息人士稱，Priceline因發布誤導性酒店廣告將面臨美國聯邦貿易委員會（FTC）的處罰,維持,已套用,更改：Ticker
+272,e8fa0af2431213fe919a445f,2026-10-08,Expedia Group,消息人士稱，Priceline因發布誤導性酒店廣告將面臨美國聯邦貿易委員會（FTC）的處罰,排除,已套用,更改：Event_Code、事件中文、Level、Action
+273,08f126b0d1618ed5c5092d09,2026-10-09,Sysco Corporation Common Stock,Sysco-Restaurant Depot Deal Still Awaits FTC Review Six Months After Announcemen,維持,已套用,維持原分類，僅標記已人工覆核
+274,1dcf8943046a379290ed336b,2026-10-10,Coinbase,Is Coinbase Global (COIN) Cheap As CFTC Approval Reshapes Its Valuation?,排除,已套用,更改：Event_Code、事件中文、Level、Action
+275,515d3e1993cf6e957a74e532,2026-10-15,Walmart Inc.,FTC Sends More than $9.8 Million to Consumers Harmed by Walmart’s Failure to Sto,排除,已套用,更改：Event_Code、事件中文、Level、Action
+276,bacf34c1ecdf56c4b714001b,2026-10-16,CMS Energy Corporation Common Stock,FTC to Healthcare Providers: CMS Price Transparency Compliance Is Not Safe Harbo,排除,已套用,更改：Event_Code、事件中文、Level、Action
+277,90f300e07da0e3deb21d0826,2026-08-09,"Equifax, Inc. Common Stock",Equifax Customers Could Claim Up To $600 In $2.2M Settlement -,排除,已套用,更改：Event_Code、事件中文、Level、Action
+278,95e074d78dd7e4a6b1c56e9c,2026-08-09,Tractor Supply,Regional: Tractor Supply Company Subsidiary Agrees To $5.1 Million Consumer Prot,維持,已套用,維持原分類，僅標記已人工覆核
+279,c5ced50e7cc3decf08280627,2026-08-10,"Equifax, Inc. Common Stock",How to claim your part of the $2.2 million Equifax class action settlement,排除,已套用,更改：Event_Code、事件中文、Level、Action
+280,ca8a167fa8a5ec1fbf43b718,2026-08-11,"Moderna, Inc.","Could Arbutus Biopharma Corporation (ABUS) Turn its Moderna, Inc. (MRNA) Settlem",修改,已套用,更改：Event_Code、事件中文、Level、Action
+281,3ff5510a2f00906d34418b7d,2026-08-11,Sherwin-Williams,"Sherwin-Williams to pay $124,700 penalty after Beaver County residents say air s",排除,已套用,更改：Event_Code、事件中文、Level、Action
+282,e8dce6e06e3e68c89caf243c,2026-08-11,Sherwin-Williams,"Sherwin-Williams to pay $124,000 penalty after residents complain about smell at",排除,已套用,更改：Event_Code、事件中文、Level、Action
+283,98918d0f7fb8862e4b33ac5b,2026-08-11,Newmont Corporation,Newmont Snags Bargain in $1.95B Nevada Settlement -- Market Talk,維持,已套用,維持原分類，僅標記已人工覆核
+284,c829d89028f387814276c4ef,2026-08-11,DuPont,"NJ secures court approval for $2.5B DuPont, 3M PFAS settlements",維持,已套用,維持原分類，僅標記已人工覆核
+285,87cb286aeeacf57a15383d01,2026-08-13,"Equifax, Inc. Common Stock",Equifax Customers Can Claim Part of a $2.2M Class Action Settlement This Month,排除,已套用,更改：Event_Code、事件中文、Level、Action
+286,70a628b504b31dbc534ceeb8,2026-08-13,Duke Energy,9AM: NC Attorney General rejects Duke Energy settlement,排除,已套用,更改：Event_Code、事件中文、Level、Action
+287,44a0e0e8b7e748989ab46bde,2026-08-13,American International Group,AIG Loss in Delaware Deepens Split on Recouping Settlement Funds,排除,已套用,更改：Event_Code、事件中文、Level、Action
+288,3d7f9ebe9475217fc56a7e47,2026-08-13,Duke Energy,Attorney general rejects Duke Energy Progress settlement over 6.8% rate hike,排除,已套用,更改：Event_Code、事件中文、Level、Action
+289,d22052bdbaea7f01489256a4,2026-08-14,"Equifax, Inc. Common Stock",Clark Howard shares advice after $100M Equifax credit score settlement,修改,已套用,更改：Event_Code、事件中文
+290,4b83b68db5c81b2563e808ea,2026-08-14,Comcast Corporation,Comcast offering payouts in $117.5M settlement. Are you eligible?,修改,已套用,更改：Event_Code、事件中文
+291,1fd04e8d08d991f290ee3f32,2026-08-14,DuPont,Court gives final approval to New Jersey’s $2.5 billion PFAS settlements with Du,維持,已套用,維持原分類，僅標記已人工覆核
+292,557b755ad7ae6f5f66b8ef9d,2026-08-14,Hewlett Packard Enterprise,HPE Wins Approval for DOJ Settlement on Juniper WiFi Deal,修改,已套用,更改：Event_Code、事件中文
+293,1716debf560bc91c81c19242,2026-08-14,Hewlett Packard Enterprise,HPE/Juniper Settlement Tests Limits of Tunney Act Oversight,修改,已套用,更改：Event_Code、事件中文
+294,2d36fe21d56c382ad4288660,2026-08-14,Duke Energy,Attorney General Jackson declines Duke Energy Progress rate settlement,排除,已套用,更改：Event_Code、事件中文、Level、Action
+295,a332cd8fb2e6b82d560fe92f,2026-08-14,Hewlett Packard Enterprise,DOJ's HPE Merger Settlement Approved Over State Objections,修改,已套用,更改：Event_Code、事件中文
+296,f3ad723d7b848621dc3ba69e,2026-08-14,Hewlett Packard Enterprise,Calif. AG: HPE-Juniper judge says settlement not reached through ‘routine proces,修改,已套用,更改：Event_Code、事件中文
+297,212b6fc6646c7d52a7c36f92,2026-08-14,"Equifax, Inc. Common Stock",Equifax settlement could pay $100 million to up to 4 million consumers,修改,已套用,更改：Event_Code、事件中文
+298,9f690f78f96afb87f9b71c4d,2026-08-14,"Equifax, Inc. Common Stock",Equifax agrees to $100 million settlement over 2022 coding issue that impacted c,修改,已套用,更改：Event_Code、事件中文
+299,3987682b115a27f87e800e89,2026-08-14,"Equifax, Inc. Common Stock",Equifax agrees to $100 million settlement over credit score error in 2022,修改,已套用,更改：Event_Code、事件中文
+300,740f406d9742c62d2156186c,2026-08-14,Hewlett Packard Enterprise,Hewlett Packard Enterprise wins approval for DOJ settlement in Juniper deal (HPE,修改,已套用,更改：Event_Code、事件中文
+301,abdb79d99c6e782f83836c5e,2026-08-14,"Equifax, Inc. Common Stock",Equifax settlement: Consumers impacted by 2022 credit score error could receive ,修改,已套用,更改：Event_Code、事件中文
+302,6164c77c2f7ea18d2b113685,2026-08-14,CSX Corporation,CSX Transportation $1.5M Livingston Derailment Settlement,排除,已套用,更改：Event_Code、事件中文、Level、Action
+303,abca17dacc6a80807e93ef80,2026-08-15,"Equifax, Inc. Common Stock",Equifax $100M Settlement Marks Record Payout Over Credit Score Coding Glitch,修改,已套用,更改：Event_Code、事件中文
+304,4835a51281f83136291dbb80,2026-08-15,Truist Financial Corporation Common Stoc,TFC 2 report: Young Reds earn penalty shootout win at home,排除,已套用,更改：Event_Code、事件中文、Level、Action
+305,9492f81f661e2810da7aa729,2026-08-15,"Equifax, Inc. Common Stock","Week in Review: MARTA's new big boss, Equifax's big settlement and US solar's po",排除,已套用,更改：Event_Code、事件中文、Level、Action
+306,ae062e0ae775d59af71e95dc,2026-08-15,"Equifax, Inc. Common Stock",Equifax Agrees to $100M Settlement over Error That Changed Millions of Credit Sc,修改,已套用,更改：Event_Code、事件中文
+307,bfbd6bc0d34d3f7eb6b032ea,2026-08-15,General Motors,"MBTA worker whose hair GM Eng pulled gets $495,000 in settlement",排除,已套用,更改：Event_Code、事件中文、Level、Action
+308,f3db737d3568cde382c3b3f5,2026-08-15,General Motors,MBTA reaches $500K settlement with employee who says GM pulled her hair,排除,已套用,更改：Event_Code、事件中文、Level、Action
+309,02b4a57a839e7cbfe6d4f5ae,2026-08-15,"O'Reilly Automotive, Inc.",$18.8M O’Reilly Automotive spam text messages class action settlement,排除,已套用,更改：Event_Code、事件中文、Level、Action
+310,dfee0c4216d9819c52d22141,2026-08-15,Hewlett Packard Enterprise,Hewlett Packard Enterprise's settlement regarding $14B Juniper acquisition appro,修改,已套用,更改：Event_Code、事件中文
+311,7c722f5460f145a26ac2289a,2026-08-16,Kroger,Every Super League club’s penalty points with Hull KR most ill-disciplined,排除,已套用,更改：Event_Code、事件中文、Level、Action
+312,d1e4cdbbad11541759261404,2026-08-16,Humana Inc. Common Stock,Federal Judge Approves $3 Million Settlement In Willows Apartments Class-action ,排除,已套用,更改：Event_Code、事件中文、Level、Action
+313,ce76b03dba4c44628396b1a3,2026-08-16,Humana Inc. Common Stock,Glenmark USA Agrees to USD 15.28 Mn Settlement With Humana Over Generic Drug Ant,排除,已套用,更改：Event_Code、事件中文、Level、Action
+314,9cd30071d483561c873e69b9,2026-08-16,International Paper,Phinge & CEO Robert DeMaio Publicly Declare Cash Settlements or Judgments Alone ,排除,已套用,更改：Event_Code、事件中文、Level、Action
+315,819e6599b3c21e163671f62d,2026-08-16,CF Industries,Nashville SC - Inter Miami CF 1 - 0 | MISSED PENALTY - Leo Messi,排除,已套用,更改：Event_Code、事件中文、Level、Action
+316,7e40ce55b4d98c4451ee7805,2026-08-17,"Meta Platforms, Inc.",Meta ordered to pay enormous penalty after losing New Mexico case,維持,已套用,維持原分類，僅標記已人工覆核
+317,9029019bf59ab4bfbb292581,2026-08-17,Tractor Supply,"California settlement hits Tractor Supply over pricing, pesticides, and 'biodegr",維持,已套用,維持原分類，僅標記已人工覆核
+318,c2138061cc9061a94eceeb80,2026-08-19,"Uber Technologies, Inc. Common Stock",Uber Eats to pay $4.4 million in settlement with Seattle,排除,已套用,更改：Event_Code、事件中文、Level、Action
+319,c2aed1e8bbb3ec85393b7f6b,2026-08-19,"Uber Technologies, Inc. Common Stock",Uber Eats to pay $4.4M settlement to Seattle delivery workers,排除,已套用,更改：Event_Code、事件中文、Level、Action
+320,fb248b9530e660b4d5037ed8,2026-08-19,"Equifax, Inc. Common Stock",Equifax Settlement Could Pay 4 Million Consumers Up to $280,修改,已套用,更改：Event_Code、事件中文
+321,b9e809a50f9d5ef5364a980d,2026-08-20,Warner Bros. Discovery,L.A. Mayor Karen Bass Throws Her Support Behind Paramount-Warner Bros. Discovery,排除,已套用,更改：Event_Code、事件中文、Level、Action
+322,261167cb765c78558992776c,2026-08-20,Marathon Petroleum Corporation Common St,"Carson reaches $370-million settlement with Marathon Petroleum, resolving tax di",維持,已套用,維持原分類，僅標記已人工覆核
+323,5a39baed1e5af1babd36a364,2026-08-20,Kroger,Got prescriptions at Kroger? You may qualify for payment in $17 million proposed,排除,已套用,更改：Event_Code、事件中文、Level、Action
+324,202eba2fa538a72147f07e7f,2026-08-20,Abbott Laboratories,Abbott in $670M settlement for some NEC infant formula claims (ABT:NYSE),修改,已套用,更改：Event_Code、事件中文
+325,65dd2640523a4c6c2f9ce79a,2026-08-20,Dominion Energy,"Declaring ‘economic D-Day,’ Trump says any country trading with Iran will be san",排除,已套用,更改：Event_Code、事件中文、Level、Action
+326,d73878c04251aaaf0ee40892,2026-08-21,AT&T,"Federal prosecutors take over charges in Rutland murder case, won’t seek death p",排除,已套用,更改：Event_Code、事件中文、Level、Action
+327,046feeb7e7c1f7e6e793d16d,2026-08-24,Kroger,How to apply for Kroger's $17M pharmacy settlement,排除,已套用,更改：Event_Code、事件中文、Level、Action
+328,d205153132b47e56aecb8dca,2026-08-24,"Equifax, Inc. Common Stock",Equifax agrees to $100 million settlement over alleged misreported credit scores,修改,已套用,更改：Event_Code、事件中文
+329,eb192c797da689acfff6cf64,2026-08-26,"Meta Platforms, Inc.","Meta, states agree to $17 billion settlement in child safety trial",維持,已套用,維持原分類，僅標記已人工覆核
+330,be86cfe130733a2e1daf4532,2026-08-26,Apollo Global Management,The Bull Case For Apollo Global Management (APO) Could Change Following Cybersec,修改,已套用,更改：Event_Code、事件中文、Level、Action
+331,3eccdedff5b423dd25d11b0b,2026-08-27,Humana Inc. Common Stock,Humana-owned Villages Health agrees to $542M settlement for overbilling Medicare,維持,已套用,維持原分類，僅標記已人工覆核
+332,835c529353eebc961229ccdb,2026-08-27,"Meta Platforms, Inc.",Here’s what Meta’s $18 billion multistate settlement could mean for kids — and f,維持,已套用,維持原分類，僅標記已人工覆核
+333,29fd57e2ecbfab934da3d346,2026-08-27,"Meta Platforms, Inc.","Meta reaches $17B settlement. And, nuclear regulator to abandon radiation safety",維持,已套用,維持原分類，僅標記已人工覆核
+334,34b25b146fddf80abb566360,2026-08-27,NVIDIA Corporation,"Fortune Tech: Meta’s record settlement, Nvidia Q2 earnings, DraftKings’ co-found",排除,已套用,更改：Event_Code、事件中文、Level、Action
+335,1a44deb64fa0fabf7d78b62b,2026-08-27,"Meta Platforms, Inc.","Fortune Tech: Meta’s record settlement, Nvidia Q2 earnings, DraftKings’ co-found",維持,已套用,維持原分類，僅標記已人工覆核
+336,4671cc3f133d696f839a80fe,2026-08-27,"Meta Platforms, Inc.",Why Meta's settlement could be an 'inflection point' for reining in Big Tech,維持,已套用,維持原分類，僅標記已人工覆核
+337,380f7859ee84a5bc2092c129,2026-08-27,"Meta Platforms, Inc.","Illinois officials, experts react to Meta's social media addiction trial settlem",維持,已套用,維持原分類，僅標記已人工覆核
+338,137eb3e610b2f8439aff8007,2026-08-27,"Meta Platforms, Inc.",Father speaks out on Meta’s $18B child safety settlement,維持,已套用,維持原分類，僅標記已人工覆核
+339,60fc635434635081cf5136dd,2026-08-27,"Meta Platforms, Inc.",Landmark settlement agreement with META,維持,已套用,維持原分類，僅標記已人工覆核
+340,2b0eb5bbbe871ecbf264a7df,2026-08-27,"Meta Platforms, Inc.",Meta reaches landmark $18 billion settlement with states in trial over teen soci,維持,已套用,維持原分類，僅標記已人工覆核
+341,21ffcb676aeadfb494b962a3,2026-08-27,Kroger,Here’s how to qualify for the new Kroger $17M settlement over prescription drug ,排除,已套用,更改：Event_Code、事件中文、Level、Action
+342,eadf751f796e32d981e1a538,2026-08-27,Kroger,Here’s how to find out if you qualify for part of Kroger’s $17 million settlemen,排除,已套用,更改：Event_Code、事件中文、Level、Action
+343,33d08b065a42e209c66e2bae,2026-08-28,Marathon Petroleum Corporation Common St,City of Carson reaches $370M settlement with Marathon Petroleum,維持,已套用,維持原分類，僅標記已人工覆核
+344,5d6f5e5e5ad9f3412d980c87,2026-08-28,Tractor Supply,Tractor Supply Can’t Escape Employee Tobacco Penalty Lawsuit,排除,已套用,更改：Event_Code、事件中文、Level、Action
+345,4c7314caf830d06a2d6db808,2026-08-28,Humana Inc. Common Stock,Humana (HUM) Faces A 27% Fair Value Gap On $541.5 Million Overbilling Settlement,維持,已套用,維持原分類，僅標記已人工覆核
+346,5d79e7490b12c1e27e991a8e,2026-08-28,Bank of America Corporation Common Stock,Judge to consider final approval of Bank of America's $72 million settlement wit,修改,已套用,更改：Event_Code、事件中文
+347,bab403c9efc026019d7c4cb0,2026-08-28,Bank of America Corporation Common Stock,Court approves Bank of America’s $72.5M settlement with Epstein accusers,修改,已套用,更改：Event_Code、事件中文
+348,a9326aedeb567cdd688c9789,2026-08-29,"Meta Platforms, Inc.",CA AG Rob Bonta talks Meta landmark $18 billion settlement & platform changes,維持,已套用,維持原分類，僅標記已人工覆核
+349,9171d3d5d6a05bdc43f8277c,2026-08-30,"Equifax, Inc. Common Stock",Did Equifax's (EFX) Dividend Steadiness and Legal Settlement Proposal Just Refra,排除,已套用,更改：Event_Code、事件中文、Level、Action
+350,edbb4144ee531b884bbb6c3d,2026-08-30,"Meta Platforms, Inc.",This week's Meta settlement will reverberate across the world for years,維持,已套用,維持原分類，僅標記已人工覆核
+351,66ab313c9e99b9661237f750,2026-08-30,Walmart Inc.,Walmart agrees to pay $50M settlement over allegations its pharmacies filled ill,維持,已套用,維持原分類，僅標記已人工覆核
+352,209a279dda6945a064db3e7e,2026-08-30,"Meta Platforms, Inc.",Meta settlement reached: Ohio to receive over $300 million,維持,已套用,維持原分類，僅標記已人工覆核
+353,33dd0cec444250a9f350ff12,2026-08-31,"Uber Technologies, Inc. Common Stock",New Settlement: Uber Eats Agrees to Pay Nearly $4.4M to Resolve Wage Violations,排除,已套用,更改：Event_Code、事件中文、Level、Action
+354,8a79726503816209682d662d,2026-08-31,CVS Health Corporation Common Stock,FTC settlement with CVS Caremark: What PBMs Need to Know,維持,已套用,維持原分類，僅標記已人工覆核
+355,d0936370d19c7c8174484ef8,2026-09-01,"Meta Platforms, Inc.",Meta's $18 billion settlement bets on AI to tell which users are kids,維持,已套用,維持原分類，僅標記已人工覆核
+356,fbc24e54643115f5801e3fe8,2026-09-01,"Meta Platforms, Inc.",3 things districts need to know about the $17B Meta social media settlement,維持,已套用,維持原分類，僅標記已人工覆核
+357,01cb186fdda1eb70848eda98,2026-09-01,"Meta Platforms, Inc.",West Virginia AG JB McCuskey on $17B Meta settlement: They made a very smart bus,維持,已套用,維持原分類，僅標記已人工覆核
+358,dc6d870af289865718f6cd6f,2026-09-01,"Meta Platforms, Inc.",The Meta settlement is regulation by enforcement,維持,已套用,維持原分類，僅標記已人工覆核
+359,ea439d5f249c09b4fc959e40,2026-09-01,American Water Works,American Water (AWK) and Essential Utilities Reach Non-Unanimous Settlement in P,排除,已套用,更改：Event_Code、事件中文、Level、Action
+360,23ccefa12a34aead79d7519f,2026-09-02,"Meta Platforms, Inc.",Experts break down the meaning and consequences of the Meta settlement | Newswis,維持,已套用,維持原分類，僅標記已人工覆核
+361,153012810f8de58e4b943c29,2026-09-02,"Meta Platforms, Inc.","Meta settlement could clear the way for new AI product launches, Morgan Stanley ",維持,已套用,維持原分類，僅標記已人工覆核
+362,314f382c2bb34e907ef264bc,2026-09-02,Morgan Stanley Common Stock,"Meta settlement could clear the way for new AI product launches, Morgan Stanley ",排除,已套用,更改：Event_Code、事件中文、Level、Action
+363,610b1de09f11259ce9b2a9f2,2026-09-02,"Meta Platforms, Inc.",Meta's $17 Billion Settlement is a Bad Deal for Teens and All Social Media Users,維持,已套用,維持原分類，僅標記已人工覆核
+364,60a684447a93ef6b014d9601,2026-09-02,Honeywell Aerospace Inc.,"Honeywell Aerospace to Pay Over $2 Million in US Defense Contract Settlement, Sh",維持,已套用,維持原分類，僅標記已人工覆核
+365,7cdcd0b0254232df49e1e08e,2026-09-02,"Meta Platforms, Inc.",Attorneys General announce Meta settlement & new child safety reforms for social,維持,已套用,維持原分類，僅標記已人工覆核
+366,c561f99ac83fafb902c78ba3,2026-09-02,"Meta Platforms, Inc.","Meta’s $18 Billion Settlement: Implications for Law, Technology, and the Future ",維持,已套用,維持原分類，僅標記已人工覆核
+367,75a58fb2a1d2e7f121d1fb59,2026-09-03,Walmart Inc.,"DOJ, DEA Reach $50 Million Opioid Settlement with Walmart",維持,已套用,維持原分類，僅標記已人工覆核
+368,0576ae380c58ac92e5bd8cd8,2026-09-03,"Equifax, Inc. Common Stock","September 2026 Class Action Settlements Involve Disney, Tesla and Equifax",排除,已套用,更改：Event_Code、事件中文、Level、Action
+369,eb30f7c5e43a7d6d078746c0,2026-09-03,Boeing,Boeing pays $3.1M FAA penalty for “hundreds” of safety violations,維持,已套用,維持原分類，僅標記已人工覆核
+370,40c8b0edc7069f342ab8b5ec,2026-09-03,Kroger,Were You Overcharged? How to Claim Your Share of the Kroger Pharmacy Settlement,排除,已套用,更改：Event_Code、事件中文、Level、Action
+371,72bcae05f8133f931d18ecbb,2026-09-03,Invesco Ltd Common Stock,Invesco Funds Reach Settlement in Serta Simmons Lender Appeal,排除,已套用,更改：Event_Code、事件中文、Level、Action
+372,ee1586eba7265b0c64685c45,2026-09-04,Costco,Here's why Jim Cramer is putting Costco stock in the penalty box,排除,已套用,更改：Event_Code、事件中文、Level、Action
+373,888a11af3619ca9e7e0eccdd,2026-09-04,American International Group,"AIG Succeeds in Appeal of Oil, Gas Well Fire Settlement Costs",排除,已套用,更改：Event_Code、事件中文、Level、Action
+374,50ac5102cc5df2feaff159b2,2026-09-04,Entergy Corporation Common Stock,Entergy Corp stock gains fresh capital as forward sale settlement completes,排除,已套用,更改：Event_Code、事件中文、Level、Action
+375,a3022a4206556729a2b4fed0,2026-09-08,Walmart Inc.,"Walmart settlement returns nearly $120,000 to app-based Seattle workers",排除,已套用,更改：Event_Code、事件中文、Level、Action
+376,87c020341101a6233c1772cb,2026-09-10,Globe Life Inc. Common Stock,$3.4M Globe Life data breach class action settlement,排除,已套用,更改：Event_Code、事件中文、Level、Action
+377,2c7599432e793ffe44e30700,2026-09-10,DuPont,"Chemours, DuPont and Corteva to Pay $455 Million in North Carolina PFAS Settleme",維持,已套用,維持原分類，僅標記已人工覆核
+378,350699d0dfa24077af10aa82,2026-09-10,DuPont,"North Carolina reaches $590 million PFAS settlement with Chemours, DuPont",維持,已套用,維持原分類，僅標記已人工覆核
+379,a731b999b1cf40c621fbc64e,2026-09-10,Verizon,Verizon comes out on top in Chilmark settlement,排除,已套用,更改：Event_Code、事件中文、Level、Action
+380,568d25858c05f4cef58727d6,2026-09-10,"Corteva, Inc. Common Stock","Chemours, DuPont and Corteva to Pay $455 Million in North Carolina PFAS Settleme",維持,已套用,維持原分類，僅標記已人工覆核
+381,a99e6d15a9cf868557da5341,2026-09-10,DuPont,"$600M state settlement won’t stop CFPUA lawsuit against Chemours, DuPont",維持,已套用,維持原分類，僅標記已人工覆核
+382,51b0d27ee24a18270a183982,2026-09-10,"Corteva, Inc. Common Stock","Chemours, DuPont, Corteva reach $590M settlement with NC over PFAS lawsuits",維持,已套用,維持原分類，僅標記已人工覆核
+383,a80c46de2cda011d980ec379,2026-09-10,DuPont,NC Attorney General announces nearly $600-million settlement with DuPont and Che,維持,已套用,維持原分類，僅標記已人工覆核
+384,672d4fae90575df5d2bf229b,2026-09-10,DuPont,"NC reaches $590M settlement with Chemours, DuPont, Corteva over PFAS lawsuits (V",維持,已套用,維持原分類，僅標記已人工覆核
+385,2d2519e7e6008d1128315b46,2026-09-10,"Corteva, Inc. Common Stock","NC reaches $590M settlement with Chemours, DuPont, Corteva over PFAS lawsuits (V",維持,已套用,維持原分類，僅標記已人工覆核
+386,9345a2c498d207ebebc2fefe,2026-09-11,Capital One,JPMorgan and Capital One Reject Settlements in Trump Debanking Lawsuits,修改,已套用,更改：Event_Code、事件中文
+387,eb58dfa4e30fafe46d5cc35a,2026-09-11,DuPont,"Chemours, DuPont, Corteva reach $455 PFAS settlement with North Carolina",維持,已套用,維持原分類，僅標記已人工覆核
+388,b1a14b25a944463abcce82cf,2026-09-11,"Corteva, Inc. Common Stock","Chemours, DuPont, Corteva reach $455 PFAS settlement with North Carolina",維持,已套用,維持原分類，僅標記已人工覆核
+389,8fefe520ce5db749bfe35b8e,2026-09-12,Ball Corporation Common Stock,DP World Tour Pro Suffers Costly Penalty After Bizarre Ball-Movement at Irish Op,排除,已套用,更改：Event_Code、事件中文、Level、Action
+390,02394976fa990932ce936314,2026-09-15,"Corteva, Inc. Common Stock","DuPont, Chemours, Corteva ink $590M PFAS settlement with North Carolina",維持,已套用,維持原分類，僅標記已人工覆核
+391,ec21bbb73be47802577ac901,2026-09-15,Abbott Laboratories,Connecticut Medicaid program to receive $936K from Abbott Laboratories settlemen,排除,已套用,更改：Event_Code、事件中文、Level、Action
+392,fccbde31663f926dc0ddc4af,2026-09-15,Abbott Laboratories,Abbott Laboratories (ABT) Agrees To $385 Million Infant Formula Recall Settlemen,修改,已套用,更改：Event_Code、事件中文
+393,a190b9ecbdbb850881d2bb0a,2026-09-15,Accenture plc Class A Ordinary Shares (I,Accenture (ACN) Agrees To $25 Million DOJ Discrimination Settlement,維持,已套用,維持原分類，僅標記已人工覆核
+394,3f8e678737ec3625d5fea794,2026-09-15,Accenture plc Class A Ordinary Shares (I,Justice extracts $25M settlement from Accenture Federal over diversity goals,維持,已套用,維持原分類，僅標記已人工覆核
+395,a138928f5f0609c6962c6200,2026-09-15,Warner Bros. Discovery,Judge Sets Date For Settlement Talks In Paramount-WBD Antitrust Case,修改,已套用,更改：Event_Code、事件中文
+396,8d7765995791c337aad27f12,2026-09-16,Mastercard Incorporated Common Stock,"$167.5M Visa, Mastercard non-bank ATM class action settlement",修改,已套用,更改：Event_Code、事件中文
+397,ab21cc52063d58c171325721,2026-09-17,GE Vernova Inc. Common Stock,"Vineyard Wind, GE Vernova reach settlement over contract",排除,已套用,更改：Event_Code、事件中文、Level、Action
+398,8e2485072318981c3f4f6e86,2026-09-17,Amazon,FTC Announces Additional Payments to Consumers Stemming from FTC’s Amazon Prime ,排除,已套用,更改：Event_Code、事件中文、Level、Action
+399,353fa368cbdf3743f12f57d8,2026-09-17,Mastercard Incorporated Common Stock,Visa and Mastercard paying out $167M in class action settlement — see if you qua,排除,已套用,更改：Event_Code、事件中文、Level、Action
+400,edd52ac9baec10ec5afba764,2026-09-18,Amazon,Amazon Prime settlement expands: More consumers eligible for refunds up to $200,排除,已套用,更改：Event_Code、事件中文、Level、Action
+401,e01a8a51d5d5baea7830f612,2026-09-18,Amazon,Amazon FTC settlement update: More Prime members qualify and payout increased to,排除,已套用,更改：Event_Code、事件中文、Level、Action
+402,997d0b69c48f9ad583f30076,2026-09-18,Mastercard Incorporated Common Stock,"Visa, Mastercard agree to $167.5M class action settlement: Are you eligible for ",修改,已套用,更改：Event_Code、事件中文
+403,6685c6a98dabcf0e53e4ec02,2026-09-18,"Elevance Health, Inc. Common Stock",Elevance Health sued again over out-of-network penalty,排除,已套用,更改：Event_Code、事件中文、Level、Action
+404,0bda3f4d7ae943fc690ebc6a,2026-09-18,Mastercard Incorporated Common Stock,"Visa, Mastercard $167.5 million settlement could mean money for ATM users. Who q",排除,已套用,更改：Event_Code、事件中文、Level、Action
+405,95ebe81054411e953092304e,2026-09-18,Amazon,Amazon Prime customers could receive up to $200 in refunds under expanded FTC se,排除,已套用,更改：Event_Code、事件中文、Level、Action
+406,610a60c13836ba4e753cc26d,2026-09-18,Amazon,Amazon Prime customers may be eligible to receive $200 as settlement grows,排除,已套用,更改：Event_Code、事件中文、Level、Action
+407,a15ea53dd887ca27b411aa11,2026-09-18,Amazon,Amazon $2.5 billion settlement expanded | How much you can get if you're eligibl,排除,已套用,更改：Event_Code、事件中文、Level、Action
+408,80e019e60d7c1ec75cf31e1b,2026-09-18,Abbott Laboratories,Abbott Laboratories Stock (ABT) Opinions on Infant Formula Settlement,排除,已套用,更改：Event_Code、事件中文、Level、Action
+409,041fc3ec1c69f315947bab8c,2026-09-21,Warner Bros. Discovery,"Paramount reaches historic settlement with states, clearing way for WBD deal",修改,已套用,更改：Event_Code、事件中文
+410,a0febc1feecd8d29bf52e4ab,2026-09-21,Warner Bros. Discovery,Paramount-WBD Settlement Sets Up Editorial Independence Board For CNN And CBS Ne,修改,已套用,更改：Event_Code、事件中文
+411,764c03ea3ab9d26a9c59a984,2026-09-21,Warner Bros. Discovery,Read the memo that Paramount CEO David Ellison sent to staffers after 2 settleme,修改,已套用,更改：Event_Code、事件中文
+412,db17b926dd5c3b2eef2c21ed,2026-09-21,Warner Bros. Discovery,David Ellison Reacts To Paramount-WBD Settlement With State AGs,修改,已套用,更改：Event_Code、事件中文
+413,401e1cc6f638d8d5292d8f4f,2026-09-22,"DoorDash, Inc.",NYC Mayor Mamdani reaches record DoorDash settlement for underpaid workers,維持,已套用,維持原分類，僅標記已人工覆核
+414,359cb2ef8d9e53fd6bea742b,2026-09-22,"DoorDash, Inc.","264,000 DoorDash drivers are getting money in a massive $131.5 million settlemen",維持,已套用,維持原分類，僅標記已人工覆核
+415,99e4ec3be3ff19a9de617695,2026-09-22,Warner Bros. Discovery,Paramount Shares Tick Up After Settlement As Wall Street Remains Cautiously Opti,修改,已套用,更改：Event_Code、事件中文
+416,3bb0fc363ada1398d012ae4f,2026-09-22,"DoorDash, Inc.",DoorDash reaches $131.5M settlement with New York City over delivery workers’ pa,維持,已套用,維持原分類，僅標記已人工覆核
+417,20e866e6ff1e8f2a0b75463b,2026-09-22,"DoorDash, Inc.",DoorDash reaches $131.5M settlement with NYC over courier pay,維持,已套用,維持原分類，僅標記已人工覆核
+418,29a31dd209b460e19931d92b,2026-09-22,Warner Bros. Discovery,Paramount-WBD Hearing Date Set For Proposed AGs Settlement,修改,已套用,更改：Event_Code、事件中文
+419,5a26db207b76537c169ab2ca,2026-09-22,Mastercard Incorporated Common Stock,SoFi Becomes First National Bank to Go Live with Stablecoin Settlement across Ma,排除,已套用,更改：Event_Code、事件中文、Level、Action
+420,e43fd33fff45d35320eff26a,2026-09-22,"DoorDash, Inc.",DoorDash Agrees to $131.5 Million Settlement for Shortchanging Workers,維持,已套用,維持原分類，僅標記已人工覆核
+421,72fd07878238194fef2c0413,2026-09-24,CVS Health Corporation Common Stock,Online CVS Shoppers Might Be Able to Cash In on a $20.5 Million Settlement,排除,已套用,更改：Event_Code、事件中文、Level、Action
+422,00f2f27df0dc579c2931e474,2026-09-24,Warner Bros. Discovery,"Dealmakers React To Paramount-WBD Settlement: ""Tech Has Won""",修改,已套用,更改：Event_Code、事件中文
+423,6cb67048c51d63ef10a21be3,2026-09-24,Mastercard Incorporated Common Stock,See if you qualify for the $167.5M Visa and Mastercard settlement and learn how ,排除,已套用,更改：Event_Code、事件中文、Level、Action
+424,e415adf53beeb212e1f2a904,2026-09-24,Edwards Lifesciences Corporation Common,Claim your share of the $39 million Edwards Lifesciences securities class action,排除,已套用,更改：Event_Code、事件中文、Level、Action
+425,dc6c2a8526e8fde0de019f7a,2026-09-25,Mastercard Incorporated Common Stock,Mastercard Stock Holds Flat as $25 Billion Stablecoin Settlement Goes Live,排除,已套用,更改：Event_Code、事件中文、Level、Action
+426,cd6a897f55232c7d82807601,2026-09-25,Apple Inc.,Apple (AAPL) Reaches $250 Million Siri Settlement Over Recent iPhone Claims,修改,已套用,更改：Event_Code、事件中文
+427,b2c836d8fc10acc99e4b0b56,2026-09-25,"Equifax, Inc. Common Stock",Do you qualify for a payment from the $30 million Equifax class action settlemen,排除,已套用,更改：Event_Code、事件中文、Level、Action
+428,ffcf01f6d64f93687045b49d,2026-09-25,Mastercard Incorporated Common Stock,"Mastercard (MA) Rolls Out SoFiUSD Settlement, Is The 24% Undervalued View Still ",排除,已套用,更改：Event_Code、事件中文、Level、Action
+429,72ee9e3ab64ddcb493bfaa64,2026-09-26,Mastercard Incorporated Common Stock,$167 million settlement seeks to reimburse Visa and Mastercard customers for ATM,排除,已套用,更改：Event_Code、事件中文、Level、Action
+430,3b82433fbfa90604c532d1b6,2026-09-27,Labcorp,"451,558 Marylanders Impacted By Labcorp Data Breach; Company Reaches $2.3 Millio",修改,已套用,更改：Event_Code、事件中文、Level、Action
+431,8adb12c7bfd7adb7910757fe,2026-09-28,"Corteva, Inc. Common Stock","Corteva, Inari Reach Confidential Settlement in Seed-Patent Case",排除,已套用,更改：Event_Code、事件中文、Level、Action
+432,2dd32bc16b9d7b34926af28d,2026-09-28,"Corteva, Inc. Common Stock",FTC Settlement Limits Corteva Pesticide Loyalty Rebates,維持,已套用,維持原分類，僅標記已人工覆核
+433,96db35c9ac23729f442bd528,2026-09-28,"Corteva, Inc. Common Stock",Corteva to End Pesticides Loyalty Program in Settlement With FTC,維持,已套用,維持原分類，僅標記已人工覆核
+434,add022a25ab732e3141ba5e8,2026-09-28,"Corteva, Inc. Common Stock","Corteva reaches FTC antitrust settlement, agrees to $35M payment (CTVA:NYSE)",維持,已套用,維持原分類，僅標記已人工覆核
+435,7e7c450d2aff2615a726b546,2026-09-28,Warner Bros. Discovery,Paramount Woos Investors With Mega $44 Billion Debt Offer To Fund WBD Deal As Ju,排除,已套用,更改：Event_Code、事件中文、Level、Action
+436,ef1fdace1b4d4ef928a14b4d,2026-09-28,"Corteva, Inc. Common Stock","States, FTC secure settlement in suit against Corteva pesticide loyalty programs",維持,已套用,維持原分類，僅標記已人工覆核
+437,018432c867f6de5ef5bd678e,2026-09-28,"Corteva, Inc. Common Stock",Corteva and Inari Reach Settlement Agreement,排除,已套用,更改：Event_Code、事件中文、Level、Action
+438,37b4cfd575badb09af23c678,2026-09-28,CVS Health Corporation Common Stock,Used the CVS app? You may be owed part of $20.5M digital privacy settlement in N,排除,已套用,更改：Event_Code、事件中文、Level、Action
+439,cd725062972ae3070819698b,2026-09-29,CVS Health Corporation Common Stock,CVS Settlement: How to File a Claim and Get $10,排除,已套用,更改：Event_Code、事件中文、Level、Action
+440,9d5cde790d8c8317ea215eac,2026-09-29,"Equifax, Inc. Common Stock",Here's how to file a claim for the $100 million Equifax credit reporting error c,排除,已套用,更改：Event_Code、事件中文、Level、Action
+441,9f43694b4dd2bd44dcd6790d,2026-09-29,"Corteva, Inc. Common Stock","Iowa, other attorneys general, FTC, reach settlement with Corteva",維持,已套用,維持原分類，僅標記已人工覆核
+442,1cdffdc971753b247a8b729c,2026-10-02,"Equifax, Inc. Common Stock",You could get a payment from Equifax's $100M settlement,排除,已套用,更改：Event_Code、事件中文、Level、Action
+443,f9ff2ff39de4628e589dff81,2026-10-02,Amazon,"$2.5 billion Amazon settlement: More payments being sent out, with another round",排除,已套用,更改：Event_Code、事件中文、Level、Action
+444,c413c35c703b0b64e23f077b,2026-10-03,"Equifax, Inc. Common Stock",$30M Equifax hard inquiry dispute class action settlement,排除,已套用,更改：Event_Code、事件中文、Level、Action
+445,3695499d0cbb5db2d2b019b2,2026-10-05,"Equifax, Inc. Common Stock",Some Equifax customers could be owed money from a class action settlement. See i,排除,已套用,更改：Event_Code、事件中文、Level、Action
+446,a1d98328fad5f13bac00586d,2026-10-05,Quest Diagnostics Incorporated Common St,"DGX Station GB300 Cluster: Two Towers, Two 400G DACs, and Frontier Models Withou",排除,已套用,更改：Event_Code、事件中文、Level、Action
+447,4ac5f4402a7b5d305e818716,2026-10-06,"Equifax, Inc. Common Stock",Equifax agrees to $100 million settlement over allegedly incorrect credit scores,修改,已套用,更改：Event_Code、事件中文
+448,ac8948fa6bad7dbb1290fea6,2026-10-06,"Equifax, Inc. Common Stock",Equifax agrees to proposed $100 million settlement over credit score errors,修改,已套用,更改：Event_Code、事件中文
+449,cd2d82799e42e8cce11c0c4c,2026-10-06,"Equifax, Inc. Common Stock",Equifax agrees to $100mil settlement,修改,已套用,更改：Event_Code、事件中文
+450,a9532f6c9ffdf4af6bef1d1d,2026-10-07,"Equifax, Inc. Common Stock",What to do if you qualify for the Equifax error settlement,排除,已套用,更改：Event_Code、事件中文、Level、Action
+451,541ad40363f83dcc691173db,2026-10-07,"Equifax, Inc. Common Stock",Eligible for a payout? Some Equifax customers could get up to $280 in $100 milli,排除,已套用,更改：Event_Code、事件中文、Level、Action
+452,cd0647af0a2d18ec95909417,2026-10-08,AT&T Inc.,Payments could come soon in $177M AT&T settlement: How much will you receive?,排除,已套用,更改：Event_Code、事件中文、Level、Action
+453,055c89085873416a44a38958,2026-10-08,Duke Energy,Duke Energy Reaches Settlement Requiring Data Centers To Pay Upfront Grid Connec,排除,已套用,更改：Event_Code、事件中文、Level、Action
+454,0a40d2da69a8540dbe451850,2026-10-08,CMS Energy Corporation Common Stock,Nursing home takes fight over CMS penalty authority to Supreme Court,排除,已套用,更改：Event_Code、事件中文、Level、Action
+455,9b059848cb04eeb5f0c3f583,2026-10-08,Duke Energy,"Duke Energy, NC Public Staff Reach Settlement on Data Center Costs",排除,已套用,更改：Event_Code、事件中文、Level、Action
+456,58c1e6c2d04fd4210016b983,2026-10-09,Duke Energy,Duke Energy utilities reach large-load payment settlement with North Carolina st,排除,已套用,更改：Event_Code、事件中文、Level、Action
+457,c606353d3b2cff933a7469b2,2026-10-09,ExxonMobil,ExxonMobil blocked $5B Kashagan environmental fine settlement,維持,已套用,維持原分類，僅標記已人工覆核
+458,9fdae8b7f4a952806c55de98,2026-10-09,ExxonMobil,Market Chatter: ExxonMobil Blocks Settlement Over $5.2 Billion Kazakhstan Fine,維持,已套用,維持原分類，僅標記已人工覆核
+459,51d2fa07a12405a6d72f546a,2026-10-09,"Corteva, Inc. Common Stock",Corteva agrees to end pesticide loyalty programmes in proposed settlement with F,維持,已套用,維持原分類，僅標記已人工覆核
+460,b7e8d84e51baaa871fc4f876,2026-10-10,"Uber Technologies, Inc. Common Stock",Third bellwether trial in Uber sexual assault MDL ends in settlement,修改,已套用,更改：Event_Code、事件中文
+461,0bc4f694bc8731b83a485ad5,2026-10-11,ExxonMobil,ExxonMobil Holdings (XOM) Is Blocking A $5 Billion Kashagan Settlement,維持,已套用,維持原分類，僅標記已人工覆核
+462,8ba4e99ca1e5f322b2cee65d,2026-10-14,CVS Health Corporation Common Stock,What Does CVS Health (CVS) Resolve With Its $315 Million Opioid Settlement?,維持,已套用,維持原分類，僅標記已人工覆核
+463,04f49b90526ddfa581183dce,2026-10-14,CVS Health Corporation Common Stock,CVS to pay $315M after settlement in DOJ lawsuit over controlled prescriptions,維持,已套用,維持原分類，僅標記已人工覆核
+464,a4301d93cf1004bab098324c,2026-10-14,CVS Health Corporation Common Stock,CVS Pharmacy reaches $315M settlement with Justice Department over controlled su,維持,已套用,維持原分類，僅標記已人工覆核
+465,f8ce461600fb8618ba424a26,2026-10-14,CVS Health Corporation Common Stock,CVS to pay $315M over opioid prescriptions in major DOJ settlement,維持,已套用,維持原分類，僅標記已人工覆核
+466,e4cbf5994466de0c8b4c32ad,2026-10-14,CVS Health Corporation Common Stock,CVS to pay $315 million settlement over opioid prescriptions,維持,已套用,維持原分類，僅標記已人工覆核
+467,22fd8c62aa96d0cd80000252,2026-10-14,CVS Health Corporation Common Stock,CVS to pay $315M settlement over allegations of illegally filling opioid prescri,維持,已套用,維持原分類，僅標記已人工覆核
+468,efbc22fe9215aaa52e98f269,2026-10-14,CVS Health Corporation Common Stock,CVS Agrees To $315 Million Settlement Over Opioid Prescriptions,維持,已套用,維持原分類，僅標記已人工覆核
+469,a66e1081cfaac5f9071edbd2,2026-10-14,CVS Health Corporation Common Stock,"CVS, DOJ reach $315M settlement in opioid prescription case",維持,已套用,維持原分類，僅標記已人工覆核
+470,788b238d0913d6ffe3060490,2026-10-15,CVS Health Corporation Common Stock,CVS agrees to $315M DOJ opioid settlement,維持,已套用,維持原分類，僅標記已人工覆核
+471,5ab3c2fe259d479da138a5d2,2026-10-15,Bank of America Corporation Common Stock,Bank of America stock falls after earnings miss and $1.2 billion penalty,維持,已套用,維持原分類，僅標記已人工覆核
+472,1b24c446469ddebc27886147,2026-10-15,Supermicro,"NLST Stock Rallies After ITC Patent Action Against MU, SMCI, HPE – Roth Capital ",修改,已套用,更改：Event_Code、事件中文、Level、Action
+473,022c39f0787362be562d756e,2026-10-15,CVS Health Corporation Common Stock,"CVS opioid settlement leads Guckian, Block to criticize Foulkes",排除,已套用,更改：Event_Code、事件中文、Level、Action
+474,41ee7a8cd546a59d0f97c030,2026-10-15,Bank of America Corporation Common Stock,Bank of America shares drop after third-quarter revenue miss and regulatory pena,維持,已套用,維持原分類，僅標記已人工覆核
+475,7b06b747f92419499bf39fa4,2026-10-15,CVS Health Corporation Common Stock,CVS opioid settlement puts Foulkes' role for company back in spotlight,排除,已套用,更改：Event_Code、事件中文、Level、Action
+476,d75af3e247b114465e184752,2026-10-16,Bank of America Corporation Common Stock,"Auto Auctions, Money Order Gaps at Center of Bank of America Penalty",維持,已套用,維持原分類，僅標記已人工覆核
+477,0512a9b31af1946f9e403ace,2026-10-16,"NextEra Energy, Inc. Common Stock","NextEra Energy (NEE) Proposes Legal Settlement, Is It Still Undervalued?",排除,已套用,更改：Event_Code、事件中文、Level、Action
+478,ec40275d5db2955cfa21f9e6,2026-10-16,"Equifax, Inc. Common Stock",$100M Equifax FCRA violations class action settlement,修改,已套用,更改：Event_Code、事件中文
+479,ae862011d8d8a38a4c962a7a,2026-08-10,Regency Centers,Reg Wrap: Graham’s Russia sanctions bill breezes through Senate,排除,已套用,更改：Event_Code、事件中文、Level、Action
+480,78a2b6f97a998cd721e8c9a8,2026-08-11,Ford Motor Company,1. F-35 Sale to Turkey Blocked by Statute 2. Trump Administration Weighs Legal P,排除,已套用,更改：Event_Code、事件中文、Level、Action
+481,167282d580a38c1242e78843,2026-08-24,Dominion Energy,"To further isolate Iran’s economy, U.S. rolls out ‘D-Day’ sanctions",排除,已套用,更改：Event_Code、事件中文、Level、Action
+482,9ab93cb3e628f584ff355ed1,2026-08-25,Hasbro,"Wave of anti-money laundering sanctions has Strip’s attention, says Venetian’s a",排除,已套用,更改：Event_Code、事件中文、Level、Action
+483,54062a912f9c56ba8f44f26c,2026-09-01,KeyCorp,"SCO slams attacks, sanctions on Iran: Key takeaways from Bishkek summit",排除,已套用,更改：Event_Code、事件中文、Level、Action
+484,6f9c02be7b60d06bee8d3fe7,2026-09-03,Deere & Company,Tayane Porfírio de Araújo Accepts Doping Sanction | USADA,排除,已套用,更改：Event_Code、事件中文、Level、Action
+485,bac7a594caa609f60e3a83f3,2026-09-04,Morgan Stanley Common Stock,"Court Blocks Morgan Stanley’s Bid to Withhold Diversity Docs, Threatens Sanction",排除,已套用,更改：Event_Code、事件中文、Level、Action
+486,722e72dd56227a11288533f8,2026-09-16,"Cardinal Health, Inc. Common Stock","Cardinal Health Loses Multiple ""Product Return"" Lawsuits Against Pharmacy Custom",排除,已套用,更改：Event_Code、事件中文、Level、Action
+487,8b7e3ea5e1d3a6627e5655d1,2026-09-17,NVIDIA Corporation,Investigative report details how export-restricted Nvidia AI chips reach China —,修改,已套用,更改：Event_Code、事件中文、Level、Action
+488,9499981981f20d98ef7b0814,2026-10-12,Global Payments Inc. Common Stock,Financial sanctions and the global payments network,排除,已套用,更改：Event_Code、事件中文、Level、Action
+489,1d46e1f0edfe3a0d09e0910e,2026-10-23,Moderna,Moderna Sinks 4% After 18% Plunge as Melanoma Vaccine Selloff Extends; Merck and,修改,已套用,更改：Event_Code、事件中文、Level、Action
+490,f5be12213704d274d9eb373c,2026-10-23,Quest Diagnostics,Quest Diagnostics discloses cyberattack on lab services system,修改,已套用,更改：Event_Code、事件中文、Level、Action
+491,52147ac35bb5adcd257f19ce,2026-10-23,Delta Air Lines,Crown Castle Soars on SpaceX News as Record Oil Prices Plunge Delta Air Lines,修改,已套用,更改：Event_Code、事件中文、Level、Action
+492,72c1595251a9825c235928ad,2026-10-23,TKO Group Holdings,Former WWE Star Killer Kross Recalls Failed Entertainment Industry Promise From ,排除,已套用,更改：Event_Code、事件中文、Level、Action
+493,c9151db39206b104e8415ddb,2026-10-24,Corteva,CTVA Stock Plunges As Corteva Completes Vylor Spin-Off,排除,已套用,更改：Event_Code、事件中文、Level、Action
+494,837be8b447bd8edac2cef557,2026-10-24,Corteva,CTVA Stock Plunges As Vylor Spin-Off Triggers Massive Repricing,排除,已套用,更改：Event_Code、事件中文、Level、Action
+495,f408eb5974a740165838c465,2026-10-24,Corteva,CTVA Stock Plunges As Vylor Spin-Off Triggers Sharp Repricing,排除,已套用,更改：Event_Code、事件中文、Level、Action
+496,4d57fbcf170a7c87bc505258,2026-10-24,Amazon,Laminators sold on Amazon recalled for fire risk,排除,已套用,更改：Event_Code、事件中文、Level、Action
+497,738c8ca03c91b0282419749f,2026-10-24,CMS Energy,State auditor reassigning resources to prioritize CMS investigation,排除,已套用,更改：Event_Code、事件中文、Level、Action
+498,83902f1748b9501c7fd90a1c,2026-10-24,CVS Health,"CVS Caremark, Express Scripts, Optum Rx targeted in House investigation (UNH:NYS",修改,已套用,更改：Event_Code、事件中文、Level、Action
+499,c9c26fe91224d856d36e4ddc,2026-10-24,UnitedHealth Group,"CVS Caremark, Express Scripts, Optum Rx targeted in House investigation (UNH:NYS",修改,已套用,更改：Event_Code、事件中文、Level、Action
+500,6901cfb94e61908ec4146e89,2026-10-24,Microsoft,《焦點》AI類股暴跌過後，交投轉為平淡,排除,已套用,更改：Event_Code、事件中文、Level、Action
