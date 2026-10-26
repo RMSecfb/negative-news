@@ -44,10 +44,8 @@ def render(repository, news):
     import streamlit as st
     st.subheader('機構內部人交易')
     st.caption('13F 機構季度持股 ＋ Form 4 內部人交易；由本專案 sec_filings 自動向 SEC 擷取，不改變新聞 Level。')
-    st.link_button('開啟 13F／Form 4 擷取程式與原始成果', 'https://github.com/'+SOURCE_REPO+'/tree/main/sec_filings')
     st.caption('擷取排程（台北時間）：Form 4 週二至週六 06:00、13F 週一至週五 06:30，擷取後立即同步到這裡；07:00 另有保底同步。13F 為季度資料，新季度要多數機構申報後才會更新。')
-    refresh = st.button('重新讀取機構內部人成果',key='refresh_participants')
-    if refresh or 'participants_snapshot' not in st.session_state:
+    if 'participants_snapshot' not in st.session_state:
         try:
             st.session_state['participants_snapshot'] = read_snapshot(repository)
         except Exception as exc:
