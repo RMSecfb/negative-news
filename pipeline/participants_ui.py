@@ -1,4 +1,4 @@
-"""Institutional/insider view, using the source project's actual result schema."""
+"""Institutional/insider view over the results produced by sec_filings/."""
 import io
 from pathlib import Path
 import pandas as pd
@@ -43,9 +43,9 @@ def export_participants(news, snapshot, workbooks, runs=None):
 def render(repository, news):
     import streamlit as st
     st.subheader('機構內部人交易')
-    st.caption('13F 機構季度持股 ＋ Form 4 內部人交易；沿用 SEC13F 專案結果與方法，不改變新聞 Level。')
-    st.link_button('開啟機構內部人交易來源專案', 'https://github.com/'+SOURCE_REPO+'/tree/main/sec_filings')
-    st.caption('獨立同步排程：每日台北 07:00 匯入來源已發布 Excel。這是成果同步，不代表已重新擷取 SEC。')
+    st.caption('13F 機構季度持股 ＋ Form 4 內部人交易；由本專案 sec_filings 自動向 SEC 擷取，不改變新聞 Level。')
+    st.link_button('開啟 13F／Form 4 擷取程式與原始成果', 'https://github.com/'+SOURCE_REPO+'/tree/main/sec_filings')
+    st.caption('擷取排程（台北時間）：Form 4 週二至週六 06:00、13F 週一至週五 06:30，擷取後立即同步到這裡；07:00 另有保底同步。13F 為季度資料，新季度要多數機構申報後才會更新。')
     refresh = st.button('重新讀取機構內部人成果',key='refresh_participants')
     if refresh or 'participants_snapshot' not in st.session_state:
         try:
@@ -62,7 +62,7 @@ def render(repository, news):
         with st.expander(label,expanded=True):
             meta = manifest.get('datasets',{}).get(kind,{})
             if kind not in summaries:
-                st.info(('來源有 Form4_FINAL.py，但目前尚未發布 Form 4 成果 Excel。' if kind=='form4' else '尚無已同步的13F成果。')+' '+meta.get('error',''))
+                st.info(('尚無已發布的 Form 4 成果。' if kind=='form4' else '尚無已同步的13F成果。')+' '+meta.get('error',''))
                 continue
             st.caption(f'來源：{meta.get("source_path", "")} · 版本 {meta.get("source_sha", "")[:12]}')
             if meta.get('source_status') != 'available':
