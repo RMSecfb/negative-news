@@ -31,6 +31,17 @@ class MarketTests(unittest.TestCase):
         self.assertIn('MARKET_DISCOVERY',out.iloc[0]['監控池'])
     def test_major_events_rank_first(self):
         self.assertGreater(priority({'Title':'Company files bankruptcy','Source':'Reuters'}),priority({'Title':'Stock analyst changes price target','Keyword候選':'target'}))
+    def test_llm_order_uses_finbert_within_same_priority(self):
+        from pipeline.integrated import llm_order
+        rows=[
+            {'Title':'Quarterly update','FinBERT':'0.4'},
+            {'Title':'Company files bankruptcy','FinBERT':'0.1'},
+            {'Title':'Shares slip on weak outlook','FinBERT':'-0.8'},
+            {'Title':'Shares slide after report','FinBERT':'-0.3'},
+            {'Title':'Chinese headline','FinBERT':'N/A'},
+        ]
+        ordered=[r['Title'] for r in sorted(rows,key=llm_order)]
+        self.assertEqual(ordered,['Company files bankruptcy','Shares slip on weak outlook','Shares slide after report','Quarterly update','Chinese headline'])
     def test_market_mode_does_not_rotate_sp500(self):
         with patch('pipeline.ingest.company_file',return_value=[('AAPL','Apple')]), patch('pipeline.ingest.optional_watchlist',return_value=[]), patch('pipeline.ingest.rss_fetch',return_value=[]) as rss, patch('pipeline.ingest.requests.Session',create=True), patch('pipeline.ingest.time.sleep'):
             _, stats=fetch_news(Path('.'),datetime.now(timezone.utc),scope='market')

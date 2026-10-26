@@ -77,7 +77,7 @@ AI關閉時使用原始規則作最終分類；AI開啟但額度不足／429／A
 
 ## 五、調高LLM判讀量的限制
 
-若「規則量」指判讀筆數：目前網站每次最多100、預設35；Actions預設同為35；共享每日上限LLM_DAILY_MAX=120；兩次新請求間隔GROQ_MIN_INTERVAL_SECONDS=20秒。失敗HTTP嘗試也算用量。人工結果及成功快取沿用不增加新呼叫。每一公司／新聞紀錄分開判讀，多公司新聞可能多次呼叫。更新模型、Prompt、規則或新聞文字可讓舊快取失效、增加用量。
+若「規則量」指判讀筆數：目前網站每次最多100、預設35；Actions手動執行預設35，每日排程（含Cloudflare以as_schedule觸發）使用DAILY_MAX_LLM=100；共享每日上限LLM_DAILY_MAX=120；兩次新請求間隔GROQ_MIN_INTERVAL_SECONDS=20秒。失敗HTTP嘗試也算用量。人工結果及成功快取沿用不增加新呼叫。每一公司／新聞紀錄分開判讀，多公司新聞可能多次呼叫。更新模型、Prompt、規則或新聞文字可讓舊快取失效、增加用量。
 
 調整每日上限需改workflow的LLM_DAILY_MAX；調整排程預設需改MAX_LLM備援值及相關預設。超過單次100還需同步修改workbench輸入限制與integrated.validate_request的上限，不能只把Actions輸入改成500。35次的20秒間隔約11分鐘、100次約33分鐘，另加擷取、模型、API與輸出耗時；目前job timeout為90分鐘。
 

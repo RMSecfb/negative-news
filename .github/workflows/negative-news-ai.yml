@@ -42,6 +42,9 @@ jobs:
       GITHUB_REPOSITORY: ${{ github.repository }}
       PYTHONUNBUFFERED: '1'
       LLM_DAILY_MAX: '120'
+      # 每日排程（含 Cloudflare 以 as_schedule 觸發）的判讀筆數；手動執行仍用 max_llm（預設 35）。
+      # gpt-oss-20b 免費方案每日約 20 萬 token、每次約 1,600 token，總量約 125 次，保留 20 次給手動執行。
+      DAILY_MAX_LLM: '100'
       GROQ_MIN_INTERVAL_SECONDS: '20'
     steps:
       - uses: actions/checkout@v4
@@ -81,4 +84,6 @@ jobs:
             exit 0
           fi
           if [[ "$RESUME" == "true" ]]; then extra+=(--resume); fi
+          if [[ "$RUN_EVENT" == "schedule" && "$RESUME" != "true" ]]; then MAX_LLM="$DAILY_MAX_LLM"; fi
+          echo "LLM 本次上限：$MAX_LLM（每日總上限 $LLM_DAILY_MAX）"
           python -m pipeline.integrated --event "$RUN_EVENT" --max-llm "$MAX_LLM" "${extra[@]}"

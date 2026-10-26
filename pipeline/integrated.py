@@ -230,6 +230,17 @@ def apply_answer(record, answer, rules, index):
     return r
 
 
+def llm_order(record):
+    """LLM 判讀順序：事件字詞分數高者優先；同分時 FinBERT 越負面越優先，沒有分數的排在同分組最後。"""
+    try:
+        sentiment = float(record.get('FinBERT'))
+        if sentiment != sentiment:  # NaN
+            raise ValueError
+    except (TypeError, ValueError):
+        sentiment = 2.0
+    return (-priority(record), sentiment)
+
+
 def reserve(repository, run_id, requested, day, cap):
     path = f'news_usage/{day}.json'
     def build(read, revision):
@@ -286,7 +297,7 @@ def execute(repository, request, repo=ROOT, api_key='', collector=None, analyzer
     calls = reused = 0
     new_cache, decisions = {}, []
     limit_reached = False
-    ordered = sorted(targets.to_dict('records'), key=priority, reverse=True)
+    ordered = sorted(targets.to_dict('records'), key=llm_order)
     pause = float(os.getenv('GROQ_MIN_INTERVAL_SECONDS', '20')) if interval is None else interval
     for record in ordered:
         r = {**record, **rule_fields(record, rules, core_sources)}
