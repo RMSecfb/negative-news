@@ -32,17 +32,14 @@
 |位置|說明|
 |---|---|
 |news_daily/YYYY-MM-DD.csv、.xlsx|目前正式結果，依台北時間的新聞發布日歸檔；排程與人工補跑共用|
-|risk_news_daily/|舊版每日Excel，留供相容讀取；不是新版每日持續更新的位置|
-|ai_news_daily/|先前獨立AI的CSV／JSON，以執行日命名，內容可能跨發布日；新版有跨日遷移相容|
-|ai_news_raw/|早期AI搜尋候選快照，並非現在主要報表|
-|history/|原始歷史資料與人工覆核紀錄；新版讀取時保留相容性|
+|history/|原始歷史統計與舊版人工覆核紀錄（negative_news_manual_overrides.csv）；程式仍會讀取，不可刪除|
 |news_cache/|月度LLM成功答案快取|
 |news_usage/|台北日期的共用LLM呼叫預留及實用量|
 |news_requests/|網站送出的持久化人工執行請求|
 |news_runs/|執行結果、錯誤及最近100筆索引|
 |news_audits/|歷史Ticker核對報告|
 
-查詢時優先讀news_daily，缺少新版日期才相容讀舊成果，不將同日三個資料夾盲目相加。舊檔保留歷史不表示仍在雙軌產檔；建議先保留，待另外做歷史完整性與使用依賴確認後才考慮歸檔。
+2026-10-26已核對：前期的risk_news_daily（16份Excel）、ai_news_daily、ai_news_raw共1,632列，其中1,631列早已在news_daily，其餘1列已補入，三個資料夾隨後移除（歷史可在Git紀錄找回）。程式中保留的舊路徑讀取在檔案不存在時會自動略過。
 
 每日與期間Excel均包含：完整新聞、主要負面事件、待人工覆核、待補分析、執行紀錄。L3黃、L4橘、L5紅。CSV為可再讀取的逐筆資料，Excel是可閱讀成果。
 
