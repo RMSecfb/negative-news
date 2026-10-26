@@ -1,0 +1,928 @@
+﻿序號,news_id,日期,公司,標題,最終決定,結果,原因
+1,386b1903c3752406ca71a371,2026-10-23,AT&T,盤中速報 - AT&T(T-US)大跌5.08%，報21.59美元,修改,已套用,更改：Event_Code、事件中文、Level、Action
+2,65afd2bd036ef15d6bfecf40,2026-10-23,American Express,"American Express is cutting about 3,500 jobs to make room for AI",修改,已套用,更改：Event_Code、事件中文、Level、Action
+3,f712a81a2464577d422dafda,2026-10-24,American Express,American Express Plans to Cut 5% of Global Jobs. The Stock Is Falling on Earning,修改,已套用,更改：Event_Code、事件中文、Level、Action
+4,f6738065c18e923038176649,2026-10-23,Delta Air Lines,Delta Air Lines Shares Drop Nearly 4% Amid Rising Fuel Costs : 기업주식정보 : JKN,修改,已套用,更改：Event_Code、事件中文、Level、Action
+5,10e729e9a41afcb3ee53addf,2026-10-24,Booking Holdings,Booking Holdings Inc Stock (BKNG) Moved Down by 3.03% on Oct 23: A Full Analysis,排除,已套用,更改：Event_Code、事件中文、Level、Action
+6,9bf7677cd2bac1cb5f32ac52,2026-10-24,American Express,American Express to slash 5% of workforce in latest AI-driven layoffs,修改,已套用,更改：Event_Code、事件中文、Level、Action
+7,0a8ae9e4a9fb827ad28a1151,2026-10-23,American Express,American Express layoffs: Thousands of roles slashed in AI push as job losses in,修改,已套用,更改：Event_Code、事件中文、Level、Action
+8,c80e9d6ef03d2dd821403894,2026-10-23,T-Mobile US,盤中速報 - T-Mobile US Inc(TMUS-US)大跌5.16%，報150.6美元,修改,已套用,更改：Event_Code、事件中文、Level、Action
+9,166048ea2cb9b46d2c7f3daa,2026-10-24,eBay Inc.,"Day Around the Bay: Netflix, Ebay Cut More Than 450 Bay Area Workers in Latest L",修改,已套用,更改：Event_Code、事件中文、Level、Action
+10,a889dd5bc409a7781d438692,2026-10-24,Netflix,"Day Around the Bay: Netflix, Ebay Cut More Than 450 Bay Area Workers in Latest L",修改,已套用,更改：Event_Code、事件中文、Level、Action
+11,b4897daf8f3294ab3e927afb,2026-10-24,Globe Life,Globe Life Inc Stock (GL) Moved Down by 7.74% on Oct 23: Drivers Behind the Move,修改,已套用,更改：Event_Code、事件中文、Level、Action
+12,84fbb1f0d6c153f5df943a58,2026-10-24,Western Digital,Western Digital Corp Stock (WDC) Moved Down by 3.80% on Oct 23: A Full Analysis,排除,已套用,更改：Event_Code、事件中文、Level、Action
+13,9970b3a27460bdbb5f520d93,2026-10-24,Verisk Analytics,盤中速報 - Verisk Analytics Inc(VRSK-US)大跌5.04%，報193.09美元,排除,已套用,更改：Event_Code、事件中文、Level、Action
+14,5b94fd07676510172c118424,2026-10-24,Dollar Tree,Dollar Store Stocks Slide as Selling Hits Discount Retail: Dollar Tree and Dolla,修改,已套用,更改：Event_Code、事件中文、Level、Action
+15,3f05174646045289037ab680,2026-10-24,Lilly (Eli),Eli Lilly and Co Stock (LLY) Moved Down by 3.33% on Oct 23: Drivers Behind the M,排除,已套用,更改：Event_Code、事件中文、Level、Action
+16,7eea59cc2e25d43897d172be,2026-10-24,Dollar General,Dollar Store Stocks Slide as Selling Hits Discount Retail: Dollar Tree and Dolla,修改,已套用,更改：Event_Code、事件中文、Level、Action
+17,e8cee1dd92e85fbc3591041f,2026-10-24,Dollar General,"Dollar Tree, Dollar General Stocks Slide as Their Core Shoppers Get Squeezed",修改,已套用,更改：Event_Code、事件中文、Level、Action
+18,ab388773bcdaf85ace64f010,2026-10-24,Goldman Sachs,Goldman Sachs sees AI-fueled layoffs displacing nearly 10% of workers in the com,排除,已套用,更改：Event_Code、事件中文、Level、Action
+19,43b747da0e13ec8ee180a424,2026-10-24,RTX Corporation,MSI RTX 5070 gaming laptop with 32GB RAM drops to its lowest-ever price,排除,已套用,更改：Event_Code、事件中文、Level、Action
+20,59fb026224a78beab5863913,2026-10-24,Uber,Uber Technologies Inc Stock (UBER) Closed Down by 3.43% on Oct 23: Drivers Behin,排除,已套用,更改：Event_Code、事件中文、Level、Action
+21,2867de451c1f3ace8f549234,2026-10-24,American Express,American Express Co (AXP) Stock Down 3.7% -- Now Undervalued? GF Score: 87/100,排除,已套用,更改：Event_Code、事件中文、Level、Action
+22,c128c798eddd14486985a96c,2026-10-23,Verizon,"Houston, Verizon Has a Problem: Verizon Stock Falls as SpaceX Reportedly Seeks 8",修改,已套用,更改：Event_Code、事件中文、Level、Action
+23,e83dab264f6cd23cdaf9cfae,2026-10-23,Verizon,Verizon Communications Inc Stock (VZ) Moved Down by 3.21% on Oct 23: Key Drivers,排除,已套用,更改：Event_Code、事件中文、Level、Action
+24,66894c918e2f0c28b4b7b5ca,2026-10-24,Lam Research,Lam Research Stocks Edge Lower as $8.6 Billion Guidance Tests Shipment Capacity,排除,已套用,更改：Event_Code、事件中文、Level、Action
+25,471c06aa6643391773d20a88,2026-10-24,American Express,"American Express to Cut 3,500 Jobs as Corporate Layoffs Spread",修改,已套用,更改：Event_Code、事件中文、Level、Action
+26,4120b37b39cd71bd4ff2c8de,2026-10-24,"Williams-Sonoma, Inc.",Williams-Sonoma Inc (WSM) Shares Fall 3.2% -- What GF Score of 8,排除,已套用,更改：Event_Code、事件中文、Level、Action
+27,aee7ff89c785c1b9fb1339fc,2026-10-24,Dollar Tree,"Dollar Tree, Dollar General Stocks Slide as Their Core Shoppers Get Squeezed",修改,已套用,更改：Event_Code、事件中文、Level、Action
+28,771746b27c9708b3b8627968,2026-10-24,Motorola Solutions,MSI RTX 5070 gaming laptop with 32GB RAM drops to its lowest-ever price,排除,已套用,更改：Event_Code、事件中文、Level、Action
+29,a854b829d73a350de18a6b56,2026-10-24,TransDigm Group,TransDigm Group Inc (TDG) Shares Fall 3.2% -- What GF Score of 8,排除,已套用,更改：Event_Code、事件中文、Level、Action
+30,f85c8ce06e4ff018ae489cc7,2026-10-24,Ross Stores,Ross Stores Inc (ROST) Stock Down 3.1% but Still Overvalued -- G,排除,已套用,更改：Event_Code、事件中文、Level、Action
+31,af4cef99235474b93c347d18,2026-10-23,Comcast,Universal Theme Park Revenue Drops as Comcast Cites Disney Competition & Epic Un,修改,已套用,更改：Event_Code、事件中文、Level、Action
+32,86deb1102d991127194f70b2,2026-10-23,CSX Corporation,CSX (CSX) Stock Slips As Q3 Results Show Margin Strength,排除,已套用,更改：Event_Code、事件中文、Level、Action
+33,e34b18f239e6b9648de3af3f,2026-10-24,Uber,Uber Technologies Inc (UBER) Stock Down 3.4% -- Now Undervalued? GF Score: 83/10,排除,已套用,更改：Event_Code、事件中文、Level、Action
+34,f51611c472348a1fcac4be0b,2026-10-23,"Rollins, Inc.","Polen Focus Growth Strategy Sells Rollins, Inc. (ROL) Amid Business Execution Co",排除,已套用,更改：Event_Code、事件中文、Level、Action
+35,4dd9f75f6e0058424f362e1b,2026-10-24,Intuitive Surgical,Intuitive Surgical Sinks 6% as U.S. da Vinci Growth Slows to “Lowest We’ve Seen ,修改,已套用,更改：Event_Code、事件中文、Level、Action
+36,1be4aa595c771627f7456c4f,2026-10-24,Corteva,Corteva Inc (CTVA) Stock Down 3.2% but Still Overvalued -- GF Sc,排除,已套用,更改：Event_Code、事件中文、Level、Action
+37,0135f2d6ce3e6bb2db9773ad,2026-10-24,Sysco,Sysco Corp (SYY) Stock Down 3.1% -- Now Undervalued? GF Score: 8,排除,已套用,更改：Event_Code、事件中文、Level、Action
+38,8243888ae8a1a9e016b196e7,2026-10-24,eBay Inc.,"Tech Layoffs Mount as Netflix and eBay Cut Around 2,000 Jobs",修改,已套用,更改：Event_Code、事件中文、Level、Action
+39,676c1247fc741ba135afc12a,2026-10-24,Accenture,Accenture Lobbying Spend Falls to $490K as Roster Shrinks,排除,已套用,更改：Event_Code、事件中文、Level、Action
+40,f3e9805e3644a7ff10dd8c09,2026-10-24,American Express,American Express is cutting 5% of its workforce to 'prepare for AI',修改,已套用,更改：Event_Code、事件中文、Level、Action
+41,5c02fcc39e1844c24a1f5c4f,2026-10-24,Robinhood Markets,Robinhood Markets (NASDAQ:HOOD) Shares Down 1.6% After Insider Selling,排除,已套用,更改：Event_Code、事件中文、Level、Action
+42,14e09a948b96df9fc5dcbd9a,2026-10-24,Procter & Gamble,Procter & Gamble Stocks Decrease 2.62% as $1.4 Billion Cost Burden Grows,修改,已套用,更改：Event_Code、事件中文、Level、Action
+43,67185207ac6bffd55c00f3fc,2026-10-23,American Express,Top Midday Stories: American Express to Cut 5% of Workforce; Bloom Energy Shares,修改,已套用,更改：Event_Code、事件中文、Level、Action
+44,6d7c838dc42c12d7655fb4bd,2026-10-23,Accenture,Accenture PLC Stock (ACN) Opened Down by 4.04% on Oct 23: What Signal Does It Se,排除,已套用,更改：Event_Code、事件中文、Level、Action
+45,d33ef1422357e6967a935462,2026-10-23,American Express,American Express is cutting 5% of its workforce to 'prepare for AI',修改,已套用,更改：Event_Code、事件中文、Level、Action
+46,0ab6354714cce444df100191,2026-10-23,Dover Corporation,Dover (DOV) Stock Slips As Q3 Earnings Meet Execution Doubts,排除,已套用,更改：Event_Code、事件中文、Level、Action
+47,b99d1fce4a26fb8551f8b37a,2026-10-24,Starbucks,2 Starbucks stores closing in Sea-Tac Airport; layoffs planned,修改,已套用,更改：Event_Code、事件中文、Level、Action
+48,c74010aefdc7dc6f22eccf9a,2026-10-24,Coinbase,Ethereum ETFs approach fourth week of outflows as Coinbase Premium drops to lowe,排除,已套用,更改：Event_Code、事件中文、Level、Action
+49,2170978e6c47663eb0ef8102,2026-10-24,"Tapestry, Inc.",Tapestry Inc (TPR) Shares Fall 3.1% -- What GF Score of 82 Tells Investors,排除,已套用,更改：Event_Code、事件中文、Level、Action
+50,ddb9d305d60a2b6c6e634707,2026-10-24,CBRE Group,CBRE Falls After Revenue Miss and Cautious Segment Commentary Overshadow Profit ,修改,已套用,更改：Event_Code、事件中文、Level、Action
+51,d64745453d355f01e0452783,2026-10-24,Accenture,Accenture shares fall on insider sales and analyst downgrade,修改,已套用,更改：Event_Code、事件中文、Level、Action
+52,986b998dcce8567bf2722e48,2026-10-24,Tractor Supply,Tractor Supply (TSCO) Stock Slides As Q3 Results Expose Margin Strain,修改,已套用,更改：Event_Code、事件中文、Level、Action
+53,2b4e798fe2ef5760de7c2860,2026-10-24,Netflix,Netflix reports slowing revenue growth following headcount reduction,修改,已套用,更改：Event_Code、事件中文、Level、Action
+54,ba7c5621b413520ed3012946,2026-10-23,American Express,美國運通首席執行官表示，公司將裁減5%的員工,修改,已套用,更改：Ticker、Event_Code、事件中文、Level、Action
+55,6554fc02f78fa69b7f705c93,2026-10-23,Southwest Airlines,美國航空股集體下跌,排除,已套用,更改：Event_Code、事件中文、Level、Action
+56,419072fc54b3ea3ea228eda8,2026-10-23,"NVR, Inc.",NVR Q3 net income falls 27% as homebuilding margin narrows,修改,已套用,更改：Event_Code、事件中文、Level、Action
+57,33448a2a7b4a6640747b0829,2026-10-24,Starbucks,"Starbucks to close SEA Terminal A store, cutting 13 jobs and leaving 4 airport c",修改,已套用,更改：Event_Code、事件中文、Level、Action
+58,9307eefc5049ed8f61037d70,2026-10-24,T-Mobile US,T-Mobile US falls 8% amid SpaceX competition concerns (TMUS:NASDAQ),修改,已套用,更改：Event_Code、事件中文、Level、Action
+59,d7e18bff82a2412c94a3cd2e,2026-10-24,CBRE Group,"CBRE Global Real Estate Income Fund drops 28%, raising concerns over its sustain",排除,已套用,更改：Event_Code、事件中文、Level、Action
+60,f7c1bf889b138304cbee20bb,2026-10-23,"NVR, Inc.","NVR Faces Margin Risk Amid Weak Housing Demand, BofA Says",排除,已套用,更改：Event_Code、事件中文、Level、Action
+61,95d8db3cd98177ab119b4902,2026-10-23,,First Hawaiian stock dips 2% on third-quarter earnings miss,修改,已套用,更改：Ticker、Company、Event_Code、事件中文、Level、Action
+62,14d2d2eba094d471dfebda82,2026-10-23,American Express,American Express Reportedly Plans to Cut 5% of its Global Workforce,修改,已套用,更改：Event_Code、事件中文、Level、Action
+63,d2c96f7c75ffdc80beba9238,2026-10-23,"NVR, Inc.",BofA downgrades NVR stock rating on weak orders and absorption,修改,已套用,更改：Event_Code、事件中文、Level、Action
+64,50c94de30e82cf2492e53402,2026-10-23,Goldman Sachs,Goldman Sachs warns Turkey’s $30 billion reserve loss could deepen,排除,已套用,更改：Event_Code、事件中文、Level、Action
+65,7c45d7856f5090ec5f78597e,2026-10-23,Cummins,Cummins stock trades 21.11 percent below its 52-week high,排除,已套用,更改：Event_Code、事件中文、Level、Action
+66,9b9595acaab70465d5adeab5,2026-10-24,American Express,American Express (AXP) Stock Price Drops After Strong Q3 Earnings,排除,已套用,更改：Event_Code、事件中文、Level、Action
+67,f4c75a1b13f6178af96179cb,2026-10-24,Procter & Gamble,Procter & Gamble Stocks Decrease 2.62% as $1.4 Billion Cost Burd,修改,已套用,更改：Event_Code、事件中文、Level、Action
+68,eecad381179fb698a878f82c,2026-10-24,American Express,"Dow Jones Today: DJIA Falls to 52,215.16 as American Express Slides and Oil Pric",排除,已套用,更改：Event_Code、事件中文、Level、Action
+69,29a180946cc13838451faa87,2026-10-24,Globe Life,Globe Life Inc (GL) Shares Fall 8.1% -- GF Value Says Still Overvalued,修改,已套用,更改：Event_Code、事件中文、Level、Action
+70,392110b3611bf776386d1808,2026-10-24,T-Mobile US,Why T-Mobile US Stock Dropped Today,修改,已套用,更改：Event_Code、事件中文、Level、Action
+71,1cd5c0c8bb8a3541533be806,2026-10-25,Genuine Parts Company,Why Did Genuine Parts (GPC) Shares Drop After Its Latest Update?,修改,已套用,更改：Event_Code、事件中文、Level、Action
+72,e72e76e6cce6f5c033a318a5,2026-10-24,eBay Inc.,"Day Around the Bay: Netflix, Ebay Axe More Than 450 Bay Area Workers in Latest L",修改,已套用,更改：Event_Code、事件中文、Level、Action
+73,ca4c35b2688c88908dbc4993,2026-10-24,McDonald's,McDonald's India operator Westlife Foodworld swings to Q2 loss of Rs 2.7 crore,排除,已套用,更改：Event_Code、事件中文、Level、Action
+74,09056df580fa853a6953090f,2026-10-24,Boeing,Exclusive-Boeing supplier dispute has halted 777 freighter production for two mo,修改,已套用,更改：Event_Code、事件中文、Level、Action
+75,30fe4e69161890fa1149f89b,2026-10-23,Quest Diagnostics,Quest Diagnostics Reports Patient-Record Intrusion As Labs Face Scrutiny Over Da,修改,已套用,更改：Event_Code、事件中文、Level、Action
+76,ae0ca7af39d430e9e0a4e072,2026-10-24,American Express,American Express To Cut 5% Of Jobs As AI Reshapes Business,修改,已套用,更改：Event_Code、事件中文、Level、Action
+77,24bed59e1b4046bf1edbbf84,2026-10-24,"Block, Inc.",Block Inc (XYZ) Shares Fall 3.2% -- GF Value Says Still Overvalued,排除,已套用,更改：Event_Code、事件中文、Level、Action
+78,20d1ce1ef7c3471b2167358d,2026-10-24,Netflix,"Day Around the Bay: Netflix, Ebay Axe More Than 450 Bay Area Workers in Latest L",修改,已套用,更改：Event_Code、事件中文、Level、Action
+79,9be143edcaf9b591db000521,2026-10-24,Carnival Corporation,Carnival Corporation Ltd (CCL) Stock Down 3.6% but Still Overval,排除,已套用,更改：Event_Code、事件中文、Level、Action
+80,28b538d73bc92dc8abae9310,2026-10-25,Colgate-Palmolive,Colgate-Palmolive (CL) Faces A Leadership Exit On A Pricey Earnings Narrative,排除,已套用,更改：Event_Code、事件中文、Level、Action
+81,7ec35e51ff280616840f0503,2026-10-24,Old Dominion,ODFL slides over 4% as shares remain below key moving averages despite dividend ,排除,已套用,更改：Event_Code、事件中文、Level、Action
+82,ad5bec3ee0d07e4b8533d26d,2026-10-23,Moderna,Moderna Stock Plummets 18% After Cancer-Vaccine Data Leak,修改,已套用,更改：Event_Code、事件中文、Level、Action
+83,78e4ebfc9bad362cf8af9cfc,2026-10-26,Goldman Sachs,"Goldman Sachs Notes Sharp Drop in Retail Trading Volumes, GS Sto",排除,已套用,更改：Event_Code、事件中文、Level、Action
+84,a4f2bc94e50e80f2e705ca34,2026-10-24,PulteGroup,PulteGroup Net Down as Mortgage Rates Weigh on Home Sales,修改,已套用,更改：Event_Code、事件中文、Level、Action
+85,faf43041efe4c31bc3dea144,2026-10-24,American Express,American Express CEO announces plans to cut 5% of workforce amid restructuring |,修改,已套用,更改：Event_Code、事件中文、Level、Action
+86,4d0cea2987458570760af098,2026-10-23,Electronic Arts,"Tech layoffs tracker 2026: All the job losses across Netflix, Electronic Arts, e",修改,已套用,更改：Event_Code、事件中文、Level、Action
+87,0642ea42144bc3f0e9f4ac5b,2026-10-23,General Motors,"Stellantis Sinks 8% as Q3 Report Nears; Ford Drops 4%, General Motors Slides 3%",排除,已套用,更改：Event_Code、事件中文、Level、Action
+88,cd4501fc09384d81946c5d94,2026-10-23,T-Mobile US,T-Mobile US Inc Stock (TMUS) Opened Down by 3.56% on Oct 23: What Investors Need,排除,已套用,更改：Event_Code、事件中文、Level、Action
+89,984a947ba8062482d6516855,2026-10-24,EQT Corporation,"DEP: Equitrans LP [EQT] Conventional Well Plugging Results In Multiple Spills, I",修改,已套用,更改：Event_Code、事件中文、Level、Action
+90,9bc992e982d206f27596b926,2026-10-24,Delta Air Lines,Delta Air Lines Inc (DAL) Shares Fall 3.1% -- GF Value Says Stil,排除,已套用,更改：Event_Code、事件中文、Level、Action
+91,f78dcad4d0e6313dd97c9370,2026-10-25,Western Digital,"Western Digital CFO Rebuts AI Cooling Rumors: Customers Unwavering, but Capex Su",排除,已套用,更改：Event_Code、事件中文、Level、Action
+92,1b734678e5870a1450d8ac1a,2026-10-24,eBay Inc.,eBay and Netflix layoffs to impact over 450 Bay Area workers,修改,已套用,更改：Event_Code、事件中文、Level、Action
+93,01e78d3161b4576bcf1fb32b,2026-10-24,Netflix,eBay and Netflix layoffs to impact over 450 Bay Area workers,修改,已套用,更改：Event_Code、事件中文、Level、Action
+94,b5599f4663a207168a9c23d5,2026-10-23,T-Mobile US,美股三大電信股齊跌4%,修改,已套用,更改：Ticker、Event_Code、事件中文、Level、Action
+95,3efcbe6bdf3bf2a731124e35,2026-10-23,AT&T,"AT&T, Verizon, T-Mobile Shares Slip As SpaceX Reportedly Holds Cell Tower Talks ",修改,已套用,更改：Event_Code、事件中文、Level、Action
+96,46f87825c4e5ce91563ede91,2026-10-23,Verizon,美股三大電信股齊跌4%,修改,已套用,更改：Ticker、Event_Code、事件中文、Level、Action
+97,db3d18303b42c02e91a0e3da,2026-10-24,Howmet Aerospace,"Howmet Aerospace Stock: 5 Straight Red Days, Down 16%",修改,已套用,更改：Event_Code、事件中文、Level、Action
+98,710330f407e2cc7730247869,2026-10-23,Verizon,"AT&T, Verizon, T-Mobile Shares Slip As SpaceX Reportedly Holds Cell Tower Talks ",修改,已套用,更改：Event_Code、事件中文、Level、Action
+99,1b915f1dfada6a4b4ca017a8,2026-10-26,Automatic Data Processing,"ADP spending hits Tk 12,018cr in Q1, lowest since FY18",排除,已套用,更改：Event_Code、事件中文、Level、Action
+100,bfd2c5922c14e227355ee44d,2026-10-23,AT&T,美股三大電信股齊跌4%,修改,已套用,更改：Ticker、Event_Code、事件中文、Level、Action
+101,debd384996884cc28bd82b03,2026-10-25,Netflix,Netflix Is Down 51% From Its High. History Suggests This Is What Happens Next.,排除,已套用,更改：Event_Code、事件中文、Level、Action
+102,ada1925e9740e42428e26f03,2026-10-25,Comfort Systems USA,Comfort Systems USA (FIX) Stock Price Slides After Q3 Earnings Strength,排除,已套用,更改：Event_Code、事件中文、Level、Action
+103,565b41ac2804b3ea77f2b6d4,2026-10-25,Western Digital,Western Digital downgraded to Hold amid AI cycle risks and fading pricing moment,修改,已套用,更改：Event_Code、事件中文、Level、Action
+104,4f8c5fb1d11a932f4a1e569d,2026-10-25,Amazon,Amazon.com (AMZN) Cancels $427 Million Loudoun County Data Center Project,排除,已套用,更改：Event_Code、事件中文、Level、Action
+105,b1c1daabc47c34f8c2f83349,2026-10-24,American Express,American Express Stocks Fall 1.94% as Company Plans 5% Workforce Cut,修改,已套用,更改：Event_Code、事件中文、Level、Action
+106,57d9724d1d3e94137e1d3ee7,2026-10-24,Western Digital,Western Digital (WDC) Stock Price Defies Q1 Earnings Strength,排除,已套用,更改：Event_Code、事件中文、Level、Action
+107,cdbdcd391d1982b7ca65b2f0,2026-10-23,Howmet Aerospace,Howmet Aerospace stock: A 3.15 percent fall leaves Howmet Aerospace stock at EUR,排除,已套用,更改：Event_Code、事件中文、Level、Action
+108,7b78c2051d2dd155d45c805d,2026-10-23,Delta Air Lines,Delta cut 2026 guidance as fuel costs pressure Delta Air Lines stock,修改,已套用,更改：Event_Code、事件中文、Level、Action
+109,d165f6adfd2d4774cec770d2,2026-10-23,American Express,Update: American Express Plans to Cut 5% of Global Workforce,修改,已套用,更改：Event_Code、事件中文、Level、Action
+110,356c2c2e8908d38546096ae9,2026-10-23,United Rentals,United Rentals Falls 4.6% as Analyst Downgrade Appears to Pressure Shares,修改,已套用,更改：Event_Code、事件中文、Level、Action
+111,72e6fd6ba42d6be938b58d73,2026-10-25,Amazon,Amazon's Fire HD 10 tablet has been marked down to a throwaway $72 for a limited,排除,已套用,更改：Event_Code、事件中文、Level、Action
+112,f532973a844725c2fb3657ba,2026-10-24,Boeing,"Boeing supplier dispute has halted 777 freighter production for two months, sour",修改,已套用,更改：Event_Code、事件中文、Level、Action
+113,827c599e05a835015805c460,2026-10-23,Verizon,"Telecom Stocks Fall as SpaceX Eyes 80,000 Cell Sites: T-Mobile Sinks 5%, AT&T Dr",修改,已套用,更改：Event_Code、事件中文、Level、Action
+114,1e5d99a91abbca5cc35764de,2026-10-25,American Express,American Express Workforce Cuts Amid Rising AI Revolution,修改,已套用,更改：Event_Code、事件中文、Level、Action
+115,f4f5f0d06defb4ba739c269f,2026-10-24,American Express,American Express to Lay Off 5% of Workforce to ‘Prepare for AI’,修改,已套用,更改：Event_Code、事件中文、Level、Action
+116,057c3139d2b957b3c2ffccac,2026-10-24,Netflix,YouTube Is Running Away From Netflix as Nielsen’s Latest Gauge Shows the Streami,排除,已套用,更改：Event_Code、事件中文、Level、Action
+117,f815a349cb95cb8f88e020bf,2026-10-24,Comfort Systems USA,"Comfort Systems USA drops 9% after earnings, CFO retirement (FIX:NYSE)",修改,已套用,更改：Event_Code、事件中文、Level、Action
+118,101ca18ce7a8595fa4ff836b,2026-10-23,Howmet Aerospace,Howmet Aerospace stock hits 52-week low at 188.01 USD,修改,已套用,更改：Event_Code、事件中文、Level、Action
+119,290a2f2ac247d5285eeaf01d,2026-10-23,Salesforce,"Salesforce, American Express Share Losses Lead Dow's 575-Point Drop",排除,已套用,更改：Event_Code、事件中文、Level、Action
+120,465e2623b6717143dd75ebdd,2026-10-24,American Express,American Express plans thousands of layoffs after two years of hiring,修改,已套用,更改：Event_Code、事件中文、Level、Action
+121,dc878633b452150dabe11e95,2026-10-24,Flex Ltd.,Flex Stock Slides 36% Over 10 Straight Down Days,修改,已套用,更改：Event_Code、事件中文、Level、Action
+122,3e09c345ffc575ca50b50971,2026-10-24,Emcor,EMCOR Stock Slides 18% Over 10 Straight Down Days,修改,已套用,更改：Event_Code、事件中文、Level、Action
+123,376d6e6d2c4e7c82a4c1a6b7,2026-10-24,Boeing,Incident at Findel airport: Cargolux Boeing 747-8F landing gear collapses while ,排除,已套用,更改：Event_Code、事件中文、Level、Action
+124,0417b291b186b454e679571a,2026-10-26,CBRE Group,CBRE shares fall as higher earnings meet property-market caution,排除,已套用,更改：Event_Code、事件中文、Level、Action
+125,79d3f6619f5c6bf6cbc30ffd,2026-10-25,Goldman Sachs,Global investment bank Goldman Sachs lowered its 12-month KOSPI target index by ,排除,已套用,更改：Event_Code、事件中文、Level、Action
+126,ef9e76e68afb13df1fa61576,2026-10-26,Microsoft,"Nasdaq Index: AI Spending Fears Put Alphabet, Microsoft and Amazon in Focus",排除,已套用,更改：Event_Code、事件中文、Level、Action
+127,a6493d9c377321a08a7dd2bb,2026-10-26,Netflix,"Netflix viewing is said to fall as engagement weakens, raising growth concerns (",排除,已套用,更改：Event_Code、事件中文、Level、Action
+128,aa230d9ee9d3114fdecc86e5,2026-10-26,Amazon,"Nasdaq Index: AI Spending Fears Put Alphabet, Microsoft and Amazon in Focus",排除,已套用,更改：Event_Code、事件中文、Level、Action
+129,e3f535661955e773e66b541e,2026-10-23,American Express,American Express Posts Mixed Financial Results,排除,已套用,更改：Event_Code、事件中文、Level、Action
+130,e0f38d79056b81b75a219067,2026-10-24,Jabil,JBL 305P MkII Studio Monitors Drop to $99 Each,排除,已套用,更改：Event_Code、事件中文、Level、Action
+131,5161b0e8b8f2a1248d422750,2026-10-23,Globe Life,Globe Life (GL) Shares Dip After Piper Sandler Downgrade Amid Q3 Earnings Miss,修改,已套用,更改：Event_Code、事件中文、Level、Action
+132,b01fa996cf451769d58322fc,2026-10-24,Applied Materials,Applied Materials (AMAT) Could Be 41% Below Fair Value Following Supply Bottlene,排除,已套用,更改：Event_Code、事件中文、Level、Action
+133,f5c3b50b9b4c5825806a7f5e,2026-10-24,Western Digital,Western Digital Stock Pullback Despite Fiscal Q1 Beat Reflects AI Capex Concerns,排除,已套用,更改：Event_Code、事件中文、Level、Action
+134,31c7fbc19c6cfa908d03d0b1,2026-10-26,,SLM Stock Slides As Earnings Miss And Legal Probes Rattle Traders,修改,已套用,更改：Ticker、Company、Event_Code、事件中文、Level、Action
+135,bf52a5031f57a7b60ec6673d,2026-10-24,"Nike, Inc.",NIKE (NYSE:NKE) Shares Down 2.6% - Should You Sell?,排除,已套用,更改：Event_Code、事件中文、Level、Action
+136,118cc87eba1cf51c854f39f4,2026-10-24,Boeing,Boeing 777F production reportedly halted for nearly two months by supplier dispu,修改,已套用,更改：Event_Code、事件中文、Level、Action
+137,0d654b56ff94e5d61e72b160,2026-10-25,American Express,American Express Outage Today: Is American Express Down? Users Report Problems w,排除,已套用,更改：Event_Code、事件中文、Level、Action
+138,95f11d41a7383cee34e15fd7,2026-10-26,Walmart,"Walmart on Six Mile Cypress Pkwy closed following electrical injury, authorities",排除,已套用,更改：Event_Code、事件中文、Level、Action
+139,8fabd59284dd1ff2489cb03d,2026-10-24,Nvidia,NVIDIA's latest 621.01 driver is causing a black screen and other issues,排除,已套用,更改：Event_Code、事件中文、Level、Action
+140,91735746461a5d761a0c6c9b,2026-10-23,eBay Inc.,"eBay Layoffs 2026: 1,000 Jobs Cut Despite Stock Surge",修改,已套用,更改：Event_Code、事件中文、Level、Action
+141,a6f7fc1dd24202bf3a26c78a,2026-10-23,EOG Resources,Zacks Research Lowers Earnings Estimates for EOG Resources,排除,已套用,更改：Event_Code、事件中文、Level、Action
+142,a7e74c18b64d24b8f398f887,2026-10-24,Delta Air Lines,Delta Air Lines Apologizes After Gate Agent Enforces Incorrect Bag Rule On Passe,排除,已套用,更改：Event_Code、事件中文、Level、Action
+143,15faecc93ba5c5510022a7c4,2026-10-24,General Motors,General Motors Stock Forecast: GM Coils Below $85.23 as Q3 Earnings Test a Third,排除,已套用,更改：Event_Code、事件中文、Level、Action
+144,a4043a026e4cb161c2520201,2026-10-24,Boeing,Boeing supplier dispute has halted 777 freighter production for two months,修改,已套用,更改：Event_Code、事件中文、Level、Action
+145,3190421d8e18218b600b4b32,2026-10-24,Nvidia,Nvidia Funding Pressure Is Reshaping AI Data Center Finance Stocks,排除,已套用,更改：Event_Code、事件中文、Level、Action
+146,e21e872c25f1386cc3b66c47,2026-10-24,Netflix,"Websites Go Offline, Protests in France, Netflix Downsizes",修改,已套用,更改：Event_Code、事件中文、Level、Action
+147,adc040337ed4813974c2600c,2026-10-25,Public Storage,$1B in Budget — PSA part arrears; Divali Nagar nixed,排除,已套用,更改：Event_Code、事件中文、Level、Action
+148,0d7866166b1b1cd2808bdf96,2026-10-25,Best Buy,Samsung 43-Inch M70F 4K Smart Monitor Drops to $399.99 at Best Buy,排除,已套用,更改：Event_Code、事件中文、Level、Action
+149,4058d5bdfcffa4b3ee23833f,2026-10-24,American Express,"Why is American Express cutting 3,500 global jobs despite a profit surge to $3.7",修改,已套用,更改：Event_Code、事件中文、Level、Action
+150,cc439c73e9b18a221fb7be7c,2026-10-23,State Street Corporation,"Bryan Orders STT-STJ Public Schools, Executive Branch Offices Closed Friday as W",排除,已套用,更改：Event_Code、事件中文、Level、Action
+151,6f57211ef71075afee30a9fe,2026-10-23,Moderna,Moderna stock extends decline after leaked data on melanoma vaccine trial,修改,已套用,更改：Event_Code、事件中文、Level、Action
+152,a1272252a2bb9eac49b727c5,2026-10-23,"NVR, Inc.",NVR Q3 Earnings Miss Estimates on Lower Settlements & Margin Pressure,修改,已套用,更改：Event_Code、事件中文、Level、Action
+153,8d307b0d1c6455a6c5e131a9,2026-10-23,American Express,"American Express to Cut 3,500 Jobs",修改,已套用,更改：Event_Code、事件中文、Level、Action
+154,446eb6d863ef262f019f2e0f,2026-10-25,Vertiv,Vertiv (VRT) Stock Looks Below Fair Value After A Huge Run,排除,已套用,更改：Event_Code、事件中文、Level、Action
+155,e82429eae7f59b06c556645d,2026-10-24,Boeing,EXCLUSIVE-PRODUCTION OF BOEING'S 777 FREIGHTER STOPPED SINCE AUGUST DUE TO DISPU,修改,已套用,更改：Event_Code、事件中文、Level、Action
+156,b53623abad99d9cd6e443133,2026-10-26,Boeing,Boeing stock falls 26% from high as analysts cut targets,排除,已套用,更改：Event_Code、事件中文、Level、Action
+157,c7efdd049492edb7e38cbc20,2026-10-24,RTX Corporation,"Stocktwits Defense Watch: Lockheed Martin, RTX, L3Harris, HII Add To Their Defen",排除,已套用,更改：Event_Code、事件中文、Level、Action
+158,400e71ea9a5ca08dfe407a0b,2026-10-23,Netflix,"Netflix, eBay reveal plans to cut hundreds of Bay Area jobs",修改,已套用,更改：Event_Code、事件中文、Level、Action
+159,ab128279406ba4d37d6a1eaa,2026-10-23,eBay Inc.,"Netflix, eBay reveal plans to cut hundreds of Bay Area jobs",修改,已套用,更改：Event_Code、事件中文、Level、Action
+160,503faf62861f14ad57f3e99d,2026-10-23,Tractor Supply,TSCO Q3 deep dive: margin pressures persist despite sales momentum and operation,修改,已套用,更改：Event_Code、事件中文、Level、Action
+161,d339c56c1c0cfdc9682b181b,2026-10-24,Huntington Ingalls Industries,"Stocktwits Defense Watch: Lockheed Martin, RTX, L3Harris, HII Add To Their Defen",排除,已套用,更改：Event_Code、事件中文、Level、Action
+162,5d3d5d6152fb1f2f2eb49a5f,2026-10-24,Union Pacific Corporation,Union Pacific (UNP) Stock Slips Even As Q3 Earnings Power Impresses,排除,已套用,更改：Event_Code、事件中文、Level、Action
+163,1f0e60949273a4ea2e5f8909,2026-10-24,Nvidia,Nvidia Stocks Put AI-Factory Downtime in Minerva's Crosshairs,排除,已套用,更改：Event_Code、事件中文、Level、Action
+164,caf8d7f524e22229ab6b38dd,2026-10-25,Cooper Companies (The),"Xbox's first COO, Helen Chiang, reportedly terminated over ""policy violations""",排除,已套用,更改：Event_Code、事件中文、Level、Action
+165,6db347db9cfd6e4ca6972bcc,2026-10-24,Comcast,Comcast planning layoffs amid $1-billion charge,修改,已套用,更改：Event_Code、事件中文、Level、Action
+166,621ded0e63c8f1d5c67b2918,2026-10-24,,SLM Stock Slides As Earnings Miss And Charge-Off Surge Rattle Traders,修改,已套用,更改：Ticker、Company、Event_Code、事件中文、Level、Action
+167,8f2bfcb1bff177b3062e0fa1,2026-10-24,American Express,"American Express announces 3,500 layoffs despite profit jump and success of $895",修改,已套用,更改：Event_Code、事件中文、Level、Action
+168,0eee90764995d4eb760fa603,2026-10-24,,AI基建風暴升溫！新雲端業者全線重挫、信用風險攀升、Solidigm撤回IPO,排除,已套用,更改：Event_Code、事件中文、Level、Action
+169,2112e751a79a2af749b1f9f6,2026-10-24,Lockheed Martin,"Stocktwits Defense Watch: Lockheed Martin, RTX, L3Harris, HII Add To Their Defen",排除,已套用,更改：Event_Code、事件中文、Level、Action
+170,ab0caf5ae4d1f6bf53508328,2026-10-25,Boeing,"FAA Orders Boeing 737 Checks: Nearly 2,000 Jets Face Stabilizer Inspections",修改,已套用,更改：Event_Code、事件中文、Level、Action
+171,a7bb05154eca0ecf537b31cc,2026-10-24,American Express,"American Express to cut 3,500 jobs, around 5% of total workforce | CEO Stephen c",修改,已套用,更改：Event_Code、事件中文、Level、Action
+172,d152e85587f3df996099b7fa,2026-10-24,American Express,"American Express Is Cutting 3,500 Jobs Globally--Here's Why",修改,已套用,更改：Event_Code、事件中文、Level、Action
+173,4933705f74921af8c8547cf3,2026-10-26,Verizon,Verizon has a bad news for iPhone Duo buyers,排除,已套用,更改：Event_Code、事件中文、Level、Action
+174,86ba280d4158767bf483b747,2026-10-24,Home Depot (The),Home Depot Inc Stock (HD) Moved Down by 3.01% on Oct 23: What Investors Need To ,排除,已套用,更改：Event_Code、事件中文、Level、Action
+175,e2961b67a97d6e26b1941d45,2026-10-24,Western Digital,"Western Digital’s CFO refuted claims that AI demand has peaked, stating there ar",排除,已套用,更改：Event_Code、事件中文、Level、Action
+176,8d1ff50d7124e7d1bf623161,2026-10-24,American Express,"American Express profits rise; company plans to cut workforce by 5%, or about 3,",修改,已套用,更改：Event_Code、事件中文、Level、Action
+177,45c5a525f5da00f05fc5907d,2026-10-23,American Express,American Express Becomes the Latest Company To Announce Massive Layoffs Over the,修改,已套用,更改：Event_Code、事件中文、Level、Action
+178,cff7e981e41776de5feb8baa,2026-10-23,Johnson & Johnson,"Update: Market Chatter: Johnson & Johnson Orthopedics, Smith & Nephew Merger Col",排除,已套用,更改：Event_Code、事件中文、Level、Action
+179,bbaa399e2dd95cc6f5e0d6a9,2026-10-24,Humana,Major U.S. Insurers Humana and UnitedHealthcare Cancel Medicare Advantage Plans ,修改,已套用,更改：Event_Code、事件中文、Level、Action
+180,4f053170422a5fb7ebf7ae80,2026-10-25,Nvidia,Nvidia Credit Stress Could Lift Hannover Re Stock And Other AI Insurance Names,排除,已套用,更改：Event_Code、事件中文、Level、Action
+181,b2f044d39f0251d6d12885a0,2026-10-23,CMS Energy,"Healthfirst Sues CMS Over 3.5-Star Medicare Advantage Rating, Saying the Drop Wi",排除,已套用,更改：Event_Code、事件中文、Level、Action
+182,637e174c085a23a39d251a2e,2026-10-24,Old Dominion,Old Dominion Freight Line slides 4.3% as investors look ahead to earnings amid m,排除,已套用,更改：Event_Code、事件中文、Level、Action
+183,05a63d5a83a6532e208ac7b3,2026-10-24,Booking Holdings,Booking Holdings Inc. $BKNG Position Decreased by Pinnacle Associates Ltd.,排除,已套用,更改：Event_Code、事件中文、Level、Action
+184,05054d0cb4617b63a08ceb36,2026-10-25,United Parcel Service,UPS Stock Is Down 57% From Its Record. Is It a Buy Before Its Oct. 27 Report?,排除,已套用,更改：Event_Code、事件中文、Level、Action
+185,fbea5c30332d5f255e72e170,2026-10-26,Starbucks,Starbucks crackdown leaves China’s young jobless with nowhere to hide,排除,已套用,更改：Event_Code、事件中文、Level、Action
+186,6889097c90ba357b946d4dd8,2026-10-25,Motorola Solutions,MSI MAG 321CQF E18 Gaming Office Monitor price drops to $209.99,排除,已套用,更改：Event_Code、事件中文、Level、Action
+187,c7dc85649e5cabb80a7cd476,2026-10-25,Cooper Companies (The),"Xbox COO May Have Been Terminated After 3 Months On The Job, Potentially Due To ",排除,已套用,更改：Event_Code、事件中文、Level、Action
+188,f8b7bbcb1f4f887790f861ad,2026-10-24,Nvidia,NVIDIA confirms GeForce 621.01 driver bug causing video freezes and black screen,排除,已套用,更改：Event_Code、事件中文、Level、Action
+189,338a0e6b03473069c32c64df,2026-10-24,Amazon,"Amazon Drops Ego Tools Up to 35% Off—Save on Leaf Blowers, Lawn Mowers, Snow Blo",排除,已套用,更改：Event_Code、事件中文、Level、Action
+190,72997fe4ea1b4cfdc5ea9bda,2026-10-24,IBM,IBM’s CEO Just Issued a Warning Message on AI Spending. He Ended Up Hurting His ,排除,已套用,更改：Event_Code、事件中文、Level、Action
+191,ecfd26f50650c26f9b8053fc,2026-10-26,Corteva,Corteva (CTVA) Separation Lawsuit Puts Dividend And Asset Moves Under Court Scru,修改,已套用,更改：Event_Code、事件中文、Level、Action
+192,71c346c009ebf8cddb70d3f3,2026-10-24,CVS Health,"“We’re SICK of CVS Executives!” As flu season hits, Rhode Island pharmacy profes",排除,已套用,更改：Event_Code、事件中文、Level、Action
+193,dfa49b65bffdca290759a32a,2026-10-23,Coinbase,Coinbase Unit Fined €3.2M By Central Bank Of Ireland,修改,已套用,更改：Event_Code、事件中文、Level、Action
+194,e3d9f2dea0093922e0262323,2026-10-23,Verizon,Verizon Shares Retreat as Sector & Peer Pressures Mount,修改,已套用,更改：Event_Code、事件中文、Level、Action
+195,cdd249e88d9f19567d4381c6,2026-10-23,Walmart,Walmart Hit With Proposed Class Action Over Unpaid Overtime (1),排除,已套用,更改：Event_Code、事件中文、Level、Action
+196,c5fd7238a7b623eb6db5c563,2026-10-23,McDonald's,Erste Group Bank Reduces Earnings Estimates for McDonald's,排除,已套用,更改：Event_Code、事件中文、Level、Action
+197,57aa1eee6a541f88ce05ae20,2026-10-23,Johnson & Johnson,"Correction: Update: Market Chatter: Johnson & Johnson Orthopedics, Smith & Nephe",排除,已套用,更改：Event_Code、事件中文、Level、Action
+198,74410d66c08ff0e2b21df104,2026-10-24,Verizon,Verizon Communications (NYSE:VZ) Shares Down 1.4% - Time to Sell?,排除,已套用,更改：Event_Code、事件中文、Level、Action
+199,b5ab6ac74bd2eb2e784b1452,2026-10-25,Nvidia,Nvidia has been suspected of causing a GeForce shortage amid the AI chip boom,排除,已套用,更改：Event_Code、事件中文、Level、Action
+200,b9f7302756970a81863f11cc,2026-10-23,PayPal,PayPal Is Down More Than 80% From Its Peak. Here's Why I Still Own It,排除,已套用,更改：Event_Code、事件中文、Level、Action
+201,e9034e6c1431872584172629,2026-10-24,Airbnb,"Airbnb host says new rules may lead to increased costs for guests: ""An unintende",排除,已套用,更改：Event_Code、事件中文、Level、Action
+202,e2f03a0e4e02eaabe3030ec6,2026-10-26,Walmart,Ohio farmers work from Walmart Wi-Fi as a 6-week outage leaves neighbors unable ,排除,已套用,更改：Event_Code、事件中文、Level、Action
+203,1189fb5a363c6708508b71a4,2026-10-24,Church & Dwight,Church & Dwight stock edges lower as investors digest Q2 earnings and option act,排除,已套用,更改：Event_Code、事件中文、Level、Action
+204,a3fba94bb512bd3c9956c5b4,2026-10-25,Qualcomm,"Qualcomm (NASDAQ: QCOM) Plans Global ""Performance-Focused"" Layoffs Beginning In ",修改,已套用,更改：Event_Code、事件中文、Level、Action
+205,b4d54c9b8b88b3a691aa91bc,2026-10-24,Microsoft,Microsoft Stock Forecast: MSFT Pulls Back From $546.35 as Azure's 45% Guide Face,排除,已套用,更改：Event_Code、事件中文、Level、Action
+206,0b56ead5f1ff76275a4b00e8,2026-10-23,Old Dominion,Old Dominion Freight Line (ODFL) Stock Looks Stretched Following Its 41% Run,排除,已套用,更改：Event_Code、事件中文、Level、Action
+207,267148ddbc34ffc411daabb0,2026-10-23,AppLovin,Applovin stock hits 52-week low at 260.5 USD,修改,已套用,更改：Event_Code、事件中文、Level、Action
+208,a3642d9fd30c7ef519c353f4,2026-10-23,McDonald's,McDonald's India operator Westlife posts narrower quarterly loss,排除,已套用,更改：Event_Code、事件中文、Level、Action
+209,5dd826767bd5a744b60e8ce3,2026-10-24,Wynn Resorts,Wynn Resorts stock slides while seller pressure dominates short-term trading,排除,已套用,更改：Event_Code、事件中文、Level、Action
+210,a94697a46f11aacd2bf1fe12,2026-10-25,Coinbase,Bitcoin – Why Coinbase warns BTC could fall to $75K amid macro risks,排除,已套用,更改：Event_Code、事件中文、Level、Action
+211,dfb9541e4c808f654fff0e77,2026-10-24,Goldman Sachs,Goldman Sachs sees US stocks dip on tech earnings and macro shifts,排除,已套用,更改：Event_Code、事件中文、Level、Action
+212,25745d32ec830d383bf66777,2026-10-24,Corteva,CTVA Stock Crashes As Corteva Finalizes Vylor Spin-Off,排除,已套用,更改：Event_Code、事件中文、Level、Action
+213,6ec5aa5714ef6ea5f3014c9c,2026-10-24,Uber,"Uber passenger spots alleged fare scam after driver demands Rs 1,780 for an Rs 8",排除,已套用,更改：Event_Code、事件中文、Level、Action
+214,2bc0ee9590892feb1351e607,2026-10-24,Netflix,Netflix Is Now Down 29% This Year: Is NFLX Stock Hopeless or Ready for a Rebound,排除,已套用,更改：Event_Code、事件中文、Level、Action
+215,8b34f5189aadd44a3142da6b,2026-10-25,Starbucks,"Starbucks in SEA Airport’s Terminal A to close, affecting 13 employees",修改,已套用,更改：Event_Code、事件中文、Level、Action
+216,bf0ef2e62076c7e6d035d62d,2026-10-24,Starbucks,"Starbucks in SEA Airport’s Terminal A to close, affecting 13 employees",修改,已套用,更改：Event_Code、事件中文、Level、Action
+217,f323edb5d31c7b4256375d96,2026-10-23,Coinbase,REGULATION | Ireland fines Coinbase Subsidiary Over $3 Million Over Customer Fun,修改,已套用,更改：Event_Code、事件中文、Level、Action
+218,2241c845c8c19bb3fee9b484,2026-10-25,Broadcom,Broadcom Stock Is Down 7% in a Year. Cheap for a Reason or Too Cheap to Ignore?,排除,已套用,更改：Event_Code、事件中文、Level、Action
+219,b2af19bec20f07a6b6af18ba,2026-10-24,Dominion Energy,"Citing ‘urgent need,’ Dominion Energy sues Prince William Co. over rejected subs",排除,已套用,更改：Event_Code、事件中文、Level、Action
+220,85e84511d9265bba1a059308,2026-10-24,Amazon,Amazon backs off Northern VA data center plan months after purchase,排除,已套用,更改：Event_Code、事件中文、Level、Action
+221,d16e8d0a4ee14601a4614dd1,2026-10-26,American Express,American Express to Cut 5% of Global Workforce,修改,已套用,更改：Event_Code、事件中文、Level、Action
+222,169ee342bab6fb3974b3edd2,2026-10-25,Stryker Corporation,Stryker Corporation $SYK Position Reduced by Citizens Financial Group Inc. RI,排除,已套用,更改：Event_Code、事件中文、Level、Action
+223,1c5b87933f25453aee591f65,2026-10-25,Citizens Financial Group,Stryker Corporation $SYK Position Reduced by Citizens Financial Group Inc. RI,排除,已套用,更改：Event_Code、事件中文、Level、Action
+224,af5b0cd189b011ae4b46ddaa,2026-10-26,Comcast,"Comcast Flags $1 Billion Q4 Charge For Layoffs, Restructuring Amid Overhaul Of C",修改,已套用,更改：Event_Code、事件中文、Level、Action
+225,d16e8d0a4ee14601a4614dd1,2026-10-23,American Express,American Express to Cut 5% of Global Workforce,修改,已套用,更改：Event_Code、事件中文、Level、Action
+226,c00b73e38f63f27196c0fb5f,2026-10-25,Coinbase,Coinbase Stock Is Down 31% This Year. Should You Buy the Drop?,排除,已套用,更改：Event_Code、事件中文、Level、Action
+227,b61123437a73887590390144,2026-10-23,Delta Air Lines,Delta Air Lines rival slashes five huge US routes starting in 2027,排除,已套用,更改：Event_Code、事件中文、Level、Action
+228,02623d1cb029760590e52595,2026-10-23,Western Digital,Western Digital Stock Forecast: Guidance Beat Can't Stop WDC's Slide Toward $331,排除,已套用,更改：Event_Code、事件中文、Level、Action
+229,0fb4df2a8d892f8b548948e0,2026-10-24,Automatic Data Processing,"ADP Outage Today: Is ADP Down Today in the US? Users Report Payroll, App, Websit",排除,已套用,更改：Event_Code、事件中文、Level、Action
+230,f613921b9b8750345d1d7aba,2026-10-24,FedEx,20-year courier sues FedEx over firing for boss-approved shortcut,排除,已套用,更改：Event_Code、事件中文、Level、Action
+231,8012765040eee6147842dbcb,2026-10-24,Boeing,Boeing Supplier Dispute Halts 777 Freighter Output For Two Months,修改,已套用,更改：Event_Code、事件中文、Level、Action
+232,ad8e357b13f604c7c4f6cc97,2026-10-24,Darden Restaurants,"Employment Law Attorneys, at Blumenthal Nordrehaug Bhowmik De Blouw LLP, Filed a",排除,已套用,更改：Event_Code、事件中文、Level、Action
+233,799c52c724539a7715a75654,2026-10-25,Cooper Companies (The),"Former Minecraft lead, Xbox veteran and COO Helen Chiang ""fired"" for ""policy vio",排除,已套用,更改：Event_Code、事件中文、Level、Action
+234,69d03f3e65065b7ec8352ec1,2026-10-25,Western Digital,Western Digital: Cracks In Its AI Supercycle Are Worsening (Rating Downgrade),修改,已套用,更改：Event_Code、事件中文、Level、Action
+235,c394b2a4f568d56016c2bede,2026-10-24,Verizon,Verizon (VZ) Stock Dips Amid Rising Put Options and Elevated Vol,排除,已套用,更改：Event_Code、事件中文、Level、Action
+236,2f44b124252fa7d985e4dd3c,2026-10-24,Boeing,"FAA orders checks on nearly 2,000 Boeing 737s after pitch oscillation events",修改,已套用,更改：Event_Code、事件中文、Level、Action
+237,95233227abf9b8f4348d54f6,2026-10-24,Uber,Uber doubles down on ChatGPT for workers after last month's layoffs,排除,已套用,更改：Event_Code、事件中文、Level、Action
+238,5e2f92e2bb915131fd6bed69,2026-10-24,MGM Resorts,MGM stock hits 52-week low at 27.93 USD,修改,已套用,更改：Event_Code、事件中文、Level、Action
+239,b2a81ceca678a669afce37e4,2026-10-24,Electronic Arts,"Electronic Arts to cut 400 employees, gaming studio BioWare to close down",修改,已套用,更改：Event_Code、事件中文、Level、Action
+240,28f717751ae7b91af9ed1c15,2026-10-26,Walmart,Walmart on Six Mile Cypress shut down following possible electrical injury and s,排除,已套用,更改：Event_Code、事件中文、Level、Action
+241,82b98952e82ba0e19b1348cb,2026-10-26,Nvidia,Nvidia (NVDA) Has Lost Its China AI Accelerator Market,排除,已套用,更改：Event_Code、事件中文、Level、Action
+242,e10d4a1f28b5439e2dd9ed0f,2026-10-24,Goldman Sachs,Goldman Sachs: Record Sell-Off of Tech Stocks as AI Trading Shifts from Storytel,排除,已套用,更改：Event_Code、事件中文、Level、Action
+243,de720ea4591fb7d634105c9f,2026-10-25,Boeing,Wealthy Traveler Lands Private Boeing on I-25 Just So He Can Say He's Been to Wy,排除,已套用,更改：Event_Code、事件中文、Level、Action
+244,00624cf74bdf6d84075ee10c,2026-10-23,Western Digital,Western Digital Shares Fall 6.54% After Hours - Western Digital (NASDAQ:WDC),排除,已套用,更改：Event_Code、事件中文、Level、Action
+245,66c67460f9d498c742ebe1fc,2026-10-25,Salesforce,Kukakuka with Naka: Hawaii business filings delayed six weeks into DCCA Salesfor,排除,已套用,更改：Event_Code、事件中文、Level、Action
+246,340533a6f0dc1758d558a3f9,2026-10-24,Coinbase,Crypto News: Coinbase Ireland Fined €3.25M Over Client Funds as Pepeto Presale T,修改,已套用,更改：Event_Code、事件中文、Level、Action
+247,060f21d0cab04cebc10af27c,2026-10-25,American Express,American Express profits rise; company plans to cut workforce by 5%,修改,已套用,更改：Event_Code、事件中文、Level、Action
+248,b7188ed999e92bb3113db96a,2026-10-23,Coinbase,Irish Regulator Fines Coinbase Unit €3.25M Over US Parent Reliance,修改,已套用,更改：Event_Code、事件中文、Level、Action
+249,8a49ffeca5a97cd354164851,2026-10-24,KKR & Co.,EU Charges KKR with Providing Misleading Information in €22B Telecom Italia NetC,修改,已套用,更改：Event_Code、事件中文、Level、Action
+250,e5883d34d59fbc7f6462a46e,2026-10-24,Morgan Stanley,Why AT&T Is Dropping 5.1%: Morgan Stanley Maintains Overweight,修改,已套用,更改：Ticker、Company、Event_Code、事件中文、Level、Action
+251,fdd0421373d1d0dffbbe6e17,2026-10-25,Applied Materials,"AMAT stock drops 48%, seen as rare buy with 66% upside amid strong AI chip deman",排除,已套用,更改：Event_Code、事件中文、Level、Action
+252,b93a224ca9f4fd27735fc956,2026-10-23,Moderna,Moderna stock crashes as leaked melanoma data threatens its record August rally,修改,已套用,更改：Event_Code、事件中文、Level、Action
+253,bebf7c914200495ce8b09de1,2026-10-24,Boeing,"Nearly 2,000 Boeing 737s Must Get Tail Inspections After Jets Pitched Up And Dow",修改,已套用,更改：Event_Code、事件中文、Level、Action
+254,7123fba0fecad95d6d4d3836,2026-10-24,"Nike, Inc.",NKE Stock Slips As Nike’s China E-Commerce Reset Draws Wall Street Skepticism,排除,已套用,更改：Event_Code、事件中文、Level、Action
+255,b6860431a8b5969baad84c57,2026-10-24,American Express,[NY Stock Market Highlights] American Express down 3%; “Tower Companies” rise (2,排除,已套用,更改：Event_Code、事件中文、Level、Action
+256,1e38cd34a57cb9f5406e090a,2026-10-24,Trade Desk (The),Here's Why The Trade Desk (TTD) Fell More Than Broader Market,排除,已套用,更改：Event_Code、事件中文、Level、Action
+257,3366208b44b411b69d0048af,2026-10-23,Delta Air Lines,Why Is Delta Air Lines Stock Falling on Friday?,排除,已套用,更改：Event_Code、事件中文、Level、Action
+258,fe2feaf0bf4d0a27ce7f595d,2026-10-24,Moderna,Moderna stock extends losses as investors digest melanoma vaccine trial data,修改,已套用,更改：Event_Code、事件中文、Level、Action
+259,8773e2c851af6029fd7e5b15,2026-10-23,Accenture,US AI Stocks Fall Early; Accenture Drops 3.03%,排除,已套用,更改：Event_Code、事件中文、Level、Action
+260,8b237414f0ac9f128061a37e,2026-10-23,Western Digital,Why Is Western Digital Stock Falling Friday?,排除,已套用,更改：Event_Code、事件中文、Level、Action
+261,e3e2ae914f42c028df8f9d99,2026-10-24,Paychex,Paychex (PAYX) Could Be 36% Below Fair Value As Q1 Beats Lift Momentum,排除,已套用,更改：Event_Code、事件中文、Level、Action
+262,3c7f0e9d92e0f152dbbad873,2026-10-26,Masco,"Uncut Pitch, Foul-Smelling Dressing Room: MAS Fez Face Unacceptable Treatment in",排除,已套用,更改：Event_Code、事件中文、Level、Action
+263,473de49dd8e6193e153b9807,2026-10-24,Verizon,Verizon Communications (VZ) Faces Market Pressure Ahead of Earni,排除,已套用,更改：Event_Code、事件中文、Level、Action
+264,e068a90751d3ab7fa8830e97,2026-10-24,Vertiv,Vertiv stock trades at EUR 174.43 as Vertiv introduces an AI factory approach,排除,已套用,更改：Event_Code、事件中文、Level、Action
+265,e9be0ea74225dcd7b3df5530,2026-10-25,Ares Management,Ares Management's Q3 report on Oct 29 may hinge on $114B assets turning into fee,排除,已套用,更改：Event_Code、事件中文、Level、Action
+266,a3d8b5858a941d5b46ce1231,2026-10-23,CMS Energy,"California's In-Home Care Program, Mostly Staffed by Relatives, Faces Third Fede",排除,已套用,更改：Event_Code、事件中文、Level、Action
+267,144ea1e00ceb66b7f92da88f,2026-10-24,Norfolk Southern,"11 train cars derail in Altoona near Mill Run, Norfolk Southern says",排除,已套用,更改：Event_Code、事件中文、Level、Action
+268,c357872c1b999d8d8324b737,2026-10-24,Western Digital,Western Digital Stock Falls Despite Visibility to 2031,排除,已套用,更改：Event_Code、事件中文、Level、Action
+269,b01c19355f84b89d399c3190,2026-10-24,Boeing,"Boeing’s Ridley Township Plant and 3,000 Delco Jobs Face Uncertain Future",排除,已套用,更改：Event_Code、事件中文、Level、Action
+270,7421c3c7a667ba2028215422,2026-10-24,Uber,Uber Technologies stock closes 3.43% lower; 15-minute RSI sits at 27.11,排除,已套用,更改：Event_Code、事件中文、Level、Action
+271,d308727293fee2faafbe350a,2026-10-25,TKO Group Holdings,$90 Million Loss: TKO Faces Massive Repercussions Should WWE + UFC Events In Sau,排除,已套用,更改：Event_Code、事件中文、Level、Action
+272,5b9645b3a81f4fad7a537378,2026-10-24,Netflix,Xbox Movie and TV Exclusivity Deal With Netflix Reportedly Off the Table After M,排除,已套用,更改：Event_Code、事件中文、Level、Action
+273,813a567dabcc8c3728501519,2026-10-24,Las Vegas Sands,"Las Vegas Sands Corp. stock falls Friday, still outperforms market",排除,已套用,更改：Event_Code、事件中文、Level、Action
+274,4ba0f3611733eab7033c7c1a,2026-10-25,Sandisk,Sandisk (SNDK) Flags Industry Supply Chain Constraints As Memory Production Time,排除,已套用,更改：Event_Code、事件中文、Level、Action
+275,ae9f5dbb843adcfaeadd1fd6,2026-10-23,T-Mobile US,Bernstein keeps Neutral rating: T-Mobile US stock falls 4.46 percent,修改,已套用,更改：Event_Code、事件中文、Level、Action
+276,2277b1295a3283e7d974329d,2026-10-23,Honeywell Aerospace,Is Honeywell Aerospace (HONA) Undervalued Following Its Securities Lawsuit And S,修改,已套用,更改：Event_Code、事件中文、Level、Action
+277,03dc8b9311e3bf82c3b74ee4,2026-10-25,Amazon,AirTag 2 Drops to New Low Price of $23 on Amazon,排除,已套用,更改：Event_Code、事件中文、Level、Action
+278,c548da51ee5d1fe7f7b17177,2026-10-25,Netflix,Netflix is losing ground to YouTube,排除,已套用,更改：Event_Code、事件中文、Level、Action
+279,ba4158a4b29f1fd5e69d3bf6,2026-10-24,McDonald's,McDonald's (NYSE:MCD) Stock Falls 1.6% - Time to Sell?,排除,已套用,更改：Event_Code、事件中文、Level、Action
+280,eba8732da71fb9093c3114f8,2026-10-23,Wynn Resorts,Wynn Resorts stock hits 52-week low at 73.03 USD,修改,已套用,更改：Event_Code、事件中文、Level、Action
+281,f22e92c1f3455287a6ba1602,2026-10-24,American Express,"American Express will cut about 3,500 jobs while raising its 2026 forecast",修改,已套用,更改：Event_Code、事件中文、Level、Action
+282,afeb0fedd7bcd6f9721e9455,2026-10-26,Ball Corporation,Vikings’ inability to get Justin Jefferson the ball has become a yearlong proble,排除,已套用,更改：Event_Code、事件中文、Level、Action
+283,f8c29ab96861836f6ca0197d,2026-10-23,American Express,American Express to cut 5% of its total workforce: What to know,修改,已套用,更改：Event_Code、事件中文、Level、Action
+284,9829cf06a7112ce815ae3818,2026-10-23,CBRE Group,CBRE warns rates are holding back real estate deals,排除,已套用,更改：Event_Code、事件中文、Level、Action
+285,b565478d787a6d8aef0d7ab2,2026-10-26,Boeing,Boeing Stock Forms Rare Bearish Flag as Earnings Loom: Will It Drop Further?,排除,已套用,更改：Event_Code、事件中文、Level、Action
+286,65e51530abfe947621f6f0d0,2026-10-23,PepsiCo,PepsiCo Shuttered a Bottling Plant and Cut 112 Jobs. 3 Fast-Growing Drinks Help ,修改,已套用,更改：Event_Code、事件中文、Level、Action
+287,69c4156f4c67540f4816d77b,2026-10-25,Boeing,FAA orders Boeing 737NG inspections after reports of pitch oscillations,修改,已套用,更改：Event_Code、事件中文、Level、Action
+288,01b3ee0387a0dbc9883cf931,2026-10-24,Emerson Electric,EMR delays after person hit by train between Leicester and East Midlands Parkway,排除,已套用,更改：Event_Code、事件中文、Level、Action
+289,5b8a1e228ff1f54ab7491393,2026-10-23,Honeywell Aerospace,Honeywell Aerospace (HONA) Stock Looks Below Fair Value on Cash Flow,排除,已套用,更改：Event_Code、事件中文、Level、Action
+290,2ac3a68c01ea812baaf933f4,2026-10-24,Walmart,Walmart driver's tip cracks $1.2M AZ fraud ring shipping stolen goods to Vietnam,排除,已套用,更改：Event_Code、事件中文、Level、Action
+291,538715ef1297c654a4968e01,2026-10-25,PulteGroup,Earnings Miss Could Be A Game Changer For PulteGroup Stock (PHM),修改,已套用,更改：Event_Code、事件中文、Level、Action
+292,bef8e978f9f087173d0c02e3,2026-10-25,Walmart,Walmart driver's tip cracks $1.2M AZ fraud ring shipping stolen goods to Vietnam,排除,已套用,更改：Event_Code、事件中文、Level、Action
+293,b352880f6e84c545c48dccdd,2026-10-24,McDonald's,MCD seals 3 industrial units for pollution violations in Delhi's west zone,排除,已套用,更改：Event_Code、事件中文、Level、Action
+294,73ac26d79379ba7ffc24a75c,2026-10-23,U.S. Bancorp,"Anker USB-C to HDMI Adapter Drops Into the $10 Range on Amazon, Making Connectiv",排除,已套用,更改：Event_Code、事件中文、Level、Action
+295,379a28c4655a9d889c72711f,2026-10-23,Humana,Humana (OM:HUM) Q3 Results Confront A Persistent Margin Squeeze,修改,已套用,更改：Event_Code、事件中文、Level、Action
+296,1f7d287bed0c5d7ba7eebd0c,2026-10-23,Bunge Global,Bunge Global (BG) Faces An Earnings Test As Viterra Deal Fuels Undervalued View,排除,已套用,更改：Event_Code、事件中文、Level、Action
+297,30d29d8b41f9c5472cd1dc4e,2026-10-25,Microsoft,Marvel’s Blade Game In Trouble As Microsoft Hunts For New Studio Buyer,排除,已套用,更改：Event_Code、事件中文、Level、Action
+298,b8da4b9e580965adf82a0478,2026-10-25,Nvidia,Cloud Computing Sector Downturn Puts Nvidia’s AI-Boom Financing Bets to the Test,排除,已套用,更改：Event_Code、事件中文、Level、Action
+299,94fcdfd09dd0c80d49adbd06,2026-10-26,Ball Corporation,Jets’ inability to get the ball to Garrett Wilson has become downright baffling,排除,已套用,更改：Event_Code、事件中文、Level、Action
+300,c2455d9de5c5075694ea4c3f,2026-10-24,American Express,American Express to cut about 5% of global workforce,修改,已套用,更改：Event_Code、事件中文、Level、Action
+301,e68481a01bfbd2d0bd567163,2026-10-24,PepsiCo,PepsiCo Faces Suit Over Siete Avocado Oil Chip Claims,排除,已套用,更改：Event_Code、事件中文、Level、Action
+302,ad6e3969df620460f90e98d3,2026-10-23,Prudential Financial,Fitch moves Prudential Financial to negative outlook on Japan remediation uncert,修改,已套用,更改：Event_Code、事件中文、Level、Action
+303,577343b82ce18f16d142aee6,2026-10-25,Avery Dennison,What Avery Dennison Stock's Lowered Earnings Outlook Means For Shareholders,修改,已套用,更改：Event_Code、事件中文、Level、Action
+304,374e858608c5c95bb9aacc7c,2026-10-24,Netflix,Netflix Hits a 52-Week Low as Valuation Gets Cheaper,排除,已套用,更改：Event_Code、事件中文、Level、Action
+305,47cb1a8f7c6a6bc72fb47897,2026-10-23,Quest Diagnostics,Quest Diagnostics warns of potential data theft after attack on lab service syst,修改,已套用,更改：Event_Code、事件中文、Level、Action
+306,cd7d81324c69de54d4260765,2026-10-24,Boeing,"FAA Orders Tail Inspections on 1,987 US-Registered Boeing 737NG Jets After Pitch",修改,已套用,更改：Event_Code、事件中文、Level、Action
+307,654899c0b693ed832d9dd688,2026-10-24,Kraft Heinz,Conagra Has Already Cut Its Dividend. Can Kraft Heinz Avoid the Same Fate?,排除,已套用,更改：Event_Code、事件中文、Level、Action
+308,01dca083a490229263b5a898,2026-10-24,Boeing,Reports Surface of Boeing 777F Production Halt Amid Supplier Dispute,修改,已套用,更改：Event_Code、事件中文、Level、Action
+309,ec04f4d0330c112799ee7de7,2026-10-24,Apple Inc.,Apple’s iPhone Duo Hits Stores in Face of Short Supply and High Demand,排除,已套用,更改：Event_Code、事件中文、Level、Action
+310,5ab3da252b97c41eea556895,2026-10-26,Humana,"UnitedHealthcare, Humana Medicare Advantage cancellations to affect 1 million",修改,已套用,更改：Event_Code、事件中文、Level、Action
+311,323f5616d3338bbc8f5ff657,2026-10-25,PPL Corporation,PPL Corporation stock edges lower as dividend and Q2 2026 figures set the tone,排除,已套用,更改：Event_Code、事件中文、Level、Action
+312,759018868277f0040c15805c,2026-10-25,Netflix,Netflix removes Sandra Bullock’s Indiana Jones-style movie from its streaming li,排除,已套用,更改：Event_Code、事件中文、Level、Action
+313,15eb268b985a9d6a0ee165e3,2026-10-24,,LKQ Stock Faces Earnings Miss And CEO Change After Europe Problems,修改,已套用,更改：Ticker、Company、Event_Code、事件中文、Level、Action
+314,0b72a6a04b1e861038498ce7,2026-10-25,Goldman Sachs,Goldman Sachs warns on the Hormuz crisis and rising fuel costs,排除,已套用,更改：Event_Code、事件中文、Level、Action
+315,431aefe0d4516223edeab900,2026-10-23,"NVR, Inc.",NVR (NYSE:NVR) Stock Gets Downgrade from Bank of America,修改,已套用,更改：Event_Code、事件中文、Level、Action
+316,ad51869b656101806b11b55d,2026-10-23,Mosaic Company (The),Mosaic (MOS) Stock Still Looks Reasonable As Shares Fell 53%,排除,已套用,更改：Event_Code、事件中文、Level、Action
+317,ed99c1c4a1a0b413d4377117,2026-10-24,M&T Bank,"Major lane closures near M&T Bank Stadium for Ravens game, breast cancer walk",排除,已套用,更改：Event_Code、事件中文、Level、Action
+318,e18ae4eae03ed367463a7258,2026-10-23,AT&T,美國電信運營商股票盤前跌幅擴大,修改,已套用,更改：Ticker、Event_Code、事件中文、Level、Action
+319,2563bf5592700f4c0ea9a510,2026-10-23,Comcast,Comcast prepares major cable division job cuts ahead of 2027 NBCUniversal spin-o,修改,已套用,更改：Event_Code、事件中文、Level、Action
+320,2f8512666dd4872b6aa9521e,2026-10-24,Take-Two Interactive,TTWO Slips 1.98% as Opus 5.5 Tests GTA 6 Moat [2026],排除,已套用,更改：Event_Code、事件中文、Level、Action
+321,15ad14ad212c27f538116acd,2026-10-23,Verizon,美國電信運營商股票盤前跌幅擴大,修改,已套用,更改：Ticker、Event_Code、事件中文、Level、Action
+322,1d0385a18af60835a216412c,2026-10-24,Church & Dwight,Church & Dwight Co. stock underperforms Friday when compared to competitors,排除,已套用,更改：Event_Code、事件中文、Level、Action
+323,838096323046ca2cd17a5506,2026-10-23,Analog Devices,"Analog Devices (ADI) Gains On Earnings Optimism, Is It Still 18% Below Fair Valu",排除,已套用,更改：Event_Code、事件中文、Level、Action
+324,a32dfebdb7fd16078d27450b,2026-10-23,Morgan Stanley,"CoreWeave's Rising Financing Uncertainty Reduces Visibility, Morgan Stanley Says",排除,已套用,更改：Event_Code、事件中文、Level、Action
+325,75392ff1cb0dc7346f6ba9ba,2026-10-23,American Express,American Express to cut 5% of workforce,修改,已套用,更改：Event_Code、事件中文、Level、Action
+326,510fbdea82ce6f6983a9b89c,2026-10-24,Jabil,JBL Live 680NC Wireless on-ear Noise Cancelling headphones slips to $79.95,排除,已套用,更改：Event_Code、事件中文、Level、Action
+327,4fb305f270abbf6fffa3d0b4,2026-10-25,Netflix,Netflix Is Down Nearly 30% in 2026. Time to Sell or Load Up?,排除,已套用,更改：Event_Code、事件中文、Level、Action
+328,f5c9167a2bba1aed2c45365c,2026-10-23,Lam Research,Meta vs. Lam Research: Why stocks fell 7% and 12% after earnings,排除,已套用,更改：Event_Code、事件中文、Level、Action
+329,7c805fedaa54f68ac668fb08,2026-10-24,Nvidia,NVIDIA has officially acknowledged the presence of a critical error in the GeFor,排除,已套用,更改：Event_Code、事件中文、Level、Action
+330,69a79a525cb569b8a0bcca6c,2026-10-24,Lam Research,AMD Stock Fell 8% in a Day as Lam Research’s Supply Warning Sank Chip Stocks. He,排除,已套用,更改：Event_Code、事件中文、Level、Action
+331,bd1c83f729b427d6d7931b5c,2026-10-23,IBM,Analysts Have Conflicting Sentiments on These Technology Companies: Internationa,排除,已套用,更改：Event_Code、事件中文、Level、Action
+332,17807a00bb8244f3ddae2a83,2026-10-24,McCormick & Company,"McCormick & Company, Incorporated (NYSE:MKC) Stock Price Down 1.3% - Time to Sel",排除,已套用,更改：Event_Code、事件中文、Level、Action
+333,62d07e516c6105f4615bc077,2026-10-23,Lam Research,Analysts Have Conflicting Sentiments on These Technology Companies: Internationa,排除,已套用,更改：Event_Code、事件中文、Level、Action
+334,a9dbb260953f7f33c2db4993,2026-10-25,PulteGroup,PulteGroup Q3FY26 net income falls 19% YoY; RBC cuts PT to $110,修改,已套用,更改：Event_Code、事件中文、Level、Action
+335,a5d8827e62649e045b20dcff,2026-10-24,Chipotle Mexican Grill,Chipotle Mexican Grill Inc. stock underperforms Friday when compared to competit,排除,已套用,更改：Event_Code、事件中文、Level、Action
+336,b3f822c4c46cd99653971097,2026-10-24,United Airlines Holdings,Why Is United Airlines Stock Falling on Friday?,排除,已套用,更改：Event_Code、事件中文、Level、Action
+337,935dc49548166913b43b32a0,2026-10-23,Western Digital,"Western Digital Earnings: Pricing Drives Record Earnings, Volume Growth Slows",排除,已套用,更改：Event_Code、事件中文、Level、Action
+338,aa8d7aa5bd06c3988ffee1b9,2026-10-24,Huntington Bancshares,Huntington Bancshares stock hits 52-week low at 14.9 USD By Investing.com,排除,已套用,更改：Event_Code、事件中文、Level、Action
+339,0562d45b1898ab6a7ef4eb74,2026-10-24,Howmet Aerospace,Howmet Aerospace Inc. stock underperforms Friday when compared to competitors,排除,已套用,更改：Event_Code、事件中文、Level、Action
+340,2c012635f149da9179f1bf89,2026-10-24,Western Digital,Western Digital Gets Target Cut Despite Strong Earnings(EDIT1),排除,已套用,更改：Event_Code、事件中文、Level、Action
+341,f9029c808d370c4c3f2f44ff,2026-10-23,Morgan Stanley,"Higher rates are causing compression in P/E multiples, says Morgan Stanley's And",排除,已套用,更改：Event_Code、事件中文、Level、Action
+342,54a8142097e8e52fc05471b9,2026-10-23,Host Hotels & Resorts,2% Below Fair Value As Host Hotels & Resorts (HST) Draws Fresh Analyst Interest,排除,已套用,更改：Event_Code、事件中文、Level、Action
+343,82df68017543c2574dfa0867,2026-10-24,Nvidia,Seaport Research Issues Stark Nvidia Warning on Nvidia Stock,排除,已套用,更改：Event_Code、事件中文、Level、Action
+344,e127a73babd2d09101069189,2026-10-23,Verizon,Why is Verizon stock sliding today?,修改,已套用,更改：Event_Code、事件中文、Level、Action
+345,5114063fea26c9c7048a9f57,2026-10-25,Motorola Solutions,"Punchy MSI RTX 5060 Ti, Intel 7 265 prebuilt PC spotted at its lowest price in 3",排除,已套用,更改：Event_Code、事件中文、Level、Action
+346,f07c60eeec6a759953c1cc2a,2026-10-25,RTX Corporation,"Punchy MSI RTX 5060 Ti, Intel 7 265 prebuilt PC spotted at its lowest price in 3",排除,已套用,更改：Event_Code、事件中文、Level、Action
+347,c3824c06781981e5cf2f6006,2026-10-25,Intel,"Punchy MSI RTX 5060 Ti, Intel 7 265 prebuilt PC spotted at its lowest price in 3",排除,已套用,更改：Event_Code、事件中文、Level、Action
+348,c8507d06f083b6d53b0c8b15,2026-10-25,Netflix,Netflix Quietly Confirms Removal of Its 2-Season Cult Classic in Just 2 Weeks,排除,已套用,更改：Event_Code、事件中文、Level、Action
+349,930fca2f7d3e56dd44ec4cfc,2026-10-24,Salesforce,Salesforce Stocks Decrease Over 2% as Braze Deal Sets a $5.66 Bi,排除,已套用,更改：Event_Code、事件中文、Level、Action
+350,59dab4c31fa1db3c54a1b9be,2026-10-23,Teledyne Technologies,Analysts Have Conflicting Sentiments on These Technology Companies: Teledyne Tec,排除,已套用,更改：Event_Code、事件中文、Level、Action
+351,8413262108b1cdb3447b89b3,2026-10-23,Boeing,Delayed production ramp-up on Boeing T-7A jet trainer sees costs mount at Saab,修改,已套用,更改：Event_Code、事件中文、Level、Action
+352,6af8e85f0aaeaa7ee85ffecc,2026-10-23,IBM,Analysts Have Conflicting Sentiments on These Technology Companies: Teledyne Tec,排除,已套用,更改：Event_Code、事件中文、Level、Action
+353,cfec2c3ede5da427926b4034,2026-10-24,CMS Energy,Economy: Lobby sues over broker ban | Bill to end NSA arbitration | CMS vs ‘ghos,排除,已套用,更改：Event_Code、事件中文、Level、Action
+354,cd49e69e173185f5f5ac69b0,2026-10-25,Comcast,"Comcast lost 144,000 broadband customers last quarter, is planning layoffs so AI",修改,已套用,更改：Event_Code、事件中文、Level、Action
+355,3c7e0060365c46bda4f644bb,2026-10-24,Walmart,6 arrested in $1.2 million Walmart fraud scheme after dozens of packages found p,排除,已套用,更改：Event_Code、事件中文、Level、Action
+356,95fae9789f4d3aca338bb147,2026-10-24,Boeing,Boeing's Demolition of a California Nuclear Testing Facility Has Nearby Families,排除,已套用,更改：Event_Code、事件中文、Level、Action
+357,be0e524b52ba04034e5d4851,2026-10-24,Allstate,"Allstate keeps $9,000 as premature subrogation cost falls on liability carrier",排除,已套用,更改：Event_Code、事件中文、Level、Action
+358,ed8de70e7f183ae0c60b15fe,2026-10-24,Amazon,M5 MacBook Air Returns to Prime Day Low With $200 Amazon Discount,排除,已套用,更改：Event_Code、事件中文、Level、Action
+359,c642f187aec8ff691a948fc2,2026-10-26,BlackRock,BlackRock warns traditional bond hedge is breaking down,排除,已套用,更改：Event_Code、事件中文、Level、Action
+360,d4ec6dc161680c6c962bc229,2026-10-26,Quest Diagnostics,Medical Testing Giant Quest Diagnostics Confirms Massive Security Breach Exposin,修改,已套用,更改：Event_Code、事件中文、Level、Action
+361,e60626100a376c61c174df93,2026-10-23,American Express,Why is American Express stock sliding today?,排除,已套用,更改：Event_Code、事件中文、Level、Action
+362,7fa77aacaedafae90805d02b,2026-10-24,Booking Holdings,Booking Holdings Inc. stock underperforms Friday when compared to competitors,排除,已套用,更改：Event_Code、事件中文、Level、Action
+363,fcd7b4ca45bd3c4eb72004cd,2026-10-24,TKO Group Holdings,WWE and TKO Face Major Financial Hit if Crown Jewel Canceled,排除,已套用,更改：Event_Code、事件中文、Level、Action
+364,50eb8cb4a19d9770a0c826f9,2026-10-24,AT&T,AT&T extends recent slump with another 8% retreat (T:NYSE),修改,已套用,更改：Event_Code、事件中文、Level、Action
+365,7016cc95bf4e9efb9cd31a31,2026-10-25,Jabil,JBL Quantum 910X Wireless over-ear Performance Gaming Headset sees price cut to ,排除,已套用,更改：Event_Code、事件中文、Level、Action
+366,797b7f866df3fcee6f44f447,2026-10-23,Quest Diagnostics,Lab testing giant Quest Diagnostics confirms patients' personal and health data ,修改,已套用,更改：Event_Code、事件中文、Level、Action
+367,0c907b419ad095583a7b0782,2026-10-25,Old Dominion,"Old Dominion Freight Line (ODFL) Stock Dropped, So What Is Driving Attention Now",排除,已套用,更改：Event_Code、事件中文、Level、Action
+368,1770a58cf014b8b3729c1dd1,2026-10-26,RTX Corporation,Leaked footage shows Chinese factories stripping hundreds of RTX 5090s for AI us,排除,已套用,更改：Event_Code、事件中文、Level、Action
+369,f2303093fd104846349f15e8,2026-10-23,Hewlett Packard Enterprise,HPE Warns Critical Aruba Networking Flaws Could Let Hackers Take Complete Contro,修改,已套用,更改：Event_Code、事件中文、Level、Action
+370,55c51088518eb0da72fac9cb,2026-10-25,Netflix,10 Most Disappointing Netflix Adaptations (So Far),排除,已套用,更改：Event_Code、事件中文、Level、Action
+371,da829b3e89a655d8f7353704,2026-10-23,TransDigm Group,Why TransDigm Group (TDG) Stock Is Down Today,排除,已套用,更改：Event_Code、事件中文、Level、Action
+372,a3b156545f559a8f6095084b,2026-10-23,MSCI Inc.,Prabowo accuses MSCI of trying to intimidate Indonesia after market downgrade wa,排除,已套用,更改：Event_Code、事件中文、Level、Action
+373,e0b521006e60cb42bd841980,2026-10-25,Comfort Systems USA,REACTION: Syracuse Basketball STUMBLES in Exhibition vs. Niagara | Gerry McNamar,排除,已套用,更改：Event_Code、事件中文、Level、Action
+374,03ee744306b7be164e40a396,2026-10-24,Clorox,Clorox Co. stock underperforms Friday when compared to competitors,排除,已套用,更改：Event_Code、事件中文、Level、Action
+375,82b616d320ed6669797179a3,2026-10-23,American Express,Why Is American Express Stock Falling Friday? - American Express (NYSE:AXP),排除,已套用,更改：Event_Code、事件中文、Level、Action
+376,48a9a89d3249cce4341e573c,2026-10-24,T-Mobile US,"SpaceX Reportedly Eyes 80,000 Cell Sites In Push To Become Fourth US Wireless Ca",修改,已套用,更改：Event_Code、事件中文、Level、Action
+377,651c8bedd8c1509064197d57,2026-10-24,Goldman Sachs,Goldman Sachs Group Inc. stock underperforms Friday when compared to competitors,排除,已套用,更改：Event_Code、事件中文、Level、Action
+378,d61be9c63244d6013eb8c52f,2026-10-24,Applied Materials,Applied Materials Stock Is Down 48% From Its Peak. Here’s What Its 50%-Growth In,排除,已套用,更改：Event_Code、事件中文、Level、Action
+379,54a0813cd022c66c278d9ee2,2026-10-26,McDonald's,Latham McDonald's unlawfully dumped grease down storm drain,排除,已套用,更改：Event_Code、事件中文、Level、Action
+380,e5d11b9a2ff68861e7ca3fb8,2026-10-25,Costco,This Is The Worst Coffee Blend In Costco's Kirkland Signature Lineup,排除,已套用,更改：Event_Code、事件中文、Level、Action
+381,cc5793cad3d7c3ebfac55273,2026-10-25,eBay Inc.,"eBay (EBAY) Cuts 9% Of Staff, Is The Upside Already Priced In?",修改,已套用,更改：Event_Code、事件中文、Level、Action
+382,5e0d1627d56191774cbe16fc,2026-10-25,Verizon,"Verizon Apologizes for iPhone Duo Pre-Order Delays, Giving Customers $100 Gift C",排除,已套用,更改：Event_Code、事件中文、Level、Action
+383,f0f0bb3487c9b1b3f1549fd9,2026-10-24,Microsoft,Microsoft Project Professional 2024 drops to $50 for a lifetime license,排除,已套用,更改：Event_Code、事件中文、Level、Action
+384,f2eb2498e8c1eca497400254,2026-10-24,Boeing,Allegiant doubles down on Boeing 737 MAX with six more aircraft,排除,已套用,更改：Event_Code、事件中文、Level、Action
+385,dcacf1fc5ce2a420ac0ad038,2026-10-25,McDonald's,Why did a Texas McDonald's worker quit over alleged sewage?,排除,已套用,更改：Event_Code、事件中文、Level、Action
+386,a6d0f3beb6390e6075cc12e1,2026-10-24,Bunge Global,Bunge (BG) Stock May Be Below Fair Value On Earnings Power,排除,已套用,更改：Event_Code、事件中文、Level、Action
+387,030733a3d824c2745476a36e,2026-10-26,Netflix,Netflix Reportedly Walked Away After Xbox Asked $800 Million for Its Game IP,排除,已套用,更改：Event_Code、事件中文、Level、Action
+388,cf3f45a32f5e7390940679d1,2026-10-23,Ford Motor Company,Ford Motor (F) Faces Fresh Fuel Pump Legal Risk As Undervalued Narrative Holds,修改,已套用,更改：Ticker、Event_Code、事件中文、Level、Action
+389,9f97347947be7b57dd612567,2026-10-26,Lam Research,"Lam Research: Down 29% Since My Sell Call, But The Math Has Changed (Upgrade) (L",排除,已套用,更改：Event_Code、事件中文、Level、Action
+390,e569ead200fc8389e8af28c6,2026-10-24,T-Mobile US,T-Mobile US (NASDAQ:TMUS) Stock Falls 6.9% - Time to Sell?,修改,已套用,更改：Event_Code、事件中文、Level、Action
+391,63b5407240a2ccc28e025812,2026-10-24,FedEx,KC law firm files hundreds of lawsuits against FedEx challenging overtime pay,排除,已套用,更改：Event_Code、事件中文、Level、Action
+392,443b05513cd5106358dee15b,2026-10-24,Uber,Uber’s new Fife private hire booking office licence faces court challenge after ,排除,已套用,更改：Event_Code、事件中文、Level、Action
+393,cc174588a98c6224cee3368b,2026-10-24,Fastenal,Fastenal Co. stock underperforms Friday when compared to competitors,排除,已套用,更改：Event_Code、事件中文、Level、Action
+394,f6c3abe4f966b82f83efcefe,2026-10-24,Textron,Textron Inc. stock underperforms Friday when compared to competitors,排除,已套用,更改：Event_Code、事件中文、Level、Action
+395,5ad01629284f1ef47a1b36f4,2026-10-25,Airbnb,"1 killed, 1 injured in shooting at Airbnb being used for a party near east of do",排除,已套用,更改：Event_Code、事件中文、Level、Action
+396,572748283e453b76c81f07b8,2026-10-25,Broadcom,Broadcom (AVGO) Stock May Be 31% Undervalued As AI Spending Fears Grow,排除,已套用,更改：Event_Code、事件中文、Level、Action
+397,fae6732b61c0ed85d0f11254,2026-10-24,FactSet,鉅亨速報 - Factset 最新調查：國際航空集團(IAG-US)EPS預估下修至1.95元，預估目標價為24.00元,排除,已套用,更改：Event_Code、事件中文、Level、Action
+398,bb91864305ea5232ce89ba83,2026-10-23,Quest Diagnostics,"Cyber Breach Hits Quest Diagnostics, Patient Records May Be Affected",修改,已套用,更改：Event_Code、事件中文、Level、Action
+399,8916cbadf5a6bc24eebbf75a,2026-10-24,Procter & Gamble,Procter & Gamble (NYSE:PG) Stock Price Down 2.6% - Here's What Happened,排除,已套用,更改：Event_Code、事件中文、Level、Action
+400,5871b51246744bf7d75a12da,2026-10-24,Accenture,Why is Accenture stock sliding today?,排除,已套用,更改：Event_Code、事件中文、Level、Action
+401,d81c10851ef1b885075541da,2026-10-23,CVS Health,CVS Health stock: Wall Street Zen downgrades CVS Health stock to Buy,排除,已套用,更改：Event_Code、事件中文、Level、Action
+402,c3f30f025733b659101f27cc,2026-10-23,Starbucks,"Starbucks Ditches Chipotle Deal, But Headwinds Still Linger (NASDAQ:SBUX)",排除,已套用,更改：Event_Code、事件中文、Level、Action
+403,16de524397c35199becfedbc,2026-10-25,Verizon,"5G FWA Profitability in 2026: Verizon, AT&T, T-Mobile, Jio and Airtel Face Cost ",排除,已套用,更改：Event_Code、事件中文、Level、Action
+404,145bbcaafb3c343c75faf0a8,2026-10-24,Walmart,6 arrested after alleged $1.4M Walmart fraud ring busted in Peoria,排除,已套用,更改：Event_Code、事件中文、Level、Action
+405,ce45db3f01177d786f76bce1,2026-10-23,Verizon,Verizon faces earnings test as SpaceX threat looms,排除,已套用,更改：Event_Code、事件中文、Level、Action
+406,8e33c548fffd14198b41e0c2,2026-10-25,Microsoft,"Microsoft confirms Windows 11 Universal Print broken for months, requires manual",排除,已套用,更改：Event_Code、事件中文、Level、Action
+407,dd08d1aea3215b5702c63a80,2026-10-25,Intel,Intel CEO bought $10 million in stock. Now he’s down nearly $1 million,排除,已套用,更改：Event_Code、事件中文、Level、Action
+408,dc45df94f3bbedbfbd18837e,2026-10-24,Huntington Ingalls Industries,Huntington Ingalls Industries Inc. stock underperforms Friday when compared to c,排除,已套用,更改：Event_Code、事件中文、Level、Action
+409,be6cf0fe4728c63b6fd2f6ea,2026-10-24,Accenture,Accenture PLC Cl A stock underperforms Friday when compared to competitors,排除,已套用,更改：Event_Code、事件中文、Level、Action
+410,f7ee02c3959fad70ce7f8f1b,2026-10-26,MSCI Inc.,MSCI (MSCI) Could Be 19% Below Fair Value After Earnings Buyback And Dividend Up,排除,已套用,更改：Event_Code、事件中文、Level、Action
+411,dca426c0265909932972aed0,2026-10-24,Quanta Services,Quanta Services Inc. stock underperforms Friday when compared to competitors,排除,已套用,更改：Event_Code、事件中文、Level、Action
+412,c76e511bd76d7a43cf75f797,2026-10-25,Apple Inc.,AAPL Price Prediction: Zero MACD Histogram and a $30 Analyst Gap Signal a Critic,排除,已套用,更改：Event_Code、事件中文、Level、Action
+413,766fe4a40475368e249d3212,2026-10-23,Quest Diagnostics,"Quest Diagnostics reports unauthorized access to lab system, says patient inform",修改,已套用,更改：Event_Code、事件中文、Level、Action
+414,79aa69f0c225895f9a104abb,2026-10-25,J.B. Hunt,J.B. Hunt shareholders may claim losses after s...,修改,已套用,更改：Event_Code、事件中文、Level、Action
+415,86d861e32eb57b98200c7183,2026-10-24,MetLife,MetLife Inc. stock underperforms Friday when compared to competitors,排除,已套用,更改：Event_Code、事件中文、Level、Action
+416,245145effe976c195ef439ca,2026-10-23,FactSet,鉅亨速報 - Factset 最新調查：Graco Inc.(GGG-US)EPS預估下修至3.25元，預估目標價為84.50元,排除,已套用,更改：Event_Code、事件中文、Level、Action
+417,ae35e435442c2a7b52c431a8,2026-10-24,Amazon,All-new Amazon Fire TV Stick 4K now back at $30 all-time low (50% off),排除,已套用,更改：Event_Code、事件中文、Level、Action
+418,82a37de9de19a6b816f0a885,2026-10-24,Intuit,Intuit (INTU) Suffers a Larger Drop Than the General Market: Key Insights,排除,已套用,更改：Event_Code、事件中文、Level、Action
+419,bc8e400393b7daa19b88ed04,2026-10-25,Quanta Services,Red Roses boss John Mitchell issues PWR warning after back-to-back defeats for E,排除,已套用,更改：Event_Code、事件中文、Level、Action
+420,2b94e18d1f53a36ff32e48f5,2026-10-23,Kroger,VSP: 75-year-old woman fatally struck by vehicle in Smithfield Kroger parking lo,排除,已套用,更改：Event_Code、事件中文、Level、Action
+421,795dba14ec26c8aa721dfca9,2026-10-24,Nvidia,Amazon’s $5 billion Nvidia AI servers sit idle in warehouses amid data center po,排除,已套用,更改：Event_Code、事件中文、Level、Action
+422,cfcdaac3612d09ef9c07dd3b,2026-10-25,Walmart,Two Tamaqua Women Charged After Allegedly Hiding Merchandise in Garbage Cans at ,排除,已套用,更改：Event_Code、事件中文、Level、Action
+423,4246368142338c198b320b9a,2026-10-24,Wynn Resorts,How Labor Strike At Wynn Resorts (WYNN) Has Changed Its Investment Story,修改,已套用,更改：Event_Code、事件中文、Level、Action
+424,cdf85eb2fc9d5732e3933a46,2026-10-24,Moderna,Oncologists Cheer Melanoma Data That Tanked Moderna’s Shares,排除,已套用,更改：Event_Code、事件中文、Level、Action
+425,6a5ce476c537506a05dca131,2026-10-24,Henry Schein,Henry Schein Inc. stock underperforms Friday when compared to competitors,排除,已套用,更改：Event_Code、事件中文、Level、Action
+426,461be780b1c97b9dc5426eea,2026-10-23,Amazon,"Amazon bows to local backlash over AI data centers, scraps plans to build four n",排除,已套用,更改：Event_Code、事件中文、Level、Action
+427,d5d66f8f9b1caf66bdea8320,2026-10-26,Goldman Sachs,Goldman Sachs Sees CoreWeave Debt Need Fall With Longer GPU Life,排除,已套用,更改：Event_Code、事件中文、Level、Action
+428,d36cd0fc3df8a7b7e7953549,2026-10-24,Visa Inc.,Visa Inc. Cl A stock underperforms Friday when compared to competitors,排除,已套用,更改：Event_Code、事件中文、Level、Action
+429,f848382d6ffa02fca4215aef,2026-10-23,Globe Life,Piper Sandler cuts Globe Life stock rating on medical claims concerns,修改,已套用,更改：Event_Code、事件中文、Level、Action
+430,ba12de9105657d547e675475,2026-10-24,Boeing,American Airlines Boeing 787 Makes Emergency Landing at O'Hare After Brake Issue,排除,已套用,更改：Event_Code、事件中文、Level、Action
+431,8f906b43bb8960b02a9118c3,2026-10-24,Xcel Energy,Xcel Energy Inc. stock underperforms Friday when compared to competitors,排除,已套用,更改：Event_Code、事件中文、Level、Action
+432,927536843a8cee5f9ce7ec22,2026-10-24,Globe Life,Globe Life Inc. stock underperforms Friday when compared to competitors,排除,已套用,更改：Event_Code、事件中文、Level、Action
+433,e9dbc642cb480279a99d98a4,2026-10-23,Casey's,Are Retail-Wholesale Stocks Lagging Casey's General Stores (CASY) This Year?,排除,已套用,更改：Event_Code、事件中文、Level、Action
+434,2e86c3e9e7a052a784219455,2026-10-26,Fortinet,ACSC warns of critical vulnerabilities in Fortinet products,修改,已套用,更改：Event_Code、事件中文、Level、Action
+435,09d0817ba4f4f4b4943a1279,2026-10-24,CVS Health,CVS Health Corp. stock underperforms Friday when compared to competitors,排除,已套用,更改：Event_Code、事件中文、Level、Action
+436,3f9279d4fa91b3cb9d86b060,2026-10-23,T-Mobile US,"Telco Stocks VZ, T, and TMUS Fall on Another SpaceX Wireless Push — Should Inves",修改,已套用,更改：Event_Code、事件中文、Level、Action
+437,c109a3b1054f6d5cbed83c64,2026-10-25,Netflix,"Down Roughly 50% From Its Highs, Is Netflix Stock Finally a Buy?",排除,已套用,更改：Event_Code、事件中文、Level、Action
+438,8d9093354b6786d57ea87761,2026-10-24,Weyerhaeuser,Weyerhaeuser Stock: Profound Mispricing (NYSE:WY),排除,已套用,更改：Event_Code、事件中文、Level、Action
+439,52b53684722f1206ed8f31b9,2026-10-24,Wells Fargo,"QUICK SPARK: ACVF ETF Dumps Wells Fargo, US Bancorp Over Debanking Concerns",排除,已套用,更改：Event_Code、事件中文、Level、Action
+440,3fe9fd37c6b919c5ba8e77e5,2026-10-24,Walmart,Peoria police inquiry leads to arrest of 6 in Walmart.com fraud scheme,排除,已套用,更改：Event_Code、事件中文、Level、Action
+441,e3b06dbe0fdba7fd12a12d9a,2026-10-26,Apple Inc.,Is Apple (AAPL) Pricing In Too Much Future Cash Flow?,排除,已套用,更改：Event_Code、事件中文、Level、Action
+442,dc0a2de5c32ae4283fbc499f,2026-10-24,CMS Energy,CMS Energy Corp. stock underperforms Friday when compared to competitors,排除,已套用,更改：Event_Code、事件中文、Level、Action
+443,42f95842dcf1b20a29e13b6e,2026-10-23,Intuit,"Wells Fargo, Arm and Intuit Join Revolt Against OKX-ICE Tokenized Stock Plan as ",排除,已套用,更改：Event_Code、事件中文、Level、Action
+444,1c35dc670ffe86476f19ccbe,2026-10-24,Global Payments,Global Payments Inc. stock underperforms Friday when compared to competitors,排除,已套用,更改：Event_Code、事件中文、Level、Action
+445,7baef33447f1e6c49d3840b6,2026-10-24,Microsoft,Xbox Misses Microsoft's Executive Pay Target for the Fifth Time in Six Years,排除,已套用,更改：Event_Code、事件中文、Level、Action
+446,60cee733811e6d7596244376,2026-10-24,Motorola Solutions,Griffin MSI Defends Giant Glass Welcome Hall After Critics Call It Too Big,排除,已套用,更改：Event_Code、事件中文、Level、Action
+447,6a44c44c251f7d92f951fd13,2026-10-23,Wells Fargo,"Wells Fargo, Arm and Intuit Join Revolt Against OKX-ICE Tokenized Stock Plan as ",排除,已套用,更改：Event_Code、事件中文、Level、Action
+448,dae8ed70edfdf4b099c101cf,2026-10-26,Xcel Energy,"Xcel Energy (XEL) Faces Wildfire And Credit Pressure, Is It Still 13% Undervalue",排除,已套用,更改：Event_Code、事件中文、Level、Action
+449,7400169784f22f1d5b3a2429,2026-10-24,Walmart,"Visalia Police Arrest Man Accused of Stealing TV, Pulling Knife at Walmart",排除,已套用,更改：Event_Code、事件中文、Level、Action
+450,ab706893bd2efaba42421ec1,2026-10-25,Boeing,Boeing Holds Near Lows as MAX 10 Approval Meets a 777 Freighter Shutdown,排除,已套用,更改：Event_Code、事件中文、Level、Action
+451,a6eeea2ba789fd2e3b06ef4c,2026-10-23,Mastercard,American Express Falls 3% Despite Q3 Beat and Higher Profit Floor; Visa and Mast,排除,已套用,更改：Event_Code、事件中文、Level、Action
+452,d3d4f4300e3d34cc808af42f,2026-10-23,American Express,American Express Falls 3% Despite Q3 Beat and Higher Profit Floor; Visa and Mast,排除,已套用,更改：Event_Code、事件中文、Level、Action
+453,b55f4a88568205c936eaa604,2026-10-25,Walmart,One hurt in shooting at Pampa Walmart parking lot; suspect identified,排除,已套用,更改：Event_Code、事件中文、Level、Action
+454,114221b15c0e09866019c3bc,2026-10-25,American Express,American Express cutting 5% of global workforce,修改,已套用,更改：Event_Code、事件中文、Level、Action
+455,9b413bfe282310fbe6e566a8,2026-10-25,Pfizer,輝瑞肺癌藥臨牀試驗未達預期，仍尋求後續研發路徑,排除,已套用,更改：Event_Code、事件中文、Level、Action
+456,12e95df573f383f4b10685cb,2026-10-24,AutoZone,AutoZone (AZO) Suffers a Larger Drop Than the General Market: Key Insights,排除,已套用,更改：Event_Code、事件中文、Level、Action
+457,dc1b27138752f129488dc38a,2026-10-24,American Express,American Express cutting 5% of global workforce,修改,已套用,更改：Event_Code、事件中文、Level、Action
+458,29ec32243f2d84dba149d4c5,2026-10-23,Trane Technologies,"Trane Technologies (TT) Stock Dropped, What Is Driving Attention Now?",排除,已套用,更改：Event_Code、事件中文、Level、Action
+459,9ff21de6ad1a4117b9694194,2026-10-24,CBRE Group,CBRE Group Inc. Cl A stock underperforms Friday when compared to competitors,排除,已套用,更改：Event_Code、事件中文、Level、Action
+460,c91105fcb91b014d8a033969,2026-10-24,IBM,International Business Machines Corporation $IBM Stake Cut by Robeco Institution,排除,已套用,更改：Event_Code、事件中文、Level、Action
+461,65514b5741714aa5600291d1,2026-10-25,Sandisk,$SanDisk (SNDK.US)$ Not An expert there is W trend from the last high of high an,排除,已套用,更改：Event_Code、事件中文、Level、Action
+462,07752f0d3bdb2e566fac6c26,2026-10-24,Newmont,Newmont Corp. stock underperforms Friday when compared to competitors,排除,已套用,更改：Event_Code、事件中文、Level、Action
+463,0fb49b437e0a4dc128a492aa,2026-10-23,Kraft Heinz,"Kraft Heinz, Aramark sue UnitedHealth over ‘bogus’ health claims",排除,已套用,更改：Event_Code、事件中文、Level、Action
+464,65242908a3350aa699b7463b,2026-10-24,AT&T,"AT&T, T-Mobile tighten AI guardrails as autonomous networks remain years away",排除,已套用,更改：Event_Code、事件中文、Level、Action
+465,3be6de32f9c401b455afcb14,2026-10-24,Bristol Myers Squibb,Bristol Myers Squibb Co. stock underperforms Friday when compared to competitors,排除,已套用,更改：Event_Code、事件中文、Level、Action
+466,6c9f704277327af8fe965aa7,2026-10-25,Willis Towers Watson,Rs 3.78 Crore For Whistleblowing? Bengaluru Court Finds WTW’s Termination Of For,排除,已套用,更改：Event_Code、事件中文、Level、Action
+467,3e6db906a5cea826163f3fcb,2026-10-24,Amazon,Amazon allegedly cut deaf worker's interpreter to 10 minutes a shift,排除,已套用,更改：Event_Code、事件中文、Level、Action
+468,305c7a5423c06985bc5a822f,2026-10-24,BlackRock,BlackRock Inc. stock underperforms Friday when compared to competitors,排除,已套用,更改：Event_Code、事件中文、Level、Action
+469,690c6a08efe411751472981f,2026-10-24,Starbucks,Sea-Tac airport Starbucks to close after contract ends and concessions shift,排除,已套用,更改：Event_Code、事件中文、Level、Action
+470,42c69ea14055b181d7c8823f,2026-10-25,Ball Corporation,UPDATE: Wenatchee Ball Boy Dispute Sparks Retaliation Complaint,排除,已套用,更改：Event_Code、事件中文、Level、Action
+471,dfe970c66828e9a064c949b8,2026-10-24,"Rollins, Inc.",Rollins (ROL) Could Be 21% Below Fair Value Following AI Search Pressures,排除,已套用,更改：Event_Code、事件中文、Level、Action
+472,fdf646ab95d877df95cb7f93,2026-10-24,Parker Hannifin,Parker Hannifin Corp. stock underperforms Friday when compared to competitors,排除,已套用,更改：Event_Code、事件中文、Level、Action
+473,6ec06e01650a1b29a9da10cf,2026-10-24,Western Digital,Western Digital Earnings Fail to Get Stock Back on Track,排除,已套用,更改：Event_Code、事件中文、Level、Action
+474,b5001d1765879d8fd4a1f30e,2026-10-26,Walmart,Worker flown to burn center after electric shock at South Fort Myers Walmart; st,排除,已套用,更改：Event_Code、事件中文、Level、Action
+475,c92c4c2d4a6b3cc52459e13a,2026-10-23,Coinbase,Coinbase Ireland fined over safeguarding,修改,已套用,更改：Event_Code、事件中文、Level、Action
+476,374251fbbc6f84c2c074be1f,2026-10-24,McDonald's,MCD hikes salaries of 4k multi-tasking staff,排除,已套用,更改：Event_Code、事件中文、Level、Action
+477,60e98e70be99317e0d632b75,2026-10-24,Northern Trust,Northern Trust prepares for two days of doctors’ strikes disruption as pay dispu,排除,已套用,更改：Event_Code、事件中文、Level、Action
+478,e66fb3e21927173a7b3d9f67,2026-10-24,Quanta Services,Here's Why Quanta Services (PWR) Fell More Than Broader Market,排除,已套用,更改：Event_Code、事件中文、Level、Action
+479,5b278d0420807d8fb59a1c8f,2026-10-24,"Nike, Inc.",微信迴應耐克等賬號髮色情鏈接：系第三方外掛服務被攻破,修改,已套用,更改：Ticker、Event_Code、事件中文、Level、Action
+480,4a3796c136c3434bfe46e8b9,2026-10-23,IBM,IBM (IBM) Stock Shrugs Off Q3 Earnings As Margins Quietly Improve,排除,已套用,更改：Event_Code、事件中文、Level、Action
+481,d62b2fbb9e625bca32a2d32e,2026-10-24,Amazon,Amazon Just Walked Away From a $427 Million Data Center Plan After Neighbors Fou,排除,已套用,更改：Event_Code、事件中文、Level、Action
+482,310ee44c26b38b686cef6c7d,2026-10-24,Royal Caribbean Group,Royal Caribbean (RCL) Suffers a Larger Drop Than the General Market: Key Insight,排除,已套用,更改：Event_Code、事件中文、Level、Action
+483,cf2754f263b5dfbbe4c836cc,2026-10-24,Citigroup,Citigroup Inc. stock underperforms Friday when compared to competitors,排除,已套用,更改：Event_Code、事件中文、Level、Action
+484,fda211d975160dc278049fed,2026-10-24,"NVR, Inc.",Why Is NVR Stock Falling Friday? - NVR (NYSE:NVR),排除,已套用,更改：Event_Code、事件中文、Level、Action
+485,c75b669d4428d046ad7f5eec,2026-10-25,Ball Corporation,Severe storm drops ping-pong ball-sized hail across South Florida,排除,已套用,更改：Event_Code、事件中文、Level、Action
+486,447f291f142872642c91db50,2026-10-24,Uber,Uber Stock Fell as Instacart’s Sale Talks With Uber and DoorDash Surfaced. Here’,排除,已套用,更改：Event_Code、事件中文、Level、Action
+487,7ea22979f6e201eaa26cacb8,2026-10-24,DoorDash,Uber Stock Fell as Instacart’s Sale Talks With Uber and DoorDash Surfaced. Here’,排除,已套用,更改：Event_Code、事件中文、Level、Action
+488,ac63c93919469b78efdf38a6,2026-10-26,Qualcomm,Qualcomm schedules November 4 results as Qualcomm stock costs EUR 157.19,排除,已套用,更改：Event_Code、事件中文、Level、Action
+489,dfacc9360db381afa2474e37,2026-10-24,Walmart,North Carolina couple accused of Walmart thefts in multiple states captured,排除,已套用,更改：Event_Code、事件中文、Level、Action
+490,bf63396dc35679a5fe41838a,2026-10-23,Honeywell Technologies,Royal Bank Of Canada Has Lowered Expectations for Honeywell International (NASDA,排除,已套用,更改：Event_Code、事件中文、Level、Action
+491,cfd70bb7fd61107cf61c7d90,2026-10-24,Invesco,Invesco QQQ $QQQ Stake Cut by Seros Financial LLC,排除,已套用,更改：Event_Code、事件中文、Level、Action
+492,d862c7eaa35bccd0a00cf45a,2026-10-24,Walmart,Walmart Is Being Sued for Allegedly Deceiving Shoppers,排除,已套用,更改：Event_Code、事件中文、Level、Action
+493,0a01d57cc8e49ac6ee09b5ac,2026-10-24,Nvidia,Nvidia Stock’s 2 Critical Flaws and More Reasons an Analyst Says Sell,排除,已套用,更改：Event_Code、事件中文、Level、Action
+494,bbafd8d008f05cae0338e0d9,2026-10-25,Ball Corporation,Nicki Minaj’s Lawyers Seek to Withdraw From $275K Jingle Ball Production Lawsuit,排除,已套用,更改：Event_Code、事件中文、Level、Action
+495,5f53c3f31f29d4531cf1d4a9,2026-10-24,Take-Two Interactive,Take-Two Interactive Software Inc. stock underperforms Friday when compared to c,排除,已套用,更改：Event_Code、事件中文、Level、Action
+496,add29e3bb4196083e1110d6c,2026-10-23,Analog Devices,Are Computer and Technology Stocks Lagging Analog Devices (ADI) This Year?,排除,已套用,更改：Event_Code、事件中文、Level、Action
+497,a63531345b120aeb35f5602e,2026-10-24,Apple Inc.,iPhoneDuo開售首日被越獄,排除,已套用,更改：Event_Code、事件中文、Level、Action
+498,adda000a32f97a63d7263cdd,2026-10-24,J.B. Hunt,"J.B. Hunt Transport Services (JBHT) Reports Margin Pressure, Is The 18% Underval",修改,已套用,更改：Event_Code、事件中文、Level、Action
+499,96aacbfae7749824470d73f0,2026-10-24,Walmart,Three vehicles collide near San Angelo Walmart,排除,已套用,更改：Event_Code、事件中文、Level、Action
+500,808f99423e747af3d80290c5,2026-10-26,Aptiv,Audi Reshoring Could Lift Aptiv Stock And Other US Auto Supply Chain Names,排除,已套用,更改：Event_Code、事件中文、Level、Action
+501,18c509e6eed1bd34ec1a3c5a,2026-10-24,Starbucks,Starbucks Is Disappearing From Downtown Boston. Local Coffee Shops Are Cashing I,排除,已套用,更改：Event_Code、事件中文、Level、Action
+502,1076c30d8882b50ddc646bef,2026-10-25,Netflix,Netflix Is Officially Removing Jake Gyllenhaal’s Disturbing Cult Classic Thrille,排除,已套用,更改：Event_Code、事件中文、Level、Action
+503,d08852b02e565cc0dbdb7247,2026-10-24,MGM Resorts,MGM Resorts International stock underperforms Friday when compared to competitor,排除,已套用,更改：Event_Code、事件中文、Level、Action
+504,afba05d96f1afdde5fdd55cf,2026-10-25,Waste Management,R. Ashok seeks probe into alleged irregularities in waste management tenders,排除,已套用,更改：Event_Code、事件中文、Level、Action
+505,6fd672368199c6b7a9352548,2026-10-24,Automatic Data Processing,Automatic Data Processing Inc. stock underperforms Friday when compared to compe,排除,已套用,更改：Event_Code、事件中文、Level、Action
+506,59b3690e57066291bdd7426e,2026-10-25,Walmart,Pampa police arrest 18-year-old suspect in Walmart parking lot shooting,排除,已套用,更改：Event_Code、事件中文、Level、Action
+507,d43868cc00cff7aa601d5f91,2026-10-24,Coinbase,Coinbase Stock And Crypto Exchange Shares Under Fresh Political Pressure,排除,已套用,更改：Event_Code、事件中文、Level、Action
+508,7db0c09b67ecc00616cbbb39,2026-10-24,Darden Restaurants,"DRI Seizes 25,000 Kg Pakistan-Origin Watermelon Seeds Worth ₹2.02 Crore At Nhava",排除,已套用,更改：Event_Code、事件中文、Level、Action
+509,cfd5f32a4dc7e2faaf49b0e3,2026-10-24,Old Dominion,Old Dominion Freight Line Inc. stock underperforms Friday when compared to compe,排除,已套用,更改：Event_Code、事件中文、Level、Action
+510,dcc0f78bbbbb56c1348974ce,2026-10-23,Automatic Data Processing,Lower ADP's Fair Value Estimate by 10% to Reflect Short-Term Margin Pressure and,排除,已套用,更改：Event_Code、事件中文、Level、Action
+511,f750bf9fd94b2c72edd84102,2026-10-24,Mastercard,Mastercard Inc. stock underperforms Friday when compared to competitors,排除,已套用,更改：Event_Code、事件中文、Level、Action
+512,93b9a9e722a711b7aab911fe,2026-10-24,"NVR, Inc.",NVR Inc. stock underperforms Friday when compared to competitors,排除,已套用,更改：Event_Code、事件中文、Level、Action
+513,73acfffc07453d38ba1f248f,2026-10-26,UnitedHealth Group,"Binghamton Volleyball unable to hold early lead, falls to UNH in five sets",排除,已套用,更改：Event_Code、事件中文、Level、Action
+514,4fab4af107e6ba04936bb045,2026-10-24,CrowdStrike,CrowdStrike’s CEO Says a Wave of Cyber Attacks Are Coming,排除,已套用,更改：Event_Code、事件中文、Level、Action
+515,f4b7b1603946513d09ce4c71,2026-10-26,ServiceNow,ServiceNow Stock Rebounds as SaaSpocalypse Fears Fade: What to Expect from Earni,排除,已套用,更改：Event_Code、事件中文、Level、Action
+516,3bc670736a51ca30c4a850a9,2026-10-26,Amazon,Amazon formally withdraws data center application at GWU campus,排除,已套用,更改：Event_Code、事件中文、Level、Action
+517,b0c6cfdd70a86a4b734ed27f,2026-10-24,Intel,Hogville’s Kevin McPherson drops NEW INTEL including start to 2025 5-star prospe,排除,已套用,更改：Event_Code、事件中文、Level、Action
+518,92c2a46dc96f327a627ee83e,2026-10-23,U.S. Bancorp,Amazon cuts $85 off the Razer USB 4 Dock,排除,已套用,更改：Event_Code、事件中文、Level、Action
+519,605f56380f952e04d691b115,2026-10-23,Jabil,Lenovo’s latest Tab Plus Gen 2 with JBL Pro speakers just hit a new $256 all-tim,排除,已套用,更改：Event_Code、事件中文、Level、Action
+520,0e16787aa2d5772c4d6ea036,2026-10-24,Verisign,VeriSign Inc. stock underperforms Friday when compared to competitors,排除,已套用,更改：Event_Code、事件中文、Level、Action
+521,ca7380d9bfcbca0bae5a18d2,2026-10-24,Darden Restaurants,"DRI seizes 25,000 kg Pakistan- origin watermelon seeds, arrest two persons for e",排除,已套用,更改：Event_Code、事件中文、Level、Action
+522,0bbde9dc38a87a72f0ffab17,2026-10-24,Tractor Supply,Tractor Supply Co. stock underperforms Friday when compared to competitors,排除,已套用,更改：Event_Code、事件中文、Level、Action
+523,348ad538215196555f0504af,2026-10-24,McCormick & Company,McCormick (MKC) Could Be 12% Undervalued As Synergy Hopes Clash With Share Price,排除,已套用,更改：Event_Code、事件中文、Level、Action
+524,7e316a3dd02c53f5ca6dc23b,2026-10-24,EQT Corporation,EQT Expects $1 Billion Windfall on Storm-Driven Gas Price Rally,排除,已套用,更改：Event_Code、事件中文、Level、Action
+525,6fa6f961145fded6f572dece,2026-10-23,Walmart,"2 charged following numerous Walmart thefts, Washington County, Virginia, author",排除,已套用,更改：Event_Code、事件中文、Level、Action
+526,e5c2a365f53460eb063958d0,2026-10-26,Airbnb,Fresno police investigate shots fired at Airbnb rental in Tower District,排除,已套用,更改：Event_Code、事件中文、Level、Action
+527,65cf0d66fb3b53207b681576,2026-10-26,FedEx,"Police: Nearly $1 Million in Pokémon, Other Cards Stolen From FedEx Truck",排除,已套用,更改：Event_Code、事件中文、Level、Action
+528,75da0ac00bd66ece01293a94,2026-10-24,Walmart,Walmart Employee Killed in Store Parking Lot Just Days After Celebrating Her Bir,排除,已套用,更改：Event_Code、事件中文、Level、Action
+529,d1c75b39916ee91709f52680,2026-10-24,Quest Diagnostics,Medical lab Quest Diagnostics cyber breach may impact patient records,修改,已套用,更改：Event_Code、事件中文、Level、Action
+530,e0b375e78a750afd14236021,2026-10-25,Amazon,Indigenous voters in Brazil’s Amazon fear missing runoff after court denies tran,排除,已套用,更改：Event_Code、事件中文、Level、Action
+531,4509e723981e05c1d117a200,2026-10-24,AT&T,"Stock Market Today, Oct. 23: AT&T Slides on SpaceX Cell-Site Talks",修改,已套用,更改：Event_Code、事件中文、Level、Action
+532,9ce49c75c6bd5a9bb4cea576,2026-10-24,Costco,Runover death outside Costco in Southern California is investigated as murder,排除,已套用,更改：Event_Code、事件中文、Level、Action
+533,9193f29d2882b2b8833b6ffe,2026-10-23,Verizon,Plan Commission denies proposed Verizon cell tower amid flooding concerns,排除,已套用,更改：Event_Code、事件中文、Level、Action
+534,cbbc5fdde57dc56c171b9ca6,2026-10-26,Uber,11-year-old girl in custody over alleged armed robbery of Uber Eats driver,排除,已套用,更改：Event_Code、事件中文、Level、Action
+535,d101be225ab4714be9937b65,2026-10-24,Capital One,Court approves Capital One data breach deal,修改,已套用,更改：Event_Code、事件中文、Level、Action
+536,41e20838c493f332dca14861,2026-10-24,Amazon,Amazon communities lose water as mining and deforestation reshape rivers - news,排除,已套用,更改：Event_Code、事件中文、Level、Action
+537,b3675448b8dfb09c95b35c30,2026-10-24,Goldman Sachs,Former Goldman Sachs chief Sherwood leaves Britain amid tax hike fears,排除,已套用,更改：Event_Code、事件中文、Level、Action
+538,94885e458b8fcab705bd0209,2026-10-25,Ball Corporation,Aranda unable to catch Contreras foul ball | 10/24/2026,排除,已套用,更改：Event_Code、事件中文、Level、Action
+539,22a56251dfb3f01a27778045,2026-10-24,Delta Air Lines,美國因法國航空和荷蘭皇家航空在伊拉克禁飛區飛行而對其處以罰款,排除,已套用,更改：Event_Code、事件中文、Level、Action
+540,aac8cc578db9299cf955d3e7,2026-10-24,Amgen,Amgen Inc. stock underperforms Friday when compared to competitors,排除,已套用,更改：Event_Code、事件中文、Level、Action
+541,e2187bf99c12839598aeedf4,2026-10-26,BlackRock,Pan African Resources BlackRock Holding Falls Below 5% Threshold on 22 October 2,排除,已套用,更改：Event_Code、事件中文、Level、Action
+542,6a25de29125a7d030409c2c7,2026-10-24,Netflix,Scarlett Johansson's (Very) R-Rated 108-Minute Sci-Fi Thriller Is Being Cut From,排除,已套用,更改：Event_Code、事件中文、Level、Action
+543,6e03119fe6bee992b5551d45,2026-10-26,Boeing,A Jet2 Boeing 737 veered off the runway during landing at Birmingham,排除,已套用,更改：Event_Code、事件中文、Level、Action
+544,cbb406f889b89e11c496c618,2026-10-24,CrowdStrike,CrowdStrike CEO George Kurtz: Will see a lot of breaches in coming months from P,排除,已套用,更改：Event_Code、事件中文、Level、Action
+545,f9bfc60a2d34fc6c77c87818,2026-10-23,Lumentum,"Lumentum Holdings (LITE) Fell In The AI Optics Selloff, Is It Still Undervalued?",排除,已套用,更改：Event_Code、事件中文、Level、Action
+546,785c162593f4b4f003e01e13,2026-10-24,"Rollins, Inc.","ROL Q3 deep dive: AI-driven search disrupts residential leads, management adapts",排除,已套用,更改：Event_Code、事件中文、Level、Action
+547,706e64442595f2ea23298d8e,2026-10-26,Norfolk Southern,"NSC directs TAJ to stop issuing blue demo license plates, cites misuse that faci",排除,已套用,更改：Event_Code、事件中文、Level、Action
+548,a23e9402d82f34aa59ad3ae6,2026-10-26,MetLife,Boos for Jets as they fall to winless Dolphins at MetLife Stadium,排除,已套用,更改：Event_Code、事件中文、Level、Action
+549,cdf68e3af143225022e1413e,2026-10-23,Globe Life,Globe Life downgraded at Piper Sandler after Q3 earnings announcement,修改,已套用,更改：Event_Code、事件中文、Level、Action
+550,a14adc5684fcf8e9259d0c23,2026-10-25,Waste Management,Karnataka BJP leader R Ashoka alleges irregularities in Rs 133-crore Bengaluru w,排除,已套用,更改：Event_Code、事件中文、Level、Action
+551,6759be54fa63be3bfdea6576,2026-10-23,Roper Technologies,ROP Air Wing rescues injured hiker in Saham,排除,已套用,更改：Event_Code、事件中文、Level、Action
+552,9768bfa870fd5b3322147198,2026-10-24,American Express,AXP Stock Layoffs: What to Know About the Latest American Express Job Cuts,修改,已套用,更改：Event_Code、事件中文、Level、Action
+553,6399caaf139163e77c7c64bf,2026-10-23,U.S. Bancorp,ACVF Divests from Wells Fargo and U.S. Bancorp as OCC Report Confirms De-Banking,排除,已套用,更改：Event_Code、事件中文、Level、Action
+554,a6e05c254ef6942f284aac0b,2026-10-23,Wells Fargo,ACVF Divests from Wells Fargo and U.S. Bancorp as OCC Report Confirms De-Banking,排除,已套用,更改：Event_Code、事件中文、Level、Action
+555,31ff6476a4d1d67764e7e79d,2026-10-23,Salesforce,“We never stopped investing in our talent”: Salesforce doubles down on junior hi,排除,已套用,更改：Event_Code、事件中文、Level、Action
+556,5c5e9909e775f050a63ad637,2026-10-24,American Express,Road near American Express Stadium in Brighton closed after report of crash,排除,已套用,更改：Event_Code、事件中文、Level、Action
+557,b025e8f74f7078f7bc65fe5e,2026-10-25,UnitedHealth Group,"College Football: UNH falls to Merrimack, now 2-7 on season",排除,已套用,更改：Event_Code、事件中文、Level、Action
+558,8421f426be4471c319b46eab,2026-10-25,Amazon,"Amazon settles with ex-AWS managers in kickback lawsuit, GeekWire reports",修改,已套用,更改：Event_Code、事件中文、Level、Action
+559,2f5799dce2c1a3ddeaae5d30,2026-10-23,Intuit,Intuit launched Credit Karma Tax. Intuit stock slips 1.76 percent,排除,已套用,更改：Event_Code、事件中文、Level、Action
+560,30d59f06b298186504550998,2026-10-24,Uber,"Uber Technologies (UBER) Stock Dropped, What Is Driving Attention Now?",排除,已套用,更改：Event_Code、事件中文、Level、Action
+561,fb7af39dbde3779460560101,2026-10-24,Uber,"Uber cut 3,300 jobs in September. Now it is giving 30,000 employees ChatGPT",修改,已套用,更改：Event_Code、事件中文、Level、Action
+562,d761c526403fde2a7d7f4b01,2026-10-23,Starbucks,"Starbucks in Hong Kong writes 'Kimchi' on Korean customer's cup, sparking racism",排除,已套用,更改：Event_Code、事件中文、Level、Action
+563,e651ade2afc2069b2b967d9d,2026-10-25,DoorDash,‘I felt threatened’: Massachusetts McDonald’s worker calls police on DoorDash dr,排除,已套用,更改：Event_Code、事件中文、Level、Action
+564,b87d7b9212723404141180bf,2026-10-24,CVS Health,Defense attorneys allege CVS attacker suffered from untreated mental illness as ,排除,已套用,更改：Event_Code、事件中文、Level、Action
+565,163b37f414cb65124efbab20,2026-10-23,IBM,"IBM’s ‘true ROI’ comment hits shares, exposing ETF risks",排除,已套用,更改：Event_Code、事件中文、Level、Action
+566,f970c95e9b58fdfbff345484,2026-10-24,Intel,"Top intel Democrats say they've ""war-gamed"" how to react if Trump alleges foreig",排除,已套用,更改：Event_Code、事件中文、Level、Action
+567,9bc7ae106c2bad111ee422bb,2026-10-24,AT&T,AT&T Stock Sinks on Subscriber and SpaceX Worries. Is the Stock a Buy on the Dip,修改,已套用,更改：Event_Code、事件中文、Level、Action
+568,34c068b370562cc422770e47,2026-10-23,Lam Research,人工智能建設的高昂成本令Meta及其他熱門科技股承壓,排除,已套用,更改：Event_Code、事件中文、Level、Action
+569,0aebf85310b3c9c9938c7927,2026-10-23,Nvidia,人工智能建設的高昂成本令Meta及其他熱門科技股承壓,排除,已套用,更改：Event_Code、事件中文、Level、Action
+570,d55f49efed1c1e72e0e254b5,2026-10-24,Gilead Sciences,Gilead Sciences stock trades 0.53 percent below EUR 140.02,排除,已套用,更改：Event_Code、事件中文、Level、Action
+571,ed0dd8c636a2a819c2955b1a,2026-10-24,Yum! Brands,Yum! Brands Slides as Sector Weakness Appears to Outweigh Recent Positive Brand ,排除,已套用,更改：Event_Code、事件中文、Level、Action
+572,f1a56da797721e63ca627847,2026-10-26,Gilead Sciences,Gilead Sciences stock trades 0.53 percent below its Xetra close,排除,已套用,更改：Event_Code、事件中文、Level、Action
+573,6a65bedc60ac64bd53230c8d,2026-10-24,American Express,American Express To Cut 5% Of Global Workforce; Raises 2026 EPS Outlook,修改,已套用,更改：Event_Code、事件中文、Level、Action
+574,46e9e9987bb566505796afa9,2026-10-23,Automatic Data Processing,"Earnings call transcript: Groupe ADP Q3 2026 revenue miss, stock slips",排除,已套用,更改：Event_Code、事件中文、Level、Action
+575,20ad209800c27b68d9b43bf5,2026-10-25,Lam Research,Arm Stock Is Down 8% Last Week. What Does Lam Research Have to Do With It?,排除,已套用,更改：Event_Code、事件中文、Level、Action
+576,28f80edb3bcf6f7996d2f4db,2026-10-24,Goldman Sachs,Former Goldman Sachs boss leaves Britain over rising tax fears just days before ,排除,已套用,更改：Event_Code、事件中文、Level、Action
+577,d2c4443726cdbe7440830e41,2026-10-24,Synopsys,Synopsys stock trades 0.19 percent below its Xetra close,排除,已套用,更改：Event_Code、事件中文、Level、Action
+578,d74dfd1265b687b12040ff49,2026-10-24,Goldman Sachs,Former Goldman Sachs chief Sherwood leaves Britain as tax hike fears mount,排除,已套用,更改：Event_Code、事件中文、Level、Action
+579,48e6a72fcceec592c39f0fc3,2026-10-25,Bank of America,Bank of America warns of 2027 stock market risk few expect,排除,已套用,更改：Event_Code、事件中文、Level、Action
+580,7cbbce9e41c8508e01cda0b4,2026-10-25,Walmart,Watch: Teen accused of carrying loaded gun at Mass. Walmart flees from officers,排除,已套用,更改：Event_Code、事件中文、Level、Action
+581,6c9ebd713be8ed2bed7211ec,2026-10-24,Broadcom,Broadcom Stocks Rise as Decade-Long VMware Deal Targets AI Workloads,排除,已套用,更改：Event_Code、事件中文、Level、Action
+582,533f65a581928cfd13228e05,2026-10-23,Norfolk Southern,Detours for Columbus drivers as Norfolk Southern closes railroad crossings,排除,已套用,更改：Event_Code、事件中文、Level、Action
+583,fad39a4d3dd56e25fe8f9351,2026-10-25,Bristol Myers Squibb,Bloomsbury Publishing (LSE:BMY) Stock Faces H1 Results Profit Reset,排除,已套用,更改：Event_Code、事件中文、Level、Action
+584,029107ebdb4a938297acf861,2026-10-24,Goldman Sachs,METC Maintained by Goldman Sachs -- Price Target Lowered to $8.0,排除,已套用,更改：Event_Code、事件中文、Level、Action
+585,8a4f62b1023004604c62c834,2026-10-24,Amazon,News | Amazon switches gears on project after backlash in country's largest data,排除,已套用,更改：Event_Code、事件中文、Level、Action
+586,19a800b80f2688a1af8c99d0,2026-10-24,Amgen,Here's Why Amgen (AMGN) Fell More Than Broader Market,排除,已套用,更改：Event_Code、事件中文、Level、Action
+587,3f6505686fc50beabe0f132d,2026-10-25,Merck & Co.,Merck (MRK) Stock May Be 38% Undervalued Following Melanoma Vaccine Results,排除,已套用,更改：Event_Code、事件中文、Level、Action
+588,354a33a681fe8181a9ecd52d,2026-10-23,A. O. Smith,Critical HPE Aruba AOS-8 Vulnerability Allows Unauthenticated Network Attacks,修改,已套用,更改：Ticker、Company、Event_Code、事件中文、Level、Action
+589,4e6e1d4f0d7846d0207f4f7d,2026-10-24,Electronic Arts,Electronic Arts Shuts Down BioWare and Cancels Mass Effect: Inside the Four-Deca,修改,已套用,更改：Event_Code、事件中文、Level、Action
+590,87cdc70030df3fa94471c2d9,2026-10-25,Uber,'My Uber crashed as I tried to avoid chaotic NFL Paris Game transport',排除,已套用,更改：Event_Code、事件中文、Level、Action
+591,e49f135ab80db6de85937ecd,2026-10-26,Comfort Systems USA,FIX Q3 deep dive: backlog surge and margin mix drive investor debate,排除,已套用,更改：Event_Code、事件中文、Level、Action
+592,5a0e8da4302677fa52a56de5,2026-10-23,Devon Energy,Devon Energy: Hitting An Oil Wall (Rating Downgrade),排除,已套用,更改：Event_Code、事件中文、Level、Action
+593,8c15a30f7ecbd31f4d52a81b,2026-10-25,Salesforce,Salesforce Inc. $CRM Stock: Beaumont Financial Advisors LLC Cuts Position,排除,已套用,更改：Event_Code、事件中文、Level、Action
+594,26e35df7e9e13ac52c8ad4fe,2026-10-24,Bristol Myers Squibb,Bristol Myers Squibb Reports Patient Death in Early CAR-T Therapy Trial for Auto,修改,已套用,更改：Event_Code、事件中文、Level、Action
+595,4111ae9e8a196f2fad23f30d,2026-10-24,Verizon,"SpaceX (NASDAQ:SPCX) Eyes 80,000 Cell Sites. Why Are AT&T, Verizon and T-Mobile ",修改,已套用,更改：Event_Code、事件中文、Level、Action
+596,4de117ef6a27d06d85f718bc,2026-10-25,Amazon,"Amazon drops 1TB M5 MacBook Air to $1,399, save $200",排除,已套用,更改：Event_Code、事件中文、Level、Action
+597,2b479ef394a1f490b101f9e4,2026-10-24,American Express,American Express to make job cuts as AI revolution ramps up,修改,已套用,更改：Event_Code、事件中文、Level、Action
+598,522dbd8bab8c538318768a40,2026-10-24,BlackRock,BlackRock TCP Capital remains a sell amid struc...,排除,已套用,更改：Event_Code、事件中文、Level、Action
+599,d36b9692fe6b8f2dbd169a84,2026-10-24,Goldman Sachs,"AI adoption among US small businesses reaches 86 pc, but full integration remain",排除,已套用,更改：Event_Code、事件中文、Level、Action
+600,bf82ab52d4cf074d762ed3c7,2026-10-25,Goldman Sachs,"AI adoption among US small businesses reaches 86 pc, but full integration remain",排除,已套用,更改：Event_Code、事件中文、Level、Action
+601,906ea4354dba4093c265f00e,2026-10-23,KLA Corporation,"Down 21.0% in 4 Weeks, Here's Why KLA (KLAC) Looks Ripe for a Turnaround",修改,已套用,更改：Event_Code、事件中文、Level、Action
+602,c1d077457a4df2c1d897fd11,2026-10-24,DoorDash,DoorDash (DASH) Faces Olo Threat As Fair Value Debate Gets Harder,排除,已套用,更改：Event_Code、事件中文、Level、Action
+603,11bb82a230813451188ce9de,2026-10-23,McDonald's,McDonald's Has Lost a Fifth of Its Value in 2026. Is It Time to Buy?,排除,已套用,更改：Event_Code、事件中文、Level、Action
+604,8bf299f2abe123fce2830ecc,2026-10-24,CBRE Group,"CBRE (CBRE) stock trades down, here is why",排除,已套用,更改：Event_Code、事件中文、Level、Action
+605,368de70208aa63beda886336,2026-10-24,Walmart,Walmart Workers In Colo. Say 'Off-The-Clock' Work Is Routine,排除,已套用,更改：Event_Code、事件中文、Level、Action
+606,e8b3d812d31a36d173d5858f,2026-10-24,Willis Towers Watson,Bengaluru court awards ₹3.78 crore to whistleblower terminated by Willis Towers ,修改,已套用,更改：Event_Code、事件中文、Level、Action
+607,b813b363a5d332a04da7e4fe,2026-10-25,Boeing,"American Airlines Boeing 787 Pilot Quits $300,000 Job: Nobody Replied",排除,已套用,更改：Event_Code、事件中文、Level、Action
+608,45db7f28a25a99b4b10a51a3,2026-10-24,Intel,"Scoop: U.S. intel memo warns of ""advanced"" Iranian plots to kill officials abroa",排除,已套用,更改：Event_Code、事件中文、Level、Action
+609,81c7786c300efe2ab3a28bdf,2026-10-26,Walmart,"Florida Man Fights Fellow Uber Passenger On the Way to Walmart, Claiming They To",排除,已套用,更改：Event_Code、事件中文、Level、Action
+610,5cdae840533f60508f89a51b,2026-10-26,Cummins,Cummins declares USD 2.20 dividend as Cummins stock costs EUR 463.25,排除,已套用,更改：Event_Code、事件中文、Level、Action
+611,5cba69d63bd9e5b70bdf72de,2026-10-24,Costco,Chabad rabbi arrested on suspicion of murder after fatal Costco collision in Cal,排除,已套用,更改：Event_Code、事件中文、Level、Action
+612,e654801ddf0ae6d15a4435ab,2026-10-26,Uber,"Florida Man Fights Fellow Uber Passenger On the Way to Walmart, Claiming They To",排除,已套用,更改：Event_Code、事件中文、Level、Action
+613,cb6dbbc53cc09c603494d546,2026-10-23,Verizon,"SpaceX’s $80 Billion Wireless Ambition Threatens AT&T, Verizon and T-Mobile",修改,已套用,更改：Event_Code、事件中文、Level、Action
+614,3220c7b0d7bfbb65e75dd6ac,2026-10-25,Airbnb,Airbnb CEO Brian Chesky warns two types of people won’t survive the AI era,排除,已套用,更改：Event_Code、事件中文、Level、Action
+615,4e7c469370abf837a98744c4,2026-10-24,Walmart,Officer who fatally shot 1-year-old in Walmart parking lot resigns,排除,已套用,更改：Event_Code、事件中文、Level、Action
+616,d77f24209fb688c21b7cd048,2026-10-24,Walmart,2nd suspect arrested for murder of 81-year-old man during fight outside Gainesvi,排除,已套用,更改：Event_Code、事件中文、Level、Action
+617,d27daa1cabda828452781387,2026-10-23,Waste Management,Wrongful death suit filed against waste management company for death of Seattle ,排除,已套用,更改：Event_Code、事件中文、Level、Action
+618,f514a4b0e0c376f5b69fb9b5,2026-10-24,Uber,"Uber Deploys ChatGPT Work to 30,000 Staff Weeks After Cutting 3,300 Corporate Jo",修改,已套用,更改：Event_Code、事件中文、Level、Action
+619,d35e78f427ea5d866b773da3,2026-10-23,American Express,American Express Q3 earnings beat as network volume disappoints (AXP:NYSE),排除,已套用,更改：Event_Code、事件中文、Level、Action
+620,676ebb751d503515cef5e001,2026-10-24,Intuit,"Wells Fargo, Arm, Intuit Keep Their Stock Off OKX-ICE Token Venue as Objections ",排除,已套用,更改：Event_Code、事件中文、Level、Action
+621,4836a0cc244e13949e80abff,2026-10-26,Qualcomm,Qualcomm To Reportedly Conduct Global Layoffs In Performance-Driven Overhaul,修改,已套用,更改：Event_Code、事件中文、Level、Action
+622,0a0eff75124f75d9b20660b8,2026-10-24,Wells Fargo,"Wells Fargo, Arm, Intuit Keep Their Stock Off OKX-ICE Token Venue as Objections ",排除,已套用,更改：Event_Code、事件中文、Level、Action
+623,2a647b560800798d7b11e794,2026-10-23,Automatic Data Processing,ADP: TAV growth offset Paris weakness; 2026 EBITDA outlook moved to the range’s ,排除,已套用,更改：Event_Code、事件中文、Level、Action
+624,7473a560ee5848b485f510be,2026-10-24,Airbnb,VIDEO: Airbnb drops mandatory checkout chores starting Nov. 20,排除,已套用,更改：Event_Code、事件中文、Level、Action
+625,4fd66c69eb5b337a14dd03c9,2026-10-23,American Express,American Express Stock Forecast: Q3 Beat and Higher Guidance Leave AXP Just Belo,排除,已套用,更改：Event_Code、事件中文、Level、Action
+626,cac357236e870c2cd742bba8,2026-10-23,Newmont,NEM Q3 Earnings Call Highlights 2027 Growth and Cost Pressures,排除,已套用,更改：Event_Code、事件中文、Level、Action
+627,653ba6bf375b587a98419800,2026-10-26,Apple Inc.,Apple (NASDAQ: AAPL) Hardware Offensive Arrives As AI Spending Fears Rattle Riva,排除,已套用,更改：Event_Code、事件中文、Level、Action
+628,8c448418dabf1e13462ace9e,2026-10-24,Goldman Sachs,Polar LNG Shakeup Puts Former Goldman Sachs Banker in Charge,排除,已套用,更改：Event_Code、事件中文、Level、Action
+629,da3daaad6a27754184ab07da,2026-10-23,"Nike, Inc.","Analysts’ Opinions Are Mixed on These Consumer Cyclical Stocks: Nike (NKE), Winn",排除,已套用,更改：Event_Code、事件中文、Level、Action
+630,a80d2016c05b3282ec0cf304,2026-10-24,"NVR, Inc.","NVR, Inc. Stock 12‑Month Price Target Cut to $6262, Implies 2% Upside",排除,已套用,更改：Event_Code、事件中文、Level、Action
+631,02da6f70ff16e692c872eecf,2026-10-26,Netflix,"Rapper Pooh Shiesty, jailed for Gucci Mane stickup, whines about 'inhumane' cond",排除,已套用,更改：Event_Code、事件中文、Level、Action
+632,eff507a69ce4a59d18f2a637,2026-10-24,Uber,Uber Passenger Alleges 'Scam' After Driver Shows 'Fake Screenshot' Of Fare; Take,排除,已套用,更改：Event_Code、事件中文、Level、Action
+633,ce8e5f9fe7b53c0842a836b9,2026-10-23,Northern Trust,Northern Trust (NTRS) Could Be 10% Undervalued After Third Quarter Earnings Beat,排除,已套用,更改：Event_Code、事件中文、Level、Action
+634,7628749483136f3a4879380c,2026-10-24,Wabtec,Wabtec stock underperforms Friday when compared to competitors,排除,已套用,更改：Event_Code、事件中文、Level、Action
+635,566a311089c18c883804eff8,2026-10-25,PepsiCo,"Explosion, fire occur at PepsiCo subsidiary's building in US",修改,已套用,更改：Event_Code、事件中文、Level、Action
+636,008f845f79f3c35e3c5a0048,2026-10-23,Corteva,Corteva Declares $0.05 Quarterly Dividend After Vylor Spin-Off,排除,已套用,更改：Event_Code、事件中文、Level、Action
+637,5d5baa54d89d35274a308cae,2026-10-24,PNC Financial Services,Suspect gets away with cash after threatening teller at Cypress PNC Bank,排除,已套用,更改：Event_Code、事件中文、Level、Action
+638,b057c69a4ea86a1052c3919b,2026-10-25,Simon Property Group,"Simon Property Group, Inc. $SPG Holdings Cut by Sterling Capital Management LLC",排除,已套用,更改：Event_Code、事件中文、Level、Action
+639,317f7d487d152836788ef47e,2026-10-25,Microsoft,Xbox COO Helen Chiang Leaves Microsoft After Just Three Months in the Role,排除,已套用,更改：Event_Code、事件中文、Level、Action
+640,08ab6d978d885ee97a48bfbf,2026-10-25,Cooper Companies (The),Xbox COO Helen Chiang Leaves Microsoft After Just Three Months in the Role,排除,已套用,更改：Event_Code、事件中文、Level、Action
+641,a2c4c7d33a69868763b3e6fa,2026-10-24,Walmart,"No evidence driver's age contributed to deadly Walmart crash, police say",排除,已套用,更改：Event_Code、事件中文、Level、Action
+642,7284e2de15489d4ae5780672,2026-10-24,Nvidia,Apple is set to take back the market-cap crown from Nvidia. Upcoming earnings ma,排除,已套用,更改：Event_Code、事件中文、Level、Action
+643,edbe48923731a8131300ff65,2026-10-26,Walmart,😺 Walmart announces AI shopping controls,排除,已套用,更改：Event_Code、事件中文、Level、Action
+644,9b8855874a05d02c2cc2e187,2026-10-24,Starbucks,$325K Starbucks COBRA notice class action settlement,排除,已套用,更改：Event_Code、事件中文、Level、Action
+645,fff3b0cb598e4af8318a0457,2026-10-24,Applied Materials,Applied Materials stays a buy as AI demand boos...,排除,已套用,更改：Event_Code、事件中文、Level、Action
+646,2b1bb0dee46247c41356f9b4,2026-10-25,Walmart,"Walmart Worker Killed, Carjacking Shooting Plea: Eastern Montco News",排除,已套用,更改：Event_Code、事件中文、Level、Action
+647,f1900d0d9c626af4bfac150e,2026-10-24,Walmart,Longtime Walmart worker leaving shift gunned down in the parking lot by masked s,排除,已套用,更改：Event_Code、事件中文、Level、Action
+648,a0419bc0a9d20b1ae86ec80f,2026-10-23,Nvidia,Ignore Near-Term Friction: Nvidia’s Unmatched Scale and CUDA Ecosystem Lock-In M,排除,已套用,更改：Event_Code、事件中文、Level、Action
+649,edc866931d2284f587ead5cb,2026-10-24,U.S. Bancorp,Anker’s Nano 10-in-1 USB-C hub hits a new low price on Amazon,排除,已套用,更改：Event_Code、事件中文、Level、Action
+650,33116ad1fa2923dc92886b8a,2026-10-25,Goldman Sachs,AI Fatigue Hits Korea: Why Goldman Sachs Slashed Kospi's 12-Month Target?,排除,已套用,更改：Event_Code、事件中文、Level、Action
+651,0b5023c54d7f6c06b7a2aedf,2026-10-24,Walmart,Second suspect surrenders in Gainesville Walmart parking loot shooting that kill,排除,已套用,更改：Event_Code、事件中文、Level、Action
+652,0c47ebaad4ba937b04bc0a0a,2026-10-24,Smurfit Westrock,Smurfit Westrock PLC stock underperforms Friday when compared to competitors,排除,已套用,更改：Event_Code、事件中文、Level、Action
+653,dbfeeda9115065455beb7612,2026-10-25,Sandisk,Western Digital Stock Falls 3% After Beat: Sandisk Oct 29,排除,已套用,更改：Event_Code、事件中文、Level、Action
+654,e19ea48df590094b3ce6dcf9,2026-10-24,Walmart,Senatobia interim police chief steps down following AG ruling in fatal Walmart s,排除,已套用,更改：Event_Code、事件中文、Level、Action
+655,bb5f7a9d31ed07372f6d7220,2026-10-25,Western Digital,Western Digital Stock Falls 3% After Beat: Sandisk Oct 29,排除,已套用,更改：Event_Code、事件中文、Level、Action
+656,3b97f10929e370fd9406520f,2026-10-24,Lululemon Athletica,Lululemon (LULU) Suffers a Larger Drop Than the General Market: Key Insights,排除,已套用,更改：Event_Code、事件中文、Level、Action
+657,8f00e1ee33fd046da47beb24,2026-10-25,Sandisk,South Korea's SK Hynix Shelves Solidigm's US IPO; Fading NAND Expansion Risk a B,排除,已套用,更改：Event_Code、事件中文、Level、Action
+658,7b626f5ffb5415e0cd053e08,2026-10-24,Nvidia,"SpaceX's $40 Billion Debt Raise to Buy Nvidia Chips Hits Snag, Sounding AI Bond-",排除,已套用,更改：Event_Code、事件中文、Level、Action
+659,76cbfac0afcd89ae94b851ec,2026-10-23,CME Group,Cattle futures flat as traders await Cattle on Feed report - CME,排除,已套用,更改：Event_Code、事件中文、Level、Action
+660,35f871dbf09b6103ca2cee07,2026-10-25,Cincinnati Financial,Cincinnati Financial (CINF) Stock Could Be 27% Overvalued On Modest Excess Retur,排除,已套用,更改：Event_Code、事件中文、Level、Action
+661,d97c67201819aa7f4ddb1c22,2026-10-23,"NVR, Inc.",NVR downgraded at BofA Securities after Q3 earnings announcement (NVR:NYSE),修改,已套用,更改：Event_Code、事件中文、Level、Action
+662,d1670a33088ef7130f5731cc,2026-10-24,Tractor Supply,Tractor Supply Just Dropped A Big Discount On The Massimo Mini Truck,排除,已套用,更改：Event_Code、事件中文、Level、Action
+663,d65c2684a4034a0cdbfb75bd,2026-10-26,Ball Corporation,Cleveland Browns cornerback Tyson Campbell rips out the ball from Carnell Tate f,排除,已套用,更改：Event_Code、事件中文、Level、Action
+664,56920c4c5b579114e18a988c,2026-10-24,GoDaddy,"Not admitting failure in job interviews is a major red flag, says GoDaddy CEO Am",排除,已套用,更改：Event_Code、事件中文、Level、Action
+665,7e4f243b97aa270b46fed39e,2026-10-25,Netflix,Brad Pitt's 126-Minute 'Jack Ryan' Substitute Action Thriller Is Officially Bein,排除,已套用,更改：Event_Code、事件中文、Level、Action
+666,6db4068a90796fab988bcc2e,2026-10-25,Blackstone Inc.,Blackstone (BX) Stock Could Be 24% Undervalued Following AI Data Center Expansio,排除,已套用,更改：Event_Code、事件中文、Level、Action
+667,46ad19f1c136baf0f40ba1d1,2026-10-26,Carnival Corporation,Is Carnival (CCL) Undervalued As Its Dividend Returns?,排除,已套用,更改：Event_Code、事件中文、Level、Action
+668,cb3a3172aaadc5b9540accbf,2026-10-23,"Tesla, Inc.",美媒：SpaceX與特斯拉的合併或面臨反壟斷審查,排除,已套用,更改：Event_Code、事件中文、Level、Action
+669,10ab3a3ddb1d011d2da5f5a4,2026-10-24,CMS Energy,Chiropractor accused of posing as doctor in $2B fraud bust; Big Tech backs prior,排除,已套用,更改：Event_Code、事件中文、Level、Action
+670,d17d441b503e364ea592923f,2026-10-24,Cooper Companies (The),"Xbox COO to leave company, Verge reports",排除,已套用,更改：Event_Code、事件中文、Level、Action
+671,d2dd1824f643e997b5ca98aa,2026-10-24,Genuine Parts Company,Is Genuine Parts Co (GPC) a Bargain After 3.9% Drop? GF Value Sa,排除,已套用,更改：Event_Code、事件中文、Level、Action
+672,8301cc2a9495f1f91167b841,2026-10-24,S&P Global,S&P Global Ratings Identifies 146 Delayed or Canceled U.S. Data Center Projects,排除,已套用,更改：Event_Code、事件中文、Level、Action
+673,3ac858216dae9ad6a962ae81,2026-10-23,Diamondback Energy,Oil Prices Above $100 Put Diamondback Energy Stock And Permian Peers In Focus,排除,已套用,更改：Event_Code、事件中文、Level、Action
+674,643199b14e632357bdd4c791,2026-10-24,Hewlett Packard Enterprise,Hewlett Packard Enterprise Lobbying Rises Amid Antitrust Scrutiny,排除,已套用,更改：Event_Code、事件中文、Level、Action
+675,5349d63454311fe0cfd59ab4,2026-10-24,Goldman Sachs,Goldman Sachs Flags Two‑Way Risks to Their 2026 Oil Price Outlook,排除,已套用,更改：Event_Code、事件中文、Level、Action
+676,474d8ce0297c930aae611b70,2026-10-23,Honeywell Technologies,Honeywell Technologies price target lowered to $269 from $270 at RBC Capital,排除,已套用,更改：Event_Code、事件中文、Level、Action
+677,fbeba36e3c7f65e6097ad5ce,2026-10-23,Capital One,Britt McHenry Removed From Wizards Game at Capital One Arena,排除,已套用,更改：Event_Code、事件中文、Level、Action
+678,66e8d74c084fd7bb45926eab,2026-10-24,Amazon,Amazon’s Trainium Takes a Strike at the Training King,排除,已套用,更改：Event_Code、事件中文、Level、Action
+679,fbcb970de7804b6fb370f25f,2026-10-25,Netflix,Netflix Bump Fails to Land Syfy Series ‘Revival’ a Season 2,排除,已套用,更改：Event_Code、事件中文、Level、Action
+680,2d4c5bfc7989f04b2a917c37,2026-10-24,Walmart,Second suspect in custody in Gainesville Walmart shooting that police say killed,排除,已套用,更改：Event_Code、事件中文、Level、Action
+681,0389c3163613dceeaaa3ff1d,2026-10-25,Automatic Data Processing,Earnings Reset Could Be A Big Test For ADP Stock,排除,已套用,更改：Event_Code、事件中文、Level、Action
+682,a18423fb7bf7c12b838dff30,2026-10-25,Microsoft,"Microsoft CEO on rogue AI agents, super laptops and Clippy",排除,已套用,更改：Event_Code、事件中文、Level、Action
+683,f3202d3e73cd9fe7ee857ce4,2026-10-26,Walmart,The Pokémon TCG 30th Celebration Sylveon ex Box is (almost) down to market price,排除,已套用,更改：Event_Code、事件中文、Level、Action
+684,ea05dbc2a4003fd85b3d843d,2026-10-25,U.S. Bancorp,Your car's USB port is probably killing your phone’s charging speed,排除,已套用,更改：Event_Code、事件中文、Level、Action
+685,1fcf31b8b951c4f8743cf42c,2026-10-26,Vertiv,Dassault Systèmes (ENXTPA:DSY) Could Be 9% Below Fair Value On Vertiv AI Deal,排除,已套用,更改：Event_Code、事件中文、Level、Action
+686,f3dbdd5de5ddf0e60e64578c,2026-10-23,Merck & Co.,Merck: A 71% Rally Leaves Little Margin Of Safety Ahead Of Keytruda's Patent Cli,排除,已套用,更改：Event_Code、事件中文、Level、Action
+687,271df41fa29d5d353b4cc56f,2026-10-24,Walmart,Police: Suspect arrested after pulling knife in Walmart TV robbery in Visalia,排除,已套用,更改：Event_Code、事件中文、Level、Action
+688,85697538734e1554fd307ef1,2026-10-25,Netflix,Netflix Is Officially Removing the Action-Thriller That Asks “What If Guy Ritchi,排除,已套用,更改：Event_Code、事件中文、Level、Action
+689,383815bbc0405c87c37ddfe0,2026-10-24,ResMed,"A 68-Year-Old Who Puts $300,000 of a $500,000 IRA Into an Annuity Locks In a $2,",排除,已套用,更改：Event_Code、事件中文、Level、Action
+690,1cd027a03ad824b34d812c7d,2026-10-24,FedEx,FedEx driver sentenced up to 12 years in prison for triple fatality crash on PA ,排除,已套用,更改：Event_Code、事件中文、Level、Action
+691,bbfb7a6107dba332362d1754,2026-10-23,Quest Diagnostics,Quest Diagnostics investigating data breach involving patient records,修改,已套用,更改：Event_Code、事件中文、Level、Action
+692,b18fe8fdec20ed8f5ce46975,2026-10-23,Quest Diagnostics,Quest Diagnostics hit by cyber attack,修改,已套用,更改：Event_Code、事件中文、Level、Action
+693,d4cd1a37b15f5d2c05c79a76,2026-10-23,Sandisk,SanDisk Falters for 3 Months But One Top-Tier Institutional Desk Is Sure It's Go,排除,已套用,更改：Event_Code、事件中文、Level、Action
+694,c5a3a7696bffae0303f8d08c,2026-10-25,First Solar,First Solar (FSLR) Stock Could Be Undervalued On Future Cash Flow,排除,已套用,更改：Event_Code、事件中文、Level、Action
+695,d430036fdfe3861e38b4bd0e,2026-10-25,American Express,Investors launch probe into American Express after $350M compliance fine,修改,已套用,更改：Event_Code、事件中文、Level、Action
+696,0d8c71486104d2fedd9953e2,2026-10-23,S&P Global,US S&P Global flash October services PMI 57.9 vs 58.0 expected,排除,已套用,更改：Event_Code、事件中文、Level、Action
+697,a612708c546ecb1afd73a8c1,2026-10-23,Western Digital,"Stock Market Today: S&P 500, Nasdaq 100, Dow Jones Futures Fall Ahead of Global ",排除,已套用,更改：Event_Code、事件中文、Level、Action
+698,d0d9f5ddcef4de27e1e55496,2026-10-23,Costco,Homicide suspected in deadly parking lot encounter at Costco,排除,已套用,更改：Event_Code、事件中文、Level、Action
+699,55359291279c49d72081de53,2026-10-23,Nvidia,黃仁勛：到2029年存儲供應過剩的可能性不大,排除,已套用,更改：Event_Code、事件中文、Level、Action
+700,e895d785ebe8c1e1ee32e358,2026-10-24,Netflix,Netflix Stock Slips as Q3 Earnings Hand Investors a Win Wrapped in Caution,排除,已套用,更改：Event_Code、事件中文、Level、Action
+701,9befa0bf4edf660ccc4a9b69,2026-10-23,Synopsys,Morgan Stanley raises Synopsys target to USD 574: Synopsys stock falls 2.71 perc,排除,已套用,更改：Event_Code、事件中文、Level、Action
+702,baf1c7dddd9dce4fbe053e41,2026-10-24,Walmart,Killeen police chase ends outside Walmart after reported gun threat,排除,已套用,更改：Event_Code、事件中文、Level、Action
+703,4fce26cba40071772ae8f230,2026-10-24,Aflac,Ex-AFL star Daniel Stewart dead at 37 following ‘unexpected medical episode’,排除,已套用,更改：Event_Code、事件中文、Level、Action
+704,632674f9dc6455a1bc9c311c,2026-10-25,Cooper Companies (The),Xbox COO Helen Chiang Leaves Microsoft After Three Months,排除,已套用,更改：Event_Code、事件中文、Level、Action
+705,6021e9657601619482390bce,2026-10-24,Starbucks,"Social Rundown: AI cake request controversy, Starbucks Halloween treats & Is LOL",排除,已套用,更改：Event_Code、事件中文、Level、Action
+706,793dcfb10b0fbc2942a41b3a,2026-10-23,Merck & Co.,"FY2026 EPS Estimate for Merck & Co., Inc. Lowered by Analyst",排除,已套用,更改：Event_Code、事件中文、Level、Action
+707,778371129c6cc61666cd5894,2026-10-24,Western Digital,"Western Digital Corporation Stock 12‑Month Price Target Cut to $623.74, Implies ",排除,已套用,更改：Event_Code、事件中文、Level、Action
+708,2beccb453806011ccb5e4f31,2026-10-26,"Tesla, Inc.",Musk Warns SpaceX-Tesla (NASDAQ: TSLA) Merger Faces Major Vote Hurdle As JPMorga,排除,已套用,更改：Event_Code、事件中文、Level、Action
+709,10ce3b765dc40951f0c24379,2026-10-25,Public Storage,CamSur disputes ‘poorest province’ tag; PSA says label not official,排除,已套用,更改：Event_Code、事件中文、Level、Action
+710,d244ec3e1807cd7f45e346bb,2026-10-24,Corpay,Corpay (CPAY) Could Be 11% Below Fair Value After Newcastle United Deal,排除,已套用,更改：Event_Code、事件中文、Level、Action
+711,15186db12bb532d3d2575e24,2026-10-25,eBay Inc.,eBay Inc. $EBAY Stock: Investment House LLC Decreases Stake,排除,已套用,更改：Event_Code、事件中文、Level、Action
+712,8ffd6f78d65cb29c906e5008,2026-10-23,CVS Health,When Genuine Goods Infringe: Patrick Ta’s Trademark Case Against CVS,排除,已套用,更改：Event_Code、事件中文、Level、Action
+713,58b181f4a2c80f1eac868e58,2026-10-26,Dominion Energy,Driver crashes into Dominion Energy pole in Hampton,排除,已套用,更改：Event_Code、事件中文、Level、Action
+714,1e834206d148019a5c465bf9,2026-10-24,Costco,Ventura County man charged with murder after deadly crash at Costco gas pumps,排除,已套用,更改：Event_Code、事件中文、Level、Action
+715,11ddf9f743cccbe665670779,2026-10-25,Public Storage,Jammu Police Detain Bovine Smuggling Accused Under PSA,排除,已套用,更改：Event_Code、事件中文、Level、Action
+716,86436fedc9444313cfb50364,2026-10-25,Netflix,Under the Skin Netflix Departure: Scarlett Johansson’s Unsettling Sci-Fi Masterp,排除,已套用,更改：Event_Code、事件中文、Level、Action
+717,8c55ccbdbbfc96d9af81d92a,2026-10-24,Darden Restaurants,"Mumbai DRI Busts International Gold Smuggling Syndicate; 4 Arrested, 2.29 Kg Gol",排除,已套用,更改：Event_Code、事件中文、Level、Action
+718,d9471dbfd8c6afef348adf80,2026-10-26,Walmart,Man found dead inside vehicle at Morehead Walmart parking lot identified,排除,已套用,更改：Event_Code、事件中文、Level、Action
+719,7ea5a7091e81886fb793c9b9,2026-10-26,Wells Fargo,"Wells Fargo, Cisco, Intuit Among 6 More Companies Objecting to Tokenized Stocks",排除,已套用,更改：Event_Code、事件中文、Level、Action
+720,7eabe1aae02555c0ed7cbbe0,2026-10-26,Cisco,"Wells Fargo, Cisco, Intuit Among 6 More Companies Objecting to Tokenized Stocks",排除,已套用,更改：Event_Code、事件中文、Level、Action
+721,f32ffa03ccd81128a47a43d1,2026-10-26,Intuit,"Wells Fargo, Cisco, Intuit Among 6 More Companies Objecting to Tokenized Stocks",排除,已套用,更改：Event_Code、事件中文、Level、Action
+722,53ee572259ca0d22ac14a780,2026-10-25,Cooper Companies (The),Xbox's first COO leaves after three months,排除,已套用,更改：Event_Code、事件中文、Level、Action
+723,ea18059ba9c021d919af8940,2026-10-24,Netflix,Is Netflix Stock a Buy Near Its 52-Week Low?,排除,已套用,更改：Event_Code、事件中文、Level、Action
+724,91a5a8ae1bbfee0a8fc2adfd,2026-10-25,Entergy,Google's solar plant deal with Entergy will shift $308 million in costs to Arkan,排除,已套用,更改：Event_Code、事件中文、Level、Action
+725,bd5570af551f6cce6ae0b598,2026-10-24,Wells Fargo,"Wells Fargo (WF), Cisco (CSCO), Marvell (MRVL) join objections to OKX-ICE tokeni",排除,已套用,更改：Event_Code、事件中文、Level、Action
+726,f67f486d561448b15635e334,2026-10-24,Cisco,"Wells Fargo (WF), Cisco (CSCO), Marvell (MRVL) join objections to OKX-ICE tokeni",排除,已套用,更改：Event_Code、事件中文、Level、Action
+727,e1d47cc21ea83792c25aa905,2026-10-25,Walmart,ARRESTED: Suspect accused of shooting man outside Walmart in Pampa taken into cu,排除,已套用,更改：Event_Code、事件中文、Level、Action
+728,077a5da8463f6ed4f43d2ed8,2026-10-26,Automatic Data Processing,"ADP implementation crawls to 3.89% in first quarter, with health spending lowest",排除,已套用,更改：Event_Code、事件中文、Level、Action
+729,078b0314d22b66b1f47fa144,2026-10-24,Wells Fargo,Vehicle Strikes Knoxville Wells Fargo Building - KNIA,排除,已套用,更改：Event_Code、事件中文、Level、Action
+730,68f0a123d1c15e8c853b8fa6,2026-10-26,Walmart,Ronald Rust: 65-year-old man found dead inside vehicle in Morehead Walmart parki,排除,已套用,更改：Event_Code、事件中文、Level、Action
+731,40f6603d469bc2d0b8d2d3f2,2026-10-25,Lam Research,The Lam Research Corporation (NASDAQ:LRCX) First-Quarter Results Are Out And Ana,排除,已套用,更改：Event_Code、事件中文、Level、Action
+732,79c1a4cc863fab27ac2068c5,2026-10-24,U.S. Bancorp,5 things USB-C gets so wrong it's frustrating,排除,已套用,更改：Event_Code、事件中文、Level、Action
+733,fe118f7acbb978af5c32d2a9,2026-10-25,UnitedHealth Group,"UNH Men’s Hockey Loses to #2 Michigan State, Splits Series with Spartans",排除,已套用,更改：Event_Code、事件中文、Level、Action
+734,b3e32058a301eea44dd7e27d,2026-10-24,Airbnb,Airbnb drops mandatory checkout chores starting Nov. 20,排除,已套用,更改：Event_Code、事件中文、Level、Action
+735,afb83f5a9c452e3fe79be038,2026-10-26,Phillips 66,Oil Supply Risks Put Phillips 66 Stock And Global Energy Majors In Focus,排除,已套用,更改：Event_Code、事件中文、Level、Action
+736,78cf705ff5777a749b5d4462,2026-10-24,Morgan Stanley,CoreWeave Price Target Cut to $70.00/Share From $99.00 by Morgan Stanley,排除,已套用,更改：Event_Code、事件中文、Level、Action
+737,340ca1887daa9914ec2ef52f,2026-10-24,NetApp,NetApp Inc. stock underperforms Friday when compared to competitors despite dail,排除,已套用,更改：Event_Code、事件中文、Level、Action
+738,61b27f0cc737e6d58c6e4819,2026-10-25,Booking Holdings,Booking Holdings Inc. $BKNG Stock: Sterling Capital Management LLC Lowers Positi,排除,已套用,更改：Event_Code、事件中文、Level、Action
+739,0ffedf38cfe256308b5b8270,2026-10-23,Jabil,"Jabil, Inc. $JBL Stock: Nisa Investment Advisors LLC Lowers Position",排除,已套用,更改：Event_Code、事件中文、Level、Action
+740,94ba18c4d6ce9ce6ac95338f,2026-10-26,Caterpillar Inc.,Can Caterpillar’s $72B Backlog Save Its Stock From a 10% Slump?,排除,已套用,更改：Event_Code、事件中文、Level、Action
+741,b88e7d05aade72e83fa225ce,2026-10-24,Darden Restaurants,Hyderabad: DRI seizes methamphetamine worth ₹1.1 crore hidden under bus sleeper ,排除,已套用,更改：Event_Code、事件中文、Level、Action
+742,5e2d26c905a2890940784c2b,2026-10-24,Western Digital,"Western Digital Beat Earnings, But AI Capex Talk Spooked Investors",排除,已套用,更改：Event_Code、事件中文、Level、Action
+743,ee9a6695087276ffebba1de7,2026-10-24,Public Storage,Habitual bovine smuggler detained under PSA in Jammu,排除,已套用,更改：Event_Code、事件中文、Level、Action
+744,983a7fa653ca50ebadc92089,2026-10-24,Newmont,"Newmont Corporation Stock 12‑Month Price Target Cut to $137.93, Implies 21% Upsi",排除,已套用,更改：Event_Code、事件中文、Level、Action
+745,bca7c6a46061fc04c9ab0d7d,2026-10-23,Western Digital,"Western Digital Corporation Stock 12‑Month Price Target Cut to $648.74, Implies ",排除,已套用,更改：Event_Code、事件中文、Level、Action
+746,ae62f6b2928daae77a0f8213,2026-10-24,Comcast,"Comcast Posts Q3 EBITDA Beat On Media Upside, Faces Threat From AI Tools Like Mu",排除,已套用,更改：Event_Code、事件中文、Level、Action
+747,bc36f40c466d7cfca21795d5,2026-10-23,Coinbase,Coinbase Will Temporarily Stop Certain Services This Weekend: Details Inside,排除,已套用,更改：Event_Code、事件中文、Level、Action
+748,6bafb0b9f31f1eb2f42c5605,2026-10-23,Huntington Bancshares,Huntington Bancshares (NASDAQ:HBAN) Stock Price Target Cut by Robert W. Baird,排除,已套用,更改：Event_Code、事件中文、Level、Action
+749,2ed4ab30fe5fc6d4abce743b,2026-10-24,Airbnb,Airbnb’s new policy sends ripples through short-term rentals in Ocean City,排除,已套用,更改：Event_Code、事件中文、Level、Action
+750,aaaab9111ecaafb900cbd20c,2026-10-23,Rockwell Automation,Police investigating if North Korean IT worker infiltrated ROK organization,排除,已套用,更改：Event_Code、事件中文、Level、Action
+751,fc3d90e082a027067b13e1c1,2026-10-24,Public Storage,"FBI Now Investigating Theft of 6,451 PSA-Graded Cards from FedEx Truck",排除,已套用,更改：Event_Code、事件中文、Level、Action
+752,b3c451c36157d4b50e4df7bd,2026-10-24,FedEx,"FBI Now Investigating Theft of 6,451 PSA-Graded Cards from FedEx Truck",排除,已套用,更改：Event_Code、事件中文、Level、Action
+753,2cdbb848bb1066ecc6fdf8be,2026-10-24,MSCI Inc.,MSCI data reveals the hidden cost of delayed IPO index inclusion for institution,排除,已套用,更改：Event_Code、事件中文、Level、Action
+754,2e2ab89c1ce291706f4c4e4d,2026-10-25,PNC Financial Services,PNC Championship Organizers Reserve a Spot for Tiger Woods & Charlie Amid Report,排除,已套用,更改：Event_Code、事件中文、Level、Action
+755,5d00ebe08ab20746910668d8,2026-10-25,Goldman Sachs,Goldman Sachs Says Gulf Oil Flow Recovery Uncertain Amid Renewed Attacks,排除,已套用,更改：Event_Code、事件中文、Level、Action
+756,5d00ebe08ab20746910668d8,2026-10-24,Goldman Sachs,Goldman Sachs Says Gulf Oil Flow Recovery Uncertain Amid Renewed Attacks,排除,已套用,更改：Event_Code、事件中文、Level、Action
+757,1021ea14272613e872658e4e,2026-10-26,RTX Corporation,Using a three-pin adapter caused the GeForce RTX 5080's pins to burn out.,排除,已套用,更改：Event_Code、事件中文、Level、Action
+758,927d6e3c1cebfc1170795dd1,2026-10-25,Apple Inc.,Apple Inc. $AAPL Stock: Generate Investment Management Ltd Trims Position,排除,已套用,更改：Event_Code、事件中文、Level、Action
+759,d3f9a71ca82430c39b5b5123,2026-10-23,Globe Life,Globe Life downgraded at Piper Sandler after Q3 earnings announcement (GL:NYSE),修改,已套用,更改：Event_Code、事件中文、Level、Action
+760,aede529f296a935d695e8ea2,2026-10-26,Microsoft,"Microsoft explains why deleting Prefetch can slow down Windows 11, as it’s “desi",排除,已套用,更改：Event_Code、事件中文、Level、Action
+761,3bf499b79f779411263b2d81,2026-10-25,Vertiv,Pomerantz investigates Vertiv Holdings Co for securities fraud after stock crash,修改,已套用,更改：Event_Code、事件中文、Level、Action
+762,c2a0f30bdef1338db84c7e63,2026-10-24,Jabil,JBL Soundgear Clips -Open Ear Headphones sees price cut to $99.95,排除,已套用,更改：Event_Code、事件中文、Level、Action
+763,ca29614cc4b38c0413271629,2026-10-24,Take-Two Interactive,Take-Two Interactive (TTWO) Dips More Than Broader Market: What You Should Know,排除,已套用,更改：Event_Code、事件中文、Level、Action
+764,68b99fec89a3de87f620d4ed,2026-10-24,Cooper Companies (The),"Xbox's 1st-ever COO, Helen Chiang, quits after just 3 months",排除,已套用,更改：Event_Code、事件中文、Level、Action
+765,e1eb812849bb0e5ce7aa1a42,2026-10-23,Quest Diagnostics,Quest Diagnostics confirms patient data breach in the US — TechCrunch,修改,已套用,更改：Event_Code、事件中文、Level、Action
+766,b88975b5de17736e5af065c5,2026-10-24,Texas Instruments,Is Texas Instruments Incorporated (NASDAQ:TXN) Potentially Undervalued?,排除,已套用,更改：Event_Code、事件中文、Level、Action
+767,938d61101d0481ea274956a5,2026-10-24,Western Digital,Western Digital Price Target Cut to $650.00/Share From $800.00 by Rosenblatt,排除,已套用,更改：Event_Code、事件中文、Level、Action
+768,3f49e68c71f116930cd198da,2026-10-25,Uber,Marion County Man Arrested in Shared Uber Battery Dispute,排除,已套用,更改：Event_Code、事件中文、Level、Action
+769,d0d7de6bd5beb8d59209f9bf,2026-10-23,Kroger,Jessica Sharp - Fall Savings at Kroger,排除,已套用,更改：Event_Code、事件中文、Level、Action
+770,fe159c4d0eb2f00c6bebf7ec,2026-10-23,Huntington Bancshares,Huntington Bancshares price target lowered to $19 from $21 at Wells Fargo,排除,已套用,更改：Event_Code、事件中文、Level、Action
+771,48524c55230769b6ea4a8e27,2026-10-24,Comcast,Comcast (CMCSA) Stock May Be A Bargain Following Its Planned Split,排除,已套用,更改：Event_Code、事件中文、Level、Action
+772,19b4adee0bd7f31d1bd91e93,2026-10-24,Trade Desk (The),The Trade Desk (TTD) - Portfolio Killers: 10 US stocks that wiped out up to 66% ,排除,已套用,更改：Event_Code、事件中文、Level、Action
+773,7016baa34f936400e5da75de,2026-10-23,Intuit,Intuit stock: Intuit schedules Connect October 26. Stock is 8.91 percent below U,排除,已套用,更改：Event_Code、事件中文、Level、Action
+774,ccfd7c14daca6d13f0534c89,2026-10-25,Cooper Companies (The),Xbox' first COO has left after just three months on the job,排除,已套用,更改：Event_Code、事件中文、Level、Action
+775,c1d1e3032ba30b2e5c8eac18,2026-10-25,"Tesla, Inc.","Tesla, Inc. $TSLA Position Lowered by Sterling Capital Management LLC",排除,已套用,更改：Event_Code、事件中文、Level、Action
+776,060e04a2baca04631c0a2c6b,2026-10-24,Walmart,Visalia Walmart TV Theft Suspect Arrested After Knife Threat,排除,已套用,更改：Event_Code、事件中文、Level、Action
+777,f382fe3fc1aae961c6981028,2026-10-24,Uber,El Paso County woman refuses mental exam in Uber driver murder case,排除,已套用,更改：Event_Code、事件中文、Level、Action
+778,3d0325e48ee1507388a06ac5,2026-10-24,,AI雲端狂飆變債務炸彈？Neocloud泡沫疑雲蔓延到美股巨頭 NVDA、MSFT,排除,已套用,更改：Event_Code、事件中文、Level、Action
+779,7ffec63033487e15d7382bc7,2026-10-24,Cooper Companies (The),Xbox COO Helen Chiang leaves Microsoft three months after taking the job,排除,已套用,更改：Event_Code、事件中文、Level、Action
+780,c9c8e37fdc229b6a3518e703,2026-10-25,Cooper Companies (The),"Xbox COO Helen Chiang leaves Microsoft after three months, with no successor nam",排除,已套用,更改：Event_Code、事件中文、Level、Action
+781,fb68876bc41fff17cd661bb9,2026-10-25,Williams Companies,"Williams Companies (WMB) Outpaced The Market, Is The Stock Now Too Expensive?",排除,已套用,更改：Event_Code、事件中文、Level、Action
+782,d49fd9c1cd3f3b052712d1b8,2026-10-25,Walmart,"Teen Flees Abington Walmart With Loaded Gun, Police Say",排除,已套用,更改：Event_Code、事件中文、Level、Action
+783,af138c8e35db7a73c037acfe,2026-10-25,McDonald's,McDonald's worker accidentally gives customer 4 Monopoly stickers on cup. Then s,排除,已套用,更改：Event_Code、事件中文、Level、Action
+784,704a392ad871d14a179ae9ef,2026-10-25,United Rentals,URI vs Albany fall to UAlbany in a shootout on Saturday.,排除,已套用,更改：Event_Code、事件中文、Level、Action
+785,e49a3dea6ca38346f67cebcc,2026-10-24,Broadcom,Broadcom Inc. $AVGO Stock: Axecap Investments LLC Decreases Position,排除,已套用,更改：Event_Code、事件中文、Level、Action
+786,88ff2e2dbf754b5aa6d32657,2026-10-24,Uber,"S&P 500, Dow Drop As Elevated Oil Prices Stoke Inflation Fears Ahead Of Fed Meet",排除,已套用,更改：Event_Code、事件中文、Level、Action
+787,cb92fbe928f3b8e59ae1cb8e,2026-10-24,MGM Resorts,Judge sends Springfield-MGM dispute over host community agreement to arbitration,排除,已套用,更改：Event_Code、事件中文、Level、Action
+788,3a164e8aa469a1a451d0fd53,2026-10-24,MGM Resorts,Is MGM Resorts International (MGM) a Bargain After 4.9% Drop? GF Value Says Unde,排除,已套用,更改：Event_Code、事件中文、Level、Action
+789,623156041df2bc3e8711ba5b,2026-10-24,Apple Inc.,"S&P 500, Dow Drop As Elevated Oil Prices Stoke Inflation Fears Ahead Of Fed Meet",排除,已套用,更改：Event_Code、事件中文、Level、Action
+790,cb428030e151b410bb75790e,2026-10-24,TE Connectivity,TE Connectivity (TEL) Could Be 16% Undervalued As Earnings Views Improve,排除,已套用,更改：Event_Code、事件中文、Level、Action
+791,786c0f6fb44eb0161059b65d,2026-10-24,Broadcom,Possible Bearish Signals With Broadcom Insiders Disposing Stock,排除,已套用,更改：Event_Code、事件中文、Level、Action
+792,b594e4afacee43c607bca6c2,2026-10-26,Ball Corporation,NFL star ruthlessly booed every time he touches the ball despite groveling apolo,排除,已套用,更改：Event_Code、事件中文、Level、Action
+793,70b53170f6eea226d3cba016,2026-10-25,AT&T,"‘Real consequences’: AT&T, Verizon and T-Mobile warn FCC as Elon Musk plots a Sp",排除,已套用,更改：Event_Code、事件中文、Level、Action
+794,4e9065e0345ed65ec367e191,2026-10-25,Verizon,"‘Real consequences’: AT&T, Verizon and T-Mobile warn FCC as Elon Musk plots a Sp",排除,已套用,更改：Event_Code、事件中文、Level、Action
+795,daa54d974cdce986a9d00976,2026-10-24,CMS Energy,"CMS has barred new brokers, agents from registering to sell plans on the ACA mar",排除,已套用,更改：Event_Code、事件中文、Level、Action
+796,0c85fc967b7e1ea511841fb3,2026-10-24,IQVIA,Locking in Gains: Portfolio Discipline Triggers IQVIA Holding (IQV) Trim After Q,排除,已套用,更改：Event_Code、事件中文、Level、Action
+797,bc3c8a8c1beb1e19cae1ea1b,2026-10-23,Netflix,SA Asks: Netflix hit a 52-week low this week. Is now the time to buy?,排除,已套用,更改：Event_Code、事件中文、Level、Action
+798,55dbf456f29af4f0d7a34b2e,2026-10-24,Nvidia,Tesla and Nvidia just found another AI bottleneck,排除,已套用,更改：Event_Code、事件中文、Level、Action
+799,cee344803eddca1c17f5e905,2026-10-24,Walmart,Both suspects now in custody after innocent man killed outside Walmart,排除,已套用,更改：Event_Code、事件中文、Level、Action
+800,18ee3a4bedbbad95a1a5573d,2026-10-24,Lam Research,Lam Research (NASDAQ:LRCX) Downgraded by Zacks Research to Hold,排除,已套用,更改：Event_Code、事件中文、Level、Action
+801,b04c5608813e2f8f8948846e,2026-10-23,Autodesk,"Autodesk, Inc. $ADSK Stock Position Cut by Investment House LLC",排除,已套用,更改：Event_Code、事件中文、Level、Action
+802,f4d9e098b8cc278d73027ccf,2026-10-24,CRH plc,CRH (CRH) Stock May Be 27% Undervalued On Its $8.5B Deal,排除,已套用,更改：Event_Code、事件中文、Level、Action
+803,ad45d828f439e042df51881e,2026-10-24,Lennar,Did Falling Treasury Yields Just Shift Lennar's (LEN) Stock Narrative?,排除,已套用,更改：Event_Code、事件中文、Level、Action
+804,91a0bf881fd7fba31f3cade0,2026-10-24,Intuit,"Six More Firms, Including Wells Fargo and Intuit, Oppose OKX-ICE Tokenized Tradi",排除,已套用,更改：Event_Code、事件中文、Level、Action
+805,39213e84a63a53d1d528fd8c,2026-10-23,Western Digital,"Western Digital Corporation Stock 12‑Month Price Target Cut to $652.87, Implies ",排除,已套用,更改：Event_Code、事件中文、Level、Action
+806,1ac3f0d067442138d5fb296c,2026-10-24,Cooper Companies (The),"Pacers Sports & Entertainment announces departure of Amber Cox, Indiana Fever CO",排除,已套用,更改：Event_Code、事件中文、Level、Action
+807,fd2c329f00f1504eea9fd9f1,2026-10-24,Lennar,Boynton Beach Mall to close as Lennar plans redevelopment,排除,已套用,更改：Event_Code、事件中文、Level、Action
+808,0e7905c9d428828baf35beba,2026-10-23,Chipotle Mexican Grill,CMG Maintained by Mizuho -- Price Target Lowered to $37.00,排除,已套用,更改：Event_Code、事件中文、Level、Action
+809,cd9c1be34e9a4ba53a4d5907,2026-10-26,CVS Health,Atlanta filmmaker’s CVS coupon for Zenpep suddenly stops working,排除,已套用,更改：Event_Code、事件中文、Level、Action
+810,6ffb9bcc15335f14010adc3f,2026-10-24,Uber,Women Take Hourlong Uber To Nashville. Then The Driver Does Something Dangerous:,排除,已套用,更改：Event_Code、事件中文、Level、Action
+811,0790833d8ca358c79ae5b03a,2026-10-26,TKO Group Holdings,MR. TITO: What If TKO's WWE Crown Jewel 2026 Gets Attacked in Saudi Arabia on No,排除,已套用,更改：Event_Code、事件中文、Level、Action
+812,4554749a3c3bcf7b9fcff0ec,2026-10-24,"Tesla, Inc.","Tesla, Inc. $TSLA Stock: Howland Capital Management LLC Cuts Stake",排除,已套用,更改：Event_Code、事件中文、Level、Action
+813,98414fc9a3109717b87218ed,2026-10-25,CME Group,CME boss urges MPs to spare WA from punishing gas laws,排除,已套用,更改：Event_Code、事件中文、Level、Action
+814,375918d91543fb6ff1458785,2026-10-25,Public Storage,Pokémon and sports card collectors outraged as PSA-graded cards stolen in delive,排除,已套用,更改：Event_Code、事件中文、Level、Action
+815,2d516de6d00548a803064451,2026-10-26,Nvidia,San Jose rejects appeal of NVIDIA data center permit as environmental concerns p,排除,已套用,更改：Event_Code、事件中文、Level、Action
+816,9f5d9f9c0be09e04fb4deaa4,2026-10-24,Occidental Petroleum,Occidental Petroleum Corp. stock underperforms Friday when compared to competito,排除,已套用,更改：Event_Code、事件中文、Level、Action
+817,f59203aac660f66ed1e8693b,2026-10-26,Microsoft,Quote of the day by Microsoft CEO Satya Nadella: 'We have to do something useful,排除,已套用,更改：Event_Code、事件中文、Level、Action
+818,edf504407d8a119afd1b5552,2026-10-25,Lam Research,Lam Research (LRCX) Stock Faces Q1 Earnings Quality Questions After Records,排除,已套用,更改：Event_Code、事件中文、Level、Action
+819,d119ae065d8328bb71ccfc13,2026-10-24,Willis Towers Watson,Willis Towers Watson Whistleblower Case: Bengaluru Court Awards ₹3.67 Crore in D,修改,已套用,更改：Event_Code、事件中文、Level、Action
+820,bdb7515e8ab0ceafb3ac76fb,2026-10-25,GE Vernova,GE Vernova Stock Fell 11% in a Day. Here's What I Think It Could Be Worth by 203,修改,已套用,更改：Event_Code、事件中文、Level、Action
+821,53ddddb6a82258f039575f3e,2026-10-25,Qualcomm,Exynos 2700 Internal Tests Show Qualcomm’s 2nm And New Snapdragon 8 Elite Extrem,排除,已套用,更改：Event_Code、事件中文、Level、Action
+822,b60c4cb63c62e835f78163ce,2026-10-25,O’Reilly Automotive,"O'Reilly Automotive, Inc. $ORLY Stock: Axxcess Wealth Management LLC Cuts Stake",排除,已套用,更改：Event_Code、事件中文、Level、Action
+823,6d0fd4ac1d182ee5b49f62cf,2026-10-24,Analog Devices,Analog Devices schedules November results while stock trades at EUR 347.10,排除,已套用,更改：Event_Code、事件中文、Level、Action
+824,791fb660db599f866ea8bae1,2026-10-24,Walmart,"Asheboro Walmart Crash Kills Woman, No Charges Filed",排除,已套用,更改：Event_Code、事件中文、Level、Action
+825,4a223faf619453c50bbfe2d5,2026-10-23,Corteva,Corteva Declares Quarterly Dividend,排除,已套用,更改：Event_Code、事件中文、Level、Action
+826,5cd8a794fc06c472c02960bf,2026-10-24,Kroger,"Train or Cut? From HSBC to Kroger, AI Layoffs Keep Rising. Here Is What They Rea",排除,已套用,更改：Event_Code、事件中文、Level、Action
+827,a993dab2881ca2a1efed94cf,2026-10-24,Union Pacific Corporation,Analysts’ Opinions Are Mixed on These Industrial Goods Stocks: Union Pacific (UN,排除,已套用,更改：Event_Code、事件中文、Level、Action
+828,8be6831f8a92379ca771507b,2026-10-24,Bristol Myers Squibb,Bristol Myers Squibb reports patient death in early-stage cell therapy trial,修改,已套用,更改：Event_Code、事件中文、Level、Action
+829,013e4e314d9775049d1f7427,2026-10-25,General Mills,BofA cuts General Mills stock target to USD 40.00,排除,已套用,更改：Event_Code、事件中文、Level、Action
+830,0cfa1f44101ce267faea2df3,2026-10-24,Walmart,2nd suspect arrested in deadly shooting of 81-year-old at Gainesville Walmart,排除,已套用,更改：Event_Code、事件中文、Level、Action
+831,d4e3d7d9854f5671d46175c1,2026-10-26,Costco,Rabbi charged with murder after man fatally struck at SoCal Costco,排除,已套用,更改：Event_Code、事件中文、Level、Action
+832,94145ce51e456b945cff4efe,2026-10-23,CME Group,Analysts Conflicted on These Financial Names: SLR Investment Corp. (SLRC) and CM,排除,已套用,更改：Event_Code、事件中文、Level、Action
+833,2a351ed08df748705c709f07,2026-10-25,Medtronic,Severe Thunderstorm Watch Issued for Parts of New Mexico and Texas Until 10 PM M,排除,已套用,更改：Event_Code、事件中文、Level、Action
+834,36770949817752d614a6aa79,2026-10-23,Capital One,Capital One (COF) Stock May Be 38% Undervalued Despite Strong Q3 Earnings,排除,已套用,更改：Event_Code、事件中文、Level、Action
+835,da5dae405e69b9d917c47f74,2026-10-26,Salesforce,BRZE Stock Gets Multiple Downgrades After $5.66B Salesforce Deal — Analysts See ,排除,已套用,更改：Event_Code、事件中文、Level、Action
+836,55458b685fecc2d76ff4ac8b,2026-10-25,Duke Energy,Duke Energy (NYSE:DUK): Why This Utility Looks Steady In A Shaky Market?,排除,已套用,更改：Event_Code、事件中文、Level、Action
+837,ee6acaa6168be5184a8741a2,2026-10-25,Trade Desk (The),"The Trade Desk: Great Tech, Bad Timing; Hold (NASDAQ:TTD)",排除,已套用,更改：Event_Code、事件中文、Level、Action
+838,ebae5b074456e9f5f4e127af,2026-10-24,Cooper Companies (The),Xbox COO Helen Chiang leaves Microsoft after 21 years,排除,已套用,更改：Event_Code、事件中文、Level、Action
+839,83629096378a92e68de00081,2026-10-24,Merck & Co.,"Bronstein, Gewirtz & Grossman, LLC Is Investigating Merck & Co., Inc. (MRK) And ",修改,已套用,更改：Event_Code、事件中文、Level、Action
+840,3c4152e80b481fd7e74fbb1b,2026-10-24,Sysco,Labor Deal Could Change The Bull Case For Sysco (SYY),排除,已套用,更改：Event_Code、事件中文、Level、Action
+841,d15b53545a96c73679f4c0cc,2026-10-24,Marvell Technology,Marvell Technology Faces a Multi-Front War Against Taiwan’s Custom Silicon Ecosy,排除,已套用,更改：Event_Code、事件中文、Level、Action
+842,1c9eeebc368a8985c8ce1d6c,2026-10-24,Apple Inc.,Apple Inc. $AAPL Stock: 4WEALTH Advisors Inc. Decreases Position,排除,已套用,更改：Event_Code、事件中文、Level、Action
+843,b6ec7bae5cd217e1eb1c303d,2026-10-23,Intuit,"Wells Fargo, Intuit and 20 other companies oppose tokenized stock trading on OKX",排除,已套用,更改：Event_Code、事件中文、Level、Action
+844,1ac75a1ae2f16bf04d68495b,2026-10-24,Huntington Bancshares,HBAN Maintained by Wells Fargo -- Price Target Lowered to $19.00,排除,已套用,更改：Event_Code、事件中文、Level、Action
+845,b071bd60de9604adcbdbc421,2026-10-24,Cooper Companies (The),Xbox COO Helen Chiang Leaves Microsoft Just Over Three Months After Taking the J,排除,已套用,更改：Event_Code、事件中文、Level、Action
+846,c741e099e1b26aee690bab9d,2026-10-24,Corning Inc.,Corning declares quarterly dividend as stock trades at EUR 110.51,排除,已套用,更改：Event_Code、事件中文、Level、Action
+847,8fb3fa5ca0cfbcd34292a9c8,2026-10-24,Verizon,AT&T和T-Mobile收緊人工智能監管措施，而自主網絡的實現仍需數年時間,排除,已套用,更改：Event_Code、事件中文、Level、Action
+848,b70b4bc073f013a127005269,2026-10-24,T-Mobile US,AT&T和T-Mobile收緊人工智能監管措施，而自主網絡的實現仍需數年時間,排除,已套用,更改：Event_Code、事件中文、Level、Action
+849,9b222bc0f6f6504adc75f468,2026-10-25,Cooper Companies (The),Xbox’s brand-new COO already leaves Microsoft after three months,排除,已套用,更改：Event_Code、事件中文、Level、Action
+850,39e1ef6551ea71026df91727,2026-10-25,Boeing,Boeing 777F production idle for two months: Reuters,修改,已套用,更改：Event_Code、事件中文、Level、Action
+851,ebd1218036a82e81bcb694a4,2026-10-24,Walmart,2 teenage suspect arrested in Gainesville Walmart shooting,排除,已套用,更改：Event_Code、事件中文、Level、Action
+852,9aa3c418f8baa50ad17f9d04,2026-10-24,Cooper Companies (The),Microsoft Gaming Executive Helen Chiang Steps Down as Xbox COO,排除,已套用,更改：Event_Code、事件中文、Level、Action
+853,7cfae7f23e0a96cd512f654f,2026-10-24,GoDaddy,"GoDaddy Revokes 404,607 SSL Certificates After Policy Errors",修改,已套用,更改：Event_Code、事件中文、Level、Action
+854,d5772a3c8b236cecc9ecc941,2026-10-25,TKO Group Holdings,“They Need to Be Banned”: Aaron Pico Demands Punishment for Ranked UFC Fighters ,排除,已套用,更改：Event_Code、事件中文、Level、Action
+855,17aa51501dc2f50d288a8e07,2026-10-24,Boeing,What's Going on With Boeing Shares on Friday?,排除,已套用,更改：Event_Code、事件中文、Level、Action
+856,378580b0a454f0b897afb2df,2026-10-24,Tractor Supply,A Look at Tractor Supply Co (TSCO) After 3.8% Decline -- GF Value $57.59 vs Pric,排除,已套用,更改：Event_Code、事件中文、Level、Action
+857,3b91540297291fb5fb7ababc,2026-10-24,Quest Diagnostics,PRIVACY ALERT: AWKO Law LLP Investigates Quest Diagnostics for Data Breach of Pa,修改,已套用,更改：Event_Code、事件中文、Level、Action
+858,bd252bd3543cdd85709e3092,2026-10-24,Emcor,Emcor Group (EME) Dips More Than Broader Market: What You Should Know,排除,已套用,更改：Event_Code、事件中文、Level、Action
+859,20562dff7ce6ff971fd1002f,2026-10-25,Ventas,"Ventas, Inc. $VTR Stake Decreased by Robeco Institutional Asset Management B.V.",排除,已套用,更改：Event_Code、事件中文、Level、Action
+860,50d807379885b1cd522be243,2026-10-24,Genuine Parts Company,Genuine Parts (GPC) Stock Looks Undervalued On Future Cash Flow,排除,已套用,更改：Event_Code、事件中文、Level、Action
+861,277902c6804245c548383a64,2026-10-23,Quest Diagnostics,Quest Diagnostics Data Breach Exposed ‘Certain Patient Records’,修改,已套用,更改：Event_Code、事件中文、Level、Action
+862,54a7cb459d5ca90e18939576,2026-10-23,Salesforce,Salesforce (NYSE:CRM): A Quality Investing Candidate With Mixed Fundamentals,排除,已套用,更改：Event_Code、事件中文、Level、Action
+863,ef711b8f13dcbd8963b9a957,2026-10-23,Intuit,富國銀行、Intuit等公司反對將其股份進行通證化——監管文件顯示,排除,已套用,更改：Event_Code、事件中文、Level、Action
+864,a08beb290f1c25a2ad8fa3da,2026-10-24,Bank of America,The Bank of America case makes data governance a financial crime control,排除,已套用,更改：Event_Code、事件中文、Level、Action
+865,d73193da20faae5e6dfe334c,2026-10-24,Uber,"Uber Airport Fare Scam: Delhi Man Spots Driver’s Trick To Demand Rs 1,780 Instea",排除,已套用,更改：Event_Code、事件中文、Level、Action
+866,b69bb8abe107c90f20969bc0,2026-10-26,EOG Resources,Revenue Jump Could Change The Case For EOG Resources Stock (EOG),排除,已套用,更改：Event_Code、事件中文、Level、Action
+867,e883bf01b332ff9e20f207ec,2026-10-23,Nvidia,"SpaceX Can't Find Spare Nvidia, Google or Amazon Chips Despite Billions to Spend",排除,已套用,更改：Event_Code、事件中文、Level、Action
+868,7a77ece134e5f1966feafb49,2026-10-24,Chevron Corporation,Chevron Stock Moves Higher: What's Going On?,排除,已套用,更改：Event_Code、事件中文、Level、Action
+869,f3a50a44a7ce1d91291ab807,2026-10-23,Old Dominion,"Old Dominion Freight Line, Inc. $ODFL Position Lowered by Nisa Investment Adviso",排除,已套用,更改：Event_Code、事件中文、Level、Action
+870,91dae001eaaaae956dce4d05,2026-10-25,FedEx,Man sentenced to 40 years for shooting occupied FedEx truck in 2024 in Okaloosa ,排除,已套用,更改：Event_Code、事件中文、Level、Action
+871,171000e91c8f1e61f49a12a0,2026-10-26,Public Storage,"Bla man detained under PSA, lodged in Anantnag Jail",排除,已套用,更改：Event_Code、事件中文、Level、Action
+872,f9ce803bf081a0bb21f2e5a2,2026-10-26,Starbucks,“They said they’d supply Market Kurly and Starbucks” ... CEO swindles acquaintan,排除,已套用,更改：Event_Code、事件中文、Level、Action
+873,6d1fa8210825a450323cd1c2,2026-10-24,CMS Energy,BREAKING: CMS opens applications for nursing home staffing campaign,排除,已套用,更改：Event_Code、事件中文、Level、Action
+874,6303da9cce847992f746967d,2026-10-23,Microsoft,"Microsoft 365 accounts compromised at 79 organizations, no passwords needed",修改,已套用,更改：Event_Code、事件中文、Level、Action
+875,1399917968a8a116b126f715,2026-10-24,Walmart,Second suspect in deadly Gainesville Walmart shooting surrenders,排除,已套用,更改：Event_Code、事件中文、Level、Action
+876,70f668101464b298c5d54ead,2026-10-23,Costco,"The man facing murder charge in death of man near Costco gas pumps is a rabbi, r",排除,已套用,更改：Event_Code、事件中文、Level、Action
+877,a059a2a50ac24773a8bc51e5,2026-10-26,"UDR, Inc.",UDR (UDR) Could Be 11% Undervalued Following Its Guidance Reset,排除,已套用,更改：Event_Code、事件中文、Level、Action
+878,c8f9d95fff5d171219353c6a,2026-10-24,Amazon,Consumer news: Childcare costs and Amazon holiday hiring,排除,已套用,更改：Event_Code、事件中文、Level、Action
+879,9164c61d1e1253b94b7114a1,2026-10-24,Darden Restaurants,"DRI Seizes Foreign Currency Worth ₹1.56 Crore at Hyderabad Airport, Two Arrested",排除,已套用,更改：Event_Code、事件中文、Level、Action
+880,f6983fe05e1024594ce2667d,2026-10-24,Western Digital,Western Digital Corporation $WDC Stock: Atlatl Advisers LLC Trims Position,排除,已套用,更改：Event_Code、事件中文、Level、Action
+881,6641740e0846d9f012851a9a,2026-10-24,Amgen,Amgen (AMGN) Draws Fresh Valuation Debate After Phase 3 TEZSPIRE Trial Results,排除,已套用,更改：Event_Code、事件中文、Level、Action
+882,2ea28ed19f67157d5d6e1c32,2026-10-25,Microsoft,Xbox's first-ever chief operating officer leaves as Microsoft gears up for next-,排除,已套用,更改：Event_Code、事件中文、Level、Action
+883,10a518b83c13cda2256d20b7,2026-10-24,Cooper Companies (The),Xbox COO Helen Chiang leaves Microsoft months after taking the role,排除,已套用,更改：Event_Code、事件中文、Level、Action
+884,807b7f9211416bd7f7ec83cf,2026-10-26,Netflix,David Tennant’s Chilling 3-Part Crime Thriller Is Officially Leaving Netflix,排除,已套用,更改：Event_Code、事件中文、Level、Action
+885,226c3af9bf5123a75395bf11,2026-10-26,Uber,AI agents pose a threat to the business models of Amazon and Uber,排除,已套用,更改：Event_Code、事件中文、Level、Action
+886,58c6114baa5760c53d23af79,2026-10-24,Walmart,"Walmart, Best Buy and other stores now use digital price tags. Critics say they ",排除,已套用,更改：Event_Code、事件中文、Level、Action
+887,09beb64b53edc0c56ffe460f,2026-10-23,Ameriprise Financial,Judge Queries Class Share Of $29M AMP Class Action Deal,修改,已套用,更改：Event_Code、事件中文、Level、Action
+888,1d8ee6f921fa2c45fcad7301,2026-10-25,TKO Group Holdings,Pros react after Alexander Volkanovski TKO’s Movsar Evloev at UFC 333,排除,已套用,更改：Event_Code、事件中文、Level、Action
+889,3cbfc616881eaf47fc99c6a1,2026-10-24,McDonald's,Police Activity at McDonald's,排除,已套用,更改：Event_Code、事件中文、Level、Action
+890,cbb3fb01d03127a0caade92f,2026-10-25,Uber,"Uber, Multinationals’ Exit Shows Nigeria’s Business Environment Needs Emergency ",排除,已套用,更改：Event_Code、事件中文、Level、Action
+891,94bf134c522ce388ad89e6c5,2026-10-24,Palo Alto Networks,Palo Alto Networks CEO Warns AI Exposes Legacy Software Flaws - Palo Alto Networ,排除,已套用,更改：Event_Code、事件中文、Level、Action
+892,c5f02cf7b5d97f63d79e60fe,2026-10-25,Invesco,Invesco QQQ $QQQ Stock Holdings Cut by Client First Capital LLC,排除,已套用,更改：Event_Code、事件中文、Level、Action
+893,93508d59f364f4b67b68f275,2026-10-24,Textron,Textron (TXT) Stock May Be 48% Undervalued On Fresh Cessna Order,排除,已套用,更改：Event_Code、事件中文、Level、Action
+894,3023c80e0ea98c94d54c3dbc,2026-10-23,TKO Group Holdings,TKO Could Lose Up To $90 Million If WWE Crown Jewel Is Canceled,排除,已套用,更改：Event_Code、事件中文、Level、Action
+895,eba0bb43c5f69237ed04149c,2026-10-24,PulteGroup,PulteGroup Price Target Cut to $109.00/Share From $110.00 by Barclays,排除,已套用,更改：Event_Code、事件中文、Level、Action
+896,3e3e790f9e5429c763f1a234,2026-10-23,Netflix,"Netflix Leads U.S. Market, But Viewer Share is Shinking",排除,已套用,更改：Event_Code、事件中文、Level、Action
+897,6c62cd4c7636f46a4b965209,2026-10-24,Kroger,"Smithfield Woman, 75, Dies After Kroger Lot Crash",排除,已套用,更改：Event_Code、事件中文、Level、Action
+898,6a0e82c72828d7f481e9d9a0,2026-10-24,Bristol Myers Squibb,"Bristol Myers Squibb (NYSE:BMY) Cut to ""Hold"" at Zacks Research",排除,已套用,更改：Event_Code、事件中文、Level、Action
+899,f8c2c9a05b8d9391c68436da,2026-10-26,Medtronic,"Tornado Warning Issued for Forrest and McAlister, New Mexico, Until 4 PM MDT",排除,已套用,更改：Event_Code、事件中文、Level、Action
+900,937a9bcfddac2312c5ee6141,2026-10-24,BlackRock,BlackRock (BLK) Stock Could Be 11% Undervalued Following Bitcoin ETF Filing,排除,已套用,更改：Event_Code、事件中文、Level、Action
+901,fb02758ae8ad0f931d2dc785,2026-10-24,Walmart,Body cam video released in deadly shooting at MS Walmart,排除,已套用,更改：Event_Code、事件中文、Level、Action
+902,40078e1cb39e12faa8d679fc,2026-10-23,Lam Research,大摩下調泛林集團目標價至339美元,排除,已套用,更改：Event_Code、事件中文、Level、Action
+903,ec714bbc44d653efcbf27fae,2026-10-24,Chipotle Mexican Grill,Why Chipotle Mexican Grill (CMG) Dipped More Than Broader Market Today,排除,已套用,更改：Event_Code、事件中文、Level、Action
+904,b9ff4bcb8b452d741199b0c0,2026-10-23,Western Digital,Western Digital Earnings Easily Beat Estimates. Why The Stock Is Falling Anyway.,排除,已套用,更改：Event_Code、事件中文、Level、Action
+905,4a79983a4d698ae35252d048,2026-10-24,Prologis,Prologis price target lowered to $141 from $162 at Truist,排除,已套用,更改：Event_Code、事件中文、Level、Action
+906,d618718a592980cd1cfa7d86,2026-10-24,Boston Scientific,Boston Scientific (BSX) - Portfolio Killers: 10 US stocks that wiped out up to 6,排除,已套用,更改：Event_Code、事件中文、Level、Action
+907,92db4164e5b2e03af9a7a0de,2026-10-25,Realty Income,"Realty Income Stock Climbs Back as Treasury Yields Retreat, Yet Challenges Persi",排除,已套用,更改：Event_Code、事件中文、Level、Action
+908,edf377506822536e4ddd6301,2026-10-25,Visa Inc.,Visa (V) Rumored Fireblocks Deal Denied As Digital Asset Push Keeps Building,排除,已套用,更改：Event_Code、事件中文、Level、Action
+909,b7a3cc1eb18f3bbb1a0b3bc3,2026-10-24,Quest Diagnostics,Quest Diagnostics confirms data breach exposed patient records,修改,已套用,更改：Event_Code、事件中文、Level、Action
+910,0ae2d431eeb133036650d2a3,2026-10-24,Huntington Bancshares,"Huntington Bancshares Incorporated Stock 12‑Month Price Target Cut to $18.8, Imp",排除,已套用,更改：Event_Code、事件中文、Level、Action
+911,3332800d48fc4f23c0568457,2026-10-25,Wynn Resorts,Wynn Resorts commits MOP 1.37 billion. JPMorgan cuts target for Wynn Resorts sto,排除,已套用,更改：Event_Code、事件中文、Level、Action
+912,7bd9c8a89808e537220ce728,2026-10-24,Walmart,R-Calf Weekly Address–Walmart’s Beef Empire Threatens Rancher Independence,排除,已套用,更改：Event_Code、事件中文、Level、Action
+913,6e4aeeb99c58984188ad1519,2026-10-26,Nvidia,Is Nvidia Stock Cheaper Now That Its Multiple Has Fallen?,排除,已套用,更改：Event_Code、事件中文、Level、Action
+914,32fde7b31c940c200ce20f2c,2026-10-26,Walmart,Beck family says cemetery concerns addressed two months after Walmart constructi,排除,已套用,更改：Event_Code、事件中文、Level、Action
+915,74ec15d2aeec5c152d38c329,2026-10-23,Comcast,Comcast Co-CEO Teases Epic Universe Annual Passes,排除,已套用,更改：Event_Code、事件中文、Level、Action
+916,e55669378fbce09af88e9d7b,2026-10-23,Huntington Bancshares,Huntington Bancshares price target lowered to $19 from $21 at Baird,排除,已套用,更改：Event_Code、事件中文、Level、Action
+917,a308c1f534953814ca0586f7,2026-10-24,Costco,Purdy To Greet At Costco | Haunted House Props Vanish | Car Slams Into Oncoming ,排除,已套用,更改：Event_Code、事件中文、Level、Action
+918,216f3bfaa8863f8efa1d6947,2026-10-25,Edison International,Could Earnings Optimism Alter The Investment Case For Edison International (EIX),排除,已套用,更改：Event_Code、事件中文、Level、Action
+919,6292b2488266f500cac68f79,2026-10-26,Cooper Companies (The),XBOX COO Helen Chiang Departs Microsoft After 21 Years,排除,已套用,更改：Event_Code、事件中文、Level、Action
+920,cdb035b415faedd2e75c0a18,2026-10-23,Wynn Resorts,Wynn Resorts (NASDAQ:WYNN) Sets New 12-Month Low - Here's What Happened,修改,已套用,更改：Event_Code、事件中文、Level、Action
+921,d40e4be24cc1e4a7e8fa73c6,2026-10-23,Western Digital,WDC Maintained by Cantor Fitzgerald -- Price Target Lowered to $625,排除,已套用,更改：Event_Code、事件中文、Level、Action
+922,7a32710cb547dc892be5370f,2026-10-26,AT&T,What Just Happened To AT&T Stock?,排除,已套用,更改：Event_Code、事件中文、Level、Action
+923,ebbd943e68290fc35d6a982d,2026-10-25,MSCI Inc.,What happens when a country gets kicked out of MSCI?,排除,已套用,更改：Event_Code、事件中文、Level、Action
+924,53cb81b1d3ad9085cc885527,2026-10-23,Merck & Co.,"Merck & Co., Inc. $MRK Stock: Investment House LLC Reduces Position",排除,已套用,更改：Event_Code、事件中文、Level、Action
+925,6496741e36f41eeaaf449a3f,2026-10-26,Dollar General,Crime Stoppers seeks information of four accused in Dollar General beer burglary,排除,已套用,更改：Event_Code、事件中文、Level、Action
+926,bafe6cb628622a9f048bc9fb,2026-10-23,Western Digital,西部數據爆賺，股價卻崩了！,排除,已套用,更改：Event_Code、事件中文、Level、Action
+927,063afdbdf1f5404a5202df95,2026-10-25,Microsoft,"Sweden's Government Offices Block ChatGPT and Claude, Keep Microsoft Copilot",排除,已套用,更改：Event_Code、事件中文、Level、Action
