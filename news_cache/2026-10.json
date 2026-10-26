@@ -1939,5 +1939,441 @@
       "requires_review": true,
       "summary_zh": "目前無足夠資訊顯示 CMS Energy 相關信用風險事件。"
     }
+  },
+  "c14f237e95d8676fcc8f8cbe8251b2a36d647eb697a06810b6b429af6060e79f": {
+    "answer": {
+      "company_mentioned": "Moderna",
+      "confirmed_default": false,
+      "event_codes": [
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "Moderna 股價因癌症疫苗洩漏消息暴跌逾 17%。"
+    }
+  },
+  "3ea3f97ff660e1dae23e1e9e5cf2ae691616bc67a56e457ec8e35b5220e2afa6": {
+    "answer": {
+      "company_mentioned": "Walmart",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "此新聞報導的是產品召回事件，並未提及任何信用風險或債務違約訊息。"
+    }
+  },
+  "ff32d6c0e73eefc519ca2a4c59e9dff78202e7768b0de63c915f97c60d296f94": {
+    "answer": {
+      "company_mentioned": "Coinbase",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前沒有足夠證據顯示 Coinbase 進行了任何債務違約或其他重大財務事件。"
+    }
+  },
+  "0ce0c574f49d62af60438dbec98c52cdd87ffb1874bd6dc672f61df60117d2e0": {
+    "answer": {
+      "company_mentioned": "Ameriprise Financial",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前無足夠資訊顯示 Ameriprise Financial 之信用事件，需進一步調查。"
+    }
+  },
+  "a40111a47aca5c52884585abdda08457457cbc0bda9c74216930d4b08ebfbe6f": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Ameriprise Financial",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "本新聞未提及任何與美國普利斯金融公司相關的信用風險事件。",
+      "requires_review": true
+    }
+  },
+  "eb7683c2d4f632c8cab968e5893dd3ab993ad094b0cb6497076078c6cc4aef10": {
+    "answer": {
+      "company_mentioned": "Microsoft",
+      "relevant": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "此新聞未提及任何可確認的債務違約或信用風險事件。",
+      "requires_review": true
+    }
+  },
+  "b1be5763a9c11a0b1564d5bfdb98d14ab54d501a9ed538f21aac5b0ac644fd69": {
+    "answer": {
+      "company_mentioned": "McDonald's",
+      "confirmed_default": false,
+      "event_codes": [
+        "REGULATORY_INVESTIGATION"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "麥當勞因油脂排放問題被美國環保署調查。"
+    }
+  },
+  "c60a8afd3fbe9673039ff2a4dca51e5fba42e110fe129bff8fa402529d7fd878": {
+    "answer": {
+      "company_mentioned": "Microsoft",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "此新聞未提及任何與債務違約或信用風險相關的具體事件，僅討論 Microsoft 在 AI 與網路安全領域的角色。"
+    }
+  },
+  "ad1ae3f853a3d802b0ed3f7636cdd0aa0babd1f0e2b2989f2b278a4497749b45": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Goldman Sachs",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "此新聞未提及任何與信用風險相關的事件。",
+      "requires_review": true
+    }
+  },
+  "9ef6843e46d309634924c75a35097449c409f17172d26a830ebc4ee996386e2f": {
+    "answer": {
+      "company_mentioned": "Sandisk",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前無足夠資訊顯示 Sandisk 之信用事件，需進一步調查。"
+    }
+  },
+  "a3a0aa41da887c480dc20221a762a27cc595a987aed01a9873a63a6fe36057b5": {
+    "answer": {
+      "company_mentioned": "Netflix",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "此新聞未提及任何與信用風險相關的事件，無法判斷是否存在違約或其他信用事件。"
+    }
+  },
+  "64945ca2c62204bc474f214acf0f9c2023adcf61d798d4717bf335c3e301b3d8": {
+    "answer": {
+      "company_mentioned": "Amazon",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "此新聞未提及任何與亞馬遜相關的信用風險事件，僅為財報預告。"
+    }
+  },
+  "a821b35c1c9a67d71a82186c6942d71adfbcb483b9be87d861940c117e53273d": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Microsoft",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "此新聞未提及任何信用風險事件。",
+      "requires_review": true
+    }
+  },
+  "7c737803dff3271bafca80a04a861df8999333c8540aa8daf0f023275361db62": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Tesla, Inc.",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "無足夠資訊判斷是否有信用風險事件。",
+      "requires_review": true
+    }
+  },
+  "a22062637299859befa53b0637462308c71cbc9553ed52340803f392dbd7233b": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Booking Holdings",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "此新聞未提及任何與信用風險相關的事件。",
+      "requires_review": true
+    }
+  },
+  "feb8b9091f0935e5708112d846d9e44288fc9c618ae6eeeb51bfc77aacaae6ba": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Apple Inc.",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "此新聞為產品開箱介紹，未提及任何信用風險事件。",
+      "requires_review": true
+    }
+  },
+  "1572e6d38dc3f2ae576c2b4a32bc7e71350274628b0abdd7fc81676708fffd1a": {
+    "answer": {
+      "company_mentioned": "Amgen",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "本新聞未提及任何與 Amgen 相關的信用風險事件，無法判斷是否存在違約或其他信用風險訊號。"
+    }
+  },
+  "892dc577e2ae61d769b2615cac4aa890cdb188aac3db9253f08dc7378fe08aaa": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Pfizer",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "本新聞未提及任何與債務違約、CDS利差擴大或其他信用風險相關的事件，僅提及癌症藥物試驗失敗與公司未來路徑。",
+      "requires_review": true
+    }
+  },
+  "eb369269135c07edfdfce6ec52850f9a6cc9a04866df0d300e4ea7f67517e2ce": {
+    "answer": {
+      "company_mentioned": "PepsiCo",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "本新聞未提及任何與信用風險相關的事件，僅報告北美飲料銷量下降。"
+    }
+  },
+  "faa1d93b6bbd6d8873bac97ec45d09bfc8e16886f1918bfa3baf403a418c7ab9": {
+    "answer": {
+      "company_mentioned": "Automatic Data Processing",
+      "confirmed_default": false,
+      "event_codes": [
+        "CDS_SPREAD_WIDENING"
+      ],
+      "event_status": "MARKET_IMPLIED",
+      "evidence": "ADP implementation drops to 3.89pc in July-September",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "自動資料處理公司（ADP）在七至九月的實施率下降至3.89%，導致其信用違約掉期（CDS）利差擴大，顯示市場對其信用風險的擔憂升高。"
+    }
+  },
+  "cec1fd42c9b595757bf62090ba3c71bedd3a8aab220f349565c7b38424806496": {
+    "answer": {
+      "company_mentioned": "Automatic Data Processing",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前沒有足夠資訊顯示 ADP 可能發生違約或其他信用風險事件。"
+    }
+  },
+  "5d76db91a7d3bfef3d06a9fbf5acdf61599de6dda10004724b9ddb352af891e7": {
+    "answer": {
+      "company_mentioned": "Goldman Sachs",
+      "confirmed_default": false,
+      "event_codes": [
+        "WORKFORCE_REDUCTION"
+      ],
+      "event_status": "RUMORED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "高盛預測全球員工將裁減約九成，屬於人力資源調整事件。"
+    }
+  },
+  "7cfa8bf6b7839daceeba75bb5ba1752442cffb79dd202388df2e39960ae376ea": {
+    "answer": {
+      "company_mentioned": "Netflix",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前沒有足夠證據顯示Netflix發生任何信用風險事件。"
+    }
+  },
+  "84ce49c46e108d69439cbc45bbb6747e9b36d0b10bb852033ac31ee319430bf8": {
+    "answer": {
+      "company_mentioned": "Automatic Data Processing",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前缺乏足夠資訊來判斷是否存在任何信用風險事件。"
+    }
+  },
+  "334aca6b01d7ada10351b29932463cc3e9d2463f556f3e70a42d86e5e4b3900f": {
+    "answer": {
+      "company_mentioned": "Netflix",
+      "confirmed_default": false,
+      "event_codes": [
+        "WORKFORCE_REDUCTION"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "Netflix lays off 6% of workforce amidst slowing growth",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "Netflix 於近期裁減約 6% 的員工，以應對成長放緩的挑戰。"
+    }
+  },
+  "89df6f6f55502192090634ebd4d27ccf6858c80a04bb4cfd504cc13ef8e8b049": {
+    "answer": {
+      "company_mentioned": "Automatic Data Processing",
+      "relevant": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "無足夠資訊顯示 ADP 之信用風險事件。",
+      "requires_review": true
+    }
+  },
+  "780d96c47b01225aa819bd39e6505874f9d345bf4eb431b99d7c7e888400115e": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Tesla, Inc.",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "本新聞未提及任何信用風險事件。",
+      "requires_review": true
+    }
+  },
+  "ff6fb689499065090c460b64728e0861c0e2096a334161fc8b0543af05bb3a31": {
+    "answer": {
+      "company_mentioned": "Intuit",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前沒有足夠資訊顯示 Intuit 可能發生債務違約或其他信用風險事件。"
+    }
+  },
+  "e5ccb321612a71420f50de4da2d4a97619b0ec992be8d280b0844226beac7361": {
+    "answer": {
+      "company_mentioned": "Boeing",
+      "confirmed_default": false,
+      "event_codes": [
+        "PRODUCTION_DELAY"
+      ],
+      "event_status": "MARKET_IMPLIED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "波音公司因翼部爭議暫停 777 貨運機的生產，屬於生產延遲事件。"
+    }
+  },
+  "0dd7db3b06b3f2beaef70681463e22d9b10410dbbca12c9d0a94bb1107b6e82e": {
+    "answer": {
+      "company_mentioned": "Starbucks",
+      "confirmed_default": false,
+      "event_codes": [
+        "WORKFORCE_REDUCTION"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "2 Starbucks stores closing in Sea-Tac Airport; layoffs planned",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "星巴克在西雅圖國際機場關閉兩家門店，並計畫裁員。"
+    }
+  },
+  "32e24bb8b26aad5b83e675fe92426217a6ba60f42318845937b1e0a59f6fb7bf": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "McDonald's",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "requires_review": true,
+      "summary_zh": "本新聞僅提及麥當勞股票在週末交易中略低於Xetra收盤價，未包含任何關於違約、信用風險升高或其他財務風險事件的具體訊息。"
+    }
+  },
+  "51714153ec42296062d091d3cacd4dc6cc0c926df53f81dc1a356a11aa12add7": {
+    "answer": {
+      "company_mentioned": "Netflix",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "本新聞未提及Netflix的債務違約或其他信用風險事件，僅提及Xbox與Netflix內容交易的損失。"
+    }
+  },
+  "a02c3a5f187e3b9eadbc44a40e34c8632989520db8a430b4bd22261b067a2a9e": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Automatic Data Processing",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "requires_review": true,
+      "summary_zh": "ADP 的第一季支出降至 17 年來最低，並未提及任何違約或信用風險事件。"
+    }
+  },
+  "1560ab0288be5fbe7add41d0f609a9d9be1ac9f89feb3ad43f15206a7323db86": {
+    "answer": {
+      "company_mentioned": "Lam Research",
+      "confirmed_default": false,
+      "event_codes": [
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "Lam Research 股價下跌 29%，估值前景因 2000 億美元晶圓製造熱潮而轉變。"
+    }
+  },
+  "623660b85b6c0b7e9227f95d5b694cb1dbac3e497df0cae8bfe4a31df9dc15b8": {
+    "answer": {
+      "company_mentioned": "Apple Inc.",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "蘋果公司推出的摺疊屏 iPhone Duo 產品因耐用性問題受到負面報導，但並未提及任何債務違約或信用風險事件。"
+    }
   }
 }
