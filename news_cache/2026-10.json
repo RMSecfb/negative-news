@@ -6090,5 +6090,1305 @@
       "requires_review": true,
       "summary_zh": "EQT 以收購 Range 為主，並未提及任何違約或信用風險事件。"
     }
+  },
+  "76b20d0dc53af3a3cae4247a57af8f41c5f52141d62a90924a90e61786aaf620": {
+    "answer": {
+      "company_mentioned": "Cooper Companies (The)",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "本新聞未提供任何關於公司債務違約、CDS利差擴大或其他信用風險事件的具體訊息。"
+    }
+  },
+  "50b213d99bcd2f6e2808d8218563472849b7f5768ae082e350ff12814174eded": {
+    "answer": {
+      "company_mentioned": "Cooper Companies (The)",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "本新聞未提供任何關於公司債務違約、CDS利差擴大或其他信用風險事件的具體證據，僅提及高管面臨刑事指控，無法確定是否涉及信用風險。"
+    }
+  },
+  "ca6e9d6cd5e7d0136b3dbd7c1e684d25cfc6ae18cb3a93af97d094e2ad8bb953": {
+    "answer": {
+      "company_mentioned": "Brightspeed",
+      "confirmed_default": false,
+      "event_codes": [
+        "BANKRUPTCY"
+      ],
+      "event_status": "RUMORED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "Brightspeed 正在準備於 12 月申請破產，相關報導來自《華爾街日報》"
+    }
+  },
+  "ab1f271dded0a6d5d65975288619b4bce89745c46a62dd21d5e422d5e7b8f390": {
+    "answer": {
+      "company_mentioned": "ServiceNow",
+      "confirmed_default": false,
+      "event_codes": [
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "MARKET_IMPLIED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "ServiceNow 股價因財報引發 AI 相關疑慮，單日下跌 27%，創歷史最大單日跌幅。"
+    }
+  },
+  "222c648dd54b3d255a40cc3515ae3b51281458077ea7dc04a37faab1c18aaf2e": {
+    "answer": {
+      "company_mentioned": "Intel",
+      "confirmed_default": false,
+      "event_codes": [
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "英特爾股價因市場對其指導預測的擔憂而大幅下跌。"
+    }
+  },
+  "fa00529facac28079786d4fb273b21ee7e3d7232722aa260bd24161376bad278": {
+    "answer": {
+      "company_mentioned": "",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "本新聞未提供任何關於公司違約、破產或其他信用風險事件的具體訊息，僅提及股價波動。"
+    }
+  },
+  "c22f6ef684e3317fec3a518c1c415b5070bdbc2b5ffed2cdb5a14efa4d128d5f": {
+    "answer": {
+      "company_mentioned": "ServiceNow",
+      "confirmed_default": false,
+      "event_codes": [
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "MARKET_IMPLIED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "服務即時公司股價因盈利驚人而大幅下跌，創下歷史最低日跌幅。"
+    }
+  },
+  "1431c8d6d285cb2e40272161535e47af363bd582bdaa342fc9cd96b613114cbb": {
+    "answer": {
+      "company_mentioned": "ServiceNow",
+      "confirmed_default": false,
+      "event_codes": [
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "MARKET_IMPLIED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "服務即時公司股價因盈利驚人而大幅下跌，創下歷史最低日跌幅。"
+    }
+  },
+  "2c3023addb3bc4e21221b049954113effe5076ed8184399a8b94faf538917010": {
+    "answer": {
+      "company_mentioned": "Intel",
+      "confirmed_default": false,
+      "event_codes": [
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "MARKET_IMPLIED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "Intel 股價因個人電腦需求減少及供應鏈問題而大幅下跌。"
+    }
+  },
+  "b112f539a6d74f9b4497c4615a39c92a6c260f0222bbcebf1cf82ae01d0c5c38": {
+    "answer": {
+      "company_mentioned": "Intel",
+      "confirmed_default": false,
+      "event_codes": [
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "英特爾因四季度業績指引遜於預期，股價在盤後暴跌21%。"
+    }
+  },
+  "c5e2543722a48e8009ac96d7b03b8f243a1b432a505f5a09b6dd33583a414021": {
+    "answer": {
+      "company_mentioned": "Google",
+      "confirmed_default": false,
+      "event_codes": [
+        "EARNINGS_MISS"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "Google stock plunges more than 12% on Q3 earnings miss",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "谷歌因第三季財報不及預期，股價下跌逾12%。"
+    }
+  },
+  "bd773e7e73447ea6ce9ed8365be9da158b9ae43b8e32fa28a74aedda0cf24b9a": {
+    "answer": {
+      "company_mentioned": "Alphabet",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "本新聞僅提及Alphabet股價暴跌，並未說明任何違約、破產或其他信用風險事件。"
+    }
+  },
+  "be25bfe6d5ef51d0740c1c4e48639648daf8ad687d3d6773db5c6bb477d6090b": {
+    "answer": {
+      "company_mentioned": "Intel",
+      "confirmed_default": false,
+      "event_codes": [
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "英特爾股價因人工智慧對其業務部分造成阻礙而下跌20%。"
+    }
+  },
+  "55b21eeb01bb1de56cfd2a93d8e4d48c33ef30c892e87a3274b93dec8762cda6": {
+    "answer": {
+      "company_mentioned": "Walmart",
+      "confirmed_default": false,
+      "event_codes": [
+        "PRODUCT_RECALL"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "Millions of Bodum USA coffee makers sold at Target and Walmart recalled due to burn risk",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "沃爾瑪因銷售的Bodum USA咖啡機存在燒毀風險而召回產品。"
+    }
+  },
+  "50e9fa8261a79f63ac9f7e61e4a3c33221c6799a40c3bd629986490ebc6ed4dd": {
+    "answer": {
+      "company_mentioned": "Alphabet Inc. (Class A)",
+      "confirmed_default": false,
+      "event_codes": [
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "MARKET_IMPLIED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "Alphabet Inc. (Class A) 股價大幅下跌，跌幅近 14%，創下半年以來新低，市值蒸發約 5500 億美元。"
+    }
+  },
+  "4c77ae452769d873ab48a9a99e1e1ad2e950f78e7808b7617afe5ef0829b9d06": {
+    "answer": {
+      "company_mentioned": "Alphabet Inc. (Class C)",
+      "confirmed_default": false,
+      "event_codes": [
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "美股異動｜谷歌A暴跌近14%創逾半年新低，市值蒸發近5500億美元",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "Alphabet Inc. (Class C) 股價大幅下跌，跌幅近14%，創下逾半年新低，市值蒸發約5500億美元。"
+    }
+  },
+  "bf0e72413ca260e9eef664b1ffa915356bb2560b9a4683e7b6b396d167f5ae8e": {
+    "answer": {
+      "company_mentioned": "Boeing",
+      "confirmed_default": false,
+      "event_codes": [
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "MARKET_IMPLIED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "波音公司公布前三季虧損，導致股價單日大幅下跌，屬於市場價格波動事件。"
+    }
+  },
+  "fff281d0532b17350e74e79890e18a3b32d44820ab669eab059e65c3bf02df44": {
+    "answer": {
+      "company_mentioned": "Western Digital",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "本新聞未提及任何關於西部數據公司違約、破產或其他信用風險事件的具體訊息。"
+    }
+  },
+  "b059836d0d5bd0ea33c4f8c1e0497c29b0b96286e4cfdd05bf56525c8ad8b4b0": {
+    "answer": {
+      "company_mentioned": "Google",
+      "confirmed_default": false,
+      "event_codes": [
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "Google Stock Plunges 9% as Earnings Miss and AI Spending Concerns Investors",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "Google 股價因財報不及預期及對 AI 投資的擔憂下跌 9%。"
+    }
+  },
+  "99daa8d30c807036e904b1364dbcfaeee23a9f5f7cd75ed1bf61920bf09f4b41": {
+    "answer": {
+      "company_mentioned": "Intel",
+      "confirmed_default": false,
+      "event_codes": [
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "英特爾股價因電腦市場前景疲弱而下跌逾20%。"
+    }
+  },
+  "79032369af539973fd0a3ef4c901780229fb9cf700ff731928d32151049dae7f": {
+    "answer": {
+      "company_mentioned": "eClerx Services",
+      "confirmed_default": false,
+      "event_codes": [
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "MARKET_IMPLIED",
+      "evidence": "eClerx Services shares plunge 13% post company's second-quarter results",
+      "relevant": false,
+      "requires_review": false,
+      "summary_zh": "eClerx Services 股價因第二季業績公布而下跌 13%。"
+    }
+  },
+  "aad2814e9297e729b457490ced48d8b9e73fb965cf8aeda702aabe195465bb51": {
+    "answer": {
+      "company_mentioned": "Intel",
+      "confirmed_default": false,
+      "event_codes": [
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "英特爾股價因第四季預測疲弱而大幅下跌，並未顯示任何違約或信用風險升高的訊號。"
+    }
+  },
+  "cbc63b60bd00f5968204623d882747d680eb6593d45fd29abec88d768ae61e3b": {
+    "answer": {
+      "company_mentioned": "Intel",
+      "confirmed_default": false,
+      "event_codes": [
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "英特爾股價因第四季展望不佳而大幅下跌。"
+    }
+  },
+  "a95f8bbfb8e1a4656eb77c1667a9b10b863baeadbcb717b01e1bc4bfb30f0edc": {
+    "answer": {
+      "company_mentioned": "Intel",
+      "confirmed_default": false,
+      "event_codes": [
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "英特爾股價因工廠瓶頸與個人電腦需求放緩而下跌約20%。"
+    }
+  },
+  "8cbbbeb70b0c4add035caf909f5e5b1d1fbebfce238983b0e0e3f4ef8184235e": {
+    "answer": {
+      "company_mentioned": "Alphabet Inc. (Class A)",
+      "confirmed_default": false,
+      "event_codes": [
+        "EARNINGS_MISS",
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "MARKET_IMPLIED",
+      "evidence": "美股盤前要點｜谷歌Q3業績遜預期，盤前暴跌超11%！傳邁威爾科技擬收購Lumentum",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "Alphabet Inc.（Class A）第三季財報不及預期，導致股價在盤前暴跌超過11%。"
+    }
+  },
+  "3a50aaa5d03666c1e18a8462f1e5b407d2d7ad7ef1af21f4390738063840eb36": {
+    "answer": {
+      "company_mentioned": "Microsoft",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "本新聞未提及任何關於 Microsoft 的債務違約、CDS利差擴大或其他信用風險事件的具體訊息。"
+    }
+  },
+  "8a5c82f618c16d41abc603270aaea2bc6c4becba770786e4941cc5cef40511ab": {
+    "answer": {
+      "company_mentioned": "邁威爾科技",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "美股盤前要點｜谷歌Q3業績遜預期，盤前暴跌超11%！傳邁威爾科技擬收購Lumentum",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "邁威爾科技被報導計畫收購Lumentum，並未涉及任何信用風險事件。"
+    }
+  },
+  "fceca49c727f1a34f131a711a89b0ce972172254035ecbfb35505050a5ee544c": {
+    "answer": {
+      "company_mentioned": "Alphabet Inc. (Class C)",
+      "confirmed_default": false,
+      "event_codes": [
+        "EARNINGS_MISS"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "Alphabet Inc.（Class C）公布第三季業績低於市場預期，股價在盤前大幅下跌超過11%。"
+    }
+  },
+  "0d9033c51d7e356e129cc06ca843c4b936d549d8b55551500a765c815a4e7bab": {
+    "answer": {
+      "company_mentioned": "Intel",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "本新聞未提及任何與信用風險相關的事件，僅報導Intel的財報表現與股價變動。"
+    }
+  },
+  "11bcdfa452e38b36afcaea8315112c271489468718cd0475f85f84a82a4617fe": {
+    "answer": {
+      "company_mentioned": "Intel",
+      "confirmed_default": false,
+      "event_codes": [
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "Intel 股價在盤後交易中下跌 23.03%，導致納斯達克期貨下滑。"
+    }
+  },
+  "6f10402cd6ea37dbd2be6383c5fd2e6aaff011e96ef04c45dac81b6cac1e805e": {
+    "answer": {
+      "company_mentioned": "Intel",
+      "confirmed_default": false,
+      "event_codes": [
+        "FACTORY_SHUTDOWN",
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "MARKET_IMPLIED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "以色列工廠爆炸事件加劇市場對英特爾前景的擔憂，導致股價大幅下跌。"
+    }
+  },
+  "8f9df9fa561434feb861a482b7a42731acf3bd14b949dd6ddfb446a11a05bf57": {
+    "answer": {
+      "company_mentioned": "Intel",
+      "confirmed_default": false,
+      "event_codes": [
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "MARKET_IMPLIED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "英特爾股價因以色列工廠爆炸事件造成約6億美元損失而下跌16%。"
+    }
+  },
+  "3d9224ce3dec5129a1e0887fea1f4d543665555caa501a24165a4bcc4482f7a3": {
+    "answer": {
+      "company_mentioned": "Alphabet",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "文章提到Alphabet股價下跌，但未提及任何違約、破產或其他信用風險事件。"
+    }
+  },
+  "52d14de178bca0a6d76800916367d016a2e9b46ccebc3258056b8fb2a65c6c32": {
+    "answer": {
+      "company_mentioned": "Boston Scientific",
+      "confirmed_default": false,
+      "event_codes": [
+        "CYBER_ATTACK",
+        "EARNINGS_WARNING"
+      ],
+      "event_status": "MARKET_IMPLIED",
+      "evidence": "Boston Scientific’s Cyberattack Cuts Guidance And Warns Of 2027 ‘Trough’",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "波士頓科學公司因網路攻擊而削減指引，並警告2027年可能出現低迷。"
+    }
+  },
+  "e73339db6459eb735f74aa96017a1612e0b12be48f03620858a300deb3dc5c6b": {
+    "answer": {
+      "company_mentioned": "Fortinet",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前缺乏足夠資訊來判斷 Fortinet 是否存在任何信用風險事件。"
+    }
+  },
+  "080959bf27fa09f08eac8fb5cb9e0584dd87e78301b1949b5e49f9c8a98ea790": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Fortinet",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "目前缺乏足夠資訊以判斷是否存在信用風險事件。",
+      "requires_review": true
+    }
+  },
+  "581b3104161fa773bd51ad2c4477a5f60d9f62f7857a50aa47fc02d94b7c0022": {
+    "answer": {
+      "company_mentioned": "Walmart",
+      "confirmed_default": false,
+      "event_codes": [
+        "REGULATORY_INVESTIGATION"
+      ],
+      "event_status": "INVESTIGATING",
+      "evidence": "El Paso Matters challenges secrecy over Walmart shooting investigation records",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "沃爾瑪因槍擊調查紀錄的保密問題而面臨監管調查。"
+    }
+  },
+  "de2307b0da9ed2f723294c364df8b3eb64a3159539f04e4f87d24e987cc2f0cc": {
+    "answer": {
+      "company_mentioned": "PayPal",
+      "confirmed_default": false,
+      "event_codes": [
+        "REGULATORY_INVESTIGATION"
+      ],
+      "event_status": "INVESTIGATING",
+      "evidence": "PayPal Faces New FTC Investigation Into Fees, Marketing And Purchase Protections",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "PayPal 正面臨美國聯邦貿易委員會（FTC）針對其費用、行銷及購買保護的調查。"
+    }
+  },
+  "5ae906b99f93bfc84b452bf3c95004e5d0ca11085852676f76319f4894afa309": {
+    "answer": {
+      "company_mentioned": "Nvidia",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "本報導主要敘述 Nvidia CEO 可能成為間諜陰謀的目標，並未提及任何公司債務違約、信用事件或市場信用風險訊號。"
+    }
+  },
+  "d66fb10d7f67732bfab7add78aa8721cd3e769e3de0563b2da802439c0e07359": {
+    "answer": {
+      "company_mentioned": "Intel",
+      "confirmed_default": false,
+      "event_codes": [
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "MARKET_IMPLIED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "英特爾股價因績後表現不佳而大幅下跌，並未有任何違約或破產訊息。"
+    }
+  },
+  "d26e9f989c0df00e6cdfe98508cbcd9fd67b49e41703b814c2a38516200fa9f3": {
+    "answer": {
+      "company_mentioned": "Alphabet Inc. (Class A)",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "芬蘭警方已在谷歌數據中心啟動刑事調查，但目前沒有任何證據顯示公司存在債務違約或其他信用風險事件。"
+    }
+  },
+  "a94b2b9ef92a648c38544a06625712d4db81e76aaa00f0c922c64b7b40f1583f": {
+    "answer": {
+      "company_mentioned": "Alphabet Inc. (Class C)",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "本新聞未提供任何關於 Alphabet Inc. (Class C) 的信用違約或相關風險事件的具體訊息，僅提及芬蘭警方在谷歌數據中心啟動刑事調查。"
+    }
+  },
+  "1f1b253e16014504b8771fa1c84a4425810303993fe788cd03617df53c361c4a": {
+    "answer": {
+      "company_mentioned": "Walmart",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "此新聞僅提及警方尋求 Rivian 資料以調查一起在阿什伯勒的 Walmart 事故，並未涉及任何信用風險事件。"
+    }
+  },
+  "00fd8a3f01a5e51ed7ba9dee35d2a78ebfd0f392556bed289b811f48b6884c7e": {
+    "answer": {
+      "company_mentioned": "",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "本篇報導僅提及美股市場整體走勢，未提及任何公司信用事件。"
+    }
+  },
+  "325db913d911c06e77378998e37449900be9472b302add5dcc28d6dc06e60d37": {
+    "answer": {
+      "company_mentioned": "Charter Communications",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前無足夠資訊顯示 Charter Communications 之信用事件。"
+    }
+  },
+  "c1b63d941f21901d9c21f214e1beb6204567cdc37c2dbc0d855b845c218da8e3": {
+    "answer": {
+      "company_mentioned": "DoorDash",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前無足夠資訊顯示 DoorDash 相關信用風險事件。"
+    }
+  },
+  "5a8198320f3704a69984a32c57a6c0cc9cf4d3be530818a971ab6f475729e3b8": {
+    "answer": {
+      "company_mentioned": "Lennar",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "本新聞僅提及律師事務所鼓勵投資者查詢有關Lennar的證券集體訴訟調查，並未提及任何信用風險事件或違約訊號。"
+    }
+  },
+  "720e5bc950aad2147d181e6ea71284c640eb1100ed6f753df2410cd9ed08000e": {
+    "answer": {
+      "company_mentioned": "J.B. Hunt",
+      "confirmed_default": false,
+      "event_codes": [
+        "MAJOR_LITIGATION"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "Rosen Law Firm Encourages J.B. Hunt Transport Services, Inc. Investors to Inquire About Securities Class Action Investigation",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "羅森律師事務所鼓勵J.B. Hunt投資者查詢有關證券集體訴訟調查的資訊，表明公司正面臨重大訴訟。"
+    }
+  },
+  "aaddbb7a49e91afa193b958ab6fa702cbe2fa360899145ffbf27b74bf9ce1b78": {
+    "answer": {
+      "company_mentioned": "Boston Scientific",
+      "confirmed_default": false,
+      "event_codes": [
+        "CYBER_ATTACK"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "本篇報導指出波士頓科學（Boston Scientific）遭受網路攻擊，並討論此事件可能對公司造成的影響。"
+    }
+  },
+  "08e47d67f1263003dd5820abaf2a1fdd69502258291fdba4bc1c3743606b9b59": {
+    "answer": {
+      "company_mentioned": "General Motors",
+      "confirmed_default": false,
+      "event_codes": [
+        "REGULATORY_PENALTY",
+        "PRIVACY_INCIDENT"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "Vermont to receive $4.5M settlement from General Motors following data privacy investigation",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "美國緬因州將從通用汽車獲得450萬美元的和解金，原因是通用汽車在資料隱私調查中被發現違規。"
+    }
+  },
+  "e99bfd5a5e96e18898b9e1dc9d48de589ebc44a9f475635ac02d73ea96cc0091": {
+    "answer": {
+      "company_mentioned": "Starbucks",
+      "confirmed_default": false,
+      "event_codes": [
+        "EARNINGS_MISS"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "星巴克公布季度營收低於預期，顯示財務表現不佳，但並未涉及違約或其他信用風險事件。"
+    }
+  },
+  "d372f4d540458b6131ccb86a9804bcb7e77e062a87281e7705933cb38f789140": {
+    "answer": {
+      "company_mentioned": "Intel",
+      "confirmed_default": false,
+      "event_codes": [
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "MARKET_IMPLIED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "英特爾股價因預測晶片銷售疲軟而下跌約20%，並未涉及任何違約或信用風險升高的訊息。"
+    }
+  },
+  "6b5cb2edf7714a6565857fea3de916c2c71223cf85a921d2899ba38c9c562f16": {
+    "answer": {
+      "company_mentioned": "Palo Alto Networks",
+      "confirmed_default": false,
+      "event_codes": [
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "Palo Alto Networks 股價在盤中下跌 6.45%，收於 369.05 美元，未有其他信用風險訊號。"
+    }
+  },
+  "dd4b9d51934e4b950589389fb17aa92af19d066c126452165131f154312c3a7b": {
+    "answer": {
+      "company_mentioned": "Agilent Technologies",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前無足夠資訊顯示Agilent Technologies有任何信用風險事件。"
+    }
+  },
+  "ac36318052894ae57b0f9d69594fd3e9686cc1aca39beddbe380de5c5f8c83bd": {
+    "answer": {
+      "company_mentioned": "CrowdStrike",
+      "confirmed_default": false,
+      "event_codes": [
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "CrowdStrike 股價在盤中下跌 5.05%，報 253.19 美元，未顯示任何違約或信用風險升高的訊號。"
+    }
+  },
+  "4b267345a7d559840f2afb7d1c1f0d19f6a2b02b6113d6c526b5c3b69c07983f": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "無足夠資訊判斷任何信用風險事件。",
+      "requires_review": true
+    }
+  },
+  "ac1eeb1dc51abdf3d5a5ee63835bdcc072888e2248c440ffc7065dc2f2c9cd65": {
+    "answer": {
+      "company_mentioned": "ServiceNow",
+      "confirmed_default": false,
+      "event_codes": [
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "MARKET_IMPLIED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "服務即時公司股價因未達投資者預期而下跌，並未顯示任何違約或其他財務危機訊號。"
+    }
+  },
+  "08aef4c49efecedd429915a7a33f5f42dfb1e1cb0ff98016525066bff5890fdd": {
+    "answer": {
+      "company_mentioned": "Fortinet",
+      "confirmed_default": false,
+      "event_codes": [
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "MARKET_IMPLIED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "Fortinet 股價因未達投資者預期而下跌，市場情緒受到影響。"
+    }
+  },
+  "cddbf4ec33c373e92c907f481d3c84c7024f4876097ac736fb33633225984bd9": {
+    "answer": {
+      "company_mentioned": "Intel",
+      "confirmed_default": false,
+      "event_codes": [
+        "EARNINGS_WARNING"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "Intel財測低於預期",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "Intel公布的財務預測低於市場預期，屬於財務警告事件。"
+    }
+  },
+  "9a56b8d6f02655fe207caa98d47e5a23925b5757e29fb75b28a890108cd6a4f4": {
+    "answer": {
+      "company_mentioned": "Intel",
+      "confirmed_default": false,
+      "event_codes": [
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "英特爾股價因第四季指引低於預期而大幅下跌。"
+    }
+  },
+  "152d63df86b4253342f5be2cee19680e91e5d40b5afb69e9fbbe2e099b4a88e2": {
+    "answer": {
+      "company_mentioned": "Intel",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "Intel 由於個人電腦處理器需求疲軟，股價下跌，但目前沒有證據顯示公司發生違約、破產或其他重大風險事件。"
+    }
+  },
+  "54d3efbfc474b41c1ab8f9e24892b6942305400dbdef0522434225d7b007b283": {
+    "answer": {
+      "company_mentioned": "Intel",
+      "confirmed_default": false,
+      "event_codes": [
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "MARKET_IMPLIED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "英特爾股價因銷售前景疲弱而下跌20%，影響其轉型計畫。"
+    }
+  },
+  "da4188b925dbf681ed4c46fa6c6d661c6017cd959f7ba4461bd3ee0fab77c34c": {
+    "answer": {
+      "company_mentioned": "Amazon",
+      "confirmed_default": false,
+      "event_codes": [
+        "EARNINGS_MISS"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "亞馬遜公布第三季財報，營收與預期不符，未達市場預期。"
+    }
+  },
+  "56fae01faa45dc7c54abbe78ac8b11b98dc65bb47db1ef4d21052909852f7b48": {
+    "answer": {
+      "company_mentioned": "Amazon",
+      "confirmed_default": false,
+      "event_codes": [
+        "GENERAL_INFORMATION"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "亞馬遜公布2023年自由現金流為負42.4億美元，並維持2026年資本支出不變，未顯示任何違約或信用風險升高的跡象。"
+    }
+  },
+  "1333f417073a9a53af14be1dd66a10bb9338c823422044bd28ec71208bfb1da7": {
+    "answer": {
+      "company_mentioned": "Intel",
+      "confirmed_default": false,
+      "event_codes": [
+        "EARNINGS_WARNING"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "伯恩斯坦分析師斯塔西·拉斯戈指出，英特爾的指引極度疲弱，暗示公司未來業績可能低於市場預期。"
+    }
+  },
+  "d9eaa550c6b2da189ff71b0a58920497e1176c17d9fcc134c433b323f7a30670": {
+    "answer": {
+      "company_mentioned": "Intel",
+      "confirmed_default": false,
+      "event_codes": [
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "MARKET_IMPLIED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "英特爾股價因以色列工廠爆炸及個人電腦需求疲軟而下跌21%。"
+    }
+  },
+  "5ab9cdf2c6197740a730cb2cefa9676a6345ee8b4d5888ff1faff8a0594b9a48": {
+    "answer": {
+      "company_mentioned": "Intel",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "無足夠資訊顯示Intel有違約或其他信用風險事件。"
+    }
+  },
+  "c77f271013f0ba03e1286e46fba87132b4ee2aede5c97aa5be2dde58bffe8e67": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Amazon",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "此新聞未提及任何信用風險事件。",
+      "requires_review": true
+    }
+  },
+  "3e38c23c579242455db8555dccb7c25db8f1d271f780adcc9de1d8dba623754b": {
+    "answer": {
+      "company_mentioned": "Lumentum",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "本新聞僅提及Marvell傳洽購Lumentum，並未提供任何關於公司信用風險、違約、破產或其他財務事件的具體訊息。"
+    }
+  },
+  "8ce0c6718d8554d1039be2531a80e963e4146b366f85acc0bb271239ec7ccbe0": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "DoorDash",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "requires_review": true,
+      "summary_zh": "此新聞僅提及DoorDash與Instacart的交易可能受到FTC審查，並未提及任何違約、破產或其他信用風險事件。"
+    }
+  },
+  "05ebc4bf61482afd1ba3f2c9df018628e7a1020055a839c5e8e5055100c629ab": {
+    "answer": {
+      "company_mentioned": "Intel",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "Intel 的財報並未顯示任何違約或信用風險升高的訊息，缺乏足夠證據判斷是否存在信用事件。"
+    }
+  },
+  "a8e5e768f3257686a346492b7ca13f305fc9d749d09cf0be9eae3160088ce10b": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "ExxonMobil",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "無足夠證據顯示有任何信用風險事件。",
+      "requires_review": true
+    }
+  },
+  "2dd1e786829b9dade139f1d899166874792dc8755003b57015d964085eaddab7": {
+    "answer": {
+      "company_mentioned": "Intel",
+      "confirmed_default": false,
+      "event_codes": [
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "MARKET_IMPLIED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "Intel 股價在延長交易時間內持續下跌，市場對其第三季財報的反應顯示投資者情緒偏負面。"
+    }
+  },
+  "3fe439b3ae2afc4768693dc03b18f2246837ec99a8e17b42f2d5037f03007f34": {
+    "answer": {
+      "company_mentioned": "McDonald's",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前沒有足夠資訊顯示麥當勞存在違約或其他信用風險事件，需進一步調查。"
+    }
+  },
+  "4487cbd411a44e9793d9af2831065e381e100d2a0fb7431cb30d4db723f235a5": {
+    "answer": {
+      "company_mentioned": "Amazon",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前沒有足夠證據顯示亞馬遜存在違約或其他信用風險事件。"
+    }
+  },
+  "bd65d62e4295d5fa12096f7306aff7806092c300ee03ec386c24a0bcd2a02115": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Microsoft",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "此新聞未提及任何與債務違約或信用風險相關的事件，僅談及 AI 建設延遲。",
+      "requires_review": true
+    }
+  },
+  "30a26391c4dbb7b1e283356fa5934be03698ab4c35462015fa123c1e88428262": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Microsoft",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "此新聞未提及任何與債務違約、信用風險升高或其他金融風險事件相關的訊息。",
+      "requires_review": true
+    }
+  },
+  "3cc95812173d84cad480320e933e477beb0dede4a0200ab2973d36bc492dbe9f": {
+    "answer": {
+      "company_mentioned": "Uber",
+      "confirmed_default": false,
+      "event_codes": [
+        "MAJOR_LITIGATION"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "Amazon, Uber, Instacart sue to block NYC law over delivery worker deactivation",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "Uber 與 Amazon、Instacart 一同提起訴訟，阻止紐約市關於配送員停用的法案。"
+    }
+  },
+  "9570c7d6a5c2294e430fc8111056541f3fe4ec38679d80e319f2ce929beb5c6f": {
+    "answer": {
+      "company_mentioned": "Leidos",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前沒有足夠資訊顯示Leidos存在違約或其他信用風險事件，需進一步調查。"
+    }
+  },
+  "b02288f9f27cb51808cca71beea93a50b67eee9da7bad7e713a530e51d91d401": {
+    "answer": {
+      "company_mentioned": "Amazon",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前沒有足夠證據顯示亞馬遜存在違約或其他信用風險事件。"
+    }
+  },
+  "f868a0d1ffcecef38c44e78271b851a9cb5a58b3dce3b6bd61bc6119ca7a71d0": {
+    "answer": {
+      "company_mentioned": "Microsoft",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "此新聞未提及任何與債務違約或信用風險相關的事件，無法判斷是否存在信用風險事件。"
+    }
+  },
+  "1748db5a3a8b6dac60b1c38450f9b0a86d893fe659a24292b8930c76db30ab84": {
+    "answer": {
+      "company_mentioned": "Bank of America",
+      "confirmed_default": false,
+      "event_codes": [
+        "REGULATORY_INVESTIGATION"
+      ],
+      "event_status": "RUMORED",
+      "evidence": "Warren urges DOJ criminal probe of Bank of America over anti-money-laundering violations",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "沃倫呼籲美國司法部對美國銀行進行刑事調查，指控其違反反洗錢規定。"
+    }
+  },
+  "5c29f37244fed93cd23f192f471c4b601de1a16f53d99899c7600683aa378639": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Uber",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "本新聞未提及任何與信用風險相關的事件。",
+      "requires_review": true
+    }
+  },
+  "7bd002168f9d9f1374433da6c1ef2c3b15d7d3b426f27daeea0a0d8ab849315e": {
+    "answer": {
+      "company_mentioned": "Vertiv",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前沒有足夠證據顯示 Vertiv 進行任何信用風險事件。"
+    }
+  },
+  "9b04cf00b8562490b68b50e98b8ca4929d30fa0544ae01350e11865e1cd85046": {
+    "answer": {
+      "company_mentioned": "MSCI Inc.",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前無足夠資訊顯示 MSCI Inc. 有任何信用風險事件。"
+    }
+  },
+  "242874d50affdca952ef7ac30570bf4d204fab3fed11d3767bce70bcf616e06c": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Amazon",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "此新聞未提及任何與信用風險相關的事件。",
+      "requires_review": true
+    }
+  },
+  "364dd0c135d7b6fe10360c88f9d8c66669c023f986c5ffa6186c0a01f8bbf2f1": {
+    "answer": {
+      "company_mentioned": "Nvidia",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "本新聞未提及任何與Nvidia債務違約或信用風險相關的具體事件，僅報導公司對中國資產調查的回應。"
+    }
+  },
+  "c0937e5428f80571080dae735e77690a25ce2355e9e795ea95acaecc5678cf81": {
+    "answer": {
+      "company_mentioned": "Target Corporation",
+      "relevant": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "此新聞未提及任何與 Target Corporation 相關的信用風險事件。",
+      "requires_review": true
+    }
+  },
+  "cecbb0a153aa8bc487f7d38d584fd09b375d5bec4158abda1041bc3456b4545b": {
+    "answer": {
+      "company_mentioned": "Alphabet",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "文章主要討論 Alphabet 近期財報未達預期，並未提及任何債務違約、信用事件或其他風險訊號。"
+    }
+  },
+  "b91a85a3292dd1e23c024fc7003b453b2337daddfda9d95df145d8be5077995a": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Microsoft",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "此新聞未提及任何與信用風險相關的事件。",
+      "requires_review": true
+    }
+  },
+  "3263e6fbe993ae25d41b0ecbc38fb23a3b5ecd37310e09c7ec5127e5e432d062": {
+    "answer": {
+      "company_mentioned": "Microsoft",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前沒有足夠證據顯示微軟公司存在違約或其他信用風險事件。"
+    }
+  },
+  "0d7067dc542f4e2b0955b81d894f72a638a940ef64c853ccaa8cad3033f31fbf": {
+    "answer": {
+      "company_mentioned": "Nvidia",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "本新聞未提及任何與債務違約、信用風險升高或其他財務危機相關的具體事件，僅談及CEO對公司與間諜調查關係的說明。"
+    }
+  },
+  "90e66f163f13ef556ae372a106e25fb732295f9f988244ed0a2eb5259954a65e": {
+    "answer": {
+      "company_mentioned": "Intel",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前無足夠資訊確認Intel是否發生任何信用風險事件。"
+    }
+  },
+  "96577626bd6aee3b82568dd5717794d689063387ceede07a551401336885b995": {
+    "answer": {
+      "company_mentioned": "Amazon",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前缺乏足夠資訊來判斷是否存在任何信用風險事件。"
+    }
+  },
+  "6c5945985ca91c2b467e789a388d5625607b2b8a940c54d145380fc15ade78f9": {
+    "answer": {
+      "company_mentioned": "Amazon",
+      "confirmed_default": false,
+      "event_codes": [
+        "EARNINGS_MISS"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "亞馬遜公布第三季財報不及預期，市場對此作出反應。"
+    }
+  },
+  "f36c2f861f832c22dcbdebcc8fc3d21c848bbd6fee54da618b59333db15badda": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "IBM",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "IBM 相關新聞未顯示任何信用風險事件。",
+      "requires_review": true
+    }
+  },
+  "f3e8746469de79625fa93fa0d8970f3cf1e53678182af83fce007c337ad54d00": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Cooper Companies (The)",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "無足夠資訊判斷是否有信用風險事件。",
+      "requires_review": true
+    }
+  },
+  "59614bb9eca1e783cfd05892305e9b037a19bb3e3b17052f7b69afdd9aab3e82": {
+    "answer": {
+      "company_mentioned": "Starbucks",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "星巴克將恢復股票回購，但中國市場的變化對其成長前景造成不確定性。"
+    }
+  },
+  "040386a690c5692b60d8f867d838282e855c3e8106411b5843140a80864bd25f": {
+    "answer": {
+      "company_mentioned": "MetLife",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "此新聞未提及任何與MetLife相關的信用風險事件，僅談及美聯儲利率預期。"
+    }
+  },
+  "c8fe2579313ee228c51ebc525af2e792b4a4086ee54da7d2b2c8b9831a24e05b": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Nvidia",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "本新聞未提及任何與Nvidia相關的信用風險事件。",
+      "requires_review": true
+    }
   }
 }
