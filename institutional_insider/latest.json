@@ -4,26 +4,26 @@
       "status": "ready",
       "source_status": "available",
       "source_repo": "RMSecfb/negative-news",
-      "source_sha": "381a6ed8fd1fec63977a2435a3b9aef303222070",
+      "source_sha": "0c46890d8190a9489ebe950548bd973a04c99c14",
       "source_path": "institutional_13f/2026Q2/13F_2026Q2_Full_Universe.xlsx",
       "summary_path": "institutional_insider/13f/summary.csv",
       "workbook_path": "institutional_insider/13f/13F_2026Q2_Full_Universe.xlsx",
       "rows": 30,
-      "loaded_at": "2026-10-30T10:23:07.602720+08:00"
+      "loaded_at": "2026-10-31T09:17:44.476459+08:00"
     },
     "form4": {
       "status": "ready",
       "source_status": "available",
       "source_repo": "RMSecfb/negative-news",
-      "source_sha": "381a6ed8fd1fec63977a2435a3b9aef303222070",
-      "source_path": "insider_form4/2026-10-30/Form4_2026-10-30_30D_Full_Universe.xlsx",
+      "source_sha": "0c46890d8190a9489ebe950548bd973a04c99c14",
+      "source_path": "insider_form4/2026-10-31/Form4_2026-10-31_30D_Full_Universe.xlsx",
       "summary_path": "institutional_insider/form4/summary.csv",
-      "workbook_path": "institutional_insider/form4/Form4_2026-10-30_30D_Full_Universe.xlsx",
+      "workbook_path": "institutional_insider/form4/Form4_2026-10-31_30D_Full_Universe.xlsx",
       "rows": 30,
-      "loaded_at": "2026-10-30T10:23:07.602720+08:00"
+      "loaded_at": "2026-10-31T09:17:44.476459+08:00"
     }
   },
-  "synced_at": "2026-10-30T10:23:07.602720+08:00",
+  "synced_at": "2026-10-31T09:17:44.476459+08:00",
   "source_repo": "RMSecfb/negative-news",
-  "checked_source_sha": "381a6ed8fd1fec63977a2435a3b9aef303222070"
+  "checked_source_sha": "0c46890d8190a9489ebe950548bd973a04c99c14"
 }

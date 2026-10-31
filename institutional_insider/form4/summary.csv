@@ -1,31 +1,31 @@
 ﻿As of Date,Ticker,Company,Lookback,Analysis Start,Analysis End,Buy Count,Sell Count,Buy Insider Count,Sell Insider Count,Buy Shares,Sell Shares,Buy Amount,Sell Amount,Net Amount,NPR,Signal,內部人交易動向,10b5-1 P/S Count,資料品質
-2026-10-30,AAPL,Apple Inc.,30D,2026-10-01,2026-10-30,0,24,0,6,0,275822,0.0,91958543.24000001,-91958543.24000001,-1.0,Net Selling,近期淨賣出,24,OK
-2026-10-30,MSFT,Microsoft Corporation,30D,2026-10-01,2026-10-30,0,3,0,1,0,7305,0.0,3984302.992500001,-3984302.992500001,-1.0,Net Selling,近期淨賣出,3,OK
-2026-10-30,NVDA,NVIDIA Corporation,30D,2026-10-01,2026-10-30,0,0,0,0,0,0,0.0,0.0,0.0,,No P/S Activity,無P/S交易,0,有修正版待核對
-2026-10-30,AMZN,"Amazon.com, Inc.",30D,2026-10-01,2026-10-30,0,1,0,1,0,1000,0.0,251500.0,-251500.0,-1.0,Net Selling,近期淨賣出,1,OK
-2026-10-30,GOOGL,Alphabet Inc. Class A,30D,2026-10-01,2026-10-30,0,0,0,0,0,0,0.0,0.0,0.0,,No P/S Activity,無P/S交易,0,OK
-2026-10-30,META,"Meta Platforms, Inc.",30D,2026-10-01,2026-10-30,0,17,0,2,0,6362,0.0,4435046.34,-4435046.34,-1.0,Net Selling,近期淨賣出,17,OK
-2026-10-30,TSLA,"Tesla, Inc.",30D,2026-10-01,2026-10-30,0,0,0,0,0,0,0.0,0.0,0.0,,No P/S Activity,無P/S交易,0,OK
-2026-10-30,AVGO,Broadcom Inc.,30D,2026-10-01,2026-10-30,0,0,0,0,0,0,0.0,0.0,0.0,,No P/S Activity,無P/S交易,0,OK
-2026-10-30,AMD,"Advanced Micro Devices, Inc.",30D,2026-10-01,2026-10-30,0,9,0,1,0,17262,0.0,9333585.370000001,-9333585.370000001,-1.0,Net Selling,近期淨賣出,9,OK
-2026-10-30,INTC,Intel Corporation,30D,2026-10-01,2026-10-30,0,0,0,0,0,0,0.0,0.0,0.0,,No P/S Activity,無P/S交易,0,OK
-2026-10-30,JPM,JPMorgan Chase & Co.,30D,2026-10-01,2026-10-30,0,0,0,0,0,0,0.0,0.0,0.0,,No P/S Activity,無P/S交易,0,OK
-2026-10-30,BAC,Bank of America Corporation,30D,2026-10-01,2026-10-30,0,0,0,0,0,0,0.0,0.0,0.0,,No P/S Activity,無P/S交易,0,OK
-2026-10-30,GS,"The Goldman Sachs Group, Inc.",30D,2026-10-01,2026-10-30,0,9,0,2,0,12500,0.0,11380562.41,-11380562.41,-1.0,Net Selling,近期淨賣出,0,OK
-2026-10-30,MS,Morgan Stanley,30D,2026-10-01,2026-10-30,0,0,0,0,0,0,0.0,0.0,0.0,,No P/S Activity,無P/S交易,0,OK
-2026-10-30,V,Visa Inc.,30D,2026-10-01,2026-10-30,0,1,0,1,0,5875,0.0,2108008.75,-2108008.75,-1.0,Net Selling,近期淨賣出,1,OK
-2026-10-30,MA,Mastercard Incorporated,30D,2026-10-01,2026-10-30,0,4,0,2,0,5058,0.0,3111957.7,-3111957.7,-1.0,Net Selling,近期淨賣出,4,OK
-2026-10-30,WMT,Walmart Inc.,30D,2026-10-01,2026-10-30,0,6,0,4,0,25015,0.0,2924248.6401,-2924248.6401,-1.0,Net Selling,近期淨賣出,6,OK
-2026-10-30,COST,Costco Wholesale Corporation,30D,2026-10-01,2026-10-30,0,1,0,1,0,1100,0.0,1054025.5,-1054025.5,-1.0,Net Selling,近期淨賣出,0,OK
-2026-10-30,JNJ,Johnson & Johnson,30D,2026-10-01,2026-10-30,0,0,0,0,0,0,0.0,0.0,0.0,,No P/S Activity,無P/S交易,0,OK
-2026-10-30,PFE,Pfizer Inc.,30D,2026-10-01,2026-10-30,0,0,0,0,0,0,0.0,0.0,0.0,,No P/S Activity,無P/S交易,0,OK
-2026-10-30,XOM,Exxon Mobil Corporation,30D,2026-10-01,2026-10-30,0,0,0,0,0,0,0.0,0.0,0.0,,No P/S Activity,無P/S交易,0,OK
-2026-10-30,CVX,Chevron Corporation,30D,2026-10-01,2026-10-30,0,2,0,1,0,43100,0.0,9766243.02,-9766243.02,-1.0,Net Selling,近期淨賣出,2,OK
-2026-10-30,BA,The Boeing Company,30D,2026-10-01,2026-10-30,0,0,0,0,0,0,0.0,0.0,0.0,,No P/S Activity,無P/S交易,0,OK
-2026-10-30,CAT,Caterpillar Inc.,30D,2026-10-01,2026-10-30,0,0,0,0,0,0,0.0,0.0,0.0,,No P/S Activity,無P/S交易,0,OK
-2026-10-30,NFLX,"Netflix, Inc.",30D,2026-10-01,2026-10-30,0,3,0,1,0,17980,0.0,1151192.94,-1151192.94,-1.0,Net Selling,近期淨賣出,3,OK
-2026-10-30,CRM,"Salesforce, Inc.",30D,2026-10-01,2026-10-30,0,0,0,0,0,0,0.0,0.0,0.0,,No P/S Activity,無P/S交易,0,OK
-2026-10-30,ORCL,Oracle Corporation,30D,2026-10-01,2026-10-30,0,0,0,0,0,0,0.0,0.0,0.0,,No P/S Activity,無P/S交易,0,OK
-2026-10-30,KO,The Coca-Cola Company,30D,2026-10-01,2026-10-30,0,0,0,0,0,0,0.0,0.0,0.0,,No P/S Activity,無P/S交易,0,OK
-2026-10-30,PEP,"PepsiCo, Inc.",30D,2026-10-01,2026-10-30,3,1,1,1,139571,30000,17904167.88,4053891.0,13850276.88,0.5,Net Buying,近期淨買入,0,OK
-2026-10-30,IBM,International Business Machines Corporation,30D,2026-10-01,2026-10-30,0,0,0,0,0,0,0.0,0.0,0.0,,No P/S Activity,無P/S交易,0,OK
+2026-10-31,AAPL,Apple Inc.,30D,2026-10-02,2026-10-31,0,24,0,6,0,275822,0.0,91958543.24000001,-91958543.24000001,-1.0,Net Selling,近期淨賣出,24,OK
+2026-10-31,MSFT,Microsoft Corporation,30D,2026-10-02,2026-10-31,0,3,0,1,0,7305,0.0,3984302.992500001,-3984302.992500001,-1.0,Net Selling,近期淨賣出,3,OK
+2026-10-31,NVDA,NVIDIA Corporation,30D,2026-10-02,2026-10-31,0,0,0,0,0,0,0.0,0.0,0.0,,No P/S Activity,無P/S交易,0,有修正版待核對
+2026-10-31,AMZN,"Amazon.com, Inc.",30D,2026-10-02,2026-10-31,0,0,0,0,0,0,0.0,0.0,0.0,,No P/S Activity,無P/S交易,0,OK
+2026-10-31,GOOGL,Alphabet Inc. Class A,30D,2026-10-02,2026-10-31,0,1,0,1,0,82,0.0,23288.0,-23288.0,-1.0,Net Selling,近期淨賣出,1,OK
+2026-10-31,META,"Meta Platforms, Inc.",30D,2026-10-02,2026-10-31,0,17,0,2,0,6362,0.0,4435046.34,-4435046.34,-1.0,Net Selling,近期淨賣出,17,OK
+2026-10-31,TSLA,"Tesla, Inc.",30D,2026-10-02,2026-10-31,0,0,0,0,0,0,0.0,0.0,0.0,,No P/S Activity,無P/S交易,0,OK
+2026-10-31,AVGO,Broadcom Inc.,30D,2026-10-02,2026-10-31,0,0,0,0,0,0,0.0,0.0,0.0,,No P/S Activity,無P/S交易,0,OK
+2026-10-31,AMD,"Advanced Micro Devices, Inc.",30D,2026-10-02,2026-10-31,0,9,0,1,0,17262,0.0,9333585.370000001,-9333585.370000001,-1.0,Net Selling,近期淨賣出,9,OK
+2026-10-31,INTC,Intel Corporation,30D,2026-10-02,2026-10-31,0,0,0,0,0,0,0.0,0.0,0.0,,No P/S Activity,無P/S交易,0,OK
+2026-10-31,JPM,JPMorgan Chase & Co.,30D,2026-10-02,2026-10-31,0,0,0,0,0,0,0.0,0.0,0.0,,No P/S Activity,無P/S交易,0,OK
+2026-10-31,BAC,Bank of America Corporation,30D,2026-10-02,2026-10-31,0,0,0,0,0,0,0.0,0.0,0.0,,No P/S Activity,無P/S交易,0,OK
+2026-10-31,GS,"The Goldman Sachs Group, Inc.",30D,2026-10-02,2026-10-31,0,9,0,2,0,12500,0.0,11380562.41,-11380562.41,-1.0,Net Selling,近期淨賣出,0,OK
+2026-10-31,MS,Morgan Stanley,30D,2026-10-02,2026-10-31,0,0,0,0,0,0,0.0,0.0,0.0,,No P/S Activity,無P/S交易,0,OK
+2026-10-31,V,Visa Inc.,30D,2026-10-02,2026-10-31,0,0,0,0,0,0,0.0,0.0,0.0,,No P/S Activity,無P/S交易,0,OK
+2026-10-31,MA,Mastercard Incorporated,30D,2026-10-02,2026-10-31,0,4,0,2,0,5058,0.0,3111957.7,-3111957.7,-1.0,Net Selling,近期淨賣出,4,OK
+2026-10-31,WMT,Walmart Inc.,30D,2026-10-02,2026-10-31,0,5,0,3,0,21025,0.0,2507652.7401,-2507652.7401,-1.0,Net Selling,近期淨賣出,5,OK
+2026-10-31,COST,Costco Wholesale Corporation,30D,2026-10-02,2026-10-31,0,1,0,1,0,1100,0.0,1054025.5,-1054025.5,-1.0,Net Selling,近期淨賣出,0,OK
+2026-10-31,JNJ,Johnson & Johnson,30D,2026-10-02,2026-10-31,0,0,0,0,0,0,0.0,0.0,0.0,,No P/S Activity,無P/S交易,0,OK
+2026-10-31,PFE,Pfizer Inc.,30D,2026-10-02,2026-10-31,0,0,0,0,0,0,0.0,0.0,0.0,,No P/S Activity,無P/S交易,0,OK
+2026-10-31,XOM,Exxon Mobil Corporation,30D,2026-10-02,2026-10-31,0,0,0,0,0,0,0.0,0.0,0.0,,No P/S Activity,無P/S交易,0,OK
+2026-10-31,CVX,Chevron Corporation,30D,2026-10-02,2026-10-31,0,2,0,1,0,43100,0.0,9766243.02,-9766243.02,-1.0,Net Selling,近期淨賣出,2,OK
+2026-10-31,BA,The Boeing Company,30D,2026-10-02,2026-10-31,0,0,0,0,0,0,0.0,0.0,0.0,,No P/S Activity,無P/S交易,0,OK
+2026-10-31,CAT,Caterpillar Inc.,30D,2026-10-02,2026-10-31,0,0,0,0,0,0,0.0,0.0,0.0,,No P/S Activity,無P/S交易,0,OK
+2026-10-31,NFLX,"Netflix, Inc.",30D,2026-10-02,2026-10-31,0,3,0,1,0,17980,0.0,1151192.94,-1151192.94,-1.0,Net Selling,近期淨賣出,3,OK
+2026-10-31,CRM,"Salesforce, Inc.",30D,2026-10-02,2026-10-31,0,0,0,0,0,0,0.0,0.0,0.0,,No P/S Activity,無P/S交易,0,OK
+2026-10-31,ORCL,Oracle Corporation,30D,2026-10-02,2026-10-31,0,0,0,0,0,0,0.0,0.0,0.0,,No P/S Activity,無P/S交易,0,OK
+2026-10-31,KO,The Coca-Cola Company,30D,2026-10-02,2026-10-31,0,0,0,0,0,0,0.0,0.0,0.0,,No P/S Activity,無P/S交易,0,OK
+2026-10-31,PEP,"PepsiCo, Inc.",30D,2026-10-02,2026-10-31,3,1,1,1,139571,30000,17904167.88,4053891.0,13850276.88,0.5,Net Buying,近期淨買入,0,OK
+2026-10-31,IBM,International Business Machines Corporation,30D,2026-10-02,2026-10-31,0,0,0,0,0,0,0.0,0.0,0.0,,No P/S Activity,無P/S交易,0,OK
