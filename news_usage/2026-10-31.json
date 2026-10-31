@@ -2,7 +2,7 @@
   "reservations": {
     "daily-2026-10-31": {
       "allocated": 100,
-      "used": 0
+      "used": 100
     }
   }
 }
