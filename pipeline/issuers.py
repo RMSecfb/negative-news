@@ -82,6 +82,8 @@ class IssuerIndex:
         self.names = []
         self.entities = {}
         self.symbol_aliases = {}
+        self.preferred = {}      # (market, name_key) -> (market, ticker): 同一發行人多股別時指定代表代號
+        self.title_aliases = []  # 標題沒有公司欄位時，只掃描登錄表中標記 TitleMatch=Y 的別名
         for r in companies.fillna('').to_dict('records'):
             r['Market'] = str(r.get('Market') or 'US').upper()
             r['Ticker'] = symbol(r.get('Ticker', ''), r['Market'])
@@ -100,6 +102,10 @@ class IssuerIndex:
                 if not key:
                     continue
                 item = (r['Market'], r['Ticker'] or name_key(r['Company']))
+                if str(r.get('Preferred', '')).upper() == 'Y' and r['Ticker']:
+                    self.preferred[(r['Market'], key)] = item
+                if str(r.get('TitleMatch', '')).upper() == 'Y' and r['Ticker'] and alias and alias != r['Ticker']:
+                    self.title_aliases.append((alias, r))
                 self.entities.setdefault(key, {})[item] = r
                 if r['Ticker'] and r['EntityType'] == 'LISTED':
                     self.exact.setdefault((r['Market'], key), {})[item] = r
@@ -114,6 +120,9 @@ class IssuerIndex:
         if len(exact) == 1:
             return dict(next(iter(exact.values()))), '公司清單／別名核對'
         if len(exact) > 1:
+            chosen = self.preferred.get((market, key))
+            if chosen in exact:
+                return dict(exact[chosen]), '公司清單／別名核對（指定代表股別）'
             return None, '同名公司，需人工確認'
         direct = self.symbols.get((market, str(company).strip().upper()))
         if direct:
@@ -126,6 +135,20 @@ class IssuerIndex:
             if candidate and name_key(bare) in {name_key(x) for x in [candidate['Company'], *re.split(r'[;；|]', candidate.get('Aliases', ''))]}:
                 return dict(candidate), '名稱與括號代號交叉核對'
         return None, '公司代號未確認'
+
+    def title_subject(self, row):
+        """標題／中文標題沒有公司欄位時，用登錄表的 TitleMatch 別名找出唯一的公司；出現多家就不猜。"""
+        text = unicodedata.normalize('NFKC', str(row.get('Title', '')) + '\n' + str(row.get('Title_ZH', ''))).replace('’', "'")
+        found = {}
+        for alias, r in self.title_aliases:
+            a = unicodedata.normalize('NFKC', alias).replace('’', "'")
+            if re.search(r'[\u3400-\u9fff]', a):
+                hit = a in text
+            else:
+                hit = bool(re.search(r'(?<![A-Za-z0-9])' + re.escape(a) + r'(?![A-Za-z0-9])', text, re.I))
+            if hit:
+                found[(r['Market'], r['Ticker'])] = r
+        return next(iter(found.values()))['Company'] if len(found) == 1 else ''
 
     def corroborated(self, row, match):
         text = unicodedata.normalize('NFKC', str(row.get('Title', '')) + '\n' + str(row.get('Summary', ''))).replace('’', "'")
@@ -167,6 +190,8 @@ class IssuerIndex:
             subject = str(r.get('LLM辨識公司') or r.get('Company') or '').strip()
             if subject.casefold() in ('無', 'none', 'null', 'n/a', 'unknown'):
                 subject = ''
+            if not subject and not supplied:
+                subject = self.title_subject(r)
             match, reason = self.resolve(subject, market)
             provided = self.symbols.get((market, supplied))
             if match is None and provided and name_key(subject) in {name_key(x) for x in [provided['Company'], *re.split(r'[;；|]', provided.get('Aliases', ''))]}:

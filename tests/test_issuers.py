@@ -15,6 +15,19 @@ class IssuerTests(unittest.TestCase):
     def row(self,name,title=None,ticker=''):
         return {'Market':'US','Ticker':ticker,'Company':'','LLM辨識公司':name,'Title':title or name+' faces a warning','Summary':'','LLM狀態':'OK','分類狀態':'已分類'}
 
+    def test_share_class_alias_and_title_only_subject(self):
+        def run(company='',title='',zh=''):
+            r={'Market':'US','Ticker':'','Company':company,'LLM辨識公司':'','Title':title,'Title_ZH':zh,'Summary':'','LLM狀態':'OK','分類狀態':'已分類'}
+            return self.index.enrich(pd.DataFrame([r])).iloc[0]
+        for company in ('Google','Alphabet'):
+            self.assertEqual(run(company,'%s shares plunge after earnings miss'%company).Ticker,'GOOGL')
+        self.assertEqual(run(title='Alphabet財報不如預期美股收黑').Ticker,'GOOGL')
+        self.assertEqual(run('英特爾','英特爾暴跌29%美股崩').Ticker,'INTC')
+        self.assertEqual(run(title='科技股重挫、英特爾暴跌29%').Ticker,'INTC')
+        self.assertEqual(run(title='Alphabet and Intel slump').Ticker,'')   # 多家公司不猜
+        out=run('Erste Bank Polska','Erste Bank Polska Q3 earnings miss')
+        self.assertEqual((out.Ticker,out.Ticker候選),('','EBP.WA'))
+
     def test_reference_symbols_round_trip(self):
         # The complete directory, not only the three user examples.
         for (market,ticker),expected in self.index.symbols.items():

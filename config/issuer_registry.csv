@@ -1,7 +1,13 @@
-Market,Ticker,Company,Exchange,Aliases,EntityType,ListingStatus,ReferenceSource,VerifiedAt
-US,GETY,"Getty Images Holdings, Inc.",OTCPK,Getty Images,LISTED,OTC；NYSE於2026-09-29停牌啟動下市程序,https://www.sec.gov/Archives/edgar/data/1898496/000121390026111193/ea030922501ex99-2.htm,2026-10-24
-US,META,"Meta Platforms, Inc.",NASDAQ,Meta;Facebook;臉書,LISTED,上市公司,https://investor.atmeta.com/stock-info/default.aspx,2026-10-24
-US,ABT,Abbott Laboratories,NYSE,Abbott,LISTED,上市公司,https://www.sec.gov/Archives/edgar/data/1800/000162828026028357/R1.htm,2026-10-24
-US,LVS,Las Vegas Sands Corp.,NYSE,Sands,LISTED,上市公司,https://investor.sands.com/stock-info/default.aspx,2026-10-24
-JP,9697.T,Capcom Co. Ltd.,Tokyo Stock Exchange,Capcom,LISTED,日本上市；不代表美股主上市代號,https://www.capcom.co.jp/ir/english/stock/stockdata.html,2026-10-24
-US,,Northern Light Health,,Northern Light Health,NONPROFIT,非營利醫療機構,https://northernlighthealth.org/Legal/990-Financial-Statements,2026-10-24
+Market,Ticker,Company,Exchange,Aliases,EntityType,ListingStatus,ReferenceSource,VerifiedAt,TitleMatch,Preferred
+US,GETY,"Getty Images Holdings, Inc.",OTCPK,Getty Images,LISTED,OTC；NYSE於2026-09-29停牌啟動下市程序,https://www.sec.gov/Archives/edgar/data/1898496/000121390026111193/ea030922501ex99-2.htm,2026-10-24,,
+US,META,"Meta Platforms, Inc.",NASDAQ,Meta;Facebook;臉書,LISTED,上市公司,https://investor.atmeta.com/stock-info/default.aspx,2026-10-24,,
+US,ABT,Abbott Laboratories,NYSE,Abbott,LISTED,上市公司,https://www.sec.gov/Archives/edgar/data/1800/000162828026028357/R1.htm,2026-10-24,,
+US,LVS,Las Vegas Sands Corp.,NYSE,Sands,LISTED,上市公司,https://investor.sands.com/stock-info/default.aspx,2026-10-24,,
+JP,9697.T,Capcom Co. Ltd.,Tokyo Stock Exchange,Capcom,LISTED,日本上市；不代表美股主上市代號,https://www.capcom.co.jp/ir/english/stock/stockdata.html,2026-10-24,,
+US,,Northern Light Health,,Northern Light Health,NONPROFIT,非營利醫療機構,https://northernlighthealth.org/Legal/990-Financial-Statements,2026-10-24,,
+US,GOOGL,Alphabet Inc. (Class A),NASDAQ,Alphabet;Google;谷歌;谷歌A;Alphabet Inc. Class A,LISTED,上市公司,https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt,2026-11-02,Y,Y
+US,INTC,Intel,NASDAQ,Intel;Intel Corporation;英特爾;英特尔,LISTED,上市公司,https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt,2026-11-02,Y,
+US,SFM,"Sprouts Farmers Market, Inc.",NASDAQ,Sprouts;Sprouts Farmers Market,LISTED,上市公司,https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt,2026-11-02,,
+PL,EBP.WA,Erste Bank Polska,WSE,Erste Bank Polska,LISTED,波蘭上市（非美股）,https://www.gpw.pl/,2026-11-02,,
+IN,ECLERX,eClerx Services Limited,NSE,eClerx Services;eClerx,LISTED,印度上市（非美股）,https://www.nseindia.com/,2026-11-02,,
+SE,EMBRAC-B.ST,Embracer Group AB,STO,Embracer;Embracer Group;Warhorse Studios,LISTED,瑞典上市（非美股）,https://www.nasdaqomxnordic.com/,2026-11-02,,
