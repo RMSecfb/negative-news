@@ -28,6 +28,19 @@ class IssuerTests(unittest.TestCase):
         out=run('Erste Bank Polska','Erste Bank Polska Q3 earnings miss')
         self.assertEqual((out.Ticker,out.Ticker候選),('','EBP.WA'))
 
+    def test_chinese_alias_parenthesis_ticker_and_suffix_rules(self):
+        def run(company,title):
+            r={'Market':'US','Ticker':'','Company':company,'LLM辨識公司':'','Title':title,'Title_ZH':'','Summary':'','LLM狀態':'QUOTA_PENDING','分類狀態':'待補分析'}
+            return self.index.enrich(pd.DataFrame([r])).iloc[0]
+        for company,title,ticker in [('Apple Inc.','蘋果計劃明年淘汰非觸屏版MacBook Pro','AAPL'),('Microsoft','微軟AI掌門人劃紅線','MSFT'),
+                ('AbbVie','大摩：將艾伯維目標價上調至346美元','ABBV'),('Realty Income','Realty Income Corp (O) Income Statement','O'),
+                ('Corpay','Corpay says Canada dollar outlook','CPAY'),('Packaging Corporation of America','Packaging Corporation of America: key takeaways','PKG')]:
+            self.assertEqual(run(company,title).Ticker,ticker,title)
+        # 括號內縮寫（球隊／政黨）不能當成代號佐證；券商簡稱不能證明主體是券商
+        self.assertEqual(run('Southern Company','Notre Dame (SO) Varsity Football').Ticker,'')
+        self.assertEqual(run('Dominion Energy','Rep. Stevens (D) endorses Mike Rogers (R)').Ticker,'')
+        self.assertEqual(run('Morgan Stanley','大摩：將艾伯維目標價上調至346美元').Ticker,'')
+
     def test_reference_symbols_round_trip(self):
         # The complete directory, not only the three user examples.
         for (market,ticker),expected in self.index.symbols.items():
