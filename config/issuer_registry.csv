@@ -36,7 +36,7 @@ US,ADI,"Analog Devices, Inc.",NASDAQ,亞德諾;亚德诺;亞德諾半導體;亚�
 US,AON,Aon plc Class A Ordinary Shares (Ireland),NYSE,怡安,LISTED,上市公司,https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt,2026-11-03,,
 US,APA,APA Corporation,NASDAQ,APA公司,LISTED,上市公司,https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt,2026-11-03,,
 US,APO,"Apollo Global Management, Inc. (New) Common Stock",NYSE,阿波羅;阿波罗;阿波羅全球管理;阿波罗全球管理,LISTED,上市公司,https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt,2026-11-03,,
-US,AAPL,Apple Inc.,NASDAQ,蘋果;苹果;蘋果公司;苹果公司,LISTED,上市公司,https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt,2026-11-03,,
+US,AAPL,Apple Inc.,NASDAQ,蘋果;苹果;蘋果公司;苹果公司;iPhone;iPad;MacBook,LISTED,上市公司,https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt,2026-11-03,,
 US,AMAT,"Applied Materials, Inc.",NASDAQ,應用材料;应用材料;應材,LISTED,上市公司,https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt,2026-11-03,,
 US,APP,Applovin Corporation,NASDAQ,AppLovin,LISTED,上市公司,https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt,2026-11-03,,
 US,ARES,Ares Management Corporation Class A Common Stock,NYSE,阿瑞斯,LISTED,上市公司,https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt,2026-11-03,,
@@ -319,3 +319,4 @@ US,YUM,"Yum! Brands, Inc.",NYSE,百勝;百胜;百勝餐飲;百胜餐饮,LISTED,�
 US,ZBRA,Zebra Technologies Corporation,NASDAQ,斑馬技術;斑马技术,LISTED,上市公司,https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt,2026-11-03,,
 US,ZBH,"Zimmer Biomet Holdings, Inc. Common Stock",NYSE,捷邁邦美;捷迈邦美,LISTED,上市公司,https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt,2026-11-03,,
 US,ZTS,Zoetis Inc. Class A Common Stock,NYSE,碩騰;硕腾,LISTED,上市公司,https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt,2026-11-03,,
+US,GOOG,Alphabet Inc.,NASDAQ,Alphabet;Google;谷歌;谷歌A;Alphabet Inc. Class A,LISTED,上市公司,https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt,2026-11-03,,
