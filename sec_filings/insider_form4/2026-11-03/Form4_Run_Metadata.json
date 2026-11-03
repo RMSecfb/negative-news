@@ -1,0 +1,26 @@
+{
+  "source_repo": "RMSecfb/negative-news",
+  "execution_commit": "032bcff724b972c812464abdc806261543892542",
+  "source_sha256": "6bcbae100f964896f435c825f8a528b4b51aceb7d0cc23c265a02a49aeaeab60",
+  "edgartools": "5.62.1",
+  "pandas": "3.1.0",
+  "started_at": "2026-11-03T11:10:26.671383+08:00",
+  "finished_at": "2026-11-03T11:13:27.124501+08:00",
+  "timezone": "Asia/Taipei",
+  "analysis_start": "2026-10-05",
+  "analysis_end": "2026-11-03",
+  "tickers": 30,
+  "ps_transactions": 73,
+  "excluded_transactions": 191,
+  "status_counts": {
+    "OK": 30
+  },
+  "runtime_changes": [
+    "workspace BASE_DIR",
+    "Taipei run date",
+    "4 requests/sec",
+    "amendments=False for Form 4; amendments=True for explicit Form 4/A query",
+    "raw per-transaction dates for non-P/S excluded records"
+  ],
+  "output_file": "insider_form4/2026-11-03/Form4_2026-11-03_30D_Full_Universe.xlsx"
+}
