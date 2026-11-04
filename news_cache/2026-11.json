@@ -3710,5 +3710,1226 @@
       "requires_review": false,
       "summary_zh": "CrowdStrike 股價因 AI 安全營收轉換測試而下跌 2.7%。"
     }
+  },
+  "1808e91968d109b6cbc0449699f30b7c34b1c9ac899a977eb617b69837d545e0": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Marvell Technology",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "requires_review": true,
+      "summary_zh": "目前無足夠資訊確認任何信用風險事件。"
+    }
+  },
+  "8326655b3d8fa3ef116c0b8e8dc61d5887bb6a5539a937b507aac01e248e4aa1": {
+    "answer": {
+      "company_mentioned": "Lumentum",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "本新聞未提供足夠資訊以判斷 Lumentum 是否存在任何信用風險事件。"
+    }
+  },
+  "665dd86b3be317def3b7dea19876ec68ccd595d8d28dc87882b51587d3e148c3": {
+    "answer": {
+      "company_mentioned": "Intel",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "英特爾股價在10月大幅下跌，主要因PC業務疲軟及代工客戶信心危機，但目前無足夠證據顯示公司發生違約、破產或其他信用風險事件。"
+    }
+  },
+  "8c9d313247d81c628a6487561531f2d4bc0a57bd6087978549007a3d13d36bf2": {
+    "answer": {
+      "company_mentioned": "Skyworks Solutions",
+      "confirmed_default": false,
+      "event_codes": [
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "Skyworks Solutions 股價因智能手機市場疲軟而暴跌，並未涉及任何違約或信用風險升高的訊息。"
+    }
+  },
+  "f30956f68fc53c0f9fa99c16139b15fdee55cdda264f8ab2938561689028f2c2": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "MSCI Inc.",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "requires_review": true,
+      "summary_zh": "無足夠證據顯示 MSCI Inc. 之信用事件。"
+    }
+  },
+  "42321baebede7277600d670db055e6ccf600952a060882080d1454a7b167ebe4": {
+    "answer": {
+      "company_mentioned": "Medtronic",
+      "confirmed_default": false,
+      "event_codes": [
+        "MAJOR_LITIGATION",
+        "PRODUCT_RECALL"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "Medtronic Insulin Pump Lawsuit Filed Over Recalled MiniMed 600 Series Device",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "美敦力因召回MiniMed 600系列胰島素泵而被提起重大訴訟，並涉及產品召回事件。"
+    }
+  },
+  "b984408897866290a51296808f1defea6cb0ad67c9d204c7d6f01184b91b5133": {
+    "answer": {
+      "company_mentioned": "Skyworks Solutions",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前缺乏足夠資訊來判斷 Skyworks Solutions 是否存在任何信用風險事件。"
+    }
+  },
+  "1aaab24e72fc259b0e2b00bdffa0e9b705ca43df79e80c86603a5e574dd94a29": {
+    "answer": {
+      "company_mentioned": "",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "無足夠資訊判斷是否有信用風險事件。"
+    }
+  },
+  "32c1e8c1672ec70a03a72bdb999bc2066ac35777d8acb6c94ed7380bfebaf2eb": {
+    "answer": {
+      "company_mentioned": "Truist Financial",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前沒有足夠資訊顯示 Truist Financial 可能發生違約或其他信用風險事件。"
+    }
+  },
+  "16f2ff5108a644e8dea234a847899bbd7f634aab50574f44a2c1dbf569808cab": {
+    "answer": {
+      "company_mentioned": "Microsoft",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "此新聞未提供任何關於微軟違約、破產或其他財務風險事件的具體訊息，僅提及地方政府對其資料中心計畫的投票。"
+    }
+  },
+  "317ec1e8d9310cca0ab89886ef45bb36103371715492f27d1b45e27496d9f155": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "無公司相關資訊，無法判斷信用風險事件。",
+      "requires_review": true
+    }
+  },
+  "9504ceb8c01fe8af2864a5dd304d8aadd336de281c3779e81e24af9f16e7520c": {
+    "answer": {
+      "company_mentioned": "Amazon",
+      "confirmed_default": false,
+      "event_codes": [
+        "PRODUCT_RECALL"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "25K+ swings sold nationwide on Amazon recalled after dozens of injuries: ‘Stop using’",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "亞馬遜因產品缺陷召回超過25,000件搖擺器，並警告消費者停止使用。"
+    }
+  },
+  "a3729cde5b87c04e64a5d644ef11f128c7db4bc3ee5216a861686213da973bd5": {
+    "answer": {
+      "company_mentioned": "",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "無足夠資訊判斷是否有信用風險事件。"
+    }
+  },
+  "ff7e323653c4ef6b49ac5dbc98989adaedbd00623b5b6fd443c24c4b593cba37": {
+    "answer": {
+      "company_mentioned": "Axon Enterprise",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前無足夠資訊確認任何信用風險事件。"
+    }
+  },
+  "2fd16612fd28be395e51a69ee683637e9408f5bee434168947bd98b6b1b61346": {
+    "answer": {
+      "company_mentioned": "PTC Inc.",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前無足夠資訊確認PTC Inc.是否存在違約或其他信用風險事件，需進一步調查。"
+    }
+  },
+  "2c53c4f9c2855efbcaec45c54d33faf717068b8c3c2b2a0c64677e9114670794": {
+    "answer": {
+      "company_mentioned": "J.B. Hunt",
+      "confirmed_default": false,
+      "event_codes": [
+        "MAJOR_LITIGATION"
+      ],
+      "event_status": "INVESTIGATING",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "律師事務所鼓勵投資者查詢有關J.B. Hunt的證券集體訴訟調查，並未提及任何違約或破產訊息。"
+    }
+  },
+  "398310972349e40547611f05ea2f8905029732e8c98215e8267bf380227fe5f4": {
+    "answer": {
+      "company_mentioned": "Eaton Corporation",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前無足夠資訊顯示 Eaton Corporation 之信用風險事件。"
+    }
+  },
+  "9bf787dae12da884b830d0295b4b00fc2faf1d584169bcb6f012bf134aef45c0": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Apple Inc.",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "無足夠證據顯示 Apple Inc. 發生任何信用風險事件。",
+      "requires_review": true
+    }
+  },
+  "908aada9a49ebe5aceb6ddc91721444dfec0b4c7ea15c038007eb5a0c162ce1a": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Keurig Dr Pepper",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "此新聞未提及任何信用風險事件。",
+      "requires_review": true
+    }
+  },
+  "670d9a793d3518b44b1dcd590b78afa10559222ef4ae7e991cfcaa549e93a645": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Apple Inc.",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "requires_review": true,
+      "summary_zh": "Apple 股價下跌，並未提及任何違約或信用風險事件。"
+    }
+  },
+  "884f2e5b00834d1f020e184365be9974d64c5f2a25be1a92b866e70dd0166480": {
+    "answer": {
+      "company_mentioned": "Lumentum",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前無足夠資訊顯示 Lumentum 相關信用事件，需進一步調查。"
+    }
+  },
+  "b751dbc9c9eb3d2afbc133949692138f7a5d3b2433ff668f3a3ab54eafd00841": {
+    "answer": {
+      "company_mentioned": "Lumentum",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "本新聞未提供任何關於Lumentum公司債務違約、信用事件或市場信用風險升高的具體訊息，僅提及股東對合併協議的批評。"
+    }
+  },
+  "2b3e40908a3a4f0f1855c774cc304caee0577a6ee122325e6fa11e5dee101955": {
+    "answer": {
+      "company_mentioned": "Booking Holdings",
+      "confirmed_default": false,
+      "event_codes": [
+        "REGULATORY_PENALTY"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "Booking Holdings takes $1 billion hit to third-quarter results linked to FTC action",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "Booking Holdings 受到美國聯邦貿易委員會（FTC）行動，導致第三季營收損失10億美元，屬於已確認的監管處罰事件。"
+    }
+  },
+  "035aff428532c52d9f3766b37162712f3d3269a70a422567287d8f00bbd3ea54": {
+    "answer": {
+      "company_mentioned": "Apple Inc.",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "Apple 針對 AI 代理可能出現意外或不可預測行為的風險發表警告，但未提及任何信用風險事件。"
+    }
+  },
+  "c01b02a21ebf68280fea932e98c995e8a93a33bec86e6b150d6fe7a4bedcf7be": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Sysco",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "requires_review": true,
+      "summary_zh": "Sysco 報告因環球食物安全事件導致第一季銷售受影響，但未提及任何債務違約或信用風險事件。"
+    }
+  },
+  "6aa1b879d7fd5b756f821d14a457fba8599501422ea8addcf7a71e99f2c72bf5": {
+    "answer": {
+      "company_mentioned": "Uber",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "Uber 內部高層變動，並未涉及任何信用風險事件。"
+    }
+  },
+  "038aef6c0498e9984259b770d91f59a755bf7b611a00fa5e044a654b0f203b7d": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Advanced Micro Devices",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "AMD 的財報預估超出市場預期，並未提及任何違約或信用風險事件。",
+      "requires_review": true
+    }
+  },
+  "15b73d55d170b2aa10acd1bd2eeedfec9f4803e73f53c200f814ed1ba5455227": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Starbucks",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "星巴克將於本月停產Impossible早餐三明治，並未涉及任何信用風險事件。",
+      "requires_review": true
+    }
+  },
+  "010878a71e0c3581b4fbdab576b5e9fa5e4833af5179bce60b1f3d356689ee3e": {
+    "answer": {
+      "company_mentioned": "CVS Health",
+      "confirmed_default": false,
+      "event_codes": [
+        "GENERAL_INFORMATION"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "CVS 健康公司宣布計畫拆分其健康集團，並未涉及任何違約或信用風險事件。"
+    }
+  },
+  "813f18f2e703f7cb44dd8c359cc7cf51311348a8a5ebcfb67d933032adca18b3": {
+    "answer": {
+      "company_mentioned": "Uber",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "無足夠資訊判斷是否有信用風險事件。"
+    }
+  },
+  "547e80e6f722e6331d1040d5a1bfd81b92f56fd7b01c1ed27b48fb9dbfa31483": {
+    "answer": {
+      "company_mentioned": "Advanced Micro Devices",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前沒有足夠證據顯示 AMD 發生任何信用風險事件。"
+    }
+  },
+  "6b3ab38731dd4303fc0f413f0eca6dbe826f5bc15147b9b24da0966831a3b333": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "JPMorgan Chase",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "requires_review": false,
+      "summary_zh": "此新聞未提及任何與 JPMorgan Chase 相關的信用風險事件。"
+    }
+  },
+  "3a32843ed52c0fd101715352fa19abe7f01f5302dc90c93223364139b7e152e1": {
+    "answer": {
+      "company_mentioned": "Amgen",
+      "confirmed_default": false,
+      "event_codes": [
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "阿姆遜公司公布第三季業績高於預期，但股價仍有下跌。"
+    }
+  },
+  "7e0f5aca4c3ac8e3fcc28024be6ba79980e0f7f67cc5ec9c12e60cfcf632ef5a": {
+    "answer": {
+      "company_mentioned": "CMS Energy",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前沒有足夠資訊顯示 CMS Energy 相關的信用風險事件。"
+    }
+  },
+  "f8644ee0405080be357e636ea9398bc33dc6a957089e7544d93add7837cb1197": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Target Corporation",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "無足夠證據表明 Target Corporation 之信用風險事件。",
+      "requires_review": true
+    }
+  },
+  "57007cac4a57e8a0b56929b64ffb4d2d4b2a9ac367aff32aba8b145744bfafa3": {
+    "answer": {
+      "company_mentioned": "Pfizer",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "此新聞主要報導百時諾提升全年營收預估並任命新CFO，並未提及任何信用風險事件。"
+    }
+  },
+  "a3aff8995bda03b31664200e3a6c88756da6b641e9408f45244aea5e5a8421d0": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Pfizer",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "此新聞僅提及公司財務展望與高層人事變動，未涉及任何信用風險事件。",
+      "requires_review": true
+    }
+  },
+  "258c659f96d6fbe6799a869aabda13c8967966d11d0f3ad13759aabd363892fa": {
+    "answer": {
+      "company_mentioned": "CVS Health",
+      "confirmed_default": false,
+      "event_codes": [
+        "GENERAL_INFORMATION"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "CVS Health 正在拆解其價值 1170 億美元的醫療保健帝國，並未涉及任何違約或信用風險升高的訊息。"
+    }
+  },
+  "f61cb5f91de0b29ce6e65864bba77226113e0e36c5b063df032eacc700eab1d4": {
+    "answer": {
+      "company_mentioned": "Coherent Corp.",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前缺乏足夠資訊來判斷是否存在任何信用風險事件。"
+    }
+  },
+  "9a923c2fb54ebd0f22cf95e6d13ca32bf4bdc835184f5ce7f0f5356c5e3b9cae": {
+    "answer": {
+      "company_mentioned": "Lumentum",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前無足夠資訊顯示 Lumentum 之信用事件，需進一步調查。"
+    }
+  },
+  "46fbbee8c72691ef19d3f7e3e2e5ca02e51643063beb613b086ac2b28b42c7d6": {
+    "answer": {
+      "company_mentioned": "Amazon",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "本新聞未提供足夠資訊以判斷亞馬遜是否存在任何信用風險事件。"
+    }
+  },
+  "a3f3f5efe7410b985132edeffddfa4f7a61c101850ff655b702d8275a2e3fef8": {
+    "answer": {
+      "company_mentioned": "BlackRock",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前無足夠資訊確認任何信用風險事件。"
+    }
+  },
+  "9b44a336e19cdf1403df7a54e7661764235ca603abe27773b55eb76c828bfc68": {
+    "answer": {
+      "company_mentioned": "Advanced Micro Devices",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "此新聞未提及任何與 AMD 相關的信用風險事件，僅討論期權交易策略。"
+    }
+  },
+  "65c4457e95af2785fc02da38d3c35941c07e180249de608f7bc70166ce33a0aa": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Alphabet Inc. (Class A)",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "無足夠資訊表明 Alphabet Inc. (Class A) 之信用風險事件。",
+      "requires_review": true
+    }
+  },
+  "4c8926ba12ab7b28b2c154983bdeaedc0f1458f279745c5847e2015dcbf4c5ae": {
+    "answer": {
+      "company_mentioned": "Pfizer",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前無足夠資訊確認任何信用風險事件。"
+    }
+  },
+  "6725a52d46b4c030f7b5f2858b076c5d524d56f273eabdb2825e984703a90e89": {
+    "answer": {
+      "company_mentioned": "PayPal",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前無足夠資訊確認 PayPal 相關信用風險事件。"
+    }
+  },
+  "ea315a83dbe1a5ca853105bda082fee842f633ca318ff6bd18010dc229f5df47": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "McDonald's",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "requires_review": true,
+      "summary_zh": "BTIG的Peter Saleh預告麥當勞即將公布的財報，並未提及任何違約或信用風險事件。"
+    }
+  },
+  "7b87cc50fd9ec5cca865f8f3837b8a99774bc723948e5445a5b4f36886134a75": {
+    "answer": {
+      "company_mentioned": "CMS Energy",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前無足夠資訊判斷是否有信用風險事件。"
+    }
+  },
+  "a13bb3f9e9b90c2f51d6ec0876293e77c7d1ae12835dc6d552d60cc160bfb9c1": {
+    "answer": {
+      "company_mentioned": "Amazon",
+      "confirmed_default": false,
+      "event_codes": [
+        "ANTITRUST_INVESTIGATION"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "Amazon Discounting Policy Challengers Get Antitrust Class Status",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "亞馬遜因其折扣政策被挑戰，已獲得反壟斷訴訟的集體訴訟地位。"
+    }
+  },
+  "8ab6d594f6a20a9443cf0cc17f077403b84383097f80f6151ea9fb583cc77c7b": {
+    "answer": {
+      "company_mentioned": "CVS Health",
+      "confirmed_default": false,
+      "event_codes": [
+        "GENERAL_INFORMATION"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "CVS Health 將拆分為兩家公司，根據《華爾街日報》報導。"
+    }
+  },
+  "6b296dded9da77dce580ae123bfa2a0de143f4b78b4dddfd7d0e05dffb5ce732": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "無相關信用風險事件。",
+      "requires_review": true
+    }
+  },
+  "7529bedc43c489cf87f807339ea7cb07866ba3a6edb15f2a8f584818e6a7306e": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "CrowdStrike",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "本新聞未提及任何信用風險事件。",
+      "requires_review": true
+    }
+  },
+  "eff3cb996ad178e78f88445b22b2e682c04e4f21f6442987d2cb0d4f6a9eff0b": {
+    "answer": {
+      "company_mentioned": "CrowdStrike",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前沒有足夠資訊顯示 CrowdStrike 進行任何違約或信用風險事件。"
+    }
+  },
+  "314767a8498afbc480d322ea6b0e961bfa7737f9e7bd3e9c3468e128c88edd9a": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Amazon",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "此新聞未提及任何與信用風險相關的事件。",
+      "requires_review": true
+    }
+  },
+  "f3b2885789259bf45ff85f4045b751b4b13bb6e8585d3d192e9d097de0fb40b0": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Cognizant",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "requires_review": true,
+      "summary_zh": "無足夠資訊判斷事件。"
+    }
+  },
+  "03dd0bf938410ee51a010acbf951169241875e32824546d56fb60b990a03b0e1": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "無足夠資訊可判斷信用風險事件。",
+      "requires_review": true
+    }
+  },
+  "d31e2acdb5eeeb87b9c13f14bdb55a8f5cef0e064a9a126c4d5a0b3c33cb2f0d": {
+    "answer": {
+      "company_mentioned": "Arista Networks",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "此新聞未提及任何與Arista Networks相關的信用風險事件，僅提及股價變動。"
+    }
+  },
+  "70aa0fb7fc25cf8e0a252118b3afd023a39f86ab1305d28ee37e4521fd16b0b9": {
+    "answer": {
+      "company_mentioned": "Amgen",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前沒有足夠資訊顯示 Amgen 可能發生違約或其他信用風險事件。"
+    }
+  },
+  "47fcb559e39241e04b7f4197c86a069f2ada5224e32987abd224fe7b79ce4744": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Zebra Technologies",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "無足夠資訊表明發生任何信用風險事件。",
+      "requires_review": true
+    }
+  },
+  "3e62f531454dffa0274d239d6921e71e39cd49d1cd3d406c39176c20a0b08667": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "FedEx",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "此新聞僅為投資建議，未提及任何信用風險事件。",
+      "requires_review": true
+    }
+  },
+  "b57309efd3a6157e00e1946ae6f23ec015db17c3456377379b01381b55b1f391": {
+    "answer": {
+      "company_mentioned": "FedEx Freight",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前沒有足夠資訊顯示FedEx Freight發生任何信用風險事件。"
+    }
+  },
+  "e1878be0f5a6c5a6e4bc04d6ba23a4de5356311126405ff7543561e223c79e20": {
+    "answer": {
+      "company_mentioned": "Nvidia",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "本新聞僅報導三星將在德州第二工廠製造AMD與Nvidia的晶片零件，並未提及任何信用風險或違約訊息。"
+    }
+  },
+  "98c2bc2cf021e9be9e20be189d3a54b8d1977437da440e9caef8e4333bc0450a": {
+    "answer": {
+      "company_mentioned": "Target Corporation",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "此新聞僅提及Baked by Melissa進入Target銷售自製杯形蛋糕混合粉，並未涉及任何信用風險事件。"
+    }
+  },
+  "a8f4872d98b9374212f58386f7e7fedd198df669dac3fb8c5bee4b52189649b8": {
+    "answer": {
+      "company_mentioned": "Coinbase",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前沒有足夠資訊顯示 Coinbase 相關的信用風險事件。"
+    }
+  },
+  "4d1b0958a3eb8ccbd5ea0df4e67b660e80df5d4c2ade63ff3d8e86b58442790e": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Nvidia",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "無相關信用風險事件。",
+      "requires_review": true
+    }
+  },
+  "4fe526d20b3a586b8b04556814f69757a462d11a8a4cc36419a3085bb33b883f": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Molson Coors Beverage Company",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "此新聞未提及任何與信用風險相關的事件。",
+      "requires_review": true
+    }
+  },
+  "db05b3b3468d210f548718fcb9606ec80b16ef51fa0ec0bad8c3f66279fdc270": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Goldman Sachs",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "無足夠證據顯示金佰利發生任何信用風險事件。",
+      "requires_review": true
+    }
+  },
+  "c8e6a8eedfc66af233bdd9d3ab64795e611ad8722f3527e484af55c08558c1ec": {
+    "answer": {
+      "company_mentioned": "Comcast",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "本新聞未提及任何與Comcast相關的信用風險事件，無法判斷是否存在違約、破產或其他信用事件。"
+    }
+  },
+  "fb18df5e3b223d65f4ca028707033336958cb383436193558a4e3d9a167cf486": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Morgan Stanley",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "requires_review": true,
+      "summary_zh": "此新聞僅提及摩根士丹利為戴爾家族交易提供23億美元債務，並未提及任何違約、信用風險升高或其他財務危機事件。"
+    }
+  },
+  "f0440198da2c4ca4d23700ddc66ad9c55aefee3cfa84bace6959e22d9eda1418": {
+    "answer": {
+      "company_mentioned": "Apple Inc.",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "此新聞僅為產品開箱介紹，未提及任何信用風險事件。"
+    }
+  },
+  "292bdf2e48b0a689fb6d5bb3e50f06df7da2e38a8fdf72b27d88556388cafe5b": {
+    "answer": {
+      "company_mentioned": "DuPont",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前無足夠資訊顯示杜邦公司存在任何信用風險事件。"
+    }
+  },
+  "f34739a75699af2632bfeeadb0d0ea572f93f338cbc719111cf40da5f98712bb": {
+    "answer": {
+      "company_mentioned": "Lumentum",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "本新聞僅提及雷蒙德·詹姆斯調升Lumentum評等，並未提及任何違約、破產或其他信用風險事件。"
+    }
+  },
+  "efe0474e9e60f2ca13ea8d26e9270a0a38095732063325f885268b12b14db6f5": {
+    "answer": {
+      "company_mentioned": "CrowdStrike",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "此新聞未提及任何與信用風險相關的事件，僅說明 CrowdStrike 的新功能。"
+    }
+  },
+  "477d4367fc33ef22303537066583b7b3e4460dd91dc9d60b61ff29cfe14053e9": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Lumentum",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "requires_review": true,
+      "summary_zh": "此新聞僅提及馬維爾將收購Lumentum，並未提及任何債務違約或信用風險事件。"
+    }
+  },
+  "8d472dbb41955c5be19fe6ed0a291cc68834084cde74898fd57a3dd5fc3cbdf1": {
+    "answer": {
+      "company_mentioned": "Intel",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前無足夠資訊顯示Intel有任何違約或信用風險事件。"
+    }
+  },
+  "8351608cbe644a126959b5ba1cf053f02e8fabb96e39f6bf16bf8969aa88474f": {
+    "answer": {
+      "company_mentioned": "Advanced Micro Devices",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "AMD公布第三季業績超預期，股價在盤後略有上漲。"
+    }
+  },
+  "308efeb9f45867bf60e5c1259b9dae26434bdf22d10a13d89e406109e604fa8e": {
+    "answer": {
+      "company_mentioned": "Eaton Corporation",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "此新聞未提及任何信用風險事件，僅報告業績成長預期。"
+    }
+  },
+  "bce507315183c02a8cdfb2b635ddd9e742d4b775869d0d3edf7cedb43892b04a": {
+    "answer": {
+      "company_mentioned": "Broadcom",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": false,
+      "summary_zh": ""
+    }
+  },
+  "1cc2e32980ca7a54e0a5a7e983a2836f8c07c2179f1dd0315cc86aa03ccfa702": {
+    "answer": {
+      "company_mentioned": "Lumentum",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "此新聞未提及任何與信用風險相關的事件，僅談及併購內幕。"
+    }
+  },
+  "2d4f866a0e88829a1e1b624f1c7ce440025b229d3ca065902880ac41983c02b9": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Advanced Micro Devices",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "AMD 近期公布的營收預測顯示，資料中心收入創下新高，並未提及任何違約或信用風險事件。",
+      "requires_review": true
+    }
+  },
+  "0ef359e753a7dfe43ca8f3c84bd6a7e81fde46f038511ac0d9dd76e81f4f268d": {
+    "answer": {
+      "company_mentioned": "PNC Financial Services",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前無足夠資訊確認任何信用風險事件。"
+    }
+  },
+  "9c3e85dcc8f96adee33a60271b65e9d433befe756fbfed0d81a5d9af6561c909": {
+    "answer": {
+      "company_mentioned": "Advanced Micro Devices",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "AMD 股價因財報表現良好而上漲，但未提及任何信用風險事件。"
+    }
+  },
+  "4b2adcd6e8f4dc806ca656edc6694ff63e4e603e9a340506855505cb28e56fc3": {
+    "answer": {
+      "company_mentioned": "Archer Daniels Midland",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "本新聞未提及任何信用風險事件，僅報告公司業績表現。"
+    }
+  },
+  "970c4f9624830c4dad737e7ef6abc39c230cac7ef05342dae5c4358043647681": {
+    "answer": {
+      "company_mentioned": "AbbVie",
+      "confirmed_default": false,
+      "event_codes": [
+        "GENERAL_INFORMATION"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "AbbVie 正在擴建位於牛津的研發設施，作為超過1.2億英鎊的投資計畫的一部分。"
+    }
+  },
+  "1dc6ffe0fc338123d61ef27a0c0a531b911ad71b0c7c977134a10b5e5b58f15d": {
+    "answer": {
+      "company_mentioned": "IDEX Corporation",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "此新聞未提及任何與信用風險相關的事件，僅報告電力交易量上升。"
+    }
+  },
+  "5e761115b5f2d6fe777f4960d3c1d6a8d919001be01eb29da80c3107d3731f56": {
+    "answer": {
+      "company_mentioned": "T. Rowe Price",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "此新聞未提及任何信用風險事件，僅討論蘋果消費需求。"
+    }
+  },
+  "e56feb2caba2e13bc5aa726bde0347bcb32ae9306e662a7553fc19c33dd89ffb": {
+    "answer": {
+      "company_mentioned": "AppLovin",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前沒有足夠資訊顯示 AppLovin 可能發生違約或其他信用風險事件。"
+    }
+  },
+  "3b2a17a83e4fb6b94e5015e253beebc04faee5f2f1b98fb2325ae241a73392c1": {
+    "answer": {
+      "company_mentioned": "Pfizer",
+      "confirmed_default": false,
+      "event_codes": [
+        "EARNINGS_MISS"
+      ],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": true,
+      "summary_zh": "輝瑞公司報告第三季營收下滑，但未顯示任何違約或信用風險升高的具體訊息。"
+    }
+  },
+  "40ce39df7bea628a476d438981a4f796bd42edaa4d9a4ad467f277dc83d7a9f7": {
+    "answer": {
+      "company_mentioned": "Apple Inc.",
+      "confirmed_default": false,
+      "event_codes": [
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "MARKET_IMPLIED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "蘋果股價在盤初下跌近4%，創下逾一個月新低，市值蒸發近1900億美元，顯示市場對公司股價的負面情緒。"
+    }
+  },
+  "a83315934aafdaecddecefdb8937a325c07653e09426886f3b73ddd7e52ae204": {
+    "answer": {
+      "company_mentioned": "Booking Holdings",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": false,
+      "summary_zh": "Booking Holdings 報告因美國聯邦貿易委員會（FTC）調查，營收下降 9 億美元，但未顯示任何違約或信用風險升高的跡象。"
+    }
+  },
+  "9ab2615e4b5326190f84a710bf3f33ab405dd166cbf2c078f665f7f8eaa91458": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Alphabet Inc. (Class A)",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "本新聞未提及任何與信用風險相關的事件。",
+      "requires_review": true
+    }
+  },
+  "2d70efb84d91e0c03709cd9fc1ca32714479fc4fbd9d300e8e39014cb87586ee": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Oracle Corporation",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "本新聞未提及任何與Oracle公司相關的信用風險事件。",
+      "requires_review": true
+    }
+  },
+  "6454934f91738f8233cc07039ddcec8e2a31c1d87228b8739a23fe36d6dcc8ee": {
+    "answer": {
+      "company_mentioned": "T-Mobile US",
+      "confirmed_default": false,
+      "event_codes": [
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "MARKET_IMPLIED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "T‑Mobile US 股價因市場因素下跌，並未顯示任何違約或其他重大風險事件。"
+    }
+  },
+  "0aad0da78c2018faa069972aa7169bec224d74ab1f0cbcbb7fc7be50067aa997": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Booking Holdings",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "requires_review": true,
+      "summary_zh": "本新聞未提及任何與信用風險相關的事件，僅報導Booking Holdings的利潤與銷售下滑。"
+    }
+  },
+  "a1b3395cd7d189ab0108d272ab69631fd8f6d4451b89d4c52b5a24a913d0d90b": {
+    "answer": {
+      "company_mentioned": "IDEX Corporation",
+      "relevant": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "此新聞未提及任何信用風險事件。",
+      "requires_review": true
+    }
+  },
+  "7b7790a84f79b1371becefbb0623a31d1d21d245aa09b830c8b55aaf31c2980f": {
+    "answer": {
+      "company_mentioned": "Rollins, Inc.",
+      "confirmed_default": false,
+      "event_codes": [
+        "EARNINGS_MISS"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "Rollins, Inc. 近期公布的財報顯示，該公司未達到季報預期，並下調了全年有機成長預測，表明公司營運表現低於市場預期。"
+    }
+  },
+  "ea47a9070b5c998c0bdb8942186b8d8e6d7797c0f619e7611f02e1659dfd6135": {
+    "answer": {
+      "company_mentioned": "Vertex Pharmaceuticals",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前缺乏足夠資訊來判斷是否存在任何信用風險事件。"
+    }
+  },
+  "adc62761b06a073fda163b08d3c8532711dfde192a29f347b0c8d04725054c4b": {
+    "answer": {
+      "company_mentioned": "Zebra Technologies",
+      "confirmed_default": false,
+      "event_codes": [
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "Zebra Technologies 股價因第三季財報與前景下調而下跌超過12%。"
+    }
+  },
+  "9fad7f1dab113a4c4ca74e855d4a28cbe1a4460a4646a7393187eb502434bff7": {
+    "answer": {
+      "company_mentioned": "Alphabet Inc. (Class C)",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前無足夠資訊顯示 Alphabet Inc. (Class C) 之信用風險事件。"
+    }
   }
 }
