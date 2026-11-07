@@ -1,6 +1,36 @@
 {
   "runs": [
     {
+      "id": "daily-2026-11-07",
+      "type": "schedule",
+      "status": "success",
+      "start": "2026-11-06T08:20:00+08:00",
+      "end": "2026-11-07T08:20:00+08:00",
+      "market": "US",
+      "methods": "方法一|方法二",
+      "ai": true,
+      "started_at": "2026-11-07T08:24:19.551847+08:00",
+      "finished_at": "2026-11-07T09:06:40.306760+08:00",
+      "llm_calls": 100,
+      "cache_reused": 1,
+      "pending": 3612,
+      "review": 100,
+      "major": 7,
+      "selected_company_count": 503,
+      "collected": 3752,
+      "rows": 3713,
+      "errors": [],
+      "stages": [
+        "方法一 236 筆",
+        "方法二 3498 筆；公司 503 家（非輪替）",
+        "市場事件搜尋 20 筆",
+        "FinBERT 完成 3752 筆"
+      ],
+      "quota_reserved": 100,
+      "新增": 3712,
+      "重複合併": 40
+    },
+    {
       "id": "daily-2026-11-06",
       "type": "schedule",
       "status": "success",
