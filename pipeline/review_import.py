@@ -108,6 +108,7 @@ def apply_review(repository, review_raw, name, rules_raw=None, now=None):
     def build(read, revision):
         results, files, days = [], {}, {}
         changed_days = set()
+        ticker_changed_days = set()
         for position, row in enumerate(review.to_dict('records'), start=1):
             entry = {'序號': cell(row.get('序號')) or position, 'news_id': cell(row['news_id']), '日期': cell(row['日期']),
                      '公司': cell(row.get('公司')), '標題': cell(row.get('標題（點擊開原文）'))[:80],
@@ -150,6 +151,10 @@ def apply_review(repository, review_raw, name, rules_raw=None, now=None):
             if cell(row['更正Ticker']):
                 from .issuers import symbol
                 new['Ticker'] = symbol(cell(row['更正Ticker']), str(current.get('Market') or 'US'))
+                frame.loc[index, 'Ticker狀態'] = '人工確認'
+                frame.loc[index, 'Ticker來源'] = '人工覆核優先'
+                frame.loc[index, 'Ticker候選'] = ''
+                ticker_changed_days.add(day)
             modified = [k for k in FINAL_FIELDS if k in new and cell(new[k]) != cell(current.get(k))]
             for field, value in new.items():
                 frame.loc[index, field] = value
@@ -164,6 +169,13 @@ def apply_review(repository, review_raw, name, rules_raw=None, now=None):
             changed_days.add(day)
         for day in sorted(changed_days):
             frame = days[day]
+            if day in ticker_changed_days:
+                # Ticker was set by hand: refresh the 13F / Form 4 columns that are derived from it.
+                from .participants import annotate_from_repository
+                class Snapshot:
+                    def read(self, path, revision=None):
+                        return read(path)
+                frame = annotate_from_repository(frame, Snapshot())
             files[f'news_daily/{day}.csv'] = frame.to_csv(index=False).encode('utf-8-sig')
             files[f'news_daily/{day}.xlsx'] = excel_bytes(frame, read_json(read('news_runs/index.json'), {'runs': []})['runs'])
         applied = sum(1 for r in results if r['結果'] == '已套用')

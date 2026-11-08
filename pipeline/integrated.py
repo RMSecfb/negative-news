@@ -329,8 +329,9 @@ def execute(repository, request, repo=ROOT, api_key='', collector=None, analyzer
             reused += 1
         elif prefilter_on and (why := skip_llm(r)):
             fallback = pick_rule('NOT_RELEVANT', rules) or {}
-            for field in ('Event_Code', '事件中文', 'Level', 'Action'):
+            for field in ('Event_Code', '事件中文'):
                 r[field] = str(fallback.get(field, '') or '')
+            r.update(Event_Code='NOT_RELEVANT', Level='0', Action='排除、不納入風險事件')  # same as review 排除 / LLM-irrelevant rows
             r.update(LLM狀態='PREFILTERED', 分類狀態='無關新聞', 需要人工覆核='False', 最終判斷來源='規則前置過濾', Evidence=why)
             prefiltered += 1
         elif not api_key or calls >= allowance or limit_reached:

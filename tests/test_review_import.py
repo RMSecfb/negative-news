@@ -86,6 +86,7 @@ class ReviewImportTests(unittest.TestCase):
         r = self.day().loc['Story 4']
         self.assertEqual((r['Ticker'], r['Company']), ('AAPL', 'Apple Inc.'))
         self.assertIn('Ticker', r['人工修改欄位'])
+        self.assertEqual(r['Ticker狀態'], '人工確認')
 
     def test_conflicts_and_invalid_rows_are_skipped_not_fatal(self):
         original = read_days(self.repo, date(2026, 10, 23), date(2026, 10, 23))

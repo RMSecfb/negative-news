@@ -83,6 +83,19 @@ class UnifiedTests(unittest.TestCase):
         self.assertEqual(queued['Level'],'')
         self.assertEqual(queued['需要人工覆核'],'False')
 
+    def test_prefilter_saves_llm_call_for_positive_routine_news(self):
+        data = pd.DataFrame([item(),item(title='Meta shares rise on strong ad demand',url='https://example.com/positive',finbert=0.8)]) if 'finbert' in item.__code__.co_varnames else None
+        if data is None:
+            positive = {**item(title='Meta shares rise on strong ad demand', url='https://example.com/positive'), 'FinBERT': '0.8'}
+            data = pd.DataFrame([item(), positive])
+        analyzer = Mock(side_effect=answer)
+        report = execute(self.repo, {**self.request, 'max_llm': 5}, api_key='test', collector=lambda *a: (data, [], []), analyzer=analyzer, interval=0)
+        self.assertEqual(report['prefiltered'], 1)
+        self.assertEqual(report['llm_calls'], 1)
+        frame = read_days(self.repo, date(2026, 10, 23), date(2026, 10, 23))
+        skipped = frame[frame['LLM狀態'] == 'PREFILTERED'].iloc[0]
+        self.assertEqual((skipped['Event_Code'], skipped['Level'], skipped['最終判斷來源']), ('NOT_RELEVANT', '0', '規則前置過濾'))
+
     def test_ai_off_never_calls_model(self):
         analyzer=Mock()
         execute(self.repo,{**self.request,'ai':False},collector=lambda *a:(pd.DataFrame([item()]),[],[]),analyzer=analyzer,interval=0)
