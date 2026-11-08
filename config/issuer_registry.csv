@@ -60,7 +60,7 @@ US,BSX,Boston Scientific Corporation Common Stock,NYSE,波士頓科學;波士顿
 US,BMY,Bristol-Myers Squibb Company Common Stock,NYSE,百時美施貴寶;百时美施贵宝;施貴寶;施贵宝,LISTED,上市公司,https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt,2026-11-03,,
 US,AVGO,Broadcom Inc.,NASDAQ,博通,LISTED,上市公司,https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt,2026-11-03,,
 US,BRO,"Brown & Brown, Inc. Common Stock",NYSE,Brown & Brown,LISTED,上市公司,https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt,2026-11-03,,
-US,BF.B,Brown Forman Inc Class B Common Stock,NYSE,美國金賓;金賓;金宾;百富門;百富门,LISTED,上市公司,https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt,2026-11-03,,
+US,BF.B,Brown Forman Inc Class B Common Stock,NYSE,美國金賓;金賓;金宾;百富門;百富门,LISTED,上市公司,https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt,2026-11-03,,Y
 US,CHRW,"C.H. Robinson Worldwide, Inc.",NASDAQ,羅賓遜全球物流;罗宾逊全球物流,LISTED,上市公司,https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt,2026-11-03,,
 US,CDNS,"Cadence Design Systems, Inc.",NASDAQ,楷登電子;楷登电子;益華電腦;益华电脑;Cadence,LISTED,上市公司,https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt,2026-11-03,,
 US,COF,Capital One Financial Corporation Common Stock,NYSE,第一資本;第一资本;資本一號;资本一号,LISTED,上市公司,https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt,2026-11-03,,
@@ -184,7 +184,7 @@ US,KR,Kroger Company (The) Common Stock,NYSE,克羅格;克罗格,LISTED,上市�
 US,LHX,"L3Harris Technologies, Inc. Common Stock",NYSE,L3哈里斯,LISTED,上市公司,https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt,2026-11-03,,
 US,LRCX,Lam Research Corporation,NASDAQ,泛林;泛林集團;泛林集团;科林研發;科林研发;Lam Research,LISTED,上市公司,https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt,2026-11-03,,
 US,LDOS,"Leidos Holdings, Inc. Common Stock",NYSE,雷多斯,LISTED,上市公司,https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt,2026-11-03,,
-US,LEN,Lennar Corporation Class A Common Stock,NYSE,萊納;莱纳,LISTED,上市公司,https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt,2026-11-03,,
+US,LEN,Lennar Corporation Class A Common Stock,NYSE,萊納;莱纳,LISTED,上市公司,https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt,2026-11-03,,Y
 US,LLY,Eli Lilly and Company Common Stock,NYSE,禮來;礼来;Eli Lilly,LISTED,上市公司,https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt,2026-11-03,,
 US,LIN,Linde plc,NASDAQ,林德,LISTED,上市公司,https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt,2026-11-03,,
 US,LMT,Lockheed Martin Corporation Common Stock,NYSE,洛克希德馬丁;洛克希德·马丁;洛克希德,LISTED,上市公司,https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt,2026-11-03,,
@@ -200,7 +200,7 @@ US,MCD,McDonald's Corporation Common Stock,NYSE,麥當勞;麦当劳,LISTED,上�
 US,MCK,McKesson Corporation Common Stock,NYSE,麥克森;麦克森,LISTED,上市公司,https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt,2026-11-03,,
 US,MDT,Medtronic plc. Ordinary Shares,NYSE,美敦力,LISTED,上市公司,https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt,2026-11-03,,
 US,MRK,"Merck & Company, Inc. Common Stock (new)",NYSE,默沙東;默沙东;默克,LISTED,上市公司,https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt,2026-11-03,,
-US,MET,"MetLife, Inc. Common Stock",NYSE,大都會人壽;大都会人寿;MetLife,LISTED,上市公司,https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt,2026-11-03,,
+US,MET,"MetLife, Inc. Common Stock",NYSE,大都會人壽;大都会人寿;MetLife,LISTED,上市公司,https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt,2026-11-03,,Y
 US,MU,"Micron Technology, Inc.",NASDAQ,美光;美光科技,LISTED,上市公司,https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt,2026-11-03,,
 US,MSFT,Microsoft Corporation,NASDAQ,微軟;微软;微軟公司;微软公司,LISTED,上市公司,https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt,2026-11-03,,
 US,MRNA,"Moderna, Inc.",NASDAQ,莫德納;莫德纳;Moderna,LISTED,上市公司,https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt,2026-11-03,,
@@ -272,7 +272,7 @@ US,SMCI,"Super Micro Computer, Inc.",NASDAQ,美超微;超微電腦;超微电脑;
 US,SYF,Synchrony Financial Common Stock,NYSE,Synchrony,LISTED,上市公司,https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt,2026-11-03,,
 US,SNPS,"Synopsys, Inc.",NASDAQ,新思科技;新思,LISTED,上市公司,https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt,2026-11-03,,
 US,SYY,Sysco Corporation Common Stock,NYSE,西斯科;Sysco,LISTED,上市公司,https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt,2026-11-03,,
-US,TMUS,"T-Mobile US, Inc.",NASDAQ,T-Mobile;T-Mobile US,LISTED,上市公司,https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt,2026-11-03,,
+US,TMUS,"T-Mobile US, Inc.",NASDAQ,T-Mobile;T-Mobile US,LISTED,上市公司,https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt,2026-11-03,,Y
 US,TTWO,"Take-Two Interactive Software, Inc.",NASDAQ,Take-Two;任天堂Take-Two,LISTED,上市公司,https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt,2026-11-03,,
 US,TGT,Target Corporation Common Stock,NYSE,塔吉特;目標百貨;目标百货,LISTED,上市公司,https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt,2026-11-03,,
 US,TEL,TE Connectivity plc Ordinary Shares,NYSE,泰科電子;泰科电子,LISTED,上市公司,https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt,2026-11-03,,
@@ -286,9 +286,9 @@ US,TTD,"The Trade Desk, Inc.",NASDAQ,The Trade Desk;Trade Desk,LISTED,上市公�
 US,TT,Trane Technologies plc,NYSE,特靈;特灵;Trane,LISTED,上市公司,https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt,2026-11-03,,
 US,TDG,Transdigm Group Incorporated Common Stock,NYSE,翠狄傑;TransDigm,LISTED,上市公司,https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt,2026-11-03,,
 US,TRV,"The Travelers Companies, Inc. Common Stock",NYSE,旅行者;旅行者集團;旅行者集团,LISTED,上市公司,https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt,2026-11-03,,
-US,TFC,Truist Financial Corporation Common Stock,NYSE,Truist;信託金融;信托金融,LISTED,上市公司,https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt,2026-11-03,,
+US,TFC,Truist Financial Corporation Common Stock,NYSE,Truist;信託金融;信托金融,LISTED,上市公司,https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt,2026-11-03,,Y
 US,TSN,"Tyson Foods, Inc. Common Stock",NYSE,泰森食品;泰森,LISTED,上市公司,https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt,2026-11-03,,
-US,USB,U.S. Bancorp Common Stock,NYSE,美國合眾銀行;美国合众银行;合眾銀行,LISTED,上市公司,https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt,2026-11-03,,
+US,USB,U.S. Bancorp Common Stock,NYSE,美國合眾銀行;美国合众银行;合眾銀行,LISTED,上市公司,https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt,2026-11-03,,Y
 US,UBER,"Uber Technologies, Inc. Common Stock",NYSE,優步;优步;Uber,LISTED,上市公司,https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt,2026-11-03,,
 US,ULTA,"Ulta Beauty, Inc.",NASDAQ,Ulta,LISTED,上市公司,https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt,2026-11-03,,
 US,UNP,Union Pacific Corporation Common Stock,NYSE,聯合太平洋;联合太平洋,LISTED,上市公司,https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt,2026-11-03,,
@@ -314,9 +314,15 @@ US,WY,Weyerhaeuser Company Common Stock,NYSE,惠好;惠好公司;Weyerhaeuser,LI
 US,WMB,"Williams Companies, Inc. (The) Common Stock",NYSE,威廉姆斯,LISTED,上市公司,https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt,2026-11-03,,
 US,WDAY,"Workday, Inc.",NASDAQ,Workday,LISTED,上市公司,https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt,2026-11-03,,
 US,WYNN,"Wynn Resorts, Limited",NASDAQ,永利度假;永利,LISTED,上市公司,https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt,2026-11-03,,
-US,XEL,Xcel Energy Inc.,NASDAQ,Xcel,LISTED,上市公司,https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt,2026-11-03,,
+US,XEL,Xcel Energy Inc.,NASDAQ,Xcel,LISTED,上市公司,https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt,2026-11-03,,Y
 US,YUM,"Yum! Brands, Inc.",NYSE,百勝;百胜;百勝餐飲;百胜餐饮,LISTED,上市公司,https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt,2026-11-03,,
 US,ZBRA,Zebra Technologies Corporation,NASDAQ,斑馬技術;斑马技术,LISTED,上市公司,https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt,2026-11-03,,
 US,ZBH,"Zimmer Biomet Holdings, Inc. Common Stock",NYSE,捷邁邦美;捷迈邦美,LISTED,上市公司,https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt,2026-11-03,,
 US,ZTS,Zoetis Inc. Class A Common Stock,NYSE,碩騰;硕腾,LISTED,上市公司,https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt,2026-11-03,,
 US,GOOG,Alphabet Inc.,NASDAQ,Alphabet;Google;谷歌;谷歌A;Alphabet Inc. Class A,LISTED,上市公司,https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt,2026-11-03,,
+US,BRK.B,Berkshire Hathaway Inc. New Common Stock,NYSE,Berkshire Hathaway,LISTED,上市公司,https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt,2026-11-08,,Y
+US,FOXA,Fox Corporation,NASDAQ,Fox Corporation (Class A),LISTED,上市公司,https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt,2026-11-08,,
+US,MKC,"McCormick & Company, Incorporated Common Stock",NYSE,McCormick & Company,LISTED,上市公司,https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt,2026-11-08,,Y
+US,TAP,Molson Coors Beverage Company Class B Common Stock,NYSE,Molson Coors Beverage Company,LISTED,上市公司,https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt,2026-11-08,,Y
+US,NWSA,News Corporation,NASDAQ,News Corp (Class A),LISTED,上市公司,https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt,2026-11-08,,
+US,STT,State Street Corporation Common Stock,NYSE,State Street Corporation,LISTED,上市公司,https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt,2026-11-08,,Y

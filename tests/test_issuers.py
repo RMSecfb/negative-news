@@ -36,7 +36,10 @@ class IssuerTests(unittest.TestCase):
                 ('AbbVie','大摩：將艾伯維目標價上調至346美元','ABBV'),('Realty Income','Realty Income Corp (O) Income Statement','O'),
                 ('Corpay','Corpay says Canada dollar outlook','CPAY'),('Packaging Corporation of America','Packaging Corporation of America: key takeaways','PKG')]:
             self.assertEqual(run(company,title).Ticker,ticker,title)
-        # 括號內縮寫（球隊／政黨）不能當成代號佐證；券商簡稱不能證明主體是券商
+        for company,title,ticker in [('Mosaic Company (The)','Mosaic (MOS) Reports Q3 Loss, Tops Revenue Estimates','MOS'),('Idexx Laboratories','IDEXX (IDXX) Q3 2026 Earnings Call Transcript','IDXX'),
+                ('Home Depot (The)','The Home Depot Inc (HD) Stock Up 3.6%','HD'),('T-Mobile US','T Mobile US (TMUS) Launches T Mix','TMUS')]:
+            self.assertEqual(run(company,title).Ticker,ticker,title)
+        # 球隊／政黨縮寫不能證明主體；券商簡稱不能證明主體是券商
         self.assertEqual(run('Southern Company','Notre Dame (SO) Varsity Football').Ticker,'')
         self.assertEqual(run('Dominion Energy','Rep. Stevens (D) endorses Mike Rogers (R)').Ticker,'')
         self.assertEqual(run('Morgan Stanley','大摩：將艾伯維目標價上調至346美元').Ticker,'')

@@ -165,18 +165,14 @@ class IssuerIndex:
                 return True
             base = re.sub(r'\s+(?:(?:class|series)\s+[a-z0-9]+\s+)?(?:common (?:stock|shares)|ordinary shares|american depositary.*|depositary (?:shares|receipts)).*$', '', str(alias), flags=re.I)
             # 只去掉名稱結尾的公司後綴；不可拆名稱中間或字首（Income、Corpay、Corporation of America）。
-            base = re.sub(r'(?:[\s,]+(?:incorporated|inc|corporation|corp|limited|ltd|plc)\b\.?)+\s*$', '', base, flags=re.I).strip(' ,.')
+            base = re.sub(r'\(\s*the\s*\)', '', base, flags=re.I)
+            base = re.sub(r'(?:[\s,]+(?:incorporated|inc|corporation|corp|limited|ltd|plc)\b\.?)+\s*$', '', base.strip(' ,.'), flags=re.I).strip(' ,.')
+            base = re.sub(r'^the\s+', '', base, flags=re.I)
             if base and re.search(r'(?<![A-Za-z0-9])'+re.escape(base).replace(r'\ ', r'\s+')+r'(?![A-Za-z0-9])', text, re.I):
                 return True
         ticker = match.get('Ticker', '')
-        if ticker and len(ticker) >= 2 and ticker not in {'ON','IT','OR','SO','AI','ALL','ARE','FOR','NOW','US','GO','BE','AN','AT'}:
-            # 括號裡的兩個字母常是球隊／政黨／縮寫（如 (SO)、(D)），不能單獨當成代號佐證；要有 $、NYSE:/NASDAQ: 或公司名稱。
-            pattern = r'(?<![A-Za-z0-9])'+re.escape(ticker)+r'(?:\.US)?(?![A-Za-z0-9])'
-            for m in re.finditer(pattern, text):
-                wrapped = text[max(0, m.start()-1):m.start()] == '(' and text[m.end():m.end()+1] == ')'
-                if not wrapped or re.search(r'(?:\$|NASDAQ\s*:|NYSE\s*:)\s*'+re.escape(ticker), text[max(0, m.start()-12):m.end()], re.I):
-                    return True
-            return False
+        if ticker and len(ticker) >= 2 and ticker not in {'ON','IT','OR','SO','AI','ALL','ARE','FOR','NOW','US','GO','BE','AN','AT','COO','MAR','PSA','CMS','ADP'}:
+            return bool(re.search(r'(?<![A-Za-z0-9])'+re.escape(ticker)+r'(?:\.US)?(?![A-Za-z0-9])', text))
         return bool(ticker and re.search(r'(?:\$|NASDAQ\s*:|NYSE\s*:)'+re.escape(ticker)+r'\b', text, re.I))
 
     def enrich(self, frame, audit_existing=True):
