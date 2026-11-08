@@ -1,5 +1,6 @@
 """One merge/classification pipeline for scheduled and UI-requested runs."""
 from __future__ import annotations
+from .prefilter import skip_llm
 import hashlib
 import json
 import os
@@ -294,7 +295,8 @@ def execute(repository, request, repo=ROOT, api_key='', collector=None, analyzer
             targets = targets[targets['Ticker'].isin(set(selected['Ticker'])) | targets.get('原始Ticker', pd.Series('',index=targets.index)).isin(set(selected['Ticker']))]
     requested = request['max_llm'] if request['ai'] and api_key else 0
     allowance = reserve(repository, run_id, requested, usage_day, int(os.getenv('LLM_DAILY_MAX', '120'))) if requested else 0
-    calls = reused = 0
+    calls = reused = prefiltered = 0
+    prefilter_on = os.getenv('PREFILTER', '1') != '0'
     new_cache, decisions = {}, []
     limit_reached = False
     ordered = sorted(targets.to_dict('records'), key=llm_order)
@@ -325,6 +327,12 @@ def execute(repository, request, repo=ROOT, api_key='', collector=None, analyzer
             r = apply_answer(r, answer, rules, index)
             new_cache[key] = {'answer': answer}
             reused += 1
+        elif prefilter_on and (why := skip_llm(r)):
+            fallback = pick_rule('NOT_RELEVANT', rules) or {}
+            for field in ('Event_Code', '事件中文', 'Level', 'Action'):
+                r[field] = str(fallback.get(field, '') or '')
+            r.update(LLM狀態='PREFILTERED', 分類狀態='無關新聞', 需要人工覆核='False', 最終判斷來源='規則前置過濾', Evidence=why)
+            prefiltered += 1
         elif not api_key or calls >= allowance or limit_reached:
             r.update(LLM狀態='NO_API_KEY' if not api_key else 'QUOTA_PENDING', 分類狀態='待補分析', 需要人工覆核='False', 最終判斷來源='待補分析')
             for field in ('Event_Code', '事件中文', 'Level', 'Action'):
@@ -349,7 +357,7 @@ def execute(repository, request, repo=ROOT, api_key='', collector=None, analyzer
         r.update(分析指紋=key, LLM模型=MODEL if request['ai'] else '', Prompt版本=PROMPT_VERSION if request['ai'] else '', 最近執行=run_id)
         decisions.append(r)
     analyzed = index.enrich(pd.DataFrame(decisions).fillna(''))
-    report.update(status='success', finished_at=datetime.now(TPE).isoformat(), llm_calls=calls, cache_reused=reused,
+    report.update(status='success', finished_at=datetime.now(TPE).isoformat(), llm_calls=calls, cache_reused=reused, prefiltered=prefiltered,
                   pending=len(pending(analyzed)), review=len(review(analyzed)), major=len(major(analyzed)),
                   selected_company_count=len(selected), collected=len(fresh), rows=len(targets), errors=errors,
                   stages=stages, quota_reserved=allowance, **merge_stats)

@@ -16,6 +16,7 @@ from .repository import GitHubRepository, LocalRepository, read_json
 from .analytics import frequency_tables
 
 ROOT = Path(__file__).resolve().parents[1]
+GRID_MAX_ROWS = 3000
 
 
 def setting(name, default=''):
@@ -86,7 +87,14 @@ def render_results():
     frequency_panel(frame)
     left, right = st.columns([2, 1])
     mode = left.radio('結果分類', ['主要負面事件', '完整新聞', '待人工覆核', '待補分析'], horizontal=True)
-    right.download_button('下載查詢期間合併 Excel', excel_bytes(frame, st.session_state.get('news_query_runs', [])), file_name='Negative_News_' + st.session_state.get('news_query_period', 'period') + '.xlsx', mime='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', use_container_width=True)
+    # Building the workbook for thousands of rows on every rerun made each click slow; build it on demand.
+    excel_key = st.session_state.get('news_query_period', 'period') + f'|{len(frame)}|{hashlib.md5(pd.util.hash_pandas_object(frame[["news_id", "Event_Code", "Level", "Ticker"]] if "news_id" in frame and "Event_Code" in frame else frame.iloc[:, :1]).values.tobytes()).hexdigest()[:10]}'
+    if right.button('準備下載 Excel（完整查詢期間）', key='prepare_excel', use_container_width=True):
+        with st.spinner('產生 Excel…'):
+            st.session_state['news_excel'] = (excel_key, excel_bytes(frame, st.session_state.get('news_query_runs', [])))
+    ready = st.session_state.get('news_excel')
+    if ready and ready[0] == excel_key:
+        right.download_button('下載 Excel', ready[1], file_name='Negative_News_' + st.session_state.get('news_query_period', 'period') + '.xlsx', mime='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', use_container_width=True)
     current = {'主要負面事件': major(frame), '完整新聞': frame, '待人工覆核': review(frame), '待補分析': pending(frame)}[mode].copy()
     st.markdown('<span class="level-chip level3">Level 3 · 黃色</span> <span class="level-chip level4">Level 4 · 橘色</span> <span class="level-chip level5">Level 5 · 紅色</span>', unsafe_allow_html=True)
     edit = st.toggle('開啟人工編輯', key='unified_edit_enabled')
@@ -97,16 +105,22 @@ def render_results():
         return
     preferred = ['日期', 'Market', 'Ticker', 'Ticker狀態', 'Company', 'Published Time', 'Title', 'Level', '事件中文', 'Action', '分類狀態', '已人工覆核', '覆核註記', '最終判斷來源', '來源方法', 'FinBERT', 'Rule_Event_Code', 'Rule_Level', 'LLM事件代碼', 'LLM辨識公司', 'Ticker來源', 'Ticker候選', 'Ticker核對依據', 'Ticker參照日期', '上市狀態', '原始Ticker', '中文摘要', 'URL', 'Source']
     preferred += ['13F 機構動向', 'Form4 內部人動向']
-    current = current[[c for c in preferred if c in current] + [c for c in current if c not in preferred]]
     if 'Ticker稽核警示' in current:
         preferred.append('Ticker稽核警示')
     participant_fields = ['13F 機構動向', 'Form4 內部人動向']
     current = current[[c for c in current if c not in participant_fields] + [c for c in participant_fields if c in current]]
     st.caption('表格最後為機構內部人交易摘要：13F保留季度，Form4保留截至日；依最新已匯入成果對照，不作歷史當時資訊回測。')
     current['Level'] = current['Level'].astype(str).str.replace(r'\.0$', '', regex=True)
-    builder = GridOptionsBuilder.from_dataframe(current)
+    keep = ['news_id', 'Event_Code', '人工版本', '日期']
+    grid_cols = [c for c in preferred if c in current and c not in participant_fields] + [c for c in participant_fields if c in current] + [c for c in keep if c in current and c not in preferred]
+    grid_cols = [c for c in grid_cols if c not in participant_fields] + [c for c in participant_fields if c in grid_cols]
+    shown = current[grid_cols]
+    if len(shown) > GRID_MAX_ROWS:
+        st.warning(f'表格僅顯示前 {GRID_MAX_ROWS:,} / {len(shown):,} 筆以維持速度；請改用上方分類、或下載 Excel 查看全部。')
+        shown = shown.head(GRID_MAX_ROWS)
+    builder = GridOptionsBuilder.from_dataframe(shown)
     builder.configure_default_column(editable=False, sortable=True, filter=True, resizable=True, minWidth=105)
-    for col in current.columns:
+    for col in shown.columns:
         if col not in preferred:
             builder.configure_column(col, hide=True)
     editable = ['Ticker', 'Level', '事件中文', 'Action', '覆核註記']
@@ -123,8 +137,8 @@ def render_results():
         const n=Number(p.data.Level||0); const colors={3:'#FFF9C4',4:'#FFE0B2',5:'#FFCDD2'};
         return colors[n] ? {backgroundColor:colors[n],color:'#17283D'} : null;
     }"""), rowHeight=46, stopEditingWhenCellsLoseFocus=True)
-    key = hashlib.sha256((st.session_state.get('news_query_period', '') + mode + str(edit) + '|'.join(current['news_id'].astype(str))).encode()).hexdigest()[:14]
-    response = AgGrid(current, gridOptions=builder.build(), allow_unsafe_jscode=True, data_return_mode=DataReturnMode.AS_INPUT, update_on=['cellValueChanged'], height=510, theme='streamlit', key='unified_grid_' + key)
+    key = hashlib.sha256((st.session_state.get('news_query_period', '') + mode + str(edit) + '|'.join(shown['news_id'].astype(str))).encode()).hexdigest()[:14]
+    response = AgGrid(shown, gridOptions=builder.build(), allow_unsafe_jscode=True, data_return_mode=DataReturnMode.AS_INPUT, update_on=['cellValueChanged'], height=510, theme='streamlit', key='unified_grid_' + key)
     if edit:
         reviewer = st.text_input('覆核人（選填）', key='unified_reviewer')
         if st.button('儲存人工覆核', type='primary', key='save_unified_review'):
@@ -134,6 +148,7 @@ def render_results():
                     edited = pd.DataFrame(edited)
                 count = manual_save(repository(), current, edited, reviewer)
                 period = st.session_state['news_query_dates']
+                st.cache_data.clear()
                 st.session_state['news_query_frame'] = read_days(repository(), period[0], period[1], st.session_state['news_query_market'])
                 st.session_state['news_saved_note'] = f'已儲存 {count} 筆人工覆核；合併 Excel 已同步更新，後續補跑保留人工決定。'
                 st.rerun()
@@ -146,6 +161,21 @@ def render_results():
             begin, end = st.session_state['news_query_dates']
             prices = engine.stock_prices(ticker, begin.isoformat(), (end + timedelta(days=1)).isoformat())
             st.dataframe(prices, hide_index=True)
+
+
+def data_token():
+    """Changes whenever the data changes: GitHub branch head, or newest local file time."""
+    repo = repository()
+    if hasattr(repo, 'revision'):
+        return repo.revision()
+    root = getattr(repo, 'root', None)
+    return str(max((p.stat().st_mtime_ns for p in Path(root).glob('news_daily/*.csv')), default=0)) if root else ''
+
+
+@st.cache_data(ttl=900, max_entries=6, show_spinner=False)
+def cached_days(token, start, end, market):
+    """token is part of the cache key, so any new commit (daily run, review, edit) bypasses stale data."""
+    return read_days(repository(), start, end, market, revision=token if hasattr(repository(), 'revision') else None)
 
 
 def query_panel():
@@ -162,7 +192,7 @@ def query_panel():
         else:
             try:
                 with st.spinner('讀取排程與人工補跑合併結果…'):
-                    frame = read_days(repository(), start, end, market)
+                    frame = cached_days(data_token(), start, end, market)
                     st.session_state['news_query_runs'] = read_json(repository().read('news_runs/index.json'), {'runs': []})['runs']
                 st.session_state.update(news_query_frame=frame, news_query_dates=(start, end), news_query_market=market, news_query_period=f'{start}_{end}_{market}')
             except Exception as exc:
@@ -229,7 +259,7 @@ def manual_panel():
         render_active_run()
 
 
-@st.fragment(run_every=15)
+@st.fragment(run_every=30)
 def render_active_run():
     run_id = st.session_state.get('news_active_run')
     if not run_id:
