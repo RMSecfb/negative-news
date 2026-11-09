@@ -11,6 +11,8 @@ class PrefilterTests(unittest.TestCase):
         self.assertEqual(skip_llm({'Title': 'Company files for Chapter 11 bankruptcy', 'FinBERT': '0.9'}), '')
         self.assertEqual(skip_llm({'Title': 'Stock plunges 12% after probe', 'FinBERT': '0.5'}), '')
         self.assertEqual(skip_llm({'Title': 'Some neutral headline', 'FinBERT': ''}), '')
+        self.assertEqual(skip_llm({'Title': 'Nvidia board will probe CEO relationship with alleged spy. Here\'s what to know', 'FinBERT': '-0.1'}), '')
+        self.assertEqual(skip_llm({'Title': 'Why Barclays Cut Gartner despite rally', 'FinBERT': '-0.4'}), '')
         self.assertEqual(skip_llm({'Title': '輝達CDS飆升逾3倍', 'FinBERT': '-0.4'}), '')
 
 

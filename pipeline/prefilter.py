@@ -60,14 +60,21 @@ def _text(record):
     return ' || '.join(str(record.get(k, '') or '') for k in ('Title', 'Title_ZH', 'Summary'))
 
 
+# Wording that can signal trouble even when the legacy patterns and FinBERT do not.
+GUARD = re.compile(r"probe|investigat|inquir|subpoena|\bspy\b|espionage|alleg|fraud|misconduct|scandal|sues?\b|sued|lawsuit|settle|"
+                   r"resign|steps? down|fired|ousted|halt|suspend|outage|breach|hack|recall|\bcuts?\b|downgrad|slash|warn|"
+                   r"\bcds\b|spreads?\b|\brout\b|credit risk|concern|weakness|plunge|tumble|slump|crash|layoff|delist|default|bankrupt|"
+                   r"信用風險|調查|起訴|訴訟|罰款|和解|辭職|下架|召回|裁員|下調|警告|暴跌|違約|破產|停產|停牌", re.I)
+
+
 def skip_llm(record):
     """Return a reason when the LLM call can be saved, else ''."""
     text = _text(record)
-    if any(rx.search(text) for _, rx in RX) or MOVE.search(text):
+    if any(rx.search(text) for _, rx in RX) or MOVE.search(text) or GUARD.search(text):
         return ''
     try:
-        positive = float(record.get('FinBERT')) > 0.2
+        score = float(record.get('FinBERT'))
     except (TypeError, ValueError):
-        positive = False
+        return ''
     routine = bool(ROUTINE.search(str(record.get('Title', '')) + ' ' + str(record.get('Title_ZH', ''))))
-    return REASON if positive or routine else ''
+    return REASON if score > 0.2 or (routine and score > -0.3) else ''
