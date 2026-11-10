@@ -2,6 +2,7 @@ streamlit
 pandas>=2.2,<3
 numpy
 openpyxl
+xlsxwriter
 requests
 lxml
 beautifulsoup4

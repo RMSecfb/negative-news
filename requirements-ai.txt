@@ -1,3 +1,4 @@
 pandas>=2.2,<3
 openpyxl>=3.1,<4
+xlsxwriter
 requests>=2.32,<3
