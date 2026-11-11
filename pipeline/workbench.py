@@ -103,7 +103,7 @@ def render_results():
     if current.empty:
         st.info('目前分類沒有新聞。')
         return
-    preferred = ['日期', 'Market', 'Ticker', 'Ticker狀態', 'Company', 'Published Time', 'Title', 'Level', '事件中文', 'Action', '分類狀態', '已人工覆核', '覆核註記', '最終判斷來源', '來源方法', 'FinBERT', 'Rule_Event_Code', 'Rule_Level', 'LLM事件代碼', 'LLM辨識公司', 'Ticker來源', 'Ticker候選', 'Ticker核對依據', 'Ticker參照日期', '上市狀態', '原始Ticker', '中文摘要', 'URL', 'Source']
+    preferred = ['日期', 'Market', 'Ticker', 'Ticker狀態', '風險主題', 'Company', 'Published Time', 'Title', 'Level', '事件中文', 'Action', '分類狀態', '已人工覆核', '覆核註記', '最終判斷來源', '來源方法', 'FinBERT', 'Rule_Event_Code', 'Rule_Level', 'LLM事件代碼', 'LLM辨識公司', 'Ticker來源', 'Ticker候選', 'Ticker核對依據', 'Ticker參照日期', '上市狀態', '原始Ticker', '中文摘要', 'URL', 'Source']
     preferred += ['13F 機構動向', 'Form4 內部人動向']
     if 'Ticker稽核警示' in current:
         preferred.append('Ticker稽核警示')

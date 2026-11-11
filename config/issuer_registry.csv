@@ -328,3 +328,9 @@ US,NWSA,News Corporation,NASDAQ,News Corp (Class A),LISTED,上市公司,https://
 US,STT,State Street Corporation Common Stock,NYSE,State Street Corporation,LISTED,上市公司,https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt,2026-11-08,,Y
 US,TEAD,Teads Holding Co.,NASDAQ,Teads;Teads Holding,LISTED,上市公司,https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt,2026-11-08,,
 FR,TEP.PA,Teleperformance,Euronext Paris,Teleperformance;Teleperformance SE,LISTED,法國上市（非美股）,https://live.euronext.com/,2026-11-08,,
+US,CRWV,CoreWeave,NASDAQ,CoreWeave;CoreWeave Inc,LISTED,上市公司,https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt,2026-11-11,Y,
+US,NBIS,Nebius Group,NASDAQ,Nebius;Nebius Group;Nebius Group N.V.,LISTED,上市公司,https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt,2026-11-11,Y,
+US,WULF,TeraWulf,NASDAQ,TeraWulf;TeraWulf Inc,LISTED,上市公司,https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt,2026-11-11,Y,
+US,IREN,IREN Limited,NASDAQ,IREN Limited;Iris Energy,LISTED,上市公司,https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt,2026-11-11,,
+US,SPCX,SpaceX,NASDAQ,SpaceX;Space Exploration Technologies;Space Exploration Technologies Corp.,LISTED,上市公司,https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt,2026-11-11,Y,
+JP,9984.T,SoftBank Group,Tokyo Stock Exchange,SoftBank;SoftBank Group;軟銀;軟銀集團;软银,LISTED,日本上市（非美股）,https://www.jpx.co.jp/,2026-11-11,Y,

@@ -1,6 +1,7 @@
 """One merge/classification pipeline for scheduled and UI-requested runs."""
 from __future__ import annotations
 from .prefilter import skip_llm
+from .themes import apply_themes
 import hashlib
 import json
 import os
@@ -358,6 +359,7 @@ def execute(repository, request, repo=ROOT, api_key='', collector=None, analyzer
         r.update(分析指紋=key, LLM模型=MODEL if request['ai'] else '', Prompt版本=PROMPT_VERSION if request['ai'] else '', 最近執行=run_id)
         decisions.append(r)
     analyzed = index.enrich(pd.DataFrame(decisions).fillna(''))
+    analyzed = apply_themes(analyzed, rules)  # industry themes (config/risk_themes.csv)
     report.update(status='success', finished_at=datetime.now(TPE).isoformat(), llm_calls=calls, cache_reused=reused, prefiltered=prefiltered,
                   pending=len(pending(analyzed)), review=len(review(analyzed)), major=len(major(analyzed)),
                   selected_company_count=len(selected), collected=len(fresh), rows=len(targets), errors=errors,

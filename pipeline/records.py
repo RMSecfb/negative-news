@@ -129,7 +129,7 @@ def review(frame):
 def excel_bytes(frame, runs=None):
     """Application export: the same four report views for schedule, manual runs and queries."""
     out = io.BytesIO()
-    preferred = ['日期', 'Market', 'Ticker', 'Company', 'Published Time', 'Title', '中文摘要', 'Level', '事件中文', 'Action', '最終判斷來源', '分類狀態', '已人工覆核', '來源方法', 'FinBERT', 'Rule_Event_Code', 'Rule_Level', 'LLM事件代碼', 'LLM辨識公司', 'Ticker來源', 'URL', 'Source']
+    preferred = ['日期', 'Market', 'Ticker', 'Company', '風險主題', 'Published Time', 'Title', '中文摘要', 'Level', '事件中文', 'Action', '最終判斷來源', '分類狀態', '已人工覆核', '來源方法', 'FinBERT', 'Rule_Event_Code', 'Rule_Level', 'LLM事件代碼', 'LLM辨識公司', 'Ticker來源', 'URL', 'Source']
     cols = [c for c in preferred if c in frame] + [c for c in frame if c not in preferred]
     from .participants import DISPLAY_FIELDS
     cols = [c for c in cols if c not in DISPLAY_FIELDS] + [c for c in DISPLAY_FIELDS if c in frame]
