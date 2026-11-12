@@ -13606,5 +13606,1270 @@
       "requires_review": true,
       "summary_zh": "目前無足夠資訊判斷是否存在任何信用風險事件。"
     }
+  },
+  "90593e6c26cfea4dac99be78a11ce596ce607875f5339b46639c04666bfaa0d4": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "無足夠資訊判斷是否有信用風險事件。",
+      "requires_review": true
+    }
+  },
+  "87172559e3e82fc208e41b56c3856c3d0c8742a92395e33821e36fe6abc0e163": {
+    "answer": {
+      "company_mentioned": "Goldman Sachs",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "此新聞未提及任何與金鑰信用風險相關的事件，僅討論股市走勢與公司名稱。"
+    }
+  },
+  "525a92d9cb08ab05b8b0be4178315226bc21719564109ac0dcef88a9ff632ec7": {
+    "answer": {
+      "company_mentioned": "Starbucks",
+      "confirmed_default": false,
+      "event_codes": [
+        "GENERAL_INFORMATION"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "星巴克咖啡韓國子公司Emart第三季淨利大幅下滑，為公司財務表現提供一般資訊。"
+    }
+  },
+  "74417a6f61c70cffce75429e2187fcfa10b0b901619483454af8bdfb2e70ac0f": {
+    "answer": {
+      "company_mentioned": "Czechoslovak Group",
+      "confirmed_default": false,
+      "event_codes": [
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "Czechoslovak Group 股價因公布 Q1-Q3 財報而大幅下跌。"
+    }
+  },
+  "3b2f0bd2d68e72704ee22a5bdfa27dd67d06fdeddfd26d9adbe00501fa1a063d": {
+    "answer": {
+      "company_mentioned": "Costco",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "本新聞未提供任何關於Costco債務違約或信用風險升高的具體訊息，僅提及產品召回。"
+    }
+  },
+  "f98bd9f53b17d88a26984e39211f9727b152248eef829f8638490768f7acf41b": {
+    "answer": {
+      "company_mentioned": "PayPal",
+      "confirmed_default": false,
+      "event_codes": [
+        "REGULATORY_INVESTIGATION",
+        "ANTITRUST_INVESTIGATION"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "PayPal faces German antitrust investigation over competition concerns",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "PayPal 正面臨德國反壟斷調查，涉及競爭問題。"
+    }
+  },
+  "28d6ee49c965d8ce6fa3f6b00ab2dddebd02b8f6d2a3c04364647fb8c2849a6c": {
+    "answer": {
+      "company_mentioned": "Costco",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "本新聞僅提及Costco的產品召回，未涉及任何信用風險事件。"
+    }
+  },
+  "4120098845390a95cf6e20567b8c7670513d5b4e9f12de2c1112a3f42b1f77ab": {
+    "answer": {
+      "company_mentioned": "Boston Scientific",
+      "confirmed_default": false,
+      "event_codes": [
+        "PRODUCT_RECALL"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "Boston Scientific (BSX) Issued Global Recalls Across Key Device Lines",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "波士頓科學公司（Boston Scientific）宣布對其關鍵醫療器械產品線進行全球召回。"
+    }
+  },
+  "f8713a21898dd2cd8d5c648e72cba86b3f469b4c5f5e103015456e219f4a6e9d": {
+    "answer": {
+      "company_mentioned": "Ontario",
+      "confirmed_default": false,
+      "event_codes": [
+        "CREDIT_DOWNGRADE"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "Ontario facing possible credit rating downgrade over forecast debt, deficit: S&P Global",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "安大略省因預測債務和赤字可能被標普全球下調信用評級，並未涉及違約或其他財務危機。"
+    }
+  },
+  "47abb9400f7bacc93f55f588ba2f9c5c061229544b14335703be9b3d7abc1875": {
+    "answer": {
+      "company_mentioned": "Emcor",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前缺乏足夠資訊來判斷 Emcor 是否存在任何信用風險事件。"
+    }
+  },
+  "e79a6745ae348d41a0ede3ffcf33c05f0739b69277b4b32362c21079e430e821": {
+    "answer": {
+      "company_mentioned": "Medtronic",
+      "confirmed_default": false,
+      "event_codes": [
+        "PRODUCT_RECALL"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "本新聞報導指出，美敦力（Medtronic）因兩項Class II心臟裝置召回而面臨挑戰，屬於產品召回事件。"
+    }
+  },
+  "8fe140ec8b8e1932a551af67e0682acb244f7f8be5acdf0801edcb101ad68f31": {
+    "answer": {
+      "company_mentioned": "Boston Scientific",
+      "confirmed_default": false,
+      "event_codes": [
+        "FDA_WARNING",
+        "PRODUCT_RECALL"
+      ],
+      "event_status": "RUMORED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "本篇文章討論美國醫療器材製造商波士頓科學（Boston Scientific）因 FDA 針對其產品發佈的 Class II 召回警告，投資者是否應該擔憂。"
+    }
+  },
+  "3ed038c19b67dd269c1a8aa5bdb8caa0a2c2566068c16cbf0d82928a743f83d0": {
+    "answer": {
+      "company_mentioned": "Cummins",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前無足夠資訊確認 Cummins 是否發生違約或其他信用事件，需進一步調查。"
+    }
+  },
+  "dfad173433c882eace93c541867443dd1e3b825ca8c032767035216455fb1d18": {
+    "answer": {
+      "company_mentioned": "CMS Energy",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前沒有足夠資訊顯示 CMS Energy 相關的信用風險事件。"
+    }
+  },
+  "2cc61822c7a6f3cd76fc1d16f41389f9de24a5a8cc2e8079460aa4f99fef86c7": {
+    "answer": {
+      "company_mentioned": "Charter Communications",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前僅有標題資訊，未提供具體事件細節，無法判斷是否涉及信用風險事件。"
+    }
+  },
+  "45b8590716f4247e3aaa520919f0129953e8270edc718209fdfebbe8e4a9bbac": {
+    "answer": {
+      "company_mentioned": "Costco",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "本新聞未提及任何與信用風險相關的事件，僅說明產品召回。"
+    }
+  },
+  "d0321d6e193b9c8d3f37a10f1209121d6594a5ce0c64a094f09061f8c121db5a": {
+    "answer": {
+      "company_mentioned": "Fidelity National Information Services",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前缺乏足夠資訊，無法判斷是否存在任何信用風險事件。"
+    }
+  },
+  "7ac438bbf98bc134504d99e9a0242915224aaa4c5291d6f9dcd5ecac15aff3b5": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "MSCI Inc.",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "requires_review": true,
+      "summary_zh": "MSCI Inc. 近期宣布將從全球指數中移除策略，並未提及任何債務違約或信用風險升高的訊息。"
+    }
+  },
+  "935c21709ead47657c9fd83a83ce1729499f3fd4c2118dc739424bd039f6810e": {
+    "answer": {
+      "company_mentioned": "Nvidia",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前沒有足夠證據顯示 Nvidia 進行了債務違約或其他重大信用事件。"
+    }
+  },
+  "f00994744724d8d99767616b82296b46dd7f786352cf111190c46bec01b672d4": {
+    "answer": {
+      "company_mentioned": "Nvidia",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "無足夠資訊確認任何信用風險事件。"
+    }
+  },
+  "803de29ba335a882ef6feeca28bd322c901e3f7a7a75b8baa01210627cc67e84": {
+    "answer": {
+      "company_mentioned": "Nvidia",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "本報導僅提及Nvidia股價因報導CEO私生活而下跌，並未涉及任何債務違約、信用事件或其他財務風險訊號。"
+    }
+  },
+  "9074bef0e8e589a2524de61d3f2ae3bc1283f96767e42ae3449367d008cd0d89": {
+    "answer": {
+      "company_mentioned": "Nvidia",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前沒有足夠證據顯示 Nvidia 進行了債務違約或其他信用風險事件。"
+    }
+  },
+  "aa1b4e600effd332bf9a66b5b476dfc5fe846e5e637c24ada9b1527ce4ca1fce": {
+    "answer": {
+      "company_mentioned": "Nvidia",
+      "confirmed_default": false,
+      "event_codes": [
+        "EXECUTIVE_MISCONDUCT"
+      ],
+      "event_status": "RUMORED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "本報導指出，Nvidia 的 CEO 之間的醜聞正在加劇，市場對公司治理與高層行為產生疑慮，但並未涉及任何債務違約或信用事件。"
+    }
+  },
+  "088afe072c31399911f917442ec29485e9e9e57b49feced1cb99d3b826c135cf": {
+    "answer": {
+      "company_mentioned": "Morgan Stanley",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "此新聞未提及任何與債務違約、CDS利差擴大或其他信用風險事件相關的具體訊息，僅討論高管行為與市場情緒。"
+    }
+  },
+  "f92604971974f410c22c24b0939e0f69630ab878718ac703ff0d5b6ecb4fa81c": {
+    "answer": {
+      "company_mentioned": "MSCI Inc.",
+      "confirmed_default": false,
+      "event_codes": [
+        "GENERAL_INFORMATION"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "MSCI 取消其股票基準中的一項策略，並未涉及任何違約或信用風險事件。"
+    }
+  },
+  "fda2214c510e0180de476cabe897a74e2a760a7196b6c05347212ac1a2213577": {
+    "answer": {
+      "company_mentioned": "Nvidia",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前沒有足夠資訊顯示 Nvidia 相關的信用風險事件。"
+    }
+  },
+  "6db82232e4d4368819b3a541efad464024cc51b306b67227f039b6a93a164a56": {
+    "answer": {
+      "company_mentioned": "Nvidia",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "此新聞未提及任何與債務違約、CDS利差擴大或其他信用風險相關的事件，僅涉及CEO個人生活。"
+    }
+  },
+  "282ab43c0d8c905e32851c3135edc571fc1c61df846715e024a00ccf0eb3e3d2": {
+    "answer": {
+      "company_mentioned": "PayPal",
+      "confirmed_default": false,
+      "event_codes": [
+        "ANTITRUST_INVESTIGATION"
+      ],
+      "event_status": "INVESTIGATING",
+      "evidence": "German antitrust authority says PayPal practices may restrict competition",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "德國反壟斷機構表示 PayPal 的做法可能限制競爭，暗示公司正面臨監管調查。"
+    }
+  },
+  "a6098b36514756fcc8372e96e3c85e07f9767abf839e1f155cd73bbb6348b658": {
+    "answer": {
+      "company_mentioned": "Amgen",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "本新聞未提及任何與信用風險相關的事件，僅報導Amgen的Sjogren's藥物在試驗中降低疾病活動。"
+    }
+  },
+  "204e7ca056abd799b02a521f2770756b3d7371501f5bb27ee2ccadf9814d16ef": {
+    "answer": {
+      "company_mentioned": "ExxonMobil",
+      "confirmed_default": false,
+      "event_codes": [
+        "GENERAL_INFORMATION"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "埃克森美孚（ExxonMobil）宣布對歐盟碳捕捉規則提出法律挑戰，並未涉及任何違約或信用風險事件。"
+    }
+  },
+  "ddc604e97d9b04360740144f73888edd74c115331f9ff4027bc2d6342a71c69c": {
+    "answer": {
+      "company_mentioned": "ConocoPhillips",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前沒有足夠資訊顯示康菲石油（ConocoPhillips）存在任何信用風險事件。"
+    }
+  },
+  "d0bd33664537a5a5559bed87506e79ec3f478d1610d056907e3b8a76a44863e2": {
+    "answer": {
+      "company_mentioned": "Cisco",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "前 Cisco 執行長約翰·查姆伯斯表示中國科技信任已破裂，但未提供任何關於公司債務違約、CDS利差擴大或其他信用風險事件的具體證據。"
+    }
+  },
+  "19c3c72fe6ec37401fb614ff1e3adeecc44bbae2d197a8d8aaa71d2f69fee93b": {
+    "answer": {
+      "company_mentioned": "Nvidia",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "本新聞未提及任何與債務違約、信用風險或相關金融事件相關的訊息，僅涉及公司高層個人行為。"
+    }
+  },
+  "212efe4e166ff653bdc805f29c3b639d9eaa88fe8d94bd73a34ae19db17b9316": {
+    "answer": {
+      "company_mentioned": "Nvidia",
+      "relevant": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "本新聞未提及任何與Nvidia財務風險相關的事件。",
+      "requires_review": true
+    }
+  },
+  "528d00458ba41d87f914aece1c4bcf11f6e2353e81ae62f316552eaf40be59bb": {
+    "answer": {
+      "company_mentioned": "Nvidia",
+      "confirmed_default": false,
+      "event_codes": [
+        "CEO_DEPARTURE"
+      ],
+      "event_status": "RUMORED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "Nvidia 據《華爾街日報》報導，正準備將 CEO 詹森·黃（Jensen Huang）逐出公司，屬於高管異動的傳聞性事件。"
+    }
+  },
+  "832c15b190dc19fb28629f51e14e5627b981015cd63d62e78d4c42711e74e01e": {
+    "answer": {
+      "company_mentioned": "Nvidia",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前沒有足夠資訊顯示 Nvidia 相關的信用風險事件。"
+    }
+  },
+  "a189b0b0b7ce46bbc316f2c5af804ba03f76d965278c02040211e9b7db33bcd6": {
+    "answer": {
+      "company_mentioned": "Nvidia",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前沒有足夠證據顯示 Nvidia 進入任何信用風險事件。"
+    }
+  },
+  "98610ad85b4193c6f0ed1317f9082bdae442af9da7e7eda1da05112d6a232903": {
+    "answer": {
+      "company_mentioned": "Lumentum",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "Lumentum 的股價因交易反應下跌，但目前沒有任何明確證據顯示公司面臨違約、破產或其他信用風險事件。"
+    }
+  },
+  "d72951c42a5cb4bfddda40b82048d0b11e2200b9a9143ca17a536f8534353e33": {
+    "answer": {
+      "company_mentioned": "Nvidia",
+      "confirmed_default": false,
+      "event_codes": [
+        "CEO_DEPARTURE"
+      ],
+      "event_status": "RUMORED",
+      "evidence": "Nvidia is preparing to oust CEO Jensen Huang, WSJ reports",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "根據《華爾街日報》報導，Nvidia 正在籌備將 Jensen Huang 免職，屬於高管異動的傳聞事件。"
+    }
+  },
+  "d62e5298849ea27b309c00eec17a91b3dacff6ea55efafa5cdca97d2e5799cf4": {
+    "answer": {
+      "company_mentioned": "Nvidia",
+      "confirmed_default": false,
+      "event_codes": [
+        "CEO_DEPARTURE"
+      ],
+      "event_status": "RUMORED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "Nvidia 可能將更換 CEO Jensen Huang，相關消息來自華爾街日報報導。"
+    }
+  },
+  "4af5cd2ebc91ccc60d537c4a18b15a05e2e2d540f2c8832d86483ea2f835ee6d": {
+    "answer": {
+      "company_mentioned": "Nvidia",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "本新聞未提供任何關於Nvidia信用風險或違約的具體訊息，僅提及CEO與高層關係，無法判斷是否涉及信用事件。"
+    }
+  },
+  "e13e3e09a88aa2f2055caa449e3a5cee7cd2fbeda352e0d8f5025e1d0e16b256": {
+    "answer": {
+      "company_mentioned": "Nvidia",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前沒有足夠證據顯示 Nvidia 進行了債務違約或其他信用風險事件。"
+    }
+  },
+  "647631c6777313db6999c049aaeb7e356d0977a9d83a8de4fa6cb5a4997e127d": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Intel",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "目前無足夠資訊判斷是否有信用風險事件。",
+      "requires_review": true
+    }
+  },
+  "c900ba956b1d6e661c23a5a8ca9e2ae366fdf4b23332805698f33321867e3dbd": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Teradyne",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "此新聞未提及任何與信用風險相關的事件。",
+      "requires_review": true
+    }
+  },
+  "b7fa4eff6b95150cf85866fc38afd992d1b588d8352175350660677a766d177a": {
+    "answer": {
+      "company_mentioned": "Nvidia",
+      "confirmed_default": false,
+      "event_codes": [
+        "CEO_DEPARTURE"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "Nvidia 擬除任現任 CEO 黃仁勳，WSJ 報導顯示公司股價下跌。"
+    }
+  },
+  "f6d8579d2b78d53daa369390003c94c9ecbe018774415433b88df944fadf3596": {
+    "answer": {
+      "company_mentioned": "Nvidia",
+      "confirmed_default": false,
+      "event_codes": [
+        "CEO_DEPARTURE"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "Nvidia Preparing to Oust Jensen Huang After Affairs, WSJ Says",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "Nvidia 擬解雇 Jensen Huang，因其不當行為引發內部調查。"
+    }
+  },
+  "db1b1bae2342dc8f144ccd84e262c037b177a5835603e52d7c613f3657a60e22": {
+    "answer": {
+      "company_mentioned": "L3Harris",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前無足夠資訊判斷是否有信用風險事件。"
+    }
+  },
+  "69012bc1c8744577c65b76f4c552c140648cd436e340df9b28a07f58152d56f4": {
+    "answer": {
+      "company_mentioned": "Devon Energy",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前無足夠資訊確認任何信用風險事件。"
+    }
+  },
+  "b3ee26c1770e4905d7b3c7cbb0ecb30ad2903d6d2bf8ce255d7c20d07a3312f3": {
+    "answer": {
+      "company_mentioned": "Amgen",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前無足夠資訊確認任何信用風險事件。"
+    }
+  },
+  "212cfc0ed1efa898f44d09f1f51cfd0596c1175affe45dbd37be0146a727a19c": {
+    "answer": {
+      "company_mentioned": "ConocoPhillips",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前沒有足夠資訊顯示康菲石油（ConocoPhillips）存在任何信用風險事件。"
+    }
+  },
+  "93ffe8f44b99c30fdc1edb6d75771499c9849233f7b8252aa81384eb5af8f3d4": {
+    "answer": {
+      "company_mentioned": "Nvidia",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "此新聞未提及任何與Nvidia相關的信用風險事件，僅涉及高層關係。"
+    }
+  },
+  "80272cf0b1f128d4502762cfd5ca8eba8971709dd857cc51c7bf49f1416527af": {
+    "answer": {
+      "company_mentioned": "Costco",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前沒有足夠資訊顯示Costco存在任何信用風險事件。"
+    }
+  },
+  "88bae87b9f75cf382148c0f30e691b45a9a1134a74ffdd86c643edd3228d7df8": {
+    "answer": {
+      "company_mentioned": "BlackRock",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "此新聞未提及任何與信用風險相關的事件，僅討論銀行家候選人。"
+    }
+  },
+  "c80cd8bedb031b05afc64ca57a4ac4ccd14de793318e9f159b85f1ff29d34280": {
+    "answer": {
+      "company_mentioned": "Valero Energy",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前無足夠資訊判斷是否存在信用風險事件。"
+    }
+  },
+  "a49b5deb804da67b82dbf8dd367a9a2b25ceeffa5aa56072270a703289cf94c2": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Lumentum",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "無足夠證據顯示 Lumentum 相關信用風險事件。",
+      "requires_review": true
+    }
+  },
+  "74810371e1d6f51373ed54f2712567754e19547443ce011bcab74ca4fb0ccbed": {
+    "answer": {
+      "company_mentioned": "Microsoft",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "此新聞未提及任何與債務違約、CDS利差擴大或其他信用風險相關的具體事件，僅說明微軟將自行籌資以供電資料中心。"
+    }
+  },
+  "e018a95272f986729b1fb17e04ba18aa21b80427fd5a0c4c6cdb4d5a5955b173": {
+    "answer": {
+      "company_mentioned": "Nvidia",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前無足夠資訊顯示 Nvidia 可能發生債務違約或其他信用風險事件，需進一步調查。"
+    }
+  },
+  "51dbb6c50efe4d5302ed2eaa72fc71aadeeea0b524f180c697c39ca226f3c098": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "L3Harris",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "無足夠資訊顯示任何信用風險事件。",
+      "requires_review": true
+    }
+  },
+  "1797bdc4f551e922d359202e39bf493319312e95847d780ba97cc5078d5dfeab": {
+    "answer": {
+      "company_mentioned": "Nvidia",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "本新聞未提及任何與Nvidia財務風險相關的事件，僅談及美國商務部官員與前總統之間的對話。"
+    }
+  },
+  "f1fec17a52c68ad74a6c8c46dc6e5ce6a608a3c7b48a60478a5890865cbfa067": {
+    "answer": {
+      "company_mentioned": "CME Group",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "本新聞未提及任何與信用風險相關的事件，無法判斷是否存在違約或其他信用事件。"
+    }
+  },
+  "969d15cb6e1e34b67550c686aff092bc21101f81df46c2c104e9b6111e033251": {
+    "answer": {
+      "company_mentioned": "Nvidia",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前沒有足夠證據顯示 Nvidia 進行了任何債務違約或相關信用事件。"
+    }
+  },
+  "e75ced2244c31564ef2bc60f13f81f2d2c39295ee688b9b63229ad1ba0c11dc0": {
+    "answer": {
+      "company_mentioned": "SANUWAVE Health",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "SANUWAVE Health 在報告中提到第三季營收下降，並指出 CMS 付款問題，但未提及任何違約、破產或其他信用風險事件。"
+    }
+  },
+  "048363dec2a746d4c4c60ac56d9b7ec6655eb3c2e529ffc52ccb06e55d08640e": {
+    "answer": {
+      "company_mentioned": "Boeing",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "本新聞未提及任何與信用風險相關的事件，無法判斷是否存在違約或其他信用事件。"
+    }
+  },
+  "476c8eaf59caf11c229e4849d5fedf2b6edb9c27839fece6ff9286f663347b37": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Boeing",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "requires_review": true,
+      "summary_zh": "本新聞僅提及波音公司在十月的訂單與交付數量，未提及任何違約、信用風險升高或其他財務風險事件。"
+    }
+  },
+  "2aa9d8fa13747d1de1664990978988f47916f4fa19e5a6597a2189173174ad7b": {
+    "answer": {
+      "company_mentioned": "Fortis Games",
+      "confirmed_default": false,
+      "event_codes": [
+        "WORKFORCE_REDUCTION"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "Fortis Games closes its doors after Las Vegas Sands ends funding, cutting around 440 jobs",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "Fortis Games 在拉斯維加斯金沙停止資金後關閉，裁員約440人，顯示公司面臨嚴重人力與營運縮減風險。"
+    }
+  },
+  "ff6860ee669d2bd9e8dd0b1bdf404b67c5f807814cd667c2a0cd401e60e95cbb": {
+    "answer": {
+      "company_mentioned": "Qualcomm",
+      "confirmed_default": false,
+      "event_codes": [
+        "WORKFORCE_REDUCTION"
+      ],
+      "event_status": "RUMORED",
+      "evidence": "Qualcomm may cut 1,000 jobs in India as global layoffs hit 3,600 employees",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "高通可能在印度裁減1,000名員工，全球裁員總數達3,600人，屬於人力資源縮減事件。"
+    }
+  },
+  "57d9b3817374817fbdf5f283f756c0ade7251225979e41558c00211b6b0fbd8f": {
+    "answer": {
+      "company_mentioned": "Corteva",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "本新聞未提及任何與信用風險相關的事件，僅報導公司第三季營收下降。"
+    }
+  },
+  "ed30d86c2354bceeb6b4e60dfe52d778449ad11ecb2e130a2c63f6c16f95fff8": {
+    "answer": {
+      "company_mentioned": "Boeing",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "本新聞未提及任何關於貝爾公司違約、破產或其他信用風險事件的具體訊息，僅報導其 737 MAX 交付量下降。"
+    }
+  },
+  "7c0a7abe0a65c720c91ca3fdf80ded44f0314d0c6bdfe866a51f72afd768be03": {
+    "answer": {
+      "company_mentioned": "Corteva",
+      "confirmed_default": false,
+      "event_codes": [
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "Corteva 股價因第三季業績不及預期下跌 6%。"
+    }
+  },
+  "8a912fc79d3bb43f5429fd5c3bce8191f5de22b0af40267f3e1ea1457be5e208": {
+    "answer": {
+      "company_mentioned": "Microchip Technology",
+      "confirmed_default": false,
+      "event_codes": [
+        "ANALYST_DOWNGRADE"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "Microchip Technology (MCHP) Stock Fair Value Falls After Analysts Cut Growth Estimates",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "Microchip Technology 的股價因分析師下調成長預估而被評估為低於公平價值。"
+    }
+  },
+  "960a0847318cf3a8427973d807d64dc7ab0b38a9b26a526c16fced201d681832": {
+    "answer": {
+      "company_mentioned": "D-Wave",
+      "confirmed_default": false,
+      "event_codes": [
+        "EARNINGS_MISS",
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "D-Wave (QBTS) Stock Drops 8.6% After Q3 Earnings Miss, Bookings Fall 19%",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "D‑Wave 於第三季財報不及預期，導致股價下跌 8.6%，同時預訂量下降 19%。"
+    }
+  },
+  "607658752d7bf50a2d2209222d49ccf8c7d1df38ed7bac599c218a1a53a4c1fb": {
+    "answer": {
+      "company_mentioned": "Qualcomm",
+      "confirmed_default": false,
+      "event_codes": [
+        "WORKFORCE_REDUCTION"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "Qualcomm 在印度的勞動力裁減計畫，將在班加羅爾造成約1,000個技術職位的風險。"
+    }
+  },
+  "1478039d85d91cc01143bb3d8a76a291e94d52fea5a01ce8e0030a469a9aa827": {
+    "answer": {
+      "company_mentioned": "Nvidia",
+      "confirmed_default": false,
+      "event_codes": [
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "MARKET_IMPLIED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "Nvidia 股價因黃仁勛出軌事件持續下跌，跌幅超過5%。"
+    }
+  },
+  "de9f98054cea6c25d8307eec0639110b628c677e526d0ae0fc923da0ccbb9b20": {
+    "answer": {
+      "company_mentioned": "PepsiCo",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "本新聞未提及任何與信用風險相關的事件，僅報導裁員訊息，無法判斷是否存在違約或其他信用風險事件。"
+    }
+  },
+  "90ef834ee8eea3952c24791706906205cb603feb7fdc44dd7afed26a76c582e8": {
+    "answer": {
+      "company_mentioned": "Tyson Foods",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前沒有足夠證據顯示 Tyson Foods 發生任何信用風險事件。"
+    }
+  },
+  "a8257756eb1b5ac63f1ddb08249edaa9ff2f66b892a921dd834f651e4ad06687": {
+    "answer": {
+      "company_mentioned": "PepsiCo",
+      "confirmed_default": false,
+      "event_codes": [
+        "WORKFORCE_REDUCTION"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "PepsiCo plans to cut around 1,000 jobs in North America amid restructuring",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "百事公司宣布將在北美裁減約1,000名員工，以進行重組。"
+    }
+  },
+  "f446b3d1b72f2a5997f1f43a1e4c15fdb7dfa05e3fea1134d89af7c9f4ee74e1": {
+    "answer": {
+      "company_mentioned": "Corteva",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前缺乏足夠資訊來判斷是否存在任何信用風險事件。"
+    }
+  },
+  "5c70a4b426e312f7ad098ae3f5945eee822d05bc7cb594e66147ab0536b75225": {
+    "answer": {
+      "company_mentioned": "Amazon",
+      "relevant": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "此新聞僅提及 Amazon 的 AirTag 2 四件套價格，未涉及任何信用風險事件。",
+      "requires_review": true
+    }
+  },
+  "84d738a1f1851c317d9e0ecb91a2cf85e87887f619bf3f5b68fdf44d4a3b525d": {
+    "answer": {
+      "company_mentioned": "Qualcomm",
+      "confirmed_default": false,
+      "event_codes": [
+        "WORKFORCE_REDUCTION"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "高通啟動裁員，印度及美國加州員工受波及",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "高通宣布裁員，影響印度及美國加州員工，屬於人力資源縮減事件。"
+    }
+  },
+  "0140dbb8adb144a5932f497a56912eeabc35443545ac8308bd8ece7ba5d02acf": {
+    "answer": {
+      "company_mentioned": "PepsiCo",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "本新聞未提及任何與信用風險相關的事件，僅報導裁員與營運情況，無法判斷是否存在違約或其他信用風險事件。"
+    }
+  },
+  "b0277f79b8bab00c5874af2e771f35ddad2e2ab8cad75bc45e116eb28fde39b1": {
+    "answer": {
+      "company_mentioned": "Qualcomm",
+      "confirmed_default": false,
+      "event_codes": [
+        "WORKFORCE_REDUCTION"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "高通公司宣布在印度裁減1,500名員工，屬於重組措施的一部分。"
+    }
+  },
+  "95bf67367cc48ed5917e7919790483380b127ddc1f67a95a233bf6da2dd60020": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Amazon",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "此新聞未提及任何與信用風險相關的事件。",
+      "requires_review": true
+    }
+  },
+  "e66f74e61c734bd430151dee1adf1292f703f5f010a04a39bd610d4436b7d8b3": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Public Storage",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "此新聞未提及任何信用風險事件。",
+      "requires_review": true
+    }
+  },
+  "65256b2a96b8e456deb5dec420b9b3789b35def7c99d17c1b3525eea96ff512f": {
+    "answer": {
+      "company_mentioned": "Vietnam National Seed Corporation (NSC)",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "本新聞未提供足夠證據顯示公司存在違約、破產或其他信用風險事件，僅提及股利支出與利潤下降。"
+    }
+  },
+  "0df5d24a7378eb414bbf51af6a89f5186dff7f4d79d5e8bc347efc4200052f95": {
+    "answer": {
+      "company_mentioned": "NVR, Inc.",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前無足夠資訊顯示 NVR 之信用事件，需進一步調查。"
+    }
+  },
+  "3f05c0c97619d6c6998f16b50e1f2840053e26efdf5e7ef88fcd9d9a4d2fb49e": {
+    "answer": {
+      "company_mentioned": "Qualcomm",
+      "confirmed_default": false,
+      "event_codes": [
+        "WORKFORCE_REDUCTION"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "Semiconductor firm Qualcomm begins layoffs in India; around 1,000 jobs may be at risk",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "高通宣布在印度裁員，約1,000個工作崗位可能受到影響，屬於人力資源縮減事件。"
+    }
+  },
+  "f70b84faf3870bda6eb664b79a83c26cca363489296ba4502f75a153081fb537": {
+    "answer": {
+      "company_mentioned": "Lennar",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前無足夠資訊確認Lennar是否存在任何信用風險事件。"
+    }
+  },
+  "1eacb9640a81d7ff0aefc13648ffec4d58dcaef3d0c9a8b99b1a3ccc692b59c1": {
+    "answer": {
+      "company_mentioned": "Microsoft",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "此新聞未提及任何與債務違約或信用風險相關的具體事件，僅報導股價下跌與投資動態。"
+    }
+  },
+  "bfa0947a6175ef5af0b8f3fc8aca9692c1246dcb95310d1b4f2eede6165bf62b": {
+    "answer": {
+      "company_mentioned": "Qualcomm",
+      "confirmed_default": false,
+      "event_codes": [
+        "WORKFORCE_REDUCTION"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "Qualcomm 在印度裁員，超過1,000個工作崗位面臨風險，屬於人力資源縮減事件。"
+    }
+  },
+  "780736cf074fbbdd47da95faa8a8b91e398555fd103f6541cfae334cdbd33216": {
+    "answer": {
+      "company_mentioned": "Qualcomm",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "此新聞未提及任何與信用風險相關的事件，僅報導 Qualcomm 進行裁員。"
+    }
+  },
+  "c4bec65de6da187a19035d441079e81958fb61cf1bc148eb56d6488ca4ba5533": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Sherwin-Williams",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "requires_review": true,
+      "summary_zh": "此新聞未提及任何信用風險事件，僅提及股價面臨邊際壓力。"
+    }
+  },
+  "9ab8cbea3de5fd5cf9f402be50d4e644d342b90a9bb2e30f408ed25d1c2cf861": {
+    "answer": {
+      "company_mentioned": "T. Rowe Price",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前沒有足夠資訊顯示 T. Rowe Price 相關的信用風險事件。"
+    }
+  },
+  "fcfe501ad3510dce206fb0052ef5a69842827a3d9bce863f52a460097d41c6fc": {
+    "answer": {
+      "company_mentioned": "CME Group",
+      "confirmed_default": false,
+      "event_codes": [
+        "REGULATORY_INVESTIGATION"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "CFTC 延長對 CME 的 Nvidia 租賃合約進行調查，涉及操縱風險。"
+    }
+  },
+  "dc45e42a286eb3224a331c7f628658355ef98b77c36803b9b36218ef6234d387": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "T. Rowe Price",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "本新聞未提及任何信用風險事件。",
+      "requires_review": true
+    }
+  },
+  "133193e28ebe53716f03d1d37fdc945eb9c8c5574df92c2b65d0c6611b8323ca": {
+    "answer": {
+      "company_mentioned": "Walmart",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "此新聞未提及任何與信用風險相關的事件，僅討論股價與目標調整。"
+    }
+  },
+  "e463b49dfee8dd53d4138bf594e205fc684a2f4f2436bbec467b2f7a0d3a2866": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "TKO Group Holdings",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "requires_review": true,
+      "summary_zh": "此報導僅提及 TKO 員工對沙特阿拉伯關係感到不滿，未提及任何財務違約、破產或其他信用風險事件。"
+    }
+  },
+  "92b40afe1a64b1f3072ab9bdc826829263eedeb6c2c61dd0ba00a2d5e9538878": {
+    "answer": {
+      "company_mentioned": "Qualcomm",
+      "confirmed_default": false,
+      "event_codes": [
+        "WORKFORCE_REDUCTION"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "Qualcomm Begins India Layoffs, Around 1,000 Jobs Estimated To Be At Risk",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "Qualcomm 宣布在印度裁員，估計約 1,000 個工作崗位將受到影響。"
+    }
+  },
+  "4f9abcbe0fce203c347a03ddc054bcd71c8bae92b36cbf153868e5c29fd40f72": {
+    "answer": {
+      "company_mentioned": "Qualcomm",
+      "confirmed_default": false,
+      "event_codes": [
+        "WORKFORCE_REDUCTION"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "Qualcomm starts India layoffs, around 1,000 jobs potentially at risk",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "高通宣布在印度進行裁員，約1,000個工作崗位可能受到影響。"
+    }
+  },
+  "6951d7b085fab6b3c47782a5d2b8fdb7d1dcdca1a1c48a7287eb692ca56d5493": {
+    "answer": {
+      "company_mentioned": "Mosaic Company (The)",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前缺乏足夠資訊來判斷是否存在任何信用風險事件。"
+    }
+  },
+  "32ca905c387c914a5f7fe0f78c2512332643b6f92794bf0fc0803cf8d1318ecb": {
+    "answer": {
+      "company_mentioned": "Microsoft",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": true,
+      "summary_zh": "微軟股價因 AI 基礎設施成本上升而進一步調整。"
+    }
   }
 }
