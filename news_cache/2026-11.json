@@ -14871,5 +14871,1292 @@
       "requires_review": true,
       "summary_zh": "微軟股價因 AI 基礎設施成本上升而進一步調整。"
     }
+  },
+  "f15d1afff7c55ce7942415e0c281d7d98bc060c30ecc14246dc7fe335828037f": {
+    "answer": {
+      "company_mentioned": "NVIDIA",
+      "confirmed_default": false,
+      "event_codes": [
+        "CEO_DEPARTURE",
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "黃仁勳辭職下台 輝達股價暴跌8% 市值跌破4兆美元",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "NVIDIA CEO 黃仁勳辭職，導致公司股價下跌8%，市值跌破4兆美元。"
+    }
+  },
+  "ec8fddb5664c355bd2cf50ca21c52591d4255689560fff1432dbc70b28200ed4": {
+    "answer": {
+      "company_mentioned": "Corteva",
+      "confirmed_default": false,
+      "event_codes": [
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "MARKET_IMPLIED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "CEO警告巴西經濟低迷將持續，導致Corteva股價大幅下跌。"
+    }
+  },
+  "bd9539a1569d71de5a433d8b7799a3bbf822603ddee34bfe33e6952bc53c82c0": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Nvidia",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "此新聞未提及任何與信用風險相關的事件。",
+      "requires_review": true
+    }
+  },
+  "7f40db43d157857d3d825618e018ac951a2d9dabe887434eb01f9c3897c58c9d": {
+    "answer": {
+      "company_mentioned": "Corteva",
+      "confirmed_default": false,
+      "event_codes": [
+        "EARNINGS_MISS",
+        "EARNINGS_WARNING",
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "Corteva shares plunge 23% as earnings miss and weaker Brazil demand force guidance cut",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "Corteva 股價因財報不及預期及巴西需求疲軟，導致指引下修，股價下跌 23%。"
+    }
+  },
+  "46e374d69147f7cb33c87ce913ba685e08136dcb6913037235d9dec28e1aeb04": {
+    "answer": {
+      "company_mentioned": "Cummins",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "本新聞僅提及 Cummins 召回便攜式發電機，並未提及任何債務違約、信用事件或市場信用信號。"
+    }
+  },
+  "5a66ccd0e8dc1795e0e4170815273fba7ebb5ae0d206f50c576a0d01a3cb25c4": {
+    "answer": {
+      "company_mentioned": "Keurig Dr Pepper",
+      "confirmed_default": false,
+      "event_codes": [
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "MARKET_IMPLIED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "Keurig Dr Pepper 股價今日大幅下跌，市場情緒顯示投資者對公司未來前景持負面看法，但並未有任何關於違約、破產或其他重大風險事件的具體報導。"
+    }
+  },
+  "d8e0ec2c308275da564549988ea6309d0b6c36e09878f8f43b1a44ef652a529e": {
+    "answer": {
+      "company_mentioned": "Global Payments",
+      "confirmed_default": false,
+      "event_codes": [
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "全球支付公司股價因報導私募股權公司放棄收購計畫而大幅下跌。"
+    }
+  },
+  "dc665b23e8c7a144dbdca3945bd53eec0753fcf504e04b1f94076335fe5ec064": {
+    "answer": {
+      "company_mentioned": "Global Payments",
+      "confirmed_default": false,
+      "event_codes": [
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "全球支付公司股價因市場表現評級維持而下跌10.7%。"
+    }
+  },
+  "773b8d1671cb5c454f8987f6e0e51bcefa09863d83754496599fe44529af0b05": {
+    "answer": {
+      "company_mentioned": "Corteva",
+      "confirmed_default": false,
+      "event_codes": [
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "印第安納州農業巨頭 Corteva 股價因農業成本上升而大幅下跌。"
+    }
+  },
+  "bf8f09d26e95c042a215cea680e9e27a96789c295ebaf01362151edc561ee227": {
+    "answer": {
+      "company_mentioned": "NVIDIA",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "本新聞未提及任何關於 NVIDIA 的債務違約、信用事件或市場信用風險升高的具體訊息，僅描述股價波動。"
+    }
+  },
+  "11795c6a0a8cf7682cddfa9613bc9d0ef25a8e3869ea6faf85374fda88bdf480": {
+    "answer": {
+      "company_mentioned": "Supermicro",
+      "confirmed_default": false,
+      "event_codes": [
+        "REGULATORY_INVESTIGATION"
+      ],
+      "event_status": "RUMORED",
+      "evidence": "Supermicro, Nvidia Reportedly Face DOJ Scrutiny In Separate Inquiries — SMCI Stock Plunges",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "超微公司（Supermicro）被報導可能面臨美國司法部（DOJ）的調查，該消息引發股價下跌，但目前尚未確認任何違約或其他財務危機。"
+    }
+  },
+  "c63a65ce6b0afdf122177ce505ec96bff078e2331d5f3ad4e58dd20ef76aad29": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Costco",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "本新聞僅提及Costco因潛在污染召回產品，未涉及任何信用風險事件。",
+      "requires_review": true
+    }
+  },
+  "2182ae0df27929a0b544f76fc6db70305d1e73f7d0ccf13c70cba7155395bfb4": {
+    "answer": {
+      "company_mentioned": "Nvidia",
+      "confirmed_default": false,
+      "event_codes": [
+        "EXECUTIVE_MISCONDUCT",
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "Nvidia 由於前 CEO 黃仁勳的醜聞，市值大幅下跌，股價受到負面影響。"
+    }
+  },
+  "5b5b87d95f27f4c9538ffa419b41bb9cf84e22011db9aca0db8f8b44353e6fbd": {
+    "answer": {
+      "company_mentioned": "Nvidia",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "本新聞主要報導 Nvidia CEO 黃仁勳辭職及其對股價的影響，並未提及任何公司債務違約、信用事件或其他允許事件。"
+    }
+  },
+  "b2db1d6c6f5e9dbda6b75f160f3adccb0022686c2c63621f60923afedd16058b": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "無可辨識的信用風險事件。",
+      "requires_review": true
+    }
+  },
+  "6111d78843bf8a558fc2091b27631479561f8694f1a1c0618c37a6ddda96dd41": {
+    "answer": {
+      "company_mentioned": "Costco",
+      "confirmed_default": false,
+      "event_codes": [
+        "PRODUCT_RECALL"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "Costco recalls whipped cream in 12 states over possible cleaning chemical contamination",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "Costco 於 12 個州召回含有可能清潔化學物質污染的打發奶油產品。"
+    }
+  },
+  "5750cc61522e4fd0c3029c5a542f075d0c8246fe2d726a0de6aa4c5db6908260": {
+    "answer": {
+      "company_mentioned": "MSCI Inc.",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "本新聞未提及任何與 MSCI Inc. 相關的信用風險事件，僅談及比特幣價格與 MSCI 指數排除的影響。"
+    }
+  },
+  "d55fceefee174875cc35fa315b5d66d1f70774172a02146aca8250855d7baeaa": {
+    "answer": {
+      "company_mentioned": "Global Payments",
+      "confirmed_default": false,
+      "event_codes": [
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "MARKET_IMPLIED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "全球支付公司股價因報導私募股權公司放棄收購追求而大幅下跌。"
+    }
+  },
+  "4529e98d5b0721de4f13557c385ba9c80b7ea8c51012713bbc57fc5b46f2652f": {
+    "answer": {
+      "company_mentioned": "輝達",
+      "confirmed_default": false,
+      "event_codes": [
+        "CEO_DEPARTURE",
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "黃仁勳辭CEO！美股開盤 輝達股價暴跌14%",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "輝達公司CEO黃仁勳辭職，導致公司股價在美股開盤時暴跌14%。"
+    }
+  },
+  "d66dc98da3729e51a6dce9a9e41a8f6a3a3c49f1ac1e3240b813cbdc254ad450": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Costco",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "本新聞僅提及Costco產品召回，未涉及任何信用風險事件。",
+      "requires_review": true
+    }
+  },
+  "564b963ff16be8610c4dfdd24563ffddb92e587034ead1da37fbc16dd9d70f9c": {
+    "answer": {
+      "company_mentioned": "NVIDIA",
+      "confirmed_default": false,
+      "event_codes": [
+        "CEO_DEPARTURE",
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "快訊／黃仁勳辭CEO！美股開盤 輝達股價暴跌14%",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "NVIDIA 總裁黃仁勳辭去 CEO 職位，導致公司股價在美股開盤時暴跌 14%。"
+    }
+  },
+  "30eea89d423245e465a52e16932086798f33682e48c1681713da2316beb41737": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Global Payments",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "目前無足夠資訊判斷是否存在信用風險事件。",
+      "requires_review": true
+    }
+  },
+  "853f9d473b9069b908847a120b7854a3aae3d3a0163dbcf1f86bc606b17e2f60": {
+    "answer": {
+      "company_mentioned": "Supermicro",
+      "confirmed_default": false,
+      "event_codes": [
+        "REGULATORY_INVESTIGATION",
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": true,
+      "summary_zh": "Supermicro 受到美國司法部調查，股價下跌 11%。"
+    }
+  },
+  "468f28e9ce0982205893ef1c23014fa8f0474ec22f7e58d2e19d6730a7954a0f": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "MSCI Inc.",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "無足夠證據顯示 MSCI Inc. 之信用風險事件。",
+      "requires_review": true
+    }
+  },
+  "8b2f73cbd4a2f77df6fdf410e2799826932d081a1864fe6a716a2a8a23d1bc36": {
+    "answer": {
+      "company_mentioned": "Corteva",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前缺乏足夠資訊來判斷是否存在任何信用風險事件。"
+    }
+  },
+  "10c2e62f75aa3cd681b2ba9d605127942471f76a9da5dfd3ea3e0fd309af4d9a": {
+    "answer": {
+      "company_mentioned": "Supermicro",
+      "confirmed_default": false,
+      "event_codes": [
+        "REGULATORY_INVESTIGATION",
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "SMCI Plunge 12% as US Government Probes Whether Alice Huang Helped Smuggle Super Micro",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "美國政府調查 Alice Huang 是否協助走私 Supermicro 產品，導致 SMCI 股價下跌 12%。"
+    }
+  },
+  "27d28dbd5b66cb8ca08fb7d47fbb29c7fb315477f8b96f75dbe46f2ef05c5bed": {
+    "answer": {
+      "company_mentioned": "Qualcomm",
+      "confirmed_default": false,
+      "event_codes": [
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "Qualcomm 股價因季報超預期而大幅下跌，並未涉及任何違約或信用事件。"
+    }
+  },
+  "c4a440379839826c4cbbca44cbfa1de51298774a5837b9da2d451647d940e9e3": {
+    "answer": {
+      "company_mentioned": "Uber",
+      "confirmed_default": false,
+      "event_codes": [
+        "MAJOR_LITIGATION"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "Uber 正在面臨資料外洩訴訟調查，屬於重大訴訟事件。"
+    }
+  },
+  "bd20d8d43c4dadfec174e3a4376242928890837d1f604268382a548bbbd0137e": {
+    "answer": {
+      "company_mentioned": "Ball Corporation",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "本新聞未提及任何與債務違約、信用風險升高或其他財務危機相關的訊息，僅描述了當地政府對水塔攝像頭的批准。"
+    }
+  },
+  "f007bb04775059b30edc4c97c4e2d95af892a17417d516f05c9a8c7de0e3c250": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Starbucks",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "此新聞未提及任何與信用風險相關的事件。",
+      "requires_review": true
+    }
+  },
+  "c272511fdd575f6f61e5aed68e88ea5a0a47c516806d7c85e77296869a236c8d": {
+    "answer": {
+      "company_mentioned": "Applied Materials",
+      "confirmed_default": false,
+      "event_codes": [
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "MARKET_IMPLIED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "Applied Materials 股價在過去一個月內下跌近 20%，但目前沒有任何證據顯示公司存在違約、破產或其他財務危機。"
+    }
+  },
+  "f59814852d9473ab8156e2443dd3f7abb1a692b82a163b9b0b83d4ad1c7cd46d": {
+    "answer": {
+      "company_mentioned": "Nvidia",
+      "confirmed_default": false,
+      "event_codes": [
+        "CEO_DEPARTURE",
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "Jensen Huang resigns from Nvidia, company’s shares plunge",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "Nvidia 首席執行官黃仁勳辭職，導致公司股價大幅下跌。"
+    }
+  },
+  "bd755c16abfb9482c39c3db386aff168bc2ef4535eee1e87e49a1bb37b6aad6c": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "無足夠資訊顯示任何信用風險事件。",
+      "requires_review": true
+    }
+  },
+  "037bbcaaf258c07f30d41eeaf0211afad70ab94bbd8ed1db557b85abc6220e56": {
+    "answer": {
+      "company_mentioned": "Nvidia",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "此新聞未提供任何關於 Nvidia 破產、違約、信用風險升高或其他財務風險事件的具體訊息。"
+    }
+  },
+  "b4ccd480329e0f53a1698c19469d9b38dea1690f7b166f68d8496cfdec7847b4": {
+    "answer": {
+      "company_mentioned": "Costco",
+      "confirmed_default": false,
+      "event_codes": [
+        "PRODUCT_RECALL"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "Recalled Costco food item sold in South Carolina may contain cleaning chemical",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "Costco 於南卡羅來納州召回一項可能含有清潔化學品的食品項目。"
+    }
+  },
+  "c812f386072f8b5fe2d3f157fb6d5d7c9c5c1b23ba1598bc7b6446f8c30064cc": {
+    "answer": {
+      "company_mentioned": "Microsoft",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前沒有足夠資訊顯示 Microsoft 可能發生債務違約或其他信用風險事件。"
+    }
+  },
+  "ab7e74f240fa245c4777f7531ed7f87b598bd951aa9a535eae0ec9b45a2cff85": {
+    "answer": {
+      "company_mentioned": "CMS Energy",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前無足夠資訊顯示 CMS Energy 相關的信用風險事件。"
+    }
+  },
+  "92911da16a9b679742105f68cee3229c712709a0ea232868a9105b6febe9167f": {
+    "answer": {
+      "company_mentioned": "ADI Global Distribution Inc.",
+      "confirmed_default": false,
+      "event_codes": [
+        "REGULATORY_INVESTIGATION"
+      ],
+      "event_status": "INVESTIGATING",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "ADIG 投資者警示指出 Holzer & Holzer, LLC 正在調查 ADI Global Distribution Inc.，但未提及任何違約或其他財務危機訊號。"
+    }
+  },
+  "689f0362b41243011ce8aae54011fa4bce8d078ee91a9efb52c9278361b95f3f": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "CMS Energy",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "無足夠資訊顯示任何信用風險事件。",
+      "requires_review": true
+    }
+  },
+  "04c8436dec3f9447825b9ce9fb2b899b6fbef43f5ccb2a326b33fb2023f24e66": {
+    "answer": {
+      "company_mentioned": "Costco",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "此新聞僅提及Costco的產品召回，並未涉及任何信用風險事件。"
+    }
+  },
+  "958e25bdfa5bb384fc20a9f9988f76bede902da967a6bc5613869083f6ec7e35": {
+    "answer": {
+      "company_mentioned": "Costco",
+      "confirmed_default": false,
+      "event_codes": [
+        "PRODUCT_RECALL"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "Is Costco's Kirkland heavy cream recalled? Yes, one batch of whipped cream cans in 12 states",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "Costco 針對一批在12個州的打發奶油罐進行產品召回，並未涉及任何債務違約或信用風險事件。"
+    }
+  },
+  "8a63ebda33bd28ba23fdd5da6ce2a97a8c92d9cc0db768469d126bc07e54c47b": {
+    "answer": {
+      "company_mentioned": "DaVita",
+      "confirmed_default": false,
+      "event_codes": [
+        "REGULATORY_INVESTIGATION",
+        "ACCOUNTING_FRAUD"
+      ],
+      "event_status": "INVESTIGATING",
+      "evidence": "DVA Investors Have Opportunity to Join DaVita Inc. Fraud Investigation with SBS Law",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "本新聞報導指出，投資者有機會參與對DaVita Inc.的欺詐調查，顯示公司正面臨監管調查與會計舞弊指控。"
+    }
+  },
+  "7c8804a32de3708355c0a13ba554672f4e90b470610ba61ca14f39595e912cd6": {
+    "answer": {
+      "company_mentioned": "Palo Alto Networks",
+      "confirmed_default": false,
+      "event_codes": [
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "MARKET_IMPLIED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "Palo Alto Networks 股價在盤中下跌 5.24%，報 316.94 美元，未有任何違約或其他信用風險訊號。"
+    }
+  },
+  "874b351a1db160b22d6d12c2bfdbff75e4993c988eb66570c384ebe559d9efd8": {
+    "answer": {
+      "company_mentioned": "Palo Alto Networks",
+      "confirmed_default": false,
+      "event_codes": [
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "MARKET_IMPLIED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "Palo Alto Networks 股價在盤中下跌 5.22%，報 317 美元，未顯示任何違約或信用風險升高的訊息。"
+    }
+  },
+  "91c04b2ecd48980f0ce6f715a457cb819c296d44b5c4af16255e1eac8f3e5424": {
+    "answer": {
+      "company_mentioned": "Nvidia",
+      "confirmed_default": false,
+      "event_codes": [
+        "CEO_DEPARTURE",
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "Nvidia stock closes down over 4% after CEO Jensen Huang announces resignation",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "Nvidia 之 CEO 詹森·黃宣布辭職，導致公司股價下跌逾 4%。"
+    }
+  },
+  "b1040239facec0b716d6f4c77d7c1c4e81652ec99f4da675fdd1c40c6c3494e8": {
+    "answer": {
+      "company_mentioned": "Nvidia",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前沒有足夠資訊顯示 Nvidia 可能發生債務違約或其他信用風險事件。"
+    }
+  },
+  "63ce7a9d80295fd9ad951373603e0a9619c0958b1ebfcff8c792bcf0d46ca1c6": {
+    "answer": {
+      "company_mentioned": "Nvidia",
+      "confirmed_default": false,
+      "event_codes": [
+        "CEO_DEPARTURE"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "CEO exit",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "Nvidia 近期 CEO 退出，影響公司估值與投資者情緒，但並未涉及違約或其他財務風險事件。"
+    }
+  },
+  "89cd457712939354f79d0c086d4d9180c466b09ac11dbc9dd73ed7463255691b": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Microsoft",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "requires_review": true,
+      "summary_zh": "此新聞僅提及 Microsoft 服務停擺，未涉及任何信用風險事件。"
+    }
+  },
+  "d403dbd6c80d75c8f38e685192aae352c2bba4585fc0ba8dff5bf7b42f56f3e7": {
+    "answer": {
+      "company_mentioned": "Nvidia",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "此新聞未提及任何與Nvidia債務違約或信用風險相關的具體事件，僅談及美國白宮對商務部長的潛在調動。"
+    }
+  },
+  "dde540641c775a1f301ad789971b2a52acc20922d97ac0efaa8cde38ccecdc20": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "MSCI Inc.",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "無足夠資訊判斷是否有信用風險事件。",
+      "requires_review": true
+    }
+  },
+  "418111f77f24f3d6baaa7b7923e2d7dbb21074d750a017e9d515b238df145520": {
+    "answer": {
+      "company_mentioned": "Nvidia",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前沒有足夠證據顯示 Nvidia 進行了債務違約或其他信用風險事件。"
+    }
+  },
+  "326a6fbd0011ade63b24d4af1e572998ebd1d56a65eb94698c45bd0a281406cb": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "MSCI Inc.",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "無足夠資訊顯示 MSCI Inc. 之信用風險事件。",
+      "requires_review": true
+    }
+  },
+  "3eb8fdea015a3d9fb657d990a3f9350627f753aa5015997eada2a203c7cb29a1": {
+    "answer": {
+      "company_mentioned": "Microsoft",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "此新聞未提及任何與債務違約、CDS利差擴大或其他信用風險相關的事件，僅描述 Microsoft 服務中斷。"
+    }
+  },
+  "53c02308fc6e0f147b9587c9dab4e720a0d37febf56532adad81d8a4499b463d": {
+    "answer": {
+      "company_mentioned": "Nvidia",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "本新聞未提及任何與Nvidia信用風險相關的事件，無法判斷是否存在違約或其他信用風險指標。"
+    }
+  },
+  "dd7b70e7e5ed1ba22a31fd4e024172ca6e3dbabd3867de62e04ed63bc523b44a": {
+    "answer": {
+      "company_mentioned": "Nvidia",
+      "confirmed_default": false,
+      "event_codes": [
+        "CEO_DEPARTURE"
+      ],
+      "event_status": "RUMORED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "本報導說明，隨著 Nvidia CEO 辭職，可能會對 AI 芯片銷往中國實施更嚴格的管制，但並未提及任何違約或信用風險事件。"
+    }
+  },
+  "31f80dea8cb74d37184ba71259d4b5907f3afc14fe890a98268690d4ccae7dd1": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Microsoft",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "本新聞報導僅提及 Microsoft Outlook 服務中斷，並未涉及任何債務違約、信用風險升高或其他財務風險事件。",
+      "requires_review": true
+    }
+  },
+  "bf52deaaf870ec69f497e92e2c5888a21313eb547414fdbe1eff523903d9bc32": {
+    "answer": {
+      "company_mentioned": "Nvidia",
+      "confirmed_default": false,
+      "event_codes": [
+        "CEO_DEPARTURE"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "Nvidia 之執行長黃仁勳宣布辭職，對公司未來發展造成影響。"
+    }
+  },
+  "76b83d13f88d6ed62a8ed1f73a43a45b936fff77466d1c0ba8ed13f66d02a6cd": {
+    "answer": {
+      "company_mentioned": "Apple Inc.",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前無足夠資訊顯示 Apple Inc. 有任何違約、破產或其他信用風險事件。"
+    }
+  },
+  "eebb4b8f8522a38671489b055c53b45e1a1ad298be9785e301875ea9f7ef7a3d": {
+    "answer": {
+      "company_mentioned": "Nvidia",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前缺乏足夠資訊以判斷是否存在任何信用風險事件。"
+    }
+  },
+  "cdcdc8718648e641cdf8347c3b19abb6f55baab5c23044c565bf2821b0ddb0c9": {
+    "answer": {
+      "company_mentioned": "Nvidia",
+      "confirmed_default": false,
+      "event_codes": [
+        "CEO_DEPARTURE"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "本新聞報導顯示 Nvidia 首席執行官黃仁勳已正式辭職，並公布接班計畫，屬於公司高層人事變動。"
+    }
+  },
+  "5240ac5c6969444d77df9f8f53892769182f9bc57d5707716c7aad4d3a886928": {
+    "answer": {
+      "company_mentioned": "MSCI Inc.",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前無足夠資訊顯示 MSCI Inc. 有任何信用風險事件。"
+    }
+  },
+  "a0c21e6f38b3fb793a8a9c2e0591aeab93b7f95e8f491b5e9c12dcfa93c2675d": {
+    "answer": {
+      "company_mentioned": "Wells Fargo",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "無足夠資訊確認任何信用風險事件。"
+    }
+  },
+  "adc4edad2c69cb7fe6154b608a145be0afa0473ab1387b6b78d58cb00074335e": {
+    "answer": {
+      "company_mentioned": "Nvidia",
+      "confirmed_default": false,
+      "event_codes": [
+        "CEO_DEPARTURE"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": true,
+      "summary_zh": "Nvidia董事會已正式免除黃先生擔任CEO職務，並宣布其離職。"
+    }
+  },
+  "dfb8ed52a0dd7c3633cc3d224bdfbaf86266794659fb185a69add586f83a1555": {
+    "answer": {
+      "company_mentioned": "Nvidia",
+      "confirmed_default": false,
+      "event_codes": [
+        "EXPORT_RESTRICTION"
+      ],
+      "event_status": "RUMORED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "美國國會對中國進口 Nvidia 芯片的限制措施正在加速推進，可能導致中國對 Nvidia 芯片的進口受到限制。"
+    }
+  },
+  "811a1473392f11770e887b6bd06047e9fb9ec73501df4b9c1d68a2145a69c253": {
+    "answer": {
+      "company_mentioned": "Keurig Dr Pepper",
+      "confirmed_default": false,
+      "event_codes": [
+        "GENERAL_INFORMATION"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "Keurig Dr Pepper 宣布將進行 20 億美元的股票發行，以減少債務並為即將進行的拆股做準備。"
+    }
+  },
+  "30c28f20d7c6066577f8e8eb027a6f343f5ee736a41d1b4b2c1b62b6d43ee30a": {
+    "answer": {
+      "company_mentioned": "Nvidia",
+      "confirmed_default": false,
+      "event_codes": [
+        "CEO_DEPARTURE"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "Instant view: Nvidia CEO Jensen Huang steps down",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "Nvidia 之 CEO 詹森·黃（Jensen Huang）已正式離職，事件已確認。"
+    }
+  },
+  "4df01244c6a7d15642711192ca9329a9de3e4b1c9fc931bb99668fb4654d48c9": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Pfizer",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "requires_review": true,
+      "summary_zh": "本新聞未提供任何關於Pfizer違約、破產或其他信用風險事件的具體證據，僅提及比利時法院撤銷與Pfizer相關的扣押行動。"
+    }
+  },
+  "38f463e7d3e37963bc4d528b0a8cc6f4f63cc8b0ca88adda4bee2d7104974134": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Nvidia",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "此新聞未提及任何信用風險事件。",
+      "requires_review": true
+    }
+  },
+  "288fb63bc39e18c26e40dd0163c4092308a3b1f5b5a2e7ee1b128e11fc947adc": {
+    "answer": {
+      "company_mentioned": "MSCI Inc.",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "MSCI Inc. 近期將其 Strategy 產品從全球指數中移除，並未提及任何違約、破產或信用風險升高的訊息。"
+    }
+  },
+  "f5c94bd459a05e28ca861a835d7563bab9c51125ba0f30b7eb46af4a230fead8": {
+    "answer": {
+      "company_mentioned": "Coinbase",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前沒有足夠資訊顯示 Coinbase 相關的信用風險事件。"
+    }
+  },
+  "6da5b7a810b39417aff53571364c1bdaf3fa71228fb1fadd9ab482dcdbdea796": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Cummins",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "無足夠證據顯示 Cummins 之信用風險事件。",
+      "requires_review": true
+    }
+  },
+  "608ef45a69410573b441e3c65a4c8d47550e48497f516a3b1b0ea7801a1c79fe": {
+    "answer": {
+      "company_mentioned": "Nvidia",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "本報告未提供任何關於 Nvidia 破產、違約或其他財務風險事件的具體證據，僅提及領導層危機。"
+    }
+  },
+  "03db2ce3ee0dfd960f96130301a2937e501ce2e96bb6fb797132d15028de2950": {
+    "answer": {
+      "company_mentioned": "Pfizer",
+      "confirmed_default": false,
+      "event_codes": [
+        "PRODUCT_OR_SERVICE_DISCONTINUATION"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "Pfizer 宣布將停止在加拿大銷售 Premarin 激素療法產品。"
+    }
+  },
+  "cd04c59d728ec8d8bc997697e9973b8c08a965a89839e4bfbfbf8366fafecc86": {
+    "answer": {
+      "company_mentioned": "CrowdStrike",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前沒有足夠資訊顯示 CrowdStrike 相關的信用風險事件。"
+    }
+  },
+  "2044a4d594b579bafb742da64708406c75d5288bae6b0a5734963dc2a4c66d18": {
+    "answer": {
+      "company_mentioned": "Nvidia",
+      "confirmed_default": false,
+      "event_codes": [
+        "CEO_DEPARTURE"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "黃仁勳辭輝達執行長",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "黃仁勳正式辭去輝達執行長職務，為公司高層人事變動。"
+    }
+  },
+  "c23cb1b9f629b4a4de707a87d8815964744741b2a8c0405b0fb66b1f61dfc98e": {
+    "answer": {
+      "company_mentioned": "Nvidia",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "此新聞未提及任何與債務違約、CDS利差擴大或其他信用風險相關的訊息。"
+    }
+  },
+  "4963c889196f7fe73ce17d278847664ebe498f1ce1ab5c5dacf06a07f2bcc934": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "United Airlines Holdings",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "此新聞未提及任何與信用風險相關的事件。",
+      "requires_review": true
+    }
+  },
+  "3838fa5d00505224f9c8d475392f73e7c992745da01ab686fa27a7062829b158": {
+    "answer": {
+      "company_mentioned": "Coinbase",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前無足夠資訊確認任何信用風險事件。"
+    }
+  },
+  "a4dfacd876a96d8255ca34a51ad52a3da208740d706fc93dc57c8220993a4b0d": {
+    "answer": {
+      "company_mentioned": "CrowdStrike",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "本新聞未提及任何與CrowdStrike相關的信用風險事件，僅報導營收與成本變動。"
+    }
+  },
+  "f92f456f85a4e8a673b819bd1cec98b8c401c0ce4b8d65567314d8540beeccf7": {
+    "answer": {
+      "company_mentioned": "Nvidia",
+      "confirmed_default": false,
+      "event_codes": [
+        "CEO_DEPARTURE"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "‘A dark day for Nvidia’: Here’s what analysts have been saying about Jensen Huang’s departure",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "Nvidia 之 CEO 黃仁勳離職，市場已確認此事件。"
+    }
+  },
+  "ceaf8c3190a5c979c08d868de66793944150be2b67f50a8874f1937447183b9d": {
+    "answer": {
+      "company_mentioned": "Nvidia",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前無足夠資訊顯示 Nvidia 相關信用風險事件。"
+    }
+  },
+  "871c0ff9c48edb7dedb03a2b785c3752cc3bdc573f83a561faba94075936101b": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Nvidia",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "此新聞僅為內部通訊，未提及任何信用風險事件。",
+      "requires_review": true
+    }
+  },
+  "0e5785820e34da01936ab4f2f895861583ca70af886643a944f275ae46dd4503": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Johnson & Johnson",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "無足夠資訊判斷是否有信用風險事件。",
+      "requires_review": true
+    }
+  },
+  "dc16dae2a003648994ef08245300f47c54b4e114991811ddf2be62490237eb92": {
+    "answer": {
+      "company_mentioned": "Humana",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前無足夠資訊判斷 Humana 是否存在信用風險事件。"
+    }
+  },
+  "e6d052f32c02938bcc5b428e0751acd2ba06fb6e1b1db54ae0ebd9d281a3104e": {
+    "answer": {
+      "company_mentioned": "Walmart",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前無足夠資訊確認任何信用風險事件。"
+    }
+  },
+  "c6f7927f5fcd444c34550a310ead19c5499f707e22da0e6afb86b9f0c61f031f": {
+    "answer": {
+      "company_mentioned": "Lumentum",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "此新聞未提及任何關於Lumentum的信用違約、流動性危機或其他財務風險事件，僅討論其產品與市場動態。"
+    }
+  },
+  "9424102cdd2cad12b71322795a06edf2f47029db09e4374e7fb1a36644dfd20c": {
+    "answer": {
+      "company_mentioned": "Digital Realty",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前缺乏足夠資訊來判斷 Digital Realty 是否存在任何信用風險事件。"
+    }
+  },
+  "7274effa29627c4e26b446d120c930c035684dd4c3c3bf3175ef3562ee2d3844": {
+    "answer": {
+      "company_mentioned": "Lennar",
+      "confirmed_default": false,
+      "event_codes": [
+        "MAJOR_LITIGATION"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "Lennar因子公司拆分引發投資者訴訟，屬重大訴訟事件。"
+    }
+  },
+  "026976a3778fdd35dacd98d9640ed6c62b52968a2c3fb560a18fb99da4747a9a": {
+    "answer": {
+      "relevant": true,
+      "company_mentioned": "Global Payments",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "requires_review": true,
+      "summary_zh": "本新聞報導指出 CD&R 與 GTCR 放棄對 Global Payments 的追求，但未提及任何違約、信用風險升高或其他財務危機訊號。"
+    }
+  },
+  "f30dd694e824494dfe167765e7d0736a58d9ff2adef22a4753973770e94c6c03": {
+    "answer": {
+      "company_mentioned": "Nvidia",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前沒有足夠證據顯示 Nvidia 進行了債務違約或其他重大財務事件。"
+    }
+  },
+  "fb98aad8787627eb6b8c584be960e42496dd4546d718e54e6719072ab685b4bb": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Nvidia",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "此新聞僅討論 Nvidia 未來 CEO 的遴選，未提及任何信用風險事件。",
+      "requires_review": true
+    }
+  },
+  "6ea4d927b29e8903072d72c213324f1eec9a5177b6c420ffa4af40f8b022af66": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Berkshire Hathaway",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "此新聞未提及任何信用風險事件。",
+      "requires_review": true
+    }
+  },
+  "6adbe6604195a6c9353d4c38a29a3651d3c3297fd5964df57d82354966a30f99": {
+    "answer": {
+      "company_mentioned": "Goldman Sachs",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "此新聞未提供任何關於金斯曼債務違約或信用風險升高的具體訊息，無法確認是否存在相關事件。"
+    }
+  },
+  "af60725390f715530b05deef136f9d214304bec681c8133275da72128d162408": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Nvidia",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "本新聞僅提及 NVIDIA 正在啟動永久執行長遴選程序，並未涉及任何信用風險事件。",
+      "requires_review": true
+    }
+  },
+  "589b46fbdf2bcbd6e4af6ecf20b9d7591536efc2141a6e577d8f01e8af081115": {
+    "answer": {
+      "company_mentioned": "Nvidia",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前沒有足夠資訊顯示 Nvidia 相關的信用風險事件。"
+    }
+  },
+  "10d744ce3da4b6e66e37735a2346007546de7cf406d59472f14321d65ffeece9": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "MSCI Inc.",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "無足夠資訊判斷是否有信用風險事件。",
+      "requires_review": true
+    }
+  },
+  "e17e271e9dafcf31018a36d15232f5b36b81d574dd6cc52eeef3f61858999694": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Costco",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "本新聞未提及任何與信用風險相關的事件。",
+      "requires_review": true
+    }
+  },
+  "3e741a204b300949635601521fbbd242ce08cb0148fc9db6e23664bd3126aad2": {
+    "answer": {
+      "company_mentioned": "Nvidia",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "本新聞未提及任何與債務違約、CDS利差擴大或其他信用風險相關的具體事件，僅討論管理層結構問題。"
+    }
+  },
+  "fa7f4a96cb050fcaa6f26288370faac6b1558e0ea15b0419a0c797ed96e371ed": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Cisco",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "requires_review": true,
+      "summary_zh": "本新聞僅提及Cisco公司股價因盈利超預期而上漲，未提及任何違約、信用風險升高或其他風險事件。"
+    }
+  },
+  "70207159502710bb2e42f5814db3ed4ffe6685e5130168de5f6644d33ad29105": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Kraft Heinz",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "此新聞未提及任何信用風險事件。",
+      "requires_review": true
+    }
   }
 }
