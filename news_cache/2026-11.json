@@ -19846,5 +19846,1261 @@
       "requires_review": true,
       "summary_zh": "此新聞未提及任何與信用風險相關的事件，無法判斷是否存在違約或其他信用事件。"
     }
+  },
+  "0d3cf5a60ccc2d4d0e5fe0faa92bda2a1d30137b8c1f63fe927dbf8f88346326": {
+    "answer": {
+      "company_mentioned": "Nvidia",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前沒有足夠資訊顯示 Nvidia 相關的信用風險事件。"
+    }
+  },
+  "f102c1639d567139cf9af8948912d7cab1bab694f7cdc81e0c26c8b8b62ea5f1": {
+    "answer": {
+      "company_mentioned": "Teradyne",
+      "confirmed_default": false,
+      "event_codes": [
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "MARKET_IMPLIED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "特拉迪恩股價因Advantest在東京市場大幅下跌而下跌6.14%。"
+    }
+  },
+  "d92f17931d2f26b486c4b37c9c055bab7a0f45b1d93033c97bc4889f346143b7": {
+    "answer": {
+      "company_mentioned": "Kaynes Tech",
+      "confirmed_default": false,
+      "event_codes": [
+        "PRICE_MOVEMENT",
+        "EARNINGS_MISS",
+        "RESTATEMENT"
+      ],
+      "event_status": "MARKET_IMPLIED",
+      "evidence": "Kaynes Tech Shares Plunge 20% After Q2 Profit Tanks",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "Kaynes Tech 於第二季財報不及預期，股價下跌 20%，公司亦重述過往財務報表，顯示市場對其財務表現與未來前景持保留態度。"
+    }
+  },
+  "122b8251ba35961e54c771a14143cc81d56380c7be9151a503d18b7835df0e29": {
+    "answer": {
+      "company_mentioned": "Cummins",
+      "confirmed_default": false,
+      "event_codes": [
+        "PRODUCT_RECALL"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "Cummins recalls nearly 3,000 Onan generators over dangerous fuel tank pressure",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "Cummins 召回近 3,000 台 Onan 發電機，因燃油箱壓力危險。"
+    }
+  },
+  "268b1e73e8af83872c071372ad4fcbce8ed6a479781f48f98da89a41ab212452": {
+    "answer": {
+      "company_mentioned": "Mahindra Logistics",
+      "confirmed_default": false,
+      "event_codes": [
+        "CEO_DEPARTURE",
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "Mahindra Logistics shares plunge 14% after MD and CEO Hemant Sikka resigns",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "馬希德拉物流公司董事長兼執行長 Hemant Sikka 辭職，導致股價下跌 14%。"
+    }
+  },
+  "93885446b48b940e3896cbe58a770076e0f792e271af5cf8a7e38c91228302c2": {
+    "answer": {
+      "company_mentioned": "MSCI Inc.",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "MSCI 股價因比特幣下跌而大幅下挫，但目前沒有任何證據顯示公司面臨違約、破產或其他信用風險事件。"
+    }
+  },
+  "bf5eb8692c823e0caeb85b28799b0ba7788bd40184dfa3759882e8118a96d616": {
+    "answer": {
+      "company_mentioned": "Intel",
+      "confirmed_default": false,
+      "event_codes": [
+        "MAJOR_LITIGATION"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "Intel sued by shareholders for misleading investors after stock plunges 29% — class action claims the company downplayed the severity of PC market headwinds",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "英特爾被股東起訴，指控公司誤導投資者，股價下跌29%。"
+    }
+  },
+  "e4701547d043eb812a434a9ba07daca011597b5403d0137413014b4ff83aab6b": {
+    "answer": {
+      "company_mentioned": "Intel",
+      "confirmed_default": false,
+      "event_codes": [
+        "MAJOR_LITIGATION"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "英特爾因投資者提起訴訟，股價下跌29%。"
+    }
+  },
+  "f13e7cf572649389997f208927bcc8da88650565501ed93abd780c6cbff0ce4c": {
+    "answer": {
+      "company_mentioned": "Uber",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "本新聞未提及任何與 Uber 相關的信用風險事件，僅報導一名 Uber 司機在荷普金斯被攻擊的事件。"
+    }
+  },
+  "12b57b90bbf93697397d7e1f4884821cc6f7bb266347aeb616bb0163a1cda979": {
+    "answer": {
+      "company_mentioned": "Dexcom",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前無足夠資訊確認任何信用風險事件。"
+    }
+  },
+  "b799f9c31622c0d627965af8575e7e98525ddaba54937e8ab185c62b518874ed": {
+    "answer": {
+      "company_mentioned": "L3Harris",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "此新聞未提供任何關於L3Harris公司信用風險或違約的具體訊息，僅提及其在FAA調查中的路由器安裝情況，無法判斷是否存在信用事件。"
+    }
+  },
+  "ab8f3176f88449597bb4da7dc23a33c217ac497977838e76f84d11e81c22ed74": {
+    "answer": {
+      "company_mentioned": "Paccar",
+      "confirmed_default": false,
+      "event_codes": [
+        "PRODUCT_RECALL"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "Daimler, Paccar Recall Trucks Over Driveline Defect",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "Paccar 召回因驅動系缺陷的卡車，並未涉及違約或其他財務風險事件。"
+    }
+  },
+  "9db70927582179cf09244e1da1eaa1bc353ebe91348d072c30858badad08dcc6": {
+    "answer": {
+      "company_mentioned": "Intel",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "本新聞僅提及Intel股價暴跌及投資損失，未提供任何關於公司違約、破產或其他信用風險事件的具體證據。"
+    }
+  },
+  "53ad219cced1f1870e0ad99b7c4dcab3a9d93096d7e1bdc3b9d74abca24deda0": {
+    "answer": {
+      "company_mentioned": "Uber",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "本新聞未提及任何與 Uber 相關的信用風險事件，僅談及對 Uber 司機的攻擊調查。"
+    }
+  },
+  "dae9e91323370561503f2e0e4e1ca880dd54a212200f67e049bced0019724bc3": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Uber",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "本新聞未提及任何與 Uber 相關的信用風險事件。",
+      "requires_review": true
+    }
+  },
+  "de770c5d0f02ab81b1533aa115049e044f4273eba48aaaaeaf51dd103107fe32": {
+    "answer": {
+      "company_mentioned": "Cisco",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前沒有足夠資訊顯示 Cisco 相關的信用風險事件。"
+    }
+  },
+  "8990a4c086cbb3d86e61949c8cc622e99d69faf619837ff85b8fc9f71e62edb1": {
+    "answer": {
+      "company_mentioned": "Microsoft",
+      "confirmed_default": false,
+      "event_codes": [
+        "CYBER_ATTACK"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "Microsoft Rules Out Cyberattack in Outage, Warns of Phishing Campaign",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "微軟確認此次停機非因網路攻擊，並警告可能存在釣魚攻擊。"
+    }
+  },
+  "16836f2e33b2f1dbfcc5f56019995465e3777f6769c3e1f7decbb75368aa07c0": {
+    "answer": {
+      "company_mentioned": "Costco",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "本新聞報導關於Costco在伊利諾伊州門市售出的打發奶油被召回，原因是可能含有少量清潔化學物質。此事件屬於產品召回，並未涉及任何信用風險或債務違約訊號。"
+    }
+  },
+  "7769f3121119d97bedf1d3cd75ebb01ec685096b2d40ea386b6dd517ebcd091e": {
+    "answer": {
+      "company_mentioned": "Nvidia",
+      "confirmed_default": false,
+      "event_codes": [
+        "BOARD_RESTRUCTURE"
+      ],
+      "event_status": "INVESTIGATING",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "Nvidia董事會被敦促在調查期間恢復黃仁勳擔任CEO。"
+    }
+  },
+  "4871c75b986f770a6e944d2a0fa402ecf4c53e919ecc53df13dd719d32ca15d1": {
+    "answer": {
+      "company_mentioned": "L3Harris",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "L3Harris 參與 FAA 對全美航空旅遊中斷的調查，但未提及任何違約或信用風險事件。"
+    }
+  },
+  "f5e47c23ceef1febd6ddedcb60a4b1bf62f64cae36ef1b32709c33d0115b09e3": {
+    "answer": {
+      "company_mentioned": "Cummins",
+      "confirmed_default": false,
+      "event_codes": [
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "Cummins 印度股價下跌，市場反映對公司需求前景的擔憂，但並未涉及任何違約或信用風險事件。"
+    }
+  },
+  "c10d417662d2771e8d5ee39855e405d900a09e91c6b5e747daa852d9a5b7343d": {
+    "answer": {
+      "company_mentioned": "Lennar",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前沒有足夠資訊顯示 Lennar 可能發生違約或其他信用風險事件。"
+    }
+  },
+  "998599f8a241683be2c0f015f038ac42152f47202ab9f3d6aa171a4db84474fa": {
+    "answer": {
+      "company_mentioned": "L3Harris",
+      "confirmed_default": false,
+      "event_codes": [
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "MARKET_IMPLIED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "L3Harris 股價因全國旅遊市場低迷而在盤前下跌。"
+    }
+  },
+  "394bdccc9d9c99ed31a6431385dd1b8ad336367c977be331563d472593aaa616": {
+    "answer": {
+      "company_mentioned": "JPMorgan Chase",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "本新聞僅提及 JPMorgan Chase 的軟體錯誤，並未涉及任何信用風險事件。"
+    }
+  },
+  "e53ee185870a195e2d8c27cb02fcb9f326d47193b7aea2e30c99eb1e5c532353": {
+    "answer": {
+      "company_mentioned": "Nvidia",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "本新聞未提及任何關於 Nvidia 的信用違約、CDS利差擴大或其他信用風險事件，僅提及市場對 AI 的擔憂及即將公布的 Nvidia 財報。"
+    }
+  },
+  "2812cf3fea323c95a319cb26582680d4e9ab003d764994b2e846b45e29ca43a2": {
+    "answer": {
+      "company_mentioned": "Nvidia",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前無足夠資訊顯示 Nvidia 之信用事件，需進一步調查。"
+    }
+  },
+  "9ab00a855a6d61a2377e05335d7536b52216d5ba7a9b820a9aa8ac1063dd4851": {
+    "answer": {
+      "company_mentioned": "United Airlines Holdings",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "聯合航空公司解決了影響離港航班的系統停機問題，並未提及任何債務違約或信用風險升高的訊息。"
+    }
+  },
+  "ccff2c187127e67fdcc3ec4e675e4d3d667a326a6adcce8a2d674778e6d74c5c": {
+    "answer": {
+      "company_mentioned": "Intel",
+      "confirmed_default": false,
+      "event_codes": [
+        "MAJOR_LITIGATION",
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "Intel 股價因 PC 需求放緩而大幅下跌，投資者因此提起訴訟，事件已被確認。"
+    }
+  },
+  "ba6da2d5db4a2e14973c1becedeac960eab7425e097c209ffbb34cf9ac2a7fc7": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Microsoft",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "此新聞未提及任何與債務違約或信用風險相關的事件。",
+      "requires_review": true
+    }
+  },
+  "dd7db7f11b5a4cbb436e6e3a2cef9708c5e6e19da50f3f82ed205a6effdbaff8": {
+    "answer": {
+      "company_mentioned": "Uber",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "本新聞報導關於一名美國 Uber 司機在明尼蘇達州遭受攻擊並住院，並未提及任何與 Uber 公司的財務或信用風險相關事件。"
+    }
+  },
+  "d14c0b024775afcb1063aecc52ccde9552754951ac8c36262d233d8c1ce3d6da": {
+    "answer": {
+      "company_mentioned": "Microsoft",
+      "confirmed_default": false,
+      "event_codes": [
+        "PATENT_LITIGATION"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "MIT sues Microsoft for patent infringement over data center technology",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "MIT 對微軟提起專利訴訟，指控其在資料中心技術方面侵權。"
+    }
+  },
+  "ad8a34b2a68d8d10198f869d3b1ee10828b3d7dd8fb865dff382259f64550f49": {
+    "answer": {
+      "company_mentioned": "Nvidia",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前無足夠資訊顯示 Nvidia 之信用事件，需進一步調查。"
+    }
+  },
+  "dcb7b07201601ad1c193ee1da9efc0e5213e74a91c59a93778b8557dd4e7cfe9": {
+    "answer": {
+      "company_mentioned": "Nvidia",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前沒有足夠證據顯示 Nvidia 進行了任何債務違約或其他重大財務風險事件。"
+    }
+  },
+  "39c4d5adedb36d6fba91651b9a4c3e0e4060c5afdf5deaa3c4a0d4889979f5b6": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Nvidia",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "requires_review": true,
+      "summary_zh": "本新聞未提及任何與Nvidia債務違約、信用風險升高或其他財務危機相關的具體事件，僅涉及對AI晶片銷售的政策呼籲，故無法確定是否存在信用風險事件。"
+    }
+  },
+  "dd838bcb12bc914601e5b3b31d9dda15bd09e7755a5e99d75f7c51d6586517d2": {
+    "answer": {
+      "company_mentioned": "Uber",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前沒有足夠資訊顯示 Uber 可能發生債務違約或其他信用風險事件。"
+    }
+  },
+  "0daec23599bc8baa441f6c7cc99a74c4345a5ac84001684d929cfd6fcb848abd": {
+    "answer": {
+      "company_mentioned": "Nvidia",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前缺乏足夠資訊來判斷是否存在任何信用風險事件。"
+    }
+  },
+  "4999e54b87769cc297a189e7b987c41ac8afe49fda1e4325f79d32719c4700ff": {
+    "answer": {
+      "company_mentioned": "Nvidia",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前沒有足夠證據顯示 Nvidia 進行了任何債務違約或其他信用風險事件。"
+    }
+  },
+  "83ce0e4aea84992917841cca70853774eb4618f5e43d6fa9e375c4c7c6ec201c": {
+    "answer": {
+      "company_mentioned": "Nvidia",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "文章主要討論 Nvidia 的領導層變動對 AI 交易的影響，並未提及任何信用風險事件。"
+    }
+  },
+  "95d9db9cf25a3ddb917867484fffafdc63e50a516181278b92f9e276a04c2711": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Nvidia",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "requires_review": true,
+      "summary_zh": "本新聞僅提及 Nvidia 兩項分析師調降目標價，並未提及任何違約、信用風險升高或其他財務風險事件。"
+    }
+  },
+  "4ad21d605fd11280976c05e30109d3ab389991c8eb852d9c0cf4b0d03a44a43c": {
+    "answer": {
+      "company_mentioned": "Goldman Sachs",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前無足夠資訊顯示金佰利發生任何信用風險事件。"
+    }
+  },
+  "4cc29de66cd9c7dc49724c282db653dc06dc3d2e097770a056e5ac751525a3a0": {
+    "answer": {
+      "company_mentioned": "GE Vernova",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "本新聞未提供任何關於 GE Vernova 破產、違約或其他信用風險事件的具體訊息，僅提及合作關係。"
+    }
+  },
+  "a0f694c6fdff1813508125629bce3d01cedcb8ddf957a6fe48fb2fcf6a75af67": {
+    "answer": {
+      "company_mentioned": "Summit",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "美國食品藥品監督管理局拒絕了 Summit 研發的中國來源肺癌藥物，並未涉及任何信用風險事件。"
+    }
+  },
+  "6229681fea7678f2a6fb39d1e3f5a51e596e5d295f1367770077907a16d49d01": {
+    "answer": {
+      "company_mentioned": "Verizon",
+      "confirmed_default": false,
+      "event_codes": [
+        "MAJOR_LITIGATION"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "維訊公司面臨專利費用訴訟，訴訟已被要求撤銷，並非財務違約或信用風險事件。"
+    }
+  },
+  "eb177ed7f2fb996d33e36db5ac60e149ca844dade3baedcc9c4d4e99ed961d68": {
+    "answer": {
+      "company_mentioned": "Palo Alto Networks",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前沒有足夠資訊顯示Palo Alto Networks存在任何信用風險事件。"
+    }
+  },
+  "4b286f32d0252876812bf2060826ee2f7d04337496a55a7b48b048eb30b8b5e8": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "JPMorgan Chase",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "本新聞僅提及 JPMorgan Chase 的技術問題，並未報導任何違約、信用風險升高或其他財務風險事件。",
+      "requires_review": true
+    }
+  },
+  "6da30ee59ddbe595bf47ff80166c448b2d7c3d82d528c037d944e11d7154e024": {
+    "answer": {
+      "company_mentioned": "Darden Restaurants",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前沒有足夠資訊顯示 Darden Restaurants 可能發生違約或其他信用風險事件，需進一步調查。"
+    }
+  },
+  "c105411438365cf4e3b9168686a8fcf55e9dc6f5a66667de96d733e370be1a28": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Nvidia",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "本新聞未提及任何信用風險事件。",
+      "requires_review": true
+    }
+  },
+  "e7fa95af1c9e8c232bcfca4bf66edd8de71be316e245a2cb6821d5feadaa1006": {
+    "answer": {
+      "company_mentioned": "JPMorgan Chase",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前沒有足夠資訊顯示 JPMorgan Chase 可能發生違約或其他信用風險事件。"
+    }
+  },
+  "ba97035e048c6b705e5885a3c054b3098254f94aaf51ed88d7ffa25eab4b44ed": {
+    "answer": {
+      "company_mentioned": "Nvidia",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "本新聞未提及任何關於Nvidia的債務違約、CDS利差擴大或其他信用風險事件的具體訊息。"
+    }
+  },
+  "7682fd78fe785dada161eaf6f895a9a768c31e7b4ac189c4140876e1f9a54c6f": {
+    "answer": {
+      "company_mentioned": "Nvidia",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "美國正考慮限制對英偉達先進 AI 芯片的遠程存取，但目前尚未有任何明確的違約或信用風險訊號。"
+    }
+  },
+  "b4a27092ca3fd06b721a2ac10210832aa911467926142fb1132115017a1bcfb8": {
+    "answer": {
+      "company_mentioned": "Nvidia",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "本新聞未提及任何與Nvidia相關的信用風險事件，僅談及高雄回歸的可能性，無法判斷是否存在違約、破產或其他信用風險指標。"
+    }
+  },
+  "246bb62a80e378ae7336db401fd378a2f1aa1e837daf02705e579c00f02615cd": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Morgan Stanley",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "此新聞未提及任何可確認的違約或信用風險事件。",
+      "requires_review": true
+    }
+  },
+  "43e1c5fc411593bb66105677760ce81293e75a5882ce6915c559193ecb995d8d": {
+    "answer": {
+      "company_mentioned": "Berkshire Hathaway",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前沒有足夠資訊顯示伯克希爾·哈撒韋公司存在違約或其他信用風險事件。"
+    }
+  },
+  "2597dd46cac5c55803419a7dabcefe6f8fd4b901582a75c6c6b8d3070c558911": {
+    "answer": {
+      "company_mentioned": "Cisco",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前無足夠資訊確認 Cisco 是否有任何信用風險事件。"
+    }
+  },
+  "c8bb444767ad9e85ddfe50f25517a0dcadd0880e22560b9aa3b1674445e07b80": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Morgan Stanley",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "此新聞未提及任何與信用風險相關的事件。",
+      "requires_review": true
+    }
+  },
+  "aca9f5f507315bd61db8db76f4e51d1db253fe771c22bb807b4fc115741fec29": {
+    "answer": {
+      "company_mentioned": "Amazon",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "此新聞未提及任何與信用風險相關的事件，僅為娛樂性報導。"
+    }
+  },
+  "a67808c3e36a59fbef0a103905f786641a7b096447add1b86aad77c115f13437": {
+    "answer": {
+      "company_mentioned": "Delta Air Lines",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前無足夠資訊確認任何信用風險事件。"
+    }
+  },
+  "48f6440b7b942172a618909d6a464d4abedcb91717735b54ea570b0d1b2108ce": {
+    "answer": {
+      "company_mentioned": "Netflix",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前沒有足夠資訊顯示Netflix存在任何信用風險事件。"
+    }
+  },
+  "94e402e2b8d332f5a3ef128fb90ea98756b9894e67ef2f9078acfc4727b18e14": {
+    "answer": {
+      "company_mentioned": "Nvidia",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前沒有足夠證據顯示 Nvidia 進行了任何債務違約或相關信用事件。"
+    }
+  },
+  "1c414f1b3963e0c760c582fbb66ca127594100a6664a568fc7e0ff0efc0dc5eb": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Digital Realty",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "此新聞未提及任何與Digital Realty相關的信用風險事件。",
+      "requires_review": true
+    }
+  },
+  "4fb37e2cd325724120e76b2e723603756c6cfc3e88a5b4edf7b59e704013840f": {
+    "answer": {
+      "company_mentioned": "Nvidia",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": false,
+      "summary_zh": "此新聞僅提及投資者在CEO離職前出售Nvidia股票，並未涉及任何信用風險或違約訊號。"
+    }
+  },
+  "545e093f1de531419c63b4587d0c1043b0a0c00621211e3e411c2f1f7aa14401": {
+    "answer": {
+      "company_mentioned": "Apple Inc.",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "此新聞未提及任何與信用風險相關的事件，僅說明 Apple Pay 及 Apple Card 的交接安排。"
+    }
+  },
+  "291151056cec25f71545417ead0a1d844036aa2734611a683ef731588ea13c98": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Goldman Sachs",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "此新聞未提及任何與債務違約、信用風險升高或其他風險事件相關的訊息。",
+      "requires_review": true
+    }
+  },
+  "aab674de2f36b8b603a6e5eac57bec5362846faa6b7e2af38bc6b653c4c1c175": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Amazon",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "requires_review": true,
+      "summary_zh": "此新聞僅提及黑石不動產投資信託將以50億美元收購亞馬遜資料中心，並未提及任何違約、信用風險升高或其他財務危機事件。"
+    }
+  },
+  "56881a1fb4a69c399b26496db365d0a3b16f50d43a664fa69fb3d87e83607008": {
+    "answer": {
+      "company_mentioned": "Nvidia",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前沒有足夠資訊顯示 Nvidia 相關的信用風險事件。"
+    }
+  },
+  "5b505dd391fc5b004b4c752f7a1c1703d42fb1f026ae3a6bb49bb2c50f9f9832": {
+    "answer": {
+      "company_mentioned": "Nvidia",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "此新聞未提及任何與Nvidia相關的信用風險事件，僅討論Google TPU 出貨與其他公司受惠情況。"
+    }
+  },
+  "629f83bed41ef95beb2128d0d6b712727dd65ed42c27774a83ffd4df0200120b": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Citigroup",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "本新聞未提及任何與信用風險相關的事件，僅談及資產管理業務的目標。",
+      "requires_review": true
+    }
+  },
+  "6b76a5fae7886fcf969533e97f8577709d37a8420b461231aae1526ee819e94c": {
+    "answer": {
+      "company_mentioned": "Chevron Corporation",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前無足夠資訊顯示Chevron Corporation發生任何信用風險事件。"
+    }
+  },
+  "f9209b8d5655cb57d1c600b3f5671849681a9f39e062ff88330203d1f023e0ce": {
+    "answer": {
+      "company_mentioned": "Nvidia",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前沒有足夠資訊顯示 Nvidia 相關的信用風險事件。"
+    }
+  },
+  "941030ac55b5ff470c211878871024930e0526054c80ccc2e9177c960f1874cf": {
+    "answer": {
+      "company_mentioned": "Nvidia",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前無足夠資訊判斷是否有任何信用風險事件。"
+    }
+  },
+  "f500945d1e018c2f33aee7d7c339fd62802618769b75f3f2315e68849dedf723": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Uber",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "本新聞未提及任何與信用風險相關的事件。",
+      "requires_review": true
+    }
+  },
+  "d6096c2aeb99cd9230f89704f43fc9fb4177b340549cf17c51134ebcece86e5a": {
+    "answer": {
+      "company_mentioned": "Nvidia",
+      "confirmed_default": false,
+      "event_codes": [
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "MARKET_IMPLIED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "Nvidia 股價持續下跌，導致空頭投資者獲利約 240 億美元。"
+    }
+  },
+  "286ad5f450fb1cc4cbdc3dec6b4ced14352caf2bbde935286685d69ac3f610b7": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Mastercard",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "此新聞未提及任何與信用風險相關的事件。",
+      "requires_review": true
+    }
+  },
+  "ee95aabff21c7e6fb2afb989304dee4be07a5183729316daf5046efdc57eb37a": {
+    "answer": {
+      "company_mentioned": "Tyson Foods",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "泰森食品公布第四財季調整後每股收益為0.61美元，同比下降47%，但未提及任何違約、破產或其他信用風險事件。"
+    }
+  },
+  "4efe376720285d0eae37db6b6cb5aad4d3550683944875a5e0dde6d3b02bc62a": {
+    "answer": {
+      "company_mentioned": "Coherent Corp.",
+      "confirmed_default": false,
+      "event_codes": [
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "MARKET_IMPLIED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "Coherent Corp. 股價於盤前集體下跌，跌幅超過5%。"
+    }
+  },
+  "bd299131248031440fe181e04519e752e4a7aae0e25aedef25476b3ae8edd309": {
+    "answer": {
+      "company_mentioned": "Sandisk",
+      "confirmed_default": false,
+      "event_codes": [
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "MARKET_IMPLIED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "Sandisk 股價於盤前因市場情緒而下跌5%，並未顯示任何違約或信用風險升高的訊號。"
+    }
+  },
+  "ea96e143b2d5c57e8eab2be1eebb4c6e571da386206bb685a0054826f92fe33c": {
+    "answer": {
+      "company_mentioned": "Micron Technology",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "本新聞未提供任何關於 Micron Technology 破產、違約或其他信用風險事件的具體訊息，僅提及股價下跌。"
+    }
+  },
+  "346468bffd519753b71daf03a4edbe9d0fe8c046861629dfadd7f88a7ab19f1b": {
+    "answer": {
+      "company_mentioned": "Marvell Technology",
+      "confirmed_default": false,
+      "event_codes": [
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "MARKET_IMPLIED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "美股光通信概念股盤前集體下跌，Coherent跌超5%，邁威爾跌超4%，但並未有任何違約或信用風險升高的訊息。"
+    }
+  },
+  "ac0a7557fe846f7e15a74eb21a975aba1feb7c7182ea3caaa98306310ceba5f2": {
+    "answer": {
+      "company_mentioned": "Intel",
+      "confirmed_default": false,
+      "event_codes": [
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "MARKET_IMPLIED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "美股AI芯片股盤前集體下跌，Intel 股價跌超4%，但未有任何違約或信用風險升高的訊息。"
+    }
+  },
+  "aa2baab10701b92555f9643c872d3647414ec85a9eb7d2aa4a0d7d35484e1d0d": {
+    "answer": {
+      "company_mentioned": "Nvidia",
+      "confirmed_default": false,
+      "event_codes": [
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "MARKET_IMPLIED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "Nvidia 股價在盤前因 AI 芯片股集體下跌而下跌，並未顯示任何違約或信用風險升高的訊號。"
+    }
+  },
+  "f2cd7e7349f49e6a18de9e4a19d0b2dc10a2d2ab4575295d763479cd681f8a0a": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Advanced Micro Devices",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "requires_review": false,
+      "summary_zh": "美股AI芯片股盤前集體下跌，AMD、英特爾、台積電跌超4%，但未提及任何信用風險或違約訊息。"
+    }
+  },
+  "d9ad19b7acc0a99c1bf733794c094f9ea324412f2b0c3165038ef098f0ca5be8": {
+    "answer": {
+      "company_mentioned": "Applied Materials",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前沒有足夠證據顯示 Applied Materials 相關的信用風險事件。"
+    }
+  },
+  "00a19f4846aea885e60266f34d3fcf3ae7b88067f831233178198878f2e5d6a9": {
+    "answer": {
+      "company_mentioned": "Tyson Foods",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "Tyson Foods 預測 2027 年營收將因牛肉短缺而進一步下降，但目前並未顯示任何違約或信用風險升高的具體訊息。"
+    }
+  },
+  "2ba9f75141b45336e3261b20d942c8d70add852c84fe9d99d54c6c73614547ab": {
+    "answer": {
+      "company_mentioned": "Automatic Data Processing",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前沒有足夠資訊顯示 ADP 可能發生債務違約或其他信用風險事件。"
+    }
+  },
+  "e7c47ddcfa541e4e41b468823508754bbe033614f4fd5aff08b814c8d030e42e": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Lam Research",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "requires_review": true,
+      "summary_zh": "Lam Research 股價下跌，但未有任何證據顯示公司發生違約、破產或其他信用風險事件。"
+    }
+  },
+  "88190c4a204c01788b5f39a01e3878652b270b6cdcb94e47b40d0856d23eb643": {
+    "answer": {
+      "company_mentioned": "Tyson Foods",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "Tyson Foods 的 2026 財年雞肉營收略降 2%，但未顯示任何違約或信用風險升高的跡象。"
+    }
+  },
+  "e4359d7632ea8e65030ac0b5eda883a94c5c0cb7f70898f35a53ea4f8a4a986d": {
+    "answer": {
+      "company_mentioned": "Devon Energy",
+      "confirmed_default": false,
+      "event_codes": [
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "Devon Energy 股價因技術壓力下跌近 4%。"
+    }
+  },
+  "d63894f505b96f15065b000ee6bf5113682c000796cd66dfe03323545dfbe831": {
+    "answer": {
+      "company_mentioned": "Ciena",
+      "confirmed_default": false,
+      "event_codes": [
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "MARKET_IMPLIED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "Ciena 股價因科技行業回調及領導層變動而下跌近 8%。"
+    }
+  },
+  "fab9a2a2ffc7116117047c99c651e1476883dbd275b82af2448c971194492506": {
+    "answer": {
+      "company_mentioned": "Goldman Sachs",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "此新聞未提及任何與信用風險相關的事件，僅討論美國10年期國債收益率預測。"
+    }
+  },
+  "60f1f2d45d442ed2b3e3f41281f5dac865bdcb400e20b29d903aa8d1be6ecbea": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Automatic Data Processing",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "此新聞僅提及巴黎機場 2026 年 10 月的旅客數量，並未涉及任何信用風險或違約訊息。",
+      "requires_review": true
+    }
+  },
+  "27ec9a61e70ef0f226262c8763fcdebad1c805ffd2be1632177f866ceec6d28e": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Netflix",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "本新聞未提及任何與Netflix信用風險相關的事件。",
+      "requires_review": true
+    }
+  },
+  "f9a98edee5d2574d1a2e03145b466abd9a329d80868a5d52fb96b1a5a7366454": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Intel",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "無足夠資訊顯示任何信用風險事件。",
+      "requires_review": true
+    }
+  },
+  "7250d7ac1b906a4dbfb80e87ba9075ce80c5daaf138be85c8c5572e914772e4a": {
+    "answer": {
+      "company_mentioned": "Goldman Sachs",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "此新聞未提及任何與金鑰事件相關的具體訊息，無法判斷是否存在違約、信用風險升高或其他風險事件。"
+    }
+  },
+  "bd6a55e6fa78aabfa1c152725e34c6a7d0fd4b1b4c3c95927359f7fcf43b7ce7": {
+    "answer": {
+      "company_mentioned": "Ciena",
+      "confirmed_default": false,
+      "event_codes": [
+        "CEO_DEPARTURE",
+        "CFO_DEPARTURE",
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "MARKET_IMPLIED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "Ciena 股價因科技股拋售及高層人事變動而下跌近 8%。"
+    }
+  },
+  "2c31447ee190309bf9a2771fac403b3f01447df042443353d98379144450520d": {
+    "answer": {
+      "company_mentioned": "Nvidia",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前無足夠資訊確認英偉達是否存在任何信用風險事件。"
+    }
+  },
+  "c7e71dd9e1bece86d44bcf3286635a28c689f3425de99b44e15c17ce0e4e5fe6": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Delta Air Lines",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "requires_review": true,
+      "summary_zh": "此新聞僅提及航空股因航班中斷週末而略有下跌，未提及任何違約、破產或其他信用風險事件。"
+    }
+  },
+  "f16d25890e38b711de0c980c54e6740c56fcdfc4633d07d3f3d9c5c5ef0814b2": {
+    "answer": {
+      "company_mentioned": "Texas Instruments",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "本新聞未提供任何關於 Texas Instruments 破產、違約或其他信用風險事件的具體訊息，僅提及股價下跌。"
+    }
+  },
+  "6400558aaf9df59302092ecccbcc6fa0b0ecede34e0acde064b7dcc25a4fb214": {
+    "answer": {
+      "company_mentioned": "Howmet Aerospace",
+      "confirmed_default": false,
+      "event_codes": [
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "Howmet Aerospace 股價因機構累積與股息宣佈未能提振情緒，跌幅近 4%。"
+    }
+  },
+  "e0b5fc637c32984e9ddd808e2e11a765e5619b7bcd8a5b732f4d11b542657d4b": {
+    "answer": {
+      "company_mentioned": "Eaton Corporation",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前缺乏足夠資訊來判斷是否存在任何信用風險事件。"
+    }
+  },
+  "1f17c60d783fb6520ac2e63131eba1875b4d3c7cde10c2d454182bd7acdaf1e5": {
+    "answer": {
+      "company_mentioned": "Bank of America",
+      "confirmed_default": false,
+      "event_codes": [
+        "GENERAL_INFORMATION"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "美國多家大型銀行出現服務中斷，客戶反映帳戶訪問及支付異常，但並未涉及債務違約或其他財務風險事件。"
+    }
   }
 }
