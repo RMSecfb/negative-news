@@ -1,10 +1,10 @@
 {
   "source_repo": "RMSecfb/negative-news",
-  "execution_commit": "2e2a1f3cbebfe701a2e4bcd5b13391b83ad4d3c8",
+  "execution_commit": "82a3d8f9c038f7175593ebfe6a077e650e1de177",
   "source_sha256": "8113f2c1d452dcf17ba75b05b339daa12726e736d09375ebccb3dbea069ec74e",
   "edgartools": "5.62.1",
-  "started_at": "2026-11-17T12:42:51.577400+08:00",
-  "finished_at": "2026-11-17T12:47:38.036106+08:00",
+  "started_at": "2026-11-18T11:48:05.561623+08:00",
+  "finished_at": "2026-11-18T11:50:30.929535+08:00",
   "quarter": "2026Q3",
   "target_period": "2026-09-30",
   "managers_eligible": 37,
