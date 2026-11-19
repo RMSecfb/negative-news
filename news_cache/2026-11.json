@@ -22350,5 +22350,1264 @@
       "requires_review": false,
       "summary_zh": "Verisk Analytics 股價下跌 3.5%，但未有任何違約或其他信用風險事件的證據。"
     }
+  },
+  "c5bfcad3d0c2b21795c8344b625c03fb7347ae28ac73fac4102bae006ac5ae32": {
+    "answer": {
+      "company_mentioned": "Yum! Brands",
+      "confirmed_default": false,
+      "event_codes": [
+        "BANKRUPTCY"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "Tasty Chick'n Bankruptcy Raises Concerns for Yum Brands (YUM) Fr",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "Tasty Chick'n 破產引發對 Yum! Brands 的擔憂。"
+    }
+  },
+  "d681dc74886166ebd796ce1b3ffb4e1a58b9c0540176b2a1c52e859195135f51": {
+    "answer": {
+      "company_mentioned": "American Tower",
+      "confirmed_default": false,
+      "event_codes": [
+        "GENERAL_INFORMATION"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "美國塔公司與破產的Dish Wireless達成5.25億美元的和解協議。"
+    }
+  },
+  "bab6e4860000e116b708617ab6dbb07f8e02c6e592bf94eeb0218b01f74c4f3c": {
+    "answer": {
+      "company_mentioned": "Yum! Brands",
+      "confirmed_default": false,
+      "event_codes": [
+        "BANKRUPTCY"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "KFC franchisee declares bankruptcy (YUM:NYSE)",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "KFC 特許經營商宣告破產，影響 Yum! Brands 的特許經營業務。"
+    }
+  },
+  "357f2c3f4270e7d12729507bb547a8509adb24c622766100ec8876ce825eb544": {
+    "answer": {
+      "company_mentioned": "Alphabet Inc. (Class C)",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "本新聞未提供任何關於 Alphabet Inc. (Class C) 的信用違約或相關風險事件的具體訊息，僅提及美國破產法官批准谷歌以 1000 萬美元收購 Spirit 內部業務數據。"
+    }
+  },
+  "0a8e9f1b5e1d52ebc867065f34fd8696a1cea8ea48796b0e2008dff2d796c10f": {
+    "answer": {
+      "company_mentioned": "Alphabet Inc. (Class A)",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "本新聞未提供任何關於 Alphabet Inc. (Class A) 的信用違約或相關風險事件的具體訊息，僅提及美國破產法官批准谷歌以 1000 萬美元收購 Spirit 內部業務數據。"
+    }
+  },
+  "7b8b0a66bfe9f63176ca065144233ec61c4cccba59c4c53e0e6476a104878a98": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "American Tower",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "requires_review": true,
+      "summary_zh": "美國電塔公司與破產的Dish Wireless達成5.25億美元的和解協議，並未顯示任何違約或信用風險事件。"
+    }
+  },
+  "4376f7e4fd2d80a4249913d960632a1dd15dc14e39aafa208624f4b124fab9c4": {
+    "answer": {
+      "company_mentioned": "Salesforce",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": true,
+      "summary_zh": "Salesforce 股價因裁員報導與資安攻擊而下跌，但目前無足夠證據顯示任何信用風險事件。"
+    }
+  },
+  "7e3e5f39e61025144a6dacb32eece3fe12e34a9fc5bbfdc03d81ca45be387c17": {
+    "answer": {
+      "company_mentioned": "UnitedHealth Group",
+      "confirmed_default": false,
+      "event_codes": [
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "MARKET_IMPLIED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "由於對醫療保險審核的擔憂，聯合健康集團（UnitedHealth Group）的股價在兩天內下跌超過10%。"
+    }
+  },
+  "6c2ff5c826b9915cd092b09bc8ae4f1d6f0710f5cbfe36c86500032a44dc40ea": {
+    "answer": {
+      "company_mentioned": "Cardinal Health",
+      "confirmed_default": false,
+      "event_codes": [
+        "PRODUCT_RECALL"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "Cardinal Health (CAH) Is Facing Multiple Class I Medical Kit Recalls",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "Cardinal Health（CAH）正面臨多項 Class I 醫療套件召回，屬於產品召回事件。"
+    }
+  },
+  "59fa461bb526bfb7f9a6c7ab2b420298a60cc0e3469a75a7ec00fec2278d1305": {
+    "answer": {
+      "company_mentioned": "Nvidia",
+      "confirmed_default": false,
+      "event_codes": [
+        "EARNINGS_MISS",
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "Nvidia公布財報失利，股價仍大幅下跌。"
+    }
+  },
+  "e166d425cebcc02eff21a7c7c41bf7e3d8631fb321cee1d5852330c70b77352c": {
+    "answer": {
+      "company_mentioned": "Wells Fargo",
+      "confirmed_default": false,
+      "event_codes": [
+        "REGULATORY_INVESTIGATION"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "Attorney General Raoul Defends Wells Fargo’s Black, Hispanic Homeownership Programs Amid HUD Investigation",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "美國司法部總檢察長拉烏爾為富國銀行的黑人和西班牙裔住房計畫辯護，並指出美國住房與城市發展部正在調查該行的相關行為。"
+    }
+  },
+  "4a70d738ccf4939aceb44a673c27fa080d39ad95557cda13c24fb683de438671": {
+    "answer": {
+      "company_mentioned": "Wells Fargo",
+      "confirmed_default": false,
+      "event_codes": [
+        "REGULATORY_INVESTIGATION"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "美國馬里蘭州支持富國銀行的黑人與西班牙裔住房推動，並指出美國住房與城市發展部（HUD）正在進行調查。"
+    }
+  },
+  "cbf67f06c43319018393bad8cbbd63ae367b2144e4fae4dbc47cd3dbf2a69b24": {
+    "answer": {
+      "company_mentioned": "",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "本新聞未提及任何公司信用違約或相關風險事件，僅描述美股市場走勢與台積電ADR表現。"
+    }
+  },
+  "bafa2546b871d7d47628bfaaf2e4d5cd1adcb78c2b13905cc0592aee142a9672": {
+    "answer": {
+      "company_mentioned": "Cardinal Health",
+      "confirmed_default": false,
+      "event_codes": [
+        "PRODUCT_RECALL"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "Cardinal Health stock faces Class I recall for infusion kits",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "Cardinal Health 針對注射套件發出 Class I 召回，並未涉及債務違約或其他信用風險事件。"
+    }
+  },
+  "e06063a91f070417d95242e3738d95722a2b75c7ae805c40a90a5f58f3edd824": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Microsoft",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "無足夠證據顯示有信用風險事件。",
+      "requires_review": true
+    }
+  },
+  "77c35b54cf7906254d4d8834cb93c67021cdba58eaac4726c99d881f611b5c37": {
+    "answer": {
+      "company_mentioned": "Nvidia",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前無足夠資訊判斷是否存在信用風險事件。"
+    }
+  },
+  "9e30460cab0f664f180398f6a46e924b4921a7125c0ebdabdde3aa187f08efa0": {
+    "answer": {
+      "company_mentioned": "Nvidia",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前缺乏足夠資訊來判斷是否存在任何信用風險事件。"
+    }
+  },
+  "e8dcb831180bef6d77ce543af6582c9588eeea6ae5d4d9b1b272ebcfc7c29c17": {
+    "answer": {
+      "company_mentioned": "Palo Alto Networks",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前無足夠資訊顯示Palo Alto Networks發生任何信用風險事件。"
+    }
+  },
+  "730fc8c0a657e2739e945ecc6f526141fe470df810e73f3af816dc6d510060fe": {
+    "answer": {
+      "company_mentioned": "Morgan Stanley",
+      "confirmed_default": false,
+      "event_codes": [
+        "REGULATORY_INVESTIGATION"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "Nvidia's Risk-Reward Remains Attractive Despite Regulatory Investigations, Morgan Stanley Says",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "摩根士丹利表示，儘管 Nvidia 正面臨監管調查，其風險與報酬仍具吸引力。"
+    }
+  },
+  "e2249934f30c7197d6ed2a04a5bc1f71fcbdd42b391e035898aba78b843065ee": {
+    "answer": {
+      "company_mentioned": "Nvidia",
+      "confirmed_default": false,
+      "event_codes": [
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "MARKET_IMPLIED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "Nvidia 於公布財報後股價下跌，影響了相關雲端服務公司 CoreWeave 與 Iren 的股價表現。"
+    }
+  },
+  "46c4e97ff42a7ad147b4bc91f35795538a45e52e21112384a40f7e75b3c7ebac": {
+    "answer": {
+      "relevant": true,
+      "company_mentioned": "Nvidia",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "requires_review": true,
+      "summary_zh": "本報導未提供足夠資訊以判斷 Nvidia 是否存在任何信用風險事件。"
+    }
+  },
+  "09e3b51717fa3018dd0d49366cf510e44debb7a777dec7707a28a151b9bb1a9a": {
+    "answer": {
+      "company_mentioned": "Nvidia",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "本新聞未提及任何與信用風險相關的事件，無法判斷是否存在違約、信用擴張或其他信用事件。"
+    }
+  },
+  "efa5e75174677f48df6582633cb23b2848fc4d5c0248a45d293037559cab0c56": {
+    "answer": {
+      "company_mentioned": "Nvidia",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "本新聞未提及任何與信用風險相關的事件，僅談及員工對高層回歸的看法，無法判斷是否存在違約、破產或其他信用事件。"
+    }
+  },
+  "bf55d50523d80e2c7b967c53c95f10a52a1601b3d84b677f10ad9db262ba2648": {
+    "answer": {
+      "company_mentioned": "Nvidia",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前沒有足夠證據顯示 Nvidia 發生任何信用風險事件。"
+    }
+  },
+  "8a800a947f75c10e454b911b53ad117263736a061454fc77f54793f79c68b60e": {
+    "answer": {
+      "company_mentioned": "Citigroup",
+      "confirmed_default": false,
+      "event_codes": [
+        "GENERAL_INFORMATION"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "Citigroup 首席執行官弗雷澤警告企業在修復技術時可能面臨停機風險，並未透露任何違約或信用風險升高的訊息。"
+    }
+  },
+  "5826126bc1319c6d55b2e3adbec88002eaadf906b98a4fe4e55e1774f1f7605b": {
+    "answer": {
+      "company_mentioned": "Nvidia",
+      "confirmed_default": false,
+      "event_codes": [
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "MARKET_IMPLIED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "Nvidia 股價因盈利表現不佳而下跌，並未顯示任何違約或其他財務風險事件。"
+    }
+  },
+  "049f339b0ce4978580ac2eb4fbff9d562257c9e672abdc84a36cb8a9ddd067ca": {
+    "answer": {
+      "company_mentioned": "Sandisk",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前無足夠資訊顯示 SanDisk 之信用事件，需進一步調查。"
+    }
+  },
+  "488db24423160e297efd749dfd15b758d965d76e65ba22ee40514be50043b146": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Microsoft",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "無相關信用風險事件。",
+      "requires_review": true
+    }
+  },
+  "46b408f0157f55a87def57c218a3a39d43896fc6a8d78e4079c927fda16ab5a2": {
+    "answer": {
+      "company_mentioned": "Nvidia",
+      "confirmed_default": false,
+      "event_codes": [
+        "EXPORT_RESTRICTION"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "Nvidia stops shipping US-approved AI chips to China",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "英偉達停止向中國運送美國批准的 AI 晶片，屬於出口管制事件。"
+    }
+  },
+  "4f08cbea774ab2d93283e2ec44aacf747ebd926aeb9f31385b0a90e03c7cff66": {
+    "answer": {
+      "company_mentioned": "CMS Energy",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "本新聞未提供任何關於 CMS Energy 可能違約、信用風險升高或其他重大財務事件的具體證據。"
+    }
+  },
+  "a809ccf636e2e893c3d6cf41cddefb53040f132c157fab8c710d046629526a0e": {
+    "answer": {
+      "company_mentioned": "Morgan Stanley",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "此新聞未提供任何關於摩根士丹利信用風險或違約的具體訊息，無法判斷是否存在相關事件。"
+    }
+  },
+  "e8bfd5a9b89643e7038dfc4a51e0b2014886189395c7e3d751543ec3e37eb9ee": {
+    "answer": {
+      "company_mentioned": "Nvidia",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前無足夠資訊確認任何信用風險事件，需進一步調查。"
+    }
+  },
+  "bc83be3e94ad001dd3dbd0338396a353138f7aec6953252a4b9b03239db389a9": {
+    "answer": {
+      "company_mentioned": "Nvidia",
+      "confirmed_default": false,
+      "event_codes": [
+        "CREDIT_DOWNGRADE"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "Moody’s Lowers Nvidia’s Ratings Outlook to Stable From Positive",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "穆迪將英偉達的評級前景從正面調降至穩定，表示市場對其信用狀況的看法有所下降。"
+    }
+  },
+  "29483c58fefea579a41b6e8e29c89f78cb8fb98dab985d4964459e2e872dab78": {
+    "answer": {
+      "company_mentioned": "Nvidia",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前沒有足夠證據顯示 Nvidia 進行了任何債務違約或其他信用風險事件。"
+    }
+  },
+  "8e2927c2fea928b12f45e2ec604700c12662b0f2935d3b1944c27d6a98feeecd": {
+    "answer": {
+      "company_mentioned": "Nvidia",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "本新聞未提及任何與 Nvidia 相關的債務違約、信用風險升高或其他財務危機事件，僅涉及美國民主黨對 Lutnick 是否協助 Cantor Fitzgerald 避免 Nvidia 相關損失的調查。"
+    }
+  },
+  "6739ea8a508d1f21ad993b528932eb506885a29e1244f2eff76e1c2434efc447": {
+    "answer": {
+      "company_mentioned": "Nvidia",
+      "confirmed_default": false,
+      "event_codes": [
+        "CREDIT_DOWNGRADE"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "Moody's lowers Nvidia outlook to stable from positive",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "穆迪將英偉達的信用評級從正面調降至穩定，顯示市場對其信用狀況的擔憂升高。"
+    }
+  },
+  "deda0a97d019b71db79e226d617312044fd2db36b16aeca726167104cd5209ec": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Mastercard",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "此新聞未提及任何信用風險事件。",
+      "requires_review": true
+    }
+  },
+  "f325d2d0a0ad2fe83db831e44151700b725716319b702680ef427030027019f1": {
+    "answer": {
+      "company_mentioned": "Microsoft",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前無足夠資訊判斷是否有信用風險事件。"
+    }
+  },
+  "4024784ba6713c2456afe6d5f1125788f8674991f812cc624dc3de594096f30b": {
+    "answer": {
+      "company_mentioned": "Oracle Corporation",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前沒有足夠資訊顯示 Oracle 可能發生違約或其他信用風險事件。"
+    }
+  },
+  "68794286805a4a4d0dc8493f5d379d187e2b918bb5effac18c9ab87daedcd77d": {
+    "answer": {
+      "company_mentioned": "Palo Alto Networks",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前沒有足夠證據顯示 Palo Alto Networks 發生任何信用風險事件。"
+    }
+  },
+  "5f85a980ca3e28b9a7295246bd96e32d3391816c80efd35acb2bd97477b78c6c": {
+    "answer": {
+      "company_mentioned": "Kroger",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "本新聞未提及任何與Kroger公司信用風險相關的事件，無法判斷是否存在違約、破產或其他信用事件。"
+    }
+  },
+  "e895596ebc8030dc08035c6871e3cfb557f0b8c4fec7fc63f9fead56bc291f49": {
+    "answer": {
+      "company_mentioned": "IBM",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "IBM 針對將黑人高層解雇與特朗普 DEI 命令相關的訴訟已達成和解，並未涉及任何信用風險事件。"
+    }
+  },
+  "6cdfbdb734103eb5c269086e295ce2bdd8ce613a946522abec5c193ba8c25644": {
+    "answer": {
+      "company_mentioned": "Nvidia",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "本新聞未提供任何關於 Nvidia 可能違約、破產或其他信用風險事件的具體訊息，僅提及 Nvidia 造成的市場波動與日本 AI 股價的估值重新評估。"
+    }
+  },
+  "e62f0fa96637b1a55ff1002b54267db94f33553e3bfe987f911f1db282a3fc08": {
+    "answer": {
+      "company_mentioned": "Booking Holdings",
+      "relevant": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "本新聞未提及任何與信用風險相關的事件。",
+      "requires_review": true
+    }
+  },
+  "253686b0c708febd1dbb32070ffefdd769ff736ea5bf96fa0e11bbe4adc66a4d": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Goldman Sachs",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "requires_review": true,
+      "summary_zh": "此新聞僅為市場評論，未提及任何具體的違約或信用風險事件。"
+    }
+  },
+  "464ebf83b0a2f915eed5fab04ef43f3d336d593475f2a9d87c9f096247736afb": {
+    "answer": {
+      "company_mentioned": "Nvidia",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前沒有足夠證據顯示 Nvidia 進行了任何債務違約或其他信用風險事件。"
+    }
+  },
+  "2427e8d0b0dadfda6ad109917b8fd81b36118cac0f3f28d18e982531f8e8dd8c": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "無相關信用風險事件。",
+      "requires_review": true
+    }
+  },
+  "e8117e048123ba7aba7513d41eb933dbf840921bab5d4f942b012bd9fa48cf19": {
+    "answer": {
+      "company_mentioned": "TJX Companies",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前無足夠資訊確認任何信用風險事件。"
+    }
+  },
+  "4f3eaa92a94a9dfc267693e3857649841a2efd0ed6b6ae2eb6f5c753d098320a": {
+    "answer": {
+      "company_mentioned": "Cummins",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前無足夠資訊判斷是否有信用風險事件。"
+    }
+  },
+  "b12642ead007438c188a3db82120caf69dbc44700dfa49f89a5e8fd7a74f7371": {
+    "answer": {
+      "company_mentioned": "Fortinet",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前沒有足夠資訊顯示 Fortinet 可能發生違約或其他信用風險事件。"
+    }
+  },
+  "9ca4f858afe825ab8ca53057a86836d052652abd4f6a6dce075aff61cbfe992a": {
+    "answer": {
+      "company_mentioned": "CrowdStrike",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前無足夠資訊顯示 CrowdStrike 可能發生債務違約或其他信用風險事件。"
+    }
+  },
+  "d943f307f73c7654894753f9c6612bf51968bcc58f4083b03a67540c46f43288": {
+    "answer": {
+      "company_mentioned": "Nvidia",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "此新聞僅提及Arm CEO Haas被Nvidia董事會的招聘公司接觸，未涉及任何信用風險或債務違約訊息。"
+    }
+  },
+  "f930c59e96dde9b269151dc14949f2095e15ba439a4fad8a9efbb93e52d971ea": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Nvidia",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "此新聞未提及任何可確認的信用風險事件。",
+      "requires_review": true
+    }
+  },
+  "27eccd775565a719faa9f74982bb0e6124b677099799770473d41cde609bdc5c": {
+    "answer": {
+      "company_mentioned": "CME Group",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "本新聞未提及任何與信用風險相關的事件，僅為公司高層訪談內容。"
+    }
+  },
+  "65f2ef933c459c79f26bbd9d27df088f26f3514fc37bafb6d0bcdd51df4393fb": {
+    "answer": {
+      "company_mentioned": "南電、台燿",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "無足夠資訊判斷是否有信用風險事件。"
+    }
+  },
+  "f0a57358cdd5f6c7a7d7372bf10c5bbd1d8597ea199b5b2045a6db81950537a7": {
+    "answer": {
+      "company_mentioned": "Nvidia",
+      "confirmed_default": false,
+      "event_codes": [
+        "REGULATORY_INVESTIGATION"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "Cantor Fitzgerald's Nvidia business interests targeted in Democrats' Lutnick probe",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "Nvidia 的業務利益被民主黨的 Lutnick 調查所針對，表明公司正面臨監管調查。"
+    }
+  },
+  "1bfe8bafb56f9b3c745cbbf9c8f3f197ec477bcaf0e0cf2e08625b4b68789213": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "EQT Corporation",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "requires_review": true,
+      "summary_zh": "EQT 可能考慮出售印度最大的 IVF 體育鏈 Indira，但目前沒有足夠證據表明存在任何信用風險事件。"
+    }
+  },
+  "41dd8f4efb278a6b9cbf96ce8105536db1c926a25175976038685b4f1578f84e": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Palo Alto Networks",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "此新聞僅報導 Palo Alto Networks 以 45 億美元收購 Applied Compute，並未提及任何信用風險事件。",
+      "requires_review": true
+    }
+  },
+  "61de4074c3544c851ddd5298465dbac005c33ed3b262677ec2fec1d50cdf20c5": {
+    "answer": {
+      "company_mentioned": "Nvidia",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "本新聞未提及任何與債務違約、CDS利差擴大或其他信用風險相關的訊息，僅說明公司正在從黃氏時代過渡，無法判斷是否存在信用事件。"
+    }
+  },
+  "99dbb7eccc43681eb1e3b41c5da7ac1b5aafc08c6d5a87eb654054bdeb42aaab": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Nvidia",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "此新聞未提及任何與信用風險相關的事件。",
+      "requires_review": true
+    }
+  },
+  "18ece505a1005d79809abb0afa2f3110b10624ba196150eef98e4252b44f554d": {
+    "answer": {
+      "company_mentioned": "Palo Alto Networks",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前沒有足夠資訊顯示Palo Alto Networks存在任何信用風險事件。"
+    }
+  },
+  "f48f8b42b39e6915072a592384b2fbb3336c0a5ff88779844c57d0091579ce1c": {
+    "answer": {
+      "company_mentioned": "Apple Inc.",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "文章標題提及Apple的高估值，但未提供任何關於債務違約、信用風險升高或其他財務危機的具體訊息。"
+    }
+  },
+  "e9494e3ca41d80daa8861aef67166e241532d76450980fbcb3b40bbeb98457f1": {
+    "answer": {
+      "company_mentioned": "Nvidia",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "此新聞未提及任何與債務違約、信用風險升高或其他財務危機相關的事件，僅關注公司高層變動與 AI 產業地位。"
+    }
+  },
+  "8979d51b8452592c2f40a1c3642a1932ba95330440e9f22b5455df10b121bf00": {
+    "answer": {
+      "company_mentioned": "Nvidia",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "本新聞未提及任何與信用風險相關的事件，僅為公司內部會議更新。"
+    }
+  },
+  "d4b8367669168ef393ac73c2060a1e9c02cba4f692d1e4f43af2c656a555be4a": {
+    "answer": {
+      "company_mentioned": "Leidos",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "此公告僅提及Leidos為海軍陸戰隊建造低偵測空中防禦系統，未提及任何債務違約、信用風險升高或其他財務風險事件。"
+    }
+  },
+  "13dab5ab85d2d5b00c51b6aebd51d1bb2bd36c182feb33927540e68e5d6d2e71": {
+    "answer": {
+      "company_mentioned": "Fiserv",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "此新聞未提及任何信用風險事件，僅說明 Liberty Mutual 與 Gift Card Printer 之間的爭議已解決。"
+    }
+  },
+  "dfc36353b943a14d8d3a5aea77d8a43cc83a735989ba2737b4240f716a543dcd": {
+    "answer": {
+      "company_mentioned": "Wells Fargo",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "此新聞僅提及 Wells Fargo 任命新策略負責人，未涉及任何信用風險事件。"
+    }
+  },
+  "8ed97be3be321f684a70cd01de6b56c8f9d3ee3b5ce60d70adb522fada6bbe7f": {
+    "answer": {
+      "company_mentioned": "Costco",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前沒有足夠證據顯示 Costco 相關的信用風險事件。"
+    }
+  },
+  "6785e098e348edb763d703c6bc698b031497c317e0c75075b283cb0e8798a4d6": {
+    "answer": {
+      "company_mentioned": "Costco",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前沒有足夠證據顯示 Costco 相關的信用風險事件。"
+    }
+  },
+  "39569a1b23473ea18eff30076dd604861780d804d62396abd9932831e07d3e65": {
+    "answer": {
+      "company_mentioned": "Broadcom",
+      "confirmed_default": false,
+      "event_codes": [
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "MARKET_IMPLIED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "Broadcom 股價在六個月內下跌 20%，儘管 AI 成長強勁且分析師目標看好。"
+    }
+  },
+  "81293127534f90182ad9393a8297a8dabcbc128f6026ed2e0c9360b0fbf31153": {
+    "answer": {
+      "company_mentioned": "T-Mobile US",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "本新聞未提供任何關於 T‑Mobile US 破產、違約、信用風險升高或其他重大財務事件的具體訊息，僅提及股價下跌。"
+    }
+  },
+  "26f8257390b1db7cd386ed44b048ac9f9a4bf8994f469bf5df38be6e3a6f2b3c": {
+    "answer": {
+      "company_mentioned": "Newmont",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前無足夠資訊確認任何信用風險事件。"
+    }
+  },
+  "9d2853f31c244750fd2f3c84dc1d213383121525ec6fc1eba3f7aa9ad5dcc53e": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Chevron Corporation",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "無足夠資訊判斷是否有信用風險事件。",
+      "requires_review": true
+    }
+  },
+  "f9ade08d585388bb7417ecd98ed4231f1849b7b35b591948dc30342ecf4574cb": {
+    "answer": {
+      "company_mentioned": "Wells Fargo",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "本新聞報導指出華盛頓銀行服務出現停擺，但未提及任何違約、破產或信用風險升高的訊息。"
+    }
+  },
+  "764ec3352aa12050f80272262e717b226775ed9d52887f640284f36e33b2694c": {
+    "answer": {
+      "company_mentioned": "Intel",
+      "confirmed_default": false,
+      "event_codes": [
+        "WORKFORCE_REDUCTION"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "Intel makes further layoffs in IT workforce, reports say",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "英特爾宣布進一步裁員，影響IT工作人員。"
+    }
+  },
+  "4c9056b5ca2436508aa14fede317fa3513bb5754de3dd909539ef98ee5ea8281": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Intel",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "無足夠證據顯示有信用風險事件。",
+      "requires_review": true
+    }
+  },
+  "3fe73718e825c7a65213f6cbbe10888ddf3410940c340adaf4b982d02ff24eb2": {
+    "answer": {
+      "company_mentioned": "McDonald's",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前無足夠資訊判斷是否有信用風險事件。"
+    }
+  },
+  "2676f34fda5e0fe4034bf1f7a822e11c576812779ecaf91493ee22187c32eb77": {
+    "answer": {
+      "company_mentioned": "ExxonMobil",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前無足夠資訊判斷是否有信用風險事件。"
+    }
+  },
+  "ae86765f8bc87e215ca8d60eda85eaac7459200c90d8caed85c0c54bdbbe8065": {
+    "answer": {
+      "company_mentioned": "Chevron Corporation",
+      "confirmed_default": false,
+      "event_codes": [
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "切薩爾公司股價因市場因素下跌，並未涉及任何違約或信用風險事件。"
+    }
+  },
+  "16f1e0b9a15ec377c3149015f636a3b95783079fbd41367216ae63b57c469528": {
+    "answer": {
+      "company_mentioned": "Humana",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": true,
+      "summary_zh": "本新聞未明確提及 Humana 之債務違約或其他信用事件，僅提及因 Medicare 審核提案導致股價下跌。"
+    }
+  },
+  "7c7e09fe5f22b7aa618461b1e6a55febb796ef4ee496628251b7e75066afdad2": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Sherwin-Williams",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "requires_review": true,
+      "summary_zh": "目前沒有足夠證據顯示 Sherwin-Williams 進行任何信用風險事件。"
+    }
+  },
+  "4ca9262372de86db92cfdf40a62e622d9b1f8ff960b856837d2a421c0e404170": {
+    "answer": {
+      "company_mentioned": "Dell Technologies",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前無足夠資訊確認任何信用風險事件。"
+    }
+  },
+  "6dd63967920db74cc7bc4d05c8a16a93dd7d1da7a5a73920f91fe5f18bf4f0b7": {
+    "answer": {
+      "company_mentioned": "UnitedHealth Group",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前無足夠資訊確認任何信用風險事件。"
+    }
+  },
+  "fbd5af9b5266c0642776e8916264b4be50c2da71a88dfa94fbd539a825418bb5": {
+    "answer": {
+      "company_mentioned": "Accenture",
+      "confirmed_default": false,
+      "event_codes": [
+        "WORKFORCE_REDUCTION"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "Accenture plans to cut 950 jobs in Portugal by January",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "Accenture 宣布將於明年一月前在葡萄牙裁減 950 名員工，屬於人力資源縮減措施。"
+    }
+  },
+  "e36fb13db50bed6668f0bbea083630a6a939da305a59649f6eb90198ed49acf0": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "CVS Health",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "無足夠資訊顯示任何信用風險事件。",
+      "requires_review": true
+    }
+  },
+  "372bf37df505225f57f3af50d93b003316f5783f558643fc3fce225db22ab78d": {
+    "answer": {
+      "company_mentioned": "Salesforce",
+      "confirmed_default": false,
+      "event_codes": [
+        "PRICE_MOVEMENT",
+        "WORKFORCE_REDUCTION"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "Salesforce 股價下跌 9%，並公布新一輪裁員計畫。"
+    }
+  },
+  "a3b4a744393354abb314013aef5b83eb9e3a57923af4ddf2342322f7783c018d": {
+    "answer": {
+      "company_mentioned": "Salesforce",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "本新聞僅提及Salesforce股價下跌，未提供任何關於違約、信用風險升高或其他財務危機的具體訊息。"
+    }
+  },
+  "cf6edea25c6df805f2d43cf0751398a0d7562e9b3132febcc2c9649d175c1c49": {
+    "answer": {
+      "company_mentioned": "Accenture",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "Accenture 股價下跌，但目前沒有任何證據顯示公司發生違約、破產或其他信用風險事件。"
+    }
+  },
+  "ebb056c32a6ccffe96c74db5de6f1dec00d918bc4dcb49a86823f13053f7db45": {
+    "answer": {
+      "company_mentioned": "Qualcomm",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前無足夠資訊確認任何信用風險事件。"
+    }
+  },
+  "9c19529a27e4b361830b8a1e0cbfb980363689906491cff207b0e8fb6b479e33": {
+    "answer": {
+      "company_mentioned": "Humana",
+      "confirmed_default": false,
+      "event_codes": [
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "MARKET_IMPLIED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "由於提議的CRUSH規則，Humana股價下跌，市場情緒轉為負面，但並未出現任何違約或其他信用風險事件。"
+    }
+  },
+  "e2f26252a9d3ea7db9ddbaf69fd50939746e09c4912928fa97932bab79a92de6": {
+    "answer": {
+      "company_mentioned": "Elevance Health",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前沒有足夠證據顯示 Elevance Health 進行任何債務違約或信用風險升高的事件。"
+    }
+  },
+  "14b4b7e8a838cc69869fa24bfdc5d3bb4af0fa9d9c85a312cafb9c2cbea7eece": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "CMS Energy",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "無相關事件。",
+      "requires_review": false
+    }
+  },
+  "ed9268f7ddb557165e6fff8c4c1add797436a8536136382c23b1ad3d0eec96a8": {
+    "answer": {
+      "company_mentioned": "Progressive Corporation",
+      "confirmed_default": false,
+      "event_codes": [
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "MARKET_IMPLIED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "進步公司股價因市場因素下跌，並未顯示任何違約或破產訊號。"
+    }
+  },
+  "eeb471a80a0d9cd9b71b0aa5ff46493de10c0bee5338c7ff29115548322c06b6": {
+    "answer": {
+      "company_mentioned": "Occidental Petroleum",
+      "confirmed_default": false,
+      "event_codes": [
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "MARKET_IMPLIED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "Occidental Petroleum 股價因賣方壓力而持續下跌，並未顯示任何違約或其他財務風險事件。"
+    }
+  },
+  "45665199ab587cfef35cd4e9474b62ae9a01c620852572c012f35f4b0fc5566d": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "UnitedHealth Group",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "無足夠資訊判斷是否有信用風險事件。",
+      "requires_review": true
+    }
+  },
+  "38f8368b2827a076d23d85e7bdba8675198c60b5ed1560e70e803e4ac79d322e": {
+    "answer": {
+      "company_mentioned": "ExxonMobil",
+      "confirmed_default": false,
+      "event_codes": [
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "MARKET_IMPLIED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "股價下跌，未顯示任何違約或其他重大風險事件。"
+    }
+  },
+  "c301c2a056bacc1b64101fe259f52e63733edd681bc3201177a95807d4c7b414": {
+    "answer": {
+      "company_mentioned": "UnitedHealth Group",
+      "confirmed_default": false,
+      "event_codes": [
+        "REGULATORY_PENALTY",
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "聯合健康因新CMS規則面臨90億美元的行業追繳，導致其股價跌破350美元。"
+    }
+  },
+  "a82f92ec68e8de3e5cb8bbbe6d0dbf078694089094cbbb8f08c2e07de54432be": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Centene Corporation",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "requires_review": true,
+      "summary_zh": "本新聞僅提及Centene Corporation股價下跌，未提及任何違約、信用事件或其他風險訊號，故無法確定是否存在信用風險事件。"
+    }
+  },
+  "58f37584f6eae0c11574b6dd88b8b047b3db290fc059e07861da95979bf03974": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Qualcomm",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "無足夠證據顯示 Qualcomm 近期發生任何信用風險事件。",
+      "requires_review": true
+    }
+  },
+  "bf4f6b404f119d5352abed6599381e22c9712edabd04898a8fa81e766afa96a7": {
+    "answer": {
+      "company_mentioned": "Humana",
+      "confirmed_default": false,
+      "event_codes": [
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "MARKET_IMPLIED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": true,
+      "summary_zh": "由於新的 Medicare Advantage 報告規則擔憂，Humana 股價下跌逾 9%。"
+    }
   }
 }
