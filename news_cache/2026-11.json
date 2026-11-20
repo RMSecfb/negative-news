@@ -23609,5 +23609,1311 @@
       "requires_review": true,
       "summary_zh": "由於新的 Medicare Advantage 報告規則擔憂，Humana 股價下跌逾 9%。"
     }
+  },
+  "fa9ed9c95e9627a654b5190b97ad6336f9a800131f505025e48d16b15b4f41c8": {
+    "answer": {
+      "company_mentioned": "Yum! Brands",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前無足夠資訊確認任何具體事件，需進一步審查。"
+    }
+  },
+  "88a82072ee2763040c473d97a484ab0129ccdc575f7ccf859eaea9f450c1eeaf": {
+    "answer": {
+      "company_mentioned": "Ross Stores",
+      "confirmed_default": false,
+      "event_codes": [
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "MARKET_IMPLIED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "羅斯商店股價因利潤前景走弱及燃料成本上升而大幅下跌。"
+    }
+  },
+  "cdfa68b356d463eab06b6ba2fb8e33a14bde42524f042faaf5286c3098a94b73": {
+    "answer": {
+      "company_mentioned": "Anthropic",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "本新聞未提及任何公司債務違約、信用風險升高或其他財務風險事件，僅描述美股市場走勢與AI公司上市情況。"
+    }
+  },
+  "3398a8ee05fb4b4480adfcb94598dd8a51e3726200ae7ed2268b8b5864062442": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Lumentum",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "requires_review": true,
+      "summary_zh": "Lumentum 之 CEO 在股價暴跌後對 Marvell 合作進行辯護，並表示仍需與股東合作，但並未提及任何違約、破產或其他信用風險事件。"
+    }
+  },
+  "384d43524d77400199f74f10ad0e12a8a6f09862adc7de23724e972146f0347c": {
+    "answer": {
+      "company_mentioned": "Mastercard",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "此新聞未提及任何與信用風險相關的事件，僅報導第三方供應商遭受網路攻擊。"
+    }
+  },
+  "469a1e4c8442826d9503ef59ebb494a15240ec592eb0e2d176504f9ac0801914": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "無足夠資訊顯示任何信用風險事件。",
+      "requires_review": true
+    }
+  },
+  "ccdff14d614f5c6d02523a476942f231013ce26067af66df24edff0fcdf2e3a9": {
+    "answer": {
+      "company_mentioned": "Intuit",
+      "confirmed_default": false,
+      "event_codes": [
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "MARKET_IMPLIED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "Intuit 股價在盤後大幅下跌，因其營收指引低於市場預期。"
+    }
+  },
+  "1149cb63853c80552bbe66443e9baa26f11fcc049cd1ee7c0328cc482ef143b0": {
+    "answer": {
+      "company_mentioned": "SELLAS Life Sciences Group (SLS)",
+      "confirmed_default": false,
+      "event_codes": [
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "MARKET_IMPLIED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "SELLAS Life Sciences Group (SLS) 股價因公司定價1.5億美元公開發行而下跌18.84%。"
+    }
+  },
+  "3c203bcfcdf8402233dd2a1ec630e29901c575ae220b2fe466cd9aa4e0589f62": {
+    "answer": {
+      "company_mentioned": "JPMorgan Chase",
+      "confirmed_default": false,
+      "event_codes": [
+        "CYBER_ATTACK",
+        "DATA_BREACH"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "JPMorgan Chase says some customer data may be exposed after its vendors were hit by a cyberattack",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "JPMorgan Chase 報告其供應商遭受網路攻擊，導致部分客戶資料可能外洩。"
+    }
+  },
+  "0361246c1b11f8046730362f4c08391694789df2759afed9993602a1d1332c83": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Palo Alto Networks",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "requires_review": false,
+      "summary_zh": "Palo Alto Networks 的 CEO 提醒 AI 資安攻擊正在造成廣泛停機，但並未提及任何債務違約或信用風險事件。"
+    }
+  },
+  "d689fc39d591388d2ba8682192eead94aeffcf78f216e79e04ffa8fef4240630": {
+    "answer": {
+      "company_mentioned": "Paccar",
+      "confirmed_default": false,
+      "event_codes": [
+        "PRODUCT_RECALL"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "PACCAR recalls 6,185 trucks over radar braking fault",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "PACCAR 公布召回6,185輛車輛，原因是雷達制動系統缺陷。"
+    }
+  },
+  "439a45224c11ed8dbc405a77637316477f75bee5247b01993e94dc000261f476": {
+    "answer": {
+      "company_mentioned": "Mastercard",
+      "confirmed_default": false,
+      "event_codes": [
+        "CYBER_ATTACK",
+        "DATA_BREACH",
+        "PRIVACY_INCIDENT"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "Visa, Mastercard and Chase hit by cyberattack exposing customer data",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "本新聞報導Visa、Mastercard及Chase遭受網路攻擊，導致客戶資料外洩，屬於資安攻擊與資料隱私事件。"
+    }
+  },
+  "d94e41e1062c61663fb8d24cfa34365ae9c2b7271b08ed4b4f09ca3b4c9f1220": {
+    "answer": {
+      "company_mentioned": "Starbucks",
+      "confirmed_default": false,
+      "event_codes": [
+        "CYBER_ATTACK"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "Expedia, Starbucks reportedly hit by same group in cyberattacks",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "星巴克被報導遭受與Expedia相同團體的網路攻擊，屬於資安攻擊事件。"
+    }
+  },
+  "3f0e3390a18b12469117a747c09dec69348ce84418bc460c251ba51633766bde": {
+    "answer": {
+      "company_mentioned": "JPMorgan Chase",
+      "confirmed_default": false,
+      "event_codes": [
+        "CYBER_ATTACK"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "JPMorgan Chase reports cyberattack on third-party service providers",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "JPMorgan Chase 報告其第三方服務供應商遭受網路攻擊，並未提及任何債務違約或其他財務風險。"
+    }
+  },
+  "e6c408673130ed0d42325bc0fe4f26b2437196926ec32464b45c01d9af3a2d34": {
+    "answer": {
+      "company_mentioned": "JPMorgan Chase",
+      "confirmed_default": false,
+      "event_codes": [
+        "CYBER_ATTACK",
+        "DATA_BREACH"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "JPMorgan Chase says cyberattack may have exposed customer data",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "JPMorgan Chase 報告稱網路攻擊可能已洩露客戶資料，並未顯示任何違約或債務問題。"
+    }
+  },
+  "36bcb1321629bd859fc35450e740ec4ad215e9f6f92b4cdb162e2ef345929d76": {
+    "answer": {
+      "company_mentioned": "Nvidia",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前缺乏足夠資訊來確定是否存在任何信用風險事件。"
+    }
+  },
+  "069e607242b56847c94437a912aa488b00e7ec1e7716742363ccceffc639983d": {
+    "answer": {
+      "company_mentioned": "Mastercard",
+      "confirmed_default": false,
+      "event_codes": [
+        "CYBER_ATTACK",
+        "DATA_BREACH"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "Thousands of customers have data leaked after cyberattack at Visa, Mastercard and US banking giant",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "Mastercard 遭受網路攻擊，導致數千名客戶資料外洩。"
+    }
+  },
+  "b8903fe413690456d2fea26dba883cbad0096664dbf21a9319c6d27fa661a23c": {
+    "answer": {
+      "company_mentioned": "Mastercard",
+      "confirmed_default": false,
+      "event_codes": [
+        "CYBER_ATTACK",
+        "DATA_BREACH",
+        "PRIVACY_INCIDENT"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "Visa, Mastercard, and JPMorgan Chase customer data reportedly compromised in cyberattack",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "Mastercard 及 Visa、JPMorgan Chase 的客戶資料在一次網路攻擊中被報導遭到洩露，屬於資安攻擊與資料外洩事件。"
+    }
+  },
+  "dae701b5df5410e8e9d2bf990648e239024a6809dde29679580a67795bba987d": {
+    "answer": {
+      "company_mentioned": "JPMorgan Chase",
+      "confirmed_default": false,
+      "event_codes": [
+        "CYBER_ATTACK",
+        "DATA_BREACH",
+        "PRIVACY_INCIDENT"
+      ],
+      "event_status": "RUMORED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": true,
+      "summary_zh": "JPMorgan Chase 及 Visa、Mastercard 的客戶資料據報被網路攻擊洩漏，屬於資安攻擊與資料外洩事件。"
+    }
+  },
+  "0918391e1a72807ef500fdbfc085f9105b508f1ab5aeafd0094c2e9eeaa46784": {
+    "answer": {
+      "company_mentioned": "JPMorgan Chase",
+      "confirmed_default": false,
+      "event_codes": [
+        "CYBER_ATTACK"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "JPMorgan Chase reports cyberattack on third-party service platforms",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "JPMorgan Chase 報告其第三方服務平台遭受網路攻擊，並未提及任何債務違約或其他財務風險事件。"
+    }
+  },
+  "36aae9d7d5fa8b9f1cc04a1c06f9f4a0d76c306ddfb7d3797428c40d37d58a18": {
+    "answer": {
+      "company_mentioned": "Mastercard",
+      "confirmed_default": false,
+      "event_codes": [
+        "CYBER_ATTACK",
+        "DATA_BREACH"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "Chase, Visa, Mastercard confirm third-party cyberattacks that may have exposed customers' info",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "Mastercard 確認第三方網路攻擊，可能導致客戶資訊外洩。"
+    }
+  },
+  "c81ab5f52db99d9670617b126c7379e8ce5c7048980744fa55b9aca86dd554b9": {
+    "answer": {
+      "company_mentioned": "JPMorgan Chase",
+      "relevant": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "本新聞未提及任何與債務違約、信用風險升高或其他金融風險事件相關的訊息。",
+      "requires_review": true
+    }
+  },
+  "eee4fd69d74dd6df15226afbe003a6007df043310f150ff68fda85d6ffecb2bd": {
+    "answer": {
+      "relevant": true,
+      "company_mentioned": "Mastercard",
+      "event_codes": [
+        "CYBER_ATTACK",
+        "DATA_BREACH",
+        "PRIVACY_INCIDENT"
+      ],
+      "event_status": "CONFIRMED",
+      "confirmed_default": false,
+      "evidence": "Cyberattack may have exposed Chase Bank and Mastercard customer data",
+      "summary_zh": "本新聞報導指出，Mastercard 可能因網路攻擊而導致客戶資料外洩，屬於資安攻擊與資料外洩事件。",
+      "requires_review": false
+    }
+  },
+  "4be27051ebb4f374b32282889d4408985ab56f9071c9e226614ec98838a7425b": {
+    "answer": {
+      "company_mentioned": "JPMorgan Chase",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "本新聞未提及任何與債務違約、信用風險升高或其他財務危機相關的事件，僅說明供應商在網路攻擊中受影響，並未與先前的停機事件相關聯。"
+    }
+  },
+  "3c1b1e03f5a8e96d8c7315f58c1dee950aee4d146e120003eac2116361b49a6e": {
+    "answer": {
+      "company_mentioned": "Uber",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "此新聞主要報導一名蘇丹裔Uber司機在Hopkins遭受暴力攻擊，並未涉及任何財務或信用風險事件。"
+    }
+  },
+  "374fd67b26b781400ab2f7a4c82f1c7dcbfa55805c928c438d6884d286c765f8": {
+    "answer": {
+      "company_mentioned": "Advanced Micro Devices",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前缺乏足夠資訊來判斷是否存在任何信用風險事件。"
+    }
+  },
+  "143c73ed6dae6daa79a3420bca209b2e27dd5e1c800fcd8acfa696b5028c77de": {
+    "answer": {
+      "company_mentioned": "JPMorgan Chase",
+      "confirmed_default": false,
+      "event_codes": [
+        "CYBER_ATTACK",
+        "DATA_BREACH"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "JPMorgan Chase says cyberattack may have exposed customer names and emails",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "JPMorgan Chase 報告稱其網路攻擊可能已洩露客戶姓名與電子郵件，屬於資安攻擊與資料外洩事件。"
+    }
+  },
+  "85473a50319cc7ab5be4211f326f484e7d3355a7ecd4649df368a3d888576e0a": {
+    "answer": {
+      "company_mentioned": "Mastercard",
+      "confirmed_default": false,
+      "event_codes": [
+        "CYBER_ATTACK"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "JPMorgan, Visa and Mastercard disclose cyberattack on third-party vendors",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "Mastercard 與 JPMorgan、Visa 公布第三方供應商遭受網路攻擊事件，並未涉及債務違約或其他財務風險。"
+    }
+  },
+  "65e9d1c2e76244b4f7438a628e4884d16fbbddd144e9036479ced5145ebf799d": {
+    "answer": {
+      "company_mentioned": "Ball Corporation",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "本新聞報導關於在 Ball-Chatham 學校發現含有可卡因的芬太尼，並提及正在進行調查，但未提及任何與 Ball Corporation 相關的財務風險事件。"
+    }
+  },
+  "4e4adbecbf78c0d2a6db6ade82c187246d6f2675a8e0a325383b6a10baa85569": {
+    "answer": {
+      "company_mentioned": "Paccar",
+      "confirmed_default": false,
+      "event_codes": [
+        "PRODUCT_RECALL"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "PACCAR Recalls 6,185 Kenworth, Peterbilt Trucks for False Braking",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "PACCAR 召回 6,185 輛 Kenworth 與 Peterbilt 卡車，原因是制動系統偽警報。"
+    }
+  },
+  "a37ab4d1592fb3ba5663680fddd73eb33d3bfe883bbba5170e7fce86efb42796": {
+    "answer": {
+      "company_mentioned": "Mastercard",
+      "confirmed_default": false,
+      "event_codes": [
+        "CYBER_ATTACK",
+        "DATA_BREACH"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "Visa, Mastercard and JPMorgan customer data leaked in third-party cyberattack",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "Mastercard 及 Visa、JPMorgan 的客戶資料因第三方網路攻擊被洩露，屬於資安攻擊與資料外洩事件。"
+    }
+  },
+  "be85be01587a78885309aa36ad21ff32fae1081146e9bc31aacb769f99b8e976": {
+    "answer": {
+      "company_mentioned": "Microsoft",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前沒有足夠資訊顯示 Microsoft 可能發生違約或其他信用風險事件。"
+    }
+  },
+  "d8b451f54e2449b6338c640a8dfc140bd93d9defdf94aa8c19342109526e874d": {
+    "answer": {
+      "company_mentioned": "Cummins",
+      "confirmed_default": false,
+      "event_codes": [
+        "PRODUCT_RECALL"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "Owners told to stop using recalled Huffy e-trikes and Cummins generators",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "Cummins 召回其發電機，通知使用者停止使用。"
+    }
+  },
+  "437e0fe688fd7ec292e3e64c1d75ac26c4b637bcaabf4d2afa7d47b1785692e1": {
+    "answer": {
+      "company_mentioned": "JPMorgan Chase",
+      "confirmed_default": false,
+      "event_codes": [
+        "CYBER_ATTACK"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "JPMorgan Chase third-party services target of cyberattack",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "JPMorgan Chase 的第三方服務遭受網路攻擊，事件已被確認。"
+    }
+  },
+  "d66502b4ccef80ea0ddb935fc702851e361ab951c8043fab9f7ce1805f228a6a": {
+    "answer": {
+      "company_mentioned": "JPMorgan Chase",
+      "confirmed_default": false,
+      "event_codes": [
+        "CYBER_ATTACK",
+        "DATA_BREACH",
+        "PRIVACY_INCIDENT"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "JPMorgan Chase customer data exposed in cyberattack",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "JPMorgan Chase 近期發生客戶資料外洩事件，屬於資安攻擊與資料外洩風險。"
+    }
+  },
+  "96a789b4a7ad7f0650efe578c18e5b4fca0cf9cf3d2a6ff09c38a43effd5d619": {
+    "answer": {
+      "company_mentioned": "Starbucks",
+      "confirmed_default": false,
+      "event_codes": [
+        "CYBER_ATTACK"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "Starbucks, Expedia among companies targeted by Russian cyberattackers",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "星巴克被俄羅斯網路攻擊者針對，事件已被確認。"
+    }
+  },
+  "97a3d54914422d6f8512a64cadd4d1792ffaa5840ae104e0a117bef057c61f81": {
+    "answer": {
+      "company_mentioned": "JPMorgan Chase",
+      "confirmed_default": false,
+      "event_codes": [
+        "CYBER_ATTACK"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "Cyberattack on JPMorgan Chase impacts customer identities: what to know",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "本新聞報導指出 JPMorgan Chase 遭受網路攻擊，導致客戶身份資料受影響，並未提及任何債務違約或其他財務風險事件。"
+    }
+  },
+  "84e375fbd5ecc2a18f79d143c590aaee2b04fc65a28b8108ac66a8c7228ff722": {
+    "answer": {
+      "company_mentioned": "JPMorgan Chase",
+      "confirmed_default": false,
+      "event_codes": [
+        "CYBER_ATTACK",
+        "DATA_BREACH",
+        "PRIVACY_INCIDENT"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "Cyberattack exposes customer information linked to Visa, Mastercard and JPMorgan Chase",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "本新聞報導顯示 JPMorgan Chase 受到網路攻擊，導致客戶資訊外洩，並涉及 Visa 與 Mastercard。此事件屬於資安攻擊與資料外洩，並未涉及任何債務違約或信用風險升高。"
+    }
+  },
+  "6c15a3a348c5f6237f239602b47f5dd78c2caf4ba37c8190faf82ef1db59ee2e": {
+    "answer": {
+      "company_mentioned": "UnitedHealth Group",
+      "confirmed_default": false,
+      "event_codes": [
+        "REGULATORY_INVESTIGATION"
+      ],
+      "event_status": "RUMORED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "聯合健康集團（UnitedHealth Group）收到投資者通知，表示公司正面臨調查，但尚未確認任何違約或其他財務風險事件。"
+    }
+  },
+  "287afe155c91b33fd56cfa8f3ad2094c5e9676d1ad427df7e7c37adc0c0c4e1a": {
+    "answer": {
+      "company_mentioned": "Humana",
+      "confirmed_default": false,
+      "event_codes": [
+        "REGULATORY_INVESTIGATION"
+      ],
+      "event_status": "INVESTIGATING",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "Humana 正在接受調查，尚未確認任何違約或其他財務風險事件。"
+    }
+  },
+  "c8a221d9a5c2b9984c6dcc72f5c422ffbad10f82371cdb8c1b19a61c76a66928": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "JPMorgan Chase",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "本新聞未提及任何與信用風險相關的事件。",
+      "requires_review": true
+    }
+  },
+  "a9b40705c4585d3cae6d308d86d3cb2604f1f76f7b29402977fbe20e4b557c8d": {
+    "answer": {
+      "company_mentioned": "Mastercard",
+      "confirmed_default": false,
+      "event_codes": [
+        "CYBER_ATTACK"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "JPMorganChase, Mastercard, Visa report cyberattack on third-party service providers",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "JPMorgan Chase、Mastercard 與 Visa 報告第三方服務供應商遭受網路攻擊。"
+    }
+  },
+  "7581cc8aac0a43d3a5ccaec811574d68191f665c1dbe20fa1728f349a4088386": {
+    "answer": {
+      "company_mentioned": "Walmart",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "此新聞未提及任何與信用風險相關的事件，僅為產品召回公告。"
+    }
+  },
+  "7a72063169d0018af20866b931d702c3a84d794774e88464f98292eb9ca326d7": {
+    "answer": {
+      "company_mentioned": "Corteva",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "本新聞未提供足夠資訊以判斷是否存在任何信用風險事件。"
+    }
+  },
+  "04ee50fdcb6c0aa9030a65884d071f30283159e1c3457ebfa78e6da59af473b3": {
+    "answer": {
+      "company_mentioned": "DoorDash",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前無足夠資訊顯示 DoorDash 可能發生違約或其他信用風險事件。"
+    }
+  },
+  "d12e890219a96d46e53c8b7b3db5474e7fed11f5ce9c47a562285f43e3e3fe3e": {
+    "answer": {
+      "company_mentioned": "Accenture",
+      "confirmed_default": false,
+      "event_codes": [
+        "WORKFORCE_REDUCTION"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "Accenture 宣布在葡萄牙裁減 950 個與 Meta 相關的工作職位，為其人力資源結構調整做出決策。"
+    }
+  },
+  "05e0297eeb267c1af054c541a96f68e773ce97a34d97505618a3e7178c3d52a0": {
+    "answer": {
+      "company_mentioned": "Advanced Micro Devices",
+      "confirmed_default": false,
+      "event_codes": [
+        "SHORT_SELLER_REPORT"
+      ],
+      "event_status": "RUMORED",
+      "evidence": "short-seller report of alleged China exposure",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "AMD因短售機構報告稱公司在中國的曝險被質疑，股價大幅下跌。"
+    }
+  },
+  "34ed4fd08a0ff79b45654b3f503369b30bbf4fecdc070ced657c3e18f731cc1b": {
+    "answer": {
+      "company_mentioned": "Ross Stores",
+      "relevant": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "Ross Stores 近期報告假日銷售增長放緩，股價下跌，但未提及任何違約、破產或其他信用風險事件。",
+      "requires_review": true
+    }
+  },
+  "06fb6c617e2d8e5e99ecdd1d2eb388c559cf3546485113486f45de36cdcc77cd": {
+    "answer": {
+      "company_mentioned": "Amazon",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "此新聞未提及任何與亞馬遜相關的信用風險事件，僅描述巴西亞馬遜湖泊的乾旱情況。"
+    }
+  },
+  "6e3dea539d921a4196352b7eea580dac252f8ddb0e7247dbe8bb7758d8753797": {
+    "answer": {
+      "company_mentioned": "Nvidia",
+      "confirmed_default": false,
+      "event_codes": [
+        "REGULATORY_INVESTIGATION"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "California AG subpoenas Nvidia over concerns about former CEO, China ties",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "加州檢察長因前CEO與中國關係問題向英偉達發出傳票，屬於監管調查事件。"
+    }
+  },
+  "5ec947d945db59ab7a2aa7477e926a5f2cf6555bda9ffd68d150784c9276da56": {
+    "answer": {
+      "company_mentioned": "CSX Corporation",
+      "confirmed_default": false,
+      "event_codes": [
+        "MAJOR_LITIGATION"
+      ],
+      "event_status": "INVESTIGATING",
+      "evidence": "CSX Fails to Dodge Fired Engineers’ FMLA Leave Retaliation Claim",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "CSX公司因被解雇的工程師提出FMLA假期報復訴訟，事件屬重大訴訟，尚未解決。"
+    }
+  },
+  "3de91f7571925fccd9f895cbc382204afffdc01c9488b199a076478b506e3390": {
+    "answer": {
+      "company_mentioned": "Advanced Micro Devices",
+      "confirmed_default": false,
+      "event_codes": [
+        "SHORT_SELLER_REPORT",
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "MARKET_IMPLIED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "AMD 股價因短售機構報告中國相關連結而下跌。"
+    }
+  },
+  "18d71e6a0c620c3b9608ab5e31daee7b1975f2828e5c0667d1e5f71c7e33692c": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Bank of America",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "requires_review": true,
+      "summary_zh": "本新聞未提及任何與信用風險相關的事件，僅談及戰爭導致的成本壓力。"
+    }
+  },
+  "0c57095354b17ee7778c69e1255e326809960897d171339469e1e84e377a4c96": {
+    "answer": {
+      "company_mentioned": "Alibaba",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "本新聞未提供足夠資訊以判斷是否涉及任何信用風險事件。"
+    }
+  },
+  "2140619ddc35c9af1e1845e63b02274328e04d8555fd1041a2e7a4218ba979e9": {
+    "answer": {
+      "company_mentioned": "Amazon",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": false,
+      "summary_zh": "亞馬遜在紐約市加大對配送費用的壓力，並威脅搬遷，並未涉及任何債務違約或信用風險事件。"
+    }
+  },
+  "d93a25d7f26304847a911fa2af43e0920425cc5df729724ec65ccffab8a68e98": {
+    "answer": {
+      "company_mentioned": "Morgan Stanley",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前沒有足夠資訊顯示摩根士丹利存在違約或其他信用風險事件，需進一步調查。"
+    }
+  },
+  "7d001a7a2d496060e1937da2f786151fcee92a7ff23156ec1d56c13040598692": {
+    "answer": {
+      "company_mentioned": "Apple Inc.",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "本新聞未提供任何關於 Apple Inc. 破產、違約或其他信用風險事件的具體訊息，僅提及法院裁決。"
+    }
+  },
+  "8cec6cde1cd391118e73b77ee5aacbd0b3623236a339c45f4d0b306390c882c1": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Amazon",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "本新聞未提及任何與信用風險相關的事件。",
+      "requires_review": true
+    }
+  },
+  "632e29502ea255fb7e8f10a44c37e272c8d2a981f8d89b3d683d8be5fc05d795": {
+    "answer": {
+      "company_mentioned": "Nvidia",
+      "confirmed_default": false,
+      "event_codes": [
+        "REGULATORY_INVESTIGATION"
+      ],
+      "event_status": "INVESTIGATING",
+      "evidence": "California Probing If Nvidia Misled Investors on China Risks",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "加州正在調查 Nvidia 是否誤導投資者關於中國風險的資訊，屬於監管調查事件。"
+    }
+  },
+  "dc80e05b63b3e48c370f32b1dac5eb2ba4774e1cb7aa46f2f975a789ff4a48ab": {
+    "answer": {
+      "company_mentioned": "Advanced Micro Devices",
+      "confirmed_default": false,
+      "event_codes": [
+        "SHORT_SELLER_REPORT",
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "RUMORED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "AMD 股價因 Hunterbrook 發布空頭報告並指稱公司存在循環交易而下跌，並未涉及任何違約或破產訊息。"
+    }
+  },
+  "ef5c0a3f295846cd2541c163521da5e3518bb1e29bde4d34d72ebfca100c09bb": {
+    "answer": {
+      "company_mentioned": "Apple Inc.",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "英國法庭確認政府要求取得 Apple 資料的命令，但並未涉及任何信用風險或債務違約訊息。"
+    }
+  },
+  "a88589e5453b3c79d691d0f16f41f0100b3d9b4418f6cc6de26d16e554538851": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Walmart",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "此新聞未提及任何信用風險事件。",
+      "requires_review": true
+    }
+  },
+  "abaddf732364b00a33ae6687ca0bb74d020bff53d3ef8bf957e019ee6817b525": {
+    "answer": {
+      "company_mentioned": "Nvidia",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "本新聞僅提及加州司法部對 Nvidia 進行調查，並未涉及任何債務違約或信用風險事件。"
+    }
+  },
+  "fcd266ff57906dc90e8102f5882ff4c95364e12ae2788f8917daafbbae04985d": {
+    "answer": {
+      "company_mentioned": "Nvidia",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "本新聞未提及任何與Nvidia債務違約、CDS利差擴大或其他信用風險相關的具體事件，僅涉及阿里巴巴對Nvidia相關指控的訴訟。"
+    }
+  },
+  "8fd16eb23f58fcf917126d256a8c3020f2462a6659c3e969377b1bc4824ada21": {
+    "answer": {
+      "company_mentioned": "Amazon",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前沒有足夠證據顯示亞馬遜存在違約或其他信用風險事件。"
+    }
+  },
+  "547d9acd1cecf3b548d21312863851142970c3d3cb79ecd0cdf8971ad0d2450a": {
+    "answer": {
+      "company_mentioned": "Nvidia",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前沒有足夠證據顯示 Nvidia 進行了任何信用違約或相關事件。"
+    }
+  },
+  "f8d342d95241215e9c987e855109a6d31c69da0ebbfcf7502da4102deacd99a9": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Amazon",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "亞馬遜警告紐約市配送費用可能每單增加5美元，但未提及任何違約或信用風險事件。",
+      "requires_review": true
+    }
+  },
+  "b527afafaf350de73749a9ea8d22be7cec67a1591288be65fa8f248ffe60debd": {
+    "answer": {
+      "company_mentioned": "MSCI Inc.",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前缺乏足夠資訊來判斷是否存在任何信用風險事件。"
+    }
+  },
+  "3f4b4e82ba62c6d9f8598aeb07ffebebad29858d20552db32c0fd226d73a35c8": {
+    "answer": {
+      "company_mentioned": "Nvidia",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前缺乏足夠資訊來判斷是否存在任何信用風險事件。"
+    }
+  },
+  "df09ef995a1bfa27eefccbbb30bffe3a08797a5d42d806433414083e2d75ba8f": {
+    "answer": {
+      "company_mentioned": "Sandisk",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "此新聞僅提及 Sandisk 的拆股計畫，未提及任何違約、破產或其他信用風險事件。"
+    }
+  },
+  "d10f016f00c6e3016b30292e179fe0ca3a598ba903a8dcf1d5f08a447b546cbf": {
+    "answer": {
+      "company_mentioned": "Bank of America",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "本新聞僅提及銀行高層人事變動，未涉及任何信用風險事件。"
+    }
+  },
+  "213ad5fe6c77b126782c16c71140b243891b51de2aeca82c06d12b1dc6018de6": {
+    "answer": {
+      "company_mentioned": "Apple Inc.",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前無足夠資訊確認任何信用風險事件。"
+    }
+  },
+  "435edce9779e302c00bc4fe9e0918bd6bb3c121126fb850c96d0bb20c73c409a": {
+    "answer": {
+      "company_mentioned": "Automatic Data Processing",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前無足夠資訊確認 ADP 相關信用風險事件。"
+    }
+  },
+  "c7be59945b4c4d2f1e559c21fa33290ef3b683930da1671f6a438f329b6467ba": {
+    "answer": {
+      "company_mentioned": "Walmart",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "無足夠資訊顯示有任何信用風險事件。"
+    }
+  },
+  "447dce13f197a42d6c67681a93146994b37b708ad0eeccb3aad34378e4f57bc7": {
+    "answer": {
+      "company_mentioned": "Boeing",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前沒有足夠資訊顯示波音公司存在違約或其他信用風險事件。"
+    }
+  },
+  "269a5e2e8d0f5174e1643ee87b8fb10482840e89f600ed1f935204615b3b726b": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Coinbase",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "Coinbase 目前僅公布計畫，並未提及任何信用風險事件。",
+      "requires_review": true
+    }
+  },
+  "b1d6cf327f0f349cacbb22bb8962f3c0efd11cc8efd8e031dc438e1488570ce5": {
+    "answer": {
+      "company_mentioned": "Nvidia",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前沒有足夠資訊顯示 Nvidia 相關的信用風險事件。"
+    }
+  },
+  "bc514526e848b938321f5f2f1a760e98a14fea9449a06a2967674bd3d3a5f10a": {
+    "answer": {
+      "company_mentioned": "Intuit",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "此新聞未提供任何關於 Intuit 可能違約、破產或其他信用風險事件的具體訊息，僅提及其出售 Mailchimp 的交易與股價下跌。"
+    }
+  },
+  "e99fdef047b5c44ccc8fa45a2911310a269749b83bb545fdf7f3af5cf06a4f2d": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Nvidia",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "此新聞未提及任何與Nvidia相關的信用風險事件。",
+      "requires_review": true
+    }
+  },
+  "59b3f65acb5b4cc4f47af939ad8c9b175d40eff7c9f090c5a6b68e10111fc265": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Intuit",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "此新聞僅提及 Intuit 將 Mailchimp 賣給 Bending Spoons，並未涉及任何信用風險事件。",
+      "requires_review": true
+    }
+  },
+  "4ed39cbcb03c0069b60f223fddc62e66cf10a7f8ab79ea9ab6ad5bfd9b9be606": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Morgan Stanley",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "此新聞未提及任何信用風險事件。",
+      "requires_review": true
+    }
+  },
+  "1e478e28fd2796962f4cbfb3b5249b5f88c8bc49bce7601b0c42f75f8dc36dc7": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Amazon",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "此新聞未提及任何與信用風險相關的事件。",
+      "requires_review": true
+    }
+  },
+  "e1e82e75bf9738232b350ebc7cdcb347e677d7dd267fc5fb790f0dd988a09110": {
+    "answer": {
+      "company_mentioned": "Netflix",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "本新聞未提及Netflix的任何信用風險事件，僅談及其參與競標2023年男子世界杯授權事宜。"
+    }
+  },
+  "097a0f6911ce5634c88c1821c085df292c5c045a7f30d8a1b19624b3ccd0f12e": {
+    "answer": {
+      "company_mentioned": "Amazon",
+      "relevant": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "本新聞未提及任何與亞馬遜相關的信用風險事件。",
+      "requires_review": true
+    }
+  },
+  "f7e0674fdd3886c3bf37519f2a7416c24c86f25c6d0d451459df6d73e6c191a6": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Apple Inc.",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "此新聞未提及任何信用風險事件。",
+      "requires_review": true
+    }
+  },
+  "a696ef40e007f2a0e36b22e06a9b5b8d358721cda2431c4931a4103729cd1957": {
+    "answer": {
+      "company_mentioned": "BlackRock",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "此新聞未提及任何與信用風險相關的事件，僅說明 BlackRock 提出新的私募市場交易方式，無需進一步審查。"
+    }
+  },
+  "da883674d34bab76edf146c2acf7940ce347b6e8102a00a1cfeb4b2840d4424d": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Intuit",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "本新聞僅報導 Intuit 以 37 億美元出售 Mailchimp，並未提及任何信用風險或違約訊息。",
+      "requires_review": true
+    }
+  },
+  "694d08d98bdc6a344f23664c7b570c851313ebd586c4f088b45258cdfeba36b1": {
+    "answer": {
+      "company_mentioned": "Walmart",
+      "confirmed_default": false,
+      "event_codes": [
+        "GENERAL_INFORMATION"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "沃爾瑪警告燃油成本壓力，並在假日季提升年度目標，並未涉及任何違約或信用風險事件。"
+    }
+  },
+  "80bf88badf664cb53c4703bfb9ce17c552c491a940d607cab90bdedba9656966": {
+    "answer": {
+      "company_mentioned": "Walmart",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "沃爾瑪報告美國消費者在技術中斷後仍持續購物，並未提及任何信用風險或違約訊息。"
+    }
+  },
+  "430cae7300e2627ec1f11e6e4f0e1843650d199e6a13b27979292dd67cf13a5b": {
+    "answer": {
+      "company_mentioned": "Advanced Micro Devices",
+      "confirmed_default": false,
+      "event_codes": [
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "AMD 股價因費城半導體指數回吐而下跌約8%，但並未涉及任何信用風險或違約訊息。"
+    }
+  },
+  "363957e0f8e80327047fc9d3d4228dde8a700e088519d553d3e44af4e1be0587": {
+    "answer": {
+      "company_mentioned": "Nvidia",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前沒有足夠證據顯示 Nvidia 進行了債務違約或其他信用風險事件。"
+    }
+  },
+  "463f1626dbf3d6a5ac161d573b3184318bff76c956b381d7d514af7f83cc0742": {
+    "answer": {
+      "company_mentioned": "Carvana",
+      "confirmed_default": false,
+      "event_codes": [
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "MARKET_IMPLIED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "Carvana 股價在美國交易中下跌 5.4%。"
+    }
+  },
+  "d8deb5632824a8b8fce2c1cdecea45de7039bbb5300b1f9d31644136ea4fb04f": {
+    "answer": {
+      "company_mentioned": "Progressive Corporation",
+      "confirmed_default": false,
+      "event_codes": [
+        "EARNINGS_MISS"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "Progressive Corporation 於十月公布營收較去年同期下降，顯示財務表現不佳。"
+    }
+  },
+  "d197dfb654f729017f41b3cb093400b0e64192a2808b15a5872423c5f2be62cb": {
+    "answer": {
+      "company_mentioned": "Nvidia",
+      "confirmed_default": false,
+      "event_codes": [
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "Nvidia 股價進一步下跌，已在六個交易日內損失 6690 億美元。"
+    }
+  },
+  "705f40b24a5768b8850a4e995bca414aeef9202a77e6a9ea5fbbdec46373da29": {
+    "answer": {
+      "company_mentioned": "Walmart",
+      "relevant": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "沃爾瑪第三季業績超預期，但股價在盤前下跌，並未顯示任何信用風險或違約訊號。",
+      "requires_review": true
+    }
+  },
+  "7f656c8baa47e3dbb21ec7785730f56164b24a03cd237af656f0f6ebaf719022": {
+    "answer": {
+      "company_mentioned": "Lam Research",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前無足夠資訊顯示 Lam Research 相關信用風險事件。"
+    }
+  },
+  "ad7c796118ceedd16e15543b569222449777e33b1ce9a5c384f84553c4ffbe2b": {
+    "answer": {
+      "company_mentioned": "Fidelity National Information Services",
+      "confirmed_default": false,
+      "event_codes": [
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "MARKET_IMPLIED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "費城國際資訊服務公司股價因交易跌破關鍵移動平均線及持續賣壓而下跌逾3%。"
+    }
+  },
+  "ea73a8529594ff2f5bce7eebcc02dc6ed67fa1d5e98bfd8a0b621a32fc095656": {
+    "answer": {
+      "company_mentioned": "Accenture",
+      "confirmed_default": false,
+      "event_codes": [
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "MARKET_IMPLIED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "Accenture 股價於 11 月 19 日下跌 4.35%，但未有任何關於違約、破產或其他財務危機的具體報導。"
+    }
+  },
+  "f65412f1a6f95439835908bb4487b20f7c438c5e44a1392cd2dc41d6f021557d": {
+    "answer": {
+      "company_mentioned": "Intuitive Surgical",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前無足夠資訊確認任何信用風險事件。"
+    }
+  },
+  "fc58c460d12606e75d51a269cac0cb8a0d85b986cef1a68aaa5f67d664403ee2": {
+    "answer": {
+      "company_mentioned": "Broadcom",
+      "confirmed_default": false,
+      "event_codes": [
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "MARKET_IMPLIED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "本報導提及 Nvidia、Broadcom 與 Micron 股價下跌，並未提及任何違約或信用事件。"
+    }
   }
 }
