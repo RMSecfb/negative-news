@@ -1,6 +1,40 @@
 {
   "runs": [
     {
+      "id": "daily-2026-11-23",
+      "type": "schedule",
+      "status": "success",
+      "start": "2026-11-22T08:20:00+08:00",
+      "end": "2026-11-23T08:20:00+08:00",
+      "market": "US",
+      "methods": "方法一|方法二",
+      "ai": true,
+      "started_at": "2026-11-23T08:24:30.438500+08:00",
+      "finished_at": "2026-11-23T09:02:58.964679+08:00",
+      "llm_calls": 100,
+      "cache_reused": 1,
+      "prefiltered": 394,
+      "pending": 1242,
+      "review": 101,
+      "major": 5,
+      "selected_company_count": 503,
+      "collected": 1751,
+      "rows": 1735,
+      "errors": [
+        "Google News 批次 TROW, TTWO, TPR, TRGP, TGT：429 Client Error: Too Many Requests for url: https://news.google.com/rss/search?q=intitle%3A%28%22TROW%22+OR+%22T.+Rowe+Price%22+OR+%22TTWO%22+OR+%22Take-Two+Interactive%22+OR+%22TPR%22+OR+%22Tapestry%2C+Inc.%22+OR+%22TRGP%22+OR+%22Targa+Resources%22+OR+%22TGT%22+OR+%22Target+Corporation%22%29+after%3A2026-11-22+before%3A2026-11-24&hl=en-US&gl=US&ceid=US%3Aen",
+        "Google News 批次 WAT, WEC, WFC, WELL, WST：429 Client Error: Too Many Requests for url: https://news.google.com/rss/search?q=intitle%3A%28%22WAT%22+OR+%22Waters+Corporation%22+OR+%22WEC%22+OR+%22WEC+Energy+Group%22+OR+%22WFC%22+OR+%22Wells+Fargo%22+OR+%22WELL%22+OR+%22Welltower%22+OR+%22WST%22+OR+%22West+Pharmaceutical+Services%22%29+after%3A2026-11-22+before%3A2026-11-24&hl=en-US&gl=US&ceid=US%3Aen"
+      ],
+      "stages": [
+        "方法一 12 筆",
+        "方法二 1731 筆；公司 503 家（非輪替）",
+        "市場事件搜尋 8 筆",
+        "FinBERT 完成 1751 筆"
+      ],
+      "quota_reserved": 100,
+      "新增": 1734,
+      "重複合併": 17
+    },
+    {
       "id": "daily-2026-11-22",
       "type": "schedule",
       "status": "success",
