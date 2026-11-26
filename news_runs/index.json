@@ -1,6 +1,39 @@
 {
   "runs": [
     {
+      "id": "daily-2026-11-26",
+      "type": "schedule",
+      "status": "success",
+      "start": "2026-11-25T08:20:00+08:00",
+      "end": "2026-11-26T08:20:00+08:00",
+      "market": "US",
+      "methods": "方法一|方法二",
+      "ai": true,
+      "started_at": "2026-11-26T08:24:48.509312+08:00",
+      "finished_at": "2026-11-26T09:07:35.664199+08:00",
+      "llm_calls": 100,
+      "cache_reused": 0,
+      "prefiltered": 957,
+      "pending": 2476,
+      "review": 124,
+      "major": 29,
+      "selected_company_count": 503,
+      "collected": 3593,
+      "rows": 3535,
+      "errors": [
+        "Google News 批次 CSX, CMI, CVS, DHR, DRI：429 Client Error: Too Many Requests for url: https://news.google.com/rss/search?q=intitle%3A%28%22CSX%22+OR+%22CSX+Corporation%22+OR+%22CMI%22+OR+%22Cummins%22+OR+%22CVS%22+OR+%22CVS+Health%22+OR+%22DHR%22+OR+%22Danaher+Corporation%22+OR+%22DRI%22+OR+%22Darden+Restaurants%22%29+after%3A2026-11-25+before%3A2026-11-27&hl=en-US&gl=US&ceid=US%3Aen"
+      ],
+      "stages": [
+        "方法一 199 筆",
+        "方法二 3370 筆；公司 503 家（非輪替）",
+        "市場事件搜尋 27 筆",
+        "FinBERT 完成 3593 筆"
+      ],
+      "quota_reserved": 100,
+      "新增": 3535,
+      "重複合併": 58
+    },
+    {
       "id": "daily-2026-11-25",
       "type": "schedule",
       "status": "success",
