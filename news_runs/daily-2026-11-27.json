@@ -1,11 +1,33 @@
 {
   "id": "daily-2026-11-27",
   "type": "schedule",
-  "status": "running",
+  "status": "success",
   "start": "2026-11-26T08:20:00+08:00",
   "end": "2026-11-27T08:20:00+08:00",
   "market": "US",
   "methods": "方法一|方法二",
   "ai": true,
-  "started_at": "2026-11-27T08:24:32.414071+08:00"
+  "started_at": "2026-11-27T08:24:32.414071+08:00",
+  "finished_at": "2026-11-27T09:03:56.885713+08:00",
+  "llm_calls": 100,
+  "cache_reused": 1,
+  "prefiltered": 672,
+  "pending": 2022,
+  "review": 113,
+  "major": 22,
+  "selected_company_count": 503,
+  "collected": 2844,
+  "rows": 2798,
+  "errors": [
+    "Google News 批次 CVX, CMG, CB, CHD, CIEN：429 Client Error: Too Many Requests for url: https://news.google.com/rss/search?q=intitle%3A%28%22CVX%22+OR+%22Chevron+Corporation%22+OR+%22CMG%22+OR+%22Chipotle+Mexican+Grill%22+OR+%22CB%22+OR+%22Chubb+Limited%22+OR+%22CHD%22+OR+%22Church+%26+Dwight%22+OR+%22CIEN%22+OR+%22Ciena%22%29+after%3A2026-11-26+before%3A2026-11-28&hl=en-US&gl=US&ceid=US%3Aen"
+  ],
+  "stages": [
+    "方法一 89 筆",
+    "方法二 2743 筆；公司 503 家（非輪替）",
+    "市場事件搜尋 14 筆",
+    "FinBERT 完成 2844 筆"
+  ],
+  "quota_reserved": 100,
+  "新增": 2798,
+  "重複合併": 46
 }
