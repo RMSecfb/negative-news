@@ -33614,5 +33614,1245 @@
       "requires_review": true,
       "summary_zh": "目前無足夠資訊確認任何信用風險事件。"
     }
+  },
+  "69250a665d28fd1dde8591fce92770856ee45e6868542ebd3694352fafe46567": {
+    "answer": {
+      "company_mentioned": "Norse Atlantic",
+      "confirmed_default": false,
+      "event_codes": [
+        "BANKRUPTCY"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "Norse Atlantic Files For Bankruptcy After Lessors Terminate Leases On Its 12 Boeing 787s",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "Norse Atlantic 於本次新聞中宣布破產，原因是租戶終止其12架波音787的租賃合約。"
+    }
+  },
+  "62bda2ce2092e8faa00e608313b4fc52bd3dd757aa9e4335c8f177305aa5c0cd": {
+    "answer": {
+      "company_mentioned": "Boeing",
+      "confirmed_default": false,
+      "event_codes": [
+        "BANKRUPTCY"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "Norse Atlantic Files for Bankruptcy After Lessors Terminate Leases for All 12 Boeing 787s",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "Norse Atlantic 申請破產，因租戶終止對所有12架波音787的租賃。"
+    }
+  },
+  "a42de461e4ead25b6278b9b4566abc59113b4d66bb6a13648573f14b9da827e4": {
+    "answer": {
+      "company_mentioned": "Boeing",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "無足夠證據確認任何信用風險事件。"
+    }
+  },
+  "b13dd415e2a390ac69caedb2aacabd8097b470768cb5722e7dba1894d9b46820": {
+    "answer": {
+      "company_mentioned": "Norse Atlantic",
+      "confirmed_default": false,
+      "event_codes": [
+        "BANKRUPTCY"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "諾斯大西洋航空（Norse Atlantic）旗下的挪威運營部門宣布破產",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "諾斯大西洋航空旗下的挪威運營部門已正式宣佈破產，表明該子公司已無法繼續營運並進入清算程序。"
+    }
+  },
+  "009d7fe18a39ebc44e0fedcea5e4140e98d845eebff37437df758903ec12c3df": {
+    "answer": {
+      "company_mentioned": "Kroger",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前無足夠資訊顯示克羅格公司存在任何信用風險事件。"
+    }
+  },
+  "4355c18a2aa4c428a54513c2a663b6f63d9bc6011c8f06e482fb7f6d943410a7": {
+    "answer": {
+      "company_mentioned": "Vertex Pharmaceuticals",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "Vertex Pharmaceuticals 由於 FDA 延遲，股價大幅下跌，但目前沒有足夠證據顯示公司發生任何信用風險事件。"
+    }
+  },
+  "ee650661f7665cf9bd42621eeed7c3ef977c86f141deb96908bd1c2b11e29db4": {
+    "answer": {
+      "company_mentioned": "Cummins",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "本新聞僅提及 Cummins 召回產品，未提及任何債務違約或信用風險事件。"
+    }
+  },
+  "1ec7fefc5ddb6bc87bc19f2fef6d3c4b49a079970e4b994a6ab743cae0d27883": {
+    "answer": {
+      "company_mentioned": "GenIP",
+      "confirmed_default": false,
+      "event_codes": [
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "MARKET_IMPLIED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "GenIP 股價因以折價方式募資而大幅下跌 58%。"
+    }
+  },
+  "50479c03b282c773b92e27b57b754662a074a61a1b0553a2816a6ba97a23ec0d": {
+    "answer": {
+      "company_mentioned": "Walmart",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "此新聞未提及任何與信用風險相關的事件，無法判斷是否存在違約或其他信用事件。"
+    }
+  },
+  "7c614e012567923969ff0dec5c20b83fca668b3e7a0959931cdf3a58b630f8d3": {
+    "answer": {
+      "company_mentioned": "Schneider Electric SA",
+      "confirmed_default": false,
+      "event_codes": [
+        "PRODUCT_RECALL"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "Schneider Electric SA recalls over 1,000 UPS system batteries",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "施耐德電氣公司召回超過1,000顆UPS系統電池，屬於產品召回事件。"
+    }
+  },
+  "c934defb2af3399c78025958fad1d706e4947462dcc8691857d32c7843846f45": {
+    "answer": {
+      "company_mentioned": "Ball Corporation",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前沒有足夠資訊顯示 Ball Corporation 相關的信用風險事件。"
+    }
+  },
+  "cf3350dd665abc130c2aa3727d7dbb7068f0fc4a1020d3322c6fe2a2cbe297c3": {
+    "answer": {
+      "company_mentioned": "Hewlett Packard Enterprise",
+      "confirmed_default": false,
+      "event_codes": [
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "惠普企業股價因AI基礎設施銷售下跌而下挫。"
+    }
+  },
+  "98d787c7f38fccda33071e488471a75bd51de2d5922500feeef27533db9ac885": {
+    "answer": {
+      "company_mentioned": "Nvidia",
+      "confirmed_default": false,
+      "event_codes": [
+        "REGULATORY_INVESTIGATION"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "Sen. Gallego urges Nvidia board to cooperate in congressional investigations of CEO Huang",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "美參議員加爾格羅要求英偉達董事會配合對CEO黃的國會調查，屬於監管調查事件。"
+    }
+  },
+  "f8dedbdb2ccb175aaba2c2ca64b9471d19360ec255298ae386fe28f17b70d3e0": {
+    "answer": {
+      "company_mentioned": "",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "此新聞未提及任何公司信用風險事件，無法判斷是否存在違約、破產或其他信用相關事件。"
+    }
+  },
+  "81a10adb9aa4076d8d9f64244e1385215e95895d9cc1fd8ef34e73c94b265113": {
+    "answer": {
+      "company_mentioned": "Indonesia bourse",
+      "confirmed_default": false,
+      "event_codes": [
+        "TRADING_SUSPENSION"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "Indonesia bourse suspends five firms over free-float data discrepancies",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "印尼證券交易所因自由浮動股數資料不符，暫停五家公司交易。"
+    }
+  },
+  "285420d9e5db639293b019e4cbf2683488a93bd5c169e0f8b50078f6004c7e8b": {
+    "answer": {
+      "company_mentioned": "Nvidia",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前無足夠資訊顯示 Nvidia 之信用事件，需進一步調查。"
+    }
+  },
+  "b9e2097877d3ebd896f0b7eb64eab4f0630cf30d30723b430f92d3d290e773e5": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Walmart",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "無足夠資訊表明有任何信用風險事件。",
+      "requires_review": true
+    }
+  },
+  "04f74c42ccd3399db8f29a8c5d8745a0eeb13d524215ccf646f845f75eb6fc62": {
+    "answer": {
+      "company_mentioned": "Nvidia",
+      "confirmed_default": false,
+      "event_codes": [
+        "EXPORT_RESTRICTION"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "美畫新紅線 算力不准租給陸企！輝達晶片管制升級衝擊台鏈",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "美國加強對華出口管制，禁止將Nvidia算力晶片租賃給中國企業，對台灣供應鏈造成衝擊。"
+    }
+  },
+  "b52197fe3614ba21c9aed579819a7d7e934658f865759e335f6e4cbccda0b387": {
+    "answer": {
+      "company_mentioned": "TJX Companies",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "本新聞未提及任何關於 TJX Companies 的債務違約、CDS利差擴大或其他信用風險事件的具體訊息。"
+    }
+  },
+  "3509a3c5556ae077b87ce98183d78fc48b7c22b6d6793976c090fbf35d26224c": {
+    "answer": {
+      "company_mentioned": "Ross Stores",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "此新聞未提及任何與信用風險相關的事件，無法判斷是否存在違約或其他信用事件。"
+    }
+  },
+  "70cd50767aac84f1d6fdcceca5c7e98b3f853c5944cf56d4458afce75badba4d": {
+    "answer": {
+      "company_mentioned": "Nvidia",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "本新聞僅提及 Nvidia 在中國工廠部署 Blackwell 晶片，未提及任何債務違約、信用風險升高或其他財務風險事件。"
+    }
+  },
+  "c851530e76675dc7c2feb2b5370d8dc53234d84d57667ce786c3be356590cbaf": {
+    "answer": {
+      "company_mentioned": "Nvidia",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "本報告僅提及兩家中國公司安裝 Nvidia Blackwell 晶片，未涉及任何信用風險事件。"
+    }
+  },
+  "7137000ecab762ac36e57d0f4099bfbe789a82b0cd9e722028dd44c5fc50de69": {
+    "answer": {
+      "company_mentioned": "BlackRock",
+      "relevant": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "此新聞未提及任何與信用風險相關的事件。",
+      "requires_review": true
+    }
+  },
+  "12a3dd410302b9948b3f6b679dfbfc460519c392f89d39577af0ba9dd7b58e5a": {
+    "answer": {
+      "company_mentioned": "Boston Scientific",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前無足夠資訊顯示波士頓科學公司存在任何信用風險事件。"
+    }
+  },
+  "65aa1e92a2a186cb0e2040326f0d432d3cb2d889ef6a1c1828d7d104ac8934ed": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "BlackRock",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "此新聞未提及任何信用風險事件。",
+      "requires_review": true
+    }
+  },
+  "3bb626792a656f9bd53f35b08e1f06677f7bdd3a7764f4132ae7e46a8a4592f3": {
+    "answer": {
+      "company_mentioned": "Nvidia",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前沒有足夠資訊顯示 Nvidia 可能發生違約或其他信用風險事件。"
+    }
+  },
+  "af988adfc672c39f67450ee75b06e9df0da89428178ed66f47aad2b3502fdef9": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "eBay Inc.",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "此新聞未提及任何信用風險事件。",
+      "requires_review": true
+    }
+  },
+  "6be6a2086959ec9069204294dabe760a317de68ba767bdd43487362a19753913": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Verizon",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "無足夠資訊顯示信用風險事件。",
+      "requires_review": true
+    }
+  },
+  "4b3efc29e5b49c3aadfc4ac23f7117b36d548b0d0d09bd9976494c09343851af": {
+    "answer": {
+      "company_mentioned": "Nike, Inc.",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "此新聞未提及任何與信用風險相關的事件，僅討論耐克進入F1的贊助與市場表現。"
+    }
+  },
+  "3c2b80fc3639bc8050e02ea3bda3ac22c881fb1e7a6b431a0f6bd40128479e86": {
+    "answer": {
+      "company_mentioned": "Invesco",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前沒有足夠資訊顯示 Invesco 相關的信用風險事件。"
+    }
+  },
+  "579e60c302438b3ff8552281a22e8c8c31661cc308799da8769e3c7a6d3bcec9": {
+    "answer": {
+      "company_mentioned": "Ametek",
+      "confirmed_default": false,
+      "event_codes": [
+        "EARNINGS_MISS"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "Ametek 於第二季報告利潤下降，主要因房地產開發收入減少。"
+    }
+  },
+  "603611579fce5ec79102a1eed6dd8b138ff2ffad670c9eea8fdf6c5ead9808be": {
+    "answer": {
+      "company_mentioned": "Applied Materials",
+      "confirmed_default": false,
+      "event_codes": [
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "MARKET_IMPLIED",
+      "evidence": "Applied Materials shares fall 17%",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "應用材料公司公布季度營收創紀錄，股價卻因市場情緒下跌17%。"
+    }
+  },
+  "ad28ca2549eb28cbd96c1c980b14a0dd5e18041e9763723c341c4406b0acb687": {
+    "answer": {
+      "company_mentioned": "PTC Inc.",
+      "confirmed_default": false,
+      "event_codes": [
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "PTC Inc. 股價因施耐德電氣股價下跌而下跌 26.5%。"
+    }
+  },
+  "2f85781b11a3f662a45d1c3ddabf5c39c0e6071dcac0c657835e206c54a1c704": {
+    "answer": {
+      "company_mentioned": "Vertex Pharmaceuticals",
+      "confirmed_default": false,
+      "event_codes": [
+        "FDA_WARNING",
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "MARKET_IMPLIED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "Vertex Pharmaceuticals 股價因 FDA 推遲其 povetacicept 決策而在盤前下跌 7%。"
+    }
+  },
+  "0bf16a56fad6ad8071427a3104e83c0f37edf49dcbabcf346a02044a3ee15b21": {
+    "answer": {
+      "company_mentioned": "American Express",
+      "confirmed_default": false,
+      "event_codes": [
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "美國運通股價因市場情緒下跌，雖有第三季營收創紀錄，但股價仍下跌18%。"
+    }
+  },
+  "479575743c10892f56c426d5f93a20bd0c95a89ffdae6eb0b9bb1295bb159fe4": {
+    "answer": {
+      "company_mentioned": "Applied Materials",
+      "confirmed_default": false,
+      "event_codes": [
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "MARKET_IMPLIED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "Applied Materials 股價因市場情緒而下跌 17%，儘管公司公布了創紀錄的季度業績，並未顯示任何違約或信用風險升高的跡象。"
+    }
+  },
+  "18c0d66d09bbffb01c2f72fb4b503ae88718f4d6eaa491674de7884385c6a1e0": {
+    "answer": {
+      "company_mentioned": "Walmart",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "此新聞僅提及Walmart在黑色星期五期間調整Goodyear Wrangler Authority A/T的價格，並未提及任何信用風險或違約訊息。"
+    }
+  },
+  "080762fd07767d9b932caeccbe4b80ceeae28ab7b94ec4090b9f61791c4dc2d2": {
+    "answer": {
+      "company_mentioned": "Honeywell Aerospace",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前無足夠資訊顯示 Honeywell Aerospace 之信用風險事件。"
+    }
+  },
+  "add04e659329032a46027a5e97d09e5c4c514cc0289629cc3302d2b331462b40": {
+    "answer": {
+      "company_mentioned": "Equinix",
+      "confirmed_default": false,
+      "event_codes": [
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "MARKET_IMPLIED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "Equinix 股價因市場情緒下跌，並未顯示任何違約或信用風險升高的訊號。"
+    }
+  },
+  "6dc53ed6af4cf1341fe1350ce2f81c5594a825dcc58fa49a5b6467395add5551": {
+    "answer": {
+      "company_mentioned": "Ametek",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "Ametek 於 Q2 FY27 公布淨利下降至 4,200 萬馬來幣，並宣布 4.2 納米股息。"
+    }
+  },
+  "85bf01e49235102fb5e0eb34056373ce046bbf78035ecfa8d8559250eb905923": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "EOG Resources",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "無足夠資訊顯示任何信用風險事件。",
+      "requires_review": true
+    }
+  },
+  "960d3c7e3db5e35b7e557094da2a6dfe38d82821f8f40fc6eb17739b18548424": {
+    "answer": {
+      "company_mentioned": "eBay Inc.",
+      "confirmed_default": false,
+      "event_codes": [
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "MARKET_IMPLIED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "eBay 股價因最新財報後下跌 4.7%，但未顯示任何違約或信用風險升高的訊號。"
+    }
+  },
+  "f5be6ac8101666e54278a684d01f2a20f968032740d564aef5c5d5485b3f4ec8": {
+    "answer": {
+      "company_mentioned": "RTX Corporation",
+      "confirmed_default": false,
+      "event_codes": [
+        "SUPPLY_CHAIN_DISRUPTION"
+      ],
+      "event_status": "MARKET_IMPLIED",
+      "evidence": "MSI's RTX 50-Series Supply in China Reportedly Shrinks Further",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "RTX 公司的 RTX 50 系列產品在中國的供應量進一步縮減，顯示供應鏈可能受到影響，但並未涉及任何信用風險或違約訊號。"
+    }
+  },
+  "e303034c7ac9516207ac4f6d1382c6b670c5b7a55de0e3173987af6a62802496": {
+    "answer": {
+      "company_mentioned": "Motorola Solutions",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "摩托羅拉解決方案公司在中國的 RTX 50 系列供應進一步縮減，但目前沒有證據顯示公司面臨違約、破產或其他財務風險事件。"
+    }
+  },
+  "51f60c86bec1cfec51cb2d3b443f3545a6715d1ac6849ef5ecc6c9e29bde58a4": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Jabil",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "此新聞僅提及 JBL Tune 680NC 的價格變動，未涉及任何信用風險事件。",
+      "requires_review": true
+    }
+  },
+  "0704593360a1fe2645111de13e4edfb2d2d03b12feca37aadbd0e58407386244": {
+    "answer": {
+      "company_mentioned": "IDEX Corporation",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前無足夠資訊判斷是否存在信用風險事件。"
+    }
+  },
+  "ce189336e74e2f5ce1ff126c03191c47e2f6de2bd1c8d9278604072285ea9d63": {
+    "answer": {
+      "company_mentioned": "Padini",
+      "confirmed_default": false,
+      "event_codes": [
+        "EARNINGS_MISS",
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "Padini slides after 1Q earnings miss, analysts flag margin pressure and online competition",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "Padini 於第一季財報不及預期，股價下跌，分析師指出毛利率壓力與線上競爭加劇。"
+    }
+  },
+  "ddd0fefa9a14ff022a21082594dd620b805de1cb7495ef07dc36bbd5965140b1": {
+    "answer": {
+      "company_mentioned": "Smurfit Westrock",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前沒有足夠資訊顯示 Smurfit Westrock 具體發生違約或其他重大信用事件，需進一步調查。"
+    }
+  },
+  "0c64d2d2bbebb41313a89861a48c30edbf51b1b302c91444be5eea165c4dfbe7": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "McDonald's",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "無足夠資訊顯示任何信用風險事件。",
+      "requires_review": true
+    }
+  },
+  "daf29d27024dd903771f26b840971a817edf2b2dfab1e1665db7f80a5c73a4a6": {
+    "answer": {
+      "company_mentioned": "Vertex Pharmaceuticals",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": false,
+      "summary_zh": "Vertex Pharmaceuticals 的股價因 FDA 延遲腎臟藥物審批決策而下跌，但並未涉及任何信用風險事件。"
+    }
+  },
+  "975eb6f0c1734cecdf5294d87af3c98c040fee937b209362edef35e8f2d03d2e": {
+    "answer": {
+      "company_mentioned": "Microsoft",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "此新聞未提供任何關於微軟公司違約、破產或其他信用風險事件的具體證據，僅提及股價下跌。"
+    }
+  },
+  "21162b4255265dbc092ac632043e54fb85ab42bf4c77d1ecaaa2287617f59f8e": {
+    "answer": {
+      "company_mentioned": "Nvidia",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "本新聞未提及任何與Nvidia相關的信用風險事件，僅討論美國芯片管制對亞洲數據中心投資的影響。"
+    }
+  },
+  "3b08d0644d017f99a1dcf832132d8329d75ddf80b3f92240c42072fa4edeaf1c": {
+    "answer": {
+      "company_mentioned": "TE Connectivity",
+      "confirmed_default": false,
+      "event_codes": [
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "MARKET_IMPLIED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "TE Connectivity 股價因最新財報表現下跌，未顯示任何違約或信用風險升高的訊號。"
+    }
+  },
+  "120c6fdd41809470b0809d4faab9e3a5410f230714caabc1149ebf84da83a759": {
+    "answer": {
+      "company_mentioned": "Citigroup",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "花旗集團因350億美元記賬失誤引發高層人事震盪，但目前無足夠資訊確認任何信用風險事件。"
+    }
+  },
+  "77322d9cfe79834ee3997e43fecf5903ed13b0f8df6e1945d8ad9a5b4f2fbf95": {
+    "answer": {
+      "company_mentioned": "Flex Ltd.",
+      "confirmed_default": false,
+      "event_codes": [
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "MARKET_IMPLIED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "Flex Ltd. 股價自上次財報以來下跌 27.8%，但目前沒有任何證據顯示公司已經違約、破產或其他重大財務風險。"
+    }
+  },
+  "3acd19964e29dc1bf5d6146a245168e64d9a134aecc980a8dcb052dcf98cc71f": {
+    "answer": {
+      "company_mentioned": "Honeywell Technologies",
+      "confirmed_default": false,
+      "event_codes": [
+        "WORKFORCE_REDUCTION"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "Honeywell Technologies 於意大利的 HON 圈組織未舉辦聖誕派對，並且正在裁員。"
+    }
+  },
+  "d0492609f144a4b725f38a64fb9a81f0aace05e3094ce3bfa9ae7babc7d11eaf": {
+    "answer": {
+      "company_mentioned": "Intuit",
+      "confirmed_default": false,
+      "event_codes": [
+        "PRICE_MOVEMENT",
+        "EARNINGS_WARNING"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "Intuit 股價下跌至 271.72 美元，因為公司削減財務預測並面臨 AI 壓力。"
+    }
+  },
+  "802ab0cfe19d9f15061fa2d7a7ea54feefdad63beeee4ada8a4498b14ebe927f": {
+    "answer": {
+      "company_mentioned": "Vertex Pharmaceuticals",
+      "confirmed_default": false,
+      "event_codes": [
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "Vertex Pharmaceuticals 股價因 FDA 對其腎臟藥物審查延遲而下跌，並未涉及任何違約或信用風險事件。"
+    }
+  },
+  "808c8533b0ec459579cead7d00b5482f82375f824b264f3bbff5c9683233ce6f": {
+    "answer": {
+      "company_mentioned": "Walmart",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "此新聞僅為促銷資訊，未提及任何信用風險事件。"
+    }
+  },
+  "7bd9f9be15a40ec6fdffa7c60ca4945160828d981016f04d9e764969dbe7cc11": {
+    "answer": {
+      "company_mentioned": "American Electric Power",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前沒有足夠資訊顯示美國電力公司（American Electric Power）存在任何信用風險事件。"
+    }
+  },
+  "55dc00fd3cf0db3e5c49b08469fa678e3a42ab1e1dc3523c9bead64bffe304b2": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Ford Motor Company",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "目前無足夠資訊顯示 Ford Motor Company 之信用事件。",
+      "requires_review": true
+    }
+  },
+  "d8978e7ad07f05dd253ff18fc883490e88537781fc57b30a44e6de77b04cbf79": {
+    "answer": {
+      "company_mentioned": "Amphenol",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前無足夠資訊確認任何信用風險事件。"
+    }
+  },
+  "a5c626c9bf946f898d68cf69cc4aa8717584d58228a42cdc4fe3724458cc34b6": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Target Corporation",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "無足夠證據顯示有任何信用風險事件。",
+      "requires_review": true
+    }
+  },
+  "0bfc11bc9246418a9a9147b818f89b3087669cde7b95b793d351ceb269b523d4": {
+    "answer": {
+      "company_mentioned": "Carvana",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前沒有足夠資訊顯示 Carvana 具體發生違約或其他重大信用事件，需進一步調查。"
+    }
+  },
+  "0f4b358187ee16056e011fff302ffa5fe87105677fe16f9ef9f775199d37f9e4": {
+    "answer": {
+      "company_mentioned": "KLA Corporation",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前缺乏足夠資訊來判斷是否存在任何信用風險事件。"
+    }
+  },
+  "76c3988d9d7b11af9c1a35e46e0e29db113d8a21b1687ecf3f121dc1bffb5e85": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Vertex Pharmaceuticals",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "本新聞未提及任何信用風險事件。",
+      "requires_review": true
+    }
+  },
+  "ba7af550a14e29eb21c360cfe94c70c17fb3b052c5e384d921735d5c987ff927": {
+    "answer": {
+      "company_mentioned": "FedEx",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "FedEx 航空器在邁阿密機場跑道溢出，暫時關閉除一條跑道外的所有跑道。"
+    }
+  },
+  "ec464ec9e3cffa4fc6a61fb3d72b3d088a980c336262d2dac638ea6dfa7602e1": {
+    "answer": {
+      "company_mentioned": "Vertiv",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前沒有足夠資訊顯示 Vertiv 具體發生違約、破產或其他重大財務風險事件。"
+    }
+  },
+  "832c2a319274e147e08ed7775c0a80f8d4658c3a154cd906f05c8a0d2bceaf0c": {
+    "answer": {
+      "company_mentioned": "U.S. Bancorp",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "此新聞僅提及三星產品折扣，未涉及任何與美國銀行相關的信用風險事件。"
+    }
+  },
+  "6f271e484e4fea860e5e816c1184a5fbe4553d6127641941fe327d32b2e6f51f": {
+    "answer": {
+      "company_mentioned": "Applied Materials",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "無足夠資訊確認任何信用風險事件。"
+    }
+  },
+  "782e0235008f4df04d94c1e3721143ed3f44dc1e9d9ef51c23f463bd8fdf3cd3": {
+    "answer": {
+      "company_mentioned": "Texas Pacific Land Corporation",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前缺乏足夠資訊來判斷是否存在任何信用風險事件。"
+    }
+  },
+  "39650382a7603a91f7badf34b11ea4d3dc993f26a559fd278a33df87125f7177": {
+    "answer": {
+      "company_mentioned": "Tractor Supply",
+      "relevant": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "無足夠資訊表明發生任何信用風險事件。",
+      "requires_review": true
+    }
+  },
+  "7dd3d657191fb79209db015ca18d74da0b17199d932eebe7e7f8a0bcb54693fb": {
+    "answer": {
+      "company_mentioned": "Vertex Pharmaceuticals",
+      "confirmed_default": false,
+      "event_codes": [
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "MARKET_IMPLIED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "Vertex Pharmaceuticals 股價在週五盤前交易中下跌，未有任何違約或其他財務風險訊號。"
+    }
+  },
+  "10f9b3b1dea0a7808f2240feef9101e8d7902a888b2895176622b0935da2065b": {
+    "answer": {
+      "company_mentioned": "Fortinet",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "本篇文章僅提及 Fortinet 股價因最近財報而下跌，並未提及任何違約、破產或其他信用風險事件。"
+    }
+  },
+  "78dbd212d93d8a39fec38bc5913f485aa4c66500e97ebbed9b484d26e9476e13": {
+    "answer": {
+      "company_mentioned": "Mid-America Apartment Communities",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前沒有足夠資訊顯示Mid-America Apartment Communities發生任何信用風險事件，需進一步調查。"
+    }
+  },
+  "4ddfda09cae354c6579bcb0f092431bb59bc214d7efe63031a90cc63fc221fb8": {
+    "answer": {
+      "company_mentioned": "Boeing",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "本新聞未明確提及任何公司違約、破產或其他信用風險事件，僅說明租戶終止對12架波音787-9的租賃。"
+    }
+  },
+  "679e06cbafe9b6836cf9cba1cd56ec19a38bf5994bbacc7d501444ad49098acc": {
+    "answer": {
+      "relevant": true,
+      "company_mentioned": "Palo Alto Networks",
+      "event_codes": [
+        "ACCOUNTING_FRAUD",
+        "MAJOR_LITIGATION"
+      ],
+      "event_status": "CONFIRMED",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "Palo Alto Networks 近期因會計舞弊訴訟而股價下跌，顯示公司面臨重大訴訟風險。",
+      "requires_review": true
+    }
+  },
+  "109ceb89bd7d5cb85929614faa7a0f7b8ad1a1240dd470758209e53b92d7416c": {
+    "answer": {
+      "company_mentioned": "Vertex Pharmaceuticals",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前無足夠資訊顯示 Vertex Pharmaceuticals 之信用風險事件。"
+    }
+  },
+  "144fe9025c70a800a098b3d385a7c7fd157e890845b562f6ed30bd4751f34bd6": {
+    "answer": {
+      "company_mentioned": "Vertex Pharmaceuticals",
+      "confirmed_default": false,
+      "event_codes": [
+        "PRICE_MOVEMENT"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "FDA 延長腎病藥物審查期限，導致 Vertex Pharma 股價下跌。"
+    }
+  },
+  "6f64c6ba617c7d36a7aa3b32e93910750b3541e3f5d1dc8c7cd5b531602006e4": {
+    "answer": {
+      "company_mentioned": "Kroger",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "此新聞未提供任何關於Kroger公司債務違約、CDS利差擴大或其他信用風險事件的具體證據，僅提及裁員計畫與招聘動向，故無法確定是否存在信用風險事件。"
+    }
+  },
+  "067eb03d3286ff8bdfdf8d0a4a698850e6239b742d85b58deac6b00c39a0bece": {
+    "answer": {
+      "company_mentioned": "Norse Atlantic",
+      "confirmed_default": false,
+      "event_codes": [
+        "MAJOR_CUSTOMER_LOSS"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "Norse Atlantic loses lease contracts for its 12 Boeing 787 aircraft",
+      "relevant": true,
+      "requires_review": false,
+      "summary_zh": "Norse Atlantic 失去12架波音787機型的租賃合約，顯示其客戶關係受損。"
+    }
+  },
+  "9e2240d2bb9b05563180081356b29da6ec0a3e88a819d7366530075f5bcb6495": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Lam Research",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "requires_review": true,
+      "summary_zh": "Lam Research 股價因中國限制措施下跌，未見任何違約或信用風險升高的訊息。"
+    }
+  },
+  "108c5bc4541cdd5d438d85cb886c79be9c4bd8f7643c853948c884a9bca7f11a": {
+    "answer": {
+      "company_mentioned": "Duke Energy",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "杜克能源因黑色星期五停電事件，導致超過1,700名客戶停電，但並未顯示任何違約或信用風險升高的訊息。"
+    }
+  },
+  "668733ccaf7f2f719c0a08d172e0387dd23ed2ff9b5c993d158b1a8508bcc0ef": {
+    "answer": {
+      "company_mentioned": "Garmin",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前沒有足夠資訊顯示 Garmin 可能發生違約或其他信用風險事件。"
+    }
+  },
+  "aa98dd8ae736fba056243e2e2645ee33d8a16e37ffbfaf3804274da98358f9b6": {
+    "answer": {
+      "company_mentioned": "Nvidia",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前無足夠資訊確認英偉達是否存在任何信用風險事件。"
+    }
+  },
+  "5c08cda1dc2597f03f5f14523bde5ef64510e856761d418fed3ab208d036b842": {
+    "answer": {
+      "company_mentioned": "Amazon",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "此新聞僅提及 Amazon 促銷活動，未涉及任何信用風險事件。"
+    }
+  },
+  "5e027b624aa4b4833ada77cd6ff21f48bb226d8c21407e5e335cee697ddadb06": {
+    "answer": {
+      "company_mentioned": "Dominion Energy",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "目前無足夠資訊確認 Dominion Energy 是否發生債務違約或其他信用風險事件。"
+    }
+  },
+  "8cd8b735adfad615999c1fbee157a278df4ff95e699d403068797fc1650301b3": {
+    "answer": {
+      "company_mentioned": "Motorola Solutions",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "此新聞僅提及 MSI 的產品價格資訊，未涉及任何信用風險事件。"
+    }
+  },
+  "8a2caab342393095c49eeefa4c5a7a98e73d49f7077350cddcefec8fcd7f8f5e": {
+    "answer": {
+      "company_mentioned": "Boeing",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": true,
+      "summary_zh": "波音公司因北歐大西洋航空公司終止所有12架787機型租賃，可能對其財務表現產生負面影響，但目前尚無明確證據顯示波音已發生違約或其他信用事件。"
+    }
+  },
+  "0b55c31d6349bf3fc36cfb0c2912d1349f3731bec07eefb2fb1ca3bdea873f5c": {
+    "answer": {
+      "company_mentioned": "Walmart",
+      "relevant": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "無足夠證據顯示有任何信用風險事件。",
+      "requires_review": true
+    }
+  },
+  "216181e94a87c74f6406f8abba9644dbc928e9122c43b85438009a9968e8cccf": {
+    "answer": {
+      "company_mentioned": "IBM",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "IBM 的 Visa U‑turn 事件並未顯示任何公司債務違約或信用風險升高的具體證據。"
+    }
+  },
+  "99911303ac234c66f4213fb1c56f6914d900694cedbd092e94fcb33ec85197b6": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Ulta Beauty",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "requires_review": true,
+      "summary_zh": "本新聞未提及任何與信用風險相關的事件，僅提到股價下跌。"
+    }
+  },
+  "01ed84a82a28e4d0db92cfdf508d7462d7a06fa89c6138f9fe4564105a249da0": {
+    "answer": {
+      "company_mentioned": "Caterpillar Inc.",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "文章主要討論Caterpillar股票估值與AI賣空影響，未提及任何違約、破產或信用事件。"
+    }
+  },
+  "9a9abdd4fba2ef83f059c0312718f6e0cd0e0c832ae2c91629323fbcdb20d142": {
+    "answer": {
+      "company_mentioned": "Qualcomm",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "無足夠資訊顯示任何信用風險事件。"
+    }
+  },
+  "43695ae6571b52d0f5ba0dc718af93740f63087596a4586d3f4023e311998cff": {
+    "answer": {
+      "company_mentioned": "Allstate",
+      "confirmed_default": false,
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": true,
+      "summary_zh": "Allstate 的多日停電事件並未顯示任何信用風險或違約訊號，僅為技術性中斷。"
+    }
+  },
+  "574393d0f4f07060f260fe3bac358821daa1fd5af7135e41dfa25bac82d3d48e": {
+    "answer": {
+      "relevant": false,
+      "company_mentioned": "Goldman Sachs",
+      "event_codes": [],
+      "event_status": "UNCLEAR",
+      "confirmed_default": false,
+      "evidence": "",
+      "summary_zh": "此新聞未提及任何信用風險事件。",
+      "requires_review": true
+    }
+  },
+  "35dc7a8d6068f9cefec78985afc65a689e8eff8f10b85a7407a3e901ca8c7824": {
+    "answer": {
+      "company_mentioned": "Allstate",
+      "confirmed_default": false,
+      "event_codes": [
+        "GENERAL_INFORMATION"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "",
+      "relevant": false,
+      "requires_review": false,
+      "summary_zh": "Allstate 服務因多日技術中斷，客戶與代理商存取受影響，但未涉及任何信用風險事件。"
+    }
+  },
+  "ee5aa3f74e880863e3365f52713afa586a6530fb9db44095642aa89f2e9073f5": {
+    "answer": {
+      "company_mentioned": "",
+      "confirmed_default": false,
+      "event_codes": [
+        "REGULATORY_PENALTY"
+      ],
+      "event_status": "CONFIRMED",
+      "evidence": "",
+      "relevant": true,
+      "requires_review": true,
+      "summary_zh": "印尼證券交易所因自由流通股數資料不符，對五家公司施以監管處罰。"
+    }
   }
 }
